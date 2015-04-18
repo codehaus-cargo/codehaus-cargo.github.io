@@ -147,6 +147,7 @@ public class WebsiteGenerator implements Runnable
         Files.copy(new File(classes, "rss.gif").toPath(),
             new File(attachments, "rss.gif").toPath(), StandardCopyOption.REPLACE_EXISTING);
         writeFile(new File(attachments, "site.css"), readFile(new File(classes, "site.css")));
+        writeFile(new File(attachments, "unity-code.css"), readFile(new File(classes, "unity-code.css")));
         File sourceDirectory = new File(target, "source");
         String template = readFile(new File(target, "classes/cargo-template.html"));
         String navigation = readFile(new File(sourceDirectory, "Navigation"));
@@ -296,6 +297,20 @@ public class WebsiteGenerator implements Runnable
                         sb.append(attachment.substring(attachment.lastIndexOf('/')));
                     }
                     sb.append("\"");
+                    start = matcher.end();
+                }
+                sb.append(value.substring(start));
+                value = sb.toString();
+
+                pattern = Pattern.compile("href=\"/wiki/[^\"]+\"|href='/wiki/[^']+'");
+                matcher = pattern.matcher(value);
+                start = 0;
+                sb = new StringBuilder();
+                while (matcher.find())
+                {
+                    sb.append(value.substring(start, matcher.start()));
+                    sb.append("href=\"https://codehaus-cargo.atlassian.net");
+                    sb.append(value.substring(matcher.start() + 6, matcher.end() - 1));
                     start = matcher.end();
                 }
                 sb.append(value.substring(start));
