@@ -302,7 +302,7 @@ public class WebsiteGenerator implements Runnable
                 sb.append(value.substring(start));
                 value = sb.toString();
 
-                pattern = Pattern.compile("href=\"/wiki/[^\"]+\"|href='/wiki/[^']+'");
+                pattern = Pattern.compile("href=\"\\s*/wiki/[^\"]+\"|href='\\s*/wiki/[^']+'");
                 matcher = pattern.matcher(value);
                 start = 0;
                 sb = new StringBuilder();
@@ -310,7 +310,8 @@ public class WebsiteGenerator implements Runnable
                 {
                     sb.append(value.substring(start, matcher.start()));
                     sb.append("href=\"https://codehaus-cargo.atlassian.net");
-                    sb.append(value.substring(matcher.start() + 6, matcher.end() - 1));
+                    sb.append(value.substring(matcher.start() + 6, matcher.end() - 1).trim());
+                    sb.append("\"");
                     start = matcher.end();
                 }
                 sb.append(value.substring(start));
