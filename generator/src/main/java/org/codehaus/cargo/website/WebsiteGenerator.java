@@ -147,7 +147,6 @@ public class WebsiteGenerator implements Runnable
         Files.copy(new File(classes, "rss.gif").toPath(),
             new File(attachments, "rss.gif").toPath(), StandardCopyOption.REPLACE_EXISTING);
         writeFile(new File(attachments, "site.css"), readFile(new File(classes, "site.css")));
-        writeFile(new File(attachments, "unity-code.css"), readFile(new File(classes, "unity-code.css")));
         File sourceDirectory = new File(target, "source");
         String template = readFile(new File(target, "classes/cargo-template.html"));
         String navigation = readFile(new File(sourceDirectory, "Navigation"));
@@ -354,6 +353,10 @@ public class WebsiteGenerator implements Runnable
                     if (questionMark != -1)
                     {
                         attachment = attachment.substring(0, questionMark);
+                    }
+                    if ("default.png".equals(attachment))
+                    {
+                        attachment = "blank.gif";
                     }
                     sb.append(attachment);
                     sb.append("\"");

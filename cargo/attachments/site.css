@@ -99,7 +99,7 @@ blockquote p {
 ul {
   margin-top: 1em;
   margin-bottom: 1em;
-  list-style: disc inside;
+  list-style: disc;
   margin-left: 0px;
 }
 
@@ -138,7 +138,7 @@ pre {
   text-decoration: underline;
 }
 
-span.highlight {  
+span.highlight {
   font-weight: normal;
   color: #990000;
 }
@@ -261,10 +261,10 @@ ins.inserted {
 .java-object {
   color: #000099;
 }
- 
+
 .java-quote {
   color: #990000;
-} 
+}
 
 .source, .code pre {
   margin: 0px;
@@ -307,30 +307,31 @@ label.required {
   color: #76849A;
 }
 
+.linecomment {
+  color: #C0C9D8;
+}
 
-.linecomment { 
+.blockcomment {
   color: #C0C9D8;
 }
-.blockcomment { 
-  color: #C0C9D8;
-}
-.prepro { 
+
+.prepro {
   color: #0000BB;
 }
 
-.quote { 
+.quote {
   color: #770000;
 }
 
-.category1 { 
+.category1 {
   color: #76849A;
 }
 
-.category2 { 
+.category2 {
   color: #0000BB;
 }
 
-.category3 { 
+.category3 {
   color: #0000BB;
 }
 
@@ -471,21 +472,21 @@ tr td.noformatting {
 
 /* information macros */
 
-.note { 
+.note {
   border-style: solid;
   border-width: 1px;
   border-color: #F0C000;
   background-color: #FFFFCE;
 }
 
-.warning { 
+.warning {
   border-style: solid;
   border-width: 1px;
   border-color: #c00;
   background-color: #fcc;
 }
 
-.information-macro { 
+.information-macro {
   border-style: solid;
   border-width: 1px;
   border-color: #3c78b5;
@@ -493,7 +494,7 @@ tr td.noformatting {
   padding: 5px 0 0 5px;
 }
 
-.tip-macro { 
+.tip-macro {
   border-style: solid;
   border-width: 1px;
   border-color: #009900;
@@ -526,11 +527,11 @@ tr td.noformatting {
   width: 16px;
 }
 
-.icon-hint {
+.confluence-information-macro-icon {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA1klEQVR42qWTUQqCQBCGfdKCuogu+qBeoot0kl7TBwU9S3QLyega9ZBh1L/wLyyDLGkLHzj/vzPM7o6eXLv9IQRH0IMnuVAL7b0y0QcVeIPPFPQasJ5KPlkbW5CDFcmpGf8MfLtATeMGEqObBCuOwJV6ZYsjxVhrsoDQEuojiLRQmLa9H5d1nEIHPYOMvrMD6hm9XgcDg2BGgYDesLTAlt596RFSep3jEp0FWnqlDtTMZ4ytZ1SuQZJLDlLtGuUGpNQ3/G7kKP/5M7nbLNnqCzxAR03J/V+HSh9XtOsatQAAAABJRU5ErkJggg==");
 }
 
-.icon-warning {
+.confluence-information-macro-icon {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABA0lEQVR42p2QP0tCURiH7zdQRA3u4OJUiyDY4CDtTuEXuXs0JEQ4uDk5C0EuKoEu+SWcg5baLCS7tNTx98IzyMWjXoeHe95/z3vODdzi2kdTvIo30fL1+YbLIhYOfsV5GsFAOL59zsNjBRfij60lEXKbf1E5RvDExl4URYGwXJfc6JCgwqZYhBp2hs5n4odadZ9gzKYu2x1YrUPt2SeosWEtijsEBfGN5HKXYErxweKkAMk9PbOkoE5hJXI+AbUVvfVtwZzkHTECAGptel8cgisSnyJDk+8GRlZ8MdOwxITghoa9ArhlZmzB+/abDjwh+c8+LBgRnMLEBHnxKJYpBpfMFDbGjWcGPFD11gAAAABJRU5ErkJggg==");
 }
 
@@ -665,11 +666,6 @@ table.bodyTable tr.b {
   padding-left: 4px;
 }
 
-#header_row {
-  background-image: url(http://docs.codehaus.org/download/attachments/27917/cargo-banner-center.png);
-  background-repeat: repeat-x;
-}
-
 #layout {
   margin: 0px;
   padding: 0px;
@@ -722,4 +718,28 @@ table.bodyTable tr.b {
   font-size: 13px; /* small */
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.confluence-information-macro {
+  background: none repeat scroll 0 0 #fcfcfc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  margin: 10px 0;
+  padding: 10px 10px 7px 36px;
+  position: relative;
+}
+
+.confluence-information-macro > .title {
+  font-weight: bold;
+}
+
+.confluence-information-macro-information {
+  background-color: #fcfcfc;
+  border-color: #aab8c6;
+}
+
+.confluence-information-macro-note {
+  background: none repeat scroll 0 0 #fffdf6;
+  border-color: #ffeaae;
 }
