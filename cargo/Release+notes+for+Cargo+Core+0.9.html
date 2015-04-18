@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head profile="http://www.w3.org/2000/08/w3c-synd/#">
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
+  <link rel="shortcut icon" href="attachments/favicon.ico"/>
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
+
+  <title>Codehaus Cargo - Release notes for Cargo Core 0.9</title>
+
+  <script type="text/javascript">
+    // Google Analytics code
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31476258-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
+    <tr>
+      <td colspan="2" style="padding:8px;">
+        <table width="100%" id="banner" style="padding:0px;margin:0px">
+          <tr id="header_row">
+            <td align="left" valign="middle" style="padding:0px;margin:0px;">
+              <img src="attachments/cargo-banner-left.png"/>
+            </td>
+            <td align="right" valign="middle" style="padding:0px;margin:0px;">
+              <img src="attachments/cargo-banner-right.png"/>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="breadcrumbs">
+        <!--
+        <table width="100%" id="banner" style="padding:0px;margin:0px">
+          <tr>
+            <td align="left">
+              <p>
+                <a href="/">Home</a>
+                #if ($page.pageKey != "Home")
+                  #foreach($breadcrumb in $breadcrumbs)
+                    &gt; <a href="/${breadcrumb.pageKeyEncoded}">${breadcrumb.pageKey}</a>
+                  #end
+                #end
+              </p>
+            </td>
+            <td align="left">
+              #if (${quicklinksFragment})
+                ${quicklinksFragment}
+              #end
+            </td>
+            <td align="right">
+              <a href="/${page.pageKeyEncoded}?print=1" style="color:#999;font-size:small">
+                <img src="attachments/print.gif" border="0" alt="Printable version" title="Printable version">
+              </a>
+            </td>
+          </tr>
+        </table>
+         -->
+      </td>
+    </tr>
+    <tr>
+      <td id="leftColumn" valign="top" style="padding-top: 0px;">
+          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://jira.codehaus.org/browse/CARGO?report=com.atlassian.jira.plugin.system.project:openissues-panel" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://jira.codehaus.org/browse/CARGO?report=com.atlassian.jira.plugin.system.project:changelog-panel" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
+
+          <h3 class="heading3">Feeds</h3>
+          <table border="0" cellspacing="4px">
+          <tr>
+            <td align="right">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
+            </td>
+            <td align="left">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
+            </td>
+            <td align="left">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td id="rightColumn" valign="top">
+        <script type="text/javascript">
+          // Google Ads code
+          google_ad_client = "ca-pub-7996505557003356";
+          google_ad_slot = "5363897989";
+          google_ad_width = 728;
+          google_ad_height = 90;
+        </script>
+        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
+          <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+        </center>
+
+        <p>Release note content:</p>
+<ul>
+	<li><a href="#ReleasenotesforCargoCore0.9-main">Main changes</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-issues">Changelog</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-migration">Migration Guide</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-clirr">Clirr report</a></li>
+</ul>
+
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-main"></span></p>
+<h3 id="ReleasenotesforCargoCore0.9-Mainchanges">Main changes</h3>
+
+<p>Here are the highlights of Cargo Core 0.9:</p>
+<ul>
+	<li>Added new Packager interface and a first implementation for Tomcat.</li>
+	<li>Added DataSource configuration support to Standalone configurations for containers: XXXX</li>
+	<li>TODO</li>
+</ul>
+
+
+<p>The full list of all issues fixed and features implemented is available below.</p>
+
+<p>Please note that version 0.9 has broken some APIs as explained below in the migration guide. This is the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this.</p>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-issues"></span></p>
+<h3 id="ReleasenotesforCargoCore0.9-Changelog">Changelog</h3>
+
+
+
+
+
+
+
+
+<div id="refresh-module-141638406">
+    <p>
+                <div id="refresh-141638406" class="refresh-macro">
+            <img class="spinner" src="attachments/wait.gif">Loading <em></em> &hellip;
+        </div>
+        
+                    
+            
+                    
+        <div id="jira-issues-141638406" style="width: 100%;  overflow: auto;">
+            <table class="aui" >
+                <tbody>
+                <tr></tr>                 <tr>
+                                                                          <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">T</th>
+                                                                                                   <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Key</th>
+                                                                                                   <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Resolution</th>
+                                                                                                   <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Summary</th>
+                                                                                                   <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Assignee</th>
+                                                                                                   <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Reporter</th>
+                                                             </tr>
+                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-499?src=confmacro"><img src="attachments/bug.png" alt="Bug" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-499?src=confmacro">CARGO-499</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-499?src=confmacro">
+                                            Deploying war with relative path under orion1x fails
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-497?src=confmacro"><img src="attachments/blank.gif" alt="Test" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-497?src=confmacro">CARGO-497</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-497?src=confmacro">
+                                            Test on Jetty 6.1.1
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-496?src=confmacro"><img src="attachments/blank.gif" alt="Test" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-496?src=confmacro">CARGO-496</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-496?src=confmacro">
+                                            Test on Tomcat 5.0.30
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-495?src=confmacro"><img src="attachments/blank.gif" alt="Test" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-495?src=confmacro">CARGO-495</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-495?src=confmacro">
+                                            Test on Resin 3.0.23
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-493?src=confmacro"><img src="attachments/bug.png" alt="Bug" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-493?src=confmacro">CARGO-493</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-493?src=confmacro">
+                                            OrionEjbJarXml.getJndiName returns wrong name for local EJB:s on oc4j 10.1.3
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        grimsell grimsell
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        grimsell grimsell
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-490?src=confmacro"><img src="attachments/bug.png" alt="Bug" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-490?src=confmacro">CARGO-490</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-490?src=confmacro">
+                                            Deploying war with relative filename fails on tomcat3x
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-489?src=confmacro"><img src="attachments/bug.png" alt="Bug" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-489?src=confmacro">CARGO-489</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-489?src=confmacro">
+                                            Tomcat 5.x doesn&#39;t build in samples/java with the Maven2 build
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-487?src=confmacro"><img src="attachments/improvement.png" alt="Improvement" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-487?src=confmacro">CARGO-487</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-487?src=confmacro">
+                                            Complete SVN reorganization
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-479?src=confmacro"><img src="attachments/improvement.png" alt="Improvement" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-479?src=confmacro">CARGO-479</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-479?src=confmacro">
+                                            Improve DefaultAntTaskFactory so that it can create Ant tasks for tasks requiring a valid Ant Target object
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Petar Tahchiev
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-475?src=confmacro"><img src="attachments/blank.gif" alt="Test" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-475?src=confmacro">CARGO-475</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-475?src=confmacro">
+                                            Test on Jetty 6.1.1rc0
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-474?src=confmacro"><img src="attachments/newfeature.png" alt="New Feature" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-474?src=confmacro">CARGO-474</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-474?src=confmacro">
+                                            Add support for Jetty 6.1
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Jan Bartel
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-472?src=confmacro"><img src="attachments/blank.gif" alt="Test" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-472?src=confmacro">CARGO-472</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-472?src=confmacro">
+                                            Test on Tomcat 4.1.34
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-471?src=confmacro"><img src="attachments/blank.gif" alt="Test" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-471?src=confmacro">CARGO-471</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-471?src=confmacro">
+                                            Test on Resin 3.0.22
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-470?src=confmacro"><img src="attachments/bug.png" alt="Bug" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-470?src=confmacro">CARGO-470</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-470?src=confmacro">
+                                            FileNotFoundException in FileUtils.copyFile when specifying relative paths
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-469?src=confmacro"><img src="attachments/improvement.png" alt="Improvement" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-469?src=confmacro">CARGO-469</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-469?src=confmacro">
+                                            Log downloading of container
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-466?src=confmacro"><img src="attachments/improvement.png" alt="Improvement" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-466?src=confmacro">CARGO-466</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-466?src=confmacro">
+                                            Use vfs 1.0 (and remove unneeded dependency)
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-465?src=confmacro"><img src="attachments/bug.png" alt="Bug" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-465?src=confmacro">CARGO-465</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-465?src=confmacro">
+                                            Orion testGetRoleToken unit test is failing
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        David J. M. Karlsen
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-458?src=confmacro"><img src="attachments/newfeature.png" alt="New Feature" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-458?src=confmacro">CARGO-458</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-458?src=confmacro">
+                                            Add cargo:package goal to package a container distribution, its configuration and deployed deployables
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowNormal">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-457?src=confmacro"><img src="attachments/newfeature.png" alt="New Feature" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-457?src=confmacro">CARGO-457</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-457?src=confmacro">
+                                            Add Packager API to packager a container&#39;s distribution, a Configuration and deployed Deployables
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                                            <tr class="rowAlternate">
+                                                                                                                                <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-446?src=confmacro"><img src="attachments/improvement.png" alt="Improvement" class="icon" /></a>
+                                                                    </td>
+                                                                    <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-446?src=confmacro">CARGO-446</a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            Fixed
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                            <a href="http://jira.codehaus.org/browse/CARGO-446?src=confmacro">
+                                            ConfigurationFactory and ConfigurationCapabilityFactory APIs should take a ContainerType as parameter
+                                        </a>
+                                                                    </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                                    <td  class="jira-macro-table-underline-pdfexport" >
+                                                                                                                        Vincent Massol
+                                                                                                            </td>
+                                                            </tr>
+                                                                                                                                    
+                                </tbody>
+            </table>
+        </div>
+                                <div class="refresh-issues-bottom">
+                <span id="total-issues-count-141638406">
+                                                                        <span>Showing 20 out of</span>
+                                                <a rel="nofollow" title="View all matching issues in JIRA." href="http://jira.codehaus.org/secure/IssueNavigator.jspa?reset=true&amp;&amp;pid=10730&amp;fixfor=12482&amp;sorter/field=issuekey&amp;sorter/order=DESC&amp;src=confmacro">
+                                                            86 issues
+                                                </a>
+                                    </span>
+                                    <span class="refresh-action-group">
+                        <a id="refresh-issues-button-141638406" class="icon icon-refresh refresh-action" rel="nofollow"></a>
+                        <a id="refresh-issues-link-141638406" class="refresh-action" rel="nofollow">Refresh</a>
+                        <span id="error-message-141638406"></span>
+                    </span>
+                            </div>
+            
+                        <div class="hidden">
+                <textarea id="refresh-wiki-141638406">&lt;ac:structured-macro ac:name=&quot;jira&quot; ac:schema-version=&quot;1&quot; ac:macro-id=&quot;e7e3c7aa-311e-41ad-80ae-d4ce1bf969b3&quot;&gt;&lt;ac:parameter ac:name=&quot;columns&quot;&gt;type;key;resolution;summary;assignee;reporter&lt;/ac:parameter&gt;&lt;ac:parameter ac:name=&quot;url&quot;&gt;http://jira.codehaus.org/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?&amp;amp;pid=10730&amp;amp;fixfor=12482&amp;amp;sorter/field=issuekey&amp;amp;sorter/order=DESC&lt;/ac:parameter&gt;&lt;ac:parameter ac:name=&quot;: = | RAW | = :&quot;&gt;columns=type;key;resolution;summary;assignee;reporter|url=http://jira.codehaus.org/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?&amp;amp;pid=10730&amp;amp;fixfor=12482&amp;amp;sorter/field=issuekey&amp;amp;sorter/order=DESC&lt;/ac:parameter&gt;&lt;ac:parameter ac:name=&quot;: = | TOKEN_TYPE | = :&quot;&gt;BLOCK&lt;/ac:parameter&gt;&lt;/ac:structured-macro&gt;</textarea>
+                <input id="refresh-page-id-141638406" type="text" value="491586"/>
+            </div>
+                        </p>
+</div>
+ 
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-migration"></span></p>
+<h3 id="ReleasenotesforCargoCore0.9-Migrationguidefrom0.8to0.9">Migration guide from 0.8 to 0.9</h3>
+
+<p>This sections lists the principal differences in Cargo 0.9 which you may require you to modify the way you use Cargo. The full list of changes is shown below in the <a href="#ReleasenotesforCargoCore0.9-clirr">Clirr section</a>.</p>
+
+<ul>
+	<li>Several methods have had their signature changed to use String instead of File or to return String instead of file. This is true for example for InstalledLocalContainer.getHome()/setHome() and for lots of others. The reason is that File was too restrictive and we wanted the opportunity of allowing in the future any location where files can be saved. For example we have started making it possible to use Commons VFS to allow getting/saving files to virtually anywhere (inside JARs, Zips, on a FTP server, etc). This feature is not enabled right now as support for it isn't finished. But we had to make this change before Cargo goes 1.0.</li>
+</ul>
+
+
+<ul>
+	<li>JSR88 classes have been removed from the distribution as they were not working. The original author of Cargo's JSR88 support hasn't participated to the project for a very long time now and we didn't get anyone to carry over his work. Thus we've temporarily moved JSR88 to the sandbox, waiting for someone to provide some love to it in order to bring it back in the Cargo distribution.</li>
+</ul>
+
+
+<ul>
+	<li>Factories APIs have been homogeneized and thus some method signatures have slightly changed. See <a href="#ReleasenotesforCargoCore0.9-generic">below</a>.</li>
+</ul>
+
+
+<ul>
+	<li>Big refactoring of the Module API. This will only affects direct users of this API.</li>
+</ul>
+
+
+
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-clirr"></span></p>
+<h3 id="ReleasenotesforCargoCore0.9-Clirrreport">Clirr report</h3>
+
+<p>This is the report generated by <a href="http://clirr.sourceforge.net/" class="external-link" rel="nofollow">Clirr</a> on the different Cargo Core APIs:</p>
+<ul>
+	<li><a href="#ReleasenotesforCargoCore0.9-container">Core Container API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-generic">Core Generic API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-module">Core Module API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-util">Core Util API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-jboss">JBoss API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-jetty">Jetty API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-jo">Jo API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-orion">Orion API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-resin">Resin API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-tomcat">Tomcat API</a></li>
+	<li><a href="#ReleasenotesforCargoCore0.9-weblogic">WebLogic API</a></li>
+</ul>
+
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-container"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-CoreContainerAPI">Core Container API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+ERROR: 7006: org.codehaus.cargo.container.InstalledLocalContainer: Return type of method &#39;public java.io.File getHome()&#39; has been changed to java.lang.String
+ERROR: 7005: org.codehaus.cargo.container.InstalledLocalContainer: Parameter 1 of &#39;public void setHome(java.io.File)&#39; has changed its type to java.lang.String
+ERROR: 7006: org.codehaus.cargo.container.configuration.LocalConfiguration: Return type of method &#39;public java.io.File getHome()&#39; has been changed to java.lang.String
+ERROR: 7006: org.codehaus.cargo.container.deployable.Deployable: Return type of method &#39;public java.io.File getFile()&#39; has been changed to java.lang.String
+INFO: 5000: org.codehaus.cargo.container.deployable.EAR: Added org.codehaus.cargo.container.spi.deployable.AbstractDeployable to the list of superclasses
+ERROR: 7002: org.codehaus.cargo.container.deployable.EAR: Method &#39;public java.io.File getFile()&#39; has been removed
+INFO: 5000: org.codehaus.cargo.container.deployable.EJB: Added org.codehaus.cargo.container.spi.deployable.AbstractDeployable to the list of superclasses
+ERROR: 7002: org.codehaus.cargo.container.deployable.EJB: Method &#39;public java.io.File getFile()&#39; has been removed
+INFO: 5000: org.codehaus.cargo.container.deployable.WAR: Added org.codehaus.cargo.container.spi.deployable.AbstractDeployable to the list of superclasses
+ERROR: 7002: org.codehaus.cargo.container.deployable.WAR: Method &#39;public java.io.File getFile()&#39; has been removed
+ERROR: 7012: org.codehaus.cargo.container.deployer.DeployableMonitor: Method &#39;public java.lang.String getDeployableName()&#39; has been added to an interface
+INFO: 4000: org.codehaus.cargo.container.deployer.Deployer: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
+INFO: 6000: org.codehaus.cargo.container.deployer.DeployerType: Added public field EMBEDDED
+INFO: 6000: org.codehaus.cargo.container.deployer.DeployerType: Added public field INSTALLED
+ERROR: 6001: org.codehaus.cargo.container.deployer.DeployerType: Removed field LOCAL
+INFO: 7011: org.codehaus.cargo.container.deployer.DeployerType: Method &#39;public boolean isLocal()&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.deployer.DeployerType: Method &#39;public boolean isRemote()&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.deployer.DeployerType: Method &#39;public org.codehaus.cargo.container.deployer.DeployerType toType(org.codehaus.cargo.container.ContainerType)&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.deployer.URLDeployableMonitor: Method &#39;public java.lang.String getDeployableName()&#39; has been added
+ERROR: 7006: org.codehaus.cargo.container.installer.Installer: Return type of method &#39;public java.io.File getHome()&#39; has been changed to java.lang.String
+ERROR: 7005: org.codehaus.cargo.container.installer.ZipURLInstaller: Parameter 2 of &#39;public ZipURLInstaller(java.net.URL, java.io.File)&#39; has changed its type to java.lang.String
+ERROR: 7006: org.codehaus.cargo.container.installer.ZipURLInstaller: Return type of method &#39;protected java.io.File getDestinationDir()&#39; has been changed to java.lang.String
+INFO: 7011: org.codehaus.cargo.container.installer.ZipURLInstaller: Method &#39;public org.codehaus.cargo.util.FileHandler getFileHandler()&#39; has been added
+ERROR: 7006: org.codehaus.cargo.container.installer.ZipURLInstaller: Return type of method &#39;public java.io.File getHome()&#39; has been changed to java.lang.String
+ERROR: 7005: org.codehaus.cargo.container.installer.ZipURLInstaller: Parameter 1 of &#39;protected void setAntTaskFactory(org.codehaus.cargo.container.internal.util.AntTaskFactory)&#39; has changed its type to org.codehaus.cargo.util.AntTaskFactory
+INFO: 7011: org.codehaus.cargo.container.installer.ZipURLInstaller: Method &#39;public void setFileHandler(org.codehaus.cargo.util.FileHandler)&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.installer.ZipURLInstaller: Method &#39;public void setInstallDir(java.lang.String)&#39; has been added
+ERROR: 8001: org.codehaus.cargo.container.jsr88.GenericJSR88Configuration: Class org.codehaus.cargo.container.jsr88.GenericJSR88Configuration removed
+ERROR: 8001: org.codehaus.cargo.container.jsr88.JSR88ConfigurationCapability: Class org.codehaus.cargo.container.jsr88.JSR88ConfigurationCapability removed
+ERROR: 8001: org.codehaus.cargo.container.jsr88.JSR88Deployer: Class org.codehaus.cargo.container.jsr88.JSR88Deployer removed
+INFO: 8000: org.codehaus.cargo.container.packager.Packager: Class org.codehaus.cargo.container.packager.Packager added
+INFO: 8000: org.codehaus.cargo.container.packager.PackagerType: Class org.codehaus.cargo.container.packager.PackagerType added
+INFO: 8000: org.codehaus.cargo.container.property.DataSource: Class org.codehaus.cargo.container.property.DataSource added
+INFO: 8000: org.codehaus.cargo.container.property.DatasourcePropertySet: Class org.codehaus.cargo.container.property.DatasourcePropertySet added
+</pre>
+</div></div>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-generic"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-CoreGenericAPI">Core Generic API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+ERROR: 7012: org.codehaus.cargo.generic.ContainerFactory: Method &#39;public java.util.Map getContainerIds()&#39; has been added to an interface
+INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method &#39;public java.util.Map getContainerIds()&#39; has been added
+ERROR: 7005: org.codehaus.cargo.generic.DefaultContainerFactory: Parameter 2 of &#39;public void registerContainer(java.lang.String, java.lang.String, org.codehaus.cargo.container.ContainerType)&#39; has changed its type to org.codehaus.cargo.container.ContainerType
+ERROR: 7005: org.codehaus.cargo.generic.DefaultContainerFactory: Parameter 3 of &#39;public void registerContainer(java.lang.String, java.lang.String, org.codehaus.cargo.container.ContainerType)&#39; has changed its type to java.lang.String
+ERROR: 7004: org.codehaus.cargo.generic.configuration.ConfigurationCapabilityFactory: In method &#39;public org.codehaus.cargo.container.configuration.ConfigurationCapability createConfigurationCapability(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.ConfigurationCapabilityFactory: In method &#39;public void registerConfigurationCapability(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType, java.lang.Class)&#39; the number of arguments has changed
+ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.ContainerType
+ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 3 of &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7004: org.codehaus.cargo.generic.configuration.ConfigurationFactory: In method &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.ConfigurationFactory: In method &#39;public java.lang.Class getConfigurationClass(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.ConfigurationFactory: In method &#39;public boolean isConfigurationRegistered(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.ConfigurationFactory: In method &#39;public void registerConfiguration(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType, java.lang.Class)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationCapabilityFactory: In method &#39;public org.codehaus.cargo.container.configuration.ConfigurationCapability createConfigurationCapability(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationCapabilityFactory: In method &#39;public void registerConfigurationCapability(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType, java.lang.Class)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationCapabilityFactory: In method &#39;public void registerConfigurationCapability(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType, java.lang.String)&#39; the number of arguments has changed
+ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.ContainerType
+ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 3 of &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: In method &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: In method &#39;public java.lang.Class getConfigurationClass(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: In method &#39;public boolean isConfigurationRegistered(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: In method &#39;public void registerConfiguration(java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType, java.lang.Class)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: In method &#39;public void registerConfiguration(java.lang.String, java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; the number of arguments has changed
+ERROR: 7005: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Parameter 2 of &#39;public void registerDeployable(java.lang.String, java.lang.String, org.codehaus.cargo.container.deployable.DeployableType)&#39; has changed its type to org.codehaus.cargo.container.deployable.DeployableType
+ERROR: 7005: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Parameter 3 of &#39;public void registerDeployable(java.lang.String, java.lang.String, org.codehaus.cargo.container.deployable.DeployableType)&#39; has changed its type to java.lang.String
+INFO: 7011: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Method &#39;public org.codehaus.cargo.container.deployer.Deployer createDeployer(org.codehaus.cargo.container.Container)&#39; has been added
+ERROR: 7005: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Parameter 2 of &#39;public void registerDeployer(java.lang.String, java.lang.String, org.codehaus.cargo.container.deployer.DeployerType)&#39; has changed its type to org.codehaus.cargo.container.deployer.DeployerType
+ERROR: 7005: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Parameter 3 of &#39;public void registerDeployer(java.lang.String, java.lang.String, org.codehaus.cargo.container.deployer.DeployerType)&#39; has changed its type to java.lang.String
+ERROR: 7012: org.codehaus.cargo.generic.deployer.DeployerFactory: Method &#39;public org.codehaus.cargo.container.deployer.Deployer createDeployer(org.codehaus.cargo.container.Container)&#39; has been added to an interface
+INFO: 8000: org.codehaus.cargo.generic.packager.DefaultPackagerFactory: Class org.codehaus.cargo.generic.packager.DefaultPackagerFactory added
+INFO: 8000: org.codehaus.cargo.generic.packager.PackagerFactory: Class org.codehaus.cargo.generic.packager.PackagerFactory added
+</pre>
+</div></div>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-module"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-CoreModuleAPI">Core Module API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 4000: org.codehaus.cargo.module.AbstractDescriptor: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 1 of &#39;protected org.w3c.dom.Element addElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element, org.w3c.dom.Element)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+INFO: 7015: org.codehaus.cargo.module.AbstractDescriptor: Method &#39;protected org.w3c.dom.Element addElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element, org.w3c.dom.Element)&#39; is no longer final
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 2 of &#39;protected void checkElement(org.w3c.dom.Element, org.codehaus.cargo.module.AbstractDescriptorTag)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 1 of &#39;protected org.w3c.dom.Element createNestedText(org.codehaus.cargo.module.AbstractDescriptorTag, java.lang.String)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 2 of &#39;protected java.lang.String getChildText(org.w3c.dom.Element, org.codehaus.cargo.module.AbstractDescriptorTag)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+INFO: 7015: org.codehaus.cargo.module.AbstractDescriptor: Method &#39;public org.w3c.dom.Document getDocument()&#39; is no longer final
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 1 of &#39;public java.util.Iterator getElements(org.codehaus.cargo.module.AbstractDescriptorTag)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+INFO: 7015: org.codehaus.cargo.module.AbstractDescriptor: Method &#39;public java.util.Iterator getElements(org.codehaus.cargo.module.AbstractDescriptorTag)&#39; is no longer final
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 2 of &#39;protected org.w3c.dom.Element getImmediateChild(org.w3c.dom.Element, org.codehaus.cargo.module.AbstractDescriptorTag)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 1 of &#39;protected org.w3c.dom.Node getInsertionPointFor(org.codehaus.cargo.module.AbstractDescriptorTag, java.lang.String)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 2 of &#39;protected java.util.Iterator getNestedElements(org.w3c.dom.Element, org.codehaus.cargo.module.AbstractDescriptorTag)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 2 of &#39;protected java.lang.String getNestedText(org.w3c.dom.Element, org.codehaus.cargo.module.AbstractDescriptorTag)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+INFO: 7015: org.codehaus.cargo.module.AbstractDescriptor: Method &#39;public org.w3c.dom.Element getRootElement()&#39; is no longer final
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 1 of &#39;public org.w3c.dom.Element replaceElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element, org.w3c.dom.Element)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+INFO: 7015: org.codehaus.cargo.module.AbstractDescriptor: Method &#39;public org.w3c.dom.Element replaceElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element, org.w3c.dom.Element)&#39; is no longer final
+ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptorIo: Parameter 2 of &#39;public java.io.File[] writeAll(org.codehaus.cargo.module.J2eeDescriptor, java.io.File)&#39; has changed its type to java.lang.String
+ERROR: 8001: org.codehaus.cargo.module.AbstractDescriptorTag: Class org.codehaus.cargo.module.AbstractDescriptorTag removed
+ERROR: 7005: org.codehaus.cargo.module.DefaultJarArchive: Parameter 1 of &#39;public DefaultJarArchive(java.io.File)&#39; has changed its type to java.lang.String
+INFO: 7011: org.codehaus.cargo.module.DefaultJarArchive: Method &#39;public org.codehaus.cargo.util.FileHandler getFileHandler()&#39; has been added
+INFO: 7011: org.codehaus.cargo.module.DefaultJarArchive: Method &#39;public void setFileHandler(org.codehaus.cargo.util.FileHandler)&#39; has been added
+INFO: 8000: org.codehaus.cargo.module.DescriptorTag: Class org.codehaus.cargo.module.DescriptorTag added
+ERROR: 7002: org.codehaus.cargo.module.J2eeDescriptor: Method &#39;public org.codehaus.cargo.module.Descriptor getVendorDescriptor()&#39; has been removed
+INFO: 8000: org.codehaus.cargo.module.VendorDescriptor: Class org.codehaus.cargo.module.VendorDescriptor added
+ERROR: 2001: org.codehaus.cargo.module.application.ApplicationXml: Changed from interface to class
+INFO: 4000: org.codehaus.cargo.module.application.ApplicationXml: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.module.application.ApplicationXml: Added org.codehaus.cargo.module.J2eeDescriptor to the set of implemented interfaces
+INFO: 5000: org.codehaus.cargo.module.application.ApplicationXml: Added org.codehaus.cargo.module.AbstractDescriptor to the list of superclasses
+ERROR: 5001: org.codehaus.cargo.module.application.ApplicationXmlTag: Removed org.codehaus.cargo.module.AbstractDescriptorTag from the list of superclasses
+INFO: 5000: org.codehaus.cargo.module.application.ApplicationXmlTag: Added org.codehaus.cargo.module.DescriptorTag to the list of superclasses
+ERROR: 8001: org.codehaus.cargo.module.application.DefaultApplicationXml: Class org.codehaus.cargo.module.application.DefaultApplicationXml removed
+ERROR: 7005: org.codehaus.cargo.module.application.DefaultEarArchive: Parameter 1 of &#39;public DefaultEarArchive(java.io.File)&#39; has changed its type to java.lang.String
+ERROR: 7005: org.codehaus.cargo.module.ejb.DefaultEjbArchive: Parameter 1 of &#39;public DefaultEjbArchive(java.io.File)&#39; has changed its type to java.lang.String
+ERROR: 7002: org.codehaus.cargo.module.ejb.EjbJarXml: Method &#39;public org.codehaus.cargo.module.Descriptor getVendorDescriptor()&#39; has been removed
+ERROR: 5001: org.codehaus.cargo.module.ejb.EjbJarXmlTag: Removed org.codehaus.cargo.module.AbstractDescriptorTag from the list of superclasses
+INFO: 5000: org.codehaus.cargo.module.ejb.EjbJarXmlTag: Added org.codehaus.cargo.module.DescriptorTag to the list of superclasses
+INFO: 4000: org.codehaus.cargo.module.ejb.VendorEjbDescriptor: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXml: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlTag: Removed org.codehaus.cargo.module.AbstractDescriptorTag from the list of superclasses
+INFO: 5000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlTag: Added org.codehaus.cargo.module.DescriptorTag to the list of superclasses
+INFO: 4000: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmi: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
+ERROR: 8001: org.codehaus.cargo.module.merge.MergeStrategy: Class org.codehaus.cargo.module.merge.MergeStrategy removed
+ERROR: 7005: org.codehaus.cargo.module.webapp.DefaultWarArchive: Parameter 1 of &#39;public DefaultWarArchive(java.io.File)&#39; has changed its type to java.lang.String
+INFO: 8000: org.codehaus.cargo.module.webapp.EjbRef: Class org.codehaus.cargo.module.webapp.EjbRef added
+INFO: 8000: org.codehaus.cargo.module.webapp.Listener: Class org.codehaus.cargo.module.webapp.Listener added
+ERROR: 7005: org.codehaus.cargo.module.webapp.TagNodeList: Parameter 2 of &#39;public TagNodeList(org.w3c.dom.Element, org.codehaus.cargo.module.AbstractDescriptorTag, java.lang.Class)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+INFO: 4000: org.codehaus.cargo.module.webapp.VendorWebAppDescriptor: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
+INFO: 7011: org.codehaus.cargo.module.webapp.WebXml: Method &#39;public void addEjbRef(org.codehaus.cargo.module.webapp.EjbRef)&#39; has been added
+ERROR: 7002: org.codehaus.cargo.module.webapp.WebXml: Method &#39;public void addLocalEntityEjbRef(java.lang.String, java.lang.String, java.lang.String, java.lang.String)&#39; has been removed
+ERROR: 7002: org.codehaus.cargo.module.webapp.WebXml: Method &#39;public void addLocalSessionEjbRef(java.lang.String, java.lang.String, java.lang.String, java.lang.String)&#39; has been removed
+ERROR: 7005: org.codehaus.cargo.module.webapp.WebXml: Parameter 1 of &#39;public void addRootElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+INFO: 7011: org.codehaus.cargo.module.webapp.WebXml: Method &#39;public org.codehaus.cargo.module.internal.util.xml.AbstractNodeList getListeners()&#39; has been added
+ERROR: 7002: org.codehaus.cargo.module.webapp.WebXml: Method &#39;public org.codehaus.cargo.module.Descriptor getVendorDescriptor()&#39; has been removed
+ERROR: 7005: org.codehaus.cargo.module.webapp.WebXml: Parameter 1 of &#39;public void replaceRootElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element)&#39; has changed its type to org.codehaus.cargo.module.DescriptorTag
+INFO: 6000: org.codehaus.cargo.module.webapp.WebXmlMerger: Added protected field mergeListenerStrategy
+INFO: 7011: org.codehaus.cargo.module.webapp.WebXmlMerger: Method &#39;protected void mergeListeners(org.codehaus.cargo.module.webapp.WebXml)&#39; has been added
+ERROR: 5001: org.codehaus.cargo.module.webapp.WebXmlTag: Removed org.codehaus.cargo.module.AbstractDescriptorTag from the list of superclasses
+INFO: 5000: org.codehaus.cargo.module.webapp.WebXmlTag: Added org.codehaus.cargo.module.DescriptorTag to the list of superclasses
+INFO: 6000: org.codehaus.cargo.module.webapp.WebXmlTag: Added public field EJB_LINK
+INFO: 6000: org.codehaus.cargo.module.webapp.WebXmlTag: Added public field HOME
+INFO: 6000: org.codehaus.cargo.module.webapp.WebXmlTag: Added public field REMOTE
+INFO: 4000: org.codehaus.cargo.module.webapp.jboss.JBossWebXml: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
+INFO: 7011: org.codehaus.cargo.module.webapp.jboss.JBossWebXml: Method &#39;public java.lang.String getFileName()&#39; has been added
+ERROR: 5001: org.codehaus.cargo.module.webapp.jboss.JBossWebXmlTag: Removed org.codehaus.cargo.module.AbstractDescriptorTag from the list of superclasses
+INFO: 5000: org.codehaus.cargo.module.webapp.jboss.JBossWebXmlTag: Added org.codehaus.cargo.module.DescriptorTag to the list of superclasses
+INFO: 4000: org.codehaus.cargo.module.webapp.orion.OrionWebXml: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.module.webapp.resin.ResinWebXml: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.module.webapp.resin.ResinWebXmlTag: Removed org.codehaus.cargo.module.AbstractDescriptorTag from the list of superclasses
+INFO: 5000: org.codehaus.cargo.module.webapp.resin.ResinWebXmlTag: Added org.codehaus.cargo.module.DescriptorTag to the list of superclasses
+INFO: 4000: org.codehaus.cargo.module.webapp.tomcat.TomcatContextXml: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
+INFO: 7011: org.codehaus.cargo.module.webapp.tomcat.TomcatContextXml: Method &#39;public java.lang.String getFileName()&#39; has been added
+INFO: 7011: org.codehaus.cargo.module.webapp.tomcat.TomcatContextXml: Method &#39;public java.util.Map getParameters()&#39; has been added
+ERROR: 5001: org.codehaus.cargo.module.webapp.tomcat.TomcatContextXmlTag: Removed org.codehaus.cargo.module.AbstractDescriptorTag from the list of superclasses
+INFO: 5000: org.codehaus.cargo.module.webapp.tomcat.TomcatContextXmlTag: Added org.codehaus.cargo.module.DescriptorTag to the list of superclasses
+INFO: 6000: org.codehaus.cargo.module.webapp.tomcat.TomcatContextXmlTag: Added public field PARAMETER
+ERROR: 7005: org.codehaus.cargo.module.webapp.tomcat.TomcatWarArchive: Parameter 1 of &#39;public TomcatWarArchive(java.io.File)&#39; has changed its type to java.lang.String
+INFO: 4000: org.codehaus.cargo.module.webapp.weblogic.WeblogicXml: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.module.webapp.weblogic.WeblogicXmlTag: Removed org.codehaus.cargo.module.AbstractDescriptorTag from the list of superclasses
+INFO: 5000: org.codehaus.cargo.module.webapp.weblogic.WeblogicXmlTag: Added org.codehaus.cargo.module.DescriptorTag to the list of superclasses
+INFO: 4000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmi: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
+</pre>
+</div></div>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-util"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-CoreUtilAPI">Core Util API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 8000: org.codehaus.cargo.util.AntTaskFactory: Class org.codehaus.cargo.util.AntTaskFactory added
+INFO: 8000: org.codehaus.cargo.util.AntUtils: Class org.codehaus.cargo.util.AntUtils added
+INFO: 8000: org.codehaus.cargo.util.DefaultAntTaskFactory: Class org.codehaus.cargo.util.DefaultAntTaskFactory added
+INFO: 8000: org.codehaus.cargo.util.DefaultFileHandler: Class org.codehaus.cargo.util.DefaultFileHandler added
+INFO: 8000: org.codehaus.cargo.util.FileHandler: Class org.codehaus.cargo.util.FileHandler added
+INFO: 5000: org.codehaus.cargo.util.log.AntLogger: Added org.codehaus.cargo.util.internal.log.AbstractLogger to the list of superclasses
+INFO: 7003: org.codehaus.cargo.util.log.AntLogger: Method &#39;public void debug(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 7011: org.codehaus.cargo.util.log.AntLogger: Method &#39;protected void doLog(org.codehaus.cargo.util.log.LogLevel, java.lang.String, java.lang.String)&#39; has been added
+INFO: 7003: org.codehaus.cargo.util.log.AntLogger: Method &#39;public void info(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 7003: org.codehaus.cargo.util.log.AntLogger: Method &#39;public void warn(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 5000: org.codehaus.cargo.util.log.FileLogger: Added org.codehaus.cargo.util.internal.log.AbstractLogger to the list of superclasses
+INFO: 7003: org.codehaus.cargo.util.log.FileLogger: Method &#39;public void debug(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 7011: org.codehaus.cargo.util.log.FileLogger: Method &#39;protected void doLog(org.codehaus.cargo.util.log.LogLevel, java.lang.String, java.lang.String)&#39; has been added
+INFO: 7003: org.codehaus.cargo.util.log.FileLogger: Method &#39;public void info(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 7003: org.codehaus.cargo.util.log.FileLogger: Method &#39;public void warn(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 8000: org.codehaus.cargo.util.log.LogLevel: Class org.codehaus.cargo.util.log.LogLevel added
+ERROR: 7012: org.codehaus.cargo.util.log.Logger: Method &#39;public org.codehaus.cargo.util.log.LogLevel getLevel()&#39; has been added to an interface
+ERROR: 7012: org.codehaus.cargo.util.log.Logger: Method &#39;public void setLevel(org.codehaus.cargo.util.log.LogLevel)&#39; has been added to an interface
+INFO: 5000: org.codehaus.cargo.util.log.NullLogger: Added org.codehaus.cargo.util.internal.log.AbstractLogger to the list of superclasses
+INFO: 7003: org.codehaus.cargo.util.log.NullLogger: Method &#39;public void debug(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 7011: org.codehaus.cargo.util.log.NullLogger: Method &#39;protected void doLog(org.codehaus.cargo.util.log.LogLevel, java.lang.String, java.lang.String)&#39; has been added
+INFO: 7003: org.codehaus.cargo.util.log.NullLogger: Method &#39;public void info(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 7003: org.codehaus.cargo.util.log.NullLogger: Method &#39;public void warn(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 5000: org.codehaus.cargo.util.log.SimpleLogger: Added org.codehaus.cargo.util.internal.log.AbstractLogger to the list of superclasses
+INFO: 7003: org.codehaus.cargo.util.log.SimpleLogger: Method &#39;public void debug(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 7011: org.codehaus.cargo.util.log.SimpleLogger: Method &#39;protected void doLog(org.codehaus.cargo.util.log.LogLevel, java.lang.String, java.lang.String)&#39; has been added
+INFO: 7003: org.codehaus.cargo.util.log.SimpleLogger: Method &#39;public void info(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+INFO: 7003: org.codehaus.cargo.util.log.SimpleLogger: Method &#39;public void warn(java.lang.String, java.lang.String)&#39; has been removed, but an inherited definition exists.
+</pre>
+</div></div>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-jboss"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-JBossAPI">JBoss API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 4000: org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer: Added org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.jboss.JBoss4xInstalledLocalContainer: Added org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer to the set of implemented interfaces
+ERROR: 8001: org.codehaus.cargo.container.jboss.JBossDeployer: Class org.codehaus.cargo.container.jboss.JBossDeployer removed
+ERROR: 7005: org.codehaus.cargo.container.jboss.JBossExistingLocalConfiguration: Parameter 1 of &#39;public JBossExistingLocalConfiguration(java.io.File)&#39; has changed its type to java.lang.String
+ERROR: 7002: org.codehaus.cargo.container.jboss.JBossExistingLocalConfiguration: Method &#39;public void verifyProperties()&#39; has been removed
+INFO: 8000: org.codehaus.cargo.container.jboss.JBossInstalledLocalDeployer: Class org.codehaus.cargo.container.jboss.JBossInstalledLocalDeployer added
+ERROR: 8001: org.codehaus.cargo.container.jboss.JBossJMXDeployer: Class org.codehaus.cargo.container.jboss.JBossJMXDeployer removed
+INFO: 8000: org.codehaus.cargo.container.jboss.JBossPropertySet: Class org.codehaus.cargo.container.jboss.JBossPropertySet added
+INFO: 8000: org.codehaus.cargo.container.jboss.JBossRemoteDeployer: Class org.codehaus.cargo.container.jboss.JBossRemoteDeployer added
+ERROR: 7005: org.codehaus.cargo.container.jboss.JBossStandaloneLocalConfiguration: Parameter 1 of &#39;public JBossStandaloneLocalConfiguration(java.io.File)&#39; has changed its type to java.lang.String
+ERROR: 7005: org.codehaus.cargo.container.jboss.JBossStandaloneLocalConfiguration: Parameter 1 of &#39;protected org.apache.tools.ant.types.FilterChain createJBossFilterChain(java.io.File)&#39; has changed its type to org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer
+INFO: 7011: org.codehaus.cargo.container.jboss.JBossStandaloneLocalConfiguration: Method &#39;public org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer getJbossContainer()&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.jboss.JBossStandaloneLocalConfiguration: Method &#39;public void verify()&#39; has been added
+INFO: 5000: org.codehaus.cargo.container.jboss.JBossWAR: Added org.codehaus.cargo.container.spi.deployable.AbstractDeployable to the list of superclasses
+</pre>
+</div></div>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-jetty"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-JettyAPI">Jetty API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+TODO
+</pre>
+</div></div>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-jo"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-JoAPI">Jo API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+TODO
+</pre>
+</div></div>
+
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-orion"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-OrionAPI">Orion API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+TODO
+</pre>
+</div></div>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-resin"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-ResinAPI">Resin API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+TODO
+</pre>
+</div></div>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-tomcat"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-TomcatAPI">Tomcat API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+TODO
+</pre>
+</div></div>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-weblogic"></span></p>
+<h4 id="ReleasenotesforCargoCore0.9-WebLogicAPI">WebLogic API</h4>
+
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+TODO
+</pre>
+</div></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="footer">
+        <table width="100%"> 
+          <tr>
+            <td align="left" valign="top">
+              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
+            </td>
+            <td align="right" valign="top">
+              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Release+notes+for+Cargo+Core+0.9">Atlassian Confluence</a>.
+            </td>
+          </tr>
+        <table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head profile="http://www.w3.org/2000/08/w3c-synd/#">
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
+  <link rel="shortcut icon" href="attachments/favicon.ico"/>
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
+
+  <title>Codehaus Cargo - Release notes for Cargo 0.5</title>
+
+  <script type="text/javascript">
+    // Google Analytics code
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31476258-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
+    <tr>
+      <td colspan="2" style="padding:8px;">
+        <table width="100%" id="banner" style="padding:0px;margin:0px">
+          <tr id="header_row">
+            <td align="left" valign="middle" style="padding:0px;margin:0px;">
+              <img src="attachments/cargo-banner-left.png"/>
+            </td>
+            <td align="right" valign="middle" style="padding:0px;margin:0px;">
+              <img src="attachments/cargo-banner-right.png"/>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="breadcrumbs">
+        <!--
+        <table width="100%" id="banner" style="padding:0px;margin:0px">
+          <tr>
+            <td align="left">
+              <p>
+                <a href="/">Home</a>
+                #if ($page.pageKey != "Home")
+                  #foreach($breadcrumb in $breadcrumbs)
+                    &gt; <a href="/${breadcrumb.pageKeyEncoded}">${breadcrumb.pageKey}</a>
+                  #end
+                #end
+              </p>
+            </td>
+            <td align="left">
+              #if (${quicklinksFragment})
+                ${quicklinksFragment}
+              #end
+            </td>
+            <td align="right">
+              <a href="/${page.pageKeyEncoded}?print=1" style="color:#999;font-size:small">
+                <img src="attachments/print.gif" border="0" alt="Printable version" title="Printable version">
+              </a>
+            </td>
+          </tr>
+        </table>
+         -->
+      </td>
+    </tr>
+    <tr>
+      <td id="leftColumn" valign="top" style="padding-top: 0px;">
+          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://jira.codehaus.org/browse/CARGO?report=com.atlassian.jira.plugin.system.project:openissues-panel" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://jira.codehaus.org/browse/CARGO?report=com.atlassian.jira.plugin.system.project:changelog-panel" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
+
+          <h3 class="heading3">Feeds</h3>
+          <table border="0" cellspacing="4px">
+          <tr>
+            <td align="right">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
+            </td>
+            <td align="left">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
+            </td>
+            <td align="left">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td id="rightColumn" valign="top">
+        <script type="text/javascript">
+          // Google Ads code
+          google_ad_client = "ca-pub-7996505557003356";
+          google_ad_slot = "5363897989";
+          google_ad_width = 728;
+          google_ad_height = 90;
+        </script>
+        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
+          <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+        </center>
+
+        <h3 id="ReleasenotesforCargo0.5-Implementedissues">Implemented issues</h3>
+
+<div class="aui-message warning jim-inline-block">
+    <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration.
+</div>
+ 
+
+<h3 id="ReleasenotesforCargo0.5-Sourcecodechanges">Source code changes</h3>
+
+<p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.5-clirr"></span><br />
+Changes detected by <a href="http://clirr.sourceforge.net" class="external-link" rel="nofollow">Clirr</a> between <code>cargo-0.4.jar</code> and <code>cargo-0.5.jar</code>:</p>
+<ul>
+	<li>[Core] <code>org.codehaus.cargo.deployment.*</code> package moved to <code>org.codehaus.cargo.module</code>
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+ERROR: 8001: org.codehaus.cargo.deployment.DefaultJarArchive: Class org.codehaus.cargo.deployment.DefaultJarArchive removed
+ERROR: 8001: org.codehaus.cargo.deployment.JarArchive: Class org.codehaus.cargo.deployment.JarArchive removed
+ERROR: 8001: org.codehaus.cargo.deployment.application.ApplicationXml: Class org.codehaus.cargo.deployment.application.ApplicationXml removed
+ERROR: 8001: org.codehaus.cargo.deployment.application.ApplicationXmlIo: Class org.codehaus.cargo.deployment.application.ApplicationXmlIo removed
+ERROR: 8001: org.codehaus.cargo.deployment.application.ApplicationXmlIo$ApplicationXmlEntityResolver: Class org.codehaus.cargo.deployment.application.ApplicationXmlIo$ApplicationXmlEntityResolver removed
+ERROR: 8001: org.codehaus.cargo.deployment.application.ApplicationXmlTag: Class org.codehaus.cargo.deployment.application.ApplicationXmlTag removed
+ERROR: 8001: org.codehaus.cargo.deployment.application.ApplicationXmlVersion: Class org.codehaus.cargo.deployment.application.ApplicationXmlVersion removed
+ERROR: 8001: org.codehaus.cargo.deployment.application.DefaultApplicationXml: Class org.codehaus.cargo.deployment.application.DefaultApplicationXml removed
+ERROR: 8001: org.codehaus.cargo.deployment.application.DefaultEarArchive: Class org.codehaus.cargo.deployment.application.DefaultEarArchive removed
+ERROR: 8001: org.codehaus.cargo.deployment.application.EarArchive: Class org.codehaus.cargo.deployment.application.EarArchive removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.AbstractDescriptor: Class org.codehaus.cargo.deployment.webapp.AbstractDescriptor removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.AbstractDescriptorIo: Class org.codehaus.cargo.deployment.webapp.AbstractDescriptorIo removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.AbstractDescriptorTag: Class org.codehaus.cargo.deployment.webapp.AbstractDescriptorTag removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.DefaultWarArchive: Class org.codehaus.cargo.deployment.webapp.DefaultWarArchive removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.WarArchive: Class org.codehaus.cargo.deployment.webapp.WarArchive removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.WebXml: Class org.codehaus.cargo.deployment.webapp.WebXml removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.WebXmlIo: Class org.codehaus.cargo.deployment.webapp.WebXmlIo removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.WebXmlIo$WebXmlEntityResolver: Class org.codehaus.cargo.deployment.webapp.WebXmlIo$WebXmlEntityResolver removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.WebXmlMerger: Class org.codehaus.cargo.deployment.webapp.WebXmlMerger removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.WebXmlTag: Class org.codehaus.cargo.deployment.webapp.WebXmlTag removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.WebXmlVersion: Class org.codehaus.cargo.deployment.webapp.WebXmlVersion removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.jboss.JBossWarArchive: Class org.codehaus.cargo.deployment.webapp.jboss.JBossWarArchive removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.jboss.JBossWebXml: Class org.codehaus.cargo.deployment.webapp.jboss.JBossWebXml removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.jboss.JBossWebXmlIo: Class org.codehaus.cargo.deployment.webapp.jboss.JBossWebXmlIo removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.jboss.JBossWebXmlTag: Class org.codehaus.cargo.deployment.webapp.jboss.JBossWebXmlTag removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.tomcat.TomcatContextXml: Class org.codehaus.cargo.deployment.webapp.tomcat.TomcatContextXml removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.tomcat.TomcatContextXmlIo: Class org.codehaus.cargo.deployment.webapp.tomcat.TomcatContextXmlIo removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.tomcat.TomcatContextXmlTag: Class org.codehaus.cargo.deployment.webapp.tomcat.TomcatContextXmlTag removed
+ERROR: 8001: org.codehaus.cargo.deployment.webapp.tomcat.TomcatWarArchive: Class org.codehaus.cargo.deployment.webapp.tomcat.TomcatWarArchive removed
+INFO: 8000: org.codehaus.cargo.module.DefaultJarArchive: Class org.codehaus.cargo.module.DefaultJarArchive added
+INFO: 8000: org.codehaus.cargo.module.Descriptor: Class org.codehaus.cargo.module.Descriptor added
+INFO: 8000: org.codehaus.cargo.module.Dtd: Class org.codehaus.cargo.module.Dtd added
+INFO: 8000: org.codehaus.cargo.module.Dtd$DtdHandler: Class org.codehaus.cargo.module.Dtd$DtdHandler added
+INFO: 8000: org.codehaus.cargo.module.Dtd$XmlEntityResolver: Class org.codehaus.cargo.module.Dtd$XmlEntityResolver added
+INFO: 8000: org.codehaus.cargo.module.DtdParseException: Class org.codehaus.cargo.module.DtdParseException added
+INFO: 8000: org.codehaus.cargo.module.Grammar: Class org.codehaus.cargo.module.Grammar added
+INFO: 8000: org.codehaus.cargo.module.JarArchive: Class org.codehaus.cargo.module.JarArchive added
+INFO: 8000: org.codehaus.cargo.module.application.ApplicationXml: Class org.codehaus.cargo.module.application.ApplicationXml added
+INFO: 8000: org.codehaus.cargo.module.application.ApplicationXmlIo: Class org.codehaus.cargo.module.application.ApplicationXmlIo added
+INFO: 8000: org.codehaus.cargo.module.application.ApplicationXmlIo$ApplicationXmlEntityResolver: Class org.codehaus.cargo.module.application.ApplicationXmlIo$ApplicationXmlEntityResolver added
+INFO: 8000: org.codehaus.cargo.module.application.ApplicationXmlTag: Class org.codehaus.cargo.module.application.ApplicationXmlTag added
+INFO: 8000: org.codehaus.cargo.module.application.ApplicationXmlVersion: Class org.codehaus.cargo.module.application.ApplicationXmlVersion added
+INFO: 8000: org.codehaus.cargo.module.application.DefaultApplicationXml: Class org.codehaus.cargo.module.application.DefaultApplicationXml added
+INFO: 8000: org.codehaus.cargo.module.application.DefaultEarArchive: Class org.codehaus.cargo.module.application.DefaultEarArchive added
+INFO: 8000: org.codehaus.cargo.module.application.EarArchive: Class org.codehaus.cargo.module.application.EarArchive added
+INFO: 8000: org.codehaus.cargo.module.ejb.DefaultEjbArchive: Class org.codehaus.cargo.module.ejb.DefaultEjbArchive added
+INFO: 8000: org.codehaus.cargo.module.ejb.EjbArchive: Class org.codehaus.cargo.module.ejb.EjbArchive added
+INFO: 8000: org.codehaus.cargo.module.ejb.EjbDef: Class org.codehaus.cargo.module.ejb.EjbDef added
+INFO: 8000: org.codehaus.cargo.module.ejb.EjbJarXml: Class org.codehaus.cargo.module.ejb.EjbJarXml added
+INFO: 8000: org.codehaus.cargo.module.ejb.EjbJarXmlIo: Class org.codehaus.cargo.module.ejb.EjbJarXmlIo added
+INFO: 8000: org.codehaus.cargo.module.ejb.EjbJarXmlIo$EjbJarXmlEntityResolver: Class org.codehaus.cargo.module.ejb.EjbJarXmlIo$EjbJarXmlEntityResolver added
+INFO: 8000: org.codehaus.cargo.module.ejb.EjbJarXmlTag: Class org.codehaus.cargo.module.ejb.EjbJarXmlTag added
+INFO: 8000: org.codehaus.cargo.module.ejb.EjbJarXmlVersion: Class org.codehaus.cargo.module.ejb.EjbJarXmlVersion added
+INFO: 8000: org.codehaus.cargo.module.ejb.Entity: Class org.codehaus.cargo.module.ejb.Entity added
+INFO: 8000: org.codehaus.cargo.module.ejb.Session: Class org.codehaus.cargo.module.ejb.Session added
+INFO: 8000: org.codehaus.cargo.module.ejb.VendorEjbDescriptor: Class org.codehaus.cargo.module.ejb.VendorEjbDescriptor added
+INFO: 8000: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXml: Class org.codehaus.cargo.module.ejb.orion.OrionEjbJarXml added
+INFO: 8000: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXmlIo: Class org.codehaus.cargo.module.ejb.orion.OrionEjbJarXmlIo added
+INFO: 8000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Class org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml added
+INFO: 8000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlIo: Class org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlIo added
+INFO: 8000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlTag: Class org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlTag added
+INFO: 8000: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmi: Class org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmi added
+INFO: 8000: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmiGrammar: Class org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmiGrammar added
+INFO: 8000: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmiIo: Class org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmiIo added
+INFO: 8000: org.codehaus.cargo.module.webapp.AbstractDescriptor: Class org.codehaus.cargo.module.webapp.AbstractDescriptor added
+INFO: 8000: org.codehaus.cargo.module.webapp.AbstractDescriptorIo: Class org.codehaus.cargo.module.webapp.AbstractDescriptorIo added
+INFO: 8000: org.codehaus.cargo.module.webapp.AbstractDescriptorTag: Class org.codehaus.cargo.module.webapp.AbstractDescriptorTag added
+INFO: 8000: org.codehaus.cargo.module.webapp.DefaultWarArchive: Class org.codehaus.cargo.module.webapp.DefaultWarArchive added
+INFO: 8000: org.codehaus.cargo.module.webapp.VendorWebAppDescriptor: Class org.codehaus.cargo.module.webapp.VendorWebAppDescriptor added
+INFO: 8000: org.codehaus.cargo.module.webapp.WarArchive: Class org.codehaus.cargo.module.webapp.WarArchive added
+INFO: 8000: org.codehaus.cargo.module.webapp.WebXml: Class org.codehaus.cargo.module.webapp.WebXml added
+INFO: 8000: org.codehaus.cargo.module.webapp.WebXmlIo: Class org.codehaus.cargo.module.webapp.WebXmlIo added
+INFO: 8000: org.codehaus.cargo.module.webapp.WebXmlIo$WebXmlEntityResolver: Class org.codehaus.cargo.module.webapp.WebXmlIo$WebXmlEntityResolver added
+INFO: 8000: org.codehaus.cargo.module.webapp.WebXmlMerger: Class org.codehaus.cargo.module.webapp.WebXmlMerger added
+INFO: 8000: org.codehaus.cargo.module.webapp.WebXmlTag: Class org.codehaus.cargo.module.webapp.WebXmlTag added
+INFO: 8000: org.codehaus.cargo.module.webapp.WebXmlVersion: Class org.codehaus.cargo.module.webapp.WebXmlVersion added
+INFO: 8000: org.codehaus.cargo.module.webapp.jboss.JBossWarArchive: Class org.codehaus.cargo.module.webapp.jboss.JBossWarArchive added
+INFO: 8000: org.codehaus.cargo.module.webapp.jboss.JBossWebXml: Class org.codehaus.cargo.module.webapp.jboss.JBossWebXml added
+INFO: 8000: org.codehaus.cargo.module.webapp.jboss.JBossWebXmlIo: Class org.codehaus.cargo.module.webapp.jboss.JBossWebXmlIo added
+INFO: 8000: org.codehaus.cargo.module.webapp.jboss.JBossWebXmlTag: Class org.codehaus.cargo.module.webapp.jboss.JBossWebXmlTag added
+INFO: 8000: org.codehaus.cargo.module.webapp.orion.OrionWebXml: Class org.codehaus.cargo.module.webapp.orion.OrionWebXml added
+INFO: 8000: org.codehaus.cargo.module.webapp.orion.OrionWebXmlIo: Class org.codehaus.cargo.module.webapp.orion.OrionWebXmlIo added
+INFO: 8000: org.codehaus.cargo.module.webapp.tomcat.TomcatContextXml: Class org.codehaus.cargo.module.webapp.tomcat.TomcatContextXml added
+INFO: 8000: org.codehaus.cargo.module.webapp.tomcat.TomcatContextXmlIo: Class org.codehaus.cargo.module.webapp.tomcat.TomcatContextXmlIo added
+INFO: 8000: org.codehaus.cargo.module.webapp.tomcat.TomcatContextXmlTag: Class org.codehaus.cargo.module.webapp.tomcat.TomcatContextXmlTag added
+INFO: 8000: org.codehaus.cargo.module.webapp.tomcat.TomcatWarArchive: Class org.codehaus.cargo.module.webapp.tomcat.TomcatWarArchive added
+INFO: 8000: org.codehaus.cargo.module.webapp.weblogic.WeblogicXml: Class org.codehaus.cargo.module.webapp.weblogic.WeblogicXml added
+INFO: 8000: org.codehaus.cargo.module.webapp.weblogic.WeblogicXmlIo: Class org.codehaus.cargo.module.webapp.weblogic.WeblogicXmlIo added
+INFO: 8000: org.codehaus.cargo.module.webapp.weblogic.WeblogicXmlTag: Class org.codehaus.cargo.module.webapp.weblogic.WeblogicXmlTag added
+INFO: 8000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmi: Class org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmi added
+INFO: 8000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiGrammar: Class org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiGrammar added
+INFO: 8000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiIo: Class org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiIo added
+</pre>
+</div></div></li>
+	<li>[Core] Removed ability to add deployables to a Container. They must now either be added to a Configuration for static deployment or using a Deployer for dynamic deployments</li>
+	<li>[Core] Added a <code>StandaloneConfiguration</code> interface which defines ths <code>addDeployable()</code> method.</li>
+	<li>[Ant] Moved <code>&lt;war&gt;</code> and <code>&lt;ear&gt;</code> elements inside the <code>&lt;configuration&gt;</code> element
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)&#39; has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public java.util.List getDeployables()&#39; has been removed
+ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method &#39;public void addConfiguredEar(org.codehaus.cargo.ant.EARElement)&#39; has been removed
+ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method &#39;public void addConfiguredWar(org.codehaus.cargo.ant.WARElement)&#39; has been removed
+ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method &#39;protected java.util.List getEars()&#39; has been removed
+ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method &#39;protected java.util.List getWars()&#39; has been removed
+ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method &#39;protected void setupDeployables(org.codehaus.cargo.container.Container)&#39; has been removed
+INFO: 7011: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;public void addConfiguredEar(org.codehaus.cargo.ant.EARElement)&#39; has been added
+INFO: 7011: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;public void addConfiguredWar(org.codehaus.cargo.ant.WARElement)&#39; has been added
+INFO: 7011: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;protected java.util.List getEars()&#39; has been added
+INFO: 7011: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;protected java.util.List getWars()&#39; has been added
+INFO: 4000: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.StandaloneConfiguration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.StandaloneConfiguration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.StandaloneConfiguration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.StandaloneConfiguration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.StandaloneConfiguration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.StandaloneConfiguration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.StandaloneConfiguration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.StandaloneConfiguration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.StandaloneConfiguration to the set of implemented interfaces
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)&#39; has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public java.util.List getDeployables()&#39; has been removed
+INFO: 7011: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method &#39;public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method &#39;public java.util.List getDeployables()&#39; has been added
+</pre>
+</div></div></li>
+	<li>[Core] Added Deployer interface for dynamic deployments + implementation for Resin, Jetty and Jo1x
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 8000: org.codehaus.cargo.container.deployer.DefaultDeployerFactory: Class org.codehaus.cargo.container.deployer.DefaultDeployerFactory added
+INFO: 8000: org.codehaus.cargo.container.deployer.DeployableMonitor: Class org.codehaus.cargo.container.deployer.DeployableMonitor added
+INFO: 8000: org.codehaus.cargo.container.deployer.DeployableMonitorListener: Class org.codehaus.cargo.container.deployer.DeployableMonitorListener added
+INFO: 8000: org.codehaus.cargo.container.deployer.Deployer: Class org.codehaus.cargo.container.deployer.Deployer added
+INFO: 8000: org.codehaus.cargo.container.deployer.DeployerFactory: Class org.codehaus.cargo.container.deployer.DeployerFactory added
+INFO: 8000: org.codehaus.cargo.container.deployer.URLDeployableMonitor: Class org.codehaus.cargo.container.deployer.URLDeployableMonitor added
+INFO: 8000: org.codehaus.cargo.container.jetty.JettyDeployer: Class org.codehaus.cargo.container.jetty.JettyDeployer added
+INFO: 8000: org.codehaus.cargo.container.orion.OrionDeployer: Class org.codehaus.cargo.container.orion.OrionDeployer added
+INFO: 8000: org.codehaus.cargo.container.resin.ResinDeployer: Class org.codehaus.cargo.container.resin.ResinDeployer added
+INFO: 8000: org.codehaus.cargo.container.jo.Jo1xDeployer: Class org.codehaus.cargo.container.jo.Jo1xDeployer added
+INFO: 8000: org.codehaus.cargo.container.spi.DeployerWatchdog: Class org.codehaus.cargo.container.spi.DeployerWatchdog added
+INFO: 8000: org.codehaus.cargo.container.spi.AbstractCopyingDeployer: Class org.codehaus.cargo.container.spi.AbstractCopyingDeployer added
+</pre>
+</div></div></li>
+	<li>[Core] Moved Configuration objects to package <code>org.codehaus.cargo.container.configuration</code> (they were previously in <code>org.codehaus.cargo.container</code>)</li>
+	<li>[Core] Moved <code>org.codehaus.cargo.container.configuration.ConfigurationFactory</code> to an interface and added a <code>org.codehaus.cargo.container.configuration.DefaultConfigurationFactory</code></li>
+	<li>[Core] Added new <code>org.codehaus.cargo.container.configuration.ConfigurationCapability</code> class
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+ERROR: 7005: org.codehaus.cargo.container.Container: Parameter 1 of &#39;public void setConfiguration(org.codehaus.cargo.container.Configuration)&#39; has changed its type to org.codehaus.cargo.container.configuration.Configuration
+ERROR: 7006: org.codehaus.cargo.ant.ConfigurationElement: Return type of method &#39;public org.codehaus.cargo.container.Configuration createConfiguration(org.codehaus.cargo.container.Container)&#39; has been changed to org.codehaus.cargo.container.configuration.Configuration
+ERROR: 8001: org.codehaus.cargo.container.Configuration: Class org.codehaus.cargo.container.Configuration removed
+ERROR: 8001: org.codehaus.cargo.container.ConfigurationFactory: Class org.codehaus.cargo.container.ConfigurationFactory removed
+ERROR: 8001: org.codehaus.cargo.container.ConfigurationFactory$ConfigurationKey: Class org.codehaus.cargo.container.ConfigurationFactory$ConfigurationKey removed
+INFO: 8000: org.codehaus.cargo.container.configuration.Configuration: Class org.codehaus.cargo.container.configuration.Configuration added
+INFO: 8000: org.codehaus.cargo.container.configuration.StandaloneConfiguration: Class org.codehaus.cargo.container.configuration.StandaloneConfiguration added
+INFO: 8000: org.codehaus.cargo.container.configuration.ConfigurationFactory: Class org.codehaus.cargo.container.configuration.ConfigurationFactory added
+INFO: 8000: org.codehaus.cargo.container.configuration.DefaultConfigurationFactory: Class org.codehaus.cargo.container.configuration.DefaultConfigurationFactory added
+INFO: 8000: org.codehaus.cargo.container.configuration.ConfigurationCapability: Class org.codehaus.cargo.container.configuration.ConfigurationCapability added
+ERROR: 7006: org.codehaus.cargo.container.spi.AbstractContainer: Return type of method &#39;public org.codehaus.cargo.container.Configuration getConfiguration()&#39; has been changed to org.codehaus.cargo.container.configuration.Configuration
+ERROR: 7006: org.codehaus.cargo.container.Container: Return type of method &#39;public org.codehaus.cargo.container.Configuration getConfiguration()&#39; has been changed to org.codehaus.cargo.container.configuration.Configuration
+ERROR: 7005: org.codehaus.cargo.container.spi.AbstractContainer: Parameter 1 of &#39;public void setConfiguration(org.codehaus.cargo.container.Configuration)&#39; has changed its type to org.codehaus.cargo.container.configuration.Configuration
+INFO: 7011: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Method &#39;public org.codehaus.cargo.container.configuration.ConfigurationCapability getCapability()&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Method &#39;public org.codehaus.cargo.container.configuration.ConfigurationCapability getCapability()&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Method &#39;public org.codehaus.cargo.container.configuration.ConfigurationCapability getCapability()&#39; has been added
+INFO: 8000: org.codehaus.cargo.container.spi.AbstractStandaloneConfigurationCapability: Class org.codehaus.cargo.container.spi.AbstractStandaloneConfigurationCapability added
+INFO: 7011: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Method &#39;public org.codehaus.cargo.container.configuration.ConfigurationCapability getCapability()&#39; has been added
+INFO: 4000: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.spi.AbstractConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.spi.ContainerConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Added org.codehaus.cargo.container.configuration.Configuration to the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.spi.AbstractConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.spi.ContainerConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Removed org.codehaus.cargo.container.Configuration from the set of implemented interfaces
+INFO: 7003: org.codehaus.cargo.container.spi.AbstractConfiguration: Method &#39;public void configure()&#39; has been removed, but an inherited definition exists.
+INFO: 7003: org.codehaus.cargo.container.spi.AbstractConfiguration: Method &#39;public void verifyProperties()&#39; has been removed, but an inherited definition exists.
+INFO: 7003: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public java.lang.String getId()&#39; has been removed, but an inherited definition exists.
+INFO: 7003: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public java.lang.String getName()&#39; has been removed, but an inherited definition exists.
+</pre>
+</div></div></li>
+	<li>[Core] Added Jo 1.x support
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 8000: org.codehaus.cargo.ant.jo.Jo1xCargoTask: Class org.codehaus.cargo.ant.jo.Jo1xCargoTask added
+INFO: 8000: org.codehaus.cargo.container.jo.Jo1xContainer: Class org.codehaus.cargo.container.jo.Jo1xContainer added
+INFO: 8000: org.codehaus.cargo.container.jo.Jo1xDeployer: Class org.codehaus.cargo.container.jo.Jo1xDeployer added
+INFO: 8000: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Class org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration added
+INFO: 8000: org.codehaus.cargo.container.jo.JoPropertySet: Class org.codehaus.cargo.container.jo.JoPropertySet added
+</pre>
+</div></div></li>
+	<li>[Core] Renamed <code>org.codehaus.cargo.container.Capability</code> to <code>org.codehaus.cargo.container.ContainerCapability</code>
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+ERROR: 8001: org.codehaus.cargo.container.Capability: Class org.codehaus.cargo.container.Capability removed
+INFO: 8000: org.codehaus.cargo.container.ContainerCapability: Class org.codehaus.cargo.container.ContainerCapability added
+ERROR: 7006: org.codehaus.cargo.container.Container: Return type of method &#39;public org.codehaus.cargo.container.Capability getCapability()&#39; has been changed to org.codehaus.cargo.container.ContainerCapability
+ERROR: 7006: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Return type of method &#39;public org.codehaus.cargo.container.Capability getCapability()&#39; has been changed to org.codehaus.cargo.container.ContainerCapability
+ERROR: 7006: org.codehaus.cargo.container.orion.AbstractOrionContainer: Return type of method &#39;public org.codehaus.cargo.container.Capability getCapability()&#39; has been changed to org.codehaus.cargo.container.ContainerCapability
+ERROR: 7006: org.codehaus.cargo.container.resin.AbstractResinContainer: Return type of method &#39;public org.codehaus.cargo.container.Capability getCapability()&#39; has been changed to org.codehaus.cargo.container.ContainerCapability
+ERROR: 7006: org.codehaus.cargo.container.tomcat.AbstractTomcatContainer: Return type of method &#39;public org.codehaus.cargo.container.Capability getCapability()&#39; has been changed to org.codehaus.cargo.container.ContainerCapability
+ERROR: 7006: org.codehaus.cargo.container.weblogic.AbstractWebLogicContainer: Return type of method &#39;public org.codehaus.cargo.container.Capability getCapability()&#39; has been changed to org.codehaus.cargo.container.ContainerCapability
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public org.codehaus.cargo.container.Capability getCapability()&#39; has been removed
+</pre>
+</div></div></li>
+	<li>[Core] Moved all Monitor-related classes from <code>org.codehaus.cargo.util</code> to <code>org.codehaus.cargo.util.monitor</code>
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+ERROR: 4001: org.codehaus.cargo.container.Container: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.Container: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.deployable.Deployable: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.deployable.Deployable: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.deployable.EAR: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.deployable.EAR: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.deployable.EAR: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.deployable.EAR: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.deployable.WAR: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.deployable.WAR: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.deployable.WAR: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.deployable.WAR: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.deployable.jboss.JBossWAR: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.deployable.jboss.JBossWAR: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.deployable.jboss.JBossWAR: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.deployable.jboss.JBossWAR: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.deployable.tomcat.TomcatWAR: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.deployable.tomcat.TomcatWAR: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.deployable.tomcat.TomcatWAR: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.deployable.tomcat.TomcatWAR: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.installer.Installer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.installer.Installer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.installer.Proxy: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+INFO: 5000: org.codehaus.cargo.container.installer.Proxy: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.installer.ZipURLInstaller: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.installer.ZipURLInstaller: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.installer.ZipURLInstaller: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.installer.ZipURLInstaller: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.orion.AbstractOrionContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.orion.AbstractOrionContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.orion.AbstractOrionContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.orion.AbstractOrionContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.orion.Oc4j9xContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.orion.Oc4j9xContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.orion.Oc4j9xContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.orion.Oc4j9xContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.orion.Orion1xContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.orion.Orion1xContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.orion.Orion1xContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.orion.Orion1xContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.orion.Orion2xContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.orion.Orion2xContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.orion.Orion2xContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.orion.Orion2xContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.resin.AbstractResinContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.AbstractResinContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.resin.AbstractResinContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.resin.AbstractResinContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.resin.Resin2xContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.Resin2xContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.resin.Resin2xContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.resin.Resin2xContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.resin.Resin3xContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.Resin3xContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.resin.Resin3xContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.resin.Resin3xContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.spi.AbstractConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.spi.AbstractConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.spi.AbstractConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.spi.AbstractConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.spi.AbstractContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.spi.AbstractContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.spi.AbstractContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.spi.AbstractContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.spi.ContainerConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.spi.ContainerConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 4001: org.codehaus.cargo.container.tomcat.AbstractCatalinaContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.AbstractCatalinaContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.tomcat.AbstractCatalinaContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.tomcat.AbstractCatalinaContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.tomcat.AbstractTomcatContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.AbstractTomcatContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.tomcat.AbstractTomcatContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.tomcat.AbstractTomcatContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.tomcat.Tomcat3xContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.Tomcat3xContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.tomcat.Tomcat3xContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.tomcat.Tomcat3xContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.tomcat.Tomcat4xContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.Tomcat4xContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.tomcat.Tomcat4xContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.tomcat.Tomcat4xContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.tomcat.Tomcat5xContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.Tomcat5xContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.tomcat.Tomcat5xContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.tomcat.Tomcat5xContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.weblogic.AbstractWebLogicContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.weblogic.AbstractWebLogicContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.weblogic.AbstractWebLogicContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.weblogic.AbstractWebLogicContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.weblogic.WebLogic8xContainer: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.weblogic.WebLogic8xContainer: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.weblogic.WebLogic8xContainer: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.weblogic.WebLogic8xContainer: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 4001: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
+INFO: 4000: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
+ERROR: 5001: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Removed org.codehaus.cargo.util.MonitoredObject from the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
+ERROR: 8001: org.codehaus.cargo.util.FileMonitor: Class org.codehaus.cargo.util.FileMonitor removed
+ERROR: 8001: org.codehaus.cargo.util.Monitor: Class org.codehaus.cargo.util.Monitor removed
+ERROR: 8001: org.codehaus.cargo.util.Monitorable: Class org.codehaus.cargo.util.Monitorable removed
+ERROR: 8001: org.codehaus.cargo.util.MonitoredObject: Class org.codehaus.cargo.util.MonitoredObject removed
+ERROR: 8001: org.codehaus.cargo.util.NullMonitor: Class org.codehaus.cargo.util.NullMonitor removed
+ERROR: 8001: org.codehaus.cargo.util.SimpleMonitor: Class org.codehaus.cargo.util.SimpleMonitor removed
+INFO: 8000: org.codehaus.cargo.util.monitor.FileMonitor: Class org.codehaus.cargo.util.monitor.FileMonitor added
+INFO: 8000: org.codehaus.cargo.util.monitor.Monitor: Class org.codehaus.cargo.util.monitor.Monitor added
+INFO: 8000: org.codehaus.cargo.util.monitor.Monitorable: Class org.codehaus.cargo.util.monitor.Monitorable added
+INFO: 8000: org.codehaus.cargo.util.monitor.MonitoredObject: Class org.codehaus.cargo.util.monitor.MonitoredObject added
+INFO: 8000: org.codehaus.cargo.util.monitor.NullMonitor: Class org.codehaus.cargo.util.monitor.NullMonitor added
+INFO: 8000: org.codehaus.cargo.util.monitor.SimpleMonitor: Class org.codehaus.cargo.util.monitor.SimpleMonitor added
+</pre>
+</div></div></li>
+	<li>[Core] Added new <code>org.codehaus.cargo.util.monitor.AntMonitor</code> class
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 8000: org.codehaus.cargo.util.monitor.AntMonitor: Class org.codehaus.cargo.util.monitor.AntMonitor added
+</pre>
+</div></div></li>
+	<li>[Core] Promoted <code>org.codehaus.cargo.container.internal.util.FileUtils</code> class to a public <code>org.codehaus.cargo.util.FileUtils</code> class as it is now used in the <code>org.codehaus.cargo.module</code> package (and we do want to have any dependency from <code>org.codehaus.cargo.module</code> to <code>org.codehaus.cargo.container</code> - only in the other direction)
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 8000: org.codehaus.cargo.util.FileUtils: Class org.codehaus.cargo.util.FileUtils added
+ERROR: 8001: org.codehaus.cargo.container.internal.util.FileUtils: Class org.codehaus.cargo.container.internal.util.FileUtils removed
+ERROR: 7006: org.codehaus.cargo.container.spi.AbstractConfiguration: Return type of method &#39;protected org.codehaus.cargo.container.internal.util.FileUtils getFileUtils()&#39; has been changed to org.codehaus.cargo.util.FileUtils
+ERROR: 7006: org.codehaus.cargo.container.spi.AbstractContainer: Return type of method &#39;protected org.codehaus.cargo.container.internal.util.FileUtils getFileUtils()&#39; has been changed to org.codehaus.cargo.util.FileUtils
+</pre>
+</div></div></li>
+	<li>[Core] Added new <code>org.codehaus.cargo.util.CargoException</code> which is the base of all Cargo exceptions.
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 8000: org.codehaus.cargo.util.CargoException: Class org.codehaus.cargo.util.CargoException added
+WARNING: 5000: org.codehaus.cargo.container.ContainerException: Added org.codehaus.cargo.util.CargoException to the list of superclasses
+INFO: 7000: org.codehaus.cargo.container.ContainerException: Method &#39;public java.lang.Throwable getOriginalThrowable()&#39; is now implemented in superclass org.codehaus.cargo.util.CargoException
+INFO: 7003: org.codehaus.cargo.container.ContainerException: Method &#39;public void printStackTrace()&#39; has been removed, but an inherited definition exists.
+INFO: 7003: org.codehaus.cargo.container.ContainerException: Method &#39;public void printStackTrace(java.io.PrintStream)&#39; has been removed, but an inherited definition exists.
+INFO: 7003: org.codehaus.cargo.container.ContainerException: Method &#39;public void printStackTrace(java.io.PrintWriter)&#39; has been removed, but an inherited definition exists.
+</pre>
+</div></div></li>
+	<li>[Core] Added public APIs <code>org.codehaus.cargo.container.Container.getOutput()</code> and <code>org.codehaus.cargo.container.Container.isAppend()</code>
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+ERROR: 7012: org.codehaus.cargo.container.Container: Method &#39;public java.io.File getOutput()&#39; has been added to an interface
+ERROR: 7012: org.codehaus.cargo.container.Container: Method &#39;public boolean isAppend()&#39; has been added to an interface
+INFO: 7010: org.codehaus.cargo.container.spi.AbstractContainer: Accessibility of method &#39;protected java.io.File getOutput()&#39; has been increased from protected to public
+INFO: 7010: org.codehaus.cargo.container.spi.AbstractContainer: Accessibility of method &#39;protected boolean isAppend()&#39; has been increased from protected to public
+</pre>
+</div></div></li>
+	<li>[Core] Fixed proxy support in the Installer by adding a ProxyAuthenticator class</li>
+	<li>[Core] Added tests for ZipURLInstaller and made small modifications to improve testability
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 8000: org.codehaus.cargo.container.installer.Proxy$ProxyAuthenticator: Class org.codehaus.cargo.container.installer.Proxy$ProxyAuthenticator added
+INFO: 7010: org.codehaus.cargo.container.installer.ZipURLInstaller: Accessibility of method &#39;private void download()&#39; has been increased from private to protected
+INFO: 7011: org.codehaus.cargo.container.installer.ZipURLInstaller: Method &#39;protected void setAntTaskFactory(org.codehaus.cargo.container.internal.util.AntTaskFactory)&#39; has been added
+</pre>
+</div></div></li>
+	<li>[Core] Added handy class when implementing Cargo factories based on a container id and a hint
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 8000: org.codehaus.cargo.container.spi.AbstractGenericHintFactory: Class org.codehaus.cargo.container.spi.AbstractGenericHintFactory added
+INFO: 8000: org.codehaus.cargo.container.spi.AbstractGenericHintFactory$GenericParameters: Class org.codehaus.cargo.container.spi.AbstractGenericHintFactory$GenericParameters added
+</pre>
+</div></div></li>
+	<li>[Core] Start of a Resin ExistingConfiguration implementation. Does not work yet and must not be used.
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 8000: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Class org.codehaus.cargo.container.resin.ResinExistingConfiguration added
+</pre>
+</div></div></li>
+	<li>[Core] Added property for supporting container authentication
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 6000: org.codehaus.cargo.container.property.ServletPropertySet: Added public field USERS
+INFO: 8000: org.codehaus.cargo.container.property.User: Class org.codehaus.cargo.container.property.User added
+INFO: 8000: org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration: Class org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration added
+INFO: 5000: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Added org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration to the list of superclasses
+INFO: 5000: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Added org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration to the list of superclasses
+INFO: 7011: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Method &#39;protected java.lang.String getRoleToken()&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Method &#39;protected java.lang.String getUserToken()&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Method &#39;protected java.lang.String getSecurityToken(java.lang.String, java.lang.String)&#39; has been added
+</pre>
+</div></div></li>
+	<li>[Core] Added <code>org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer.getServer()</code> API to allow users to further configure a Jetty server
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 7011: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Method &#39;public java.lang.Object getServer()&#39; has been added
+</pre>
+</div></div></li>
+	<li>[Core] Added possibility to pass JVM arguments to Configurations by introducing a new <code>cargo.jvmargs</code> property
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>
+INFO: 6000: org.codehaus.cargo.container.property.GeneralPropertySet: Added public field JVMARGS
+</pre>
+</div></div></li>
+</ul>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="footer">
+        <table width="100%"> 
+          <tr>
+            <td align="left" valign="top">
+              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
+            </td>
+            <td align="right" valign="top">
+              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Release+notes+for+Cargo+0.5">Atlassian Confluence</a>.
+            </td>
+          </tr>
+        <table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

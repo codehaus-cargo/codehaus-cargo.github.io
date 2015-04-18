@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head profile="http://www.w3.org/2000/08/w3c-synd/#">
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
+  <link rel="shortcut icon" href="attachments/favicon.ico"/>
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
+
+  <title>Codehaus Cargo - Adding a container</title>
+
+  <script type="text/javascript">
+    // Google Analytics code
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31476258-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
+    <tr>
+      <td colspan="2" style="padding:8px;">
+        <table width="100%" id="banner" style="padding:0px;margin:0px">
+          <tr id="header_row">
+            <td align="left" valign="middle" style="padding:0px;margin:0px;">
+              <img src="attachments/cargo-banner-left.png"/>
+            </td>
+            <td align="right" valign="middle" style="padding:0px;margin:0px;">
+              <img src="attachments/cargo-banner-right.png"/>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="breadcrumbs">
+        <!--
+        <table width="100%" id="banner" style="padding:0px;margin:0px">
+          <tr>
+            <td align="left">
+              <p>
+                <a href="/">Home</a>
+                #if ($page.pageKey != "Home")
+                  #foreach($breadcrumb in $breadcrumbs)
+                    &gt; <a href="/${breadcrumb.pageKeyEncoded}">${breadcrumb.pageKey}</a>
+                  #end
+                #end
+              </p>
+            </td>
+            <td align="left">
+              #if (${quicklinksFragment})
+                ${quicklinksFragment}
+              #end
+            </td>
+            <td align="right">
+              <a href="/${page.pageKeyEncoded}?print=1" style="color:#999;font-size:small">
+                <img src="attachments/print.gif" border="0" alt="Printable version" title="Printable version">
+              </a>
+            </td>
+          </tr>
+        </table>
+         -->
+      </td>
+    </tr>
+    <tr>
+      <td id="leftColumn" valign="top" style="padding-top: 0px;">
+          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://jira.codehaus.org/browse/CARGO?report=com.atlassian.jira.plugin.system.project:openissues-panel" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://jira.codehaus.org/browse/CARGO?report=com.atlassian.jira.plugin.system.project:changelog-panel" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
+
+          <h3 class="heading3">Feeds</h3>
+          <table border="0" cellspacing="4px">
+          <tr>
+            <td align="right">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
+            </td>
+            <td align="left">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
+            </td>
+            <td align="left">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td id="rightColumn" valign="top">
+        <script type="text/javascript">
+          // Google Ads code
+          google_ad_client = "ca-pub-7996505557003356";
+          google_ad_slot = "5363897989";
+          google_ad_width = 728;
+          google_ad_height = 90;
+        </script>
+        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
+          <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+        </center>
+
+        <p>Before you start you might be interested in reading the <a href="Project+Structure.html">Project Structure</a> tutorial which shows the directory organization of the Cargo sources. The <a href="Building.html">Building</a> tutorial explains how to build Cargo from sources and the <a href="Contributing.html">Contributing</a> tutorial explains what rules to follow when contributing code.</p>
+
+<p>Here are some quick steps to follow if you wish to add support for a new container in Cargo:</p>
+<ul>
+	<li>Subscribe to the cargo dev mailing list and ask as many question you'd like there! <img class="emoticon emoticon-smile" src="attachments/smile.png" data-emoticon-name="smile" alt="(smile)" /></li>
+	<li>Create a JIRA issue on <a href="https://jira.codehaus.org" class="external-link" rel="nofollow">https://jira.codehaus.org</a> (you'll need to register). We'll then add you to the cargo-developers group in JIRA and assign the issue to you</li>
+	<li>Checkout Cargo from <a href="SVN.html">SVN</a> trunk</li>
+	<li>Understand the Cargo project's <a href="Project+Structure.html">directory structure</a>. Container implementations are located in <code>trunk/core/containers/<em>ContainerName</em></code>.</li>
+	<li>Have a look at existing container implementations
+	<ul>
+		<li>Some containers are simple to read and understand; for example <strong>jo</strong> or <strong>glassfish</strong></li>
+		<li>Some other containers are much more feature-complete (remote deployers, datasources, etc.); for example <strong>tomcat</strong> or <strong>jonas</strong>.</li>
+	</ul>
+	</li>
+	<li>Create your container's Maven module, with its package inside.</li>
+	<li>Create the following classes:
+	<ul>
+		<li>A <a href="Container.html">container</a> implementation class named <code>_ServerNameNxContainerType_Container</code> where <code>ServerName</code> is the name of the container, <code>Nx</code> the version and <code>ContainerType</code> the type of container (<code>InstalledLocal</code> or <code>Remote</code>). For example: <code>JBoss3xLocalContainer</code>.</li>
+		<li>One or several <a href="Configuration.html">configuration</a> implementation classes named <code>_ServerNameConfigurationType_Configuration</code> where <code>ConfigurationType</code> can be <code>StandaloneLocal</code>, <code>ExistingLocal</code> or <code>Runtime</code>. For example <code>JBossStandaloneLocalConfiguration</code>.</li>
+		<li>One or several <a href="Deployer.html">deployer</a> implementation classes named <code>_ServerNameDeployerType_Deployer</code> where <code>DeployerType</code> can be <code>InstalledLocal</code> or <code>Remote</code>. For example: <code>JBossInstalledLocalDeployer</code>.
+		<ul>
+			<li>Cargo has an SPI that you should use and that should make it easy for you. Your container class should extend <code>org.codehaus.cargo.container.spi.Abstract_ContainerType_Container</code> and your configuration class should extend <code>org.codehaus.cargo.container.spi.configuration.Abstract_ConfigurationType_Configuration</code>.</li>
+		</ul>
+		</li>
+		<li>Finally, implement the <code>FactoryRegistry</code> that will register your container to CARGO and make sure you've defined a link to your container's factory registry in <code>src/main/resources/META-INF/services/org.codehaus.cargo.generic.AbstractFactoryRegistry</code>.</li>
+	</ul>
+	</li>
+	<li>Run the Cargo <a href="Building.html">build</a> to ensure everything is working. You'll probably find that you haven't followed the Cargo project's coding conventions... Fix those and build again until it passes! <img class="emoticon emoticon-wink" src="attachments/wink.png" data-emoticon-name="wink" alt="(wink)" /> Please note that when you run the build it'll automatically run the samples test suites in your container (provided you've added your container to the generic API as described in the previous step and provided you've defined the right capabilities for your container). See the <a href="Building.html">Building</a> page for more details on the build.</li>
+	<li>Once built, add your new container to the <code>uberpom</code> and check that the <code>uberjar</code> is still looking fine.</li>
+	<li>Once added to the <code>uberpom</code>, add your container's download URL to the <code>samples</code> and add profiles for it.
+	<ul>
+		<li>As soon as you add your container to the <code>samples</code>, the Maven build will automatically attempt to configure, start, deploy some test applications, test them and stop your container.</li>
+	</ul>
+	</li>
+	<li>Register on <a href="https://docs.codehaus.org/display/HAUS/Home" class="external-link" rel="nofollow">Codehaus' confluence</a>. Once this is done we'll add you to the <code>cargo-developers</code> user group so that you have the right to edit yourself the Cargo web site pages</li>
+	<li>Document the new container on the <a href="https://docs.codehaus.org/display/CARGO/Home" class="external-link" rel="nofollow">Cargo web site</a></li>
+	<li>Create a SVN patch and attach it to the JIRA issue you have created above</li>
+	<li>Once the patch has been accepted:
+	<ul>
+		<li>Add the container to the <a href="https://docs.codehaus.org/pages/editpage.action?spaceKey=CARGO&amp;title=Containers" class="external-link" rel="nofollow">Containers list</a> on the main web site</li>
+		<li>Add the container to the <a href="https://docs.codehaus.org/pages/editpage.action?spaceKey=CARGO&amp;title=Navigation" class="external-link" rel="nofollow">Navigation page</a> (left side of the CARGO Web site)</li>
+		<li>Add the container to the <a href="https://docs.codehaus.org/pages/editpage.action?spaceKey=CARGO&amp;title=Downloads" class="external-link" rel="nofollow">Downloads page</a></li>
+		<li>Add the container to the <a href="http://bamboo.ci.codehaus.org/browse/CARGO" class="external-link" rel="nofollow">Continous integration</a> so that its integrity can be checked at each build
+		<ul>
+			<li>Note that each container is built daily, each of them separated by 45 minutes. Just put your container as last, so it is tested daily without blocking the whole CI environment.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+
+<p>Thanks and happy coding!</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="footer">
+        <table width="100%"> 
+          <tr>
+            <td align="left" valign="top">
+              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
+            </td>
+            <td align="right" valign="top">
+              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Adding+a+container">Atlassian Confluence</a>.
+            </td>
+          </tr>
+        <table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

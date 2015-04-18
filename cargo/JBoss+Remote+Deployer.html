@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head profile="http://www.w3.org/2000/08/w3c-synd/#">
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
+  <link rel="shortcut icon" href="attachments/favicon.ico"/>
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
+
+  <title>Codehaus Cargo - JBoss Remote Deployer</title>
+
+  <script type="text/javascript">
+    // Google Analytics code
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31476258-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
+    <tr>
+      <td colspan="2" style="padding:8px;">
+        <table width="100%" id="banner" style="padding:0px;margin:0px">
+          <tr id="header_row">
+            <td align="left" valign="middle" style="padding:0px;margin:0px;">
+              <img src="attachments/cargo-banner-left.png"/>
+            </td>
+            <td align="right" valign="middle" style="padding:0px;margin:0px;">
+              <img src="attachments/cargo-banner-right.png"/>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="breadcrumbs">
+        <!--
+        <table width="100%" id="banner" style="padding:0px;margin:0px">
+          <tr>
+            <td align="left">
+              <p>
+                <a href="/">Home</a>
+                #if ($page.pageKey != "Home")
+                  #foreach($breadcrumb in $breadcrumbs)
+                    &gt; <a href="/${breadcrumb.pageKeyEncoded}">${breadcrumb.pageKey}</a>
+                  #end
+                #end
+              </p>
+            </td>
+            <td align="left">
+              #if (${quicklinksFragment})
+                ${quicklinksFragment}
+              #end
+            </td>
+            <td align="right">
+              <a href="/${page.pageKeyEncoded}?print=1" style="color:#999;font-size:small">
+                <img src="attachments/print.gif" border="0" alt="Printable version" title="Printable version">
+              </a>
+            </td>
+          </tr>
+        </table>
+         -->
+      </td>
+    </tr>
+    <tr>
+      <td id="leftColumn" valign="top" style="padding-top: 0px;">
+          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://jira.codehaus.org/browse/CARGO?report=com.atlassian.jira.plugin.system.project:openissues-panel" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://jira.codehaus.org/browse/CARGO?report=com.atlassian.jira.plugin.system.project:changelog-panel" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
+
+          <h3 class="heading3">Feeds</h3>
+          <table border="0" cellspacing="4px">
+          <tr>
+            <td align="right">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
+            </td>
+            <td align="left">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
+            </td>
+            <td align="left">
+              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td id="rightColumn" valign="top">
+        <script type="text/javascript">
+          // Google Ads code
+          google_ad_client = "ca-pub-7996505557003356";
+          google_ad_slot = "5363897989";
+          google_ad_width = 728;
+          google_ad_height = 90;
+        </script>
+        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
+          <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+        </center>
+
+        <p>Based on the version of JBoss / WildFly you are using, please use the quick links below to directly go to the associated chapter:</p><ul><li><a href="#JBossRemoteDeployer-jboss4x">JBoss 4.0.x and 4.2.x</a></li><li><a href="#JBossRemoteDeployer-jboss5x6x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</a></li><li><a href="#JBossRemoteDeployer-jboss7x">JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x / WildFly 8.x</a></li></ul><p><span class="confluence-anchor-link" id="JBossRemoteDeployer-jboss4x"></span></p><h3 id="JBossRemoteDeployer-JBoss4.0.xand4.2.x">JBoss 4.0.x and 4.2.x</h3><p>In JBoss 4.x, the JMX-based remote deployer can accept URLs that point to another machine. For example:</p><blockquote><p><code><a href="http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war" class="external-link" rel="nofollow">http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war</a></code></p></blockquote><p>In this case, our JBoss server on <code>10.156.216.127</code> will connect to <code>10.156.220.90</code> via HTTP and download the <code>paruemas-1.0-SNAPSHOT.war</code> file. Once the file is downloaded, JBoss will automatically deploy it.</p><p>The CARGO JBoss container uses this principle to expose your Java EE application to JBoss using an HTTP server that is started on the machine where CARGO is currently running. That HTTP server is controlled using two parameters:</p><ul><li><code><strong>JBossPropertySet.REMOTEDEPLOY_HOSTNAME</strong></code> (i.e., <code>cargo.jboss.remotedeploy.hostname</code>): sets the hostname that the JBoss server will attempt to connect to. By default, the CARGO JBoss container will automatically resolve the current machine's network name or IP address and fill this accordingly.</li><li><code><strong>JBossPropertySet.REMOTEDEPLOY_PORT</strong></code> (i.e., <code>cargo.jboss.remotedeploy.port</code>): sets the port number on which the HTTP server will be started on the machine running CARGO. By default, that one is set to <em>1 + the HTTP port for JBoss</em>. For example, if JBoss is running on HTTP port <code>8080</code>, then the default for <code>JBossPropertySet.REMOTEDEPLOY_PORT</code> will be <code>18080</code>.</li></ul><p>The obvious limitation you should be aware of is that JBoss needs to have direct access to the machine running CARGO.</p><p><span class="confluence-anchor-link" id="JBossRemoteDeployer-jboss5x6x"></span></p><h3 id="JBossRemoteDeployer-JBoss5.0.x,5.1.x,6.0.xand6.1.x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</h3><p>Starting from JBoss 5.x, JBoss has a Deployment Manager that can be used for deploying things on the JBoss server. If you really want to know how it works under the hood, you can read about this feature on the <a href="http://community.jboss.org/wiki/ProfileServiceDeploymentManagerin5x" class="external-link" rel="nofollow">JBoss Website</a>. If you only want to remotely deploy applications using CARGO to your JBoss server, you can of course ignore that document.</p><p>To connect to the JBoss Deployment Manager, CARGO uses JBoss' JMX RMI port; and that's what makes things get a bit complicated. For the connection to succeed, the following JARs need to be in the container classpath or in the current Java Thread's context classloader:</p><ul><li>JBoss deployment manager JARs</li><li>JBoss remoting client JARs</li></ul><p>Here is an example code for the users of the Java API:</p><blockquote><p> </p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
+
+// Add many libraries from JBOSS_HOME
+for (File jar : new File(this.localContainer.getHome(), &quot;lib&quot;).listFiles())
+{
+    if (jar.isFile())
+    {
+        urls.add(jar.toURI().toURL());
+    }
+}
+for (File jar : new File(this.localContainer.getHome(), &quot;common/lib&quot;).listFiles())
+{
+    if (jar.isFile())
+    {
+        urls.add(jar.toURI().toURL());
+    }
+}
+
+// Create a ClassLoader contaning all these JARs
+URL[] urlsArray = new URL[urls.size()];
+urlsArray = urls.toArray(urlsArray);
+URLClassLoader classLoader = new URLClassLoader(urlsArray, this.getClass().getClassLoader());
+Thread.currentThread().setContextClassLoader(classLoader);
+
+// Now, create the JBoss Remote container
+...
+</pre>
+</div></div><p> </p></blockquote><p>Here is an example Maven2 plugin configuration:</p><blockquote><p> </p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>&lt;!--
+  Some transitive dependencies of JBoss artifacts, for example apache-xerces:xml-apis, are
+  only available on the JBoss third party repository.
+  --&gt;
+&lt;pluginRepositories&gt;
+  &lt;pluginRepository&gt;
+    &lt;id&gt;repository.jboss.org_thirdparty-releases&lt;/id&gt;
+    &lt;name&gt;JBoss.org third party releases repository&lt;/name&gt;
+    &lt;url&gt;https://repository.jboss.org/nexus/content/repositories/thirdparty-releases&lt;/url&gt;
+    &lt;releases&gt;
+      &lt;enabled&gt;true&lt;/enabled&gt;
+    &lt;/releases&gt;
+    &lt;snapshots&gt;
+      &lt;enabled&gt;false&lt;/enabled&gt;
+    &lt;/snapshots&gt;
+  &lt;/pluginRepository&gt;
+  &lt;pluginRepository&gt;
+    &lt;id&gt;repository.jboss.org_thirdparty-uploads&lt;/id&gt;
+    &lt;name&gt;JBoss.org third party uploads repository&lt;/name&gt;
+    &lt;url&gt;https://repository.jboss.org/nexus/content/repositories/thirdparty-uploads&lt;/url&gt;
+    &lt;releases&gt;
+      &lt;enabled&gt;true&lt;/enabled&gt;
+    &lt;/releases&gt;
+    &lt;snapshots&gt;
+      &lt;enabled&gt;false&lt;/enabled&gt;
+    &lt;/snapshots&gt;
+  &lt;/pluginRepository&gt;
+&lt;/pluginRepositories&gt;
+
+&lt;repositories&gt;
+  &lt;repository&gt;
+    &lt;id&gt;repository.jboss.org_thirdparty-releases&lt;/id&gt;
+    &lt;name&gt;JBoss.org third party releases repository&lt;/name&gt;
+    &lt;url&gt;https://repository.jboss.org/nexus/content/repositories/thirdparty-releases&lt;/url&gt;
+    &lt;releases&gt;
+      &lt;enabled&gt;true&lt;/enabled&gt;
+    &lt;/releases&gt;
+    &lt;snapshots&gt;
+      &lt;enabled&gt;false&lt;/enabled&gt;
+    &lt;/snapshots&gt;
+  &lt;/repository&gt;
+  &lt;repository&gt;
+    &lt;id&gt;repository.jboss.org_thirdparty-uploads&lt;/id&gt;
+    &lt;name&gt;JBoss.org third party uploads repository&lt;/name&gt;
+    &lt;url&gt;https://repository.jboss.org/nexus/content/repositories/thirdparty-uploads&lt;/url&gt;
+    &lt;releases&gt;
+      &lt;enabled&gt;true&lt;/enabled&gt;
+    &lt;/releases&gt;
+    &lt;snapshots&gt;
+      &lt;enabled&gt;false&lt;/enabled&gt;
+    &lt;/snapshots&gt;
+  &lt;/repository&gt;
+&lt;/repositories&gt;
+
+ ...
+
+&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
+  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;version&gt;${cargo.plugin.version}&lt;/version&gt;
+  &lt;configuration&gt;
+    &lt;container&gt;
+      &lt;containerId&gt;jboss51x&lt;/containerId&gt;
+      &lt;type&gt;remote&lt;/type&gt;
+    &lt;/container&gt;
+    &lt;configuration&gt;
+      &lt;type&gt;runtime&lt;/type&gt;
+      &lt;properties&gt;
+        &lt;cargo.hostname&gt;production27&lt;/cargo.hostname&gt;
+        &lt;cargo.rmi.port&gt;11099&lt;/cargo.rmi.port&gt;
+      &lt;/properties&gt;
+    &lt;/configuration&gt;
+  &lt;/configuration&gt;
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.jboss.integration&lt;/groupId&gt;
+      &lt;artifactId&gt;jboss-profileservice-spi&lt;/artifactId&gt;
+      &lt;version&gt;5.1.0.GA&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.jboss.jbossas&lt;/groupId&gt;
+      &lt;artifactId&gt;jboss-as-client&lt;/artifactId&gt;
+      &lt;version&gt;5.1.0.GA&lt;/version&gt;
+      &lt;type&gt;pom&lt;/type&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+&lt;/plugin&gt;
+</pre>
+</div></div><p> </p></blockquote><p>You can also use the CARGO JBoss remote deployer to remotely deploy to JBoss farms versions 5.x and newer. To do so, use these two properties:</p><ul><li><code>cargo.jboss.clustered</code>: if <code>true</code>, deployment is done in the <code>farm</code> directory</li><li><code>cargo.jboss.configuration</code>: JBoss profile name, default name is <code>default</code></li></ul><p><span class="confluence-anchor-link" id="JBossRemoteDeployer-jboss7x"></span></p><h3 id="JBossRemoteDeployer-JBoss7.0.x,7.1.x,7.2.xand7.3.x/WildFly8.x">JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x / WildFly 8.x</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x as well as WildFly 8.x, with some differences:</p><ul><li>The JAR files to include are different</li><li>JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x use the <code>cargo.jboss.management-native.port</code> port</li><li>WildFly 8.x uses the <code>cargo.jboss.management-http.port</code> port</li></ul><p>The following examples detail these differences.</p><p>Here is an example code for the users of the Java API:</p><blockquote><p> </p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>/**
+ * Add all JARs in a folder in the list of files (recursive).
+ * @param folder Folder to recursively scan.
+ * @param files List containing all files.
+ */
+public static void addAllJars(File folder, List&lt;URL&gt; files) throws Exception
+{
+    if (folder.isDirectory())
+    {
+        for (File file : folder.listFiles())
+        {
+            if (file.isFile() &amp;&amp; file.getName().endsWith(&quot;.jar&quot;))
+            {
+                files.add(file.toURI().toURL());
+            }
+            else if (file.isDirectory())
+            {
+                addAllJars(file, files);
+            }
+        }
+    }
+}
+</pre>
+</div></div><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
+
+// Add many libraries from JBOSS_HOME/modules
+addAllJars(new File(this.localContainer.getHome(), &quot;modules&quot;), urls);
+
+// Create a ClassLoader contaning all these JARs
+URL[] urlsArray = new URL[urls.size()];
+urlsArray = urls.toArray(urlsArray);
+URLClassLoader classLoader = new URLClassLoader(urlsArray, this.getClass().getClassLoader());
+Thread.currentThread().setContextClassLoader(classLoader);
+
+// Now, create the JBoss Remote container
+...
+</pre>
+</div></div><p> </p></blockquote><p>Here is an example Maven2 plugin configuration:</p><blockquote><p> </p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
+  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;version&gt;${cargo.plugin.version}&lt;/version&gt;
+  &lt;configuration&gt;
+    &lt;container&gt;
+      &lt;containerId&gt;jboss7x&lt;/containerId&gt;
+      &lt;type&gt;remote&lt;/type&gt;
+    &lt;/container&gt;
+    &lt;configuration&gt;
+      &lt;type&gt;runtime&lt;/type&gt;
+      &lt;properties&gt;
+        &lt;cargo.hostname&gt;production27&lt;/cargo.hostname&gt;
+        &lt;cargo.jboss.management-native.port&gt;19999&lt;/cargo.jboss.management-native.port&gt;
+      &lt;/properties&gt;
+    &lt;/configuration&gt;
+  &lt;/configuration&gt;
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.jboss.as&lt;/groupId&gt;
+      &lt;artifactId&gt;jboss-as-controller-client&lt;/artifactId&gt;
+      &lt;version&gt;7.0.2.Final&lt;/version&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+&lt;/plugin&gt;
+</pre>
+</div></div></blockquote><div class="confluence-information-macro confluence-information-macro-note"><p class="title">JBoss socket connection bugs</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>On some Linux distributions, remote deployment may fail with an exception like:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>Caused by: java.io.IOException: Can not get connection to server.
+           Problem establishing socket connection for InvokerLocator
+           [socket://host:32342/]
+</pre>
+</div></div><p>That is a known bug, documented in <a class="external-link" href="http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS" rel="nofollow">http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS</a> and the solution presented on that document is to use a cron job as the root user to fix the file when it gets broken.</p><p>First, create the correct version of <code>/etc/hosts</code> and save it somewhere, such as <code>/etc/hosts.fixed</code>, and populate it with the following contents (replace <code>myhost</code> with the hostname of your computer, as reported by the <code>hostname</code> command, and the correct IP assignment, as reported by <code>ipconfig</code>):</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>/etc/hosts.fixed</b></div><div class="codeContent panelContent pdl">
+<pre>127.0.0.1 myhost localhost localhost.localdomain
+::1 myhost localhost6 localhost6.localdomain6
+127.0.1.1 myhost
+## (optional entry); update if assigned a new address from DHCP
+192.168.1.5 myhost
+
+## The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost  ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+</pre>
+</div></div><p><strong>Important</strong>: If possible, enter your hostname with both the &quot;basic&quot; hostname and the fully-qualified domain name.</p><p>Next, create a script named <code>/etc/restore-etc-hosts.sh</code> to replace the <code>/etc/hosts</code> file if Network Manager breaks it:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>/etc/restore-etc-hosts.sh</b></div><div class="codeContent panelContent pdl">
+<pre>#!/bin/sh
+
+if [ `grep -c NetworkManager /etc/hosts` -eq 1 ]; then
+   cp /etc/hosts.fixed /etc/hosts
+fi
+</pre>
+</div></div><p>Finally, setup a cron job to run this script as often as you like. We recommend every couple of minutes.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>*/3 * * * * /etc/restore-etc-hosts.sh
+</pre>
+</div></div><p>Once the <code>/etc/hosts</code> file is corrected, restart JBoss AS and run the tests again. Your socket connection error should be gone!</p></div></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" id="footer">
+        <table width="100%"> 
+          <tr>
+            <td align="left" valign="top">
+              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
+            </td>
+            <td align="right" valign="top">
+              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/JBoss+Remote+Deployer">Atlassian Confluence</a>.
+            </td>
+          </tr>
+        <table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
