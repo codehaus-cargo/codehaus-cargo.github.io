@@ -1,7 +1,7 @@
 /*
  * ========================================================================
  *
- * Codehaus CARGO, copyright 2004-2011 Vincent Massol, 2011-2015 Ali Tokmen.
+ * Codehaus CARGO, copyright 2004-2011 Vincent Massol, 2012-2015 Ali Tokmen.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -101,7 +101,7 @@ public class WebsiteGenerator implements Runnable
         for (int i = 0; i < results.length(); i++)
         {
             JSONObject links = results.getJSONObject(i).getJSONObject("_links");
-            ConfluenceTest runnable = new ConfluenceTest();
+            WebsiteGenerator runnable = new WebsiteGenerator();
             runnable.url = new URL(links.getString("self") + "?expand=body.view");
             Thread thread = new Thread(runnable);
             executor.submit(thread);
@@ -138,12 +138,15 @@ public class WebsiteGenerator implements Runnable
     {
         System.out.println("Parsing files and generating Web site");
         File target = new File("target");
+        File attachments = new File(target, "attachments");
         File classes = new File(target, "classes");
-        Files.copy(new File(classes, "rss.gif").toPath(),
-            new File(target, "attachments/rss.gif").toPath(), StandardCopyOption.REPLACE_EXISTING);
+        Files.copy(new File(classes, "blank.gif").toPath(),
+            new File(attachments, "blank.gif").toPath(), StandardCopyOption.REPLACE_EXISTING);
         Files.copy(new File(classes, "favicon.ico").toPath(),
-            new File(target, "attachments/favicon.ico").toPath(), StandardCopyOption.REPLACE_EXISTING);
-        writeFile(new File(target, "site.css"), readFile(new File(classes, "site.css")));
+            new File(attachments, "favicon.ico").toPath(), StandardCopyOption.REPLACE_EXISTING);
+        Files.copy(new File(classes, "rss.gif").toPath(),
+            new File(attachments, "rss.gif").toPath(), StandardCopyOption.REPLACE_EXISTING);
+        writeFile(new File(attachments, "site.css"), readFile(new File(classes, "site.css")));
         File sourceDirectory = new File(target, "source");
         String template = readFile(new File(target, "classes/cargo-template.html"));
         String navigation = readFile(new File(sourceDirectory, "Navigation"));
@@ -200,6 +203,7 @@ public class WebsiteGenerator implements Runnable
                     {
                         filePath = filePath.substring(filePath.lastIndexOf('/'));
                     }
+                    filePath = URLDecoder.decode(filePath, "UTF-8");
                     File file = new File("target");
                     if (url.getPath().contains("/wiki/rest/api/content/"))
                     {
@@ -275,7 +279,7 @@ public class WebsiteGenerator implements Runnable
                             if (!attachments.contains(attachmentUrl))
                             {
                                 attachments.add(attachmentUrl);
-                                ConfluenceTest runnable = new ConfluenceTest();
+                                WebsiteGenerator runnable = new WebsiteGenerator();
                                 runnable.url = attachmentUrl;
                                 Thread thread = new Thread(runnable);
                                 executor.submit(thread);
@@ -322,14 +326,20 @@ public class WebsiteGenerator implements Runnable
                             if (!attachments.contains(attachmentUrl))
                             {
                                 attachments.add(attachmentUrl);
-                                ConfluenceTest runnable = new ConfluenceTest();
+                                WebsiteGenerator runnable = new WebsiteGenerator();
                                 runnable.url = attachmentUrl;
                                 Thread thread = new Thread(runnable);
                                 executor.submit(thread);
                             }
                         }
                     }
-                    sb.append(attachment.substring(attachment.lastIndexOf('/') + 1));
+                    attachment = attachment.substring(attachment.lastIndexOf('/') + 1);
+                    int questionMark = attachment.lastIndexOf('?');
+                    if (questionMark != -1)
+                    {
+                        attachment = attachment.substring(0, questionMark);
+                    }
+                    sb.append(attachment);
                     sb.append("\"");
                     start = matcher.end();
                 }
