@@ -37,10 +37,10 @@
       <td colspan="2" style="padding:8px;">
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr background="attachments/cargo-banner-center.png">
-            <td align="left" valign="middle" style="padding:0px;margin:0px;">
+            <td align="left" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
               <img src="attachments/cargo-banner-left.png"/>
             </td>
-            <td align="right" valign="middle" style="padding:0px;margin:0px;">
+            <td align="right" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
               <img src="attachments/cargo-banner-right.png"/>
             </td>
           </tr>
@@ -114,40 +114,21 @@
           </script>
         </center>
 
-        <p>updating samples test cases.</p>
-
-<p>1.  find the test case you wish to copy.</p>
-
-<p>copy recursively resources/testdata/&lt;you_want_to_copy&gt;-war to a new folder (ex. resources/testdata/NEW-war )<br />
-edit  resources/testdata/new-war/pom.xml (change artifact-id to NEW-war, and name to something descriptive )<br />
-edit resources/testdata/pom.xml and add module MEW-war</p>
-
-<p>edit core/samples/pom.xml<br />
-under Test data artifacts, add</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-    &lt;dependency&gt;
-      &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-      &lt;artifactId&gt;NEW-war&lt;/artifactId&gt;
-      &lt;version&gt;${cargo.resources.version}&lt;/version&gt;
-      &lt;type&gt;war&lt;/type&gt;
-    &lt;/dependency&gt;
+        <p>updating samples test cases.</p><p>1. find the test case you wish to copy.</p><p>copy recursively <code>resources/testdata/&lt;you_want_to_copy&gt;-war</code> to a new folder (ex. <code>resources/testdata/NEW-war</code>)<br /> edit <code>resources/testdata/new-war/pom.xml</code> (change <code>artifact-id</code> to <code>NEW-war</code>, and name to something descriptive )<br /> edit <code>resources/testdata/pom.xml</code> and add module <code>NEW-war</code></p><p>edit <code>core/samples/pom.xml</code><br /> under Test data artifacts, add</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>  &lt;dependency&gt;
+    &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
+    &lt;artifactId&gt;NEW-war&lt;/artifactId&gt;
+    &lt;version&gt;${project.version}&lt;/version&gt;
+    &lt;type&gt;war&lt;/type&gt;
+  &lt;/dependency&gt;
 </pre>
-</div></div>
-<p>under Location of testdata dependencies..., add </p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-              &lt;property&gt;
-                &lt;name&gt;cargo.testdata.NEW-war&lt;/name&gt;
-                &lt;value&gt;org/codehaus/cargo/NEW-war/${cargo.resources.version}/simple-NEW-${cargo.resources.version}.war&lt;/value&gt;
-              &lt;/property&gt;
+</div></div><p>under Location of testdata dependencies..., add</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre>  &lt;property&gt;
+    &lt;name&gt;cargo.testdata.NEW-war&lt;/name&gt;
+    &lt;value&gt;org/codehaus/cargo/NEW-war/${project.version}/simple-NEW-${project.version}.war&lt;/value&gt;
+  &lt;/property&gt;
 </pre>
-</div></div>
-<p>this will create a property that an implementation of AbstractDataSourceWarCapabilityContainerTestCase can understand</p>
-
-<p>add a new test class that does what you want, extending AbstractDataSourceWarCapabilityContainerTestCase or a subclass of it.  Make sure you use an appropriate Validator for the configuration type you are concerned with.  Otherwise you may end up testing invalid containers.</p>
-
-<p>finally, execute mvn -P&lt;container_to_test&gt; install from the root of Cargo.</p>
+</div></div><p>this will create a property that an implementation of <code>AbstractDataSourceWarCapabilityContainerTestCase</code> can understand</p><p>add a new test class that does what you want, extending <code>AbstractDataSourceWarCapabilityContainerTestCase</code> or a subclass of it. Make sure you use an appropriate <code>Validator</code> for the configuration type you are concerned with. Otherwise you may end up testing invalid containers.</p><p>finally, execute <code>mvn -P&lt;container_to_test&gt; install</code> from the root of Cargo.</p>
       </td>
     </tr>
     <tr>
