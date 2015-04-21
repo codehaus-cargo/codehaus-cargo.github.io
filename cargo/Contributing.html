@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head profile="http://www.w3.org/2000/08/w3c-synd/#">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
-  <link rel="shortcut icon" href="attachments/favicon.ico"/>
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
-
-  <title>Codehaus Cargo - Contributing</title>
-
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - Contributing</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -22,34 +18,30 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-
+  </script> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script>
-</head>
-
-<body>
-  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
-    <tr>
-      <td colspan="2" style="padding:8px;">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr background="attachments/cargo-banner-center.png">
-            <td align="left" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-left.png"/>
-            </td>
-            <td align="right" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-right.png"/>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <!--
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" id="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr> 
+     <td colspan="2" style="padding:8px"> 
+      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="breadcrumbs"> 
+      <!--
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr>
             <td align="left">
@@ -74,72 +66,260 @@
             </td>
           </tr>
         </table>
-         -->
-      </td>
-    </tr>
-    <tr>
-      <td id="leftColumn" valign="top" style="padding-top: 0px;">
-          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
-
-          <h3 class="heading3">Feeds</h3>
-          <table border="0" cellspacing="4px">
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td id="rightColumn" valign="top">
-        <script type="text/javascript">
+         --> </td> 
+    </tr> 
+    <tr> 
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
+         <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="SVN.html">SVN</a></li>
+       <li><a href="Mailing+Lists.html">Mailing Lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
+      <ul class="alternate">
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Discussions.html">Discussions</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
+       <li><a href="Project+Structure.html">Project Structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td id="rightColumn" valign="top"> <script type="text/javascript">
           // Google Ads code
           google_ad_client = "ca-pub-7996505557003356";
           google_ad_slot = "5363897989";
           google_ad_width = 728;
           google_ad_height = 90;
-        </script>
-        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
-          <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script>
-        </center>
-
-        <p>We're always looking for contributions! Here are some ways to participate in Cargo's development:</p><ul><li>By sending feedback to the user or dev <a href="http://archive.codehaus.org/groups/haus.codehaus.cargo" class="external-link" rel="nofollow">mailing lists</a>. The feedback could be about something that does not work, something that could be improved, a feature you'd like to see, etc. Or simply it could be that you're a happy user. Letting us know helps a lot!</li><li>By answering emails from others on the <a href="http://archive.codehaus.org/groups/haus.codehaus.cargo" class="external-link" rel="nofollow">mailing lists</a>.</li><li>By sending code patches. In that case there are a <a href="#Contributing-codingrules">few rules</a> you need to know.</li><li>By spreading the word about Cargo!</li></ul><h3 id="Contributing-Creatingandsubmittingapatch">Creating and submitting a patch</h3><p>When you have either completed an issue or just want some feedback on the work you have done, create a patch and attach the patch to the issue in question. We have a couple of guidelines when creating patches:</p><ul><li>Always create the patch from the root of the maven project, i.e. where the pom.xml file is.</li><li>Always provide a single patch and not several diff files. If you're adding new files, svn add them first so that they appear within the single patch file.</li><li>If this was a new piece of work without a JIRA issue, create a JIRA issue for it now.</li><li>Attach the patch to the JIRA issue you were working on (do not paste its content in as a comment though). When adding the patch add a comment to the issue explaining what it does. Shortly after, someone will apply the patch and close the issue.</li></ul><p>An example on how to create a patch from the command line:</p><div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
-<pre>$ svn diff &gt; CARGO-123-something.patch
-</pre>
-</div></div><p>If you are picking up an issue with a existing patch attached to the issue you can apply the patch to your working directory directly from JIRA like this. The <code>wget</code> and <code>patch</code> commands will only be available if you are on a UNIX platform or using Cygwin on Windows.</p><div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
-<pre>$ wget -O - -q &lt;URL to the patch from JIRA&gt; | patch -p0
-</pre>
-</div></div><p>If the patch is in a local file <code><a href="https://codehaus-cargo.atlassian.net/browse/CARGO-123" class="external-link" rel="nofollow">CARGO-123</a>.patch</code> and you want to apply that use this command:</p><div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
-<pre>$ patch -p0 &lt; CARGO-123.patch
-</pre>
-</div></div><p>A couple of notes:</p><ul><li>If you are using another tool for creating patches, make sure that the patch doesn't include absolute paths. Including absolute paths in the patch will make the useless for us as we most likely don't have the same directory structure as you.</li><li>Make sure that you follow our <a href="Cargo+Code+Style.html">code style</a>.</li></ul><h3 id="Contributing-Patchacceptancecriteria">Patch acceptance criteria</h3><p>There are a number of criteria that a patch will be judged on:</p><ul><li>Whether it works and does what is intended. This one is probably obvious!</li></ul><ul><li>Whether it fits the spirit of the project. Some patches may be rejected as they take the project in a different direction to that which the current development community has chosen. This is usually discussed on an issue well before a patch is contributed, so if you are unsure, discuss it there or on the mailing lists first. Feel free to continue discussing it (with new justification) if you disagree, or appeal to a wider audience on the mailing lists.</li></ul><ul><li>Whether it contains tests. It is expected that any patches relating to functionality will be accompanied by unit tests and/or integration tests. It is strongly desired (and will be requested) for bug fixes too, but will not be the basis for not applying it. At a bare minimum, the change should not decrease the amount of automated test coverage. As a community, we are focusing on increasing the current coverage, as there are several areas that do not receive automated testing.</li></ul><ul><li>Whether it contains documentation. All new functionality needs to be documented for users, even if it is very rough for someone to expand on later. While rough is acceptable, incomplete is not. As with automated testing, as a community we are striving to increase the current coverage of documentation.</li></ul><p>Above all, don't be discouraged. These are the same requirements the current commiters should hold each other to as well.<br /> And remember, your contributions are always welcome!</p><p><span class="confluence-anchor-link" id="Contributing-codingrules"></span></p><h3 id="Contributing-Codingrules">Coding rules</h3><p>If you submit a patch you need to follow these rules:</p><ul><li>Copyright your code to Vincent Massol (see <a href="License#License-licenseexplanations.html">license explanations</a>)</li><li>Do not use an @author tag (there was a big discussion on this in Apache land - We need to put the link here)</li><li>Ensure that your code passes the <a href="Building.html">build</a>. Note that the build contains some <a href="http://svn.codehaus.org/cargo/resources/trunk/build-tools/src/main/resources/build-tools/checkstyle.xml" class="external-link" rel="nofollow">Checkstyle checks</a> that your code must pass.</li><li>Ensure that you have unit tests and/or integration tests (as part of the existing Cargo test suites)</li><li>Use the same <a href="Cargo+Code+Style.html">code formatting</a> as the existing code.</li><li>Create a <a href="https://codehaus-cargo.atlassian.net/projects/CARGO" class="external-link" rel="nofollow">JIRA issue</a> and attach your patch to it.</li><li>Create documentation for what you have added (Ask on the list and you'll get access to Cargo's wiki).</li><li>Add your name on the <a href="Credits.html">Credits</a> page.</li></ul><p>In addition if you plan to contribute big patches that impact existing code, we recommend discussing it on the mailing list first.</p><p>Thanks!</p>
-      </td>
+        </script> 
+      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script> 
+      </center> <p>We're always looking for contributions! Here are some ways to participate in Cargo's development:</p>
+      <ul>
+       <li>By sending feedback to the user or dev <a href="http://archive.codehaus.org/groups/haus.codehaus.cargo" class="external-link" rel="nofollow">mailing lists</a>. The feedback could be about something that does not work, something that could be improved, a feature you'd like to see, etc. Or simply it could be that you're a happy user. Letting us know helps a lot!</li>
+       <li>By answering emails from others on the <a href="http://archive.codehaus.org/groups/haus.codehaus.cargo" class="external-link" rel="nofollow">mailing lists</a>.</li>
+       <li>By sending code patches. In that case there are a <a href="#Contributing-codingrules">few rules</a> you need to know.</li>
+       <li>By spreading the word about Cargo!</li>
+      </ul><h3 id="Contributing-Creatingandsubmittingapatch">Creating and submitting a patch</h3><p>When you have either completed an issue or just want some feedback on the work you have done:</p>
+      <ul>
+       <li>Propose any patch using Github's standard processes and check them in</li>
+       <li>This will automatically create a build on the <a class="external-link" href="https://semaphoreci.com/codehaus-cargo/cargo" rel="nofollow">Continous Integration system</a>, which covers:
+        <ul>
+         <li>Build with the latest JDK and Maven versions<br>Note that this automatically checks various other things too - For example <a href="Cargo+Code+Style.html">code formatting</a></li>
+         <li>Build with the lowest JDK and Maven versions supported by Codehaus Cargo</li>
+         <li>Test on all publicly downloadable containers</li>
+        </ul></li>
+      </ul><h3 id="Contributing-Patchacceptancecriteria">Patch acceptance criteria</h3><p>There are a number of criteria that a patch will be judged on:</p>
+      <ul>
+       <li>Whether it works and does what is intended. This one is probably obvious!</li>
+      </ul>
+      <ul>
+       <li>Whether it fits the spirit of the project. Some patches may be rejected as they take the project in a different direction to that which the current development community has chosen. This is usually discussed on an issue well before a patch is contributed, so if you are unsure, discuss it there or on the mailing lists first. Feel free to continue discussing it (with new justification) if you disagree, or appeal to a wider audience on the mailing lists.</li>
+      </ul>
+      <ul>
+       <li>Whether it contains tests. It is expected that any patches relating to functionality will be accompanied by unit tests and/or integration tests. It is strongly desired (and will be requested) for bug fixes too, but will not be the basis for not applying it. At a bare minimum, the change should not decrease the amount of automated test coverage. As a community, we are focusing on increasing the current coverage, as there are several areas that do not receive automated testing.</li>
+      </ul>
+      <ul>
+       <li>Whether it contains documentation. All new functionality needs to be documented for users, even if it is very rough for someone to expand on later. While rough is acceptable, incomplete is not. As with automated testing, as a community we are striving to increase the current coverage of documentation.</li>
+      </ul><p>Above all, don't be discouraged. These are the same requirements the current commiters should hold each other to as well.<br> And remember, your contributions are always welcome!</p><p><span class="confluence-anchor-link" id="Contributing-codingrules"></span></p><h3 id="Contributing-Codingrules">Coding rules</h3><p>If you submit a patch you need to follow these rules:</p>
+      <ul>
+       <li>Copyright your code to Ali Tokmen (see <a href="License#License-licenseexplanations.html">license explanations</a>)</li>
+       <li>Do not use an @author tag (there was a big discussion on this in Apache land - We need to put the link here)</li>
+       <li>Ensure that your code passes the <a href="Building.html">build</a>. Note that the build contains some <a href="https://github.com/codehaus-cargo/cargo/blob/master/resources/build-tools/src/main/resources/build-tools/checkstyle.xml" class="external-link" rel="nofollow">Checkstyle checks</a> that your code must pass.</li>
+       <li>Ensure that you have unit tests and/or integration tests (as part of the existing Cargo test suites)</li>
+       <li>Use the same <a href="Cargo+Code+Style.html">code formatting</a> as the existing code.</li>
+       <li>Create a <a href="https://codehaus-cargo.atlassian.net/projects/CARGO" class="external-link" rel="nofollow">JIRA issue</a> and attach your patch to it.</li>
+       <li>Create documentation for what you have added (Ask on the list and you'll get access to Cargo's wiki).</li>
+       <li>Add your name on the <a href="Credits.html">Credits</a> page.</li>
+      </ul><p>In addition if you plan to contribute big patches that impact existing code, we recommend discussing it on the mailing list first.</p><p>Thanks!</p> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="footer"> 
+      <table width="100%"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="top"> Copyright 2004-2015. All rights reserved unless otherwise noted.<br> </td> 
+         <td align="right" valign="top"> Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Contributing">Atlassian Confluence</a>. </td> 
+        </tr> 
+       </tbody>   
+      </table>   </td>
     </tr>
-    <tr>
-      <td colspan="2" id="footer">
-        <table width="100%"> 
-          <tr>
-            <td align="left" valign="top">
-              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
-            </td>
-            <td align="right" valign="top">
-              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Contributing">Atlassian Confluence</a>.
-            </td>
-          </tr>
-        <table>
-      </td>
-    </tr>
+   </tbody>
   </table>
-</body>
+ </body>
 </html>

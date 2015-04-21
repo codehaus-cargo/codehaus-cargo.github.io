@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head profile="http://www.w3.org/2000/08/w3c-synd/#">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
-  <link rel="shortcut icon" href="attachments/favicon.ico"/>
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
-
-  <title>Codehaus Cargo - Deploying to a running container</title>
-
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - Deploying to a running container</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -22,34 +18,30 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-
+  </script> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script>
-</head>
-
-<body>
-  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
-    <tr>
-      <td colspan="2" style="padding:8px;">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr background="attachments/cargo-banner-center.png">
-            <td align="left" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-left.png"/>
-            </td>
-            <td align="right" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-right.png"/>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <!--
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" id="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr> 
+     <td colspan="2" style="padding:8px"> 
+      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="breadcrumbs"> 
+      <!--
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr>
             <td align="left">
@@ -74,48 +66,227 @@
             </td>
           </tr>
         </table>
-         -->
-      </td>
-    </tr>
-    <tr>
-      <td id="leftColumn" valign="top" style="padding-top: 0px;">
-          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
-
-          <h3 class="heading3">Feeds</h3>
-          <table border="0" cellspacing="4px">
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td id="rightColumn" valign="top">
-        <script type="text/javascript">
+         --> </td> 
+    </tr> 
+    <tr> 
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
+         <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="SVN.html">SVN</a></li>
+       <li><a href="Mailing+Lists.html">Mailing Lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
+      <ul class="alternate">
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Discussions.html">Discussions</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
+       <li><a href="Project+Structure.html">Project Structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td id="rightColumn" valign="top"> <script type="text/javascript">
           // Google Ads code
           google_ad_client = "ca-pub-7996505557003356";
           google_ad_slot = "5363897989";
           google_ad_width = 728;
           google_ad_height = 90;
-        </script>
-        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
-          <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script>
-        </center>
-
-        <p>Cargo supports <a href="Deployer.html">deploying</a> to an already running container. This feature is called <a href="Hot+Deployment.html">Hot Deployment</a>). You call it by using the (<code><strong>cargo:deploy</strong></code>) goal (e.g. <code>mvn cargo:deploy</code>).</p><div class="confluence-information-macro confluence-information-macro-note"><p class="title">No need to deploy if you are using Cargo to start your container</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>If you are using Cargo for <a href="Starting+and+stopping+a+container.html">starting your container</a>, Cargo will actually be doing a <a href="Static+Deployment.html">static deployment</a> of all your <code>&lt;deployables&gt;</code> automatically. So, no need to deploy anything manually in that case!</p></div></div><div class="confluence-information-macro confluence-information-macro-information"><p class="title">About WAR contexts</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Many containers have their specific files for redefining context roots (Tomcat has context.xml, JBoss has jboss-web.xml, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p></div></div><h3 id="Deployingtoarunningcontainer-Usingalocaldeployer">Using a local deployer</h3><p>A local <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Local+Container.html">Local Container</a> (i.e. a container installed on the same machine where the deployer is executing). Thus you'll need to use a local container id in <code>&lt;containerId&gt;</code>. You can check that by reviewing the supported <a href="Containers.html">container list</a> and selecting the container you wish to use.</p><p><strong>Example of doing a local deploy to an existing configuration</strong>:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>[...]
+        </script> 
+      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script> 
+      </center> <p>Cargo supports <a href="Deployer.html">deploying</a> to an already running container. This feature is called <a href="Hot+Deployment.html">Hot Deployment</a>). You call it by using the (<code><strong>cargo:deploy</strong></code>) goal (e.g. <code>mvn cargo:deploy</code>).</p>
+      <div class="confluence-information-macro confluence-information-macro-note">
+       <p class="title">No need to deploy if you are using Cargo to start your container</p>
+       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>If you are using Cargo for <a href="Starting+and+stopping+a+container.html">starting your container</a>, Cargo will actually be doing a <a href="Static+Deployment.html">static deployment</a> of all your <code>&lt;deployables&gt;</code> automatically. So, no need to deploy anything manually in that case!</p>
+       </div>
+      </div>
+      <div class="confluence-information-macro confluence-information-macro-information">
+       <p class="title">About WAR contexts</p>
+       <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>Many containers have their specific files for redefining context roots (Tomcat has context.xml, JBoss has jboss-web.xml, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
+       </div>
+      </div><h3 id="Deployingtoarunningcontainer-Usingalocaldeployer">Using a local deployer</h3><p>A local <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Local+Container.html">Local Container</a> (i.e. a container installed on the same machine where the deployer is executing). Thus you'll need to use a local container id in <code>&lt;containerId&gt;</code>. You can check that by reviewing the supported <a href="Containers.html">container list</a> and selecting the container you wish to use.</p><p><strong>Example of doing a local deploy to an existing configuration</strong>:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>[...]
 &lt;configuration&gt;
 
   &lt;!-- Container configuration --&gt;
@@ -160,9 +331,19 @@
   &lt;/deployables&gt;
 &lt;/configuration&gt;
 [...]
-</pre>
-</div></div><h3 id="Deployingtoarunningcontainer-Usingaremotedeployer">Using a remote deployer</h3><p>A remote <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Remote+Container.html">Remote Container</a> (i.e. a container that is running and that has been started externally from Cargo). Thus you'll need to use an id for a remote container in <code>&lt;containerId&gt;</code> and a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</p><div class="confluence-information-macro confluence-information-macro-information"><p class="title">Not all containers have a remote Deployer implemented</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>We haven't finished implementing remote Deployers for all containers yet. Please <a href="Containers.html">check</a> if your favorite container has it implemented. If not you'll need to deploy your deployables by defining them in a standalone local configuration as shown in the <a href="Starting+and+stopping+a+container.html">starting and stopping a container</a> use case or the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></div></div><p><strong>Example of doing a remote deploy using a runtime configuration</strong>:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>[...]
+</pre> 
+       </div>
+      </div><h3 id="Deployingtoarunningcontainer-Usingaremotedeployer">Using a remote deployer</h3><p>A remote <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Remote+Container.html">Remote Container</a> (i.e. a container that is running and that has been started externally from Cargo). Thus you'll need to use an id for a remote container in <code>&lt;containerId&gt;</code> and a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</p>
+      <div class="confluence-information-macro confluence-information-macro-information">
+       <p class="title">Not all containers have a remote Deployer implemented</p>
+       <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>We haven't finished implementing remote Deployers for all containers yet. Please <a href="Containers.html">check</a> if your favorite container has it implemented. If not you'll need to deploy your deployables by defining them in a standalone local configuration as shown in the <a href="Starting+and+stopping+a+container.html">starting and stopping a container</a> use case or the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
+       </div>
+      </div><p><strong>Example of doing a remote deploy using a runtime configuration</strong>:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>[...]
 &lt;configuration&gt;
 
   &lt;!-- Container configuration --&gt;
@@ -181,7 +362,7 @@
   &lt;/configuration&gt;
 
   &lt;!-- Deployables configuration --&gt;
-  &lt;deployables&gt;
+ &nbsp;&lt;deployables&gt;
     &lt;deployable&gt;
       &lt;groupId&gt;war group id&lt;/groupId&gt;
       &lt;artifactId&gt;war artifact id&lt;/artifactId&gt;
@@ -197,9 +378,12 @@
 
 &lt;/configuration&gt;
 [...]
-</pre>
-</div></div><p>As you can see the information to connect and do the deployment to the remote container is specified in the runtime configuration (<code>cargo.remote.username</code> and <code>cargo.remote.password</code>). The properties to define are deployer-dependent.</p><p>Here's an another example, this time deploying the current project's artifact to a running JBoss 4.2.x container using a default 8080 port and default authorizations:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>[...]
+</pre> 
+       </div>
+      </div><p>As you can see the information to connect and do the deployment to the remote container is specified in the runtime configuration (<code>cargo.remote.username</code> and <code>cargo.remote.password</code>). The properties to define are deployer-dependent.</p><p>Here's an another example, this time deploying the current project's artifact to a running JBoss 4.2.x container using a default 8080 port and default authorizations:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>[...]
 &lt;configuration&gt;
   &lt;container&gt;
     &lt;containerId&gt;jboss42x&lt;/containerId&gt;
@@ -207,31 +391,51 @@
   &lt;/container&gt;
 &lt;/configuration&gt;
 [...]
-</pre>
-</div></div><p>Just type <code>mvn cargo:deploy</code>. Notice that we haven't specified a <code>&lt;deployer&gt;</code> element nor a <code>&lt;configuration&gt;</code> one: this is because the plugin is smart enough to create default instances for you.</p><h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3><p>If the deployment, undeployment or redeployment is done without any watchdog, CARGO will rely on the error codes return by the container's deployer to detect failures.</p><p>This is sometimes not desired: for example, if one calls <code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p><p>To work around the issue, make sure you define your deployable together with a watchdog. For example:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Deployable with a ping URL</b></div><div class="codeContent panelContent pdl">
-<pre>&lt;deployables&gt;
+</pre> 
+       </div>
+      </div><p>Just type <code>mvn cargo:deploy</code>. Notice that we haven't specified a <code>&lt;deployer&gt;</code> element nor a <code>&lt;configuration&gt;</code> one: this is because the plugin is smart enough to create default instances for you.</p><h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3><p>If the deployment, undeployment or redeployment is done without any watchdog, CARGO will rely on the error codes return by the container's deployer to detect failures.</p><p>This is sometimes not desired: for example, if one calls&nbsp;<code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p><p>To work around the issue, make sure you define your deployable together with a watchdog. For example:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+        <b>Deployable with a ping URL</b>
+       </div>
+       <div class="codeContent panelContent pdl"> 
+        <pre>&lt;deployables&gt;
   &lt;deployable&gt;
     &lt;location&gt;${project.build.directory}/${project.build.finalName}.${project.packaging}&lt;/location&gt;
     &lt;pingURL&gt;http://localhost:${servlet.port}/mycontext/index.html&lt;/pingURL&gt;
   &lt;/deployable&gt;
-&lt;/deployables&gt;</pre>
-</div></div><p>In that case:</p><ul><li>When you will call <code>cargo:deploy</code>:<ul><li>If the deployer returns a failure, CARGO will log a message <code>The deployment has failed</code>, with the error returned by the deployer and a severity <code>INFO</code>.</li><li>It will then start the watchdog, to check if the deployable is deployed.</li><li>If the watchdog detects that the deployable is indeed deployed, the overall result is a <code>BUILD SUCCESSFUL</code></li><li>If the watchdog detects that the deployable is not deployed, you then get a <code>BUILD FAILURE</code></li></ul></li><li>When you will call <code>cargo:undeploy</code>:<ul><li>If the deployer returns a failure, CARGO will log a message <code>The undeployment has failed</code>, with the error returned by the deployer and a severity <code>INFO</code>.</li><li>It will then start the watchdog, to check if the deployable is not deployed.</li><li>If the watchdog detects that the deployable is indeed not deployed, the overall result is a <code>BUILD SUCCESSFUL</code></li><li>If the watchdog detects that the deployable is still deployed, you then get a <code>BUILD FAILURE</code></li></ul></li></ul><p>This functionality is available in the <a href="Javadocs.html">Java API</a>, <a href="Ant+support.html">ANT tasks</a> and <a href="Maven2+plugin.html">Maven2/Maven3 plugin</a>.</p>
-      </td>
+&lt;/deployables&gt;</pre> 
+       </div>
+      </div><p>In that case:</p>
+      <ul>
+       <li>When you will call&nbsp;<code>cargo:deploy</code>:
+        <ul>
+         <li>If the deployer returns a failure, CARGO will log a message&nbsp;<code>The deployment has failed</code>, with the error returned by the deployer and a severity&nbsp;<code>INFO</code>.</li>
+         <li>It will then start the watchdog, to check if the deployable is deployed.</li>
+         <li>If the watchdog detects that the deployable is indeed deployed, the overall result is a&nbsp;<code>BUILD SUCCESSFUL</code></li>
+         <li>If the watchdog detects that the deployable is not deployed, you then get a&nbsp;<code>BUILD FAILURE</code></li>
+        </ul></li>
+       <li>When you will call&nbsp;<code>cargo:undeploy</code>:
+        <ul>
+         <li>If the deployer returns a failure, CARGO will log a message&nbsp;<code>The undeployment has failed</code>, with the error returned by the deployer and a severity&nbsp;<code>INFO</code>.</li>
+         <li>It will then start the watchdog, to check if the deployable is not deployed.</li>
+         <li>If the watchdog detects that the deployable is indeed not deployed, the overall result is a&nbsp;<code>BUILD SUCCESSFUL</code></li>
+         <li>If the watchdog detects that the deployable is still deployed, you then get a&nbsp;<code>BUILD FAILURE</code></li>
+        </ul></li>
+      </ul><p>This functionality is available in the <a href="Javadocs.html">Java API</a>, <a href="Ant+support.html">ANT tasks</a> and <a href="Maven2+plugin.html">Maven2/Maven3 plugin</a>.</p> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="footer"> 
+      <table width="100%"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="top"> Copyright 2004-2015. All rights reserved unless otherwise noted.<br> </td> 
+         <td align="right" valign="top"> Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Deploying+to+a+running+container">Atlassian Confluence</a>. </td> 
+        </tr> 
+       </tbody>   
+      </table>   </td>
     </tr>
-    <tr>
-      <td colspan="2" id="footer">
-        <table width="100%"> 
-          <tr>
-            <td align="left" valign="top">
-              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
-            </td>
-            <td align="right" valign="top">
-              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Deploying+to+a+running+container">Atlassian Confluence</a>.
-            </td>
-          </tr>
-        <table>
-      </td>
-    </tr>
+   </tbody>
   </table>
-</body>
+ </body>
 </html>

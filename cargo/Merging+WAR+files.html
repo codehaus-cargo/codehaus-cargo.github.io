@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head profile="http://www.w3.org/2000/08/w3c-synd/#">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
-  <link rel="shortcut icon" href="attachments/favicon.ico"/>
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
-
-  <title>Codehaus Cargo - Merging WAR files</title>
-
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - Merging WAR files</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -22,34 +18,30 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-
+  </script> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script>
-</head>
-
-<body>
-  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
-    <tr>
-      <td colspan="2" style="padding:8px;">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr background="attachments/cargo-banner-center.png">
-            <td align="left" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-left.png"/>
-            </td>
-            <td align="right" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-right.png"/>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <!--
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" id="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr> 
+     <td colspan="2" style="padding:8px"> 
+      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="breadcrumbs"> 
+      <!--
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr>
             <td align="left">
@@ -74,62 +66,216 @@
             </td>
           </tr>
         </table>
-         -->
-      </td>
-    </tr>
-    <tr>
-      <td id="leftColumn" valign="top" style="padding-top: 0px;">
-          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
-
-          <h3 class="heading3">Feeds</h3>
-          <table border="0" cellspacing="4px">
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td id="rightColumn" valign="top">
-        <script type="text/javascript">
+         --> </td> 
+    </tr> 
+    <tr> 
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
+         <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="SVN.html">SVN</a></li>
+       <li><a href="Mailing+Lists.html">Mailing Lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
+      <ul class="alternate">
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Discussions.html">Discussions</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
+       <li><a href="Project+Structure.html">Project Structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td id="rightColumn" valign="top"> <script type="text/javascript">
           // Google Ads code
           google_ad_client = "ca-pub-7996505557003356";
           google_ad_slot = "5363897989";
           google_ad_width = 728;
           google_ad_height = 90;
-        </script>
-        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
-          <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script>
-        </center>
-
-        <h2 id="MergingWARfiles-UsingMaven2andCargotomergeWARfiles">Using Maven2 and Cargo to merge WAR files</h2>
-
-<p>If you have an application that you are building with maven2 that you wish to merge two WAR files together, then you may wish to use the 'uberwar' mojo present in the cargo maven2 plugin.</p>
-
-<p>An &quot;uberwar&quot; is a war file constructed from 2 or more War files, where the deployment descriptors in files such as web.xml have been combined.</p>
-
-<h3 id="MergingWARfiles-Settingupyourprojecttooutputanuberwar">Setting up your project to output an uberwar</h3>
-
-<p>Create a maven2 project whose output artifact is going to be the uberwar. Don't forget to add as dependencies the War files you're going to make the uberwar from.</p>
-
-<p>Your packaging type should be uberwar:</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
-   xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-   xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;
+        </script> 
+      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script> 
+      </center> <h2 id="MergingWARfiles-UsingMaven2andCargotomergeWARfiles">Using Maven2 and Cargo to merge WAR files</h2> <p>If you have an application that you are building with maven2 that you wish to merge two WAR files together, then you may wish to use the 'uberwar' mojo present in the cargo maven2 plugin.</p> <p>An "uberwar" is a war file constructed from 2 or more War files, where the deployment descriptors in files such as web.xml have been combined.</p> <h3 id="MergingWARfiles-Settingupyourprojecttooutputanuberwar">Setting up your project to output an uberwar</h3> <p>Create a maven2 project whose output artifact is going to be the uberwar. Don't forget to add as dependencies the War files you're going to make the uberwar from.</p> <p>Your packaging type should be uberwar:</p> 
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
   &lt;groupId&gt;com.mycorp&lt;/groupId&gt;
   &lt;artifactId&gt;myproj&lt;/artifactId&gt;
@@ -151,12 +297,12 @@
     &lt;/dependency&gt;
   &lt;/dependencies&gt;
 &lt;/project&gt;
-</pre>
-</div></div>
-
-<p>Next, you need to add the cargo maven plugin to your <code>&lt;plugins&gt;</code> section, and set it up with the path to a merging descriptor:</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
+</pre> 
+       </div>
+      </div> <p>Next, you need to add the cargo maven plugin to your <code>&lt;plugins&gt;</code> section, and set it up with the path to a merging descriptor:</p> 
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
@@ -165,15 +311,17 @@
     &lt;descriptor&gt;src/assemble/merge.xml&lt;/descriptor&gt;
   &lt;/configuration&gt;
 &lt;/plugin&gt;
-</pre>
-</div></div>
-<p>Here the <code>src/assemble/merge.xml</code> is the descriptor of how you want the merge to work (see next section for detailed explanations).</p>
-
-<div class="confluence-information-macro confluence-information-macro-information"><p class="title">Maven Archiver</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body">
-<p>Note that plugin configuration also supports the <code>&lt;archive&gt;</code> element. For full list of supported values see <a href="http://maven.apache.org/shared/maven-archiver/" class="external-link" rel="nofollow">maven-archiver</a> reference page.<br />
-Example:</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
+</pre> 
+       </div>
+      </div> <p>Here the <code>src/assemble/merge.xml</code> is the descriptor of how you want the merge to work (see next section for detailed explanations).</p> 
+      <div class="confluence-information-macro confluence-information-macro-information">
+       <p class="title">Maven Archiver</p>
+       <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body"> 
+        <p>Note that plugin configuration also supports the <code>&lt;archive&gt;</code> element. For full list of supported values see <a href="http://maven.apache.org/shared/maven-archiver/" class="external-link" rel="nofollow">maven-archiver</a> reference page.<br> Example:</p> 
+        <div class="code panel pdl" style="border-width: 1px;">
+         <div class="codeContent panelContent pdl"> 
+          <pre>
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
@@ -189,42 +337,28 @@ Example:</p>
     &lt;/archive&gt;
   &lt;/configuration&gt;
 &lt;/plugin&gt;
-</pre>
-</div></div></div></div>
-
-<h3 id="MergingWARfiles-Creatingamergedescriptor">Creating a merge descriptor</h3>
-
-<p>The merge descriptor file specifies the content of the resulting uberwar file.</p>
-
-<p>Here is a sample of the minimal merge descriptor:</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-&lt;?xml version=&quot;1.0&quot;?&gt;
+</pre> 
+         </div>
+        </div>
+       </div>
+      </div> <h3 id="MergingWARfiles-Creatingamergedescriptor">Creating a merge descriptor</h3> <p>The merge descriptor file specifies the content of the resulting uberwar file.</p> <p>Here is a sample of the minimal merge descriptor:</p> 
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>
+&lt;?xml version="1.0"?&gt;
 &lt;uberwar&gt;
   &lt;wars&gt;
     &lt;war&gt;com.mycorp:baseWarFile&lt;/war&gt;
     &lt;war&gt;com.mycorp:funkyApp&lt;/war&gt;
   &lt;/wars&gt;
 &lt;/uberwar&gt;
-</pre>
-</div></div>
-
-<h4 id="MergingWARfiles-Mergedescriptorcontent">Merge descriptor content</h4>
-
-<p>The following merge descriptor elements are supported:</p>
-
-<h5 id="MergingWARfiles-&lt;wars&gt;">&lt;wars&gt;</h5>
-
-<p>In order to know which war files to merge, and in which order (this is significant - for example, when you choose overwrite strategy), specify them in the <code>&lt;wars&gt;</code> element. Each <code>&lt;war&gt;</code> sub-element should be of form <code>&lt;groupId&gt;:&lt;artifactId&gt;</code> to be properly resolved.</p>
-
-<h5 id="MergingWARfiles-&lt;merges&gt;">&lt;merges&gt;</h5>
-
-<p>If you have files that need to be merged together by some kind of processor, then specify it here. The classname can be <code>org.codehaus.cargo.module.webapp.DocumentMerger</code>, which is a simple class that will merge by copying all xml nodes from the descriptor files. Alternatively, you can provide any class that is available on the classpath, provided it implements <code>org.codehaus.cargo.module.merge.MergeProcessor</code>. The <code>&lt;merges&gt;</code> element is optional. You can have as many <code>&lt;merge&gt;</code> sub-elements as you need.</p>
-
-<p>For example:</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-&lt;?xml version=&quot;1.0&quot;?&gt;
+</pre> 
+       </div>
+      </div> <h4 id="MergingWARfiles-Mergedescriptorcontent">Merge descriptor content</h4> <p>The following merge descriptor elements are supported:</p> <h5 id="MergingWARfiles-<wars>">&lt;wars&gt;</h5> <p>In order to know which war files to merge, and in which order (this is significant - for example, when you choose overwrite strategy), specify them in the <code>&lt;wars&gt;</code> element. Each <code>&lt;war&gt;</code> sub-element should be of form <code>&lt;groupId&gt;:&lt;artifactId&gt;</code> to be properly resolved.</p> <h5 id="MergingWARfiles-<merges>">&lt;merges&gt;</h5> <p>If you have files that need to be merged together by some kind of processor, then specify it here. The classname can be <code>org.codehaus.cargo.module.webapp.DocumentMerger</code>, which is a simple class that will merge by copying all xml nodes from the descriptor files. Alternatively, you can provide any class that is available on the classpath, provided it implements <code>org.codehaus.cargo.module.merge.MergeProcessor</code>. The <code>&lt;merges&gt;</code> element is optional. You can have as many <code>&lt;merge&gt;</code> sub-elements as you need.</p> <p>For example:</p> 
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>
+&lt;?xml version="1.0"?&gt;
 &lt;uberwar&gt;
   ...
   &lt;merges&gt;
@@ -234,19 +368,19 @@ Example:</p>
     &lt;/merge&gt;
   &lt;/merges&gt;
 &lt;/uberwar&gt;
-</pre>
-</div></div>
-
-<h4 id="MergingWARfiles-Mergingtheweb.xmlfile">Merging the <code>web.xml</code> file</h4>
-
-<div class="confluence-information-macro confluence-information-macro-tip"><span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"></span><div class="confluence-information-macro-body">
-<p>The uberwar plugin will merge your <code>web.xml</code> file using the default merge strategy even if no explicit definition was provided. Keep reading to learn more about merge strategies!</p></div></div>
-
-<p>The ability to merge <code>web.xml</code> is probably the most important piece of uberwar functionality. This is achieved by providing a special <code>&lt;merge&gt;</code> element, as shown in the example below:</p>
-
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-&lt;?xml version=&quot;1.0&quot;?&gt;
+</pre> 
+       </div>
+      </div> <h4 id="MergingWARfiles-Mergingtheweb.xmlfile">Merging the <code>web.xml</code> file</h4> 
+      <div class="confluence-information-macro confluence-information-macro-tip">
+       <span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body"> 
+        <p>The uberwar plugin will merge your <code>web.xml</code> file using the default merge strategy even if no explicit definition was provided. Keep reading to learn more about merge strategies!</p>
+       </div>
+      </div> <p>The ability to merge <code>web.xml</code> is probably the most important piece of uberwar functionality. This is achieved by providing a special <code>&lt;merge&gt;</code> element, as shown in the example below:</p> 
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>
+&lt;?xml version="1.0"?&gt;
 &lt;uberwar&gt;
   ...
   &lt;merges&gt;
@@ -255,24 +389,24 @@ Example:</p>
       &lt;type&gt;web.xml&lt;/type&gt;
       &lt;parameters&gt;
         &lt;default&gt;
-          &lt;tag name=&quot;display-name&quot;&gt;
-            &lt;strategy name=&quot;Overwrite&quot;/&gt;
+          &lt;tag name="display-name"&gt;
+            &lt;strategy name="Overwrite"/&gt;
           &lt;/tag&gt;
-          &lt;tag name=&quot;welcome-file-list&quot;&gt;
-            &lt;strategy name=&quot;NodeMerge&quot;&gt;
+          &lt;tag name="welcome-file-list"&gt;
+            &lt;strategy name="NodeMerge"&gt;
               &lt;welcome-file-list&gt;
                 &lt;welcome-file&gt;$left:welcome-file&lt;/welcome-file&gt;
                 &lt;welcome-file&gt;$right:welcome-file&lt;/welcome-file&gt;
               &lt;/welcome-file-list&gt;
             &lt;/strategy&gt;
           &lt;/tag&gt;
-          &lt;tag name=&quot;context-param&quot;&gt;
-            &lt;strategy name=&quot;ChooseByName&quot;&gt;
+          &lt;tag name="context-param"&gt;
+            &lt;strategy name="ChooseByName"&gt;
               &lt;default&gt;
-                &lt;strategy name=&quot;Preserve&quot;/&gt;
+                &lt;strategy name="Preserve"/&gt;
               &lt;/default&gt;
-              &lt;choice name=&quot;contextConfigLocation&quot;&gt;
-                &lt;strategy name=&quot;NodeMerge&quot;&gt;
+              &lt;choice name="contextConfigLocation"&gt;
+                &lt;strategy name="NodeMerge"&gt;
                   &lt;context-param&gt;
                     &lt;param-name&gt;$left:param-name&lt;/param-name&gt;
                     &lt;param-value&gt;$left:param-value,$right:param-value&lt;/param-value&gt;
@@ -286,64 +420,37 @@ Example:</p>
     &lt;/merge&gt;
   &lt;/merges&gt;
 &lt;/uberwar&gt;
-</pre>
-</div></div>
-
-<div class="confluence-information-macro confluence-information-macro-warning"><span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"></span><div class="confluence-information-macro-body">
-<p>Note the <code>&lt;default&gt;</code> element that contains merge strategies by tag and is the only child of <code>&lt;parameters&gt;</code> element.</p></div></div>
-
-<p>For each tag in the <code>web.xml</code>, the descriptor is defining how you want the merge to happen (the 'strategy'). There are 4 out-of-the-box strategies, and you can provide your own by passing the name of a class that implements <code>org.codehaus.cargo.module.merge.strategy.MergeStrategy</code>. These strategies define what should happen if an entry is just in one file, or what to do if there is a conflict. When merging, each successive file is merged in sequence - so if there are 3 merges to do, the first two files will be merged together, then the result will be merged with the last file. In each merge operation, the first of the two files is the 'left hand side', and the second of the two files is the 'right hand side' (think of source code merge utilities).</p>
-
-<p>The defaults strategies are:</p>
-
-<h5 id="MergingWARfiles-Preserve">Preserve</h5>
-
-<p>Preserve means &quot;if there is a conflict, then preserve the original&quot;.</p>
-
-<h5 id="MergingWARfiles-Overwrite">Overwrite</h5>
-
-<p>Overwrite means &quot;if there is a conflict, then use the values in the right-hand side&quot;. This is the <span style="text-decoration: underline;">default</span> strategy if nothing else is specified.</p>
-
-<h5 id="MergingWARfiles-NodeMerge">NodeMerge</h5>
-
-<p>NodeMerge means &quot;I want to do some merge resolution&quot;. The configuration of this strategy is the XML that the conflicting node will be replaced with. Anything starting with <code>$left:</code> will be translated as an XPath expression, executed against the left-hand descriptor. The effect of <code>$right:</code> is the same for the right-hand side.</p>
-
-<h5 id="MergingWARfiles-ChooseByName">ChooseByName</h5>
-
-<p>ChooseByName means &quot;most of the time, I want to use one strategy, but for a particular named item, I want to do something else&quot;. The configuration of this strategy must contain single <code>&lt;default&gt;</code> sub-element (specifying default merge strategy) and multiple <code>&lt;choice&gt;</code> sub-elements (specifying merge strategy for specific tag instances).</p>
-
-<p>In the example above:</p>
-<ul>
-	<li>the <code>&lt;display-name&gt;</code> element from the last war file being merged will be used</li>
-	<li>the <code>&lt;welcome-file-list&gt;</code> definitions will be merged (assuming that we are merging two war files, each one specifies at most single welcome file)</li>
-	<li>the list of Spring configuration files will be merged, the rest of <code>&lt;context-param&gt;</code> elements will be preserved</li>
-</ul>
-
-
-
-
-<h3 id="MergingWARfiles-KnownProblems">Known Problems</h3>
-
-<ul>
-	<li>If you build as a part of a multiproject build, maven2 may incorrectly store your output war file in the repository with a <code>.uberwar</code> extension. It does not do this if the project is built on its own.</li>
-	<li>If you're experiencing issues with the plugin because Maven is telling you that some Xerces classes cannot be found, please also add <code>xerces:xercesImpl</code> to the plugin's dependencies. That error should not be happening as of Java 6.</li>
-</ul>
-      </td>
+</pre> 
+       </div>
+      </div> 
+      <div class="confluence-information-macro confluence-information-macro-warning">
+       <span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body"> 
+        <p>Note the <code>&lt;default&gt;</code> element that contains merge strategies by tag and is the only child of <code>&lt;parameters&gt;</code> element.</p>
+       </div>
+      </div> <p>For each tag in the <code>web.xml</code>, the descriptor is defining how you want the merge to happen (the 'strategy'). There are 4 out-of-the-box strategies, and you can provide your own by passing the name of a class that implements <code>org.codehaus.cargo.module.merge.strategy.MergeStrategy</code>. These strategies define what should happen if an entry is just in one file, or what to do if there is a conflict. When merging, each successive file is merged in sequence - so if there are 3 merges to do, the first two files will be merged together, then the result will be merged with the last file. In each merge operation, the first of the two files is the 'left hand side', and the second of the two files is the 'right hand side' (think of source code merge utilities).</p> <p>The defaults strategies are:</p> <h5 id="MergingWARfiles-Preserve">Preserve</h5> <p>Preserve means "if there is a conflict, then preserve the original".</p> <h5 id="MergingWARfiles-Overwrite">Overwrite</h5> <p>Overwrite means "if there is a conflict, then use the values in the right-hand side". This is the <span style="text-decoration: underline;">default</span> strategy if nothing else is specified.</p> <h5 id="MergingWARfiles-NodeMerge">NodeMerge</h5> <p>NodeMerge means "I want to do some merge resolution". The configuration of this strategy is the XML that the conflicting node will be replaced with. Anything starting with <code>$left:</code> will be translated as an XPath expression, executed against the left-hand descriptor. The effect of <code>$right:</code> is the same for the right-hand side.</p> <h5 id="MergingWARfiles-ChooseByName">ChooseByName</h5> <p>ChooseByName means "most of the time, I want to use one strategy, but for a particular named item, I want to do something else". The configuration of this strategy must contain single <code>&lt;default&gt;</code> sub-element (specifying default merge strategy) and multiple <code>&lt;choice&gt;</code> sub-elements (specifying merge strategy for specific tag instances).</p> <p>In the example above:</p> 
+      <ul> 
+       <li>the <code>&lt;display-name&gt;</code> element from the last war file being merged will be used</li> 
+       <li>the <code>&lt;welcome-file-list&gt;</code> definitions will be merged (assuming that we are merging two war files, each one specifies at most single welcome file)</li> 
+       <li>the list of Spring configuration files will be merged, the rest of <code>&lt;context-param&gt;</code> elements will be preserved</li> 
+      </ul> <h3 id="MergingWARfiles-KnownProblems">Known Problems</h3> 
+      <ul> 
+       <li>If you build as a part of a multiproject build, maven2 may incorrectly store your output war file in the repository with a <code>.uberwar</code> extension. It does not do this if the project is built on its own.</li> 
+       <li>If you're experiencing issues with the plugin because Maven is telling you that some Xerces classes cannot be found, please also add <code>xerces:xercesImpl</code> to the plugin's dependencies. That error should not be happening as of Java 6.</li> 
+      </ul> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="footer"> 
+      <table width="100%"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="top"> Copyright 2004-2015. All rights reserved unless otherwise noted.<br> </td> 
+         <td align="right" valign="top"> Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Merging+WAR+files">Atlassian Confluence</a>. </td> 
+        </tr> 
+       </tbody>   
+      </table>   </td>
     </tr>
-    <tr>
-      <td colspan="2" id="footer">
-        <table width="100%"> 
-          <tr>
-            <td align="left" valign="top">
-              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
-            </td>
-            <td align="right" valign="top">
-              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Merging+WAR+files">Atlassian Confluence</a>.
-            </td>
-          </tr>
-        <table>
-      </td>
-    </tr>
+   </tbody>
   </table>
-</body>
+ </body>
 </html>

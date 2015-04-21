@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head profile="http://www.w3.org/2000/08/w3c-synd/#">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
-  <link rel="shortcut icon" href="attachments/favicon.ico"/>
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
-
-  <title>Codehaus Cargo - Release notes for Cargo 0.7</title>
-
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - Release notes for Cargo 0.7</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -22,34 +18,30 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-
+  </script> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script>
-</head>
-
-<body>
-  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
-    <tr>
-      <td colspan="2" style="padding:8px;">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr background="attachments/cargo-banner-center.png">
-            <td align="left" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-left.png"/>
-            </td>
-            <td align="right" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-right.png"/>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <!--
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" id="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr> 
+     <td colspan="2" style="padding:8px"> 
+      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="breadcrumbs"> 
+      <!--
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr>
             <td align="left">
@@ -74,132 +66,278 @@
             </td>
           </tr>
         </table>
-         -->
-      </td>
-    </tr>
-    <tr>
-      <td id="leftColumn" valign="top" style="padding-top: 0px;">
-          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
-
-          <h3 class="heading3">Feeds</h3>
-          <table border="0" cellspacing="4px">
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td id="rightColumn" valign="top">
-        <script type="text/javascript">
+         --> </td> 
+    </tr> 
+    <tr> 
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
+         <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="SVN.html">SVN</a></li>
+       <li><a href="Mailing+Lists.html">Mailing Lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
+      <ul class="alternate">
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Discussions.html">Discussions</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
+       <li><a href="Project+Structure.html">Project Structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td id="rightColumn" valign="top"> <script type="text/javascript">
           // Google Ads code
           google_ad_client = "ca-pub-7996505557003356";
           google_ad_slot = "5363897989";
           google_ad_width = 728;
           google_ad_height = 90;
-        </script>
-        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
-          <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script>
-        </center>
-
-        <h3 id="ReleasenotesforCargo0.7-Mainchanges">Main changes</h3>
-
-<p>Here are the highlights of Cargo 0.7:</p>
-<ul>
-	<li>Major refactoring to support Remote containers (i.e. containers that are started somewhere and with which we don't interact through the file system).</li>
-	<li>Added JBoss 3.x and 4.x support.</li>
-	<li>Added new Deployable type: EJB. Note that this new deployable is supported only by the JBoss container.</li>
-	<li>Added a Tomcat Existing Configuration implementation.</li>
-	<li>Added a Tomcat Local Deployer and a Tomcat Remote Deployer which uses the Tomcat Manager app for deployment.</li>
-	<li>Added a WebLogic Existing Configuration implementation.</li>
-</ul>
-
-
-<p>The list of all issues fixed and features implemented is available below.</p>
-
-<p>Please note that version 0.7 has broken almost all APIs. This was majoritarly due to the Remote container support refactoring. This is one of the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this. This is probably the last time such a major change happens before the 1.0 release.</p>
-
-<h3 id="ReleasenotesforCargo0.7-Implementedissues">Implemented issues</h3>
-
-<div class="aui-message warning jim-inline-block">
-    <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration.
-</div>
- 
-
-<h3 id="ReleasenotesforCargo0.7-Sourcecodechanges">Source code changes</h3>
-
-<p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.7-clirr"></span><br />
-Changes detected by <a href="http://clirr.sourceforge.net" class="external-link" rel="nofollow">Clirr</a> between <code>cargo-0.6.jar</code> and <code>cargo-0.7.jar</code>.</p>
-
-<p>Changes to the core:</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public org.codehaus.cargo.container.configuration.Configuration getConfiguration()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public java.lang.String[] getExtraClasspath()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public java.io.File getHomeDir()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public java.io.File getOutput()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public java.util.Map getSystemProperties()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public long getTimeout()&#39; has been removed
-ERROR: 7012: org.codehaus.cargo.container.Container: Method &#39;public org.codehaus.cargo.container.ContainerType getType()&#39; has been added to an interface
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public boolean isAppend()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void setAppend(boolean)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void setConfiguration(org.codehaus.cargo.container.configuration.Configuration)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void setExtraClasspath(java.lang.String[])&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void setHomeDir(java.io.File)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void setHomeDir(java.lang.String)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void setOutput(java.io.File)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void setSystemProperties(java.util.Map)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void setTimeout(long)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void start()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.Container: Method &#39;public void stop()&#39; has been removed
-ERROR: 7012: org.codehaus.cargo.container.ContainerCapability: Method &#39;public boolean supportsDeployableType(org.codehaus.cargo.container.deployable.DeployableType)&#39; has been added to an interface
-ERROR: 7002: org.codehaus.cargo.container.ContainerCapability: Method &#39;public boolean supportsEar()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.ContainerCapability: Method &#39;public boolean supportsWar()&#39; has been removed
+        </script> 
+      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script> 
+      </center> <h3 id="ReleasenotesforCargo0.7-Mainchanges">Main changes</h3> <p>Here are the highlights of Cargo 0.7:</p> 
+      <ul> 
+       <li>Major refactoring to support Remote containers (i.e. containers that are started somewhere and with which we don't interact through the file system).</li> 
+       <li>Added JBoss 3.x and 4.x support.</li> 
+       <li>Added new Deployable type: EJB. Note that this new deployable is supported only by the JBoss container.</li> 
+       <li>Added a Tomcat Existing Configuration implementation.</li> 
+       <li>Added a Tomcat Local Deployer and a Tomcat Remote Deployer which uses the Tomcat Manager app for deployment.</li> 
+       <li>Added a WebLogic Existing Configuration implementation.</li> 
+      </ul> <p>The list of all issues fixed and features implemented is available below.</p> <p>Please note that version 0.7 has broken almost all APIs. This was majoritarly due to the Remote container support refactoring. This is one of the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this. This is probably the last time such a major change happens before the 1.0 release.</p> <h3 id="ReleasenotesforCargo0.7-Implementedissues">Implemented issues</h3> 
+      <div class="aui-message warning jim-inline-block"> 
+       <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration. 
+      </div> <h3 id="ReleasenotesforCargo0.7-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.7-clirr"></span><br> Changes detected by <a href="http://clirr.sourceforge.net" class="external-link" rel="nofollow">Clirr</a> between <code>cargo-0.6.jar</code> and <code>cargo-0.7.jar</code>.</p> <p>Changes to the core:</p> 
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public org.codehaus.cargo.container.configuration.Configuration getConfiguration()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public java.lang.String[] getExtraClasspath()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public java.io.File getHomeDir()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public java.io.File getOutput()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public java.util.Map getSystemProperties()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public long getTimeout()' has been removed
+ERROR: 7012: org.codehaus.cargo.container.Container: Method 'public org.codehaus.cargo.container.ContainerType getType()' has been added to an interface
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public boolean isAppend()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void setAppend(boolean)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void setConfiguration(org.codehaus.cargo.container.configuration.Configuration)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void setExtraClasspath(java.lang.String[])' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void setHomeDir(java.io.File)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void setHomeDir(java.lang.String)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void setOutput(java.io.File)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void setSystemProperties(java.util.Map)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void setTimeout(long)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void start()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void stop()' has been removed
+ERROR: 7012: org.codehaus.cargo.container.ContainerCapability: Method 'public boolean supportsDeployableType(org.codehaus.cargo.container.deployable.DeployableType)' has been added to an interface
+ERROR: 7002: org.codehaus.cargo.container.ContainerCapability: Method 'public boolean supportsEar()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.ContainerCapability: Method 'public boolean supportsWar()' has been removed
 INFO: 8000: org.codehaus.cargo.container.ContainerType: Class org.codehaus.cargo.container.ContainerType added
 INFO: 8000: org.codehaus.cargo.container.LocalContainer: Class org.codehaus.cargo.container.LocalContainer added
 INFO: 8000: org.codehaus.cargo.container.RemoteContainer: Class org.codehaus.cargo.container.RemoteContainer added
-ERROR: 7002: org.codehaus.cargo.container.configuration.Configuration: Method &#39;public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.configuration.Configuration: Method &#39;public java.util.List getDeployables()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.configuration.Configuration: Method &#39;public java.io.File getDir()&#39; has been removed
-ERROR: 7012: org.codehaus.cargo.container.configuration.Configuration: Method &#39;public org.codehaus.cargo.container.configuration.ConfigurationType getType()&#39; has been added to an interface
+ERROR: 7002: org.codehaus.cargo.container.configuration.Configuration: Method 'public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.configuration.Configuration: Method 'public java.util.List getDeployables()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.configuration.Configuration: Method 'public java.io.File getDir()' has been removed
+ERROR: 7012: org.codehaus.cargo.container.configuration.Configuration: Method 'public org.codehaus.cargo.container.configuration.ConfigurationType getType()' has been added to an interface
 INFO: 8000: org.codehaus.cargo.container.configuration.ConfigurationType: Class org.codehaus.cargo.container.configuration.ConfigurationType added
 INFO: 8000: org.codehaus.cargo.container.configuration.ExistingLocalConfiguration: Class org.codehaus.cargo.container.configuration.ExistingLocalConfiguration added
 INFO: 8000: org.codehaus.cargo.container.configuration.LocalConfiguration: Class org.codehaus.cargo.container.configuration.LocalConfiguration added
 INFO: 8000: org.codehaus.cargo.container.configuration.RuntimeConfiguration: Class org.codehaus.cargo.container.configuration.RuntimeConfiguration added
 INFO: 8000: org.codehaus.cargo.container.configuration.StandaloneLocalConfiguration: Class org.codehaus.cargo.container.configuration.StandaloneLocalConfiguration added
-ERROR: 7012: org.codehaus.cargo.container.deployable.Deployable: Method &#39;public org.codehaus.cargo.container.deployable.DeployableType getType()&#39; has been added to an interface
+ERROR: 7012: org.codehaus.cargo.container.deployable.Deployable: Method 'public org.codehaus.cargo.container.deployable.DeployableType getType()' has been added to an interface
 INFO: 8000: org.codehaus.cargo.container.deployable.DeployableType: Class org.codehaus.cargo.container.deployable.DeployableType added
-INFO: 7011: org.codehaus.cargo.container.deployable.EAR: Method &#39;public org.codehaus.cargo.container.deployable.DeployableType getType()&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.deployable.EAR: Method 'public org.codehaus.cargo.container.deployable.DeployableType getType()' has been added
 INFO: 8000: org.codehaus.cargo.container.deployable.EJB: Class org.codehaus.cargo.container.deployable.EJB added
-INFO: 7011: org.codehaus.cargo.container.deployable.WAR: Method &#39;public org.codehaus.cargo.container.deployable.DeployableType getType()&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.deployable.WAR: Method 'public org.codehaus.cargo.container.deployable.DeployableType getType()' has been added
 ERROR: 8001: org.codehaus.cargo.container.deployable.jboss.JBossWAR: Class org.codehaus.cargo.container.deployable.jboss.JBossWAR removed
 ERROR: 8001: org.codehaus.cargo.container.deployable.tomcat.TomcatWAR: Class org.codehaus.cargo.container.deployable.tomcat.TomcatWAR removed
-ERROR: 7012: org.codehaus.cargo.container.deployer.Deployer: Method &#39;public org.codehaus.cargo.container.deployer.DeployerType getType()&#39; has been added to an interface
-ERROR: 7012: org.codehaus.cargo.container.deployer.Deployer: Method &#39;public void redeploy(org.codehaus.cargo.container.deployable.Deployable)&#39; has been added to an interface
+ERROR: 7012: org.codehaus.cargo.container.deployer.Deployer: Method 'public org.codehaus.cargo.container.deployer.DeployerType getType()' has been added to an interface
+ERROR: 7012: org.codehaus.cargo.container.deployer.Deployer: Method 'public void redeploy(org.codehaus.cargo.container.deployable.Deployable)' has been added to an interface
 INFO: 8000: org.codehaus.cargo.container.deployer.DeployerType: Class org.codehaus.cargo.container.deployer.DeployerType added
-ERROR: 7012: org.codehaus.cargo.container.installer.Installer: Method &#39;public java.io.File getHome()&#39; has been added to an interface
-ERROR: 7002: org.codehaus.cargo.container.installer.Installer: Method &#39;public java.io.File getHomeDir()&#39; has been removed
-INFO: 7011: org.codehaus.cargo.container.installer.ZipURLInstaller: Method &#39;public java.io.File getHome()&#39; has been added
-ERROR: 7002: org.codehaus.cargo.container.installer.ZipURLInstaller: Method &#39;public java.io.File getHomeDir()&#39; has been removed
-INFO: 7011: org.codehaus.cargo.container.internal.J2EEContainerCapability: Method &#39;public boolean supportsDeployableType(org.codehaus.cargo.container.deployable.DeployableType)&#39; has been added
-ERROR: 7002: org.codehaus.cargo.container.internal.J2EEContainerCapability: Method &#39;public boolean supportsEar()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.internal.J2EEContainerCapability: Method &#39;public boolean supportsWar()&#39; has been removed
+ERROR: 7012: org.codehaus.cargo.container.installer.Installer: Method 'public java.io.File getHome()' has been added to an interface
+ERROR: 7002: org.codehaus.cargo.container.installer.Installer: Method 'public java.io.File getHomeDir()' has been removed
+INFO: 7011: org.codehaus.cargo.container.installer.ZipURLInstaller: Method 'public java.io.File getHome()' has been added
+ERROR: 7002: org.codehaus.cargo.container.installer.ZipURLInstaller: Method 'public java.io.File getHomeDir()' has been removed
+INFO: 7011: org.codehaus.cargo.container.internal.J2EEContainerCapability: Method 'public boolean supportsDeployableType(org.codehaus.cargo.container.deployable.DeployableType)' has been added
+ERROR: 7002: org.codehaus.cargo.container.internal.J2EEContainerCapability: Method 'public boolean supportsEar()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.internal.J2EEContainerCapability: Method 'public boolean supportsWar()' has been removed
 INFO: 8000: org.codehaus.cargo.container.internal.RunnableContainer: Class org.codehaus.cargo.container.internal.RunnableContainer added
-INFO: 7011: org.codehaus.cargo.container.internal.ServletContainerCapability: Method &#39;public boolean supportsDeployableType(org.codehaus.cargo.container.deployable.DeployableType)&#39; has been added
-ERROR: 7002: org.codehaus.cargo.container.internal.ServletContainerCapability: Method &#39;public boolean supportsEar()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.internal.ServletContainerCapability: Method &#39;public boolean supportsWar()&#39; has been removed
+INFO: 7011: org.codehaus.cargo.container.internal.ServletContainerCapability: Method 'public boolean supportsDeployableType(org.codehaus.cargo.container.deployable.DeployableType)' has been added
+ERROR: 7002: org.codehaus.cargo.container.internal.ServletContainerCapability: Method 'public boolean supportsEar()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.internal.ServletContainerCapability: Method 'public boolean supportsWar()' has been removed
 ERROR: 8001: org.codehaus.cargo.container.internal.jetty.JettyExecutorThread: Class org.codehaus.cargo.container.internal.jetty.JettyExecutorThread removed
 ERROR: 8001: org.codehaus.cargo.container.internal.jetty.JettyStandaloneConfigurationCapability: Class org.codehaus.cargo.container.internal.jetty.JettyStandaloneConfigurationCapability removed
 ERROR: 8001: org.codehaus.cargo.container.internal.jo.Jo1xStandaloneConfigurationCapability: Class org.codehaus.cargo.container.internal.jo.Jo1xStandaloneConfigurationCapability removed
@@ -208,7 +346,7 @@ ERROR: 8001: org.codehaus.cargo.container.internal.resin.ResinRun: Class org.cod
 ERROR: 8001: org.codehaus.cargo.container.internal.resin.ResinStandaloneConfigurationCapability: Class org.codehaus.cargo.container.internal.resin.ResinStandaloneConfigurationCapability removed
 ERROR: 8001: org.codehaus.cargo.container.internal.resin.ResinUtil: Class org.codehaus.cargo.container.internal.resin.ResinUtil removed
 ERROR: 8001: org.codehaus.cargo.container.internal.tomcat.TomcatStandaloneConfigurationCapability: Class org.codehaus.cargo.container.internal.tomcat.TomcatStandaloneConfigurationCapability removed
-INFO: 7011: org.codehaus.cargo.container.internal.util.AntUtils: Method &#39;public org.apache.tools.ant.types.Environment$Variable createSysProperty(java.lang.String, java.net.URI)&#39; has been added
+INFO: 7011: org.codehaus.cargo.container.internal.util.AntUtils: Method 'public org.apache.tools.ant.types.Environment$Variable createSysProperty(java.lang.String, java.net.URI)' has been added
 ERROR: 8001: org.codehaus.cargo.container.internal.weblogic.WebLogicStandaloneConfigurationCapability: Class org.codehaus.cargo.container.internal.weblogic.WebLogicStandaloneConfigurationCapability removed
 INFO: 8000: org.codehaus.cargo.container.jboss.JBoss3xLocalContainer: Class org.codehaus.cargo.container.jboss.JBoss3xLocalContainer added
 INFO: 8000: org.codehaus.cargo.container.jboss.JBoss4xLocalContainer: Class org.codehaus.cargo.container.jboss.JBoss4xLocalContainer added
@@ -222,9 +360,9 @@ INFO: 8000: org.codehaus.cargo.container.jboss.internal.JBossContainerCapability
 INFO: 8000: org.codehaus.cargo.container.jboss.internal.JBossStandaloneLocalConfigurationCapability: Class org.codehaus.cargo.container.jboss.internal.JBossStandaloneLocalConfigurationCapability added
 ERROR: 8001: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Class org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer removed
 INFO: 8000: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedLocalContainer: Class org.codehaus.cargo.container.jetty.Jetty4xEmbeddedLocalContainer added
-ERROR: 7005: org.codehaus.cargo.container.jetty.JettyDeployer: Parameter 1 of &#39;public JettyDeployer(org.codehaus.cargo.container.Container)&#39; has changed its type to org.codehaus.cargo.container.LocalContainer
-INFO: 7011: org.codehaus.cargo.container.jetty.JettyDeployer: Method &#39;public org.codehaus.cargo.container.deployer.DeployerType getType()&#39; has been added
-INFO: 7011: org.codehaus.cargo.container.jetty.JettyDeployer: Method &#39;public void redeploy(org.codehaus.cargo.container.deployable.Deployable)&#39; has been added
+ERROR: 7005: org.codehaus.cargo.container.jetty.JettyDeployer: Parameter 1 of 'public JettyDeployer(org.codehaus.cargo.container.Container)' has changed its type to org.codehaus.cargo.container.LocalContainer
+INFO: 7011: org.codehaus.cargo.container.jetty.JettyDeployer: Method 'public org.codehaus.cargo.container.deployer.DeployerType getType()' has been added
+INFO: 7011: org.codehaus.cargo.container.jetty.JettyDeployer: Method 'public void redeploy(org.codehaus.cargo.container.deployable.Deployable)' has been added
 ERROR: 8001: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Class org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration removed
 INFO: 8000: org.codehaus.cargo.container.jetty.JettyStandaloneLocalConfiguration: Class org.codehaus.cargo.container.jetty.JettyStandaloneLocalConfiguration added
 INFO: 8000: org.codehaus.cargo.container.jetty.internal.JettyExecutorThread: Class org.codehaus.cargo.container.jetty.internal.JettyExecutorThread added
@@ -234,7 +372,7 @@ ERROR: 5001: org.codehaus.cargo.container.jo.Jo1xDeployer: Removed org.codehaus.
 INFO: 5000: org.codehaus.cargo.container.jo.Jo1xDeployer: Added org.codehaus.cargo.container.spi.deployer.AbstractCopyingDeployer to the list of superclasses
 INFO: 5000: org.codehaus.cargo.container.jo.Jo1xDeployer: Added org.codehaus.cargo.container.spi.deployer.AbstractDeployer to the list of superclasses
 INFO: 5000: org.codehaus.cargo.container.jo.Jo1xDeployer: Added org.codehaus.cargo.container.spi.deployer.AbstractLocalDeployer to the list of superclasses
-ERROR: 7005: org.codehaus.cargo.container.jo.Jo1xDeployer: Parameter 1 of &#39;public Jo1xDeployer(org.codehaus.cargo.container.Container)&#39; has changed its type to org.codehaus.cargo.container.LocalContainer
+ERROR: 7005: org.codehaus.cargo.container.jo.Jo1xDeployer: Parameter 1 of 'public Jo1xDeployer(org.codehaus.cargo.container.Container)' has changed its type to org.codehaus.cargo.container.LocalContainer
 INFO: 8000: org.codehaus.cargo.container.jo.Jo1xLocalContainer: Class org.codehaus.cargo.container.jo.Jo1xLocalContainer added
 ERROR: 8001: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Class org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration removed
 INFO: 8000: org.codehaus.cargo.container.jo.Jo1xStandaloneLocalConfiguration: Class org.codehaus.cargo.container.jo.Jo1xStandaloneLocalConfiguration added
@@ -270,7 +408,7 @@ ERROR: 5001: org.codehaus.cargo.container.resin.ResinDeployer: Removed org.codeh
 INFO: 5000: org.codehaus.cargo.container.resin.ResinDeployer: Added org.codehaus.cargo.container.spi.deployer.AbstractCopyingDeployer to the list of superclasses
 INFO: 5000: org.codehaus.cargo.container.resin.ResinDeployer: Added org.codehaus.cargo.container.spi.deployer.AbstractDeployer to the list of superclasses
 INFO: 5000: org.codehaus.cargo.container.resin.ResinDeployer: Added org.codehaus.cargo.container.spi.deployer.AbstractLocalDeployer to the list of superclasses
-ERROR: 7005: org.codehaus.cargo.container.resin.ResinDeployer: Parameter 1 of &#39;public ResinDeployer(org.codehaus.cargo.container.Container)&#39; has changed its type to org.codehaus.cargo.container.LocalContainer
+ERROR: 7005: org.codehaus.cargo.container.resin.ResinDeployer: Parameter 1 of 'public ResinDeployer(org.codehaus.cargo.container.Container)' has changed its type to org.codehaus.cargo.container.LocalContainer
 ERROR: 8001: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Class org.codehaus.cargo.container.resin.ResinExistingConfiguration removed
 INFO: 8000: org.codehaus.cargo.container.resin.ResinExistingLocalConfiguration: Class org.codehaus.cargo.container.resin.ResinExistingLocalConfiguration added
 INFO: 8000: org.codehaus.cargo.container.resin.internal.AbstractResinLocalContainer: Class org.codehaus.cargo.container.resin.internal.AbstractResinLocalContainer added
@@ -279,38 +417,38 @@ INFO: 8000: org.codehaus.cargo.container.resin.internal.ResinRun: Class org.code
 INFO: 8000: org.codehaus.cargo.container.resin.internal.ResinStandaloneLocalConfigurationCapability: Class org.codehaus.cargo.container.resin.internal.ResinStandaloneLocalConfigurationCapability added
 INFO: 8000: org.codehaus.cargo.container.resin.internal.ResinUtil: Class org.codehaus.cargo.container.resin.internal.ResinUtil added
 ERROR: 8001: org.codehaus.cargo.container.spi.AbstractConfiguration: Class org.codehaus.cargo.container.spi.AbstractConfiguration removed
-ERROR: 7004: org.codehaus.cargo.container.spi.AbstractContainer: In method &#39;public AbstractContainer(org.codehaus.cargo.container.configuration.Configuration)&#39; the number of arguments has changed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected void addToolsJarToClasspath(org.apache.tools.ant.types.Path)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected void doStart(org.apache.tools.ant.taskdefs.Java)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected void doStop(org.apache.tools.ant.taskdefs.Java)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected org.codehaus.cargo.container.internal.util.AntUtils getAntUtils()&#39; has been removed
-ERROR: 7013: org.codehaus.cargo.container.spi.AbstractContainer: Abstract method &#39;public org.codehaus.cargo.container.ContainerCapability getCapability()&#39; has been added
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public org.codehaus.cargo.container.configuration.Configuration getConfiguration()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public java.lang.String[] getExtraClasspath()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected org.codehaus.cargo.util.FileUtils getFileUtils()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public java.io.File getHomeDir()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected org.codehaus.cargo.container.internal.util.HttpUtils getHttpUtils()&#39; has been removed
-ERROR: 7013: org.codehaus.cargo.container.spi.AbstractContainer: Abstract method &#39;public java.lang.String getId()&#39; has been added
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected org.codehaus.cargo.container.internal.util.JdkUtils getJdkUtils()&#39; has been removed
-ERROR: 7013: org.codehaus.cargo.container.spi.AbstractContainer: Abstract method &#39;public java.lang.String getName()&#39; has been added
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public java.io.File getOutput()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected org.codehaus.cargo.container.internal.util.ResourceUtils getResourceUtils()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public java.util.Map getSystemProperties()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public long getTimeout()&#39; has been removed
-ERROR: 7013: org.codehaus.cargo.container.spi.AbstractContainer: Abstract method &#39;public org.codehaus.cargo.container.ContainerType getType()&#39; has been added
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public boolean isAppend()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void setAppend(boolean)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void setConfiguration(org.codehaus.cargo.container.configuration.Configuration)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void setExtraClasspath(java.lang.String[])&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void setHomeDir(java.io.File)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void setHomeDir(java.lang.String)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void setOutput(java.io.File)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected void setState(org.codehaus.cargo.container.State)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void setSystemProperties(java.util.Map)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void setTimeout(long)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void start()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public void stop()&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected void verifyHomeDir()&#39; has been removed
+ERROR: 7004: org.codehaus.cargo.container.spi.AbstractContainer: In method 'public AbstractContainer(org.codehaus.cargo.container.configuration.Configuration)' the number of arguments has changed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected void addToolsJarToClasspath(org.apache.tools.ant.types.Path)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected void doStart(org.apache.tools.ant.taskdefs.Java)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected void doStop(org.apache.tools.ant.taskdefs.Java)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected org.codehaus.cargo.container.internal.util.AntUtils getAntUtils()' has been removed
+ERROR: 7013: org.codehaus.cargo.container.spi.AbstractContainer: Abstract method 'public org.codehaus.cargo.container.ContainerCapability getCapability()' has been added
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public org.codehaus.cargo.container.configuration.Configuration getConfiguration()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public java.lang.String[] getExtraClasspath()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected org.codehaus.cargo.util.FileUtils getFileUtils()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public java.io.File getHomeDir()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected org.codehaus.cargo.container.internal.util.HttpUtils getHttpUtils()' has been removed
+ERROR: 7013: org.codehaus.cargo.container.spi.AbstractContainer: Abstract method 'public java.lang.String getId()' has been added
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected org.codehaus.cargo.container.internal.util.JdkUtils getJdkUtils()' has been removed
+ERROR: 7013: org.codehaus.cargo.container.spi.AbstractContainer: Abstract method 'public java.lang.String getName()' has been added
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public java.io.File getOutput()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected org.codehaus.cargo.container.internal.util.ResourceUtils getResourceUtils()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public java.util.Map getSystemProperties()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public long getTimeout()' has been removed
+ERROR: 7013: org.codehaus.cargo.container.spi.AbstractContainer: Abstract method 'public org.codehaus.cargo.container.ContainerType getType()' has been added
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public boolean isAppend()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void setAppend(boolean)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void setConfiguration(org.codehaus.cargo.container.configuration.Configuration)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void setExtraClasspath(java.lang.String[])' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void setHomeDir(java.io.File)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void setHomeDir(java.lang.String)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void setOutput(java.io.File)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected void setState(org.codehaus.cargo.container.State)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void setSystemProperties(java.util.Map)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void setTimeout(long)' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void start()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public void stop()' has been removed
+ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected void verifyHomeDir()' has been removed
 ERROR: 8001: org.codehaus.cargo.container.spi.AbstractCopyingDeployer: Class org.codehaus.cargo.container.spi.AbstractCopyingDeployer removed
 INFO: 8000: org.codehaus.cargo.container.spi.AbstractLocalContainer: Class org.codehaus.cargo.container.spi.AbstractLocalContainer added
 INFO: 8000: org.codehaus.cargo.container.spi.AbstractRemoteContainer: Class org.codehaus.cargo.container.spi.AbstractRemoteContainer added
@@ -379,90 +517,90 @@ INFO: 8000: org.codehaus.cargo.container.weblogic.WebLogicStandaloneLocalConfigu
 INFO: 8000: org.codehaus.cargo.container.weblogic.internal.AbstractWebLogicLocalContainer: Class org.codehaus.cargo.container.weblogic.internal.AbstractWebLogicLocalContainer added
 INFO: 8000: org.codehaus.cargo.container.weblogic.internal.WebLogicExistingLocalConfigurationCapability: Class org.codehaus.cargo.container.weblogic.internal.WebLogicExistingLocalConfigurationCapability added
 INFO: 8000: org.codehaus.cargo.container.weblogic.internal.WebLogicStandaloneLocalConfigurationCapability: Class org.codehaus.cargo.container.weblogic.internal.WebLogicStandaloneLocalConfigurationCapability added
-ERROR: 7005: org.codehaus.cargo.generic.ContainerFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.ContainerType
-ERROR: 7005: org.codehaus.cargo.generic.ContainerFactory: Parameter 3 of &#39;public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.configuration.Configuration
-ERROR: 7002: org.codehaus.cargo.generic.ContainerFactory: Method &#39;public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.generic.ContainerFactory: Method &#39;public org.codehaus.cargo.container.Container createContainer(java.lang.String)&#39; has been removed
-ERROR: 7012: org.codehaus.cargo.generic.ContainerFactory: Method &#39;public boolean isContainerRegistered(java.lang.String, org.codehaus.cargo.container.ContainerType)&#39; has been added to an interface
-ERROR: 7004: org.codehaus.cargo.generic.ContainerFactory: In method &#39;public void registerContainer(java.lang.String, java.lang.Class)&#39; the number of arguments has changed
+ERROR: 7005: org.codehaus.cargo.generic.ContainerFactory: Parameter 2 of 'public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)' has changed its type to org.codehaus.cargo.container.ContainerType
+ERROR: 7005: org.codehaus.cargo.generic.ContainerFactory: Parameter 3 of 'public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)' has changed its type to org.codehaus.cargo.container.configuration.Configuration
+ERROR: 7002: org.codehaus.cargo.generic.ContainerFactory: Method 'public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)' has been removed
+ERROR: 7002: org.codehaus.cargo.generic.ContainerFactory: Method 'public org.codehaus.cargo.container.Container createContainer(java.lang.String)' has been removed
+ERROR: 7012: org.codehaus.cargo.generic.ContainerFactory: Method 'public boolean isContainerRegistered(java.lang.String, org.codehaus.cargo.container.ContainerType)' has been added to an interface
+ERROR: 7004: org.codehaus.cargo.generic.ContainerFactory: In method 'public void registerContainer(java.lang.String, java.lang.Class)' the number of arguments has changed
 INFO: 4000: org.codehaus.cargo.generic.DefaultContainerFactory: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.generic.DefaultContainerFactory: Added org.codehaus.cargo.generic.spi.AbstractGenericHintFactory to the list of superclasses
 INFO: 5000: org.codehaus.cargo.generic.DefaultContainerFactory: Added org.codehaus.cargo.generic.spi.AbstractIntrospectionGenericHintFactory to the list of superclasses
 INFO: 5000: org.codehaus.cargo.generic.DefaultContainerFactory: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
-ERROR: 7005: org.codehaus.cargo.generic.DefaultContainerFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.ContainerType
-ERROR: 7005: org.codehaus.cargo.generic.DefaultContainerFactory: Parameter 3 of &#39;public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.configuration.Configuration
-ERROR: 7002: org.codehaus.cargo.generic.DefaultContainerFactory: Method &#39;public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.generic.DefaultContainerFactory: Method &#39;public org.codehaus.cargo.container.Container createContainer(java.lang.String)&#39; has been removed
-INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method &#39;protected java.lang.Object createInstance(java.lang.reflect.Constructor, java.lang.String, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; has been added
-INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method &#39;protected java.lang.reflect.Constructor getConstructor(java.lang.Class, java.lang.String, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; has been added
-INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method &#39;public boolean isContainerRegistered(java.lang.String, org.codehaus.cargo.container.ContainerType)&#39; has been added
-ERROR: 7004: org.codehaus.cargo.generic.DefaultContainerFactory: In method &#39;public void registerContainer(java.lang.String, java.lang.Class)&#39; the number of arguments has changed
-INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method &#39;public void registerContainer(java.lang.String, java.lang.String, org.codehaus.cargo.container.ContainerType)&#39; has been added
-ERROR: 7002: org.codehaus.cargo.generic.DefaultContainerFactory: Method &#39;public void setConfigurationFactory(org.codehaus.cargo.generic.configuration.ConfigurationFactory)&#39; has been removed
-ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
-ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
-ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 2 of &#39;public boolean isConfigurationRegistered(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
-ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 2 of &#39;public void registerConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.lang.Class)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7005: org.codehaus.cargo.generic.DefaultContainerFactory: Parameter 2 of 'public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)' has changed its type to org.codehaus.cargo.container.ContainerType
+ERROR: 7005: org.codehaus.cargo.generic.DefaultContainerFactory: Parameter 3 of 'public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)' has changed its type to org.codehaus.cargo.container.configuration.Configuration
+ERROR: 7002: org.codehaus.cargo.generic.DefaultContainerFactory: Method 'public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)' has been removed
+ERROR: 7002: org.codehaus.cargo.generic.DefaultContainerFactory: Method 'public org.codehaus.cargo.container.Container createContainer(java.lang.String)' has been removed
+INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method 'protected java.lang.Object createInstance(java.lang.reflect.Constructor, java.lang.String, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' has been added
+INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method 'protected java.lang.reflect.Constructor getConstructor(java.lang.Class, java.lang.String, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' has been added
+INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method 'public boolean isContainerRegistered(java.lang.String, org.codehaus.cargo.container.ContainerType)' has been added
+ERROR: 7004: org.codehaus.cargo.generic.DefaultContainerFactory: In method 'public void registerContainer(java.lang.String, java.lang.Class)' the number of arguments has changed
+INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method 'public void registerContainer(java.lang.String, java.lang.String, org.codehaus.cargo.container.ContainerType)' has been added
+ERROR: 7002: org.codehaus.cargo.generic.DefaultContainerFactory: Method 'public void setConfigurationFactory(org.codehaus.cargo.generic.configuration.ConfigurationFactory)' has been removed
+ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 2 of 'public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)' has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 2 of 'public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)' has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 2 of 'public boolean isConfigurationRegistered(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)' has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7005: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Parameter 2 of 'public void registerConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.lang.Class)' has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
 ERROR: 8001: org.codehaus.cargo.generic.configuration.ConfigurationType: Class org.codehaus.cargo.generic.configuration.ConfigurationType removed
 INFO: 4000: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Added org.codehaus.cargo.generic.spi.AbstractIntrospectionGenericHintFactory to the list of superclasses
 INFO: 5000: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
-ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
-ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
-ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: In method &#39;protected java.lang.Object createInstance(java.lang.reflect.Constructor, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; the number of arguments has changed
-ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: In method &#39;protected java.lang.reflect.Constructor getConstructor(java.lang.Class, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; the number of arguments has changed
-ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 2 of &#39;public boolean isConfigurationRegistered(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
-ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 2 of &#39;public void registerConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.lang.Class)&#39; has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
-INFO: 7011: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Method &#39;public void registerConfiguration(java.lang.String, java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)&#39; has been added
+ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 2 of 'public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)' has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 2 of 'public org.codehaus.cargo.container.configuration.Configuration createConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.io.File)' has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: In method 'protected java.lang.Object createInstance(java.lang.reflect.Constructor, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: In method 'protected java.lang.reflect.Constructor getConstructor(java.lang.Class, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' the number of arguments has changed
+ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 2 of 'public boolean isConfigurationRegistered(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType)' has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7005: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Parameter 2 of 'public void registerConfiguration(java.lang.String, org.codehaus.cargo.generic.configuration.ConfigurationType, java.lang.Class)' has changed its type to org.codehaus.cargo.container.configuration.ConfigurationType
+INFO: 7011: org.codehaus.cargo.generic.configuration.DefaultConfigurationFactory: Method 'public void registerConfiguration(java.lang.String, java.lang.String, org.codehaus.cargo.container.configuration.ConfigurationType)' has been added
 INFO: 4000: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Added org.codehaus.cargo.generic.spi.AbstractGenericHintFactory to the list of superclasses
 INFO: 5000: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Added org.codehaus.cargo.generic.spi.AbstractIntrospectionGenericHintFactory to the list of superclasses
 INFO: 5000: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
-ERROR: 7005: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Parameter 3 of &#39;public org.codehaus.cargo.container.deployable.Deployable createDeployable(java.lang.String, java.lang.String, org.codehaus.cargo.generic.deployable.DeployableType)&#39; has changed its type to org.codehaus.cargo.container.deployable.DeployableType
-INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method &#39;protected java.lang.Object createInstance(java.lang.reflect.Constructor, java.lang.String, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; has been added
-INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method &#39;protected java.lang.reflect.Constructor getConstructor(java.lang.Class, java.lang.String, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; has been added
-INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method &#39;public boolean isDeployableRegistered(java.lang.String, org.codehaus.cargo.container.deployable.DeployableType)&#39; has been added
-INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method &#39;public void registerDeployable(java.lang.String, org.codehaus.cargo.container.deployable.DeployableType, java.lang.Class)&#39; has been added
-INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method &#39;public void registerDeployable(java.lang.String, java.lang.String, org.codehaus.cargo.container.deployable.DeployableType)&#39; has been added
-ERROR: 7002: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method &#39;public void registerImplementation(java.lang.String, java.util.Map)&#39; has been removed
-ERROR: 7005: org.codehaus.cargo.generic.deployable.DeployableFactory: Parameter 3 of &#39;public org.codehaus.cargo.container.deployable.Deployable createDeployable(java.lang.String, java.lang.String, org.codehaus.cargo.generic.deployable.DeployableType)&#39; has changed its type to org.codehaus.cargo.container.deployable.DeployableType
-ERROR: 7012: org.codehaus.cargo.generic.deployable.DeployableFactory: Method &#39;public boolean isDeployableRegistered(java.lang.String, org.codehaus.cargo.container.deployable.DeployableType)&#39; has been added to an interface
-ERROR: 7012: org.codehaus.cargo.generic.deployable.DeployableFactory: Method &#39;public void registerDeployable(java.lang.String, org.codehaus.cargo.container.deployable.DeployableType, java.lang.Class)&#39; has been added to an interface
+ERROR: 7005: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Parameter 3 of 'public org.codehaus.cargo.container.deployable.Deployable createDeployable(java.lang.String, java.lang.String, org.codehaus.cargo.generic.deployable.DeployableType)' has changed its type to org.codehaus.cargo.container.deployable.DeployableType
+INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method 'protected java.lang.Object createInstance(java.lang.reflect.Constructor, java.lang.String, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' has been added
+INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method 'protected java.lang.reflect.Constructor getConstructor(java.lang.Class, java.lang.String, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' has been added
+INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method 'public boolean isDeployableRegistered(java.lang.String, org.codehaus.cargo.container.deployable.DeployableType)' has been added
+INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method 'public void registerDeployable(java.lang.String, org.codehaus.cargo.container.deployable.DeployableType, java.lang.Class)' has been added
+INFO: 7011: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method 'public void registerDeployable(java.lang.String, java.lang.String, org.codehaus.cargo.container.deployable.DeployableType)' has been added
+ERROR: 7002: org.codehaus.cargo.generic.deployable.DefaultDeployableFactory: Method 'public void registerImplementation(java.lang.String, java.util.Map)' has been removed
+ERROR: 7005: org.codehaus.cargo.generic.deployable.DeployableFactory: Parameter 3 of 'public org.codehaus.cargo.container.deployable.Deployable createDeployable(java.lang.String, java.lang.String, org.codehaus.cargo.generic.deployable.DeployableType)' has changed its type to org.codehaus.cargo.container.deployable.DeployableType
+ERROR: 7012: org.codehaus.cargo.generic.deployable.DeployableFactory: Method 'public boolean isDeployableRegistered(java.lang.String, org.codehaus.cargo.container.deployable.DeployableType)' has been added to an interface
+ERROR: 7012: org.codehaus.cargo.generic.deployable.DeployableFactory: Method 'public void registerDeployable(java.lang.String, org.codehaus.cargo.container.deployable.DeployableType, java.lang.Class)' has been added to an interface
 ERROR: 8001: org.codehaus.cargo.generic.deployable.DeployableType: Class org.codehaus.cargo.generic.deployable.DeployableType removed
 INFO: 4000: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Added org.codehaus.cargo.generic.spi.AbstractIntrospectionGenericHintFactory to the list of superclasses
 INFO: 5000: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
-ERROR: 7005: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.deployer.Deployer createDeployer(org.codehaus.cargo.container.Container, java.lang.String)&#39; has changed its type to org.codehaus.cargo.container.deployer.DeployerType
-ERROR: 7004: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: In method &#39;protected java.lang.Object createInstance(java.lang.reflect.Constructor, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; the number of arguments has changed
-ERROR: 7004: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: In method &#39;protected java.lang.reflect.Constructor getConstructor(java.lang.Class, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; the number of arguments has changed
-INFO: 7011: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Method &#39;public boolean isDeployerRegistered(java.lang.String, org.codehaus.cargo.container.deployer.DeployerType)&#39; has been added
-ERROR: 7005: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Parameter 2 of &#39;public void registerDeployer(java.lang.String, java.lang.String, java.lang.Class)&#39; has changed its type to org.codehaus.cargo.container.deployer.DeployerType
-INFO: 7011: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Method &#39;public void registerDeployer(java.lang.String, java.lang.String, org.codehaus.cargo.container.deployer.DeployerType)&#39; has been added
+ERROR: 7005: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Parameter 2 of 'public org.codehaus.cargo.container.deployer.Deployer createDeployer(org.codehaus.cargo.container.Container, java.lang.String)' has changed its type to org.codehaus.cargo.container.deployer.DeployerType
+ERROR: 7004: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: In method 'protected java.lang.Object createInstance(java.lang.reflect.Constructor, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: In method 'protected java.lang.reflect.Constructor getConstructor(java.lang.Class, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' the number of arguments has changed
+INFO: 7011: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Method 'public boolean isDeployerRegistered(java.lang.String, org.codehaus.cargo.container.deployer.DeployerType)' has been added
+ERROR: 7005: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Parameter 2 of 'public void registerDeployer(java.lang.String, java.lang.String, java.lang.Class)' has changed its type to org.codehaus.cargo.container.deployer.DeployerType
+INFO: 7011: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Method 'public void registerDeployer(java.lang.String, java.lang.String, org.codehaus.cargo.container.deployer.DeployerType)' has been added
 ERROR: 6011: org.codehaus.cargo.generic.deployer.DeployerFactory: Field DEFAULT has been removed, but it was previously a constant
-ERROR: 7005: org.codehaus.cargo.generic.deployer.DeployerFactory: Parameter 2 of &#39;public org.codehaus.cargo.container.deployer.Deployer createDeployer(org.codehaus.cargo.container.Container, java.lang.String)&#39; has changed its type to org.codehaus.cargo.container.deployer.DeployerType
-ERROR: 7012: org.codehaus.cargo.generic.deployer.DeployerFactory: Method &#39;public boolean isDeployerRegistered(java.lang.String, org.codehaus.cargo.container.deployer.DeployerType)&#39; has been added to an interface
-ERROR: 7005: org.codehaus.cargo.generic.deployer.DeployerFactory: Parameter 2 of &#39;public void registerDeployer(java.lang.String, java.lang.String, java.lang.Class)&#39; has changed its type to org.codehaus.cargo.container.deployer.DeployerType
+ERROR: 7005: org.codehaus.cargo.generic.deployer.DeployerFactory: Parameter 2 of 'public org.codehaus.cargo.container.deployer.Deployer createDeployer(org.codehaus.cargo.container.Container, java.lang.String)' has changed its type to org.codehaus.cargo.container.deployer.DeployerType
+ERROR: 7012: org.codehaus.cargo.generic.deployer.DeployerFactory: Method 'public boolean isDeployerRegistered(java.lang.String, org.codehaus.cargo.container.deployer.DeployerType)' has been added to an interface
+ERROR: 7005: org.codehaus.cargo.generic.deployer.DeployerFactory: Parameter 2 of 'public void registerDeployer(java.lang.String, java.lang.String, java.lang.Class)' has changed its type to org.codehaus.cargo.container.deployer.DeployerType
 INFO: 4000: org.codehaus.cargo.generic.spi.AbstractGenericHintFactory: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.generic.spi.AbstractGenericHintFactory: Added org.codehaus.cargo.util.monitor.MonitoredObject to the list of superclasses
-ERROR: 7004: org.codehaus.cargo.generic.spi.AbstractGenericHintFactory: In method &#39;protected java.lang.Object createInstance(java.lang.reflect.Constructor, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; the number of arguments has changed
-ERROR: 7004: org.codehaus.cargo.generic.spi.AbstractGenericHintFactory: In method &#39;protected java.lang.reflect.Constructor getConstructor(java.lang.Class, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)&#39; the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.spi.AbstractGenericHintFactory: In method 'protected java.lang.Object createInstance(java.lang.reflect.Constructor, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' the number of arguments has changed
+ERROR: 7004: org.codehaus.cargo.generic.spi.AbstractGenericHintFactory: In method 'protected java.lang.reflect.Constructor getConstructor(java.lang.Class, org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters)' the number of arguments has changed
 INFO: 8000: org.codehaus.cargo.generic.spi.AbstractIntrospectionGenericHintFactory: Class org.codehaus.cargo.generic.spi.AbstractIntrospectionGenericHintFactory added
 INFO: 8000: org.codehaus.cargo.module.AbstractDescriptor: Class org.codehaus.cargo.module.AbstractDescriptor added
 INFO: 8000: org.codehaus.cargo.module.AbstractDescriptorIo: Class org.codehaus.cargo.module.AbstractDescriptorIo added
 INFO: 8000: org.codehaus.cargo.module.AbstractDescriptorTag: Class org.codehaus.cargo.module.AbstractDescriptorTag added
 INFO: 8000: org.codehaus.cargo.module.J2eeDescriptor: Class org.codehaus.cargo.module.J2eeDescriptor added
-ERROR: 7012: org.codehaus.cargo.module.application.ApplicationXml: Method &#39;public void addEjbModule(java.lang.String)&#39; has been added to an interface
+ERROR: 7012: org.codehaus.cargo.module.application.ApplicationXml: Method 'public void addEjbModule(java.lang.String)' has been added to an interface
 INFO: 5000: org.codehaus.cargo.module.application.ApplicationXmlTag: Added org.codehaus.cargo.module.AbstractDescriptorTag to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.application.ApplicationXmlTag: Removed org.codehaus.cargo.module.webapp.AbstractDescriptorTag from the list of superclasses
 INFO: 5000: org.codehaus.cargo.module.application.DefaultApplicationXml: Added org.codehaus.cargo.module.AbstractDescriptor to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.application.DefaultApplicationXml: Removed org.codehaus.cargo.module.webapp.AbstractDescriptor from the list of superclasses
-INFO: 7011: org.codehaus.cargo.module.application.DefaultApplicationXml: Method &#39;public void addEjbModule(java.lang.String)&#39; has been added
+INFO: 7011: org.codehaus.cargo.module.application.DefaultApplicationXml: Method 'public void addEjbModule(java.lang.String)' has been added
 INFO: 4000: org.codehaus.cargo.module.ejb.EjbJarXml: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
 INFO: 4000: org.codehaus.cargo.module.ejb.EjbJarXml: Added org.codehaus.cargo.module.J2eeDescriptor to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.module.ejb.EjbJarXml: Added org.codehaus.cargo.module.AbstractDescriptor to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.ejb.EjbJarXml: Removed org.codehaus.cargo.module.webapp.AbstractDescriptor from the list of superclasses
-INFO: 7011: org.codehaus.cargo.module.ejb.EjbJarXml: Method &#39;public java.lang.String getFileName()&#39; has been added
-ERROR: 7006: org.codehaus.cargo.module.ejb.EjbJarXml: Return type of method &#39;public org.codehaus.cargo.module.ejb.VendorEjbDescriptor getVendorDescriptor()&#39; has been changed to org.codehaus.cargo.module.Descriptor
+INFO: 7011: org.codehaus.cargo.module.ejb.EjbJarXml: Method 'public java.lang.String getFileName()' has been added
+ERROR: 7006: org.codehaus.cargo.module.ejb.EjbJarXml: Return type of method 'public org.codehaus.cargo.module.ejb.VendorEjbDescriptor getVendorDescriptor()' has been changed to org.codehaus.cargo.module.Descriptor
 INFO: 5000: org.codehaus.cargo.module.ejb.EjbJarXmlIo: Added org.codehaus.cargo.module.AbstractDescriptorIo to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.ejb.EjbJarXmlIo: Removed org.codehaus.cargo.module.webapp.AbstractDescriptorIo from the list of superclasses
 INFO: 5000: org.codehaus.cargo.module.ejb.EjbJarXmlTag: Added org.codehaus.cargo.module.AbstractDescriptorTag to the list of superclasses
@@ -471,15 +609,15 @@ INFO: 4000: org.codehaus.cargo.module.ejb.VendorEjbDescriptor: Added org.codehau
 INFO: 4000: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXml: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXml: Added org.codehaus.cargo.module.AbstractDescriptor to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXml: Removed org.codehaus.cargo.module.webapp.AbstractDescriptor from the list of superclasses
-INFO: 7011: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXml: Method &#39;public java.lang.String getFileName()&#39; has been added
+INFO: 7011: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXml: Method 'public java.lang.String getFileName()' has been added
 INFO: 5000: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXmlIo: Added org.codehaus.cargo.module.AbstractDescriptorIo to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.ejb.orion.OrionEjbJarXmlIo: Removed org.codehaus.cargo.module.webapp.AbstractDescriptorIo from the list of superclasses
 INFO: 4000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Added org.codehaus.cargo.module.AbstractDescriptor to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Removed org.codehaus.cargo.module.webapp.AbstractDescriptor from the list of superclasses
-INFO: 7011: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Method &#39;public void addDispatchPolicy(org.codehaus.cargo.module.ejb.EjbDef, java.lang.String)&#39; has been added
-INFO: 7011: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Method &#39;public java.lang.String getDispatchPolicy(org.codehaus.cargo.module.ejb.EjbDef)&#39; has been added
-INFO: 7011: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Method &#39;public java.lang.String getFileName()&#39; has been added
+INFO: 7011: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Method 'public void addDispatchPolicy(org.codehaus.cargo.module.ejb.EjbDef, java.lang.String)' has been added
+INFO: 7011: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Method 'public java.lang.String getDispatchPolicy(org.codehaus.cargo.module.ejb.EjbDef)' has been added
+INFO: 7011: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXml: Method 'public java.lang.String getFileName()' has been added
 INFO: 5000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlIo: Added org.codehaus.cargo.module.AbstractDescriptorIo to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlIo: Removed org.codehaus.cargo.module.webapp.AbstractDescriptorIo from the list of superclasses
 INFO: 5000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlTag: Added org.codehaus.cargo.module.AbstractDescriptorTag to the list of superclasses
@@ -488,7 +626,7 @@ INFO: 6000: org.codehaus.cargo.module.ejb.weblogic.WeblogicEjbJarXmlTag: Added p
 INFO: 4000: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmi: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmi: Added org.codehaus.cargo.module.AbstractDescriptor to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmi: Removed org.codehaus.cargo.module.webapp.AbstractDescriptor from the list of superclasses
-INFO: 7011: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmi: Method &#39;public java.lang.String getFileName()&#39; has been added
+INFO: 7011: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmi: Method 'public java.lang.String getFileName()' has been added
 INFO: 5000: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmiIo: Added org.codehaus.cargo.module.AbstractDescriptorIo to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.ejb.websphere.IbmEjbJarBndXmiIo: Removed org.codehaus.cargo.module.webapp.AbstractDescriptorIo from the list of superclasses
 INFO: 8000: org.codehaus.cargo.module.internal.util.xml.AbstractElement: Class org.codehaus.cargo.module.internal.util.xml.AbstractElement added
@@ -508,17 +646,17 @@ INFO: 4000: org.codehaus.cargo.module.webapp.WebXml: Added org.codehaus.cargo.mo
 INFO: 4000: org.codehaus.cargo.module.webapp.WebXml: Added org.codehaus.cargo.module.J2eeDescriptor to the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.module.webapp.WebXml: Added org.codehaus.cargo.module.AbstractDescriptor to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.webapp.WebXml: Removed org.codehaus.cargo.module.webapp.AbstractDescriptor from the list of superclasses
-ERROR: 7005: org.codehaus.cargo.module.webapp.WebXml: Parameter 1 of &#39;public void addRootElement(org.codehaus.cargo.module.webapp.AbstractDescriptorTag, org.w3c.dom.Element)&#39; has changed its type to org.codehaus.cargo.module.AbstractDescriptorTag
-INFO: 7011: org.codehaus.cargo.module.webapp.WebXml: Method &#39;public java.lang.String getFileName()&#39; has been added
-ERROR: 7006: org.codehaus.cargo.module.webapp.WebXml: Return type of method &#39;public org.codehaus.cargo.module.webapp.VendorWebAppDescriptor getVendorDescriptor()&#39; has been changed to org.codehaus.cargo.module.Descriptor
-ERROR: 7005: org.codehaus.cargo.module.webapp.WebXml: Parameter 1 of &#39;public void replaceRootElement(org.codehaus.cargo.module.webapp.AbstractDescriptorTag, org.w3c.dom.Element)&#39; has changed its type to org.codehaus.cargo.module.AbstractDescriptorTag
+ERROR: 7005: org.codehaus.cargo.module.webapp.WebXml: Parameter 1 of 'public void addRootElement(org.codehaus.cargo.module.webapp.AbstractDescriptorTag, org.w3c.dom.Element)' has changed its type to org.codehaus.cargo.module.AbstractDescriptorTag
+INFO: 7011: org.codehaus.cargo.module.webapp.WebXml: Method 'public java.lang.String getFileName()' has been added
+ERROR: 7006: org.codehaus.cargo.module.webapp.WebXml: Return type of method 'public org.codehaus.cargo.module.webapp.VendorWebAppDescriptor getVendorDescriptor()' has been changed to org.codehaus.cargo.module.Descriptor
+ERROR: 7005: org.codehaus.cargo.module.webapp.WebXml: Parameter 1 of 'public void replaceRootElement(org.codehaus.cargo.module.webapp.AbstractDescriptorTag, org.w3c.dom.Element)' has changed its type to org.codehaus.cargo.module.AbstractDescriptorTag
 INFO: 5000: org.codehaus.cargo.module.webapp.WebXmlIo: Added org.codehaus.cargo.module.AbstractDescriptorIo to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.webapp.WebXmlIo: Removed org.codehaus.cargo.module.webapp.AbstractDescriptorIo from the list of superclasses
-ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method &#39;public java.io.File[] writeAll(org.codehaus.cargo.module.webapp.WebXml, java.io.File)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method &#39;public void writeWebXml(org.codehaus.cargo.module.webapp.WebXml, java.io.File)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method &#39;public void writeWebXml(org.codehaus.cargo.module.webapp.WebXml, java.io.File, java.lang.String)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method &#39;public void writeWebXml(org.codehaus.cargo.module.webapp.WebXml, java.io.File, java.lang.String, boolean)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method &#39;public void writeWebXml(org.codehaus.cargo.module.webapp.WebXml, java.io.OutputStream, java.lang.String, boolean)&#39; has been removed
+ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method 'public java.io.File[] writeAll(org.codehaus.cargo.module.webapp.WebXml, java.io.File)' has been removed
+ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method 'public void writeWebXml(org.codehaus.cargo.module.webapp.WebXml, java.io.File)' has been removed
+ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method 'public void writeWebXml(org.codehaus.cargo.module.webapp.WebXml, java.io.File, java.lang.String)' has been removed
+ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method 'public void writeWebXml(org.codehaus.cargo.module.webapp.WebXml, java.io.File, java.lang.String, boolean)' has been removed
+ERROR: 7002: org.codehaus.cargo.module.webapp.WebXmlIo: Method 'public void writeWebXml(org.codehaus.cargo.module.webapp.WebXml, java.io.OutputStream, java.lang.String, boolean)' has been removed
 INFO: 5000: org.codehaus.cargo.module.webapp.WebXmlTag: Added org.codehaus.cargo.module.AbstractDescriptorTag to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.webapp.WebXmlTag: Removed org.codehaus.cargo.module.webapp.AbstractDescriptorTag from the list of superclasses
 INFO: 5000: org.codehaus.cargo.module.webapp.jboss.JBossWebXml: Added org.codehaus.cargo.module.AbstractDescriptor to the list of superclasses
@@ -548,28 +686,28 @@ ERROR: 5001: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmi: Removed or
 INFO: 5000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiIo: Added org.codehaus.cargo.module.AbstractDescriptorIo to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiIo: Removed org.codehaus.cargo.module.webapp.AbstractDescriptorIo from the list of superclasses
 INFO: 8000: org.codehaus.cargo.util.Base64: Class org.codehaus.cargo.util.Base64 added
-INFO: 7011: org.codehaus.cargo.util.FileUtils: Method &#39;public java.io.File createDirectory(java.net.URI, java.lang.String)&#39; has been added
-</pre>
-</div></div>
-
-<p>Changes to the Ant API:</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method &#39;protected java.lang.String getHome()&#39; has been added
-ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method &#39;protected java.io.File getHomeDir()&#39; has been removed
-INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method &#39;public void setHint(java.lang.String)&#39; has been added
-INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method &#39;public void setHome(java.lang.String)&#39; has been added
-ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method &#39;public void setHomeDir(java.io.File)&#39; has been removed
-INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method &#39;public void setType(org.codehaus.cargo.container.ContainerType)&#39; has been added
-INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method &#39;protected void setupHome()&#39; has been added
-ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method &#39;protected void setupHomeDir()&#39; has been removed
-INFO: 7011: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;public void addConfiguredDeployable(org.codehaus.cargo.ant.DeployableElement)&#39; has been added
-ERROR: 7002: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;public void addConfiguredEar(org.codehaus.cargo.ant.EARElement)&#39; has been removed
-ERROR: 7002: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;public void addConfiguredWar(org.codehaus.cargo.ant.WARElement)&#39; has been removed
-INFO: 7011: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;protected java.util.List getDeployables()&#39; has been added
-ERROR: 7002: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;protected java.util.List getEars()&#39; has been removed
-ERROR: 7006: org.codehaus.cargo.ant.ConfigurationElement: Return type of method &#39;public org.codehaus.cargo.generic.configuration.ConfigurationType getType()&#39; has been changed to org.codehaus.cargo.container.configuration.ConfigurationType
-ERROR: 7002: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;protected java.util.List getWars()&#39; has been removed
+INFO: 7011: org.codehaus.cargo.util.FileUtils: Method 'public java.io.File createDirectory(java.net.URI, java.lang.String)' has been added
+</pre> 
+       </div>
+      </div> <p>Changes to the Ant API:</p> 
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>
+INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.String getHome()' has been added
+ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method 'protected java.io.File getHomeDir()' has been removed
+INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'public void setHint(java.lang.String)' has been added
+INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'public void setHome(java.lang.String)' has been added
+ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method 'public void setHomeDir(java.io.File)' has been removed
+INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'public void setType(org.codehaus.cargo.container.ContainerType)' has been added
+INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'protected void setupHome()' has been added
+ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method 'protected void setupHomeDir()' has been removed
+INFO: 7011: org.codehaus.cargo.ant.ConfigurationElement: Method 'public void addConfiguredDeployable(org.codehaus.cargo.ant.DeployableElement)' has been added
+ERROR: 7002: org.codehaus.cargo.ant.ConfigurationElement: Method 'public void addConfiguredEar(org.codehaus.cargo.ant.EARElement)' has been removed
+ERROR: 7002: org.codehaus.cargo.ant.ConfigurationElement: Method 'public void addConfiguredWar(org.codehaus.cargo.ant.WARElement)' has been removed
+INFO: 7011: org.codehaus.cargo.ant.ConfigurationElement: Method 'protected java.util.List getDeployables()' has been added
+ERROR: 7002: org.codehaus.cargo.ant.ConfigurationElement: Method 'protected java.util.List getEars()' has been removed
+ERROR: 7006: org.codehaus.cargo.ant.ConfigurationElement: Return type of method 'public org.codehaus.cargo.generic.configuration.ConfigurationType getType()' has been changed to org.codehaus.cargo.container.configuration.ConfigurationType
+ERROR: 7002: org.codehaus.cargo.ant.ConfigurationElement: Method 'protected java.util.List getWars()' has been removed
 INFO: 8000: org.codehaus.cargo.ant.DeployableElement: Class org.codehaus.cargo.ant.DeployableElement added
 ERROR: 8001: org.codehaus.cargo.ant.EARElement: Class org.codehaus.cargo.ant.EARElement removed
 ERROR: 8001: org.codehaus.cargo.ant.WARElement: Class org.codehaus.cargo.ant.WARElement removed
@@ -583,24 +721,22 @@ ERROR: 8001: org.codehaus.cargo.ant.tomcat.Tomcat3xCargoTask: Class org.codehaus
 ERROR: 8001: org.codehaus.cargo.ant.tomcat.Tomcat4xCargoTask: Class org.codehaus.cargo.ant.tomcat.Tomcat4xCargoTask removed
 ERROR: 8001: org.codehaus.cargo.ant.tomcat.Tomcat5xCargoTask: Class org.codehaus.cargo.ant.tomcat.Tomcat5xCargoTask removed
 ERROR: 8001: org.codehaus.cargo.ant.weblogic.WebLogic8xCargoTask: Class org.codehaus.cargo.ant.weblogic.WebLogic8xCargoTask removed
-</pre>
-</div></div>
-      </td>
+</pre> 
+       </div>
+      </div> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="footer"> 
+      <table width="100%"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="top"> Copyright 2004-2015. All rights reserved unless otherwise noted.<br> </td> 
+         <td align="right" valign="top"> Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Release+notes+for+Cargo+0.7">Atlassian Confluence</a>. </td> 
+        </tr> 
+       </tbody>   
+      </table>   </td>
     </tr>
-    <tr>
-      <td colspan="2" id="footer">
-        <table width="100%"> 
-          <tr>
-            <td align="left" valign="top">
-              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
-            </td>
-            <td align="right" valign="top">
-              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Release+notes+for+Cargo+0.7">Atlassian Confluence</a>.
-            </td>
-          </tr>
-        <table>
-      </td>
-    </tr>
+   </tbody>
   </table>
-</body>
+ </body>
 </html>

@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head profile="http://www.w3.org/2000/08/w3c-synd/#">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
-  <link rel="shortcut icon" href="attachments/favicon.ico"/>
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
-
-  <title>Codehaus Cargo - Release notes for Cargo 0.6</title>
-
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - Release notes for Cargo 0.6</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -22,34 +18,30 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-
+  </script> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script>
-</head>
-
-<body>
-  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
-    <tr>
-      <td colspan="2" style="padding:8px;">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr background="attachments/cargo-banner-center.png">
-            <td align="left" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-left.png"/>
-            </td>
-            <td align="right" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-right.png"/>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <!--
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" id="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr> 
+     <td colspan="2" style="padding:8px"> 
+      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="breadcrumbs"> 
+      <!--
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr>
             <td align="left">
@@ -74,198 +66,353 @@
             </td>
           </tr>
         </table>
-         -->
-      </td>
-    </tr>
-    <tr>
-      <td id="leftColumn" valign="top" style="padding-top: 0px;">
-          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
-
-          <h3 class="heading3">Feeds</h3>
-          <table border="0" cellspacing="4px">
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td id="rightColumn" valign="top">
-        <script type="text/javascript">
+         --> </td> 
+    </tr> 
+    <tr> 
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
+         <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="SVN.html">SVN</a></li>
+       <li><a href="Mailing+Lists.html">Mailing Lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
+      <ul class="alternate">
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Discussions.html">Discussions</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
+       <li><a href="Project+Structure.html">Project Structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td id="rightColumn" valign="top"> <script type="text/javascript">
           // Google Ads code
           google_ad_client = "ca-pub-7996505557003356";
           google_ad_slot = "5363897989";
           google_ad_width = 728;
           google_ad_height = 90;
-        </script>
-        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
-          <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script>
-        </center>
-
-        <h3 id="ReleasenotesforCargo0.6-Implementedissues">Implemented issues</h3>
-
-<div class="aui-message warning jim-inline-block">
-    <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration.
-</div>
- 
-
-<h3 id="ReleasenotesforCargo0.6-Sourcecodechanges">Source code changes</h3>
-
-<p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.6-clirr"></span><br />
-Changes detected by <a href="http://clirr.sourceforge.net" class="external-link" rel="nofollow">Clirr</a> between <code>cargo-0.5.jar</code> and <code>cargo-0.6.jar</code>.</p>
-
-<p>Binary compatibility breaks:</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-ERROR: org.codehaus.cargo.ant.CargoTask: In method &#39;protected void executeActions(org.codehaus.cargo.container.Container)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.ant.CargoTask: Method &#39;protected java.lang.String getContainerKey()&#39; has been removed
-ERROR: org.codehaus.cargo.ant.CargoTask: Method &#39;public void setContainerKey(java.lang.String)&#39; has been removed
-ERROR: org.codehaus.cargo.ant.CargoTask: Method &#39;protected void setupConfiguration(org.codehaus.cargo.container.Container)&#39; has been removed
-ERROR: org.codehaus.cargo.ant.CargoTask: In method &#39;protected void setupExtraClasspath(org.codehaus.cargo.container.Container)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.ant.CargoTask: In method &#39;protected void setupHomeDir(org.codehaus.cargo.container.Container)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.ant.CargoTask: In method &#39;protected void setupMonitor(org.codehaus.cargo.container.Container)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.ant.CargoTask: In method &#39;protected void setupOutput(org.codehaus.cargo.container.Container)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.ant.CargoTask: In method &#39;protected void setupSystemProperties(org.codehaus.cargo.container.Container)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.ant.CargoTask: In method &#39;protected void setupTimeout(org.codehaus.cargo.container.Container)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.ant.ConfigurationElement: Parameter 1 of &#39;public org.codehaus.cargo.container.configuration.Configuration createConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.lang.String
-ERROR: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;public java.lang.String getHint()&#39; has been removed
-ERROR: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;public void setHint(java.lang.String)&#39; has been removed
-ERROR: org.codehaus.cargo.ant.EARElement: Parameter 1 of &#39;public org.codehaus.cargo.container.deployable.EAR createEAR(org.codehaus.cargo.container.Container)&#39; has changed its type to java.lang.String
-ERROR: org.codehaus.cargo.ant.WARElement: Parameter 1 of &#39;public org.codehaus.cargo.container.deployable.WAR createWAR(org.codehaus.cargo.container.Container)&#39; has changed its type to java.lang.String
-ERROR: org.codehaus.cargo.container.Container: Method &#39;public org.codehaus.cargo.container.deployable.DeployableFactory getDeployableFactory()&#39; has been removed
+        </script> 
+      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script> 
+      </center> <h3 id="ReleasenotesforCargo0.6-Implementedissues">Implemented issues</h3> 
+      <div class="aui-message warning jim-inline-block"> 
+       <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration. 
+      </div> <h3 id="ReleasenotesforCargo0.6-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.6-clirr"></span><br> Changes detected by <a href="http://clirr.sourceforge.net" class="external-link" rel="nofollow">Clirr</a> between <code>cargo-0.5.jar</code> and <code>cargo-0.6.jar</code>.</p> <p>Binary compatibility breaks:</p> 
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>
+ERROR: org.codehaus.cargo.ant.CargoTask: In method 'protected void executeActions(org.codehaus.cargo.container.Container)' the number of arguments has changed
+ERROR: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.String getContainerKey()' has been removed
+ERROR: org.codehaus.cargo.ant.CargoTask: Method 'public void setContainerKey(java.lang.String)' has been removed
+ERROR: org.codehaus.cargo.ant.CargoTask: Method 'protected void setupConfiguration(org.codehaus.cargo.container.Container)' has been removed
+ERROR: org.codehaus.cargo.ant.CargoTask: In method 'protected void setupExtraClasspath(org.codehaus.cargo.container.Container)' the number of arguments has changed
+ERROR: org.codehaus.cargo.ant.CargoTask: In method 'protected void setupHomeDir(org.codehaus.cargo.container.Container)' the number of arguments has changed
+ERROR: org.codehaus.cargo.ant.CargoTask: In method 'protected void setupMonitor(org.codehaus.cargo.container.Container)' the number of arguments has changed
+ERROR: org.codehaus.cargo.ant.CargoTask: In method 'protected void setupOutput(org.codehaus.cargo.container.Container)' the number of arguments has changed
+ERROR: org.codehaus.cargo.ant.CargoTask: In method 'protected void setupSystemProperties(org.codehaus.cargo.container.Container)' the number of arguments has changed
+ERROR: org.codehaus.cargo.ant.CargoTask: In method 'protected void setupTimeout(org.codehaus.cargo.container.Container)' the number of arguments has changed
+ERROR: org.codehaus.cargo.ant.ConfigurationElement: Parameter 1 of 'public org.codehaus.cargo.container.configuration.Configuration createConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.lang.String
+ERROR: org.codehaus.cargo.ant.ConfigurationElement: Method 'public java.lang.String getHint()' has been removed
+ERROR: org.codehaus.cargo.ant.ConfigurationElement: Method 'public void setHint(java.lang.String)' has been removed
+ERROR: org.codehaus.cargo.ant.EARElement: Parameter 1 of 'public org.codehaus.cargo.container.deployable.EAR createEAR(org.codehaus.cargo.container.Container)' has changed its type to java.lang.String
+ERROR: org.codehaus.cargo.ant.WARElement: Parameter 1 of 'public org.codehaus.cargo.container.deployable.WAR createWAR(org.codehaus.cargo.container.Container)' has changed its type to java.lang.String
+ERROR: org.codehaus.cargo.container.Container: Method 'public org.codehaus.cargo.container.deployable.DeployableFactory getDeployableFactory()' has been removed
 ERROR: org.codehaus.cargo.container.ContainerFactory: Class org.codehaus.cargo.container.ContainerFactory removed
-ERROR: org.codehaus.cargo.container.configuration.Configuration: Method &#39;public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)&#39; has been added to an interface
-ERROR: org.codehaus.cargo.container.configuration.Configuration: Method &#39;public java.util.List getDeployables()&#39; has been added to an interface
+ERROR: org.codehaus.cargo.container.configuration.Configuration: Method 'public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)' has been added to an interface
+ERROR: org.codehaus.cargo.container.configuration.Configuration: Method 'public java.util.List getDeployables()' has been added to an interface
 ERROR: org.codehaus.cargo.container.configuration.ConfigurationFactory: Class org.codehaus.cargo.container.configuration.ConfigurationFactory removed
 ERROR: org.codehaus.cargo.container.configuration.DefaultConfigurationFactory: Class org.codehaus.cargo.container.configuration.DefaultConfigurationFactory removed
 ERROR: org.codehaus.cargo.container.configuration.DefaultConfigurationFactory$ConfigurationFactoryParameters:Class org.codehaus.cargo.container.configuration.DefaultConfigurationFactory$ConfigurationFactoryParameters removed
 ERROR: org.codehaus.cargo.container.configuration.StandaloneConfiguration: Class org.codehaus.cargo.container.configuration.StandaloneConfiguration removed
 ERROR: org.codehaus.cargo.container.deployable.DeployableFactory: Class org.codehaus.cargo.container.deployable.DeployableFactory removed
 ERROR: org.codehaus.cargo.container.deployer.DefaultDeployerFactory: Class org.codehaus.cargo.container.deployer.DefaultDeployerFactory removed
-ERROR: org.codehaus.cargo.container.deployer.DeployableMonitorListener: Method &#39;public void undeployed()&#39; has been added to an interface
+ERROR: org.codehaus.cargo.container.deployer.DeployableMonitorListener: Method 'public void undeployed()' has been added to an interface
 ERROR: org.codehaus.cargo.container.deployer.DeployerFactory: Class org.codehaus.cargo.container.deployer.DeployerFactory removed
 ERROR: org.codehaus.cargo.container.internal.util.HintKey: Class org.codehaus.cargo.container.internal.util.HintKey removed
-ERROR: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: In method &#39;public Jetty4xEmbeddedContainer()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: In method 'public Jetty4xEmbeddedContainer()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Parameter 1 of &#39;public JettyStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Method &#39;public JettyStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: In method &#39;public void configure()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.jo.Jo1xContainer: In method &#39;public Jo1xContainer()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Parameter 1 of 'public JettyStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Method 'public JettyStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: In method 'public void configure()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.jo.Jo1xContainer: In method 'public Jo1xContainer()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Parameter 1 of &#39;public Jo1xStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Method &#39;public Jo1xStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: In method &#39;public void configure()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.orion.AbstractOrionContainer: In method &#39;public AbstractOrionContainer()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.orion.Oc4j9xContainer: In method &#39;public Oc4j9xContainer()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.orion.Orion1xContainer: In method &#39;public Orion1xContainer()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.orion.Orion2xContainer: In method &#39;public Orion2xContainer()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Parameter 1 of 'public Jo1xStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Method 'public Jo1xStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: In method 'public void configure()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.orion.AbstractOrionContainer: In method 'public AbstractOrionContainer()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.orion.Oc4j9xContainer: In method 'public Oc4j9xContainer()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.orion.Orion1xContainer: In method 'public Orion1xContainer()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.orion.Orion2xContainer: In method 'public Orion2xContainer()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.orion.OrionDeployer: Class org.codehaus.cargo.container.orion.OrionDeployer removed
 ERROR: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Parameter 1 of &#39;public OrionStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Method &#39;public OrionStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: In method &#39;public void configure()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.resin.AbstractResinContainer: In method &#39;public AbstractResinContainer()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Parameter 1 of 'public OrionStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Method 'public OrionStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: In method 'public void configure()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.resin.AbstractResinContainer: In method 'public AbstractResinContainer()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Parameter 1 of &#39;public AbstractResinStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Method &#39;public AbstractResinStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: In method &#39;public void configure()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: In method &#39;protected void prepareAdditions(org.apache.tools.ant.types.FilterChain)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.resin.Resin2xContainer: In method &#39;public Resin2xContainer()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Parameter 1 of 'public AbstractResinStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Method 'public AbstractResinStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: In method 'public void configure()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: In method 'protected void prepareAdditions(org.apache.tools.ant.types.FilterChain)' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.resin.Resin2xContainer: In method 'public Resin2xContainer()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Parameter 1 of &#39;public Resin2xStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Method &#39;public Resin2xStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: In method &#39;protected void prepareAdditions(org.apache.tools.ant.types.FilterChain)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.resin.Resin3xContainer: In method &#39;public Resin3xContainer()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Parameter 1 of 'public Resin2xStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: Method 'public Resin2xStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.resin.Resin2xStandaloneConfiguration: In method 'protected void prepareAdditions(org.apache.tools.ant.types.FilterChain)' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.resin.Resin3xContainer: In method 'public Resin3xContainer()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Parameter 1 of &#39;public Resin3xStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Method &#39;public Resin3xStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: In method &#39;protected void prepareAdditions(org.apache.tools.ant.types.FilterChain)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Parameter 1 of &#39;public ResinExistingConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Method &#39;public ResinExistingConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.resin.ResinExistingConfiguration: In method &#39;public void configure()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.spi.AbstractConfiguration: In method &#39;public AbstractConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.spi.AbstractConfiguration: Method &#39;public org.codehaus.cargo.container.Container getContainer()&#39; has been removed
-ERROR: org.codehaus.cargo.container.spi.AbstractContainer: In method &#39;public AbstractContainer()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;public org.codehaus.cargo.container.deployable.DeployableFactory getDeployableFactory()&#39; has been removed
-ERROR: org.codehaus.cargo.container.spi.AbstractContainer: Method &#39;protected void setDeployableFactory(org.codehaus.cargo.container.deployable.DeployableFactory)&#39; has been removed
+ERROR: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Parameter 1 of 'public Resin3xStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: Method 'public Resin3xStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.resin.Resin3xStandaloneConfiguration: In method 'protected void prepareAdditions(org.apache.tools.ant.types.FilterChain)' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Parameter 1 of 'public ResinExistingConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Method 'public ResinExistingConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.resin.ResinExistingConfiguration: In method 'public void configure()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.spi.AbstractConfiguration: In method 'public AbstractConfiguration(org.codehaus.cargo.container.Container, java.io.File)' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.spi.AbstractConfiguration: Method 'public org.codehaus.cargo.container.Container getContainer()' has been removed
+ERROR: org.codehaus.cargo.container.spi.AbstractContainer: In method 'public AbstractContainer()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public org.codehaus.cargo.container.deployable.DeployableFactory getDeployableFactory()' has been removed
+ERROR: org.codehaus.cargo.container.spi.AbstractContainer: Method 'protected void setDeployableFactory(org.codehaus.cargo.container.deployable.DeployableFactory)' has been removed
 ERROR: org.codehaus.cargo.container.spi.AbstractGenericHintFactory: Class org.codehaus.cargo.container.spi.AbstractGenericHintFactory removed
 ERROR: org.codehaus.cargo.container.spi.AbstractGenericHintFactory$GenericParameters: Class org.codehaus.cargo.container.spi.AbstractGenericHintFactory$GenericParameters removed
 ERROR: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Parameter 1 of &#39;public AbstractStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method &#39;public AbstractStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.spi.ContainerConfiguration: In method &#39;public void configure()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Parameter 1 of 'public AbstractStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method 'public AbstractStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.spi.ContainerConfiguration: In method 'public void configure()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.spi.DefaultDeployableFactory: Class org.codehaus.cargo.container.spi.DefaultDeployableFactory removed
-ERROR: org.codehaus.cargo.container.spi.DeployerWatchdog: Method &#39;public void waitForDeployment()&#39; has been removed
-ERROR: org.codehaus.cargo.container.tomcat.AbstractCatalinaContainer: In method &#39;public AbstractCatalinaContainer()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.tomcat.AbstractTomcatContainer: In method &#39;public AbstractTomcatContainer()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.spi.DeployerWatchdog: Method 'public void waitForDeployment()' has been removed
+ERROR: org.codehaus.cargo.container.tomcat.AbstractCatalinaContainer: In method 'public AbstractCatalinaContainer()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.tomcat.AbstractTomcatContainer: In method 'public AbstractTomcatContainer()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration: Parameter 1 of &#39;public AbstractTomcatStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration: Method &#39;public AbstractTomcatStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
+ERROR: org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration: Parameter 1 of 'public AbstractTomcatStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration: Method 'public AbstractTomcatStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
 ERROR: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Parameter 1 of &#39;public CatalinaStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Method &#39;public CatalinaStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: In method &#39;public void configure()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.tomcat.Tomcat3xContainer: In method &#39;public Tomcat3xContainer()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.tomcat.Tomcat4xContainer: In method &#39;public Tomcat4xContainer()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.tomcat.Tomcat5xContainer: In method &#39;public Tomcat5xContainer()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Parameter 1 of 'public CatalinaStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Method 'public CatalinaStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: In method 'public void configure()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.tomcat.Tomcat3xContainer: In method 'public Tomcat3xContainer()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.tomcat.Tomcat4xContainer: In method 'public Tomcat4xContainer()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.tomcat.Tomcat5xContainer: In method 'public Tomcat5xContainer()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.tomcat.TomcatDeployableFactory: Class org.codehaus.cargo.container.tomcat.TomcatDeployableFactory removed
 ERROR: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Parameter 1 of &#39;public TomcatStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Method &#39;public TomcatStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: In method &#39;public void configure()&#39;the number of arguments has changed
-ERROR: org.codehaus.cargo.container.weblogic.AbstractWebLogicContainer: In method &#39;public AbstractWebLogicContainer()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.weblogic.WebLogic8xContainer: In method &#39;public WebLogic8xContainer()&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Parameter 1 of 'public TomcatStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Method 'public TomcatStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: In method 'public void configure()'the number of arguments has changed
+ERROR: org.codehaus.cargo.container.weblogic.AbstractWebLogicContainer: In method 'public AbstractWebLogicContainer()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.weblogic.WebLogic8xContainer: In method 'public WebLogic8xContainer()' the number of arguments has changed
 ERROR: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Removed org.codehaus.cargo.container.configuration.StandaloneConfiguration from the set of implemented interfaces
-ERROR: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Parameter 1 of &#39;public WebLogicStandaloneConfiguration(org.codehaus.cargo.container.Container)&#39; has changed its type to java.io.File
-ERROR: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Method &#39;public WebLogicStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)&#39; has been removed
-ERROR: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: In method &#39;public void configure()&#39; the number of arguments has changed
-ERROR: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: In method &#39;protected void setupDeployables(java.io.File)&#39; the number of arguments has changed
+ERROR: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Parameter 1 of 'public WebLogicStandaloneConfiguration(org.codehaus.cargo.container.Container)' has changed its type to java.io.File
+ERROR: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Method 'public WebLogicStandaloneConfiguration(org.codehaus.cargo.container.Container, java.io.File)' has been removed
+ERROR: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: In method 'public void configure()' the number of arguments has changed
+ERROR: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: In method 'protected void setupDeployables(java.io.File)' the number of arguments has changed
 ERROR: org.codehaus.cargo.module.Dtd$XmlEntityResolver: Class org.codehaus.cargo.module.Dtd$XmlEntityResolverremoved
-</pre>
-</div></div>
-
-<p>Changes not affecting compatibility:</p>
-<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>
-INFO: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Method &#39;public java.lang.String toString()&#39; has been added
-INFO: org.codehaus.cargo.ant.CargoTask: Method &#39;protected java.lang.Class getContainerClass()&#39; has been added
-INFO: org.codehaus.cargo.ant.CargoTask: Method &#39;protected java.lang.String getContainerId()&#39; has been added
-INFO: org.codehaus.cargo.ant.CargoTask: Method &#39;protected org.codehaus.cargo.util.monitor.Monitor getMonitor()&#39; has been added
-INFO: org.codehaus.cargo.ant.CargoTask: Method &#39;protected org.codehaus.cargo.container.Container makeContainer()&#39; has been added
-INFO: org.codehaus.cargo.ant.CargoTask: Method &#39;public void setClass(java.lang.Class)&#39; has been added
-INFO: org.codehaus.cargo.ant.CargoTask: Method &#39;public void setContainerFactory(org.codehaus.cargo.generic.ContainerFactory)&#39; has been added
-INFO: org.codehaus.cargo.ant.CargoTask: Method &#39;public void setContainerId(java.lang.String)&#39; has been added
-INFO: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;public org.codehaus.cargo.generic.configuration.ConfigurationType getType()&#39; has been added
-INFO: org.codehaus.cargo.ant.ConfigurationElement: Method &#39;public void setType(java.lang.String)&#39; has been added
-INFO: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Method &#39;public java.lang.String toString()&#39; has been added
-INFO: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Method &#39;public java.lang.String toString()&#39; has been added
-INFO: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Method &#39;public java.lang.String toString()&#39; has been added
-INFO: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Method &#39;public java.lang.String toString()&#39; has been added
-INFO: org.codehaus.cargo.container.spi.AbstractConfiguration: Method &#39;public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)&#39; has been added
-INFO: org.codehaus.cargo.container.spi.AbstractConfiguration: Method &#39;public java.util.List getDeployables()&#39; has been added
-INFO: org.codehaus.cargo.container.spi.AbstractCopyingDeployer: Method &#39;public void deploy(java.util.List)&#39; has been added
-INFO: org.codehaus.cargo.container.spi.AbstractCopyingDeployer: Method &#39;public void setShouldDeployExpandedWARs(boolean)&#39; has been added
-INFO: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method &#39;public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)&#39; has been removed, but an inherited definition exists.
-INFO: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method &#39;public java.util.List getDeployables()&#39; has been removed, but an inherited definition exists.
-INFO: org.codehaus.cargo.container.spi.DeployerWatchdog: Method &#39;public void undeployed()&#39; has been added
-INFO: org.codehaus.cargo.container.spi.DeployerWatchdog: Method &#39;public void watch(boolean)&#39; has been added
-INFO: org.codehaus.cargo.container.spi.DeployerWatchdog: Method &#39;public void watchForAvailability()&#39; has been added
-INFO: org.codehaus.cargo.container.spi.DeployerWatchdog: Method &#39;public void watchForUnavailability()&#39; has been added
-INFO: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Method &#39;public java.lang.String toString()&#39; has been added
-INFO: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Method &#39;public java.lang.String toString()&#39; has been added
-INFO: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Method &#39;public java.lang.String toString()&#39; has been added
+</pre> 
+       </div>
+      </div> <p>Changes not affecting compatibility:</p> 
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>
+INFO: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Method 'public java.lang.String toString()' has been added
+INFO: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.Class getContainerClass()' has been added
+INFO: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.String getContainerId()' has been added
+INFO: org.codehaus.cargo.ant.CargoTask: Method 'protected org.codehaus.cargo.util.monitor.Monitor getMonitor()' has been added
+INFO: org.codehaus.cargo.ant.CargoTask: Method 'protected org.codehaus.cargo.container.Container makeContainer()' has been added
+INFO: org.codehaus.cargo.ant.CargoTask: Method 'public void setClass(java.lang.Class)' has been added
+INFO: org.codehaus.cargo.ant.CargoTask: Method 'public void setContainerFactory(org.codehaus.cargo.generic.ContainerFactory)' has been added
+INFO: org.codehaus.cargo.ant.CargoTask: Method 'public void setContainerId(java.lang.String)' has been added
+INFO: org.codehaus.cargo.ant.ConfigurationElement: Method 'public org.codehaus.cargo.generic.configuration.ConfigurationType getType()' has been added
+INFO: org.codehaus.cargo.ant.ConfigurationElement: Method 'public void setType(java.lang.String)' has been added
+INFO: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Method 'public java.lang.String toString()' has been added
+INFO: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Method 'public java.lang.String toString()' has been added
+INFO: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Method 'public java.lang.String toString()' has been added
+INFO: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Method 'public java.lang.String toString()' has been added
+INFO: org.codehaus.cargo.container.spi.AbstractConfiguration: Method 'public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)' has been added
+INFO: org.codehaus.cargo.container.spi.AbstractConfiguration: Method 'public java.util.List getDeployables()' has been added
+INFO: org.codehaus.cargo.container.spi.AbstractCopyingDeployer: Method 'public void deploy(java.util.List)' has been added
+INFO: org.codehaus.cargo.container.spi.AbstractCopyingDeployer: Method 'public void setShouldDeployExpandedWARs(boolean)' has been added
+INFO: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method 'public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)' has been removed, but an inherited definition exists.
+INFO: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method 'public java.util.List getDeployables()' has been removed, but an inherited definition exists.
+INFO: org.codehaus.cargo.container.spi.DeployerWatchdog: Method 'public void undeployed()' has been added
+INFO: org.codehaus.cargo.container.spi.DeployerWatchdog: Method 'public void watch(boolean)' has been added
+INFO: org.codehaus.cargo.container.spi.DeployerWatchdog: Method 'public void watchForAvailability()' has been added
+INFO: org.codehaus.cargo.container.spi.DeployerWatchdog: Method 'public void watchForUnavailability()' has been added
+INFO: org.codehaus.cargo.container.tomcat.CatalinaStandaloneConfiguration: Method 'public java.lang.String toString()' has been added
+INFO: org.codehaus.cargo.container.tomcat.TomcatStandaloneConfiguration: Method 'public java.lang.String toString()' has been added
+INFO: org.codehaus.cargo.container.weblogic.WebLogicStandaloneConfiguration: Method 'public java.lang.String toString()' has been added
 INFO: org.codehaus.cargo.generic.ContainerFactory: Class org.codehaus.cargo.generic.ContainerFactory added
 INFO: org.codehaus.cargo.generic.DefaultContainerFactory: Class org.codehaus.cargo.generic.DefaultContainerFactory added
 INFO: org.codehaus.cargo.generic.configuration.ConfigurationFactory: Class org.codehaus.cargo.generic.configuration.ConfigurationFactory added
@@ -282,26 +429,24 @@ INFO: org.codehaus.cargo.generic.internal.util.HintKey: Class org.codehaus.cargo
 INFO: org.codehaus.cargo.generic.spi.AbstractGenericHintFactory: Class org.codehaus.cargo.generic.spi.AbstractGenericHintFactory added
 INFO: org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters: Class org.codehaus.cargo.generic.spi.AbstractGenericHintFactory$GenericParameters added
 INFO: org.codehaus.cargo.module.XmlEntityResolver: Class org.codehaus.cargo.module.XmlEntityResolver added
-INFO: org.codehaus.cargo.module.webapp.WebXmlVersion: Method &#39;public boolean equals(java.lang.Object)&#39; has been removed, but an inherited definition exists.
-INFO: org.codehaus.cargo.module.webapp.WebXmlVersion: Method &#39;public int hashCode()&#39; has been removed, but an inherited definition exists.
-</pre>
-</div></div>
-      </td>
+INFO: org.codehaus.cargo.module.webapp.WebXmlVersion: Method 'public boolean equals(java.lang.Object)' has been removed, but an inherited definition exists.
+INFO: org.codehaus.cargo.module.webapp.WebXmlVersion: Method 'public int hashCode()' has been removed, but an inherited definition exists.
+</pre> 
+       </div>
+      </div> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="footer"> 
+      <table width="100%"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="top"> Copyright 2004-2015. All rights reserved unless otherwise noted.<br> </td> 
+         <td align="right" valign="top"> Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Release+notes+for+Cargo+0.6">Atlassian Confluence</a>. </td> 
+        </tr> 
+       </tbody>   
+      </table>   </td>
     </tr>
-    <tr>
-      <td colspan="2" id="footer">
-        <table width="100%"> 
-          <tr>
-            <td align="left" valign="top">
-              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
-            </td>
-            <td align="right" valign="top">
-              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Release+notes+for+Cargo+0.6">Atlassian Confluence</a>.
-            </td>
-          </tr>
-        <table>
-      </td>
-    </tr>
+   </tbody>
   </table>
-</body>
+ </body>
 </html>

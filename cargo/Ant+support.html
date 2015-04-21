@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head profile="http://www.w3.org/2000/08/w3c-synd/#">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
-  <link rel="shortcut icon" href="attachments/favicon.ico"/>
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
-
-  <title>Codehaus Cargo - Ant support</title>
-
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - Ant support</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -22,34 +18,30 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-
+  </script> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script>
-</head>
-
-<body>
-  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
-    <tr>
-      <td colspan="2" style="padding:8px;">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr background="attachments/cargo-banner-center.png">
-            <td align="left" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-left.png"/>
-            </td>
-            <td align="right" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-right.png"/>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <!--
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" id="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr> 
+     <td colspan="2" style="padding:8px"> 
+      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="breadcrumbs"> 
+      <!--
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr>
             <td align="left">
@@ -74,145 +66,463 @@
             </td>
           </tr>
         </table>
-         -->
-      </td>
-    </tr>
-    <tr>
-      <td id="leftColumn" valign="top" style="padding-top: 0px;">
-          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
-
-          <h3 class="heading3">Feeds</h3>
-          <table border="0" cellspacing="4px">
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td id="rightColumn" valign="top">
-        <script type="text/javascript">
+         --> </td> 
+    </tr> 
+    <tr> 
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
+         <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="SVN.html">SVN</a></li>
+       <li><a href="Mailing+Lists.html">Mailing Lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
+      <ul class="alternate">
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Discussions.html">Discussions</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
+       <li><a href="Project+Structure.html">Project Structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td id="rightColumn" valign="top"> <script type="text/javascript">
           // Google Ads code
           google_ad_client = "ca-pub-7996505557003356";
           google_ad_slot = "5363897989";
           google_ad_width = 728;
           google_ad_height = 90;
-        </script>
-        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
-          <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script>
-        </center>
-
-        <h3 id="Antsupport-Definition">Definition</h3>Cargo provides Ant tasks to perform all the operations available from the Java API<div class="confluence-information-macro confluence-information-macro-information"><p class="title">Functional tests</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>The usage of Cargo for executing functional tests on a container does not mandate these ANT tasks. You could directly use the Cargo Java API from your Java unit test classes (JUnit, TestNG, etc), as described on the <a href="Functional+testing.html">Functional testing</a> page.</p></div></div><h3 id="Antsupport-Explanation">Explanation</h3><p>Before using the Ant API you need to register the Cargo Ant tasks into Ant. This is done in the following manner:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>&lt;taskdef resource=&quot;cargo.tasks&quot;&gt;
+        </script> 
+      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script> 
+      </center> <h3 id="Antsupport-Definition">Definition</h3>Cargo provides Ant tasks to perform all the operations available from the Java API
+      <div class="confluence-information-macro confluence-information-macro-information">
+       <p class="title">Functional tests</p>
+       <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>The usage of Cargo for executing functional tests on a container does not mandate these ANT tasks. You could directly use the Cargo Java API from your Java unit test classes (JUnit, TestNG, etc), as described on the <a href="Functional+testing.html">Functional testing</a> page.</p>
+       </div>
+      </div><h3 id="Antsupport-Explanation">Explanation</h3><p>Before using the Ant API you need to register the Cargo Ant tasks into Ant. This is done in the following manner:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
-    &lt;pathelement location=&quot;${cargo-core-uberjar.jar}&quot;/&gt;
-    &lt;pathelement location=&quot;${cargo-ant.jar}&quot;/&gt;
+    &lt;pathelement location="${cargo-core-uberjar.jar}"/&gt;
+    &lt;pathelement location="${cargo-ant.jar}"/&gt;
   &lt;/classpath&gt;
 &lt;/taskdef&gt;
-</pre>
-</div></div><p>Some additional dependencies might also be required for the ANT task. Please see the <a href="Installation.html">Installation</a> page for details.</p><h2 id="Antsupport-TheCargoANTtasksindetail">The Cargo ANT tasks in detail</h2><p>Here are the different task actions available to call on this plugin:</p><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh"><p>Action</p></th><th class="confluenceTh"><p>Description</p></th></tr><tr><td class="confluenceTd"><p><code><strong>start</strong></code></p></td><td class="confluenceTd"><p>Start a container. That task will:</p><ul><li style="list-style-type: none;"><ul><li class="confluence-link">If the task configuration requires so, installs the container.</li><li class="confluence-link">If the task configuration defines a container with a <a href="http://docs.codehaus.org/display/CARGO/Standalone+Local+Configuration" class="external-link" rel="nofollow">standalone local configuration</a>, it will create the configuration.</li><li class="confluence-link">If the task configuration contains one or more <a href="http://docs.codehaus.org/display/CARGO/Deployable" class="external-link" rel="nofollow">deployables</a>, it will deploy these to the container automatically.</li><li class="confluence-link">And, of course, start the container.</li></ul></li></ul><p><strong>Note</strong>: A container that's started with the <code>start</code> task will automatically shut down as soon as the parent ANT instance quits (i.e., you see a <code>BUILD SUCCESSFUL</code> or <code>BUILD FAILED</code> message). If you want to start a container and perform manual testing, see our next task <code>run</code>.</p></td></tr><tr><td class="confluenceTd"><p><code><strong>run</strong></code></p></td><td class="confluenceTd"><p>Start a container and wait for the user to press <code>CTRL + C</code> to stop. That task will:</p><ul><li style="list-style-type: none;"><ul><li class="confluence-link">If the task configuration requires so, installs the container.</li><li class="confluence-link">If the task configuration defines a container with a <a href="Standalone+Local+Configuration.html">standalone local configuration</a>, it will create the configuration.</li><li class="confluence-link">If the task configuration contains one or more <a href="Deployable.html">deployables</a>, it will deploy these to the container automatically.</li><li class="confluence-link">And, of course, start the container and wait for the user to press <code>CTRL + C</code> to stop.</li></ul></li></ul></td></tr><tr><td class="confluenceTd"><p><code><strong>stop</strong></code></p></td><td class="confluenceTd"><p>Stop a container.</p></td></tr><tr><td colspan="1" class="confluenceTd"><code><strong>restart</strong></code></td><td colspan="1" class="confluenceTd"><p>Stop and start again a container. If the container was not running before calling <code>restart</code>, it will simply be started.</p></td></tr><tr><td class="confluenceTd"><p><code><strong>configure</strong></code></p></td><td class="confluenceTd"><p>Create the configuration for a <a href="Local+Container.html">local container</a>, without starting it. Note that the <code>start</code> and <code>run</code> actions will also install the container automatically.</p></td></tr><tr><td colspan="1" class="confluenceTd"><code><strong>daemon-start</strong></code></td><td colspan="1" class="confluenceTd"><p>Start a container using the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td></tr><tr><td colspan="1" class="confluenceTd"><code><strong>daemon-stop</strong></code></td><td colspan="1" class="confluenceTd">Stop a container using the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</td></tr><tr><td class="confluenceTd"><p><code><strong>deploy</strong></code></p></td><td class="confluenceTd"><p>Deploy a deployable to a running container.</p></td></tr><tr><td class="confluenceTd"><p><code><strong>undeploy</strong></code></p></td><td class="confluenceTd"><p>Undeploy a deployable from a running container.</p></td></tr><tr><td class="confluenceTd"><p><code><strong>redeploy</strong></code></p></td><td class="confluenceTd"><p>Undeploy and deploy again a deployable. If the deployable was not deployed before calling <code>redeploy</code>, it will simply be deployed.</p></td></tr></tbody></table></div><div class="confluence-information-macro confluence-information-macro-information"><p class="title">Wait after the container has started</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Many wonder the difference between the <code>start</code> and <code>run</code> actions:</p><ul><li>If you want to just start the container and then do other tasks (for example, execute tests), use the <code>start</code> action. That action should therefore <span style="text-decoration: underline;">ONLY</span> be used for integration testing.</li><li>If you want start the container and have ANT &quot;blocked&quot; afterwards (i.e., until you press <code>CTRL + C</code> to stop), use the <code>run</code> action. <code>run</code> is therefore the action to use for manual testing.</li></ul></div></div><h3 id="Antsupport-Examples">Examples</h3><p><span class="confluence-anchor-link" id="Antsupport-examples"></span></p><h4 id="Antsupport-Orion2.x">Orion 2.x</h4><p>Here's a full example showing how to deploy a WAR, and expanded WAR and an EAR in an Orion 2.x container. Please note that the <code>output</code> and <code>log</code> attribute are optional. The <code>property</code> elements allow you to tune how the container is configured. Here we're telling it to start on port 8180 and to generate the maximum amount of logs in the container <code>output</code> file.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>&lt;taskdef resource=&quot;cargo.tasks&quot;&gt;
+</pre> 
+       </div>
+      </div><p>Some additional dependencies might also be required for the ANT task. Please see the <a href="Installation.html">Installation</a> page for details.</p><h2 id="Antsupport-TheCargoANTtasksindetail">The Cargo ANT tasks in detail</h2><p>Here are the different task actions available to call on this plugin:</p>
+      <div class="table-wrap">
+       <table class="confluenceTable">
+        <tbody>
+         <tr>
+          <th class="confluenceTh"><p>Action</p></th>
+          <th class="confluenceTh"><p>Description</p></th>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p><code><strong>start</strong></code></p></td>
+          <td class="confluenceTd"><p>Start a container. That task will:</p>
+           <ul>
+            <li style="list-style-type: none;">
+             <ul>
+              <li class="confluence-link">If the task configuration requires so, installs the container.</li>
+              <li class="confluence-link">If the&nbsp;task configuration defines a container with a <a href="http://docs.codehaus.org/display/CARGO/Standalone+Local+Configuration" class="external-link" rel="nofollow">standalone local configuration</a>, it will create the configuration.</li>
+              <li class="confluence-link">If the&nbsp;task configuration contains one or more <a href="http://docs.codehaus.org/display/CARGO/Deployable" class="external-link" rel="nofollow">deployables</a>, it will deploy these to the container automatically.</li>
+              <li class="confluence-link">And, of course, start the container.</li>
+             </ul></li>
+           </ul><p><strong>Note</strong>: A container that's started with the <code>start</code> task will automatically shut down as soon as the parent ANT instance quits (i.e., you see a <code>BUILD SUCCESSFUL</code> or <code>BUILD FAILED</code> message). If you want to start a container and perform manual testing, see our next task <code>run</code>.</p></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p><code><strong>run</strong></code></p></td>
+          <td class="confluenceTd"><p>Start a container and wait for the user to press <code>CTRL + C</code> to stop. That task will:</p>
+           <ul>
+            <li style="list-style-type: none;">
+             <ul>
+              <li class="confluence-link">If the&nbsp;task configuration requires so, installs the container.</li>
+              <li class="confluence-link">If the&nbsp;task configuration defines a container with a <a href="Standalone+Local+Configuration.html">standalone local configuration</a>, it will create the configuration.</li>
+              <li class="confluence-link">If the&nbsp;task configuration contains one or more <a href="Deployable.html">deployables</a>, it will deploy these to the container automatically.</li>
+              <li class="confluence-link">And, of course, start the container and wait for the user to press <code>CTRL + C</code> to stop.</li>
+             </ul></li>
+           </ul></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p><code><strong>stop</strong></code></p></td>
+          <td class="confluenceTd"><p>Stop a container.</p></td>
+         </tr>
+         <tr>
+          <td colspan="1" class="confluenceTd"><code><strong>restart</strong></code></td>
+          <td colspan="1" class="confluenceTd"><p>Stop and start again a container. If the container was not running before calling&nbsp;<code>restart</code>, it will simply be started.</p></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p><code><strong>configure</strong></code></p></td>
+          <td class="confluenceTd"><p>Create the configuration for a <a href="Local+Container.html">local container</a>, without starting it. Note that the <code>start</code> and <code>run</code> actions will also install the container automatically.</p></td>
+         </tr>
+         <tr>
+          <td colspan="1" class="confluenceTd"><code><strong>daemon-start</strong></code></td>
+          <td colspan="1" class="confluenceTd"><p>Start a container using the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td>
+         </tr>
+         <tr>
+          <td colspan="1" class="confluenceTd"><code><strong>daemon-stop</strong></code></td>
+          <td colspan="1" class="confluenceTd">Stop a container using the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p><code><strong>deploy</strong></code></p></td>
+          <td class="confluenceTd"><p>Deploy a deployable to a running container.</p></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p><code><strong>undeploy</strong></code></p></td>
+          <td class="confluenceTd"><p>Undeploy a deployable from a running container.</p></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p><code><strong>redeploy</strong></code></p></td>
+          <td class="confluenceTd"><p>Undeploy and deploy again a deployable. If the deployable was not deployed before calling&nbsp;<code>redeploy</code>, it will simply be deployed.</p></td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div class="confluence-information-macro confluence-information-macro-information">
+       <p class="title">Wait after the container has started</p>
+       <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>Many wonder the difference between the <code>start</code> and <code>run</code> actions:</p>
+        <ul>
+         <li>If you want to just start the container and then do other tasks (for example, execute tests), use the <code>start</code> action. That action should therefore <span style="text-decoration: underline;">ONLY</span> be used for integration testing.</li>
+         <li>If you want start the container and have ANT "blocked" afterwards (i.e., until you press <code>CTRL + C</code> to stop), use the <code>run</code> action. <code>run</code> is therefore the action to use for manual testing.</li>
+        </ul>
+       </div>
+      </div><h3 id="Antsupport-Examples">Examples</h3><p><span class="confluence-anchor-link" id="Antsupport-examples"></span></p><h4 id="Antsupport-Orion2.x">Orion 2.x</h4><p>Here's a full example showing how to deploy a WAR, and expanded WAR and an EAR in an Orion 2.x container. Please note that the <code>output</code> and <code>log</code> attribute are optional. The <code>property</code> elements allow you to tune how the container is configured. Here we're telling it to start on port 8180 and to generate the maximum amount of logs in the container <code>output</code> file.</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
-    &lt;pathelement location=&quot;path/to/cargo-uberjar.jar&quot;/&gt;
-    &lt;pathelement location=&quot;path/to/cargo-ant-tasks.jar&quot;/&gt;
+    &lt;pathelement location="path/to/cargo-uberjar.jar"/&gt;
+    &lt;pathelement location="path/to/cargo-ant-tasks.jar"/&gt;
   &lt;/classpath&gt;
 &lt;/taskdef&gt;
 
-&lt;cargo containerId=&quot;orion2x&quot; home=&quot;c:/apps/orion-2.0.3&quot; output=&quot;target/output.log&quot;
-    log=&quot;target/cargo.log&quot; action=&quot;start&quot;&gt;
+&lt;cargo containerId="orion2x" home="c:/apps/orion-2.0.3" output="target/output.log"
+    log="target/cargo.log" action="start"&gt;
   &lt;configuration&gt;
-    &lt;property name=&quot;cargo.servlet.port&quot; value=&quot;8180&quot;/&gt;
-    &lt;property name=&quot;cargo.logging&quot; value=&quot;high&quot;/&gt;
-    &lt;deployable type=&quot;war&quot; file=&quot;path/to/my/simple.war&quot;/&gt;
-    &lt;deployable type=&quot;war&quot; file=&quot;path/to/my/expandedwar/simple&quot;/&gt;
-    &lt;deployable type=&quot;ear&quot; file=&quot;path/to/my/simple.ear&quot;/&gt;
+    &lt;property name="cargo.servlet.port" value="8180"/&gt;
+    &lt;property name="cargo.logging" value="high"/&gt;
+    &lt;deployable type="war" file="path/to/my/simple.war"/&gt;
+    &lt;deployable type="war" file="path/to/my/expandedwar/simple"/&gt;
+    &lt;deployable type="ear" file="path/to/my/simple.ear"/&gt;
   &lt;/configuration&gt;
 &lt;/cargo&gt;
-</pre>
-</div></div><div class="confluence-information-macro confluence-information-macro-information"><p class="title">Loading configuration properties from a file</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>It is also possible to load the configuration properties from a file - simply use the <code>propertiesFile</code> attribute of the <code>configuration</code> XML element.</p></div></div><h4 id="Antsupport-Tomcat5.x">Tomcat 5.x</h4><p>This example gives a walk through of how to get a Cargo Ant build to work with Tomcat 5.x .</p><h5 id="Antsupport-Prerequisites">Prerequisites</h5><ul><li>It is assumed that <a href="http://tomcat.apache.org" class="external-link" rel="nofollow">Tomcat 5.x</a> is already installed</li><li>The cargo-core-uberjar.jar and cargo-ant.jar JARs have been downloaded</li><li>A mimimum knowledge of Ant is required</li><li>User already has a <code>war</code> target that properly generates a working war file</li></ul><h5 id="Antsupport-Steps">Steps</h5><p>Follow the following steps to configure your <code>build.xml</code> :</p><ul><li>Create a folder under your basedir called cargolib that will hold cargo-core-uberjar.jar and cargo-ant.jar</li></ul><ul><li>Define a property for cargolib</li></ul><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>&lt;property name=&quot;cargolib.dir&quot; value=&quot;${basedir}/cargolib&quot;/&gt;
-</pre>
-</div></div><ul><li>Define 2 new properties <code>cargo-uberjar</code> and <code>cargo-antjar</code> as shown below:</li></ul><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>&lt;property name=&quot;cargo-uberjar&quot; value=&quot;${cargolib.dir}/cargo-core-uberjar.jar&quot;/&gt;
-&lt;property name=&quot;cargo-antjar&quot; value=&quot;${cargolib.dir}/cargo-ant.jar&quot;/&gt;
-</pre>
-</div></div><ul><li><p>Add additional properties for defining the following:</p><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh"><p>Property</p></th><th class="confluenceTh"><p>Description</p></th></tr><tr><td class="confluenceTd"><p>tomcat.home</p></td><td class="confluenceTd"><p>Installation directory of tomcat5x</p></td></tr><tr><td class="confluenceTd"><p>tomcatlog.dir</p></td><td class="confluenceTd"><p>This is where our logs are going to be generated</p></td></tr><tr><td class="confluenceTd"><p>tomcatconfig.dir</p></td><td class="confluenceTd"><p>Cargo needs an empty config folder</p></td></tr><tr><td class="confluenceTd"><p>pathtowarfile</p></td><td class="confluenceTd"><p>The full path of the war file e.g c:/devtools/myapp/dist/myfile.war</p></td></tr></tbody></table></div></li></ul><ul><li><p>Add the following code to your build.xml :</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>&lt;taskdef resource=&quot;cargo.tasks&quot;&gt;
+</pre> 
+       </div>
+      </div>
+      <div class="confluence-information-macro confluence-information-macro-information">
+       <p class="title">Loading configuration properties from a file</p>
+       <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>It is also possible to load the configuration properties from a file - simply use the&nbsp;<code>propertiesFile</code> attribute of the&nbsp;<code>configuration</code> XML element.</p>
+       </div>
+      </div><h4 id="Antsupport-Tomcat5.x">Tomcat 5.x</h4><p>This example gives a walk through of how to get a Cargo Ant build to work with Tomcat 5.x .</p><h5 id="Antsupport-Prerequisites">Prerequisites</h5>
+      <ul>
+       <li>It is assumed that <a href="http://tomcat.apache.org" class="external-link" rel="nofollow">Tomcat 5.x</a> is already installed</li>
+       <li>The cargo-core-uberjar.jar and cargo-ant.jar JARs have been downloaded</li>
+       <li>A mimimum knowledge of Ant is required</li>
+       <li>User already has a <code>war</code> target that properly generates a working war file</li>
+      </ul><h5 id="Antsupport-Steps">Steps</h5><p>Follow the following steps to configure your <code>build.xml</code> :</p>
+      <ul>
+       <li>Create a folder under your basedir called cargolib that will hold cargo-core-uberjar.jar and cargo-ant.jar</li>
+      </ul>
+      <ul>
+       <li>Define a property for cargolib</li>
+      </ul>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>&lt;property name="cargolib.dir" value="${basedir}/cargolib"/&gt;
+</pre> 
+       </div>
+      </div>
+      <ul>
+       <li>Define 2 new properties <code>cargo-uberjar</code> and <code>cargo-antjar</code> as shown below:</li>
+      </ul>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>&lt;property name="cargo-uberjar" value="${cargolib.dir}/cargo-core-uberjar.jar"/&gt;
+&lt;property name="cargo-antjar" value="${cargolib.dir}/cargo-ant.jar"/&gt;
+</pre> 
+       </div>
+      </div>
+      <ul>
+       <li><p>Add additional properties for defining the following:</p>
+        <div class="table-wrap">
+         <table class="confluenceTable">
+          <tbody>
+           <tr>
+            <th class="confluenceTh"><p>Property</p></th>
+            <th class="confluenceTh"><p>Description</p></th>
+           </tr>
+           <tr>
+            <td class="confluenceTd"><p>tomcat.home</p></td>
+            <td class="confluenceTd"><p>Installation directory of tomcat5x</p></td>
+           </tr>
+           <tr>
+            <td class="confluenceTd"><p>tomcatlog.dir</p></td>
+            <td class="confluenceTd"><p>This is where our logs are going to be generated</p></td>
+           </tr>
+           <tr>
+            <td class="confluenceTd"><p>tomcatconfig.dir</p></td>
+            <td class="confluenceTd"><p>Cargo needs an empty config folder</p></td>
+           </tr>
+           <tr>
+            <td class="confluenceTd"><p>pathtowarfile</p></td>
+            <td class="confluenceTd"><p>The full path of the war file e.g c:/devtools/myapp/dist/myfile.war</p></td>
+           </tr>
+          </tbody>
+         </table>
+        </div></li>
+      </ul>
+      <ul>
+       <li><p>Add the following code to your build.xml :</p>
+        <div class="code panel pdl" style="border-width: 1px;">
+         <div class="codeContent panelContent pdl"> 
+          <pre>&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
-    &lt;pathelement location=&quot;${cargo-uberjar}&quot;/&gt;
-    &lt;pathelement location=&quot;${cargo-antjar}&quot;/&gt;
+    &lt;pathelement location="${cargo-uberjar}"/&gt;
+    &lt;pathelement location="${cargo-antjar}"/&gt;
   &lt;/classpath&gt;
 &lt;/taskdef&gt;
 	
-&lt;target name=&quot;cargostart&quot; depends=&quot;war&quot;&gt;
-  &lt;delete dir=&quot;${tomcatconfig.dir}&quot; /&gt;
-  &lt;mkdir dir=&quot;${tomcatlog.dir}&quot;/&gt;
-  &lt;mkdir dir=&quot;${tomcatconfig.dir}&quot;/&gt;
-  &lt;echo message=&quot;Starting Cargo...&quot;/&gt;
-  &lt;echo message=&quot;Using tomcat.home = ${tomcat.home} &quot;/&gt;
-  &lt;echo message=&quot;Using war = ${mywarfile} &quot;/&gt;
-  &lt;echo message=&quot;Jars used = ${cargo-uberjar} , ${cargo-antjar}&quot;/&gt;
+&lt;target name="cargostart" depends="war"&gt;
+  &lt;delete dir="${tomcatconfig.dir}" /&gt;
+  &lt;mkdir dir="${tomcatlog.dir}"/&gt;
+  &lt;mkdir dir="${tomcatconfig.dir}"/&gt;
+  &lt;echo message="Starting Cargo..."/&gt;
+  &lt;echo message="Using tomcat.home = ${tomcat.home} "/&gt;
+  &lt;echo message="Using war = ${mywarfile} "/&gt;
+  &lt;echo message="Jars used = ${cargo-uberjar} , ${cargo-antjar}"/&gt;
 		
-  &lt;cargo containerId=&quot;tomcat5x&quot; home=&quot;${tomcat.home}&quot; output=&quot;${tomcatlog.dir}/output.log&quot; 
-      log=&quot;${tomcatlog.dir}/cargo.log&quot; action=&quot;start&quot;&gt;
-    &lt;configuration home=&quot;${tomcatconfig.dir}&quot;&gt;
-      &lt;property name=&quot;cargo.servlet.port&quot; value=&quot;8080&quot;/&gt;
-      &lt;property name=&quot;cargo.logging&quot; value=&quot;high&quot;/&gt;
-      &lt;deployable type=&quot;war&quot; file=&quot;${mywarfile}&quot;/&gt;
+  &lt;cargo containerId="tomcat5x" home="${tomcat.home}" output="${tomcatlog.dir}/output.log" 
+      log="${tomcatlog.dir}/cargo.log" action="start"&gt;
+    &lt;configuration home="${tomcatconfig.dir}"&gt;
+      &lt;property name="cargo.servlet.port" value="8080"/&gt;
+      &lt;property name="cargo.logging" value="high"/&gt;
+      &lt;deployable type="war" file="${mywarfile}"/&gt;
     &lt;/configuration&gt;
   &lt;/cargo&gt;
 
 &lt;/target&gt;
-</pre>
-</div></div></li></ul><h4 id="Antsupport-Remotedeployment">Remote deployment</h4><p>Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>&lt;taskdef resource=&quot;cargo.tasks&quot;&gt;
+</pre> 
+         </div>
+        </div></li>
+      </ul><h4 id="Antsupport-Remotedeployment">Remote deployment</h4><p>Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
-    &lt;pathelement location=&quot;path/to/cargo-uberjar.jar&quot;/&gt;
-    &lt;pathelement location=&quot;path/to/cargo-ant-tasks.jar&quot;/&gt;
+    &lt;pathelement location="path/to/cargo-uberjar.jar"/&gt;
+    &lt;pathelement location="path/to/cargo-ant-tasks.jar"/&gt;
   &lt;/classpath&gt;
 &lt;/taskdef&gt;
 
-&lt;cargo containerId=&quot;tomcat6x&quot; action=&quot;deploy&quot; type=&quot;remote&quot;&gt;
-  &lt;configuration type=&quot;runtime&quot;&gt;
-    &lt;property name=&quot;cargo.hostname&quot; value=&quot;production27&quot;/&gt;
-    &lt;property name=&quot;cargo.servlet.port&quot; value=&quot;8080&quot;/&gt;
-    &lt;property name=&quot;cargo.remote.username&quot; value=&quot;admin&quot;/&gt;
-    &lt;property name=&quot;cargo.remote.password&quot; value=&quot;&quot;/&gt;
-    &lt;deployable type=&quot;war&quot; file=&quot;path/to/simple-war.war&quot;&gt;
-      &lt;property name=&quot;context&quot; value=&quot;application-context&quot;/&gt;
+&lt;cargo containerId="tomcat6x" action="deploy" type="remote"&gt;
+  &lt;configuration type="runtime"&gt;
+    &lt;property name="cargo.hostname" value="production27"/&gt;
+    &lt;property name="cargo.servlet.port" value="8080"/&gt;
+    &lt;property name="cargo.remote.username" value="admin"/&gt;
+    &lt;property name="cargo.remote.password" value=""/&gt;
+    &lt;deployable type="war" file="path/to/simple-war.war"&gt;
+      &lt;property name="context" value="application-context"/&gt;
     &lt;/deployable&gt;
   &lt;/configuration&gt;
 &lt;/cargo&gt;
-</pre>
-</div></div><p>For more details, please check the example in the <a href="Remote+Container.html">Remote Container</a> section for the ANT tasks. The ANT tasks support the deployer actions <code>deploy</code>, <code>undeploy</code> and <code>redeploy</code>.</p>
-      </td>
+</pre> 
+       </div>
+      </div><p>For more details, please check the example in the <a href="Remote+Container.html">Remote Container</a> section for the ANT tasks. The ANT tasks support the deployer actions <code>deploy</code>, <code>undeploy</code> and <code>redeploy</code>.</p> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="footer"> 
+      <table width="100%"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="top"> Copyright 2004-2015. All rights reserved unless otherwise noted.<br> </td> 
+         <td align="right" valign="top"> Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Ant+support">Atlassian Confluence</a>. </td> 
+        </tr> 
+       </tbody>   
+      </table>   </td>
     </tr>
-    <tr>
-      <td colspan="2" id="footer">
-        <table width="100%"> 
-          <tr>
-            <td align="left" valign="top">
-              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
-            </td>
-            <td align="right" valign="top">
-              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Ant+support">Atlassian Confluence</a>.
-            </td>
-          </tr>
-        <table>
-      </td>
-    </tr>
+   </tbody>
   </table>
-</body>
+ </body>
 </html>

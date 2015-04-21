@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head profile="http://www.w3.org/2000/08/w3c-synd/#">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
-  <link rel="shortcut icon" href="attachments/favicon.ico"/>
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
-
-  <title>Codehaus Cargo - Release procedure</title>
-
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - Release procedure</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -22,34 +18,30 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-
+  </script> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script>
-</head>
-
-<body>
-  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
-    <tr>
-      <td colspan="2" style="padding:8px;">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr background="attachments/cargo-banner-center.png">
-            <td align="left" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-left.png"/>
-            </td>
-            <td align="right" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-right.png"/>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <!--
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" id="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr> 
+     <td colspan="2" style="padding:8px"> 
+      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="breadcrumbs"> 
+      <!--
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr>
             <td align="left">
@@ -74,48 +66,240 @@
             </td>
           </tr>
         </table>
-         -->
-      </td>
-    </tr>
-    <tr>
-      <td id="leftColumn" valign="top" style="padding-top: 0px;">
-          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
-
-          <h3 class="heading3">Feeds</h3>
-          <table border="0" cellspacing="4px">
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td id="rightColumn" valign="top">
-        <script type="text/javascript">
+         --> </td> 
+    </tr> 
+    <tr> 
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
+         <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="SVN.html">SVN</a></li>
+       <li><a href="Mailing+Lists.html">Mailing Lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
+      <ul class="alternate">
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Discussions.html">Discussions</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
+       <li><a href="Project+Structure.html">Project Structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td id="rightColumn" valign="top"> <script type="text/javascript">
           // Google Ads code
           google_ad_client = "ca-pub-7996505557003356";
           google_ad_slot = "5363897989";
           google_ad_width = 728;
           google_ad_height = 90;
-        </script>
-        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
-          <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script>
-        </center>
-
-        <p>Releases are now performed using Maven 2 or Maven 3 so you need to have one of these installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Organization">Organization</h3><p>CARGO is made of four main modules (i.e., trunks):</p><ul><li><strong>pom</strong>: That is the parent of all CARGO modules.</li><li><strong>resources</strong>: Contains resources, most notably the CARGO ping component as well as the test WARs.</li><li><strong>core</strong>: CARGO Java implementation.</li><li><strong>extensions</strong>: CARGO extensions, i.e. the ANT tasks and the Maven2/Maven3 plugin.</li></ul><p>Of these modules/trunks, the <strong>pom</strong> is released separately from the other three. However, <strong>resources</strong>, <strong>core</strong>, and <strong>extensions</strong> are always released together.</p><p>CARGO uses the Codehaus Nexus instances for release, which means that we release in two phases:</p><ol><li>The maven-release-plugin will actually release to a staging area, i.e. the generated artifacts are only available on the staging repository</li><li>Once the staged version is OK (to confirm by opening a vote on the CARGO developers list, for example), it can be promoted (therefore, deployed to the Codehaus Maven repository and also synced to Maven Central)</li></ol><p>As a consequence of this, the release process is as follows:</p><ol><li>If the parent (<strong>pom</strong>) has changed, release the parent first without using the &quot;staging&quot; phase. To do so, log in to the Codehaus Nexus interface directly (without waiting for a vote) and release.</li><li>For <strong>resources</strong>, <strong>core</strong> and <strong>extensions</strong>:<ul><li>Release all three</li><li>This will indeed create a big &quot;staging&quot; repository</li><li>Open the vote so the whole team can decide whether the artifacts are OK</li><li>Once the vote is finished, promote the release (or drop if not OK)</li></ul></li></ol><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p><ul><li>An access to the Codehaus Nexus instance as a manager for the CARGO project. Read more about it on <a href="https://docs.codehaus.org/display/HAUSMATES/Codehaus+Maven+Repository+Usage+Guide" class="external-link" rel="nofollow">Codehaus Maven Repository Usage Guide</a></li><li><a href="http://www.gnupg.org/" class="external-link" rel="nofollow">The GNU privacy guard (GPG)</a>installed on your machine and at least one secret key.<ul><li>The secret key's public part must have been uploaded to the <a href="http://pgp.mit.edu/" class="external-link" rel="nofollow">MIT PGP Public Key Server</a>.</li></ul></li><li><p>To provide your Codehaus Xircles credentials using your <code>settings.xml</code> file (in the ${user.home}/.m2/ directory). Here's an example <code>settings.xml</code>:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>&lt;settings&gt;
+        </script> 
+      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script> 
+      </center> <p>Releases are now performed using Maven 2 or Maven 3 so you need to have one of these installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Organization">Organization</h3><p>CARGO is made of four main modules (i.e., trunks):</p>
+      <ul>
+       <li><strong>pom</strong>: That is the parent of all CARGO modules.</li>
+       <li><strong>resources</strong>: Contains resources, most notably the CARGO ping component as well as the test WARs.</li>
+       <li><strong>core</strong>: CARGO Java implementation.</li>
+       <li><strong>extensions</strong>: CARGO extensions, i.e. the ANT tasks and the Maven2/Maven3 plugin.</li>
+      </ul><p>Of these modules/trunks, the <strong>pom</strong> is released separately from the other three. However, <strong>resources</strong>, <strong>core</strong>, and <strong>extensions</strong> are always released together.</p><p>CARGO uses the Codehaus Nexus instances for release, which means that we release in two phases:</p>
+      <ol>
+       <li>The maven-release-plugin will actually release to a staging area, i.e. the generated artifacts are only available on the staging repository</li>
+       <li>Once the staged version is OK (to confirm by opening a vote on the CARGO developers list, for example), it can be promoted (therefore, deployed to the Codehaus Maven repository and also synced to Maven Central)</li>
+      </ol><p>As a consequence of this, the release process is as follows:</p>
+      <ol>
+       <li>If the parent (<strong>pom</strong>) has changed, release the parent first without using the "staging" phase. To do so, log in to the Codehaus Nexus interface directly (without waiting for a vote) and release.</li>
+       <li>For <strong>resources</strong>, <strong>core</strong> and <strong>extensions</strong>:
+        <ul>
+         <li>Release all three</li>
+         <li>This will indeed create a big "staging" repository</li>
+         <li>Open the vote so the whole team can decide whether the artifacts are OK</li>
+         <li>Once the vote is finished, promote the release (or drop if not OK)</li>
+        </ul></li>
+      </ol><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
+      <ul>
+       <li>An access to the Codehaus Nexus instance as a manager for the CARGO project. Read more about it on <a href="https://docs.codehaus.org/display/HAUSMATES/Codehaus+Maven+Repository+Usage+Guide" class="external-link" rel="nofollow">Codehaus Maven Repository Usage Guide</a></li>
+       <li><a href="http://www.gnupg.org/" class="external-link" rel="nofollow">The GNU privacy guard (GPG)</a>installed on your machine and at least one secret key.
+        <ul>
+         <li>The secret key's public part must have been uploaded to the <a href="http://pgp.mit.edu/" class="external-link" rel="nofollow">MIT PGP Public Key Server</a>.</li>
+        </ul></li>
+       <li><p>To provide your Codehaus Xircles credentials using your <code>settings.xml</code> file (in the ${user.home}/.m2/ directory). Here's an example <code>settings.xml</code>:</p>
+        <div class="code panel pdl" style="border-width: 1px;">
+         <div class="codeContent panelContent pdl"> 
+          <pre>&lt;settings&gt;
   [...]
   &lt;servers&gt;
     &lt;server&gt;
@@ -138,24 +322,134 @@
   &lt;/servers&gt;
   [...]
 &lt;/settings&gt;
-</pre>
-</div></div></li></ul><h3 id="Releaseprocedure-Beforeyoustart">Before you start</h3><p>Before releasing, make sure what is going to be released is fully functional; in particular check that all containers pass all tests.</p><ul><li>The <a href="http://bamboo.ci.codehaus.org/browse/CARGO" class="external-link" rel="nofollow">Continous Integration for CARGO</a> actually passes tests for all downloadable containers. Green ones are doing well <img class="emoticon emoticon-smile" src="attachments/smile.png" data-emoticon-name="smile" alt="(smile)" /></li><li>For non-publicly-downloadable containers (<a href="Glassfish+2.x.html">Glassfish 2.x</a>, <a href="JRun+4.x.html">JRun 4.x</a> as well as all versions of Orion/OC4J, WebLogic and WebSphere) tests need to be done on your computer.</li></ul><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><ol><li>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</li><li>Check if there have been SVN commits on that artifact since the latest stable release. If there have been, you'll need to release.<ul><li>The parent (<strong>pom</strong>) typically don't change between versions.</li></ul></li><li>First release the parent if required. Promote the staged artifact and wait for it to be synced to Maven Central (typically takes an hour or two).</li><li>Then release each of the code trunks <strong>resources</strong>, <strong>core</strong> and <strong>extensions</strong>.</li><li>In each code trunk's topmost pom.xml, change the links to the other trunks' versions to ${project.version} (the maven-release-plugin updates this to the actual version during release).</li></ol><p>The typical Maven release procedure is to execute these commands for each trunk (i.e. repeat this for each trunk):</p><ol><li>A dry-run before doing the actual release to ensure there aren't any problems:<br /> <code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li><li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process<ul><li>If the Subversion commit fails, try executing the same command but add <code><strong>-Dusername=your_user_name -Dpassword=your_password</strong></code> (of course, replace with your own user name and password on the CARGO SCM)</li></ul></li><li><code><strong>mvn release:perform</strong></code>: deploys the tagged artifacts on the Codehaus Nexus staging repository<ul><li>If you're running on Maven 2.2.0 (note: that's the version that ships with some flavors of MacOS X), you might run into SHA1 and MD5 signature verification issues. Please upgrade to Maven 2.2.1.</li><li>If you get a message saying: <code>Error deploying artifact: Failed to transfer file. Return code is: 401 Unauthorized</code>, please make sure your credentials in the <code>settings.xml</code> file are correct.</li></ul></li></ol><div class="confluence-information-macro confluence-information-macro-note"><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Release may take up to 6 hours. Make sure you have time before you start <img class="emoticon emoticon-smile" src="attachments/smile.png" data-emoticon-name="smile" alt="(smile)" /></p></div></div><div class="confluence-information-macro confluence-information-macro-note"><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>Sometimes, you might get a message saying <code>Error deploying artifact: Failed to create destination WebDAV collection (directory): unable to find valid certification path to requested target</code>, that's because the Codehaus HTTPS WebDAV servers' certificate is not installed on your computer. In this case:</p><ol><li>Download and compile the program from <a href="attachments/InstallCert.java" data-linked-resource-id="492355" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="InstallCert.java" data-nice-type="Text File" data-linked-resource-content-type="text/plain" data-linked-resource-container-id="491632" data-linked-resource-container-version="104">InstallCert.java</a></li><li>Execute the program <code>java InstallCert dav.codehaus.org</code> and make it install one of the certificates. If you run the program again, it should be happy and tell you that all certificates are installed.</li><li>Add the generated <code>jssecacerts</code> file to your <code>$JAVA_HOME/jre/lib/security</code> directory.</li></ol></div></div><h3 id="Releaseprocedure-Promotingthestagedversion">Promoting the staged version</h3><p>Once the new CARGO version is in the Codehaus Nexus staging repository, send an e-mail to the CARGO list so users can try out the new version. We typically leave the vote open for 72 hours.</p><p>Once the developers/users also validate the version as being stable, we need to do the actual release:</p><ol><li>Follow the guide on <a href="https://docs.sonatype.org/display/Repository/Closing+a+Staging+Repository" class="external-link" rel="nofollow">closing a staging repository on Codehaus Nexus</a> and <a href="https://docs.sonatype.org/display/Repository/Releasing+a+Staging+Repository" class="external-link" rel="nofollow">releasing a closed staging repository on Codehaus Nexus</a>in order to release the CARGO artifacts to Maven Central.<br /><ul><li>Tip: If the staged version was not good, read the instructions for <a href="https://docs.sonatype.org/display/Repository/Dropping+a+Staging+Repository" class="external-link" rel="nofollow">dropping a staging repository on Codehaus Nexus</a>.</li><li>Important: The artifacts cannot be taken back once they've reached Maven Central.</li></ul></li><li>Log onto Cargo JIRA, <a href="https://codehaus-cargo.atlassian.net/plugins/servlet/project-config/CARGO/versions" class="external-link" rel="nofollow">release the current version and add the next version</a>.</li><li>Check that the Cargo wiki is up to date. Specifically, perform the following updates:<br /><ol><li>Modify the status on the home page about the delivery:<br /><ul><li>Make sure the <a href="Containers.html">Containers list</a> is complete</li><li>Make sure the <a href="Navigation.html">Navigation page</a> is complete</li><li>Make sure the <a href="Javadocs.html">Javadocs for the Core Containers</a> are complete</li><li>Make sure the documentation for each container is up to date.<br /><ul><li>The source files (that you need to import using the <strong>Insert</strong> -&gt; <strong>Wiki markup</strong> option in each container's page manually) are generated in <code>core/documentation/target/<em>[container's name]</em>.log</code>.</li><li>If the web page in <a href="http://cargo.codehaus.org/" class="external-link" rel="nofollow">http://cargo.codehaus.org/</a> is not updated directly, add the <strong>?nc=1</strong> option to the end of the URL; for example <a href="http://cargo.codehaus.org/Jetty+7.x?nc=1" class="external-link" rel="nofollow">http://cargo.codehaus.org/Jetty+7.x?nc=1</a></li></ul></li><li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a>is up to date.<br /><ul><li>The source file (that you need to import using the <strong>Insert</strong> -&gt; <strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code>.</li><li>If the web page in <a href="http://cargo.codehaus.org/" class="external-link" rel="nofollow">http://cargo.codehaus.org/</a> is not updated directly, add the <strong>?nc=1</strong> option to the end of the URL; i.e. <a href="http://cargo.codehaus.org/DataSource+and+Resource+Support" class="external-link" rel="nofollow">http://cargo.codehaus.org/DataSource+and+Resource+Support</a></li></ul></li><li>Make sure the <a href="Project+Structure.html">Project Structure</a>is up to date.<br /><ul><li>The source file (that you need to import using the <strong>Insert</strong> -&gt; <strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code>.</li><li>If the web page in <a href="http://cargo.codehaus.org/" class="external-link" rel="nofollow">http://cargo.codehaus.org/</a> is not updated directly, add the <strong>?nc=1</strong> option to the end of the URL; i.e. <a href="http://cargo.codehaus.org/Project+Structure?nc=1" class="external-link" rel="nofollow">http://cargo.codehaus.org/Project+Structure?nc=1</a></li></ul></li></ul></li><li>Modify the <a href="Home.html">Home</a> page to update the available version number and release date</li><li>Modify the <a href="Maven2+Plugin+Installation.html">Maven2 Plugin Installation</a> page to have the latest <code>SNAPSHOT</code> version in there</li><li>Create a <a href="https://docs.codehaus.org/pages/createblogpost.action?spaceKey=CARGO" class="external-link" rel="nofollow">blog post</a></li><li><a href="https://docs.codehaus.org/spaces/exportspacehtml.action?key=CARGO" class="external-link" rel="nofollow">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="Downloads.html">Downloads</a> page</li><li>Move the old version to the <a href="Archived+Downloads.html">Archived Downloads</a> page<br /><ul><li>Remember to move the old documentation archive from the <a href="Downloads.html">Downloads</a> page to that page as well</li></ul></li><li>Modify the <a href="Downloads.html">Downloads</a> page to update the download links, available version number, documentation and release note links</li></ol></li><li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevent sites you know about. Mailing lists of some servers can also be interesting.</li></ol><div class="confluence-information-macro confluence-information-macro-information"><p class="title">How to insert using the Wiki Markup</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>To insert content using <strong>Wiki Markup</strong>:</p><ol><li>Edit the document in the Codehaus Confluence</li><li>Clear the existing content by selecting all content and pressing delete on your keyboard</li><li>On the toolbar, click <strong>Insert</strong> -&gt; <strong>Wiki markup</strong>:<br /><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="104" title="Insert wiki markup.png"></span></li><li>Paste the wiki markup content</li></ol></div></div>
-      </td>
+</pre> 
+         </div>
+        </div></li>
+      </ul><h3 id="Releaseprocedure-Beforeyoustart">Before you start</h3><p>Before releasing, make sure what is going to be released is fully functional; in particular check that all containers pass all tests.</p>
+      <ul>
+       <li>All containers with a public download link are automatically tested by the <a class="external-link" href="https://semaphoreci.com/codehaus-cargo/cargo" rel="nofollow">Continous Integration system</a> every time there is a code change:
+        <ol>
+         <li>Open the CI page and click on the latest build</li>
+         <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
+         <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="105"></span><br><br></li>
+        </ol></li>
+       <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
+        <ul>
+         <li><a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/JBoss+7.2.x" rel="nofollow">JBoss 7.2.x</a>, i.e. JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.1, and onwards</li>
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+         <li>All versions of Orion/OC4J</li>
+         <li>All versions of WebLogic</li>
+         <li>All versions of WebSphere</li>
+        </ul></li>
+      </ul><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3>
+      <ol>
+       <li>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</li>
+       <li>Check if there have been SVN commits on that artifact since the latest stable release. If there have been, you'll need to release.
+        <ul>
+         <li>The parent (<strong>pom</strong>) typically don't change between versions.</li>
+        </ul></li>
+       <li>First release the parent if required. Promote the staged artifact and wait for it to be synced to Maven Central (typically takes an hour or two).</li>
+       <li>Then release each of the code trunks <strong>resources</strong>, <strong>core</strong> and <strong>extensions</strong>.</li>
+       <li>In each code trunk's topmost pom.xml, change the links to the other trunks' versions to ${project.version} (the maven-release-plugin updates this to the actual version during release).</li>
+      </ol><p>The typical Maven release procedure is to execute these commands for each trunk (i.e. repeat this for each trunk):</p>
+      <ol>
+       <li>A dry-run before doing the actual release to ensure there aren't any problems:<br> <code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
+       <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process
+        <ul>
+         <li>If the Subversion commit fails, try executing the same command but add <code><strong>-Dusername=your_user_name -Dpassword=your_password</strong></code> (of course, replace with your own user name and password on the CARGO SCM)</li>
+        </ul></li>
+       <li><code><strong>mvn release:perform</strong></code>: deploys the tagged artifacts on the Codehaus Nexus staging repository
+        <ul>
+         <li>If you're running on Maven 2.2.0 (note: that's the version that ships with some flavors of MacOS X), you might run into SHA1 and MD5 signature verification issues. Please upgrade to Maven 2.2.1.</li>
+         <li>If you get a message saying: <code>Error deploying artifact: Failed to transfer file. Return code is: 401 Unauthorized</code>, please make sure your credentials in the <code>settings.xml</code> file are correct.</li>
+        </ul></li>
+      </ol>
+      <div class="confluence-information-macro confluence-information-macro-note">
+       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>Release may take up to 6 hours. Make sure you have time before you start <img class="emoticon emoticon-smile" src="attachments/smile.png" data-emoticon-name="smile" alt="(smile)"></p>
+       </div>
+      </div>
+      <div class="confluence-information-macro confluence-information-macro-note">
+       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>Sometimes, you might get a message saying <code>Error deploying artifact: Failed to create destination WebDAV collection (directory): unable to find valid certification path to requested target</code>, that's because the Codehaus HTTPS WebDAV servers' certificate is not installed on your computer. In this case:</p>
+        <ol>
+         <li>Download and compile the program from <a href="attachments/InstallCert.java" data-linked-resource-id="492355" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="InstallCert.java" data-nice-type="Text File" data-linked-resource-content-type="text/plain" data-linked-resource-container-id="491632" data-linked-resource-container-version="105">InstallCert.java</a></li>
+         <li>Execute the program <code>java InstallCert dav.codehaus.org</code> and make it install one of the certificates. If you run the program again, it should be happy and tell you that all certificates are installed.</li>
+         <li>Add the generated <code>jssecacerts</code> file to your <code>$JAVA_HOME/jre/lib/security</code> directory.</li>
+        </ol>
+       </div>
+      </div><h3 id="Releaseprocedure-Promotingthestagedversion">Promoting the staged version</h3><p>Once the new CARGO version is in the Codehaus Nexus staging repository, send an e-mail to the CARGO list so users can try out the new version. We typically leave the vote open for 72 hours.</p><p>Once the developers/users also validate the version as being stable, we need to do the actual release:</p>
+      <ol>
+       <li>Follow the guide on <a href="https://docs.sonatype.org/display/Repository/Closing+a+Staging+Repository" class="external-link" rel="nofollow">closing a staging repository on Codehaus Nexus</a> and <a href="https://docs.sonatype.org/display/Repository/Releasing+a+Staging+Repository" class="external-link" rel="nofollow">releasing a closed staging repository on Codehaus Nexus</a>in order to release the CARGO artifacts to Maven Central.<br>
+        <ul>
+         <li>Tip: If the staged version was not good, read the instructions for <a href="https://docs.sonatype.org/display/Repository/Dropping+a+Staging+Repository" class="external-link" rel="nofollow">dropping a staging repository on Codehaus Nexus</a>.</li>
+         <li>Important: The artifacts cannot be taken back once they've reached Maven Central.</li>
+        </ul></li>
+       <li>Log onto Cargo JIRA, <a href="https://codehaus-cargo.atlassian.net/plugins/servlet/project-config/CARGO/versions" class="external-link" rel="nofollow">release the current version and add the next version</a>.</li>
+       <li>Check that the Cargo wiki is up to date. Specifically, perform the following updates:<br>
+        <ol>
+         <li>Modify the status on the home page about the delivery:<br>
+          <ul>
+           <li>Make sure the <a href="Containers.html">Containers list</a> is complete</li>
+           <li>Make sure the <a href="Navigation.html">Navigation page</a> is complete</li>
+           <li>Make sure the <a href="Javadocs.html">Javadocs for the Core Containers</a> are complete</li>
+           <li>Make sure the documentation for each container is up to date.<br>
+            <ul>
+             <li>The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code>core/documentation/target/<em>[container's name]</em>.log</code>.</li>
+             <li>If the web page in <a href="http://cargo.codehaus.org/" class="external-link" rel="nofollow">http://cargo.codehaus.org/</a> is not updated directly, add the <strong>?nc=1</strong> option to the end of the URL; for example <a href="http://cargo.codehaus.org/Jetty+7.x?nc=1" class="external-link" rel="nofollow">http://cargo.codehaus.org/Jetty+7.x?nc=1</a></li>
+            </ul></li>
+           <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a>is up to date.<br>
+            <ul>
+             <li>The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code>.</li>
+             <li>If the web page in <a href="http://cargo.codehaus.org/" class="external-link" rel="nofollow">http://cargo.codehaus.org/</a> is not updated directly, add the <strong>?nc=1</strong> option to the end of the URL; i.e. <a href="http://cargo.codehaus.org/DataSource+and+Resource+Support" class="external-link" rel="nofollow">http://cargo.codehaus.org/DataSource+and+Resource+Support</a></li>
+            </ul></li>
+           <li>Make sure the <a href="Project+Structure.html">Project Structure</a>is up to date.<br>
+            <ul>
+             <li>The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code>.</li>
+             <li>If the web page in <a href="http://cargo.codehaus.org/" class="external-link" rel="nofollow">http://cargo.codehaus.org/</a> is not updated directly, add the <strong>?nc=1</strong> option to the end of the URL; i.e. <a href="http://cargo.codehaus.org/Project+Structure?nc=1" class="external-link" rel="nofollow">http://cargo.codehaus.org/Project+Structure?nc=1</a></li>
+            </ul></li>
+          </ul></li>
+         <li>Modify the <a href="Home.html">Home</a> page to update the available version number and release date</li>
+         <li>Modify the <a href="Maven2+Plugin+Installation.html">Maven2 Plugin Installation</a> page to have the latest&nbsp;<code>SNAPSHOT</code> version in there</li>
+         <li>Create a <a href="https://docs.codehaus.org/pages/createblogpost.action?spaceKey=CARGO" class="external-link" rel="nofollow">blog post</a></li>
+         <li><a href="https://docs.codehaus.org/spaces/exportspacehtml.action?key=CARGO" class="external-link" rel="nofollow">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="Downloads.html">Downloads</a> page</li>
+         <li>Move the old version to the <a href="Archived+Downloads.html">Archived Downloads</a> page<br>
+          <ul>
+           <li>Remember to move the old documentation archive from the <a href="Downloads.html">Downloads</a> page to that page as well</li>
+          </ul></li>
+         <li>Modify the <a href="Downloads.html">Downloads</a> page to update the download links, available version number, documentation and release note links</li>
+        </ol></li>
+       <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevent sites you know about. Mailing lists of some servers can also be interesting.</li>
+      </ol>
+      <div class="confluence-information-macro confluence-information-macro-information">
+       <p class="title">How to insert using the Wiki Markup</p>
+       <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>To insert content using <strong>Wiki Markup</strong>:</p>
+        <ol>
+         <li>Edit the document in the Codehaus Confluence</li>
+         <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
+         <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="105" title="Insert wiki markup.png"></span></li>
+         <li>Paste the wiki markup content</li>
+        </ol>
+       </div>
+      </div> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="footer"> 
+      <table width="100%"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="top"> Copyright 2004-2015. All rights reserved unless otherwise noted.<br> </td> 
+         <td align="right" valign="top"> Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Release+procedure">Atlassian Confluence</a>. </td> 
+        </tr> 
+       </tbody>   
+      </table>   </td>
     </tr>
-    <tr>
-      <td colspan="2" id="footer">
-        <table width="100%"> 
-          <tr>
-            <td align="left" valign="top">
-              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
-            </td>
-            <td align="right" valign="top">
-              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Release+procedure">Atlassian Confluence</a>.
-            </td>
-          </tr>
-        <table>
-      </td>
-    </tr>
+   </tbody>
   </table>
-</body>
+ </body>
 </html>

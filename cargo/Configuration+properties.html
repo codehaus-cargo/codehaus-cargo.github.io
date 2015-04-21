@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<head profile="http://www.w3.org/2000/08/w3c-synd/#">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"/>
-  <link rel="shortcut icon" href="attachments/favicon.ico"/>
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"/>
-
-  <title>Codehaus Cargo - Configuration properties</title>
-
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - Configuration properties</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -22,34 +18,30 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-
+  </script> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script>
-</head>
-
-<body>
-  <table width="100%" id="layout" style="padding:0px;margin0px;border-collapse:collapse;">
-    <tr>
-      <td colspan="2" style="padding:8px;">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr background="attachments/cargo-banner-center.png">
-            <td align="left" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-left.png"/>
-            </td>
-            <td align="right" valign="middle" style="padding:0px;margin:0px;" background="attachments/cargo-banner-center.png">
-              <img src="attachments/cargo-banner-right.png"/>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <!--
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" id="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr> 
+     <td colspan="2" style="padding:8px"> 
+      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="breadcrumbs"> 
+      <!--
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr>
             <td align="left">
@@ -74,64 +66,351 @@
             </td>
           </tr>
         </table>
-         -->
-      </td>
-    </tr>
-    <tr>
-      <td id="leftColumn" valign="top" style="padding-top: 0px;">
-          <h3 id="Navigation-QuickLinks">Quick Links</h3><ul class="alternate"><li><a href="Home.html">Home</a></li><li><a href="Downloads.html">Downloads</a></li><li><a href="Quick+start.html">Quick start</a></li><li><a href="Contributing.html">How to contribute?</a><ul class="alternate"><li><a href="Adding+a+container.html">Adding a container</a></li></ul></li></ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3><ul class="alternate"><li>Overview<br /><ul class="alternate"><li><a href="Architecture.html">Architecture</a></li><li><a href="Features.html">Features</a></li></ul></li><li><a href="Installation.html">Installation</a></li><li>Usage<br /><ul class="alternate"><li><a href="Javadocs.html">Java API</a></li><li><a href="Functional+testing.html">Functional testing with JUnit</a></li><li><a href="Ant+support.html">Ant tasks</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li></ul></li><li><a href="Articles.html">Articles</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-Containers">Containers</h3><ul class="alternate"><li>Geronimo<ul class="alternate"><li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li><li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li><li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li></ul></li></ul><ul class="alternate"><li>Glassfish<ul class="alternate"><li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li><li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li><li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li></ul></li></ul><ul class="alternate"><li>JBoss<ul class="alternate"><li><a href="JBoss+3.x.html">JBoss 3.x</a></li><li><a href="JBoss+4.x.html">JBoss 4.x</a></li><li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li><li><a href="JBoss+5.x.html">JBoss 5.x</a></li><li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li><li><a href="JBoss+6.x.html">JBoss 6.x</a></li><li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li><li><a href="JBoss+7.x.html">JBoss 7.x</a></li><li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li><li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li><li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li><li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li></ul></li></ul><ul class="alternate"><li>Jetty<ul class="alternate"><li><a href="Jetty+4.x.html">Jetty 4.x</a></li><li><a href="Jetty+5.x.html">Jetty 5.x</a></li><li><a href="Jetty+6.x.html">Jetty 6.x</a></li><li><a href="Jetty+7.x.html">Jetty 7.x</a></li><li><a href="Jetty+8.x.html">Jetty 8.x</a></li><li><a href="Jetty+9.x.html">Jetty 9.x</a></li></ul></li></ul><ul class="alternate"><li>Jo!<ul class="alternate"><li><a href="jo+1.x.html">jo 1.x</a></li></ul></li></ul><ul class="alternate"><li>JOnAS<ul class="alternate"><li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li><li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li></ul></li></ul><ul class="alternate"><li>JRun<ul class="alternate"><li><a href="JRun+4.x.html">JRun 4.x</a></li></ul></li></ul><ul class="alternate"><li>Orion/OC4J<ul class="alternate"><li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li><li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li></ul></li></ul><ul class="alternate"><li>Resin<ul class="alternate"><li><a href="Resin+2.x.html">Resin 2.x</a></li><li><a href="Resin+3.x.html">Resin 3.x</a></li><li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li><li><a href="Resin+4.x.html">Resin 4.x</a></li></ul></li></ul><ul class="alternate"><li>Tomcat<ul class="alternate"><li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li><li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li><li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li><li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li><li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li></ul></li></ul><ul class="alternate"><li>TomEE<ul class="alternate"><li><a href="TomEE+1.x.html">TomEE 1.x</a></li></ul></li></ul><ul class="alternate"><li>WebLogic<br /><ul class="alternate"><li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li><li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li><li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li><li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li><li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li><li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li></ul></li></ul><ul class="alternate"><li>WebSphere<br /><ul class="alternate"><li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li></ul></li></ul><ul class="alternate"><li>WildFly<br /><ul class="alternate"><li><a href="WildFly+8.x.html">WildFly 8.x</a></li></ul></li></ul><h3 id="Navigation-Extensions">Extensions</h3><ul class="alternate"><li><a href="Ant+support.html">Ant</a></li><li><a href="Cargo+Daemon.html">Cargo Daemon</a></li><li><a href="Maven2+plugin.html">Maven2/Maven3</a></li></ul><p>Independent extensions:</p><ul class="alternate"><li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li><li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li></ul><h3 id="Navigation-ProjectInfo">Project Info</h3><ul class="alternate"><li><a href="Roadmap.html">Roadmap</a></li><li><a href="News.html">News</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li><li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li><li><a href="SVN.html">SVN</a></li><li><a href="Mailing+Lists.html">Mailing Lists</a></li><li><a href="License.html">License</a></li><li><a href="Credits.html">Credits</a></li></ul><h3 id="Navigation-GetInvolved">Get Involved</h3><ul class="alternate"><li><a href="Contributing.html">Contributing</a></li><li><a href="Discussions.html">Discussions</a></li></ul><h3 id="Navigation-Development">Development</h3><ul class="alternate"><li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li><li><a href="Project+Structure.html">Project Structure</a></li><li><a href="Importing+sources.html">Importing sources</a></li><li><a href="Building.html">Building</a></li><li><a href="Release+procedure.html">Release procedure</a></li><li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br /><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li></ul>
-
-          <h3 class="heading3">Feeds</h3>
-          <table border="0" cellspacing="4px">
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a>
-            </td>
-            <td align="left">
-              <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a>
-            </td>
-          </tr>
-        </table>
-      </td>
-      <td id="rightColumn" valign="top">
-        <script type="text/javascript">
+         --> </td> 
+    </tr> 
+    <tr> 
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
+         <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="SVN.html">SVN</a></li>
+       <li><a href="Mailing+Lists.html">Mailing Lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
+      <ul class="alternate">
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Discussions.html">Discussions</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
+       <li><a href="Project+Structure.html">Project Structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="attachments/shields_badge.svg" data-image-src="attachments/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td id="rightColumn" valign="top"> <script type="text/javascript">
           // Google Ads code
           google_ad_client = "ca-pub-7996505557003356";
           google_ad_slot = "5363897989";
           google_ad_width = 728;
           google_ad_height = 90;
-        </script>
-        <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
-          <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script>
-        </center>
-
-        <h3 id="Configurationproperties-Definition">Definition</h3>Properties to configure a container (request port, shutdown port, logging level, threads, etc)<h3 id="Configurationproperties-Explanations">Explanations</h3><p>It is possible to set container configuration properties using the Cargo API. These properties are applied to a <a href="Configuration.html">Configuration</a>.</p><p>There are 2 kinds of properties:</p><ul><li>General properties</li><li>Container-specific properties. See each <a href="Containers.html">container</a>'s page for a list of all the properties it supports.</li></ul><p>Some general properties:</p><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh"><p>Property name</p></th><th class="confluenceTh"><p>Java constant (for the Java API)</p></th><th class="confluenceTh"><p>Description</p></th><th class="confluenceTh"><p>Valid values</p></th><th class="confluenceTh"><p>Default value</p></th><th class="confluenceTh"><p>Example</p></th></tr><tr><td class="confluenceTd"><pre>cargo.hostname</pre></td><td class="confluenceTd"><pre>GeneralPropertySet.HOSTNAME</pre></td><td class="confluenceTd"><p>Host name on which the container listens to</p></td><td class="confluenceTd"><p>string</p></td><td class="confluenceTd"><pre>localhost</pre></td><td class="confluenceTd"><pre>myserver</pre></td></tr><tr><td class="confluenceTd"><pre>cargo.jvmargs</pre></td><td class="confluenceTd"><pre>GeneralPropertySet.JVMARGS</pre></td><td class="confluenceTd"><p>JVM args to be used when starting/stopping containers</p></td><td class="confluenceTd"><p>string</p></td><td class="confluenceTd"><pre>N/A</pre></td><td class="confluenceTd"><pre>-Xmx500m</pre></td></tr><tr><td class="confluenceTd"><pre>cargo.logging</pre></td><td class="confluenceTd"><pre>GeneralPropertySet.LOGGING</pre></td><td class="confluenceTd"><p>Level representing the quantity of information we wish to log</p></td><td class="confluenceTd"><p><code>low</code>, <code>medium</code> or <code>high</code></p></td><td class="confluenceTd"><pre>medium</pre></td><td class="confluenceTd"><pre>high</pre></td></tr><tr><td class="confluenceTd"><pre>cargo.protocol</pre></td><td class="confluenceTd"><pre>GeneralPropertySet.PROTOCOL</pre></td><td class="confluenceTd"><p>Protocol on which the container is listening to</p></td><td class="confluenceTd"><p><code>http</code> or <code>https</code></p></td><td class="confluenceTd"><pre>http</pre></td><td class="confluenceTd"><pre>http</pre></td></tr><tr><td class="confluenceTd"><pre>cargo.remote.password</pre></td><td class="confluenceTd"><pre>RemotePropertySet.PASSWORD</pre></td><td class="confluenceTd"><p>Password to use to authenticate against a remote container (when deploying for example)</p></td><td class="confluenceTd"><p>string</p></td><td class="confluenceTd"><p>Depends on the container</p></td><td class="confluenceTd"><pre>manager</pre></td></tr><tr><td class="confluenceTd"><pre>cargo.remote.username</pre></td><td class="confluenceTd"><pre>RemotePropertySet.USERNAME</pre></td><td class="confluenceTd"><p>Username to use to authenticate against a remote container (when deploying for example)</p></td><td class="confluenceTd"><p>string</p></td><td class="confluenceTd"><p>Depends on the container</p></td><td class="confluenceTd"><pre>system</pre></td></tr><tr><td class="confluenceTd"><pre>cargo.rmi.port</pre></td><td class="confluenceTd"><pre>GeneralPropertySet.RMI_PORT</pre></td><td class="confluenceTd"><p>The port to use when communicating with this server, for example to start and stop it</p></td><td class="confluenceTd"><p>integer</p></td><td class="confluenceTd"><p>Depends on the container</p></td><td class="confluenceTd"><pre>1099</pre></td></tr><tr><td class="confluenceTd"><pre>cargo.servlet.port</pre></td><td class="confluenceTd"><pre>ServletPropertySet.PORT</pre></td><td class="confluenceTd"><p>Port on which the Servlet/JSP container listens to</p></td><td class="confluenceTd"><p>integer</p></td><td class="confluenceTd"><pre>8080</pre></td><td class="confluenceTd"><pre>8280</pre></td></tr><tr><td class="confluenceTd"><pre>cargo.servlet.users</pre></td><td class="confluenceTd"><pre>ServletPropertySet.USERS</pre></td><td class="confluenceTd"><p>Allow defining users, passwords and map to roles. Note that having no roles at all for a user is allowed.</p></td><td class="confluenceTd"><p>string</p></td><td class="confluenceTd"><p>N/A</p></td><td class="confluenceTd"><pre>name1:pwd1:role11,...,role1N|name2:pwd2:role21,...,role2N|...</pre></td></tr></tbody></table></div><div class="confluence-information-macro confluence-information-macro-information"><p class="title">Datasource and Resource configuration</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>In addition to the &quot;simple&quot; properties presented here, some container also support properties for setting up datasources. You can read more on: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</p></div></div><h3 id="Configurationproperties-SupportMatrix">Support Matrix</h3><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh"><p>Java</p></th><th class="confluenceTh"><p>Ant</p></th><th class="confluenceTh"><p>Maven2</p></th></tr><tr><td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)" /></p></td><td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)" /></p></td><td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)" /></p></td></tr></tbody></table></div><h3 id="Configurationproperties-JavaAPI">Java API</h3><p>Example of starting Tomcat 5.x on port 8081:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>Configuration configuration = 
-    new Tomcat5xStandaloneLocalConfiguration(&quot;target/tomcat5x&quot;));
-configuration.setProperty(ServletPropertySet.PORT, &quot;8081&quot;);
+        </script> 
+      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script> 
+      </center> <h3 id="Configurationproperties-Definition">Definition</h3>Properties to configure a container (request port, shutdown port, logging level, threads, etc)<h3 id="Configurationproperties-Explanations">Explanations</h3><p>It is possible to set container configuration properties using the Cargo API. These properties are applied to a <a href="Configuration.html">Configuration</a>.</p><p>There are 2 kinds of properties:</p>
+      <ul>
+       <li>General properties</li>
+       <li>Container-specific properties. See each <a href="Containers.html">container</a>'s page for a list of all the properties it supports.</li>
+      </ul><p>Some general properties:</p>
+      <div class="table-wrap">
+       <table class="confluenceTable">
+        <tbody>
+         <tr>
+          <th class="confluenceTh"><p>Property name</p></th>
+          <th class="confluenceTh"><p>Java constant (for the Java API)</p></th>
+          <th class="confluenceTh"><p>Description</p></th>
+          <th class="confluenceTh"><p>Valid values</p></th>
+          <th class="confluenceTh"><p>Default value</p></th>
+          <th class="confluenceTh"><p>Example</p></th>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><pre>cargo.hostname</pre></td>
+          <td class="confluenceTd"><pre>GeneralPropertySet.HOSTNAME</pre></td>
+          <td class="confluenceTd"><p>Host name on which the container listens to</p></td>
+          <td class="confluenceTd"><p>string</p></td>
+          <td class="confluenceTd"><pre>localhost</pre></td>
+          <td class="confluenceTd"><pre>myserver</pre></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><pre>cargo.jvmargs</pre></td>
+          <td class="confluenceTd"><pre>GeneralPropertySet.JVMARGS</pre></td>
+          <td class="confluenceTd"><p>JVM args to be used when starting/stopping containers</p></td>
+          <td class="confluenceTd"><p>string</p></td>
+          <td class="confluenceTd"><pre>N/A</pre></td>
+          <td class="confluenceTd"><pre>-Xmx500m</pre></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><pre>cargo.logging</pre></td>
+          <td class="confluenceTd"><pre>GeneralPropertySet.LOGGING</pre></td>
+          <td class="confluenceTd"><p>Level representing the quantity of information we wish to log</p></td>
+          <td class="confluenceTd"><p><code>low</code>,&nbsp;<code>medium</code> or&nbsp;<code>high</code></p></td>
+          <td class="confluenceTd"><pre>medium</pre></td>
+          <td class="confluenceTd"><pre>high</pre></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><pre>cargo.protocol</pre></td>
+          <td class="confluenceTd"><pre>GeneralPropertySet.PROTOCOL</pre></td>
+          <td class="confluenceTd"><p>Protocol on which the container is listening to</p></td>
+          <td class="confluenceTd"><p><code>http</code> or <code>https</code></p></td>
+          <td class="confluenceTd"><pre>http</pre></td>
+          <td class="confluenceTd"><pre>http</pre></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><pre>cargo.remote.password</pre></td>
+          <td class="confluenceTd"><pre>RemotePropertySet.PASSWORD</pre></td>
+          <td class="confluenceTd"><p>Password to use to authenticate against a remote container (when deploying for example)</p></td>
+          <td class="confluenceTd"><p>string</p></td>
+          <td class="confluenceTd"><p>Depends on the container</p></td>
+          <td class="confluenceTd"><pre>manager</pre></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><pre>cargo.remote.username</pre></td>
+          <td class="confluenceTd"><pre>RemotePropertySet.USERNAME</pre></td>
+          <td class="confluenceTd"><p>Username to use to authenticate against a remote container (when deploying for example)</p></td>
+          <td class="confluenceTd"><p>string</p></td>
+          <td class="confluenceTd"><p>Depends on the container</p></td>
+          <td class="confluenceTd"><pre>system</pre></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><pre>cargo.rmi.port</pre></td>
+          <td class="confluenceTd"><pre>GeneralPropertySet.RMI_PORT</pre></td>
+          <td class="confluenceTd"><p>The port to use when communicating with this server, for example to start and stop it</p></td>
+          <td class="confluenceTd"><p>integer</p></td>
+          <td class="confluenceTd"><p>Depends on the container</p></td>
+          <td class="confluenceTd"><pre>1099</pre></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><pre>cargo.servlet.port</pre></td>
+          <td class="confluenceTd"><pre>ServletPropertySet.PORT</pre></td>
+          <td class="confluenceTd"><p>Port on which the Servlet/JSP container listens to</p></td>
+          <td class="confluenceTd"><p>integer</p></td>
+          <td class="confluenceTd"><pre>8080</pre></td>
+          <td class="confluenceTd"><pre>8280</pre></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><pre>cargo.servlet.users</pre></td>
+          <td class="confluenceTd"><pre>ServletPropertySet.USERS</pre></td>
+          <td class="confluenceTd"><p>Allow defining users, passwords and map to roles. Note that having no roles at all for a user is allowed.</p></td>
+          <td class="confluenceTd"><p>string</p></td>
+          <td class="confluenceTd"><p>N/A</p></td>
+          <td class="confluenceTd"><pre>name1:pwd1:role11,...,role1N|name2:pwd2:role21,...,role2N|...</pre></td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div class="confluence-information-macro confluence-information-macro-information">
+       <p class="title">Datasource and Resource configuration</p>
+       <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+       <div class="confluence-information-macro-body">
+        <p>In addition to the "simple" properties presented here, some container also support properties for setting up datasources. You can read more on: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</p>
+       </div>
+      </div><h3 id="Configurationproperties-SupportMatrix">Support Matrix</h3>
+      <div class="table-wrap">
+       <table class="confluenceTable">
+        <tbody>
+         <tr>
+          <th class="confluenceTh"><p>Java</p></th>
+          <th class="confluenceTh"><p>Ant</p></th>
+          <th class="confluenceTh"><p>Maven2</p></th>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+         </tr>
+        </tbody>
+       </table>
+      </div><h3 id="Configurationproperties-JavaAPI">Java API</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>Configuration configuration = 
+    new Tomcat5xStandaloneLocalConfiguration("target/tomcat5x"));
+configuration.setProperty(ServletPropertySet.PORT, "8081");
 [...]
-</pre>
-</div></div><p>You can check if a configuration supports a given property by using <code>Configuration.getCapability().supportsProperty(String propertyName)</code>.</p><p>For example if you want to check if the configuration supports setting the port property:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>boolean isPropertySupported = configuration.getCapability().supportsProperty(ServletPropertySet.PORT);
-</pre>
-</div></div><h3 id="Configurationproperties-AntTask">Ant Task</h3><p>Example of starting Tomcat 5.x on port 8081:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>&lt;cargo containerId=&quot;tomcat5x&quot; home=&quot;c:/apps/jakarta-tomcat-5.0.29&quot; action=&quot;start&quot;&gt;
+</pre> 
+       </div>
+      </div><p>You can check if a configuration supports a given property by using <code>Configuration.getCapability().supportsProperty(String propertyName)</code>.</p><p>For example if you want to check if the configuration supports setting the port property:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>boolean isPropertySupported = configuration.getCapability().supportsProperty(ServletPropertySet.PORT);
+</pre> 
+       </div>
+      </div><h3 id="Configurationproperties-AntTask">Ant Task</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>&lt;cargo containerId="tomcat5x" home="c:/apps/jakarta-tomcat-5.0.29" action="start"&gt;
   &lt;configuration&gt;
-    &lt;property name=&quot;cargo.servlet.port&quot; value=&quot;8081&quot;/&gt;
+    &lt;property name="cargo.servlet.port" value="8081"/&gt;
   &lt;/configuration&gt;
 &lt;/cargo&gt;
-</pre>
-</div></div><h3 id="Configurationproperties-Maven2Plugin">Maven 2 Plugin</h3><p>Example of starting Tomcat 5.x on port 8081:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>&lt;build&gt;
+</pre> 
+       </div>
+      </div><h3 id="Configurationproperties-Maven2Plugin">Maven 2 Plugin</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>&lt;build&gt;
   &lt;plugins&gt;
     &lt;plugin&gt;
       &lt;groupId&gt;org.codehaus.cargo.maven2&lt;/groupId&gt;
@@ -151,27 +430,28 @@ configuration.setProperty(ServletPropertySet.PORT, &quot;8081&quot;);
     &lt;/plugin&gt;
   &lt;/plugins&gt;
 &lt;/build&gt;
-</pre>
-</div></div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or Maven2/Maven3 goals) can also be overriden using Java properties.</p><p>For example, with Maven:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre>mvn -Dcargo.servlet.port=8082 cargo:start
-</pre>
-</div></div>
-      </td>
+</pre> 
+       </div>
+      </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or Maven2/Maven3 goals) can also be overriden using Java properties.</p><p>For example, with Maven:</p>
+      <div class="code panel pdl" style="border-width: 1px;">
+       <div class="codeContent panelContent pdl"> 
+        <pre>mvn -Dcargo.servlet.port=8082 cargo:start
+</pre> 
+       </div>
+      </div> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="footer"> 
+      <table width="100%"> 
+       <tbody>
+        <tr> 
+         <td align="left" valign="top"> Copyright 2004-2015. All rights reserved unless otherwise noted.<br> </td> 
+         <td align="right" valign="top"> Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Configuration+properties">Atlassian Confluence</a>. </td> 
+        </tr> 
+       </tbody>   
+      </table>   </td>
     </tr>
-    <tr>
-      <td colspan="2" id="footer">
-        <table width="100%"> 
-          <tr>
-            <td align="left" valign="top">
-              Copyright 2004-2015. All rights reserved unless otherwise noted.<br/>
-            </td>
-            <td align="right" valign="top">
-              Powered by <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Configuration+properties">Atlassian Confluence</a>.
-            </td>
-          </tr>
-        <table>
-      </td>
-    </tr>
+   </tbody>
   </table>
-</body>
+ </body>
 </html>

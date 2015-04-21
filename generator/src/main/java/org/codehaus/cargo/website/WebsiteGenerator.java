@@ -41,8 +41,10 @@ import java.util.Set;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.jsoup.Jsoup;
 
 public class WebsiteGenerator implements Runnable
 {
@@ -159,8 +161,8 @@ public class WebsiteGenerator implements Runnable
             value = value.replaceAll(
                 "<script type=\"syntaxhighlighter\"[^>]+><\\!\\[CDATA\\[", "<pre>");
             value = value.replace("]]></script>", "</pre>");
-            writeFile(file, template.replace("$name", name).replace("$title",
-                URLDecoder.decode(name, "UTF-8")).replace("$value", value));
+            writeFile(file, Jsoup.parse(template.replace("$name", name).replace("$title",
+                URLDecoder.decode(name, "UTF-8")).replace("$value", value)).html());
             System.out.println("  - Wrote file " + file.getAbsolutePath());
         }
         System.out.println("Parsing complete");
