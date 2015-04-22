@@ -29,7 +29,7 @@
   <table width="100%" id="layout" style="border-collapse:collapse"> 
    <tbody>
     <tr> 
-     <td colspan="2" style="padding:8px"> 
+     <td colspan="2" style="padding:0px;border-bottom:1px solid #39434F"> 
       <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
        <tbody>
         <tr> 
@@ -39,9 +39,9 @@
        </tbody>
       </table> </td> 
     </tr> 
-    <tr> 
-     <td colspan="2" id="breadcrumbs"> 
-      <!--
+    <!--
+    <tr>
+      <td colspan="2" id="breadcrumbs">
         <table width="100%" id="banner" style="padding:0px;margin:0px">
           <tr>
             <td align="left">
@@ -66,8 +66,9 @@
             </td>
           </tr>
         </table>
-         --> </td> 
-    </tr> 
+      </td>
+    </tr>
+     --> 
     <tr> 
      <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
@@ -331,7 +332,7 @@
         <ol>
          <li>Open the CI page and click on the latest build</li>
          <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-         <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="105"></span><br><br></li>
+         <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="106"></span><br><br></li>
         </ol></li>
        <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
         <ul>
@@ -376,7 +377,7 @@
        <div class="confluence-information-macro-body">
         <p>Sometimes, you might get a message saying <code>Error deploying artifact: Failed to create destination WebDAV collection (directory): unable to find valid certification path to requested target</code>, that's because the Codehaus HTTPS WebDAV servers' certificate is not installed on your computer. In this case:</p>
         <ol>
-         <li>Download and compile the program from <a href="attachments/InstallCert.java" data-linked-resource-id="492355" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="InstallCert.java" data-nice-type="Text File" data-linked-resource-content-type="text/plain" data-linked-resource-container-id="491632" data-linked-resource-container-version="105">InstallCert.java</a></li>
+         <li>Download and compile the program from <a href="attachments/InstallCert.java" data-linked-resource-id="492355" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="InstallCert.java" data-nice-type="Text File" data-linked-resource-content-type="text/plain" data-linked-resource-container-id="491632" data-linked-resource-container-version="106">InstallCert.java</a></li>
          <li>Execute the program <code>java InstallCert dav.codehaus.org</code> and make it install one of the certificates. If you run the program again, it should be happy and tell you that all certificates are installed.</li>
          <li>Add the generated <code>jssecacerts</code> file to your <code>$JAVA_HOME/jre/lib/security</code> directory.</li>
         </ol>
@@ -432,7 +433,7 @@
         <ol>
          <li>Edit the document in the Codehaus Confluence</li>
          <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
-         <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="105" title="Insert wiki markup.png"></span></li>
+         <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="106" title="Insert wiki markup.png"></span></li>
          <li>Paste the wiki markup content</li>
         </ol>
        </div>
