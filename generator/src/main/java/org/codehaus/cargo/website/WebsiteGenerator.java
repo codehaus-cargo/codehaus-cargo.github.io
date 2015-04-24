@@ -162,7 +162,11 @@ public class WebsiteGenerator implements Runnable
                 "<script type=\"syntaxhighlighter\"[^>]+><\\!\\[CDATA\\[", "<pre>");
             value = value.replace("]]></script>", "</pre>");
             writeFile(file, Jsoup.parse(template.replace("$name", name).replace("$title",
-                URLDecoder.decode(name, "UTF-8")).replace("$value", value)).html());
+                URLDecoder.decode(name, "UTF-8")).replace("$value", value).replace(
+                    "http://jira.codehaus.org/browse/CARGO-",
+                    "https://codehaus-cargo.atlassian.net/browse/CARGO-").replace(
+                    "https://jira.codehaus.org/browse/CARGO-",
+                    "https://codehaus-cargo.atlassian.net/browse/CARGO-")).html());
             System.out.println("  - Wrote file " + file.getAbsolutePath());
         }
         System.out.println("Parsing complete");
