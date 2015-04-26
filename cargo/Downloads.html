@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
@@ -70,7 +71,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -260,489 +261,496 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
-      <form action="Search.html" method="GET"> 
-       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-       <input type="submit" value="Search"> 
-      </form> </td> 
-    </tr> 
-    <tr> 
-     <td id="rightColumn" valign="top"> 
-      <div class="confluence-information-macro confluence-information-macro-note"> 
-       <p class="title">Action required!</p> 
-       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-       <div class="confluence-information-macro-body"> 
-        <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-        <ul> 
-         <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-           <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo mailing lists are now on Google Groups. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo issue tracker is on Atlassian. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-          </ul> </li> 
-        </ul> 
-        <p></p> 
-       </div> 
-      </div> <script type="text/javascript">
-          // Google Ads code
-          google_ad_client = "ca-pub-7996505557003356";
-          google_ad_slot = "5363897989";
-          google_ad_width = 728;
-          google_ad_height = 90;
-        </script> 
-      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script> 
-      </center> <p>The downloads you need to pick depends on how you plan to use Cargo:</p>
-      <ul>
-       <li>If you want to <a href="Javadocs.html">integrate Cargo in your Java code</a>, you'll need to add the following jars to your classpath:<br>
-        <ul>
-         <li>the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars).</li>
-         <li><strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars.</li>
-        </ul></li>
-       <li>If you want to <a href="Ant+support.html">use Cargo from Ant</a>, you'll need to pick the same jars as above in addition to the <code>cargo-ant</code> jar.</li>
-       <li>If you want to <a href="Maven2+plugin.html">use Cargo from Maven 2 or Maven 3</a>, you don't need to install anything at all as Maven will automatically download the required jars when you first use the plugin.</li>
-       <li>If you want to <a href="Cargo+Daemon.html">use the Cargo Daemon</a>, you'll need to download the webapp, and, if you wish to use it from your Java code, the client.</li>
-      </ul><h3 id="Downloads-Lateststablerelease:version1.4.13">Latest stable release: version 1.4.13</h3>
-      <div class="table-wrap">
-       <table class="confluenceTable">
-        <tbody>
-         <tr>
-          <th class="confluenceTh"><p>Category</p></th>
-          <th class="confluenceTh"><p>Version</p></th>
-          <th class="confluenceTh"><p>Artifacts</p></th>
-          <th class="confluenceTh"><p>Source</p></th>
-          <th class="confluenceTh"><p>Description</p></th>
-          <th class="confluenceTh"><p>Release notes</p></th>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><strong>Core Uberjar</strong></p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.13/cargo-core-uberjar-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-uberjar</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.13/cargo-core-uberjar-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Convenience jar containing all the <strong>Core API</strong> and <strong>Core Containers</strong> jars</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><strong>Extensions</strong></p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.13/cargo-ant-1.4.13.jar" class="external-link" rel="nofollow">cargo-ant</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.13/cargo-ant-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>ANT tasks for Cargo</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-maven2-plugin/1.4.13/cargo-maven2-plugin-1.4.13.jar" class="external-link" rel="nofollow">cargo-maven2-plugin</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-maven2-plugin/1.4.13/cargo-maven2-plugin-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Maven2/Maven3 plugin for Cargo</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd">&nbsp;</td>
-          <td colspan="1" class="confluenceTd">1.4.13</td>
-          <td colspan="1" class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.13/cargo-daemon-webapp-1.4.13.war" class="external-link" rel="nofollow">cargo-daemon-webapp</a></p><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-client/1.4.13/cargo-daemon-client-1.4.13.jar" class="external-link" rel="nofollow">cargo-daemon-client</a></p></td>
-          <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.13/cargo-daemon-webapp-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></td>
-          <td colspan="1" class="confluenceTd">Cargo Daemon, a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine.</td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><strong>Tools</strong></p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-jetty-7-and-onwards-deployer/1.4.13/cargo-jetty-7-and-onwards-deployer-1.4.13.war" class="external-link" rel="nofollow">cargo-jetty-7-and-onwards-deployer</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-jetty-7-and-onwards-deployer/1.4.13/cargo-jetty-7-and-onwards-deployer-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 7.x and later (Jetty from Eclipse.org)</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-jetty-6-and-earlier-deployer/1.4.13/cargo-jetty-6-and-earlier-deployer-1.4.13.war" class="external-link" rel="nofollow">cargo-jetty-6-and-earlier-deployer</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-jetty-6-and-earlier-deployer/1.4.13/cargo-jetty-6-and-earlier-deployer-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 6.x and earlier (Jetty from Mortbay.org)</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><strong>Core API</strong></p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-util/1.4.13/cargo-core-api-util-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-api-util</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-util/1.4.13/cargo-core-api-util-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Utility classes used by other core API jars</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-module/1.4.13/cargo-core-api-module-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-api-module</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-module/1.4.13/cargo-core-api-module-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>API to parse/create J2EE Modules (WAR, EAR, etc)</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-container/1.4.13/cargo-core-api-container-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-api-container</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-container/1.4.13/cargo-core-api-container-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>The main Cargo Container API and all associated object</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-generic/1.4.13/cargo-core-api-generic-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-api-generic</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-generic/1.4.13/cargo-core-api-generic-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Generic API wrapping the main Cargo Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><strong>Core Containers</strong></p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-geronimo/1.4.13/cargo-core-container-geronimo-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-geronimo</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-geronimo/1.4.13/cargo-core-container-geronimo-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Geronimo implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-glassfish/1.4.13/cargo-core-container-glassfish-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-glassfish</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-glassfish/1.4.13/cargo-core-container-glassfish-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Glassfish implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jboss/1.4.13/cargo-core-container-jboss-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jboss</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jboss/1.4.13/cargo-core-container-jboss-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>JBoss implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jetty/1.4.13/cargo-core-container-jetty-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jetty</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jetty/1.4.13/cargo-core-container-jetty-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Jetty implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jo/1.4.13/cargo-core-container-jo-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jo</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jo/1.4.13/cargo-core-container-jo-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>jo! implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jonas/1.4.13/cargo-core-container-jonas-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jonas</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jonas/1.4.13/cargo-core-container-jonas-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>JOnAS implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jrun/1.4.13/cargo-core-container-jrun-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jrun</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jrun/1.4.13/cargo-core-container-jrun-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>JRun implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-orion/1.4.13/cargo-core-container-orion-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-orion</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-orion/1.4.13/cargo-core-container-orion-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Orion implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-resin/1.4.13/cargo-core-container-resin-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-resin</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-resin/1.4.13/cargo-core-container-resin-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Resin implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-tomcat/1.4.13/cargo-core-container-tomcat-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-tomcat</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-tomcat/1.4.13/cargo-core-container-tomcat-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>Tomcat implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-tomee/1.4.13/cargo-core-container-tomee-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-tomee</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-tomee/1.4.13/cargo-core-container-tomee-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>TomEE implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p>&nbsp;</p></td>
-          <td class="confluenceTd"><p>1.4.13</p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-weblogic/1.4.13/cargo-core-container-weblogic-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-weblogic</a></p></td>
-          <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-weblogic/1.4.13/cargo-core-container-weblogic-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
-          <td class="confluenceTd"><p>WebLogic implementation of the Core Container API</p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd">&nbsp;</td>
-          <td colspan="1" class="confluenceTd">1.4.13</td>
-          <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-websphere/1.4.13/cargo-core-container-websphere-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-websphere</a></td>
-          <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-websphere/1.4.13/cargo-core-container-websphere-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></td>
-          <td colspan="1" class="confluenceTd"><p>WebSphere implementation of the Core Container API</p></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd">&nbsp;</td>
-          <td colspan="1" class="confluenceTd">1.4.13</td>
-          <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly/1.4.13/cargo-core-container-wildfly-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-wildfly</a></td>
-          <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly/1.4.13/cargo-core-container-wildfly-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></td>
-          <td colspan="1" class="confluenceTd"><p>WildFly implementation of the Core Container API</p></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></td>
-         </tr>
-        </tbody>
-       </table>
-      </div><p><span class="confluence-anchor-link" id="Downloads-documentation"></span></p><h3 id="Downloads-Documentation">Documentation</h3><p>Documentation for Cargo 1.4.13 can be found <a href="attachments/CARGO-1.4.13.zip" data-linked-resource-id="493975" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="CARGO-1.4.13.zip" data-nice-type="Zip Archive" data-linked-resource-content-type="application/zip" data-linked-resource-container-id="491654" data-linked-resource-container-version="225">here</a>.</p><p><span class="confluence-anchor-link" id="Downloads-continousBuilds"></span></p><h3 id="Downloads-Versioncurrentlybeingdeveloped">Version currently being developed</h3><p>If you want to build the latest <code>SNAPSHOT</code> version, please refer to the <a href="Building.html">Building</a> page.</p><h3 id="Downloads-Olderversions">Older versions</h3><p>Older downloads can be found in the <a href="Archived+Downloads.html">Archived Downloads</a> section.</p><h3 id="Downloads-VersionStatus">Version Status</h3><p>Click in the status column to get release notes:</p>
-      <div class="table-wrap">
-       <table class="confluenceTable">
-        <tbody>
-         <tr>
-          <th class="confluenceTh"><p>Version</p></th>
-          <th class="confluenceTh"><p>Status</p></th>
-          <th class="confluenceTh"><p>Comments</p></th>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.1</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10086" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 11/09/2004</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.2</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10088" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 03/10/2004</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.3</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10090" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 30/10/2004</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.4</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10091" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 26/11/2004</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.5</a></p></td>
-          <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10092" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td class="confluenceTd"><p>Released on 30/04/2005</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.6</a></p></td>
-          <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10093" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td class="confluenceTd"><p>Released on 21/07/2005</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.7</a></p></td>
-          <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10008" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td class="confluenceTd"><p>Released on 30/12/2005</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.8</a></p></td>
-          <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10009" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td class="confluenceTd"><p>Released on 22/03/2006</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.9</a></p></td>
-          <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10012" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td class="confluenceTd"><p>Released on 10/03/2007</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10043" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 26/03/2009</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.1</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10046" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 02/06/2010</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.2</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10052" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 08/07/2010</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.3</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10054" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 25/08/2010</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.4</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10056" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 03/11/2010</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.5</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10057" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 20/11/2010</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.6</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10058" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 20/01/2011</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.1.0</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10084" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 05/05/2011</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.1.1</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10085" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 14/06/2011</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.1.2</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10083" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 06/08/2011</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.1.3</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10103" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 05/10/2011</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><a href="Archived+Downloads.html">1.1.4</a></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10082" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 03/12/2011</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.2.0</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10080" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 24/01/2012</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.1</span></a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10105" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 01/04/2012</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.2</span></a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10078" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 21/05/2012</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.3</span></a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10079" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 20/07/2012</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.4</span></a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10106" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 24/08/2012</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.3.0</span></a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10107" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 19/10/2012</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.3.1</span></a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10108" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 11/11/2012</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.3.2</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10081" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 12/01/2013</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.3.3</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10097" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 14/02/2013</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.0</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10109" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 16/04/2013</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.2</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10114" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 29/05/2013</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.3</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10115" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 21/07/2013</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.4</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10116" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 29/08/2013</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.5</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10071" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 18/10/2013</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.6</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10072" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 20/12/2013</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.7</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10073" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 08/02/2014</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.8</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10074" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 01/04/2014</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.9</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10075" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 29/08/2014</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.10</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10038" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 21/09/2014</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.11</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10111" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 21/11/2014</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.12</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10112" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 22/01/2015</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Downloads.html">1.4.13</a></td>
-          <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
-          <td colspan="1" class="confluenceTd"><p>Released on 07/03/2015</p></td>
-         </tr>
-        </tbody>
-       </table>
-      </div> </td> 
+     <td valign="top" style="padding:0px"> 
+      <table style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
+          <form action="Search.html" method="GET"> 
+           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+           <input type="submit" value="Search"> 
+          </form> </td> 
+        </tr> 
+        <tr> 
+         <td id="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-note"> 
+           <p class="title">Action required!</p> 
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
+           <div class="confluence-information-macro-body"> 
+            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
+            <ul> 
+             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
+               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo mailing lists are now on Google Groups. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo issue tracker is on Atlassian. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
+              </ul> </li> 
+            </ul> 
+            <p></p> 
+           </div> 
+          </div> <script type="text/javascript">
+                // Google Ads code
+                google_ad_client = "ca-pub-7996505557003356";
+                google_ad_slot = "5363897989";
+                google_ad_width = 728;
+                google_ad_height = 90;
+              </script> 
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script> 
+          </center> <p>The downloads you need to pick depends on how you plan to use Cargo:</p>
+          <ul>
+           <li>If you want to <a href="Javadocs.html">integrate Cargo in your Java code</a>, you'll need to add the following jars to your classpath:<br>
+            <ul>
+             <li>the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars).</li>
+             <li><strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars.</li>
+            </ul></li>
+           <li>If you want to <a href="Ant+support.html">use Cargo from Ant</a>, you'll need to pick the same jars as above in addition to the <code>cargo-ant</code> jar.</li>
+           <li>If you want to <a href="Maven2+plugin.html">use Cargo from Maven 2 or Maven 3</a>, you don't need to install anything at all as Maven will automatically download the required jars when you first use the plugin.</li>
+           <li>If you want to <a href="Cargo+Daemon.html">use the Cargo Daemon</a>, you'll need to download the webapp, and, if you wish to use it from your Java code, the client.</li>
+          </ul><h3 id="Downloads-Lateststablerelease:version1.4.13">Latest stable release: version 1.4.13</h3>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><p>Category</p></th>
+              <th class="confluenceTh"><p>Version</p></th>
+              <th class="confluenceTh"><p>Artifacts</p></th>
+              <th class="confluenceTh"><p>Source</p></th>
+              <th class="confluenceTh"><p>Description</p></th>
+              <th class="confluenceTh"><p>Release notes</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><strong>Core Uberjar</strong></p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.13/cargo-core-uberjar-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-uberjar</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.13/cargo-core-uberjar-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Convenience jar containing all the <strong>Core API</strong> and <strong>Core Containers</strong> jars</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><strong>Extensions</strong></p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.13/cargo-ant-1.4.13.jar" class="external-link" rel="nofollow">cargo-ant</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.13/cargo-ant-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>ANT tasks for Cargo</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-maven2-plugin/1.4.13/cargo-maven2-plugin-1.4.13.jar" class="external-link" rel="nofollow">cargo-maven2-plugin</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-maven2-plugin/1.4.13/cargo-maven2-plugin-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Maven2/Maven3 plugin for Cargo</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">&nbsp;</td>
+              <td colspan="1" class="confluenceTd">1.4.13</td>
+              <td colspan="1" class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.13/cargo-daemon-webapp-1.4.13.war" class="external-link" rel="nofollow">cargo-daemon-webapp</a></p><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-client/1.4.13/cargo-daemon-client-1.4.13.jar" class="external-link" rel="nofollow">cargo-daemon-client</a></p></td>
+              <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.13/cargo-daemon-webapp-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></td>
+              <td colspan="1" class="confluenceTd">Cargo Daemon, a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine.</td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><strong>Tools</strong></p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-jetty-7-and-onwards-deployer/1.4.13/cargo-jetty-7-and-onwards-deployer-1.4.13.war" class="external-link" rel="nofollow">cargo-jetty-7-and-onwards-deployer</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-jetty-7-and-onwards-deployer/1.4.13/cargo-jetty-7-and-onwards-deployer-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 7.x and later (Jetty from Eclipse.org)</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-jetty-6-and-earlier-deployer/1.4.13/cargo-jetty-6-and-earlier-deployer-1.4.13.war" class="external-link" rel="nofollow">cargo-jetty-6-and-earlier-deployer</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-jetty-6-and-earlier-deployer/1.4.13/cargo-jetty-6-and-earlier-deployer-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 6.x and earlier (Jetty from Mortbay.org)</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><strong>Core API</strong></p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-util/1.4.13/cargo-core-api-util-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-api-util</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-util/1.4.13/cargo-core-api-util-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Utility classes used by other core API jars</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-module/1.4.13/cargo-core-api-module-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-api-module</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-module/1.4.13/cargo-core-api-module-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>API to parse/create J2EE Modules (WAR, EAR, etc)</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-container/1.4.13/cargo-core-api-container-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-api-container</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-container/1.4.13/cargo-core-api-container-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>The main Cargo Container API and all associated object</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-generic/1.4.13/cargo-core-api-generic-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-api-generic</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-api-generic/1.4.13/cargo-core-api-generic-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Generic API wrapping the main Cargo Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><strong>Core Containers</strong></p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-geronimo/1.4.13/cargo-core-container-geronimo-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-geronimo</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-geronimo/1.4.13/cargo-core-container-geronimo-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Geronimo implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-glassfish/1.4.13/cargo-core-container-glassfish-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-glassfish</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-glassfish/1.4.13/cargo-core-container-glassfish-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Glassfish implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jboss/1.4.13/cargo-core-container-jboss-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jboss</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jboss/1.4.13/cargo-core-container-jboss-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>JBoss implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jetty/1.4.13/cargo-core-container-jetty-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jetty</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jetty/1.4.13/cargo-core-container-jetty-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Jetty implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jo/1.4.13/cargo-core-container-jo-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jo</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jo/1.4.13/cargo-core-container-jo-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>jo! implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jonas/1.4.13/cargo-core-container-jonas-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jonas</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jonas/1.4.13/cargo-core-container-jonas-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>JOnAS implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jrun/1.4.13/cargo-core-container-jrun-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-jrun</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-jrun/1.4.13/cargo-core-container-jrun-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>JRun implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-orion/1.4.13/cargo-core-container-orion-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-orion</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-orion/1.4.13/cargo-core-container-orion-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Orion implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-resin/1.4.13/cargo-core-container-resin-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-resin</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-resin/1.4.13/cargo-core-container-resin-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Resin implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-tomcat/1.4.13/cargo-core-container-tomcat-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-tomcat</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-tomcat/1.4.13/cargo-core-container-tomcat-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>Tomcat implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-tomee/1.4.13/cargo-core-container-tomee-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-tomee</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-tomee/1.4.13/cargo-core-container-tomee-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>TomEE implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p>&nbsp;</p></td>
+              <td class="confluenceTd"><p>1.4.13</p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-weblogic/1.4.13/cargo-core-container-weblogic-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-weblogic</a></p></td>
+              <td class="confluenceTd"><p><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-weblogic/1.4.13/cargo-core-container-weblogic-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></p></td>
+              <td class="confluenceTd"><p>WebLogic implementation of the Core Container API</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">&nbsp;</td>
+              <td colspan="1" class="confluenceTd">1.4.13</td>
+              <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-websphere/1.4.13/cargo-core-container-websphere-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-websphere</a></td>
+              <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-websphere/1.4.13/cargo-core-container-websphere-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></td>
+              <td colspan="1" class="confluenceTd"><p>WebSphere implementation of the Core Container API</p></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">&nbsp;</td>
+              <td colspan="1" class="confluenceTd">1.4.13</td>
+              <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly/1.4.13/cargo-core-container-wildfly-1.4.13.jar" class="external-link" rel="nofollow">cargo-core-container-wildfly</a></td>
+              <td colspan="1" class="confluenceTd"><a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly/1.4.13/cargo-core-container-wildfly-1.4.13-sources.jar" class="external-link" rel="nofollow">Source JAR</a></td>
+              <td colspan="1" class="confluenceTd"><p>WildFly implementation of the Core Container API</p></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow">Notes</a></td>
+             </tr>
+            </tbody>
+           </table>
+          </div><p><span class="confluence-anchor-link" id="Downloads-documentation"></span></p><h3 id="Downloads-Documentation">Documentation</h3><p>Documentation for Cargo 1.4.13 can be found <a href="attachments/CARGO-1.4.13.zip" data-linked-resource-id="493975" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="CARGO-1.4.13.zip" data-nice-type="Zip Archive" data-linked-resource-content-type="application/zip" data-linked-resource-container-id="491654" data-linked-resource-container-version="225">here</a>.</p><p><span class="confluence-anchor-link" id="Downloads-continousBuilds"></span></p><h3 id="Downloads-Versioncurrentlybeingdeveloped">Version currently being developed</h3><p>If you want to build the latest <code>SNAPSHOT</code> version, please refer to the <a href="Building.html">Building</a> page.</p><h3 id="Downloads-Olderversions">Older versions</h3><p>Older downloads can be found in the <a href="Archived+Downloads.html">Archived Downloads</a> section.</p><h3 id="Downloads-VersionStatus">Version Status</h3><p>Click in the status column to get release notes:</p>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><p>Version</p></th>
+              <th class="confluenceTh"><p>Status</p></th>
+              <th class="confluenceTh"><p>Comments</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.1</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10086" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 11/09/2004</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.2</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10088" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 03/10/2004</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.3</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10090" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 30/10/2004</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.4</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10091" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 26/11/2004</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.5</a></p></td>
+              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10092" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td class="confluenceTd"><p>Released on 30/04/2005</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.6</a></p></td>
+              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10093" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td class="confluenceTd"><p>Released on 21/07/2005</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.7</a></p></td>
+              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10008" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td class="confluenceTd"><p>Released on 30/12/2005</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.8</a></p></td>
+              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10009" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td class="confluenceTd"><p>Released on 22/03/2006</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">0.9</a></p></td>
+              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10012" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td class="confluenceTd"><p>Released on 10/03/2007</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10043" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 26/03/2009</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.1</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10046" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 02/06/2010</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.2</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10052" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 08/07/2010</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.3</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10054" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 25/08/2010</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.4</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10056" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 03/11/2010</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.5</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10057" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 20/11/2010</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.0.6</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10058" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 20/01/2011</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.1.0</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10084" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 05/05/2011</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.1.1</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10085" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 14/06/2011</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.1.2</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10083" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 06/08/2011</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Archived+Downloads.html">1.1.3</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10103" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 05/10/2011</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><a href="Archived+Downloads.html">1.1.4</a></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10082" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 03/12/2011</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.2.0</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10080" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 24/01/2012</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.1</span></a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10105" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 01/04/2012</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.2</span></a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10078" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 21/05/2012</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.3</span></a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10079" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 20/07/2012</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.4</span></a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10106" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 24/08/2012</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.3.0</span></a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10107" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 19/10/2012</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.3.1</span></a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10108" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 11/11/2012</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.3.2</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10081" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 12/01/2013</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.3.3</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10097" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 14/02/2013</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.0</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10109" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 16/04/2013</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.2</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10114" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 29/05/2013</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.3</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10115" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 21/07/2013</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.4</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10116" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 29/08/2013</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.5</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10071" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 18/10/2013</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.6</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10072" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 20/12/2013</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.7</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10073" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 08/02/2014</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.8</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10074" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 01/04/2014</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.9</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10075" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 29/08/2014</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.10</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10038" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 21/09/2014</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.11</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10111" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 21/11/2014</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.12</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10112" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 22/01/2015</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Downloads.html">1.4.13</a></td>
+              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></td>
+              <td colspan="1" class="confluenceTd"><p>Released on 07/03/2015</p></td>
+             </tr>
+            </tbody>
+           </table>
+          </div> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
     </tr> 
     <tr> 
      <td colspan="2" id="footer"> 

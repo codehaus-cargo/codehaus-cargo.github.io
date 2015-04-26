@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
@@ -70,7 +71,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -260,57 +261,61 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
-      <form action="Search.html" method="GET"> 
-       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-       <input type="submit" value="Search"> 
-      </form> </td> 
-    </tr> 
-    <tr> 
-     <td id="rightColumn" valign="top"> 
-      <div class="confluence-information-macro confluence-information-macro-note"> 
-       <p class="title">Action required!</p> 
-       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-       <div class="confluence-information-macro-body"> 
-        <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-        <ul> 
-         <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-           <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo mailing lists are now on Google Groups. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo issue tracker is on Atlassian. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-          </ul> </li> 
-        </ul> 
-        <p></p> 
-       </div> 
-      </div> <script type="text/javascript">
-          // Google Ads code
-          google_ad_client = "ca-pub-7996505557003356";
-          google_ad_slot = "5363897989";
-          google_ad_width = 728;
-          google_ad_height = 90;
-        </script> 
-      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script> 
-      </center> <p>Releases are now performed using Maven 2 or Maven 3 so you need to have one of these installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
-      <ul>
-       <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html" class="external-link" rel="nofollow">OSSRH guide</a></li>
-       <li><a href="http://www.gnupg.org/" class="external-link" rel="nofollow">The GNU privacy guard (GPG)</a> installed on your machine and at least one secret key.
-        <ul>
-         <li>The secret key's public part must have been uploaded to the <a href="http://pgp.mit.edu/" class="external-link" rel="nofollow">MIT PGP Public Key Server</a>.</li>
-        </ul></li>
-       <li><p>To provide your&nbsp;Sonatype Nexus credentials using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>&lt;settings&gt;
+     <td valign="top" style="padding:0px"> 
+      <table style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
+          <form action="Search.html" method="GET"> 
+           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+           <input type="submit" value="Search"> 
+          </form> </td> 
+        </tr> 
+        <tr> 
+         <td id="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-note"> 
+           <p class="title">Action required!</p> 
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
+           <div class="confluence-information-macro-body"> 
+            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
+            <ul> 
+             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
+               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo mailing lists are now on Google Groups. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo issue tracker is on Atlassian. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
+              </ul> </li> 
+            </ul> 
+            <p></p> 
+           </div> 
+          </div> <script type="text/javascript">
+                // Google Ads code
+                google_ad_client = "ca-pub-7996505557003356";
+                google_ad_slot = "5363897989";
+                google_ad_width = 728;
+                google_ad_height = 90;
+              </script> 
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script> 
+          </center> <p>Releases are now performed using Maven 2 or Maven 3 so you need to have one of these installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
+          <ul>
+           <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html" class="external-link" rel="nofollow">OSSRH guide</a></li>
+           <li><a href="http://www.gnupg.org/" class="external-link" rel="nofollow">The GNU privacy guard (GPG)</a> installed on your machine and at least one secret key.
+            <ul>
+             <li>The secret key's public part must have been uploaded to the <a href="http://pgp.mit.edu/" class="external-link" rel="nofollow">MIT PGP Public Key Server</a>.</li>
+            </ul></li>
+           <li><p>To provide your&nbsp;Sonatype Nexus credentials using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>&lt;settings&gt;
   [...]
   &lt;servers&gt;
     &lt;server&gt;
@@ -322,82 +327,85 @@
   [...]
 &lt;/settings&gt;
 </pre> 
-         </div>
-        </div></li>
-      </ul><h3 id="Releaseprocedure-Beforeyoustart">Before you start</h3><p>Before releasing, make sure what is going to be released is fully functional; in particular check that all containers pass all tests.</p>
-      <ul>
-       <li>All containers with a public download link are automatically tested by the <a class="external-link" href="https://semaphoreci.com/codehaus-cargo/cargo" rel="nofollow">Continous Integration system</a> every time there is a code change:
-        <ol>
-         <li>Open the CI page and click on the latest build</li>
-         <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-         <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="107"></span><br><br></li>
-        </ol></li>
-       <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
-        <ul>
-         <li><a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/JBoss+7.2.x" rel="nofollow">JBoss 7.2.x</a>, i.e. JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.1, and onwards</li>
-         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
-         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
-         <li>All versions of Orion/OC4J</li>
-         <li>All versions of WebLogic</li>
-         <li>All versions of WebSphere</li>
-        </ul></li>
-      </ul><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><p>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p><p>The typical Maven release procedure is to execute these commands:</p>
-      <ol>
-       <li>A dry-run before doing the actual release to ensure there aren't any problems:<br> <code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
-       <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process</li>
-       <li><code><strong>mvn release:perform</strong></code>: deploys the tagged artifacts on the Sonatype Nexus staging repository
-        <ul>
-         <li>If you're running on Maven 2.2.0 (note: that's the version that ships with some flavors of MacOS X), you might run into SHA1 and MD5 signature verification issues. Please upgrade to Maven 2.2.1.</li>
-         <li>If you get a message saying: <code>Error deploying artifact: Failed to transfer file. Return code is: 401 Unauthorized</code>, please make sure your credentials in the <code>settings.xml</code> file are correct.</li>
-        </ul></li>
-      </ol><h3 id="Releaseprocedure-Promotingthestagedversion">Promoting the staged version</h3><p>Once the new Codehaus Cargo version is in the&nbsp;Sonatype Nexus staging repository, follow the below steps for promoting the staged version:</p>
-      <ol>
-       <li>Follow the <a href="http://central.sonatype.org/pages/releasing-the-deployment.html" class="external-link" rel="nofollow">Releasing the Deployment</a> guide in order to <strong>close</strong> the staging repository</li>
-       <li>Send an e-mail to the&nbsp;Codehaus Cargo list so users can try out the new version. We typically leave the vote open for 72 hours.</li>
-       <li>Once the developers/users also validate the version as being stable, follow the <a href="http://central.sonatype.org/pages/releasing-the-deployment.html" class="external-link" rel="nofollow">Releasing the Deployment</a> guide in order to <strong>release</strong> the staging repository<br><u>Note</u>: If the version was not stable, that same guide also explains how to <strong>drop</strong> it</li>
-       <li>Log onto&nbsp;Codehaus Cargo JIRA, <a href="https://codehaus-cargo.atlassian.net/plugins/servlet/project-config/CARGO/versions" class="external-link" rel="nofollow">release the current version and add the next version</a>.</li>
-       <li>Check that the&nbsp;Codehaus Cargo wiki is up to date. Specifically, perform the following updates:<br>
-        <ol>
-         <li>Modify the status on the home page about the delivery:<br>
+             </div>
+            </div></li>
+          </ul><h3 id="Releaseprocedure-Beforeyoustart">Before you start</h3><p>Before releasing, make sure what is going to be released is fully functional; in particular check that all containers pass all tests.</p>
           <ul>
-           <li>Make sure the <a href="Containers.html">Containers list</a> is complete</li>
-           <li>Make sure the <a href="Navigation.html">Navigation page</a> is complete</li>
-           <li>Make sure the <a href="Javadocs.html">Javadocs for the Core Containers</a> are complete</li>
-           <li>Make sure the documentation for each container is up to date.<br><u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code>core/documentation/target/<em>[container's name]</em>.log</code></li>
-           <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code></li>
-           <li>Make sure the <a href="Project+Structure.html">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
-          </ul></li>
-         <li>Modify the <a href="Home.html">Home</a> page to update the available version number and release date</li>
-         <li>Create a <a href="https://docs.codehaus.org/pages/createblogpost.action?spaceKey=CARGO" class="external-link" rel="nofollow">blog post</a></li>
-         <li><a href="https://docs.codehaus.org/spaces/exportspacehtml.action?key=CARGO" class="external-link" rel="nofollow">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="Downloads.html">Downloads</a> page</li>
-         <li>Move the old version to the <a href="Archived+Downloads.html">Archived Downloads</a> page<br>
-          <ul>
-           <li>Remember to move the old documentation archive from the <a href="Downloads.html">Downloads</a> page to that page as well</li>
-          </ul></li>
-         <li>Modify the <a href="Downloads.html">Downloads</a> page to update the download links, available version number, documentation and release note links</li>
-        </ol></li>
-       <li>Check that the&nbsp;Codehaus Cargo Web site is up to date. Specifically, perform the following updates:
-        <ol>
-         <li>Go to the&nbsp;<code>generator</code> subdirectory of the <a href="https://github.com/codehaus-cargo/codehaus-cargo.github.io" class="external-link" rel="nofollow">codehaus-cargo.github.io repository</a> and run a&nbsp;<code>mvn verify</code> command to generate the Web site</li>
-         <li>Download the source code of the tagged version in a temporary location and run a&nbsp;<code>mvn site:site</code> command to generate the API documentation</li>
-         <li>Move the&nbsp;<code>target/apidocs</code> folder to the root of the codehaus-cargo.github.io repository</li>
-         <li>Check in and push all changes, this will automatically update the Codehaus Cargo Web site</li>
-        </ol></li>
-       <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>
-      </ol><p>&nbsp;</p>
-      <div class="confluence-information-macro confluence-information-macro-information">
-       <p class="title">How to insert using the Wiki Markup</p>
-       <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
-       <div class="confluence-information-macro-body">
-        <p>To insert content using <strong>Wiki Markup</strong>:</p>
-        <ol>
-         <li>Edit the document in the Codehaus Confluence</li>
-         <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
-         <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="107" title="Insert wiki markup.png"></span></li>
-         <li>Paste the wiki markup content</li>
-        </ol>
-       </div>
-      </div> </td> 
+           <li>All containers with a public download link are automatically tested by the <a class="external-link" href="https://semaphoreci.com/codehaus-cargo/cargo" rel="nofollow">Continous Integration system</a> every time there is a code change:
+            <ol>
+             <li>Open the CI page and click on the latest build</li>
+             <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
+             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="107"></span><br><br></li>
+            </ol></li>
+           <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
+            <ul>
+             <li><a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/JBoss+7.2.x" rel="nofollow">JBoss 7.2.x</a>, i.e. JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.1, and onwards</li>
+             <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+             <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+             <li>All versions of Orion/OC4J</li>
+             <li>All versions of WebLogic</li>
+             <li>All versions of WebSphere</li>
+            </ul></li>
+          </ul><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><p>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p><p>The typical Maven release procedure is to execute these commands:</p>
+          <ol>
+           <li>A dry-run before doing the actual release to ensure there aren't any problems:<br> <code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
+           <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process</li>
+           <li><code><strong>mvn release:perform</strong></code>: deploys the tagged artifacts on the Sonatype Nexus staging repository
+            <ul>
+             <li>If you're running on Maven 2.2.0 (note: that's the version that ships with some flavors of MacOS X), you might run into SHA1 and MD5 signature verification issues. Please upgrade to Maven 2.2.1.</li>
+             <li>If you get a message saying: <code>Error deploying artifact: Failed to transfer file. Return code is: 401 Unauthorized</code>, please make sure your credentials in the <code>settings.xml</code> file are correct.</li>
+            </ul></li>
+          </ol><h3 id="Releaseprocedure-Promotingthestagedversion">Promoting the staged version</h3><p>Once the new Codehaus Cargo version is in the&nbsp;Sonatype Nexus staging repository, follow the below steps for promoting the staged version:</p>
+          <ol>
+           <li>Follow the <a href="http://central.sonatype.org/pages/releasing-the-deployment.html" class="external-link" rel="nofollow">Releasing the Deployment</a> guide in order to <strong>close</strong> the staging repository</li>
+           <li>Send an e-mail to the&nbsp;Codehaus Cargo list so users can try out the new version. We typically leave the vote open for 72 hours.</li>
+           <li>Once the developers/users also validate the version as being stable, follow the <a href="http://central.sonatype.org/pages/releasing-the-deployment.html" class="external-link" rel="nofollow">Releasing the Deployment</a> guide in order to <strong>release</strong> the staging repository<br><u>Note</u>: If the version was not stable, that same guide also explains how to <strong>drop</strong> it</li>
+           <li>Log onto&nbsp;Codehaus Cargo JIRA, <a href="https://codehaus-cargo.atlassian.net/plugins/servlet/project-config/CARGO/versions" class="external-link" rel="nofollow">release the current version and add the next version</a>.</li>
+           <li>Check that the&nbsp;Codehaus Cargo wiki is up to date. Specifically, perform the following updates:<br>
+            <ol>
+             <li>Modify the status on the home page about the delivery:<br>
+              <ul>
+               <li>Make sure the <a href="Containers.html">Containers list</a> is complete</li>
+               <li>Make sure the <a href="Navigation.html">Navigation page</a> is complete</li>
+               <li>Make sure the <a href="Javadocs.html">Javadocs for the Core Containers</a> are complete</li>
+               <li>Make sure the documentation for each container is up to date.<br><u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code>core/documentation/target/<em>[container's name]</em>.log</code></li>
+               <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code></li>
+               <li>Make sure the <a href="Project+Structure.html">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
+              </ul></li>
+             <li>Modify the <a href="Home.html">Home</a> page to update the available version number and release date</li>
+             <li>Create a <a href="https://docs.codehaus.org/pages/createblogpost.action?spaceKey=CARGO" class="external-link" rel="nofollow">blog post</a></li>
+             <li><a href="https://docs.codehaus.org/spaces/exportspacehtml.action?key=CARGO" class="external-link" rel="nofollow">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="Downloads.html">Downloads</a> page</li>
+             <li>Move the old version to the <a href="Archived+Downloads.html">Archived Downloads</a> page<br>
+              <ul>
+               <li>Remember to move the old documentation archive from the <a href="Downloads.html">Downloads</a> page to that page as well</li>
+              </ul></li>
+             <li>Modify the <a href="Downloads.html">Downloads</a> page to update the download links, available version number, documentation and release note links</li>
+            </ol></li>
+           <li>Check that the&nbsp;Codehaus Cargo Web site is up to date. Specifically, perform the following updates:
+            <ol>
+             <li>Go to the&nbsp;<code>generator</code> subdirectory of the <a href="https://github.com/codehaus-cargo/codehaus-cargo.github.io" class="external-link" rel="nofollow">codehaus-cargo.github.io repository</a> and run a&nbsp;<code>mvn verify</code> command to generate the Web site</li>
+             <li>Download the source code of the tagged version in a temporary location and run a&nbsp;<code>mvn site:site</code> command to generate the API documentation</li>
+             <li>Move the&nbsp;<code>target/apidocs</code> folder to the root of the codehaus-cargo.github.io repository</li>
+             <li>Check in and push all changes, this will automatically update the Codehaus Cargo Web site</li>
+            </ol></li>
+           <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>
+          </ol><p>&nbsp;</p>
+          <div class="confluence-information-macro confluence-information-macro-information">
+           <p class="title">How to insert using the Wiki Markup</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <div class="confluence-information-macro-body">
+            <p>To insert content using <strong>Wiki Markup</strong>:</p>
+            <ol>
+             <li>Edit the document in the Codehaus Confluence</li>
+             <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
+             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="107" title="Insert wiki markup.png"></span></li>
+             <li>Paste the wiki markup content</li>
+            </ol>
+           </div>
+          </div> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
     </tr> 
     <tr> 
      <td colspan="2" id="footer"> 

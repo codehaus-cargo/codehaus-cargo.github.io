@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
@@ -70,7 +71,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -260,55 +261,59 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
-      <form action="Search.html" method="GET"> 
-       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-       <input type="submit" value="Search"> 
-      </form> </td> 
-    </tr> 
-    <tr> 
-     <td id="rightColumn" valign="top"> 
-      <div class="confluence-information-macro confluence-information-macro-note"> 
-       <p class="title">Action required!</p> 
-       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-       <div class="confluence-information-macro-body"> 
-        <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-        <ul> 
-         <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+     <td valign="top" style="padding:0px"> 
+      <table style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
+          <form action="Search.html" method="GET"> 
+           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+           <input type="submit" value="Search"> 
+          </form> </td> 
+        </tr> 
+        <tr> 
+         <td id="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-note"> 
+           <p class="title">Action required!</p> 
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
+           <div class="confluence-information-macro-body"> 
+            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
+            <ul> 
+             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
+               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo mailing lists are now on Google Groups. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo issue tracker is on Atlassian. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
+              </ul> </li> 
+            </ul> 
+            <p></p> 
+           </div> 
+          </div> <script type="text/javascript">
+                // Google Ads code
+                google_ad_client = "ca-pub-7996505557003356";
+                google_ad_slot = "5363897989";
+                google_ad_width = 728;
+                google_ad_height = 90;
+              </script> 
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script> 
+          </center> <h3 id="ReleasenotesforCargo0.5-Implementedissues">Implemented issues</h3> 
+          <div class="aui-message warning jim-inline-block"> 
+           <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration. 
+          </div> <h3 id="ReleasenotesforCargo0.5-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.5-clirr"></span><br> Changes detected by <a href="http://clirr.sourceforge.net" class="external-link" rel="nofollow">Clirr</a> between <code>cargo-0.4.jar</code> and <code>cargo-0.5.jar</code>:</p> 
           <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-           <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo mailing lists are now on Google Groups. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo issue tracker is on Atlassian. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-          </ul> </li> 
-        </ul> 
-        <p></p> 
-       </div> 
-      </div> <script type="text/javascript">
-          // Google Ads code
-          google_ad_client = "ca-pub-7996505557003356";
-          google_ad_slot = "5363897989";
-          google_ad_width = 728;
-          google_ad_height = 90;
-        </script> 
-      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script> 
-      </center> <h3 id="ReleasenotesforCargo0.5-Implementedissues">Implemented issues</h3> 
-      <div class="aui-message warning jim-inline-block"> 
-       <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration. 
-      </div> <h3 id="ReleasenotesforCargo0.5-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.5-clirr"></span><br> Changes detected by <a href="http://clirr.sourceforge.net" class="external-link" rel="nofollow">Clirr</a> between <code>cargo-0.4.jar</code> and <code>cargo-0.5.jar</code>:</p> 
-      <ul> 
-       <li>[Core] <code>org.codehaus.cargo.deployment.*</code> package moved to <code>org.codehaus.cargo.module</code> 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+           <li>[Core] <code>org.codehaus.cargo.deployment.*</code> package moved to <code>org.codehaus.cargo.module</code> 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 ERROR: 8001: org.codehaus.cargo.deployment.DefaultJarArchive: Class org.codehaus.cargo.deployment.DefaultJarArchive removed
 ERROR: 8001: org.codehaus.cargo.deployment.JarArchive: Class org.codehaus.cargo.deployment.JarArchive removed
 ERROR: 8001: org.codehaus.cargo.deployment.application.ApplicationXml: Class org.codehaus.cargo.deployment.application.ApplicationXml removed
@@ -402,14 +407,14 @@ INFO: 8000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmi: Class org.c
 INFO: 8000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiGrammar: Class org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiGrammar added
 INFO: 8000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiIo: Class org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiIo added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Removed ability to add deployables to a Container. They must now either be added to a Configuration for static deployment or using a Deployer for dynamic deployments</li> 
-       <li>[Core] Added a <code>StandaloneConfiguration</code> interface which defines ths <code>addDeployable()</code> method.</li> 
-       <li>[Ant] Moved <code>&lt;war&gt;</code> and <code>&lt;ear&gt;</code> elements inside the <code>&lt;configuration&gt;</code> element 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Removed ability to add deployables to a Container. They must now either be added to a Configuration for static deployment or using a Deployer for dynamic deployments</li> 
+           <li>[Core] Added a <code>StandaloneConfiguration</code> interface which defines ths <code>addDeployable()</code> method.</li> 
+           <li>[Ant] Moved <code>&lt;war&gt;</code> and <code>&lt;ear&gt;</code> elements inside the <code>&lt;configuration&gt;</code> element 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)' has been removed
 ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public java.util.List getDeployables()' has been removed
 ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method 'public void addConfiguredEar(org.codehaus.cargo.ant.EARElement)' has been removed
@@ -435,12 +440,12 @@ ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public 
 INFO: 7011: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method 'public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)' has been added
 INFO: 7011: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Method 'public java.util.List getDeployables()' has been added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Added Deployer interface for dynamic deployments + implementation for Resin, Jetty and Jo1x 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Added Deployer interface for dynamic deployments + implementation for Resin, Jetty and Jo1x 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 8000: org.codehaus.cargo.container.deployer.DefaultDeployerFactory: Class org.codehaus.cargo.container.deployer.DefaultDeployerFactory added
 INFO: 8000: org.codehaus.cargo.container.deployer.DeployableMonitor: Class org.codehaus.cargo.container.deployer.DeployableMonitor added
 INFO: 8000: org.codehaus.cargo.container.deployer.DeployableMonitorListener: Class org.codehaus.cargo.container.deployer.DeployableMonitorListener added
@@ -454,14 +459,14 @@ INFO: 8000: org.codehaus.cargo.container.jo.Jo1xDeployer: Class org.codehaus.car
 INFO: 8000: org.codehaus.cargo.container.spi.DeployerWatchdog: Class org.codehaus.cargo.container.spi.DeployerWatchdog added
 INFO: 8000: org.codehaus.cargo.container.spi.AbstractCopyingDeployer: Class org.codehaus.cargo.container.spi.AbstractCopyingDeployer added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Moved Configuration objects to package <code>org.codehaus.cargo.container.configuration</code> (they were previously in <code>org.codehaus.cargo.container</code>)</li> 
-       <li>[Core] Moved <code>org.codehaus.cargo.container.configuration.ConfigurationFactory</code> to an interface and added a <code>org.codehaus.cargo.container.configuration.DefaultConfigurationFactory</code></li> 
-       <li>[Core] Added new <code>org.codehaus.cargo.container.configuration.ConfigurationCapability</code> class 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Moved Configuration objects to package <code>org.codehaus.cargo.container.configuration</code> (they were previously in <code>org.codehaus.cargo.container</code>)</li> 
+           <li>[Core] Moved <code>org.codehaus.cargo.container.configuration.ConfigurationFactory</code> to an interface and added a <code>org.codehaus.cargo.container.configuration.DefaultConfigurationFactory</code></li> 
+           <li>[Core] Added new <code>org.codehaus.cargo.container.configuration.ConfigurationCapability</code> class 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 ERROR: 7005: org.codehaus.cargo.container.Container: Parameter 1 of 'public void setConfiguration(org.codehaus.cargo.container.Configuration)' has changed its type to org.codehaus.cargo.container.configuration.Configuration
 ERROR: 7006: org.codehaus.cargo.ant.ConfigurationElement: Return type of method 'public org.codehaus.cargo.container.Configuration createConfiguration(org.codehaus.cargo.container.Container)' has been changed to org.codehaus.cargo.container.configuration.Configuration
 ERROR: 8001: org.codehaus.cargo.container.Configuration: Class org.codehaus.cargo.container.Configuration removed
@@ -507,24 +512,24 @@ INFO: 7003: org.codehaus.cargo.container.spi.AbstractConfiguration: Method 'publ
 INFO: 7003: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public java.lang.String getId()' has been removed, but an inherited definition exists.
 INFO: 7003: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public java.lang.String getName()' has been removed, but an inherited definition exists.
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Added Jo 1.x support 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Added Jo 1.x support 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 8000: org.codehaus.cargo.ant.jo.Jo1xCargoTask: Class org.codehaus.cargo.ant.jo.Jo1xCargoTask added
 INFO: 8000: org.codehaus.cargo.container.jo.Jo1xContainer: Class org.codehaus.cargo.container.jo.Jo1xContainer added
 INFO: 8000: org.codehaus.cargo.container.jo.Jo1xDeployer: Class org.codehaus.cargo.container.jo.Jo1xDeployer added
 INFO: 8000: org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration: Class org.codehaus.cargo.container.jo.Jo1xStandaloneConfiguration added
 INFO: 8000: org.codehaus.cargo.container.jo.JoPropertySet: Class org.codehaus.cargo.container.jo.JoPropertySet added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Renamed <code>org.codehaus.cargo.container.Capability</code> to <code>org.codehaus.cargo.container.ContainerCapability</code> 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Renamed <code>org.codehaus.cargo.container.Capability</code> to <code>org.codehaus.cargo.container.ContainerCapability</code> 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 ERROR: 8001: org.codehaus.cargo.container.Capability: Class org.codehaus.cargo.container.Capability removed
 INFO: 8000: org.codehaus.cargo.container.ContainerCapability: Class org.codehaus.cargo.container.ContainerCapability added
 ERROR: 7006: org.codehaus.cargo.container.Container: Return type of method 'public org.codehaus.cargo.container.Capability getCapability()' has been changed to org.codehaus.cargo.container.ContainerCapability
@@ -535,12 +540,12 @@ ERROR: 7006: org.codehaus.cargo.container.tomcat.AbstractTomcatContainer: Return
 ERROR: 7006: org.codehaus.cargo.container.weblogic.AbstractWebLogicContainer: Return type of method 'public org.codehaus.cargo.container.Capability getCapability()' has been changed to org.codehaus.cargo.container.ContainerCapability
 ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public org.codehaus.cargo.container.Capability getCapability()' has been removed
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Moved all Monitor-related classes from <code>org.codehaus.cargo.util</code> to <code>org.codehaus.cargo.util.monitor</code> 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Moved all Monitor-related classes from <code>org.codehaus.cargo.util</code> to <code>org.codehaus.cargo.util.monitor</code> 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 ERROR: 4001: org.codehaus.cargo.container.Container: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
 INFO: 4000: org.codehaus.cargo.container.Container: Added org.codehaus.cargo.util.monitor.Monitorable to the set of implemented interfaces
 ERROR: 4001: org.codehaus.cargo.container.deployable.Deployable: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
@@ -688,31 +693,31 @@ INFO: 8000: org.codehaus.cargo.util.monitor.MonitoredObject: Class org.codehaus.
 INFO: 8000: org.codehaus.cargo.util.monitor.NullMonitor: Class org.codehaus.cargo.util.monitor.NullMonitor added
 INFO: 8000: org.codehaus.cargo.util.monitor.SimpleMonitor: Class org.codehaus.cargo.util.monitor.SimpleMonitor added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Added new <code>org.codehaus.cargo.util.monitor.AntMonitor</code> class 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Added new <code>org.codehaus.cargo.util.monitor.AntMonitor</code> class 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 8000: org.codehaus.cargo.util.monitor.AntMonitor: Class org.codehaus.cargo.util.monitor.AntMonitor added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Promoted <code>org.codehaus.cargo.container.internal.util.FileUtils</code> class to a public <code>org.codehaus.cargo.util.FileUtils</code> class as it is now used in the <code>org.codehaus.cargo.module</code> package (and we do want to have any dependency from <code>org.codehaus.cargo.module</code> to <code>org.codehaus.cargo.container</code> - only in the other direction) 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Promoted <code>org.codehaus.cargo.container.internal.util.FileUtils</code> class to a public <code>org.codehaus.cargo.util.FileUtils</code> class as it is now used in the <code>org.codehaus.cargo.module</code> package (and we do want to have any dependency from <code>org.codehaus.cargo.module</code> to <code>org.codehaus.cargo.container</code> - only in the other direction) 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 8000: org.codehaus.cargo.util.FileUtils: Class org.codehaus.cargo.util.FileUtils added
 ERROR: 8001: org.codehaus.cargo.container.internal.util.FileUtils: Class org.codehaus.cargo.container.internal.util.FileUtils removed
 ERROR: 7006: org.codehaus.cargo.container.spi.AbstractConfiguration: Return type of method 'protected org.codehaus.cargo.container.internal.util.FileUtils getFileUtils()' has been changed to org.codehaus.cargo.util.FileUtils
 ERROR: 7006: org.codehaus.cargo.container.spi.AbstractContainer: Return type of method 'protected org.codehaus.cargo.container.internal.util.FileUtils getFileUtils()' has been changed to org.codehaus.cargo.util.FileUtils
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Added new <code>org.codehaus.cargo.util.CargoException</code> which is the base of all Cargo exceptions. 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Added new <code>org.codehaus.cargo.util.CargoException</code> which is the base of all Cargo exceptions. 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 8000: org.codehaus.cargo.util.CargoException: Class org.codehaus.cargo.util.CargoException added
 WARNING: 5000: org.codehaus.cargo.container.ContainerException: Added org.codehaus.cargo.util.CargoException to the list of superclasses
 INFO: 7000: org.codehaus.cargo.container.ContainerException: Method 'public java.lang.Throwable getOriginalThrowable()' is now implemented in superclass org.codehaus.cargo.util.CargoException
@@ -720,51 +725,51 @@ INFO: 7003: org.codehaus.cargo.container.ContainerException: Method 'public void
 INFO: 7003: org.codehaus.cargo.container.ContainerException: Method 'public void printStackTrace(java.io.PrintStream)' has been removed, but an inherited definition exists.
 INFO: 7003: org.codehaus.cargo.container.ContainerException: Method 'public void printStackTrace(java.io.PrintWriter)' has been removed, but an inherited definition exists.
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Added public APIs <code>org.codehaus.cargo.container.Container.getOutput()</code> and <code>org.codehaus.cargo.container.Container.isAppend()</code> 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Added public APIs <code>org.codehaus.cargo.container.Container.getOutput()</code> and <code>org.codehaus.cargo.container.Container.isAppend()</code> 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 ERROR: 7012: org.codehaus.cargo.container.Container: Method 'public java.io.File getOutput()' has been added to an interface
 ERROR: 7012: org.codehaus.cargo.container.Container: Method 'public boolean isAppend()' has been added to an interface
 INFO: 7010: org.codehaus.cargo.container.spi.AbstractContainer: Accessibility of method 'protected java.io.File getOutput()' has been increased from protected to public
 INFO: 7010: org.codehaus.cargo.container.spi.AbstractContainer: Accessibility of method 'protected boolean isAppend()' has been increased from protected to public
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Fixed proxy support in the Installer by adding a ProxyAuthenticator class</li> 
-       <li>[Core] Added tests for ZipURLInstaller and made small modifications to improve testability 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Fixed proxy support in the Installer by adding a ProxyAuthenticator class</li> 
+           <li>[Core] Added tests for ZipURLInstaller and made small modifications to improve testability 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 8000: org.codehaus.cargo.container.installer.Proxy$ProxyAuthenticator: Class org.codehaus.cargo.container.installer.Proxy$ProxyAuthenticator added
 INFO: 7010: org.codehaus.cargo.container.installer.ZipURLInstaller: Accessibility of method 'private void download()' has been increased from private to protected
 INFO: 7011: org.codehaus.cargo.container.installer.ZipURLInstaller: Method 'protected void setAntTaskFactory(org.codehaus.cargo.container.internal.util.AntTaskFactory)' has been added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Added handy class when implementing Cargo factories based on a container id and a hint 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Added handy class when implementing Cargo factories based on a container id and a hint 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 8000: org.codehaus.cargo.container.spi.AbstractGenericHintFactory: Class org.codehaus.cargo.container.spi.AbstractGenericHintFactory added
 INFO: 8000: org.codehaus.cargo.container.spi.AbstractGenericHintFactory$GenericParameters: Class org.codehaus.cargo.container.spi.AbstractGenericHintFactory$GenericParameters added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Start of a Resin ExistingConfiguration implementation. Does not work yet and must not be used. 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Start of a Resin ExistingConfiguration implementation. Does not work yet and must not be used. 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 8000: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Class org.codehaus.cargo.container.resin.ResinExistingConfiguration added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Added property for supporting container authentication 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Added property for supporting container authentication 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 6000: org.codehaus.cargo.container.property.ServletPropertySet: Added public field USERS
 INFO: 8000: org.codehaus.cargo.container.property.User: Class org.codehaus.cargo.container.property.User added
 INFO: 8000: org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration: Class org.codehaus.cargo.container.tomcat.AbstractTomcatStandaloneConfiguration added
@@ -774,25 +779,28 @@ INFO: 7011: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Met
 INFO: 7011: org.codehaus.cargo.container.orion.OrionStandaloneConfiguration: Method 'protected java.lang.String getUserToken()' has been added
 INFO: 7011: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfiguration: Method 'protected java.lang.String getSecurityToken(java.lang.String, java.lang.String)' has been added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Added <code>org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer.getServer()</code> API to allow users to further configure a Jetty server 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Added <code>org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer.getServer()</code> API to allow users to further configure a Jetty server 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 7011: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Method 'public java.lang.Object getServer()' has been added
 </pre> 
-         </div>
-        </div></li> 
-       <li>[Core] Added possibility to pass JVM arguments to Configurations by introducing a new <code>cargo.jvmargs</code> property 
-        <div class="code panel pdl" style="border-width: 1px;">
-         <div class="codeContent panelContent pdl"> 
-          <pre>
+             </div>
+            </div></li> 
+           <li>[Core] Added possibility to pass JVM arguments to Configurations by introducing a new <code>cargo.jvmargs</code> property 
+            <div class="code panel pdl" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre>
 INFO: 6000: org.codehaus.cargo.container.property.GeneralPropertySet: Added public field JVMARGS
 </pre> 
-         </div>
-        </div></li> 
-      </ul> </td> 
+             </div>
+            </div></li> 
+          </ul> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
     </tr> 
     <tr> 
      <td colspan="2" id="footer"> 

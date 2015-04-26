@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
@@ -70,7 +71,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -260,50 +261,54 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
-      <form action="Search.html" method="GET"> 
-       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-       <input type="submit" value="Search"> 
-      </form> </td> 
-    </tr> 
-    <tr> 
-     <td id="rightColumn" valign="top"> 
-      <div class="confluence-information-macro confluence-information-macro-note"> 
-       <p class="title">Action required!</p> 
-       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-       <div class="confluence-information-macro-body"> 
-        <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-        <ul> 
-         <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-           <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo mailing lists are now on Google Groups. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo issue tracker is on Atlassian. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-          </ul> </li> 
-        </ul> 
-        <p></p> 
-       </div> 
-      </div> <script type="text/javascript">
-          // Google Ads code
-          google_ad_client = "ca-pub-7996505557003356";
-          google_ad_slot = "5363897989";
-          google_ad_width = 728;
-          google_ad_height = 90;
-        </script> 
-      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script> 
-      </center> <h3 id="StaticdeploymentofEAR-Definition">Definition</h3>Deploy an EAR that will be started when the container starts<h3 id="StaticdeploymentofEAR-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Orion 2.x with an EAR to deploy:</p>
-      <div class="code panel pdl" style="border-width: 1px;">
-       <div class="codeContent panelContent pdl"> 
-        <pre>InstalledLocalContainer container = new Orion2xInstalledLocalContainer(
+     <td valign="top" style="padding:0px"> 
+      <table style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
+          <form action="Search.html" method="GET"> 
+           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+           <input type="submit" value="Search"> 
+          </form> </td> 
+        </tr> 
+        <tr> 
+         <td id="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-note"> 
+           <p class="title">Action required!</p> 
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
+           <div class="confluence-information-macro-body"> 
+            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
+            <ul> 
+             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
+               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo mailing lists are now on Google Groups. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo issue tracker is on Atlassian. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
+              </ul> </li> 
+            </ul> 
+            <p></p> 
+           </div> 
+          </div> <script type="text/javascript">
+                // Google Ads code
+                google_ad_client = "ca-pub-7996505557003356";
+                google_ad_slot = "5363897989";
+                google_ad_width = 728;
+                google_ad_height = 90;
+              </script> 
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script> 
+          </center> <h3 id="StaticdeploymentofEAR-Definition">Definition</h3>Deploy an EAR that will be started when the container starts<h3 id="StaticdeploymentofEAR-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Orion 2.x with an EAR to deploy:</p>
+          <div class="code panel pdl" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre>InstalledLocalContainer container = new Orion2xInstalledLocalContainer(
     new OrionStandaloneConfiguration("target/orion2x"));
 container.setHome("c:/apps/orion-2.0.3");
 
@@ -312,21 +317,21 @@ container.getConfiguration().addDeployable(ear);
 
 container.start();
 </pre> 
-       </div>
-      </div><h3 id="StaticdeploymentofEAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting Orion 2.x with an EAR to deploy:</p>
-      <div class="code panel pdl" style="border-width: 1px;">
-       <div class="codeContent panelContent pdl"> 
-        <pre>&lt;cargo containerId="orion2x" home="c:/apps/orion-2.0.3" action="start"&gt;
+           </div>
+          </div><h3 id="StaticdeploymentofEAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting Orion 2.x with an EAR to deploy:</p>
+          <div class="code panel pdl" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre>&lt;cargo containerId="orion2x" home="c:/apps/orion-2.0.3" action="start"&gt;
   &lt;configuration&gt;
     &lt;deployable type="ear" file="src/data/some.ear"/&gt;
   &lt;/configuration&gt;
 &lt;/cargo&gt;
 </pre> 
-       </div>
-      </div><h3 id="StaticdeploymentofEAR-ExampleusingtheMaven2/Maven3API">Example using the Maven2/Maven3 API</h3><p>Here is the plugin configuration defining a JOnAS 5.x container with an EAR to deploy:</p>
-      <div class="code panel pdl" style="border-width: 1px;">
-       <div class="codeContent panelContent pdl"> 
-        <pre>&lt;dependencies&gt;
+           </div>
+          </div><h3 id="StaticdeploymentofEAR-ExampleusingtheMaven2/Maven3API">Example using the Maven2/Maven3 API</h3><p>Here is the plugin configuration defining a JOnAS 5.x container with an EAR to deploy:</p>
+          <div class="code panel pdl" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre>&lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
     &lt;artifactId&gt;simple-ear&lt;/artifactId&gt;
@@ -359,12 +364,15 @@ container.start();
   &lt;/plugin&gt;
 &lt;/plugins&gt;
 </pre> 
-       </div>
-      </div><h3 id="StaticdeploymentofEAR-Formoreinformation...">For more information...</h3><p>For more information about how deployment in CARGO works, please read:</p>
-      <ul>
-       <li><a href="Deployable.html">How deployables work</a>, which explains how to instanciate and personalize deployables.</li>
-       <li><a href="Deployer.html">How deployers work</a>, which explains how the different deployers work.</li>
-      </ul> </td> 
+           </div>
+          </div><h3 id="StaticdeploymentofEAR-Formoreinformation...">For more information...</h3><p>For more information about how deployment in CARGO works, please read:</p>
+          <ul>
+           <li><a href="Deployable.html">How deployables work</a>, which explains how to instanciate and personalize deployables.</li>
+           <li><a href="Deployer.html">How deployers work</a>, which explains how the different deployers work.</li>
+          </ul> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
     </tr> 
     <tr> 
      <td colspan="2" id="footer"> 

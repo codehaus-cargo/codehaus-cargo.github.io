@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
@@ -70,7 +71,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -260,93 +261,97 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
-      <form action="Search.html" method="GET"> 
-       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-       <input type="submit" value="Search"> 
-      </form> </td> 
-    </tr> 
-    <tr> 
-     <td id="rightColumn" valign="top"> 
-      <div class="confluence-information-macro confluence-information-macro-note"> 
-       <p class="title">Action required!</p> 
-       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-       <div class="confluence-information-macro-body"> 
-        <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-        <ul> 
-         <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-           <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo mailing lists are now on Google Groups. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo issue tracker is on Atlassian. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-          </ul> </li> 
-        </ul> 
-        <p></p> 
-       </div> 
-      </div> <script type="text/javascript">
-          // Google Ads code
-          google_ad_client = "ca-pub-7996505557003356";
-          google_ad_slot = "5363897989";
-          google_ad_width = 728;
-          google_ad_height = 90;
-        </script> 
-      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script> 
-      </center> <h3 id="StandaloneLocalConfiguration-Definition">Definition</h3>Configures your container in a specific directory<h3 id="StandaloneLocalConfiguration-Explanation">Explanation</h3><p>The <a href="Standalone+Local+Configuration.html">standalone configuration</a> allows configuring your container so that it is setup to start in a directory you choose (see the <a href="Configuration.html">configuration page</a> for more general explanations).</p><p>Whenever you configure or start a container which uses a standalone configuration, Cargo will:</p>
-      <ul>
-       <li>Delete the configuration directory</li>
-       <li>Create a new configuration in that directory, with all&nbsp;<a href="Configuration+properties.html">configuration properties</a> (including <a href="DataSource+and+Resource+Support.html">data sources and resources</a>) and <a href="XML+replacements.html">XML replacements</a></li>
-       <li>Copy all <a href="Configuration+files+option.html">configuration files</a></li>
-       <li>Perform a <a href="Local+Deployer.html">local deployment</a> of all deployables</li>
-      </ul><p>The reason for this behavior is reproducibility which is for example very useful for automated testing. If you wanted to keep a generated configuration you could ask Cargo to generate a standalone configuration once and then consider it an <a href="Existing+Local+Configuration.html">existing configuration</a>.</p><h3 id="StandaloneLocalConfiguration-SupportMatrix">Support Matrix</h3>
-      <div class="table-wrap">
-       <table class="confluenceTable">
-        <tbody>
-         <tr>
-          <th class="confluenceTh"><p>Java</p></th>
-          <th class="confluenceTh"><p>Ant</p></th>
-          <th class="confluenceTh"><p>Maven2</p></th>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-         </tr>
-        </tbody>
-       </table>
-      </div><h3 id="StandaloneLocalConfiguration-JavaAPI">Java API</h3><p>There are different ways of using a standalone configuration:</p>
-      <ul>
-       <li>By directly instantiating the configuration matching your container. For example:</li>
-      </ul>
-      <div class="error">
-       <span class="error">Unknown macro: {snippet}</span> 
-      </div>
-      <ul>
-       <li>By using the <code>DefaultConfigurationFactory</code> which automatically maps the right implementation for the container you're using. For example:</li>
-      </ul>
-      <div class="error">
-       <span class="error">Unknown macro: {snippet}</span> 
-      </div><h3 id="StandaloneLocalConfiguration-AntTask">Ant Task</h3>
-      <div class="code panel pdl" style="border-width: 1px;">
-       <div class="codeContent panelContent pdl"> 
-        <pre>&lt;cargo containerId="resin3x" [...]&gt;
+     <td valign="top" style="padding:0px"> 
+      <table style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
+          <form action="Search.html" method="GET"> 
+           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+           <input type="submit" value="Search"> 
+          </form> </td> 
+        </tr> 
+        <tr> 
+         <td id="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-note"> 
+           <p class="title">Action required!</p> 
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
+           <div class="confluence-information-macro-body"> 
+            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
+            <ul> 
+             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
+               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo mailing lists are now on Google Groups. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo issue tracker is on Atlassian. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
+              </ul> </li> 
+            </ul> 
+            <p></p> 
+           </div> 
+          </div> <script type="text/javascript">
+                // Google Ads code
+                google_ad_client = "ca-pub-7996505557003356";
+                google_ad_slot = "5363897989";
+                google_ad_width = 728;
+                google_ad_height = 90;
+              </script> 
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script> 
+          </center> <h3 id="StandaloneLocalConfiguration-Definition">Definition</h3>Configures your container in a specific directory<h3 id="StandaloneLocalConfiguration-Explanation">Explanation</h3><p>The <a href="Standalone+Local+Configuration.html">standalone configuration</a> allows configuring your container so that it is setup to start in a directory you choose (see the <a href="Configuration.html">configuration page</a> for more general explanations).</p><p>Whenever you configure or start a container which uses a standalone configuration, Cargo will:</p>
+          <ul>
+           <li>Delete the configuration directory</li>
+           <li>Create a new configuration in that directory, with all&nbsp;<a href="Configuration+properties.html">configuration properties</a> (including <a href="DataSource+and+Resource+Support.html">data sources and resources</a>) and <a href="XML+replacements.html">XML replacements</a></li>
+           <li>Copy all <a href="Configuration+files+option.html">configuration files</a></li>
+           <li>Perform a <a href="Local+Deployer.html">local deployment</a> of all deployables</li>
+          </ul><p>The reason for this behavior is reproducibility which is for example very useful for automated testing. If you wanted to keep a generated configuration you could ask Cargo to generate a standalone configuration once and then consider it an <a href="Existing+Local+Configuration.html">existing configuration</a>.</p><h3 id="StandaloneLocalConfiguration-SupportMatrix">Support Matrix</h3>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><p>Java</p></th>
+              <th class="confluenceTh"><p>Ant</p></th>
+              <th class="confluenceTh"><p>Maven2</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+             </tr>
+            </tbody>
+           </table>
+          </div><h3 id="StandaloneLocalConfiguration-JavaAPI">Java API</h3><p>There are different ways of using a standalone configuration:</p>
+          <ul>
+           <li>By directly instantiating the configuration matching your container. For example:</li>
+          </ul>
+          <div class="error">
+           <span class="error">Unknown macro: {snippet}</span> 
+          </div>
+          <ul>
+           <li>By using the <code>DefaultConfigurationFactory</code> which automatically maps the right implementation for the container you're using. For example:</li>
+          </ul>
+          <div class="error">
+           <span class="error">Unknown macro: {snippet}</span> 
+          </div><h3 id="StandaloneLocalConfiguration-AntTask">Ant Task</h3>
+          <div class="code panel pdl" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre>&lt;cargo containerId="resin3x" [...]&gt;
   &lt;configuration type="standalone" home="target/resin3x"/&gt;
   [...]
 &lt;/cargo&gt;
 </pre> 
-       </div>
-      </div><h3 id="StandaloneLocalConfiguration-Maven2Plugin">Maven2 Plugin</h3>
-      <div class="code panel pdl" style="border-width: 1px;">
-       <div class="codeContent panelContent pdl"> 
-        <pre>[...]
+           </div>
+          </div><h3 id="StandaloneLocalConfiguration-Maven2Plugin">Maven2 Plugin</h3>
+          <div class="code panel pdl" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre>[...]
 &lt;container&gt;
   &lt;containerId&gt;resin3x&lt;/containerId&gt;
   [...]
@@ -357,19 +362,22 @@
 &lt;/configuration&gt;
 [...]
 </pre> 
-       </div>
-      </div><p>Note that the standalone configuration is the default for the Maven 2 plugin so specifying only the following would also work:</p>
-      <div class="code panel pdl" style="border-width: 1px;">
-       <div class="codeContent panelContent pdl"> 
-        <pre>[...]
+           </div>
+          </div><p>Note that the standalone configuration is the default for the Maven 2 plugin so specifying only the following would also work:</p>
+          <div class="code panel pdl" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre>[...]
 &lt;container&gt;
   &lt;containerId&gt;resin3x&lt;/containerId&gt;
   [...]
 &lt;/container&gt;
 [...]
 </pre> 
-       </div>
-      </div> </td> 
+           </div>
+          </div> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
     </tr> 
     <tr> 
      <td colspan="2" id="footer"> 

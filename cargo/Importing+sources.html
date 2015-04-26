@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
@@ -70,7 +71,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -260,67 +261,74 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
-      <form action="Search.html" method="GET"> 
-       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-       <input type="submit" value="Search"> 
-      </form> </td> 
-    </tr> 
-    <tr> 
-     <td id="rightColumn" valign="top"> 
-      <div class="confluence-information-macro confluence-information-macro-note"> 
-       <p class="title">Action required!</p> 
-       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-       <div class="confluence-information-macro-body"> 
-        <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-        <ul> 
-         <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-           <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo mailing lists are now on Google Groups. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo issue tracker is on Atlassian. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-          </ul> </li> 
-        </ul> 
-        <p></p> 
-       </div> 
-      </div> <script type="text/javascript">
-          // Google Ads code
-          google_ad_client = "ca-pub-7996505557003356";
-          google_ad_slot = "5363897989";
-          google_ad_width = 728;
-          google_ad_height = 90;
-        </script> 
-      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script> 
-      </center> <p>This tutorial explains how to import <a href="Source+code.html">Cargo's sources</a> into your IDE (Eclipse and IntelliJ IDEA are covered).</p>
-      <ul>
-       <li>Start by checking out the <a href="Source+code.html">Cargo sources</a> - You can do that using the <a href="http://git-scm.com/downloads" class="external-link" rel="nofollow">Git command line or GUI-based tools</a> or your IDE Subversion feature.</li>
-      </ul>
-      <ul>
-       <li>Install the latest version <a href="http://maven.apache.org/" class="external-link" rel="nofollow">Maven2</a>. Make sure it's installed properly by typing <code>mvn --version</code>.</li>
-      </ul>
-      <ul>
-       <li>Open a shell in the top level directory where you have checked out the Cargo sources.</li>
-      </ul><h3 id="Importingsources-ForEclipseusers">For Eclipse users</h3>
-      <ul>
-       <li>Type <code>mvn eclipse:eclipse</code>. This generates Eclipse files automatically.</li>
-       <li>Start Eclipse.</li>
-       <li>Go to Windows|Preferences|Java|Build Path|Classpath Variables and add a&nbsp;<code>M2_REPO</code> variable to point to your local Maven2 repository (usually in <code>~user/.m2/repository</code>). See also the documentation on the <a href="http://maven.apache.org/plugins/maven-eclipse-plugin/" class="external-link" rel="nofollow">Maven Eclipse plugin</a>.</li>
-       <li>Select Import|Existing Project into Workspace. Point it to the top level directory of the checked-out Cargo sources. You should see something similar to the following figure:</li>
-      </ul><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/import-ide-eclipse-root.jpg" data-image-src="attachments/import-ide-eclipse-root.jpg" data-unresolved-comment-count="0" data-linked-resource-id="491750" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="import-ide-eclipse-root.jpg" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="491688" data-linked-resource-container-version="11"></span></p><p>Note: Maven supports a nested directory structure whereas Eclipse currently only supports a flat structure. The Maven2 Eclipse plugin creates an Eclipse project per Maven module (i.e. per directory containing a <code>pom.xml</code> file). This means that directories with no <code>pom.xml</code> will not be listed. This is a known issue with Eclipse and Maven. In the future the hope is that Eclipse will support nested project structure.</p><h3 id="Importingsources-ForIntelliJIDEAusers">For IntelliJ IDEA users</h3>
-      <ul>
-       <li>Type <code>mvn idea:idea</code>. This generates IDEA project files automatically.</li>
-       <li>Start IntelliJ IDEA.</li>
-       <li>Select File|Open Project... and select the Maven-generated project as shown in the following figure:</li>
-      </ul><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/import-ide-idea-open.jpg" data-image-src="attachments/import-ide-idea-open.jpg" data-unresolved-comment-count="0" data-linked-resource-id="491749" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="import-ide-idea-open.jpg" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="491688" data-linked-resource-container-version="11"></span></p> </td> 
+     <td valign="top" style="padding:0px"> 
+      <table style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
+          <form action="Search.html" method="GET"> 
+           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+           <input type="submit" value="Search"> 
+          </form> </td> 
+        </tr> 
+        <tr> 
+         <td id="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-note"> 
+           <p class="title">Action required!</p> 
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
+           <div class="confluence-information-macro-body"> 
+            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
+            <ul> 
+             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
+               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo mailing lists are now on Google Groups. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo issue tracker is on Atlassian. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
+              </ul> </li> 
+            </ul> 
+            <p></p> 
+           </div> 
+          </div> <script type="text/javascript">
+                // Google Ads code
+                google_ad_client = "ca-pub-7996505557003356";
+                google_ad_slot = "5363897989";
+                google_ad_width = 728;
+                google_ad_height = 90;
+              </script> 
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script> 
+          </center> <p>This tutorial explains how to import <a href="Source+code.html">Cargo's sources</a> into your IDE (Eclipse and IntelliJ IDEA are covered).</p>
+          <ul>
+           <li>Start by checking out the <a href="Source+code.html">Cargo sources</a> - You can do that using the <a href="http://git-scm.com/downloads" class="external-link" rel="nofollow">Git command line or GUI-based tools</a> or your IDE Subversion feature.</li>
+          </ul>
+          <ul>
+           <li>Install the latest version <a href="http://maven.apache.org/" class="external-link" rel="nofollow">Maven2</a>. Make sure it's installed properly by typing <code>mvn --version</code>.</li>
+          </ul>
+          <ul>
+           <li>Open a shell in the top level directory where you have checked out the Cargo sources.</li>
+          </ul><h3 id="Importingsources-ForEclipseusers">For Eclipse users</h3>
+          <ul>
+           <li>Type <code>mvn eclipse:eclipse</code>. This generates Eclipse files automatically.</li>
+           <li>Start Eclipse.</li>
+           <li>Go to Windows|Preferences|Java|Build Path|Classpath Variables and add a&nbsp;<code>M2_REPO</code> variable to point to your local Maven2 repository (usually in <code>~user/.m2/repository</code>). See also the documentation on the <a href="http://maven.apache.org/plugins/maven-eclipse-plugin/" class="external-link" rel="nofollow">Maven Eclipse plugin</a>.</li>
+           <li>Select Import|Existing Project into Workspace. Point it to the top level directory of the checked-out Cargo sources. You should see something similar to the following figure:</li>
+          </ul><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/import-ide-eclipse-root.jpg" data-image-src="attachments/import-ide-eclipse-root.jpg" data-unresolved-comment-count="0" data-linked-resource-id="491750" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="import-ide-eclipse-root.jpg" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="491688" data-linked-resource-container-version="11"></span></p><p>Note: Maven supports a nested directory structure whereas Eclipse currently only supports a flat structure. The Maven2 Eclipse plugin creates an Eclipse project per Maven module (i.e. per directory containing a <code>pom.xml</code> file). This means that directories with no <code>pom.xml</code> will not be listed. This is a known issue with Eclipse and Maven. In the future the hope is that Eclipse will support nested project structure.</p><h3 id="Importingsources-ForIntelliJIDEAusers">For IntelliJ IDEA users</h3>
+          <ul>
+           <li>Type <code>mvn idea:idea</code>. This generates IDEA project files automatically.</li>
+           <li>Start IntelliJ IDEA.</li>
+           <li>Select File|Open Project... and select the Maven-generated project as shown in the following figure:</li>
+          </ul><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/import-ide-idea-open.jpg" data-image-src="attachments/import-ide-idea-open.jpg" data-unresolved-comment-count="0" data-linked-resource-id="491749" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="import-ide-idea-open.jpg" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="491688" data-linked-resource-container-version="11"></span></p> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
     </tr> 
     <tr> 
      <td colspan="2" id="footer"> 

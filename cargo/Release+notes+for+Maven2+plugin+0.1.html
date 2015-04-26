@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
@@ -70,7 +71,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -260,53 +261,57 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
-      <form action="Search.html" method="GET"> 
-       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-       <input type="submit" value="Search"> 
-      </form> </td> 
-    </tr> 
-    <tr> 
-     <td id="rightColumn" valign="top"> 
-      <div class="confluence-information-macro confluence-information-macro-note"> 
-       <p class="title">Action required!</p> 
-       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-       <div class="confluence-information-macro-body"> 
-        <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-        <ul> 
-         <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+     <td valign="top" style="padding:0px"> 
+      <table style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
+          <form action="Search.html" method="GET"> 
+           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+           <input type="submit" value="Search"> 
+          </form> </td> 
+        </tr> 
+        <tr> 
+         <td id="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-note"> 
+           <p class="title">Action required!</p> 
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
+           <div class="confluence-information-macro-body"> 
+            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
+            <ul> 
+             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
+               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo mailing lists are now on Google Groups. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo issue tracker is on Atlassian. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
+              </ul> </li> 
+            </ul> 
+            <p></p> 
+           </div> 
+          </div> <script type="text/javascript">
+                // Google Ads code
+                google_ad_client = "ca-pub-7996505557003356";
+                google_ad_slot = "5363897989";
+                google_ad_width = 728;
+                google_ad_height = 90;
+              </script> 
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script> 
+          </center> <p>This is the initial release of the plugin. It depends on Cargo 0.7.</p> <h3 id="ReleasenotesforMaven2plugin0.1-Installation">Installation</h3> <p>The only installation required is to point Maven2 to the Cargo Maven2 repository on Codehaus. There are 2 ways to do that:</p> 
           <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-           <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo mailing lists are now on Google Groups. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo issue tracker is on Atlassian. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-          </ul> </li> 
-        </ul> 
-        <p></p> 
-       </div> 
-      </div> <script type="text/javascript">
-          // Google Ads code
-          google_ad_client = "ca-pub-7996505557003356";
-          google_ad_slot = "5363897989";
-          google_ad_width = 728;
-          google_ad_height = 90;
-        </script> 
-      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script> 
-      </center> <p>This is the initial release of the plugin. It depends on Cargo 0.7.</p> <h3 id="ReleasenotesforMaven2plugin0.1-Installation">Installation</h3> <p>The only installation required is to point Maven2 to the Cargo Maven2 repository on Codehaus. There are 2 ways to do that:</p> 
-      <ul> 
-       <li>Modify your <code>setting.xml</code> and add the following <code>&lt;profile&gt;</code> element:</li> 
-      </ul> 
-      <div class="code panel pdl" style="border-width: 1px;">
-       <div class="codeContent panelContent pdl"> 
-        <pre>
+           <li>Modify your <code>setting.xml</code> and add the following <code>&lt;profile&gt;</code> element:</li> 
+          </ul> 
+          <div class="code panel pdl" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre>
 &lt;profiles&gt;
   &lt;profile&gt;
     &lt;id&gt;cargo&lt;/id&gt;
@@ -330,14 +335,14 @@
 &lt;/activeProfiles&gt;
 [...]
 </pre> 
-       </div>
-      </div> 
-      <ul> 
-       <li>Modify your <code>pom.xml</code> and add a <code>&lt;pluginRepository&gt;</code> element:</li> 
-      </ul> 
-      <div class="code panel pdl" style="border-width: 1px;">
-       <div class="codeContent panelContent pdl"> 
-        <pre>
+           </div>
+          </div> 
+          <ul> 
+           <li>Modify your <code>pom.xml</code> and add a <code>&lt;pluginRepository&gt;</code> element:</li> 
+          </ul> 
+          <div class="code panel pdl" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre>
 &lt;pluginRepositories&gt;
   &lt;pluginRepository&gt;
     &lt;id&gt;cargo m2 release repository&lt;/id&gt;
@@ -348,14 +353,17 @@
   &lt;/pluginRepository&gt;
 [...]
 </pre> 
-       </div>
-      </div> <h3 id="ReleasenotesforMaven2plugin0.1-Usage">Usage</h3> <p>Check the <a href="Maven2+plugin.html">plugin documentation page</a> for how to use the plugin.</p> <h3 id="ReleasenotesforMaven2plugin0.1-Requirements">Requirements</h3> 
-      <ul> 
-       <li><a href="http://maven.apache.org" class="external-link" rel="nofollow">Maven 2</a></li> 
-      </ul> <h3 id="ReleasenotesforMaven2plugin0.1-Implementedissues">Implemented issues</h3> 
-      <div class="aui-message warning jim-inline-block"> 
-       <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration. 
-      </div> </td> 
+           </div>
+          </div> <h3 id="ReleasenotesforMaven2plugin0.1-Usage">Usage</h3> <p>Check the <a href="Maven2+plugin.html">plugin documentation page</a> for how to use the plugin.</p> <h3 id="ReleasenotesforMaven2plugin0.1-Requirements">Requirements</h3> 
+          <ul> 
+           <li><a href="http://maven.apache.org" class="external-link" rel="nofollow">Maven 2</a></li> 
+          </ul> <h3 id="ReleasenotesforMaven2plugin0.1-Implementedissues">Implemented issues</h3> 
+          <div class="aui-message warning jim-inline-block"> 
+           <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration. 
+          </div> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
     </tr> 
     <tr> 
      <td colspan="2" id="footer"> 

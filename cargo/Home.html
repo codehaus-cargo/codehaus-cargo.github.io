@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
@@ -70,7 +71,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -260,414 +261,421 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
-      <form action="Search.html" method="GET"> 
-       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-       <input type="submit" value="Search"> 
-      </form> </td> 
-    </tr> 
-    <tr> 
-     <td id="rightColumn" valign="top"> 
-      <div class="confluence-information-macro confluence-information-macro-note"> 
-       <p class="title">Action required!</p> 
-       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-       <div class="confluence-information-macro-body"> 
-        <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-        <ul> 
-         <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-           <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo mailing lists are now on Google Groups. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-          </ul> </li> 
-         <li> The Cargo issue tracker is on Atlassian. 
-          <ul> 
-           <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-          </ul> </li> 
-        </ul> 
-        <p></p> 
-       </div> 
-      </div> <script type="text/javascript">
-          // Google Ads code
-          google_ad_client = "ca-pub-7996505557003356";
-          google_ad_slot = "5363897989";
-          google_ad_width = 728;
-          google_ad_height = 90;
-        </script> 
-      <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-       <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-          </script> 
-      </center> <h2 id="Home-WhatisCARGO?">What is CARGO?</h2><p>Cargo is a thin wrapper that allows you to manipulate various type of application containers (Java EE and others) in a standard way.</p><p>Cargo provides the following APIs and tools:</p>
-      <ul>
-       <li>A <a href="Container.html">Java API to start/stop/configure</a> any of the supported <a href="Containers.html">containers</a>.</li>
-       <li>A <a href="Deployer.html">Java API to (remotely or locally) deploy modules</a> into these containers, be it a server alone, a farm or a cluster.</li>
-       <li>A <a href="Merging+WAR+files.html">Java API to parse/create/merge J2EE modules</a>.</li>
-       <li><a href="Ant+support.html">ANT tasks</a> wrapping the Java API for configuring, starting, stopping and deploying applications to all supported containers.</li>
-       <li>A <a href="Cargo+Daemon.html">Web interface</a> that wraps the Java API that can be used to configure, start and stop all containers supported by Cargo remotely and at any time.</li>
-       <li><a href="Maven2+plugin.html">Maven2/Maven3 plugins</a> wrapping the Java API for configuring, starting, stopping and deploying applications to all supported containers as well as parsing, creating and merging J2EE modules.</li>
-      </ul><p>These tools and APIs can be used in a standalone fashion or via various IDEs.</p><h2 id="Home-Usage">Usage</h2><p>Cargo is often used to deploy applications to containers from test APIs (such as JUnit), ANT or Maven builds. Cargo can install the container and dependencies needed for your deployment as well. Please find below the links to our Quick Start guides:</p>
-      <ul>
-       <li><a href="Maven2+Plugin+Getting+Started.html">Getting Started for the Maven2/Maven3 plugin</a></li>
-       <li><a href="Functional+testing.html">Cookbook for implementing functional testing with the Cargo Java API and JUnit</a></li>
-       <li><a href="http://cargo.codehaus.org/Ant+support#Antsupport-examples" class="external-link" rel="nofollow">Examples for the Cargo ANT tasks</a></li>
-       <li><a href="Cargo+Daemon.html">Introduction to the Cargo Daemon</a></li>
-      </ul><h2 id="Home-DevelopmentStatus">Development Status</h2><h3 id="Home-CurrentVersions">Current Versions</h3><p>You can click on the version number to access the <a href="Downloads.html">Downloads</a> page and in the status column to get release notes:</p>
-      <div class="table-wrap">
-       <table class="confluenceTable">
-        <tbody>
-         <tr>
-          <th class="confluenceTh"><p>Version</p></th>
-          <th class="confluenceTh"><p>Status</p></th>
-          <th class="confluenceTh"><p>Comments</p></th>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Downloads.html">1.4.13</a></p></td>
-          <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-          <td class="confluenceTd"><p>Released on 07/03/2015</p></td>
-         </tr>
-        </tbody>
-       </table>
-      </div><p>All released versions are available <a href="Downloads.html">here</a>.</p><h3 id="Home-ContainerSupport">Container Support</h3><p>List of supported containers and the extensions that are implemented for each container (Java API, Ant tasks and Maven2/Maven3 plugin). The specified version is the version of the associated Cargo module where the feature was first made available (for example 0.2 for the Maven2 plugin means version 0.2 of the Cargo Maven 2 extension release). Click on a container's name to see a detailed list of features it supports.</p>
-      <div class="table-wrap">
-       <table class="confluenceTable">
-        <tbody>
-         <tr>
-          <th class="confluenceTh"><p>Container</p></th>
-          <th class="confluenceTh"><p>Java API (version)</p></th>
-          <th class="confluenceTh"><p>Ant tasks (version)</p></th>
-          <th class="confluenceTh"><p>Maven 2 plugin (version)</p></th>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Geronimo+1.x.html">Geronimo 1.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Geronimo+2.x.html">Geronimo 2.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.4</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.4</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.4</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Geronimo+3.x.html">Geronimo 3.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Glassfish+2.x.html">Glassfish 2.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Glassfish+3.x.html">Glassfish 3.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Glassfish+4.x.html">Glassfish 4.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JBoss+3.x.html">JBoss 3.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JBoss+4.x.html">JBoss 4.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JBoss+5.x.html">JBoss 5.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JBoss+6.x.html">JBoss 6.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JBoss+7.x.html">JBoss 7.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.2</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.2</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.2</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.4</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.4</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.4</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><p><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></p></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.3</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.3</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.3</td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.9</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.9</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.9</td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Jetty+4.x.html">Jetty 4.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.2</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Jetty+5.x.html">Jetty 5.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.2</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Jetty+6.x.html">Jetty 6.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.2</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Jetty+7.x.html">Jetty 7.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Jetty+8.x.html">Jetty 8.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><p><a href="Jetty+9.x.html">Jetty 9.x</a></p></td>
-          <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</p></td>
-          <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</p></td>
-          <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="jo+1.x.html">jo! 1.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.5</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.5</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JOnAS+4.x.html">JOnAS 4.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JOnAS+5.x.html">JOnAS 5.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="JRun+4.x.html">JRun 4.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Oc4J+9.x.html">Oc4J 9.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Oc4j+10.x.html">Oc4j 10.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Resin+2.x.html">Resin 2.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Resin+3.x.html">Resin 3.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Resin+3.1.x.html">Resin 3.1.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline">1.2.0</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline">1.2.0</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline">1.2.0</td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Resin+4.x.html">Resin 4.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Tomcat+4.x.html">Tomcat 4.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Tomcat+5.x.html">Tomcat 5.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Tomcat+6.x.html">Tomcat 6.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="Tomcat+7.x.html">Tomcat 7.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.2</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.2</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.2</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="Tomcat+8.x.html">Tomcat 8.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.4</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.4</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.4</td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="TomEE+1.x.html">TomEE 1.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.11</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.11</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.11</td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="WebLogic+8.x.html">WebLogic 8.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="WebLogic+9.x.html">WebLogic 9.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="WebLogic+10.x.html">WebLogic 10.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td class="confluenceTd"><p><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-          <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="WebLogic+12.x.html">WebLogic 12.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</td>
-         </tr>
-         <tr>
-          <td colspan="1" class="confluenceTd"><a href="WildFly+8.x.html">WildFly 8.x</a></td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.2</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.2</td>
-          <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.2</td>
-         </tr>
-        </tbody>
-       </table>
-      </div><p><br class="atl-forced-newline">Some containers are automatically tested by the <a class="external-link" href="https://semaphoreci.com/codehaus-cargo/cargo" rel="nofollow">Continous Integration system</a> every time there is a code change.</p><p>For these the container's page also shows which version is tested.</p><p></p><h2 id="Home-News">News</h2><p> </p>
-      <div class="blog-post-listing"> 
-       <div class="logo-heading-block"> 
-        <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
-        <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=491568">Say hello to CARGO 1.4.13!</a> 
-         <div class="page-metadata not-personal"> 
-          <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Mar 07, 2015
-         </div> </span> 
-       </div> 
-       <div class="wiki-content">
-         Dear CARGO enthusiasts We are happy to present to you CARGO version 1.4.13. This version comes with the below bug fixes and improvements: Core: Changed the Existing Local Configurations / Local Containers so they attempt redeployment of deployables (and not simple deployment) [CARGO-1303 https://codehaus-cargo.atlassian.net/browse/CARGO-1303] Containers - Jetty: Fixed the&nbsp;RuntimeException: Error scanning file when deploying to an embedded Jetty 9.x http://cargo.codehaus.org/Jetty+9.… 
-       </div> 
-      </div> 
-      <div class="blog-post-listing"> 
-       <div class="logo-heading-block"> 
-        <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
-        <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=491651">CARGO 1.4.12 is ready!</a> 
-         <div class="page-metadata not-personal"> 
-          <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Jan 22, 2015
-         </div> </span> 
-       </div> 
-       <div class="wiki-content">
-         Dear CARGO enthusiasts CARGO's first version for 2015, version 1.4.12, is now ready! This version comes with the below bug fixes and improvements: Core API: When starting containers on Java 8, the warning ignoring option PermSize=48m; support was removed in 8.0 doesn't appear anymore&nbsp;[CARGO-1294 https://codehaus-cargo.atlassian.net/browse/CARGO-1294] AbstractDeployer.stop(Deployable, DeployableMonitor) now calls&nbsp;stop(Deployable) as it should&nbsp;[CARGO-1296 https://jira.codehaus.… 
-       </div> 
-      </div> 
-      <div class="blog-post-listing"> 
-       <div class="logo-heading-block"> 
-        <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
-        <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=491635">Say hello to CARGO 1.4.11!</a> 
-         <div class="page-metadata not-personal"> 
-          <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Nov 21, 2014
-         </div> </span> 
-       </div> 
-       <div class="wiki-content">
-         Dear CARGO enthusiasts Say hello to CARGO's last version for 2014, version 1.4.11! This version comes with some interesting new features: We added support for Apache TomEE 1.x http://cargo.codehaus.org/TomEE+1.x [CARGO-1194 https://codehaus-cargo.atlassian.net/browse/CARGO-1194 and 
-        <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1282" class="external-link" rel="nofollow">CARGO-1282</a> https://codehaus-cargo.atlassian.net/browse/CARGO-1282], with support for deploying of EARs and EJBs on it [CARGO-1287 https://codehaus-cargo.atlassian.net/browse/CARGO-1287]. The WebSphere 8.5.x http://cargo.codehaus.org/WebSphere+8.5.… 
-       </div> 
-      </div> <p></p> </td> 
+     <td valign="top" style="padding:0px"> 
+      <table style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
+          <form action="Search.html" method="GET"> 
+           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+           <input type="submit" value="Search"> 
+          </form> </td> 
+        </tr> 
+        <tr> 
+         <td id="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-note"> 
+           <p class="title">Action required!</p> 
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
+           <div class="confluence-information-macro-body"> 
+            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
+            <ul> 
+             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
+               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo mailing lists are now on Google Groups. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo issue tracker is on Atlassian. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
+              </ul> </li> 
+            </ul> 
+            <p></p> 
+           </div> 
+          </div> <script type="text/javascript">
+                // Google Ads code
+                google_ad_client = "ca-pub-7996505557003356";
+                google_ad_slot = "5363897989";
+                google_ad_width = 728;
+                google_ad_height = 90;
+              </script> 
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script> 
+          </center> <h2 id="Home-WhatisCARGO?">What is CARGO?</h2><p>Cargo is a thin wrapper that allows you to manipulate various type of application containers (Java EE and others) in a standard way.</p><p>Cargo provides the following APIs and tools:</p>
+          <ul>
+           <li>A <a href="Container.html">Java API to start/stop/configure</a> any of the supported <a href="Containers.html">containers</a>.</li>
+           <li>A <a href="Deployer.html">Java API to (remotely or locally) deploy modules</a> into these containers, be it a server alone, a farm or a cluster.</li>
+           <li>A <a href="Merging+WAR+files.html">Java API to parse/create/merge J2EE modules</a>.</li>
+           <li><a href="Ant+support.html">ANT tasks</a> wrapping the Java API for configuring, starting, stopping and deploying applications to all supported containers.</li>
+           <li>A <a href="Cargo+Daemon.html">Web interface</a> that wraps the Java API that can be used to configure, start and stop all containers supported by Cargo remotely and at any time.</li>
+           <li><a href="Maven2+plugin.html">Maven2/Maven3 plugins</a> wrapping the Java API for configuring, starting, stopping and deploying applications to all supported containers as well as parsing, creating and merging J2EE modules.</li>
+          </ul><p>These tools and APIs can be used in a standalone fashion or via various IDEs.</p><h2 id="Home-Usage">Usage</h2><p>Cargo is often used to deploy applications to containers from test APIs (such as JUnit), ANT or Maven builds. Cargo can install the container and dependencies needed for your deployment as well. Please find below the links to our Quick Start guides:</p>
+          <ul>
+           <li><a href="Maven2+Plugin+Getting+Started.html">Getting Started for the Maven2/Maven3 plugin</a></li>
+           <li><a href="Functional+testing.html">Cookbook for implementing functional testing with the Cargo Java API and JUnit</a></li>
+           <li><a href="http://cargo.codehaus.org/Ant+support#Antsupport-examples" class="external-link" rel="nofollow">Examples for the Cargo ANT tasks</a></li>
+           <li><a href="Cargo+Daemon.html">Introduction to the Cargo Daemon</a></li>
+          </ul><h2 id="Home-DevelopmentStatus">Development Status</h2><h3 id="Home-CurrentVersions">Current Versions</h3><p>You can click on the version number to access the <a href="Downloads.html">Downloads</a> page and in the status column to get release notes:</p>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><p>Version</p></th>
+              <th class="confluenceTh"><p>Status</p></th>
+              <th class="confluenceTh"><p>Comments</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Downloads.html">1.4.13</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 07/03/2015</p></td>
+             </tr>
+            </tbody>
+           </table>
+          </div><p>All released versions are available <a href="Downloads.html">here</a>.</p><h3 id="Home-ContainerSupport">Container Support</h3><p>List of supported containers and the extensions that are implemented for each container (Java API, Ant tasks and Maven2/Maven3 plugin). The specified version is the version of the associated Cargo module where the feature was first made available (for example 0.2 for the Maven2 plugin means version 0.2 of the Cargo Maven 2 extension release). Click on a container's name to see a detailed list of features it supports.</p>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><p>Container</p></th>
+              <th class="confluenceTh"><p>Java API (version)</p></th>
+              <th class="confluenceTh"><p>Ant tasks (version)</p></th>
+              <th class="confluenceTh"><p>Maven 2 plugin (version)</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Geronimo+1.x.html">Geronimo 1.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Geronimo+2.x.html">Geronimo 2.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.4</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.4</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.4</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Geronimo+3.x.html">Geronimo 3.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Glassfish+2.x.html">Glassfish 2.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Glassfish+3.x.html">Glassfish 3.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Glassfish+4.x.html">Glassfish 4.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JBoss+3.x.html">JBoss 3.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JBoss+4.x.html">JBoss 4.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.7</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JBoss+5.x.html">JBoss 5.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JBoss+6.x.html">JBoss 6.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JBoss+7.x.html">JBoss 7.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.2</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.2</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.2</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.4</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.4</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.4</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></p></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.3</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.3</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.3</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.9</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.9</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.9</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Jetty+4.x.html">Jetty 4.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.2</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Jetty+5.x.html">Jetty 5.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.2</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Jetty+6.x.html">Jetty 6.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.8</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.2</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Jetty+7.x.html">Jetty 7.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.1</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Jetty+8.x.html">Jetty 8.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.1.3</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><a href="Jetty+9.x.html">Jetty 9.x</a></p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="jo+1.x.html">jo! 1.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.5</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.5</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JOnAS+4.x.html">JOnAS 4.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JOnAS+5.x.html">JOnAS 5.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="JRun+4.x.html">JRun 4.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Oc4J+9.x.html">Oc4J 9.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Oc4j+10.x.html">Oc4j 10.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Resin+2.x.html">Resin 2.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Resin+3.x.html">Resin 3.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Resin+3.1.x.html">Resin 3.1.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline">1.2.0</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline">1.2.0</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline">1.2.0</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Resin+4.x.html">Resin 4.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.0</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Tomcat+4.x.html">Tomcat 4.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Tomcat+5.x.html">Tomcat 5.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Tomcat+6.x.html">Tomcat 6.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Tomcat+7.x.html">Tomcat 7.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.2</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.2</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0.2</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="Tomcat+8.x.html">Tomcat 8.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.4</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.4</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.4</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="TomEE+1.x.html">TomEE 1.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.11</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.11</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.11</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="WebLogic+8.x.html">WebLogic 8.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.3</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 0.1</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="WebLogic+9.x.html">WebLogic 9.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="WebLogic+10.x.html">WebLogic 10.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.0</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="WebLogic+12.x.html">WebLogic 12.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.2.4</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.6</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.3.0</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="WildFly+8.x.html">WildFly 8.x</a></td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.2</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.2</td>
+              <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.2</td>
+             </tr>
+            </tbody>
+           </table>
+          </div><p><br class="atl-forced-newline">Some containers are automatically tested by the <a class="external-link" href="https://semaphoreci.com/codehaus-cargo/cargo" rel="nofollow">Continous Integration system</a> every time there is a code change.</p><p>For these the container's page also shows which version is tested.</p><p></p><h2 id="Home-News">News</h2><p> </p>
+          <div class="blog-post-listing"> 
+           <div class="logo-heading-block"> 
+            <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
+            <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=491568">Say hello to CARGO 1.4.13!</a> 
+             <div class="page-metadata not-personal"> 
+              <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Mar 07, 2015
+             </div> </span> 
+           </div> 
+           <div class="wiki-content">
+             Dear CARGO enthusiasts We are happy to present to you CARGO version 1.4.13. This version comes with the below bug fixes and improvements: Core: Changed the Existing Local Configurations / Local Containers so they attempt redeployment of deployables (and not simple deployment) [CARGO-1303 https://codehaus-cargo.atlassian.net/browse/CARGO-1303] Containers - Jetty: Fixed the&nbsp;RuntimeException: Error scanning file when deploying to an embedded Jetty 9.x http://cargo.codehaus.org/Jetty+9.… 
+           </div> 
+          </div> 
+          <div class="blog-post-listing"> 
+           <div class="logo-heading-block"> 
+            <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
+            <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=491651">CARGO 1.4.12 is ready!</a> 
+             <div class="page-metadata not-personal"> 
+              <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Jan 22, 2015
+             </div> </span> 
+           </div> 
+           <div class="wiki-content">
+             Dear CARGO enthusiasts CARGO's first version for 2015, version 1.4.12, is now ready! This version comes with the below bug fixes and improvements: Core API: When starting containers on Java 8, the warning ignoring option PermSize=48m; support was removed in 8.0 doesn't appear anymore&nbsp;[CARGO-1294 https://codehaus-cargo.atlassian.net/browse/CARGO-1294] AbstractDeployer.stop(Deployable, DeployableMonitor) now calls&nbsp;stop(Deployable) as it should&nbsp;[CARGO-1296 https://jira.codehaus.… 
+           </div> 
+          </div> 
+          <div class="blog-post-listing"> 
+           <div class="logo-heading-block"> 
+            <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
+            <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=491635">Say hello to CARGO 1.4.11!</a> 
+             <div class="page-metadata not-personal"> 
+              <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Nov 21, 2014
+             </div> </span> 
+           </div> 
+           <div class="wiki-content">
+             Dear CARGO enthusiasts Say hello to CARGO's last version for 2014, version 1.4.11! This version comes with some interesting new features: We added support for Apache TomEE 1.x http://cargo.codehaus.org/TomEE+1.x [CARGO-1194 https://codehaus-cargo.atlassian.net/browse/CARGO-1194 and 
+            <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1282" class="external-link" rel="nofollow">CARGO-1282</a> https://codehaus-cargo.atlassian.net/browse/CARGO-1282], with support for deploying of EARs and EJBs on it [CARGO-1287 https://codehaus-cargo.atlassian.net/browse/CARGO-1287]. The WebSphere 8.5.x http://cargo.codehaus.org/WebSphere+8.5.… 
+           </div> 
+          </div> <p></p> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
     </tr> 
     <tr> 
      <td colspan="2" id="footer"> 
