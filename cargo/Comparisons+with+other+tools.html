@@ -70,7 +70,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -238,7 +238,7 @@
       </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
       <ul class="alternate">
        <li><a href="Contributing.html">Contributing</a></li>
-       <li><a href="Discussions.html">Discussions</a></li>
+       <li><a class="unresolved" href="#">Discussions</a></li>
       </ul><h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
@@ -260,6 +260,13 @@
         </tr> 
        </tbody>
       </table> </td> 
+     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
+      <form action="Search.html" method="GET"> 
+       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+       <input type="submit" value="Search"> 
+      </form> </td> 
+    </tr> 
+    <tr> 
      <td id="rightColumn" valign="top"> 
       <div class="confluence-information-macro confluence-information-macro-note"> 
        <p class="title">Action required!</p> 
@@ -293,63 +300,63 @@
       <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
        <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
           </script> 
-      </center> <p>This is an attempt to compare Cargo with other tools.</p> 
+      </center> <p>This is an attempt to compare Cargo with other tools.</p>
       <div class="table-wrap">
        <table class="confluenceTable">
-        <tbody> 
-         <tr> 
-          <th class="confluenceTh"><p> Features </p></th> 
-          <th class="confluenceTh"><p> <a href="http://cargo.codehaus.org" class="external-link" rel="nofollow">Cargo</a> </p></th> 
-          <th class="confluenceTh"><p> <a href="http://sourceforge.net/projects/smartfrog" class="external-link" rel="nofollow">Smartfrog</a> </p></th> 
-          <th class="confluenceTh"><p> <a href="http://geronimo.apache.org/" class="external-link" rel="nofollow">Geronimo</a> </p></th> 
-         </tr> 
-         <tr> 
-          <td class="confluenceTd"><p> Configure containers/Generate configuration </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-         </tr> 
-         <tr> 
-          <td class="confluenceTd"><p> Start/stop containers </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-         </tr> 
-         <tr> 
-          <td class="confluenceTd"><p> Number of containers supported </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-         </tr> 
-         <tr> 
-          <td class="confluenceTd"><p> Distributed install of containers </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-cross" src="attachments/error.png" data-emoticon-name="cross" alt="(error)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-question" src="attachments/help_16.png" data-emoticon-name="question" alt="(question)"> </p></td> 
-         </tr> 
-         <tr> 
-          <td class="confluenceTd"><p> Types of containers/nodes supported </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-          <td class="confluenceTd"><p> <img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"> </p></td> 
-         </tr> 
+        <tbody>
+         <tr>
+          <th class="confluenceTh"><p>Features</p></th>
+          <th class="confluenceTh"><p><a href="https://codehaus-cargo.github.io/" class="external-link" rel="nofollow">Cargo</a></p></th>
+          <th class="confluenceTh"><p><a href="http://sourceforge.net/projects/smartfrog" class="external-link" rel="nofollow">Smartfrog</a></p></th>
+          <th class="confluenceTh"><p><a href="http://geronimo.apache.org/" class="external-link" rel="nofollow">Geronimo</a></p></th>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p>Configure containers/Generate configuration</p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p>Start/stop containers</p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p>Number of containers supported</p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p>Distributed install of containers</p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" data-emoticon-name="cross" alt="(error)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-question" src="attachments/help_16.png" data-emoticon-name="question" alt="(question)"></p></td>
+         </tr>
+         <tr>
+          <td class="confluenceTd"><p>Types of containers/nodes supported</p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+          <td class="confluenceTd"><p><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></p></td>
+         </tr>
         </tbody>
        </table>
-      </div> <h3 id="Comparisonswithothertools-NotesonCargo">Notes on Cargo</h3> 
-      <ul> 
-       <li>Its usage is currently focused on the development environment.</li> 
-       <li>Doesn't support distributed installations</li> 
-       <li>Supports remote deployments of J2EE archives</li> 
-       <li>Currently focused on J2EE containers but the architecture is general and can support any type of containers (database, IDEs, EAIs, etc).</li> 
-      </ul> <h3 id="Comparisonswithothertools-NotesonSmartfrog">Notes on Smartfrog</h3> 
-      <ul> 
-       <li>Has a language to describe configurations</li> 
-       <li>Require agents to be installed</li> 
-       <li>Focused on container deployment, management and monitoring</li> 
-      </ul> <h3 id="Comparisonswithothertools-NotesonGeronimo">Notes on Geronimo</h3> 
-      <ul> 
-       <li>Completely wraps containers/components. Need adapter (GBean) to match component lifeycle with Geronimo's lifecycle.</li> 
-       <li>Focused on runtime and management of containers/components.</li> 
+      </div><h3 id="Comparisonswithothertools-NotesonCargo">Notes on Cargo</h3>
+      <ul>
+       <li>Its usage is currently focused on the development environment.</li>
+       <li>Doesn't support distributed installations</li>
+       <li>Supports remote deployments of J2EE archives</li>
+       <li>Currently focused on J2EE containers but the architecture is general and can support any type of containers (database, IDEs, EAIs, etc).</li>
+      </ul><h3 id="Comparisonswithothertools-NotesonSmartfrog">Notes on Smartfrog</h3>
+      <ul>
+       <li>Has a language to describe configurations</li>
+       <li>Require agents to be installed</li>
+       <li>Focused on container deployment, management and monitoring</li>
+      </ul><h3 id="Comparisonswithothertools-NotesonGeronimo">Notes on Geronimo</h3>
+      <ul>
+       <li>Completely wraps containers/components. Need adapter (GBean) to match component lifeycle with Geronimo's lifecycle.</li>
+       <li>Focused on runtime and management of containers/components.</li>
       </ul> </td> 
     </tr> 
     <tr> 

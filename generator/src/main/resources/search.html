@@ -1,0 +1,80 @@
+<p><div id="search">Your search query is in progress, please wait...</div></p>
+<script>
+    var QueryString = function () {
+        var query_string = {};
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (typeof query_string[pair[0]] === "undefined") {
+                query_string[pair[0]] = pair[1];
+                // If second entry with this name
+            } else if (typeof query_string[pair[0]] === "string") {
+                var arr = [query_string[pair[0]], pair[1]];
+                query_string[pair[0]] = arr;
+                // If third or later entry with this name
+            } else {
+                query_string[pair[0]].push(pair[1]);
+            }
+        }
+        return query_string;
+    }();
+
+    document.getElementById("search_query").value = QueryString.q;
+    var url = "https://codehaus-cargo.atlassian.net/wiki/rest/api/content/search?limit=50&expand=body.view&cql=type=page%20and%20text~" + QueryString.q;
+
+    function parseResult(result) {
+        document.getElementById("search").innerHTML = "Search completed, now parsing results...";
+        try {
+            eval("result = " + result);
+        } catch (err) {
+            document.getElementById("search").innerHTML = "We are sorry, there has been an error parsing search results";
+            return;
+        }
+        result = result.results;
+        if (!result || result.length == 0) {
+            document.getElementById("search").innerHTML = "Your search query returned no results";
+            return;
+        }
+        var results = "Your search query for <b>" + escape(QueryString.q) + "</b> returned <b>" + result.length + "</b> results<ul>";
+        for (i = 0; i < result.length; i++) {
+            results += "<li><a href=\"" + result[i].title.replace(" ", "+") + ".html\"><b>" + result[i].title + "</b></a><br/><br/>";
+            var body = result[i].body.view.value.replace(/<[^>]*>?/g, " ");
+            if (body.length > 500) {
+                body = body.substring(0, 500) + " [...]";
+            }
+            results += body + "<br/>&nbsp;</li>";
+        }
+        document.getElementById("search").innerHTML = results + "</ul>";
+    }
+
+    var httpRequest = null;
+    if (typeof XDomainRequest != "undefined") {
+        httpRequest = new XDomainRequest();
+        httpRequest.open("GET", url);
+        httpRequest.onload = function () {
+            parseResult(httpRequest.responseText);
+        }
+    } else {
+        if (window.XMLHttpRequest) {
+            httpRequest = new XMLHttpRequest();
+            httpRequest.open("GET", url, true);
+        } else if (window.ActiveXObject) {
+            httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            httpRequest.open("GET", url);
+        }
+        if (httpRequest) {
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4) {
+                    parseResult(httpRequest.responseText);
+                }
+            }
+        }
+    }
+
+    if (httpRequest) {
+        httpRequest.send();
+    } else {
+        document.getElementById("search").innerHTML = "We are sorry, your browser doesn't support JavaScript-based HTTP requests.";
+    }
+</script>

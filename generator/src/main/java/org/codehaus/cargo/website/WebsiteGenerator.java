@@ -54,13 +54,16 @@ public class WebsiteGenerator implements Runnable
 
     private static Map<URL, Exception> exceptions;
 
-    private static final boolean downloadAttachments = true;
+    private static final boolean downloadAttachments =
+        Boolean.parseBoolean(System.getProperty("cargo.downloadAttachments", "true"));
 
     private static final ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(8);
 
     public static void main(String[] args) throws Exception
     {
-        download();
+        if (Boolean.parseBoolean(System.getProperty("cargo.download", "true"))) {
+            download();
+        }
         parse();
     }
 
@@ -150,6 +153,8 @@ public class WebsiteGenerator implements Runnable
             new File(attachments, "rss.gif").toPath(), StandardCopyOption.REPLACE_EXISTING);
         writeFile(new File(attachments, "site.css"), readFile(new File(classes, "site.css")));
         File sourceDirectory = new File(target, "source");
+        Files.copy(new File(classes, "search.html").toPath(),
+            new File(sourceDirectory, "Search").toPath(), StandardCopyOption.REPLACE_EXISTING);
         String template = readFile(new File(target, "classes/cargo-template.html"));
         String navigation = readFile(new File(sourceDirectory, "Navigation"));
         template = template.replace("$navigation", navigation);

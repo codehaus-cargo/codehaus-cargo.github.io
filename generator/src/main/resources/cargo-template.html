@@ -78,11 +78,11 @@
     </tr>
      -->
     <tr>
-      <td id="leftColumn" valign="top" style="padding-top:0px">
-          $navigation
+      <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2">
+        $navigation
 
-          <h3 class="heading3">Feeds</h3>
-          <table border="0" cellspacing="4px">
+        <h3 class="heading3">Feeds</h3>
+        <table border="0" cellspacing="4px">
           <tr>
             <td align="right">
               <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br/>
@@ -101,8 +101,17 @@
           </tr>
         </table>
       </td>
+      <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px">
+        <form action="Search.html" method="GET">
+          <input type="text" id="search_query" name="q" size="30" />
+          &nbsp;
+          <input type="submit" value="Search" />
+        </form>
+      </td>
+    </tr>
+    <tr>
       <td id="rightColumn" valign="top">
-       <div class="confluence-information-macro confluence-information-macro-note">
+        <div class="confluence-information-macro confluence-information-macro-note">
          <p class="title">Action required!</p>
          <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span>
          <div class="confluence-information-macro-body">

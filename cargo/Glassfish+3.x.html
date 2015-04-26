@@ -70,7 +70,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -238,7 +238,7 @@
       </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
       <ul class="alternate">
        <li><a href="Contributing.html">Contributing</a></li>
-       <li><a href="Discussions.html">Discussions</a></li>
+       <li><a class="unresolved" href="#">Discussions</a></li>
       </ul><h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
@@ -260,6 +260,13 @@
         </tr> 
        </tbody>
       </table> </td> 
+     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
+      <form action="Search.html" method="GET"> 
+       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+       <input type="submit" value="Search"> 
+      </form> </td> 
+    </tr> 
+    <tr> 
      <td id="rightColumn" valign="top"> 
       <div class="confluence-information-macro confluence-information-macro-note"> 
        <p class="title">Action required!</p> 
@@ -525,7 +532,7 @@
        <p class="title">Adding arguments to the Deployer</p>
        <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
        <div class="confluence-information-macro-body">
-        <p>The Glassfish installed deployer allows for additional deployment and undeployment arguments by adding properties prefixed with <code><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.DEPLOY_ARG_PREFIX</a></code> and <code><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#UNDEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.UNDEPLOY_ARG_PREFIX</a></code> respectively followed by a number starting at <code>1</code>.</p>
+        <p>The Glassfish installed deployer allows for additional deployment and undeployment arguments by adding properties prefixed with <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.DEPLOY_ARG_PREFIX</a></code> and <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#UNDEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.UNDEPLOY_ARG_PREFIX</a></code> respectively followed by a number starting at <code>1</code>.</p>
        </div>
       </div><h3 id="Glassfish3.x-OtherFeatures">Other Features</h3>
       <div class="table-wrap">
@@ -563,112 +570,112 @@
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.ADMIN_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>4848</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.debug</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DEBUG_MODE</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>false</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEBUG_MODE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEBUG_MODE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.jmxPort</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.JMX_ADMIN_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>8686</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#JMX_ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#JMX_ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.name</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DOMAIN_NAME</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>cargo-domain</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DOMAIN_NAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DOMAIN_NAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.http.ssl.port</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.HTTPS_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>8181</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#HTTPS_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#HTTPS_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.java.debugger.port</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DEBUGGER_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>9009</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEBUGGER_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEBUGGER_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.jms.port</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.JMS_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>7676</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#JMS_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#JMS_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.orb.listener.port</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.IIOP_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>3700</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#IIOP_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#IIOP_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.orb.mutualauth.port</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.IIOP_MUTUAL_AUTH_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>3920</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#IIOP_MUTUAL_AUTH_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#IIOP_MUTUAL_AUTH_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.orb.ssl.port</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.IIOPS_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>3820</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#IIOPS_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#IIOPS_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.osgi.shell.telnet.port</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.OSGI_SHELL_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>6666</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#OSGI_SHELL_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#OSGI_SHELL_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.portbase</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.PORT_BASE</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p>N/A</p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#PORT_BASE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#PORT_BASE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.removeDefaultDatasource</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.REMOVE_DEFAULT_DATASOURCE</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>true</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#REMOVE_DEFAULT_DATASOURCE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#REMOVE_DEFAULT_DATASOURCE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>localhost</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><em>JAVA_HOME version 6 or newer</em></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jvmargs</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JVMARGS</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p>N/A</p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JVMARGS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JVMARGS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.logging</a></p></td>
@@ -682,49 +689,49 @@
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.PORT_OFFSET</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>0</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.process.spawn</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.SPAWN_PROCESS</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>false</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.protocol</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.PROTOCOL</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>http</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>adminadmin</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>admin</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p>N/A</p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RUNTIME_ARGS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RUNTIME_ARGS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>8080</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.users</a></p></td>
@@ -738,7 +745,7 @@
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.IGNORE_NON_EXISTING_PROPERTIES</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p>N/A</p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#IGNORE_NON_EXISTING_PROPERTIES" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#IGNORE_NON_EXISTING_PROPERTIES" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
         </tbody>
        </table>
@@ -766,63 +773,63 @@
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.ADMIN_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>4848</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.debug</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DEBUG_MODE</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>false</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEBUG_MODE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEBUG_MODE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.name</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DOMAIN_NAME</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>cargo-domain</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DOMAIN_NAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DOMAIN_NAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>localhost</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.port.offset</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.PORT_OFFSET</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>0</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.process.spawn</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.SPAWN_PROCESS</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>false</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>adminadmin</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>admin</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>8080</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
         </tbody>
        </table>
@@ -848,42 +855,42 @@
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.ADMIN_PORT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>4848</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.target</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.TARGET</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p>N/A</p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#TARGET" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#TARGET" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>localhost</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>adminadmin</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.timeout</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.TIMEOUT</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>120000</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#TIMEOUT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#TIMEOUT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
          <tr>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
           <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
           <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
           <td class="confluenceTd"><p><code>admin</code></p></td>
-          <td class="confluenceTd"><p><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+          <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
          </tr>
         </tbody>
        </table>

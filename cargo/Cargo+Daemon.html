@@ -70,7 +70,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -238,7 +238,7 @@
       </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
       <ul class="alternate">
        <li><a href="Contributing.html">Contributing</a></li>
-       <li><a href="Discussions.html">Discussions</a></li>
+       <li><a class="unresolved" href="#">Discussions</a></li>
       </ul><h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
@@ -260,6 +260,13 @@
         </tr> 
        </tbody>
       </table> </td> 
+     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
+      <form action="Search.html" method="GET"> 
+       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+       <input type="submit" value="Search"> 
+      </form> </td> 
+    </tr> 
+    <tr> 
      <td id="rightColumn" valign="top"> 
       <div class="confluence-information-macro confluence-information-macro-note"> 
        <p class="title">Action required!</p> 
@@ -350,14 +357,14 @@
        </table>
       </div><h1 id="CargoDaemon-gettingStarted"><span class="confluence-anchor-link" id="CargoDaemon-gettingStarted"></span></h1><h1 id="CargoDaemon-GettingstartedusingthebrowserUI">Getting started using the browser UI</h1><p>To use the Cargo Daemon via the browser UI, simply open&nbsp;<code>http://&lt;machine&gt;:&lt;port&gt;/</code> -where&nbsp;<code>&lt;machine&gt;</code> is the machine host name or IP address and&nbsp;<code>&lt;port&gt;</code> is the port number used (default is&nbsp;<code>18000</code>):</p>
       <ul>
-       <li>To start a container, fill in the form and press <strong>Start</strong>:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20options.png" data-image-src="attachments/Container%20options.png" data-unresolved-comment-count="0" data-linked-resource-id="495262" data-linked-resource-version="10" data-linked-resource-type="attachment" data-linked-resource-default-alias="Container options.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="34"></span><br><br><strong>Note</strong>: The <strong>start</strong> button is actually equivalent to a <strong>restart</strong> in CARGO's terms; in the case a container with the same&nbsp;<code>handle id</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.<br><br></li>
-       <li>To <strong>stop</strong>, <strong>restart</strong>, <strong>delete</strong> or <strong>view logs</strong> of a container, use the actions on the containers list:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20actions.png" data-image-src="attachments/Container%20actions.png" data-unresolved-comment-count="0" data-linked-resource-id="492157" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Container actions.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="34"></span></li>
+       <li>To start a container, fill in the form and press <strong>Start</strong>:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20options.png" data-image-src="attachments/Container%20options.png" data-unresolved-comment-count="0" data-linked-resource-id="495262" data-linked-resource-version="10" data-linked-resource-type="attachment" data-linked-resource-default-alias="Container options.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="35"></span><br><br><strong>Note</strong>: The <strong>start</strong> button is actually equivalent to a <strong>restart</strong> in CARGO's terms; in the case a container with the same&nbsp;<code>handle id</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.<br><br></li>
+       <li>To <strong>stop</strong>, <strong>restart</strong>, <strong>delete</strong> or <strong>view logs</strong> of a container, use the actions on the containers list:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20actions.png" data-image-src="attachments/Container%20actions.png" data-unresolved-comment-count="0" data-linked-resource-id="492157" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Container actions.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="35"></span></li>
        <li>The Cargo Daemon keeps a persistent record on disk of all the containers that have been submitted. Containers that have been submitted will stay in the list, even when they are stopped. This allows you to manually restart them, or view the logs even after the container is stopped.</li>
        <li>If you want the container to be removed from the list, simply press the <strong>delete</strong> button.</li>
        <li>Containers can also be submitted with the&nbsp;<code>autostart</code> property, this will automatically restart the container if the daemon notices it is stopped.</li>
       </ul><h1 id="CargoDaemon-gettingStarted.1"><span class="confluence-anchor-link" id="CargoDaemon-gettingStarted"></span></h1><h1 id="CargoDaemon-GettingstartedwiththeJavaAPI/ANTtasks/Maven2/Maven3plugin">Getting started with the Java API / ANT tasks / Maven2/Maven3 plugin</h1><p>As stated before, the Cargo Daemon is also available programmatically:</p>
       <ul>
-       <li>The details of the Java API can be seen on the <a href="http://cargo.codehaus.org/maven-site/cargo-extensions/apidocs/index.html?org/codehaus/cargo/tools/daemon/DaemonClient.html" class="external-link" rel="nofollow">Javadoc for o.c.c.tools.daemon.DaemonClient</a></li>
+       <li>The details of the Java API can be seen on the <a href="https://codehaus-cargo.github.io/apidocs/index.html?org/codehaus/cargo/tools/daemon/DaemonClient.html" class="external-link" rel="nofollow">Javadoc for o.c.c.tools.daemon.DaemonClient</a></li>
        <li><p>To use the Daemon via ANT tasks, simply add the&nbsp;<code>&lt;daemon&gt;</code> tag in the task and use the <strong>daemon-start</strong> or <strong>daemon-stop</strong> tasks:<br><br></p>
         <div class="code panel pdl" style="border-width: 1px;">
          <div class="codeContent panelContent pdl"> 

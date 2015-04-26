@@ -70,7 +70,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -238,7 +238,7 @@
       </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
       <ul class="alternate">
        <li><a href="Contributing.html">Contributing</a></li>
-       <li><a href="Discussions.html">Discussions</a></li>
+       <li><a class="unresolved" href="#">Discussions</a></li>
       </ul><h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
@@ -260,6 +260,13 @@
         </tr> 
        </tbody>
       </table> </td> 
+     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
+      <form action="Search.html" method="GET"> 
+       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+       <input type="submit" value="Search"> 
+      </form> </td> 
+    </tr> 
+    <tr> 
      <td id="rightColumn" valign="top"> 
       <div class="confluence-information-macro confluence-information-macro-note"> 
        <p class="title">Action required!</p> 
@@ -293,47 +300,18 @@
       <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
        <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
           </script> 
-      </center> 
+      </center> <p>To view the Codehaus Cargo's Javadocs, you can use one of the two below methods:</p>
+      <ul>
+       <li>You can visit <a href="https://codehaus-cargo.github.io/apidocs/" class="external-link" rel="nofollow">https://codehaus-cargo.github.io/apidocs/</a></li>
+       <li>Codehaus Cargo's release procedure uploads the source code and Javadocs onto the Maven Central. As a result, if you are using Maven2/Maven3, as you open the different modules in your IDE, the Javadocs and source code will get downloaded automatically</li>
+      </ul><p>&nbsp;</p>
       <div class="confluence-information-macro confluence-information-macro-information">
        <p class="title">Functional tests</p>
        <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
        <div class="confluence-information-macro-body">
         <p>In order to learn more about directly using the Cargo Java API from your Java unit test classes (JUnit, TestNG, etc), read our <a href="Functional+testing.html">Functional testing</a> page.</p>
        </div>
-      </div><h3 id="Javadocs-JavadocsforCARGO'smainmodules">Javadocs for CARGO's main modules</h3>
-      <ul>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-resources/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Cargo Shared Resources' APIs</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Cargo Core APIs</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-extensions/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Cargo Extensions' APIs</a></li>
-      </ul><h3 id="Javadocs-JavadocsforthesubmodulesoftheCoreandContainersAPI">Javadocs for the submodules of the Core and Containers API</h3>
-      <div class="confluence-information-macro confluence-information-macro-note">
-       <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span>
-       <div class="confluence-information-macro-body">
-        <p>These Javadocs contain a less cluttered list of classes and packages compared to the <a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Cargo Core APIs</a>, but inner-links will not work. Typically, you won't be able of seeing the links between a Container Implementation and the Container API it is based on.<br> To access that kind of information, please rather prefer the <a href="http://cargo.codehaus.org/maven-site/cargo-core/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Cargo Core APIs</a>.</p>
-       </div>
-      </div>
-      <ul>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-api/cargo-core-api-util/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Core Util API</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-api/cargo-core-api-module/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Core Module API</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-api/cargo-core-api-container/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Core Container API</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-api/cargo-core-api-generic/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Core Generic API</a></li>
-      </ul>
-      <ul>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-geronimo/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Geronimo</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-glassfish/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for GlassFish</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-jboss/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for JBoss</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-jetty/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Jetty</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-jo/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for jo!</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-jonas/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for JOnAS</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-jrun/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for JRun</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-orion/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Orion</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-resin/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Resin</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-tomcat/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for Tomcat</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-tomee/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for TomEE</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-weblogic/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for WebLogic</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-websphere/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for WebSphere</a></li>
-       <li><a href="http://cargo.codehaus.org/maven-site/cargo-core/cargo-core-containers/cargo-core-container-wildfly/apidocs/index.html" class="external-link" rel="nofollow">Javadoc for WildFly</a></li>
-      </ul> </td> 
+      </div> </td> 
     </tr> 
     <tr> 
      <td colspan="2" id="footer"> 

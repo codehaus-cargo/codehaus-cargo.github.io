@@ -70,7 +70,7 @@
     </tr>
      --> 
     <tr> 
-     <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td id="leftColumn" valign="top" style="padding-top:0px" rowspan="2"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -238,7 +238,7 @@
       </ul><h3 id="Navigation-GetInvolved">Get Involved</h3>
       <ul class="alternate">
        <li><a href="Contributing.html">Contributing</a></li>
-       <li><a href="Discussions.html">Discussions</a></li>
+       <li><a class="unresolved" href="#">Discussions</a></li>
       </ul><h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Cargo+Code+Style.html">Cargo Code Style</a></li>
@@ -260,6 +260,13 @@
         </tr> 
        </tbody>
       </table> </td> 
+     <td id="breadcrumbs" valign="top" align="right" style="height:23px; padding:8px 17px"> 
+      <form action="Search.html" method="GET"> 
+       <input type="text" id="search_query" name="q" size="30"> &nbsp; 
+       <input type="submit" value="Search"> 
+      </form> </td> 
+    </tr> 
+    <tr> 
      <td id="rightColumn" valign="top"> 
       <div class="confluence-information-macro confluence-information-macro-note"> 
        <p class="title">Action required!</p> 
@@ -293,7 +300,7 @@
       <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
        <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
           </script> 
-      </center> <h3 id="ModuleAPI-Definition">Definition</h3> <p>API to manipulate J2EE archives, including vendor-specific deployment descriptors</p> <h3 id="ModuleAPI-Explanation">Explanation</h3> <p>This API is located in the <code>org.codehaus.cargo.module</code> package and is used internally by the Cargo Java API. You can also use it yourself if you need to manipulate (read/write) J2EE archive files.</p> <p>It also supports merging two <code>web.xml</code> files into one.</p> <p>See the <a href="http://cargo.codehaus.org/multiproject/cargo-core/apidocs/org/codehaus/cargo/module/" class="external-link" rel="nofollow">Javadoc</a> for more details on the API.</p> <h3 id="ModuleAPI-Architecture">Architecture</h3> 
+      </center> <h3 id="ModuleAPI-Definition">Definition</h3><p>API to manipulate J2EE archives, including vendor-specific deployment descriptors</p><h3 id="ModuleAPI-Explanation">Explanation</h3><p>This API is located in the <code>org.codehaus.cargo.module</code> package and is used internally by the Cargo Java API. You can also use it yourself if you need to manipulate (read/write) J2EE archive files.</p><p>It also supports merging two <code>web.xml</code> files into one.</p><p>See the <a href="Javadocs.html">Javadoc</a> for more details on the API.</p><h3 id="ModuleAPI-Architecture">Architecture</h3><p> </p>
       <div class="gallery"> 
        <table> 
         <tbody>
@@ -308,11 +315,10 @@
          </tr> 
         </tbody>
        </table> 
-      </div> <h3 id="ModuleAPI-Example">Example</h3> 
+      </div> <p></p><h3 id="ModuleAPI-Example">Example</h3>
       <div class="code panel pdl" style="border-width: 1px;">
        <div class="codeContent panelContent pdl"> 
-        <pre>
-File warFile = new File("/path/to/simple.war");
+        <pre>File warFile = new File("/path/to/simple.war");
 WarArchive war = new DefaultWarArchive(warFile);
 
 // Verify existence of class inside the WAR
