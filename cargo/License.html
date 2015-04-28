@@ -273,7 +273,7 @@
         </tr> 
         <tr> 
          <td id="rightColumn"> 
-          <div class="confluence-information-macro confluence-information-macro-note"> 
+          <div class="confluence-information-macro confluence-information-macro-note" id="decommission-warning" style="display:none"> 
            <p class="title">Action required!</p> 
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
            <div class="confluence-information-macro-body"> 
@@ -296,6 +296,10 @@
             <p></p> 
            </div> 
           </div> <script type="text/javascript">
+                if ("Home" === "License" || (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0)) {
+                  document.getElementById("decommission-warning").style.display = "";
+                }
+              </script> <script type="text/javascript">
                 // Google Ads code
                 google_ad_client = "ca-pub-7996505557003356";
                 google_ad_slot = "5363897989";
@@ -305,7 +309,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
-          </center> <h3 id="License-Copyright">Copyright</h3><p>This product is copyrighted Vincent Massol (see <a href="#License-licenseexplanations">below</a> for details).</p><p>Portions of the code were copied from the Jakarta Cactus project in 2004 and thereafter modified. These portions of code are copyrighted The Apache Sofware Foundation. These portions of code were originally developed by Vincent Massol and Christopher Lenz on the Jakarta Cactus project.</p><h3 id="License-ApacheSoftwareLicense">Apache Software License</h3>
+          </center> <h3 id="License-Copyright">Copyright</h3><p>This product is copyrighted Vincent Massol and Ali Tokmen (see <a href="#License-licenseexplanations">below</a> for details).</p><p>Portions of the code were copied from the Jakarta Cactus project in 2004 and thereafter modified. These portions of code are copyrighted The Apache Sofware Foundation. These portions of code were originally developed by Vincent Massol and Christopher Lenz on the Jakarta Cactus project.</p><h3 id="License-ApacheSoftwareLicense">Apache Software License</h3>
           <div class="preformatted panel" style="border-width: 1px;">
            <div class="preformattedContent panelContent"> 
             <pre>                                 Apache License
@@ -511,13 +515,13 @@
    limitations under the License.
 </pre> 
            </div>
-          </div><p><span class="confluence-anchor-link" id="License-licenseexplanations"></span></p><h3 id="License-CopyrightMassol!Whynotcopyrightmyself?">Copyright Massol! Why not copyright myself?</h3><p><em>This portion of text has been copied from the <a href="http://clirr.sourceforge.net/contributing.html" class="external-link" rel="nofollow">Clirr's contributing page</a>.</em></p><p>Licensing does matter and can get very confusing to maintain. Handing over copyrights to Massol keeps things simple for us to manage licensing issues. We do this for free and do not want to waste time on legal issues and managing who has copyright of which parts of the code. The only safe option is to have people hand over copyright to a person (like Massol) or an organisation (like Apache).</p><p>Some people feel that handing over copyright to Massol limits their rights in the code they contribute.</p><p>In fact it doesn't. Think about it: You give copyright to Massol, Massol immediately gives you the right to use the code under the ASL. What have you lost? You can still</p>
+          </div><p><span class="confluence-anchor-link" id="License-licenseexplanations"></span></p><h3 id="License-CopyrightMassol/Tokmen!Whynotcopyrightmyself?">Copyright Massol / Tokmen! Why not copyright myself?</h3><p><em>This portion of text has been copied from the <a href="http://clirr.sourceforge.net/contributing.html" class="external-link" rel="nofollow">Clirr's contributing page</a>.</em></p><p>Licensing does matter and can get very confusing to maintain. Handing over copyrights to Massol / Tokmen keeps things simple for us to manage licensing issues. We do this for free and do not want to waste time on legal issues and managing who has copyright of which parts of the code. The only safe option is to have people hand over copyright to a person (like Massol or Tokmen ) or an organisation (like Apache).</p><p>Some people feel that handing over copyright to Massol or Tokmen limits their rights in the code they contribute.</p><p>In fact it doesn't. Think about it: You give copyright to Massol or Tokmen, and these immediately give you the right to use the code under the ASL. What have you lost? You can still</p>
           <ul>
            <li>claim authorship on the <a href="Credits.html">Credits</a> page and in JIRA issues. In addition your name will be added to <a href="Source+code.html">Source code</a> commits</li>
            <li>redistribute the code in source or binary form (provided the terms of the ASL are met).</li>
            <li>use the code in a commercial environment or link it into IDEs.</li>
-           <li>fork the codebase if you are not happy with the way Massol is running the project.</li>
-          </ul><p>Because the code is licensed under the ASL, the only thing you give up by assigning copyright to Massol is the right to veto a re-licensing of the code. For example Massol could re-license Cargo to another open source license without having to contact everybody who has ever contributed. Note that you would not lose any of the work you (and others) have done as it would still be licensed under ASL - noone can ever take these rights away from you!</p><p>All that said, the reason I decided to Copyright Cargo under my name is because I didn't know what other Copyright to use... Saying "The Cargo team" does not mean anything and does not solve the issue mentioned above. We can't license it to "Codehaus" either as Codehaus is not offering this service. Ideally we'd need a third party not-for-profit organization who could handle this for us (get signed CLAs, ensure code is clean, offer legal protection, etc). If aynone has any idea, please send it on the mailing list. I've always been uneasy about copyrighting this under my name and I'd love to find a better solution.</p><p>Small update: on May 2012, we have had discussions with Codehaus; and unfortunately as "Codehaus Foundation" is not a valid legal entity for copyrights it cannot be used.</p> </td> 
+           <li>fork the codebase if you are not happy with the way Massol or Tokmen are running the project.</li>
+          </ul><p>Because the code is licensed under the ASL, the only thing you give up by assigning copyright to Massol or Tokmen is the right to veto a re-licensing of the code. For example Massol or Tokmen could re-license Cargo to another open source license without having to contact everybody who has ever contributed. Note that you would not lose any of the work you (and others) have done as it would still be licensed under ASL - noone can ever take these rights away from you!</p><p>All that said, the reason I decided to Copyright Cargo under my name is because I didn't know what other Copyright to use... Saying "The Cargo team" does not mean anything and does not solve the issue mentioned above. We can't license it to "Codehaus" either as Codehaus is not offering this service. Ideally we'd need a third party not-for-profit organization who could handle this for us (get signed CLAs, ensure code is clean, offer legal protection, etc). If aynone has any idea, please send it on the mailing list. I've always been uneasy about copyrighting this under my name and I'd love to find a better solution.</p><p>Small update: on May 2012, we have had discussions with Codehaus; and unfortunately as "Codehaus Foundation" is not a valid legal entity for copyrights it cannot be used.</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

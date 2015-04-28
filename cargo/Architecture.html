@@ -273,7 +273,7 @@
         </tr> 
         <tr> 
          <td id="rightColumn"> 
-          <div class="confluence-information-macro confluence-information-macro-note"> 
+          <div class="confluence-information-macro confluence-information-macro-note" id="decommission-warning" style="display:none"> 
            <p class="title">Action required!</p> 
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
            <div class="confluence-information-macro-body"> 
@@ -296,6 +296,10 @@
             <p></p> 
            </div> 
           </div> <script type="text/javascript">
+                if ("Home" === "Architecture" || (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0)) {
+                  document.getElementById("decommission-warning").style.display = "";
+                }
+              </script> <script type="text/javascript">
                 // Google Ads code
                 google_ad_client = "ca-pub-7996505557003356";
                 google_ad_slot = "5363897989";

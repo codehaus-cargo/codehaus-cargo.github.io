@@ -273,7 +273,7 @@
         </tr> 
         <tr> 
          <td id="rightColumn"> 
-          <div class="confluence-information-macro confluence-information-macro-note"> 
+          <div class="confluence-information-macro confluence-information-macro-note" id="decommission-warning" style="display:none"> 
            <p class="title">Action required!</p> 
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
            <div class="confluence-information-macro-body"> 
@@ -296,6 +296,10 @@
             <p></p> 
            </div> 
           </div> <script type="text/javascript">
+                if ("Home" === "Home" || (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0)) {
+                  document.getElementById("decommission-warning").style.display = "";
+                }
+              </script> <script type="text/javascript">
                 // Google Ads code
                 google_ad_client = "ca-pub-7996505557003356";
                 google_ad_slot = "5363897989";
@@ -329,9 +333,9 @@
               <th class="confluenceTh"><p>Comments</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Downloads.html">1.4.13</a></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-              <td class="confluenceTd"><p>Released on 07/03/2015</p></td>
+              <td class="confluenceTd"><p><a href="Downloads.html">1.4.14</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10076" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 25 Apr 2015</p></td>
              </tr>
             </tbody>
            </table>
@@ -639,6 +643,18 @@
           <div class="blog-post-listing"> 
            <div class="logo-heading-block"> 
             <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
+            <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=2162694">Codehaus Cargo's new Web site is ready - So is version 1.4.14!</a> 
+             <div class="page-metadata not-personal"> 
+              <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Apr 28, 2015
+             </div> </span> 
+           </div> 
+           <div class="wiki-content">
+             Dear Codehaus Cargo enthusiasts As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: We have moved our Web site, and with the move also added an amazing new feature: You can finally search in the site&nbsp; Try it out on&nbsp;https://codehaus-cargo.github.io/ https://codehaus-cargo.github.io/ The&nbsp;Codehaus Cargo mailing lists https://codehaus-cargo.github.io/cargo/Mailing+Lists.… 
+           </div> 
+          </div> 
+          <div class="blog-post-listing"> 
+           <div class="logo-heading-block"> 
+            <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
             <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=491568">Say hello to CARGO 1.4.13!</a> 
              <div class="page-metadata not-personal"> 
               <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Mar 07, 2015
@@ -658,19 +674,6 @@
            </div> 
            <div class="wiki-content">
              Dear CARGO enthusiasts CARGO's first version for 2015, version 1.4.12, is now ready! This version comes with the below bug fixes and improvements: Core API: When starting containers on Java 8, the warning ignoring option PermSize=48m; support was removed in 8.0 doesn't appear anymore&nbsp;[CARGO-1294 https://codehaus-cargo.atlassian.net/browse/CARGO-1294] AbstractDeployer.stop(Deployable, DeployableMonitor) now calls&nbsp;stop(Deployable) as it should&nbsp;[CARGO-1296 https://jira.codehaus.… 
-           </div> 
-          </div> 
-          <div class="blog-post-listing"> 
-           <div class="logo-heading-block"> 
-            <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
-            <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=491635">Say hello to CARGO 1.4.11!</a> 
-             <div class="page-metadata not-personal"> 
-              <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Nov 21, 2014
-             </div> </span> 
-           </div> 
-           <div class="wiki-content">
-             Dear CARGO enthusiasts Say hello to CARGO's last version for 2014, version 1.4.11! This version comes with some interesting new features: We added support for Apache TomEE 1.x http://cargo.codehaus.org/TomEE+1.x [CARGO-1194 https://codehaus-cargo.atlassian.net/browse/CARGO-1194 and 
-            <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1282" class="external-link" rel="nofollow">CARGO-1282</a> https://codehaus-cargo.atlassian.net/browse/CARGO-1282], with support for deploying of EARs and EJBs on it [CARGO-1287 https://codehaus-cargo.atlassian.net/browse/CARGO-1287]. The WebSphere 8.5.x http://cargo.codehaus.org/WebSphere+8.5.… 
            </div> 
           </div> <p></p> </td> 
         </tr> 

@@ -273,7 +273,7 @@
         </tr> 
         <tr> 
          <td id="rightColumn"> 
-          <div class="confluence-information-macro confluence-information-macro-note"> 
+          <div class="confluence-information-macro confluence-information-macro-note" id="decommission-warning" style="display:none"> 
            <p class="title">Action required!</p> 
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
            <div class="confluence-information-macro-body"> 
@@ -296,6 +296,10 @@
             <p></p> 
            </div> 
           </div> <script type="text/javascript">
+                if ("Home" === "Adding+a+container" || (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0)) {
+                  document.getElementById("decommission-warning").style.display = "";
+                }
+              </script> <script type="text/javascript">
                 // Google Ads code
                 google_ad_client = "ca-pub-7996505557003356";
                 google_ad_slot = "5363897989";
@@ -333,14 +337,14 @@
             <ul>
              <li>As soon as you add your container to the <code>samples</code>, the Maven build will automatically attempt to configure, start, deploy some test applications, test them and stop your container.</li>
             </ul></li>
-           <li>Register on <a href="https://docs.codehaus.org/display/HAUS/Home" class="external-link" rel="nofollow">Codehaus' confluence</a>. Once this is done we'll add you to the <code>cargo-developers</code> user group so that you have the right to edit yourself the Cargo web site pages</li>
-           <li>Document the new container on the <a href="https://docs.codehaus.org/display/CARGO/Home" class="external-link" rel="nofollow">Cargo web site</a></li>
+           <li>Register on <a href="https://codehaus-cargo.atlassian.net/wiki/" rel="nofollow">Codehaus Cargo Confluence</a>. Once this is done we'll add you to the <code>cargo-developers</code> user group so that you have the right to edit yourself the Cargo web site pages</li>
+           <li>Document the new container on the <a href="https://codehaus-cargo.atlassian.net/wiki/pages/editpage.action?spaceKey=CARGO&amp;title=Home" rel="nofollow">Home</a> page</li>
            <li>Create a SVN patch and attach it to the JIRA issue you have created above</li>
            <li>Once the patch has been accepted:
             <ul>
-             <li>Add the container to the <a href="https://docs.codehaus.org/pages/editpage.action?spaceKey=CARGO&amp;title=Containers" class="external-link" rel="nofollow">Containers list</a> on the main web site</li>
-             <li>Add the container to the <a href="https://docs.codehaus.org/pages/editpage.action?spaceKey=CARGO&amp;title=Navigation" class="external-link" rel="nofollow">Navigation page</a> (left side of the CARGO Web site)</li>
-             <li>Add the container to the <a href="https://docs.codehaus.org/pages/editpage.action?spaceKey=CARGO&amp;title=Downloads" class="external-link" rel="nofollow">Downloads page</a></li>
+             <li>Add the container to the <a href="https://codehaus-cargo.atlassian.net/wiki/pages/editpage.action?spaceKey=CARGO&amp;title=Containers" rel="nofollow">Containers list</a> on the main web site</li>
+             <li>Add the container to the <a href="https://codehaus-cargo.atlassian.net/wiki/pages/editpage.action?spaceKey=CARGO&amp;title=Navigation" rel="nofollow">Navigation page</a> (left side of the CARGO Web site)</li>
+             <li>Add the container to the <a href="https://codehaus-cargo.atlassian.net/wiki/pages/editpage.action?spaceKey=CARGO&amp;title=Downloads" rel="nofollow">Downloads page</a></li>
              <li>Add the container to the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a> so that its integrity can be checked at each build<br><u>Note</u>: For performance reasons, we split the build on the CI system to differentiate the containers running on different JDK versions on two different threads</li>
             </ul></li>
           </ul><p>Thanks and happy coding!</p> </td> 
