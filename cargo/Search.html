@@ -339,7 +339,11 @@
       }
       results += body + "<br/>&nbsp;</li>";
     }
-    document.getElementById("search").innerHTML = results + "</ul>";
+    results += "</ul>";
+    if (result.length >= 25) {
+      results += "<b>Note</b>: Your search query seems to have hit the upper limit of 25 results. We recommend you try with a more specific query.";
+    }
+    document.getElementById("search").innerHTML = results;
   }
 
   var httpRequest = null;
