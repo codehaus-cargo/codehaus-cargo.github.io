@@ -334,40 +334,44 @@ public class WebsiteGenerator implements Runnable
                 while (matcher.find())
                 {
                     sb.append(value.substring(start, matcher.start()));
-                    sb.append("src=\"attachments/");
+                    sb.append("src=\"");
                     String attachment = value.substring(matcher.start() + 5, matcher.end() - 1);
-                    if ("http://www.codehaus.org/newtest.gif".equals(attachment))
+                    if (!attachment.startsWith("https://semaphoreci.com/"))
                     {
-                        attachment = "blank.gif";
-                    }
-                    else if (attachment.startsWith("/"))
-                    {
-                        attachment = "https://codehaus-cargo.atlassian.net" + attachment;
-                    }
-                    if (!"blank.gif".equals(attachment))
-                    {
-                        URL attachmentUrl = new URL(attachment);
-                        synchronized (attachments)
+                        sb.append("attachments/");
+                        if ("http://www.codehaus.org/newtest.gif".equals(attachment))
                         {
-                            if (!attachments.contains(attachmentUrl))
+                            attachment = "blank.gif";
+                        }
+                        else if (attachment.startsWith("/"))
+                        {
+                            attachment = "https://codehaus-cargo.atlassian.net" + attachment;
+                        }
+                        if (!"blank.gif".equals(attachment))
+                        {
+                            URL attachmentUrl = new URL(attachment);
+                            synchronized (attachments)
                             {
-                                attachments.add(attachmentUrl);
-                                WebsiteGenerator runnable = new WebsiteGenerator();
-                                runnable.url = attachmentUrl;
-                                Thread thread = new Thread(runnable);
-                                executor.submit(thread);
+                                if (!attachments.contains(attachmentUrl))
+                                {
+                                    attachments.add(attachmentUrl);
+                                    WebsiteGenerator runnable = new WebsiteGenerator();
+                                    runnable.url = attachmentUrl;
+                                    Thread thread = new Thread(runnable);
+                                    executor.submit(thread);
+                                }
                             }
                         }
-                    }
-                    attachment = attachment.substring(attachment.lastIndexOf('/') + 1);
-                    int questionMark = attachment.lastIndexOf('?');
-                    if (questionMark != -1)
-                    {
-                        attachment = attachment.substring(0, questionMark);
-                    }
-                    if ("default.png".equals(attachment))
-                    {
-                        attachment = "blank.gif";
+                        attachment = attachment.substring(attachment.lastIndexOf('/') + 1);
+                        int questionMark = attachment.lastIndexOf('?');
+                        if (questionMark != -1)
+                        {
+                            attachment = attachment.substring(0, questionMark);
+                        }
+                        if ("default.png".equals(attachment))
+                        {
+                            attachment = "blank.gif";
+                        }
                     }
                     sb.append(attachment);
                     sb.append("\"");
