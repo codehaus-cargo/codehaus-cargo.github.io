@@ -61,7 +61,8 @@ public class WebsiteGenerator implements Runnable
 
     public static void main(String[] args) throws Exception
     {
-        if (Boolean.parseBoolean(System.getProperty("cargo.download", "true"))) {
+        if (Boolean.parseBoolean(System.getProperty("cargo.download", "true")))
+        {
             download();
         }
         parse();
@@ -166,6 +167,14 @@ public class WebsiteGenerator implements Runnable
             value = value.replaceAll(
                 "<script type=\"syntaxhighlighter\"[^>]+><\\!\\[CDATA\\[", "<pre>");
             value = value.replace("]]></script>", "</pre>");
+            value = value.replaceAll("<div id=\"refresh-module-\\d*\"", "<div");
+            value = value.replaceAll("<div id=\"jira-issues-\\d*\"", "<div");
+            value = value.replaceAll("<span id=\"total-issues-count-\\d*\"", "<span");
+            value = value.replaceAll("(?s)<div id=\"refresh-\\d*\".*?</div>", "");
+            value = value.replaceAll("(?s)<span id=\"error-message-\\d*\".*?</span>", "");
+            value = value.replaceAll("(?s)<span class=\"refresh-action-group\".*?</span>", "");
+            value = value.replaceAll("(?s)<textarea id=\"refresh-wiki-\\d*\".*?</textarea>", "");
+            value = value.replaceAll("<input id=\"refresh-page-id-\\d*\"[^>]+>", "");
             writeFile(file, Jsoup.parse(template.replace("$name", name).replace("$title",
                 URLDecoder.decode(name, "UTF-8")).replace("$value", value).replace(
                     "http://jira.codehaus.org/browse/CARGO-",
