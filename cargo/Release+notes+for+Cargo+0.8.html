@@ -216,6 +216,7 @@
        <li>WildFly<br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+         <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
         </ul></li>
       </ul><h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
@@ -323,8 +324,26 @@
            <li>Firmed up the Cargo APIs and several usability improvements</li> 
            <li>Added notion of Embedded containers</li> 
           </ul> <p>The full list of all issues fixed and features implemented is available below.</p> <p>Please note that version 0.8 has broken several APIs as explained below in the migration guide. This is one of the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this.</p> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-issues"></span></p> <h3 id="ReleasenotesforCargo0.8-Changelog">Changelog</h3> 
-          <div class="aui-message warning jim-inline-block"> 
-           <span class="aui-icon icon-warning"></span>JIRA Issues Macro: Unable to locate JIRA server for this macro. It may be due to Application Link configuration. 
+          <div class="jim-error-message jim-error-message-table"> 
+           <table class="aui"> 
+            <tbody> 
+             <tr></tr> 
+             <tr> 
+              <th>type</th> 
+              <th>key</th> 
+              <th>resolution</th> 
+              <th>summary</th> 
+              <th>assignee</th> 
+              <th>reporter</th> 
+             </tr> 
+             <tr> 
+              <td colspan="6"> 
+               <div class="aui-message aui-message-warning"> 
+                <p class="message"> <span class="icon-in-pdf"></span> Unable to locate JIRA server for this macro. It may be due to Application Link configuration. </p> 
+               </div> </td> 
+             </tr> 
+            </tbody> 
+           </table> 
           </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-migration"></span></p> <h3 id="ReleasenotesforCargo0.8-Migrationguidefrom0.7to0.8">Migration guide from 0.7 to 0.8</h3> <p>This sections lists the principal differences in Cargo 0.8 which you may require you to modify the way you use Cargo. The full list of changes is shown below in the <a href="#ReleasenotesforCargo0.8-clirr">Clirr section</a>.</p> <h4 id="ReleasenotesforCargo0.8-Forextensionusers">For extension users</h4> 
           <ul> 
            <li><code>local</code> container type replaced by <code>installed</code> and <code>embedded</code>.</li> 
