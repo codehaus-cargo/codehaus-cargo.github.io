@@ -40,36 +40,6 @@
        </tbody>
       </table> </td> 
     </tr> 
-    <!--
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr>
-            <td align="left">
-              <p>
-                <a href="/">Home</a>
-                #if ($page.pageKey != "Home")
-                  #foreach($breadcrumb in $breadcrumbs)
-                    &gt; <a href="/${breadcrumb.pageKeyEncoded}">${breadcrumb.pageKey}</a>
-                  #end
-                #end
-              </p>
-            </td>
-            <td align="left">
-              #if (${quicklinksFragment})
-                ${quicklinksFragment}
-              #end
-            </td>
-            <td align="right">
-              <a href="/${page.pageKeyEncoded}?print=1" style="color:#999;font-size:small">
-                <img src="attachments/print.gif" border="0" alt="Printable version" title="Printable version">
-              </a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-     --> 
     <tr> 
      <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
@@ -297,7 +267,7 @@
             <p></p> 
            </div> 
           </div> <script type="text/javascript">
-                if ("Home" === "Home" || (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0)) {
+                if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <script type="text/javascript">
@@ -334,9 +304,9 @@
               <th class="confluenceTh"><p>Comments</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Downloads.html">1.4.14</a></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10076" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-              <td class="confluenceTd"><p>Released on 25 Apr 2015</p></td>
+              <td class="confluenceTd"><p><a href="Downloads.html">1.4.15</a></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10117" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
+              <td class="confluenceTd"><p>Released on 14 Jul 2015</p></td>
              </tr>
             </tbody>
            </table>
@@ -650,6 +620,18 @@
           <div class="blog-post-listing"> 
            <div class="logo-heading-block"> 
             <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
+            <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=4915211">Greet Codehaus Cargo 1.4.15!</a> 
+             <div class="page-metadata not-personal"> 
+              <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Jul 14, 2015
+             </div> </span> 
+           </div> 
+           <div class="wiki-content">
+             Dear Codehaus Cargo enthusiasts The new version of Codehaus Cargo, 1.4.15, is now ready! It comes with many bugfixes, improvements and new features: Containers - JBoss [CARGO-1322 https://codehaus-cargo.atlassian.net/browse/CARGO-1322] - Add recent JBoss DTDs Containers - Tomcat [CARGO-1325 https://codehaus-cargo.atlassian.net/browse/CARGO-1325] - Add nonce support for the&nbsp;TomcatManager Contaners - WebLogic [CARGO-1317 https://codehaus-cargo.atlassian.… 
+           </div> 
+          </div> 
+          <div class="blog-post-listing"> 
+           <div class="logo-heading-block"> 
+            <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
             <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=2162694">Codehaus Cargo's new Web site is ready - So is version 1.4.14!</a> 
              <div class="page-metadata not-personal"> 
               <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Apr 28, 2015
@@ -669,18 +651,6 @@
            </div> 
            <div class="wiki-content">
              Dear CARGO enthusiasts We are happy to present to you CARGO version 1.4.13. This version comes with the below bug fixes and improvements: Core: Changed the Existing Local Configurations / Local Containers so they attempt redeployment of deployables (and not simple deployment) [CARGO-1303 https://codehaus-cargo.atlassian.net/browse/CARGO-1303] Containers - Jetty: Fixed the&nbsp;RuntimeException: Error scanning file when deploying to an embedded Jetty 9.x http://cargo.codehaus.org/Jetty+9.… 
-           </div> 
-          </div> 
-          <div class="blog-post-listing"> 
-           <div class="logo-heading-block"> 
-            <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
-            <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=491651">CARGO 1.4.12 is ready!</a> 
-             <div class="page-metadata not-personal"> 
-              <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Jan 22, 2015
-             </div> </span> 
-           </div> 
-           <div class="wiki-content">
-             Dear CARGO enthusiasts CARGO's first version for 2015, version 1.4.12, is now ready! This version comes with the below bug fixes and improvements: Core API: When starting containers on Java 8, the warning ignoring option PermSize=48m; support was removed in 8.0 doesn't appear anymore&nbsp;[CARGO-1294 https://codehaus-cargo.atlassian.net/browse/CARGO-1294] AbstractDeployer.stop(Deployable, DeployableMonitor) now calls&nbsp;stop(Deployable) as it should&nbsp;[CARGO-1296 https://jira.codehaus.… 
            </div> 
           </div> <p></p> </td> 
         </tr> 

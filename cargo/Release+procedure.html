@@ -40,36 +40,6 @@
        </tbody>
       </table> </td> 
     </tr> 
-    <!--
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr>
-            <td align="left">
-              <p>
-                <a href="/">Home</a>
-                #if ($page.pageKey != "Home")
-                  #foreach($breadcrumb in $breadcrumbs)
-                    &gt; <a href="/${breadcrumb.pageKeyEncoded}">${breadcrumb.pageKey}</a>
-                  #end
-                #end
-              </p>
-            </td>
-            <td align="left">
-              #if (${quicklinksFragment})
-                ${quicklinksFragment}
-              #end
-            </td>
-            <td align="right">
-              <a href="/${page.pageKeyEncoded}?print=1" style="color:#999;font-size:small">
-                <img src="attachments/print.gif" border="0" alt="Printable version" title="Printable version">
-              </a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-     --> 
     <tr> 
      <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
@@ -297,7 +267,7 @@
             <p></p> 
            </div> 
           </div> <script type="text/javascript">
-                if ("Home" === "Release+procedure" || (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0)) {
+                if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <script type="text/javascript">
@@ -340,7 +310,7 @@
             <ol>
              <li>Open the CI page and click on the latest build</li>
              <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="110"></span><br><br></li>
+             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="112"></span><br><br></li>
             </ol></li>
            <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
             <ul>
@@ -370,27 +340,27 @@
             <ol>
              <li>Modify the status on the home page about the delivery:<br>
               <ul>
-               <li>Make sure the <a href="Containers.html">Containers list</a> is complete</li>
-               <li>Make sure the <a href="Navigation.html">Navigation page</a> is complete</li>
-               <li>Make sure the <a href="Javadocs.html">Javadocs for the Core Containers</a> are complete</li>
+               <li>Make sure the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Containers" rel="nofollow">Containers list</a> is complete</li>
+               <li>Make sure the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Navigation" rel="nofollow">Navigation page</a> is complete</li>
+               <li>Make sure the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Javadocs" rel="nofollow">Javadocs for the Core Containers</a> are complete</li>
                <li>Make sure the documentation for each container is up to date.<br><u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code>core/documentation/target/<em>[container's name]</em>.log</code></li>
-               <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code></li>
-               <li>Make sure the <a href="Project+Structure.html">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
+               <li>Make sure the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Containers+with+DataSource+and+Resource+support" rel="nofollow">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code></li>
+               <li>Make sure the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Project+Structure" rel="nofollow">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
               </ul></li>
-             <li>Modify the <a href="Home.html">Home</a> page to update the available version number and release date</li>
+             <li>Modify the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Home" rel="nofollow">Home</a> page to update the available version number and release date</li>
              <li>Modify the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Maven2+Plugin+Installation" rel="nofollow">Maven2 Plugin Installation</a> page to update the&nbsp;<code>SNAPSHOT</code> version</li>
              <li>Create a <a href="https://codehaus-cargo.atlassian.net/wiki/pages/createblogpost.action?spaceKey=CARGO" rel="nofollow">blog post</a></li>
-             <li><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/exportspacehtml.action?key=CARGO" rel="nofollow">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="Downloads.html">Downloads</a> page</li>
-             <li>Move the old version to the <a href="Archived+Downloads.html">Archived Downloads</a> page<br>
+             <li><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/exportspacehtml.action?key=CARGO" rel="nofollow">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Downloads" rel="nofollow">Downloads</a> page</li>
+             <li>Move the old version to the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Archived+Downloads" rel="nofollow">Archived Downloads</a> page<br>
               <ul>
-               <li>Remember to move the old documentation archive from the <a href="Downloads.html">Downloads</a> page to that page as well</li>
+               <li>Remember to move the old documentation archive from the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Downloads" rel="nofollow">Downloads</a> page to that page as well</li>
               </ul></li>
-             <li>Modify the <a href="Downloads.html">Downloads</a> page to update the download links, available version number, documentation and release note links</li>
+             <li>Modify the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Downloads" rel="nofollow">Downloads</a> page to update the download links, available version number, documentation and release note links</li>
             </ol></li>
            <li>Check that the&nbsp;Codehaus Cargo Web site is up to date. Specifically, perform the following updates:
             <ol>
              <li>Go to the&nbsp;<code>generator</code> subdirectory of the <a href="https://github.com/codehaus-cargo/codehaus-cargo.github.io" class="external-link" rel="nofollow">codehaus-cargo.github.io repository</a> and run a&nbsp;<code>mvn verify</code> command to generate the Web site</li>
-             <li>Download the source code of the tagged version in a temporary location and run a&nbsp;<code>mvn site:site</code> command to generate the API documentation</li>
+             <li>Download the source code of the tagged version in a temporary location and run a&nbsp;<code>mvn <a rel="nofollow"></a>javadoc:aggregate</code> command to generate the API documentation</li>
              <li>Move the&nbsp;<code>target/apidocs</code> folder to the root of the codehaus-cargo.github.io repository</li>
              <li>Check in and push all changes, this will automatically update the Codehaus Cargo Web site</li>
             </ol></li>
@@ -404,7 +374,7 @@
             <ol>
              <li>Edit the document in the Codehaus Confluence</li>
              <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
-             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="110" title="Insert wiki markup.png"></span></li>
+             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="112" title="Insert wiki markup.png"></span></li>
              <li>Paste the wiki markup content</li>
             </ol>
            </div>

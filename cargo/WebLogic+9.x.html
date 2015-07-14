@@ -40,36 +40,6 @@
        </tbody>
       </table> </td> 
     </tr> 
-    <!--
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr>
-            <td align="left">
-              <p>
-                <a href="/">Home</a>
-                #if ($page.pageKey != "Home")
-                  #foreach($breadcrumb in $breadcrumbs)
-                    &gt; <a href="/${breadcrumb.pageKeyEncoded}">${breadcrumb.pageKey}</a>
-                  #end
-                #end
-              </p>
-            </td>
-            <td align="left">
-              #if (${quicklinksFragment})
-                ${quicklinksFragment}
-              #end
-            </td>
-            <td align="right">
-              <a href="/${page.pageKeyEncoded}?print=1" style="color:#999;font-size:small">
-                <img src="attachments/print.gif" border="0" alt="Printable version" title="Printable version">
-              </a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-     --> 
     <tr> 
      <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
@@ -297,7 +267,7 @@
             <p></p> 
            </div> 
           </div> <script type="text/javascript">
-                if ("Home" === "WebLogic+9.x" || (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0)) {
+                if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <script type="text/javascript">

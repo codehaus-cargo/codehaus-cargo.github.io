@@ -40,36 +40,6 @@
        </tbody>
       </table> </td> 
     </tr> 
-    <!--
-    <tr>
-      <td colspan="2" id="breadcrumbs">
-        <table width="100%" id="banner" style="padding:0px;margin:0px">
-          <tr>
-            <td align="left">
-              <p>
-                <a href="/">Home</a>
-                #if ($page.pageKey != "Home")
-                  #foreach($breadcrumb in $breadcrumbs)
-                    &gt; <a href="/${breadcrumb.pageKeyEncoded}">${breadcrumb.pageKey}</a>
-                  #end
-                #end
-              </p>
-            </td>
-            <td align="left">
-              #if (${quicklinksFragment})
-                ${quicklinksFragment}
-              #end
-            </td>
-            <td align="right">
-              <a href="/${page.pageKeyEncoded}?print=1" style="color:#999;font-size:small">
-                <img src="attachments/print.gif" border="0" alt="Printable version" title="Printable version">
-              </a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-     --> 
     <tr> 
      <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
@@ -297,7 +267,7 @@
             <p></p> 
            </div> 
           </div> <script type="text/javascript">
-                if ("Home" === "Release+notes+for+Cargo+Core+0.9" || (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0)) {
+                if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <script type="text/javascript">
@@ -501,8 +471,6 @@
            </div> 
            <div class="refresh-issues-bottom"> 
             <span> <span>Showing 20 out of</span> <a rel="nofollow" title="View all matching issues in JIRA." href="https://codehaus-cargo.atlassian.net/secure/IssueNavigator.jspa?reset=true&amp;&amp;pid=10000&amp;fixfor=10012&amp;sorter/field=issuekey&amp;sorter/order=DESC&amp;src=confmacro"> 86 issues </a> </span> 
-           </div> 
-           <div class="hidden"> 
            </div> 
            <p></p> 
           </div> <p></p><p><span class="confluence-anchor-link" id="ReleasenotesforCargoCore0.9-migration"></span></p><h3 id="ReleasenotesforCargoCore0.9-Migrationguidefrom0.8to0.9">Migration guide from 0.8 to 0.9</h3><p>This sections lists the principal differences in Cargo 0.9 which you may require you to modify the way you use Cargo. The full list of changes is shown below in the <a href="#ReleasenotesforCargoCore0.9-clirr">Clirr section</a>.</p>
