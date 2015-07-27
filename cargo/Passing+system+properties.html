@@ -280,8 +280,13 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="Passingsystemproperties-Definition">Definition</h3>How to pass system properties that will be available to the container while executing<h3 id="Passingsystemproperties-Explanations">Explanations</h3><p>It is sometime useful to pass system properties to the container that is executing. These properties are then available to the code executing in the container.</p><h3 id="Passingsystemproperties-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Tomcat 3.x with some System properties set in the container JVM:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>InstalledLocalContainer container = new Tomcat3xInstalledLocalContainer(
     new TomcatStandaloneLocalConfiguration("target/tomcat3x"));
@@ -295,7 +300,7 @@ container.start();
 </pre> 
            </div>
           </div><h3 id="Passingsystemproperties-ExampleusingtheAnttask">Example using the Ant task</h3><p>Starting Tomcat 3.x with some System properties set in the container JVM:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;cargo containerId="tomcat3x" home="c:/apps/jakarta-tomcat-3.3.2" action="start"&gt;
   &lt;sysproperty key="myproperty" value="myvalue"/&gt;
@@ -303,14 +308,14 @@ container.start();
 </pre> 
            </div>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Loading system properties from a file</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>It is also possible to load the system properties from a file - simply use the&nbsp;<code>systemPropertiesFile</code> attribute of the&nbsp;<code>cargo</code> XML element.</p>
            </div>
           </div><h3 id="Passingsystemproperties-ExampleusingtheMaven2plugin">Example using the Maven2 plugin</h3><p>Starting Tomcat 3.x with some System properties set in the container JVM:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;container&gt;
   [...]

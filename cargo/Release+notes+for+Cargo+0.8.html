@@ -280,24 +280,30 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <p>Release note content:</p> 
           <ul> 
            <li><a href="#ReleasenotesforCargo0.8-main">Main changes</a></li> 
            <li><a href="#ReleasenotesforCargo0.8-issues">Changelog</a></li> 
            <li><a href="#ReleasenotesforCargo0.8-migration">Migration Guide</a></li> 
            <li><a href="#ReleasenotesforCargo0.8-clirr">Clirr report</a></li> 
-          </ul> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-main"></span></p> <h3 id="ReleasenotesforCargo0.8-Mainchanges">Main changes</h3> <p>Here are the highlights of Cargo 0.8:</p> 
+          </ul> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-main" data-hasbody="false" data-macro-name="anchor"> </span></p> <h3 id="ReleasenotesforCargo0.8-Mainchanges">Main changes</h3> <p>Here are the highlights of Cargo 0.8:</p> 
           <ul> 
            <li>Added support for Jetty 5.x and 6.x</li> 
            <li>Added Geronimo support</li> 
            <li>Added JMX hot deployer for JBoss 4.x</li> 
            <li>Firmed up the Cargo APIs and several usability improvements</li> 
            <li>Added notion of Embedded containers</li> 
-          </ul> <p>The full list of all issues fixed and features implemented is available below.</p> <p>Please note that version 0.8 has broken several APIs as explained below in the migration guide. This is one of the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this.</p> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-issues"></span></p> <h3 id="ReleasenotesforCargo0.8-Changelog">Changelog</h3> 
-          <div class="jim-error-message jim-error-message-table"> 
+          </ul> <p>The full list of all issues fixed and features implemented is available below.</p> <p>Please note that version 0.8 has broken several APIs as explained below in the migration guide. This is one of the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this.</p> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-issues" data-hasbody="false" data-macro-name="anchor"> </span></p> <h3 id="ReleasenotesforCargo0.8-Changelog">Changelog</h3> 
+          <div class="jim-error-message jim-error-message-table conf-macro output-block" data-hasbody="false" data-macro-name="jiraissues"> 
            <table class="aui"> 
             <tbody> 
-             <tr></tr> 
+             <tr> 
+             </tr> 
              <tr> 
               <th>type</th> 
               <th>key</th> 
@@ -309,16 +315,16 @@
              <tr> 
               <td colspan="6"> 
                <div class="aui-message aui-message-warning"> 
-                <p class="message"> <span class="icon-in-pdf"></span> Unable to locate JIRA server for this macro. It may be due to Application Link configuration. </p> 
+                <p class="message"> <span class="icon-in-pdf"> </span> Unable to locate JIRA server for this macro. It may be due to Application Link configuration. </p> 
                </div> </td> 
              </tr> 
             </tbody> 
            </table> 
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-migration"></span></p> <h3 id="ReleasenotesforCargo0.8-Migrationguidefrom0.7to0.8">Migration guide from 0.7 to 0.8</h3> <p>This sections lists the principal differences in Cargo 0.8 which you may require you to modify the way you use Cargo. The full list of changes is shown below in the <a href="#ReleasenotesforCargo0.8-clirr">Clirr section</a>.</p> <h4 id="ReleasenotesforCargo0.8-Forextensionusers">For extension users</h4> 
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-migration" data-hasbody="false" data-macro-name="anchor"> </span></p> <h3 id="ReleasenotesforCargo0.8-Migrationguidefrom0.7to0.8">Migration guide from 0.7 to 0.8</h3> <p>This sections lists the principal differences in Cargo 0.8 which you may require you to modify the way you use Cargo. The full list of changes is shown below in the <a href="#ReleasenotesforCargo0.8-clirr">Clirr section</a>.</p> <h4 id="ReleasenotesforCargo0.8-Forextensionusers">For extension users</h4> 
           <ul> 
            <li><code>local</code> container type replaced by <code>installed</code> and <code>embedded</code>.</li> 
           </ul> <p>For example if you were before using the m2 plugin with:</p> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 &lt;container&gt;
@@ -350,7 +356,7 @@
           </ul> 
           <ul> 
            <li>Renamed all container implementation from <code>*LocalContainer</code> to <code>*InstalledLocalContainer</code>, except for Jetty 4.x which name has not changed.</li> 
-          </ul> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-clirr"></span></p> <h3 id="ReleasenotesforCargo0.8-Clirrreport">Clirr report</h3> <p>This is the report generated by <a href="http://clirr.sourceforge.net/" class="external-link" rel="nofollow">Clirr</a> on the different Cargo APIs:</p> 
+          </ul> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-clirr" data-hasbody="false" data-macro-name="anchor"> </span></p> <h3 id="ReleasenotesforCargo0.8-Clirrreport">Clirr report</h3> <p>This is the report generated by <a href="http://clirr.sourceforge.net/" class="external-link" rel="nofollow">Clirr</a> on the different Cargo APIs:</p> 
           <ul> 
            <li><a href="#ReleasenotesforCargo0.8-container">Core Container API</a></li> 
            <li><a href="#ReleasenotesforCargo0.8-generic">Core Generic API</a></li> 
@@ -365,8 +371,8 @@
            <li><a href="#ReleasenotesforCargo0.8-weblogic">WebLogic API</a></li> 
            <li><a href="#ReleasenotesforCargo0.8-ant">Ant API</a></li> 
            <li><a href="#ReleasenotesforCargo0.8-maven2">Maven2 API</a></li> 
-          </ul> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-container"></span></p> <h4 id="ReleasenotesforCargo0.8-CoreContainerAPI">Core Container API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </ul> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-container" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-CoreContainerAPI">Core Container API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 INFO: 4000: org.codehaus.cargo.container.Container: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
@@ -435,8 +441,8 @@ INFO: 6000: org.codehaus.cargo.container.property.RemotePropertySet: Added publi
 INFO: 6000: org.codehaus.cargo.container.property.RemotePropertySet: Added public field USERNAME
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-generic"></span></p> <h4 id="ReleasenotesforCargo0.8-CoreGenericAPI">Core Generic API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-generic" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-CoreGenericAPI">Core Generic API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 INFO: 8000: org.codehaus.cargo.generic.ContainerCapabilityFactory: Class org.codehaus.cargo.generic.ContainerCapabilityFactory added
@@ -469,8 +475,8 @@ INFO: 7011: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Method '
 ERROR: 7012: org.codehaus.cargo.generic.deployer.DeployerFactory: Method 'public java.lang.Class getDeployerClass(java.lang.String, org.codehaus.cargo.container.deployer.DeployerType)' has been added to an interface
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-module"></span></p> <h4 id="ReleasenotesforCargo0.8-CoreModuleAPI">Core Module API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-module" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-CoreModuleAPI">Core Module API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 INFO: 7011: org.codehaus.cargo.module.DefaultJarArchive: Method 'public void expandToPath(java.lang.String)' has been added
@@ -513,8 +519,8 @@ INFO: 8000: org.codehaus.cargo.module.webapp.resin.ResourceRef: Class org.codeha
 INFO: 8000: org.codehaus.cargo.module.webapp.resin.SystemProperty: Class org.codehaus.cargo.module.webapp.resin.SystemProperty added
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-util"></span></p> <h4 id="ReleasenotesforCargo0.8-CoreUtilAPI">Core Util API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-util" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-CoreUtilAPI">Core Util API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 ERROR: 7002: org.codehaus.cargo.util.FileUtils: Method 'public java.io.File createTmpDir()' has been removed
@@ -538,8 +544,8 @@ ERROR: 8001: org.codehaus.cargo.util.monitor.NullMonitor: Class org.codehaus.car
 ERROR: 8001: org.codehaus.cargo.util.monitor.SimpleMonitor: Class org.codehaus.cargo.util.monitor.SimpleMonitor removed
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-jboss"></span></p> <h4 id="ReleasenotesforCargo0.8-JBossAPI">JBoss API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-jboss" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-JBossAPI">JBoss API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 INFO: 8000: org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer: Class org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer added
@@ -569,8 +575,8 @@ INFO: 5000: org.codehaus.cargo.container.jboss.JBossWAR: Added org.codehaus.carg
 ERROR: 5001: org.codehaus.cargo.container.jboss.JBossWAR: Removed org.codehaus.cargo.util.monitor.MonitoredObject from the list of superclasses
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-jetty"></span></p> <h4 id="ReleasenotesforCargo0.8-JettyAPI">Jetty API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-jetty" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-JettyAPI">Jetty API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 INFO: 8000: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedDeployer: Class org.codehaus.cargo.container.jetty.Jetty4xEmbeddedDeployer added
@@ -599,8 +605,8 @@ ERROR: 8001: org.codehaus.cargo.container.jetty.JettyDeployer: Class org.codehau
 ERROR: 8001: org.codehaus.cargo.container.jetty.JettyStandaloneLocalConfiguration: Class org.codehaus.cargo.container.jetty.JettyStandaloneLocalConfiguration removed
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-jo"></span></p> <h4 id="ReleasenotesforCargo0.8-JoAPI">Jo API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-jo" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-JoAPI">Jo API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 INFO: 4000: org.codehaus.cargo.container.jo.Jo1xDeployer: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
@@ -617,8 +623,8 @@ ERROR: 5001: org.codehaus.cargo.container.jo.Jo1xStandaloneLocalConfiguration: R
 ERROR: 8001: org.codehaus.cargo.container.jo.JoPropertySet: Class org.codehaus.cargo.container.jo.JoPropertySet removed
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-orion"></span></p> <h4 id="ReleasenotesforCargo0.8-OrionAPI">Orion API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-orion" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-OrionAPI">Orion API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 INFO: 8000: org.codehaus.cargo.container.orion.Oc4j9xInstalledLocalContainer: Class org.codehaus.cargo.container.orion.Oc4j9xInstalledLocalContainer added
@@ -641,8 +647,8 @@ INFO: 7000: org.codehaus.cargo.container.orion.OrionStandaloneLocalConfiguration
 INFO: 7000: org.codehaus.cargo.container.orion.OrionStandaloneLocalConfiguration: Method 'protected java.lang.String getUserToken()' is now implemented in superclass org.codehaus.cargo.container.orion.internal.AbstractOrionStandaloneLocalConfiguration
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-resin"></span></p> <h4 id="ReleasenotesforCargo0.8-ResinAPI">Resin API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-resin" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-ResinAPI">Resin API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 INFO: 8000: org.codehaus.cargo.container.resin.Resin2xInstalledLocalContainer: Class org.codehaus.cargo.container.resin.Resin2xInstalledLocalContainer added
@@ -668,8 +674,8 @@ INFO: 5000: org.codehaus.cargo.container.resin.ResinExistingLocalConfiguration: 
 ERROR: 5001: org.codehaus.cargo.container.resin.ResinExistingLocalConfiguration: Removed org.codehaus.cargo.util.monitor.MonitoredObject from the list of superclasses
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-tomcat"></span></p> <h4 id="ReleasenotesforCargo0.8-TomcatAPI">Tomcat API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-tomcat" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-TomcatAPI">Tomcat API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 ERROR: 8001: org.codehaus.cargo.container.tomcat.AbstractTomcatRemoteContainer: Class org.codehaus.cargo.container.tomcat.AbstractTomcatRemoteContainer removed
@@ -737,8 +743,8 @@ INFO: 5000: org.codehaus.cargo.container.tomcat.TomcatWAR: Added org.codehaus.ca
 ERROR: 5001: org.codehaus.cargo.container.tomcat.TomcatWAR: Removed org.codehaus.cargo.util.monitor.MonitoredObject from the list of superclasses
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-weblogic"></span></p> <h4 id="ReleasenotesforCargo0.8-WebLogicAPI">WebLogic API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-weblogic" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-WebLogicAPI">WebLogic API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 INFO: 8000: org.codehaus.cargo.container.weblogic.WebLogic8xInstalledLocalContainer: Class org.codehaus.cargo.container.weblogic.WebLogic8xInstalledLocalContainer added
@@ -753,15 +759,15 @@ INFO: 5000: org.codehaus.cargo.container.weblogic.WebLogicStandaloneLocalConfigu
 ERROR: 5001: org.codehaus.cargo.container.weblogic.WebLogicStandaloneLocalConfiguration: Removed org.codehaus.cargo.util.monitor.MonitoredObject from the list of superclasses
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-ant"></span></p> <h4 id="ReleasenotesforCargo0.8-AntAPI">Ant API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-ant" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-AntAPI">Ant API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 TODO
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="ReleasenotesforCargo0.8-maven2"></span></p> <h4 id="ReleasenotesforCargo0.8-Maven2API">Maven2 API</h4> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-maven2" data-hasbody="false" data-macro-name="anchor"> </span></p> <h4 id="ReleasenotesforCargo0.8-Maven2API">Maven2 API</h4> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 TODO

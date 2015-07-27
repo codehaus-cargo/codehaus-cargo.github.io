@@ -280,14 +280,19 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h1 id="Maven2PluginTips-Tips">Tips</h1> 
           <ul> 
            <li><a href="#Maven2PluginTips-tip1">Starting mutiple containers conditionally</a></li> 
            <li><a href="#Maven2PluginTips-tip2">Starting Tomcat in security mode</a></li> 
            <li><a href="#Maven2PluginTips-tip3">How to get Tomcat 5 working with the Java 5 XML Parsers</a></li> 
            <li><a href="Installer#Installer-installer_with_maven2_dependencies.html">How to use the ZIP or TAR.GZ distributions provided by servers on a Maven2 repository</a></li> 
-          </ul> <p><span class="confluence-anchor-link" id="Maven2PluginTips-tip1"></span></p> <h2 id="Maven2PluginTips-Startingmultiplecontainersconditionally">Starting multiple containers conditionally</h2> <p>Maven 2 supports the notion of <a href="http://maven.apache.org/guides/introduction/introduction-to-profiles.html" class="external-link" rel="nofollow">profiles</a> which can be used with Cargo to decide for example when to run tests on a specific container. Here's how you could use the Cargo m2 plugin to that effect:</p> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </ul> <p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginTips-tip1" data-hasbody="false" data-macro-name="anchor"> </span></p> <h2 id="Maven2PluginTips-Startingmultiplecontainersconditionally">Starting multiple containers conditionally</h2> <p>Maven 2 supports the notion of <a href="http://maven.apache.org/guides/introduction/introduction-to-profiles.html" class="external-link" rel="nofollow">profiles</a> which can be used with Cargo to decide for example when to run tests on a specific container. Here's how you could use the Cargo m2 plugin to that effect:</p> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 &lt;project&gt;
@@ -378,7 +383,7 @@
 </pre> 
            </div>
           </div> <p>Then to start the tomcat 5.x container you would type <code>mvn -P tomcat5x install</code>. if you want to start both containers you would type <code>mvn -P tomcat5x,orion2x install</code>.</p> <p>If you want to define a profile as the default you can use the <code>&lt;activation&gt;</code> element with an activation strategy. For example if you want a profile to be always on, use:</p> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 &lt;profiles&gt;
@@ -390,12 +395,12 @@
 [...]
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="Maven2PluginTips-tip2"></span></p> <h2 id="Maven2PluginTips-StartingTomcatinsecuritymode">Starting Tomcat in security mode</h2> <p>Cargo supports passing system properties <a href="Passing+system+properties.html">Passing system properties</a>. So, to start Tomcat in security mode, you need to specify two system properties:</p> 
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginTips-tip2" data-hasbody="false" data-macro-name="anchor"> </span></p> <h2 id="Maven2PluginTips-StartingTomcatinsecuritymode">Starting Tomcat in security mode</h2> <p>Cargo supports passing system properties <a href="Passing+system+properties.html">Passing system properties</a>. So, to start Tomcat in security mode, you need to specify two system properties:</p> 
           <ul> 
            <li>java.security.manager</li> 
            <li>java.security.policy</li> 
           </ul> <p>For instance,</p> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 [...]
@@ -421,8 +426,8 @@
 [...]
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link" id="Maven2PluginTips-tip3"></span></p> <h2 id="Maven2PluginTips-HowtogetTomcat5workingwiththeJava5XMLParsers">How to get Tomcat 5 working with the Java 5 XML Parsers</h2> <p><strong>Tip submitted by Ben P.</strong></p> <p>Imagine that you have some XML jars in the <code>common/endorsed</code> folder of Tomcat and you have edited your <code>catalina.bat</code> file to specify some extra JVM opts to specify the XML parser. Here's how to achieve the same using Cargo:</p> 
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginTips-tip3" data-hasbody="false" data-macro-name="anchor"> </span></p> <h2 id="Maven2PluginTips-HowtogetTomcat5workingwiththeJava5XMLParsers">How to get Tomcat 5 working with the Java 5 XML Parsers</h2> <p><strong>Tip submitted by Ben P.</strong></p> <p>Imagine that you have some XML jars in the <code>common/endorsed</code> folder of Tomcat and you have edited your <code>catalina.bat</code> file to specify some extra JVM opts to specify the XML parser. Here's how to achieve the same using Cargo:</p> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>
 &lt;plugin&gt;

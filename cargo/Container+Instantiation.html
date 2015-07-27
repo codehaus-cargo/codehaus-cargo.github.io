@@ -280,6 +280,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="ContainerInstantiation-Definition">Definition</h3>Create a container instance<h3 id="ContainerInstantiation-SupportMatrix">Support Matrix</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
@@ -300,7 +305,7 @@
           <ul>
            <li>by instantiating the Java object implementing the container and passing a <a href="Configuration.html">Configuration</a> object to it. For example:</li>
           </ul>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>Container container = new Orion2xLocalContainer(configuration);
 [...]
@@ -315,14 +320,14 @@ Container container = new TomcatRemoteContainer(configuration);
           <ul>
            <li>by using the <code>DefaultContainerFactory</code> class. The advantage is that you can instantiate the container by name and thus your code can be generic which is nice if you plan to run the same code with different containers. For example, to instantiate a Resin 3.x <a href="Installed+Container.html">installed local container</a>:</li>
           </ul>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>ContainerFactory factory = new DefaultContainerFactory();
 Container container = factory.createContainer("resin3x", ContainerType.INSTALLED, configuration);
 </pre> 
            </div>
           </div><p>In general we recommend that you use the factory method to instantiate a container as this makes your code more flexible.</p><p>The class or container id to use for instantiating a container can be found on each container's documentation page:</p><p></p>
-          <ul class="childpages-macro">
+          <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children">
            <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
            <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
            <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>

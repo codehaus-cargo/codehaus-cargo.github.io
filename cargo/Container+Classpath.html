@@ -280,14 +280,19 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="ContainerClasspath-Definition">Definition</h3><p>How to configure the executing container's classpath</p>
-          <div class="confluence-information-macro confluence-information-macro-information">
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
           </div><h3 id="ContainerClasspath-Explanation">Explanation</h3><p>This topic is not about the classpath requirements to run Cargo (see the <a href="Installation.html">Installation</a> page for this); it's about configuring the classpath for the executing container. You can therefore add custom JARs (code instrumentation, DataSource JARs, security-related libraries, etc.) to the container's execution classpath as shown below.</p><p>Note that some containers also support adding custom JARs to the applications' classpath only: see <a href="Application+Classpath.html">Application Classpath</a> for details.</p><h3 id="ContainerClasspath-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Orion 1.x with Clover jar added to its classpath. For example if you have instrumented your source code with Clover you'll need to add the Clover jar to the classpath.</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>InstalledLocalContainer container = new Orion1xInstalledLocalContainer(
     new OrionStandaloneLocalConfiguration("target/orion1x"));
@@ -299,7 +304,7 @@ container.start();
 </pre> 
            </div>
           </div><h3 id="ContainerClasspath-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting Orion 1.x with some additional classpath entries:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;cargo containerId="orion1x" home="c:/apps/orion-1.6.0b" action="start"&gt;
   &lt;extraClasspath&gt;

@@ -280,15 +280,20 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="Antsupport-Definition">Definition</h3>Cargo provides Ant tasks to perform all the operations available from the Java API
-          <div class="confluence-information-macro confluence-information-macro-information">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Functional tests</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>The usage of Cargo for executing functional tests on a container does not mandate these ANT tasks. You could directly use the Cargo Java API from your Java unit test classes (JUnit, TestNG, etc), as described on the <a href="Functional+testing.html">Functional testing</a> page.</p>
            </div>
           </div><h3 id="Antsupport-Explanation">Explanation</h3><p>Before using the Ant API you need to register the Cargo Ant tasks into Ant. This is done in the following manner:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
@@ -367,9 +372,9 @@
             </tbody>
            </table>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Wait after the container has started</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Many wonder the difference between the <code>start</code> and <code>run</code> actions:</p>
             <ul>
@@ -377,8 +382,8 @@
              <li>If you want start the container and have ANT "blocked" afterwards (i.e., until you press <code>CTRL + C</code> to stop), use the <code>run</code> action. <code>run</code> is therefore the action to use for manual testing.</li>
             </ul>
            </div>
-          </div><h3 id="Antsupport-Examples">Examples</h3><p><span class="confluence-anchor-link" id="Antsupport-examples"></span></p><h4 id="Antsupport-Orion2.x">Orion 2.x</h4><p>Here's a full example showing how to deploy a WAR, and expanded WAR and an EAR in an Orion 2.x container. Please note that the <code>output</code> and <code>log</code> attribute are optional. The <code>property</code> elements allow you to tune how the container is configured. Here we're telling it to start on port 8180 and to generate the maximum amount of logs in the container <code>output</code> file.</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div><h3 id="Antsupport-Examples">Examples</h3><p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-examples" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="Antsupport-Orion2.x">Orion 2.x</h4><p>Here's a full example showing how to deploy a WAR, and expanded WAR and an EAR in an Orion 2.x container. Please note that the <code>output</code> and <code>log</code> attribute are optional. The <code>property</code> elements allow you to tune how the container is configured. Here we're telling it to start on port 8180 and to generate the maximum amount of logs in the container <code>output</code> file.</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
@@ -400,9 +405,9 @@
 </pre> 
            </div>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Loading configuration properties from a file</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>It is also possible to load the configuration properties from a file - simply use the&nbsp;<code>propertiesFile</code> attribute of the&nbsp;<code>configuration</code> XML element.</p>
            </div>
@@ -419,7 +424,7 @@
           <ul>
            <li>Define a property for cargolib</li>
           </ul>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;property name="cargolib.dir" value="${basedir}/cargolib"/&gt;
 </pre> 
@@ -428,7 +433,7 @@
           <ul>
            <li>Define 2 new properties <code>cargo-uberjar</code> and <code>cargo-antjar</code> as shown below:</li>
           </ul>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;property name="cargo-uberjar" value="${cargolib.dir}/cargo-core-uberjar.jar"/&gt;
 &lt;property name="cargo-antjar" value="${cargolib.dir}/cargo-ant.jar"/&gt;
@@ -466,7 +471,7 @@
           </ul>
           <ul>
            <li><p>Add the following code to your build.xml :</p>
-            <div class="code panel pdl" style="border-width: 1px;">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
               <pre>&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
@@ -498,7 +503,7 @@
              </div>
             </div></li>
           </ul><h4 id="Antsupport-Remotedeployment">Remote deployment</h4><p>Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;

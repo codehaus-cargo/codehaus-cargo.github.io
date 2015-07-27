@@ -280,14 +280,23 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
-          </center> <h3 id="XMLreplacements-Definition">Definition</h3>The <strong>XML replacements</strong> option allows you to modify XML files of your container's configuration using XPath statements.
-          <div class="confluence-information-macro confluence-information-macro-information">
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
+          </center> <h3 id="XMLreplacements-Definition">Definition</h3>
+          <div class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt">
+           The 
+           <strong>XML replacements</strong> option allows you to modify XML files of your container's configuration using XPath statements.
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Standalone+Local+Configuration.html">standalone local containers</a>, and currently doesn't work with the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
            </div>
           </div><h3 id="XMLreplacements-Explanation">Explanation</h3><p>In some cases, it is necessary to modify XML files of your container. This can be done using Cargo's <code>xmlReplacements</code> option, accessible via the Cargo APIs.</p><p>You might for example want to modify the&nbsp;<code>defaultHost</code> for your Tomcat instance.</p><h3 id="XMLreplacements-ExampleusingtheJavaAPI">Example using the Java API</h3>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>LocalContainer container = ...;
 StandaloneLocalConfiguration configuration = (StandaloneLocalConfiguration) getLocalContainer().getConfiguration();
@@ -306,7 +315,7 @@ configuration.addXmlReplacement(defaultHost);
            <li>If the&nbsp;<code>value</code> corresponds to an existing <a href="Configuration+properties.html">configuration property</a> (such as&nbsp;<code>cargo.hostname</code> for example) then Cargo will reuse it from the configuration</li>
            <li>Finally, there is another parameter&nbsp;<code>ignoreIfNonExisting</code> which, when set to&nbsp;<code>TRUE</code>, will make the XML replacement tool ignore if that specific XPath doesn't exist in the XML file</li>
           </ul><h3 id="XMLreplacements-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;cargo containerId="@{containerId}" action="@{action}"&gt;
   &lt;configuration home="${configuration.home}"&gt;
@@ -316,7 +325,7 @@ configuration.addXmlReplacement(defaultHost);
 </pre> 
            </div>
           </div><h3 id="XMLreplacements-ExampleusingtheMaven2plugin">Example using the Maven 2 plugin</h3>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;

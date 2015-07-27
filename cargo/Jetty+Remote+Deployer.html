@@ -280,6 +280,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <p>This document explains how to configure Cargo remote deployment support on a Jetty container.</p><h3 id="JettyRemoteDeployer-Overview">Overview</h3><p>By default, Jetty does not come with possibilities for remote deployment. In order to add such a support to Jetty, Cargo uses a "Jetty remote deployer" Web application.</p><p>This application is a simple servlet-based application which exposes methods such as deploy or undeploy on standard HTTP POST URLs. When thse HTTP methods are called, the servlet implementing these methods connects to the Jetty Server implementation and does deployment related actions on the server; this Web application can therefore be seen as a kind of remote administration proxy.</p><p>Being a standard Web application, the Cargo Jetty remote deployer application can be secured using Jetty users and roles.</p><h3 id="JettyRemoteDeployer-Downloadingtheremotedeployer">Downloading the remote deployer</h3><p>Two versions of the Jetty remote deployer WAR are available on the <a href="Downloads.html">Cargo downloads</a> page (scroll down to the <strong>Tools</strong> section):</p>
           <ul>
            <li><code>cargo-jetty-7-and-onwards-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 7.x and later (Jetty from Eclipse.org)</li>
@@ -296,7 +301,7 @@
             <ol>
              <li>Open the Jetty <code>realm.properties</code> file</li>
              <li><p>Add, for example, the following definition</p>
-              <div class="code panel pdl" style="border-width: 1px;">
+              <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
                <div class="codeContent panelContent pdl"> 
                 <pre>someusername: somepassword,manager
 </pre> 
@@ -309,8 +314,8 @@
            <li>Ask again if the login is not valid</li>
            <li>If the login is valid, show a page saying: <code>Command / is unknown</code></li>
           </ul>
-          <div class="confluence-information-macro confluence-information-macro-tip">
-           <span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"></span>
+          <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block" data-hasbody="true" data-macro-name="tip">
+           <span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p><strong>Note</strong>: Jetty's website has documentation on hashing the password.</p>
            </div>
@@ -321,7 +326,7 @@
            <li>The Jetty remote deployer WAR is secured using the Jetty role <code>manager</code></li>
            <li>A user called <code>someusername</code> with password <code>somepassword</code> is defined as <code>manager</code></li>
           </ul>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;dependencies&gt;
   &lt;dependency&gt;
@@ -375,19 +380,19 @@
 </pre> 
            </div>
           </div><p>To run the given Maven2 plugin configuration on a simple Maven2 WAR project, simply execute:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>mvn war:war
 mvn cargo:deploy
 </pre> 
            </div>
           </div><h3 id="JettyRemoteDeployer-Knownissues">Known issues</h3>
-          <div class="confluence-information-macro confluence-information-macro-note">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
            <p class="title">Unexpected end of file from server and maxIdleTime parameter</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>By default, Jetty sets the&nbsp;<code>maxIdleTime</code> parameter in the&nbsp;<code>etc/jetty.xml</code> file 30 seconds. This means that if the actual deployment takes more than 30 seconds, you might get error messages like:</p>
-            <div class="code panel pdl" style="border-width: 1px;">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
               <pre>[ERROR] Failed to execute goal org.codehaus.cargo:cargo-maven2-plugin:1.2.2:deploy (default-cli)
         on project display: Execution default-cli of goal org.codehaus.cargo:cargo-maven2-plugin:1.2.2:deploy
@@ -409,7 +414,7 @@ Caused by: java.net.SocketException: Unexpected end of file from server
              </div>
             </div>
             <p>In this case, open the target Jetty container's <code>etc/jetty.xml</code> file and set the <code>maxIdleTime</code> parameter to longer. For example:</p>
-            <div class="code panel pdl" style="border-width: 1px;">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
               <pre>&lt;?xml version="1.0"?&gt;
 &lt;!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd"&gt;

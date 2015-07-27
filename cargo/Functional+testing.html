@@ -280,10 +280,15 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h2 id="Functionaltesting-FunctionalTestingwithCargo">Functional Testing with Cargo</h2>This page explains how to do functional testing with the Cargo Java API and JUnit.
-          <div class="confluence-information-macro confluence-information-macro-information">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Are you using ANT or Maven2/Maven3?</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>If you are relying on ANT or Maven2/Maven3 for your build, it is probably easier for you to use the associated tasks/plugin directly:</p>
             <ul>
@@ -293,7 +298,7 @@
             <p>Note that the Maven2/Maven3 plugin also has <a href="Maven2+Archetypes.html">archetypes</a> you can directly use as a skeleton for integration.</p>
            </div>
           </div><p>&nbsp;</p><h3 id="Functionaltesting-Example">Example</h3><p>The best is to create a JUnit <code>TestSetup</code> extension so that you start and stop your container once for the whole test suite. For example:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>import junit.extensions.TestSetup;
 import junit.framework.Test;
@@ -339,7 +344,7 @@ public class CargoTestSetup extends TestSetup
 </pre> 
            </div>
           </div><p>Then write your test case. For example:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>import junit.framework.TestCase;
 import junit.framework.Test;

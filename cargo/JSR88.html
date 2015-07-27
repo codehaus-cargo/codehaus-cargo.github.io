@@ -280,6 +280,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="JSR88-Definition">Definition</h3><p>JSR88-compliant containers support</p><h3 id="JSR88-Explanation">Explanation</h3><p>Cargo supports <a href="http://www.jcp.org/en/jsr/detail?id=88" class="external-link" rel="nofollow">JSR 88: J2EE Application Deployment</a> API, allowing it to be used with any JSR88-compliant container.</p><p>The core functionality is implemented by the <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/spi/deployer/AbstractJsr88Deployer.html" class="external-link" rel="nofollow">o.c.c.container.spi.deployer.AbstractJsr88Deployer</a></code> class (a <a href="Deployer.html">Deployer</a> implementation), which acts as a proxy to the JSR88 DeploymentManager.</p><h3 id="JSR88-GlassFish">GlassFish</h3><p>The <a href="Glassfish+3.x.html">Glassfish 3.x</a> and&nbsp;<a href="Glassfish+4.x.html">Glassfish 4.x</a> remote containers use the JSR-88 API. For the connection to succeed, the following JARs need to be in the container classpath or in the current Java Thread's context classloader:</p>
           <ul>
            <li>deployment-client.jar and its dependencies - for <a href="Glassfish+3.x.html">Glassfish 3.x</a>, these seem to be:
@@ -294,7 +299,7 @@
           </ul><p>Here is an example code for the users of the Java API:</p>
           <blockquote>
            <p>&nbsp;</p>
-           <div class="code panel pdl" style="border-width: 1px;">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre>List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
 
@@ -322,7 +327,7 @@ Thread.currentThread().setContextClassLoader(classLoader);
           </blockquote><p>Here is an example Maven2 plugin configuration:</p>
           <blockquote>
            <p>&nbsp;</p>
-           <div class="code panel pdl" style="border-width: 1px;">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre>&lt;pluginRepositories&gt;
   &lt;pluginRepository&gt;
@@ -369,11 +374,11 @@ Thread.currentThread().setContextClassLoader(classLoader);
             </div>
            </div>
           </blockquote>
-          <div class="confluence-information-macro confluence-information-macro-note">
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>When adding the <code>org.glassfish.deployment:deployment-client</code> dependency, please make sure that the version matches <strong>exactly</strong> the targeted GlassFish server's version (beware the updates that you install on GlassFish, these indeed change the version of your server); else you might run into unexpected surprises like:</p>
-            <div class="code panel pdl" style="border-width: 1px;">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
               <pre>error submitting remote command: com.sun.enterprise.admin.cli.CommandException:
    CLI001 Invalid Command: list: InvalidCommandException -&gt; [Help 1]
@@ -381,7 +386,7 @@ Thread.currentThread().setContextClassLoader(classLoader);
              </div>
             </div>
             <p>or</p>
-            <div class="code panel pdl" style="border-width: 1px;">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
               <pre>GlassFish list help command report
 

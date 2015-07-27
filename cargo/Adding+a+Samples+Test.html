@@ -280,8 +280,13 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <p>updating samples test cases.</p><p>1. find the test case you wish to copy.</p><p>copy recursively&nbsp;<code>resources/testdata/&lt;you_want_to_copy&gt;-war</code> to a new folder (ex.&nbsp;<code>resources/testdata/NEW-war</code>)<br> edit&nbsp;<code>resources/testdata/new-war/pom.xml</code> (change&nbsp;<code>artifact-id</code> to <code>NEW-war</code>, and name to something descriptive )<br> edit&nbsp;<code>resources/testdata/pom.xml</code> and add module <code>NEW-war</code></p><p>edit <code>core/samples/pom.xml</code><br> under Test data artifacts, add</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>  &lt;dependency&gt;
     &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
@@ -292,7 +297,7 @@
 </pre> 
            </div>
           </div><p>under Location of testdata dependencies..., add</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>  &lt;property&gt;
     &lt;name&gt;cargo.testdata.NEW-war&lt;/name&gt;

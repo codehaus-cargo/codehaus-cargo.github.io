@@ -280,14 +280,19 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="ContainerStart-Definition">Definition</h3>Start a container that is not already running
-          <div class="confluence-information-macro confluence-information-macro-information">
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
           </div><h3 id="ContainerStart-Explanation">Explanation</h3><p>First you need to create a <a href="Container+Instantiation.html">container instance</a>.</p><p>Once you have this container instance, starting the container is as simple as calling the <code>start()</code> method. Before doing this though you'll need to ensure you have defined the container's <code>home</code> (if you're using a container in <a class="unresolved" href="#">standalone mode</a> - It's not required for containers in <a class="unresolved" href="#">embedded mode</a>).</p><p>Of course it you wish to statically deploy archives, you'll need to add <a href="Deployable.html">deployables</a> to the container.</p><p>It is important to note that the <code>LocalContainer.start()</code> method will wait until the container is <strong>fully started</strong> before returning.</p><h3 id="ContainerStart-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Resin 3.x with no deployable:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
   new Resin3xStandaloneLocalConfiguration("target/resin3x"));
@@ -297,7 +302,7 @@ container.start();
 </pre> 
            </div>
           </div><h3 id="ContainerStart-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Before being able to use the Cargo Ant tasks you need to register them against Ant. This is done by using the Ant <code>&lt;taskdef&gt;</code> element. See the <a href="Ant+support.html">Ant support page</a>. The action to start the container is specified using the <code>action="start"</code> attribute as shown below.</p><p>Starting Resin 3.x with no deployable:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;cargo containerId="resin3x" home="c:/apps/resin-3.0.15" action="start"/&gt;
 </pre> 

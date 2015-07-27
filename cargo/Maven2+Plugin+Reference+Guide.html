@@ -280,6 +280,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h1 id="Maven2PluginReferenceGuide-ReferenceGuide">Reference Guide</h1><p>These are the various XML configuration elements that you can use to configure the Cargo Maven2 plugin. Make sure you also check the <a href="#Maven2PluginReferenceGuide-features">use cases</a> which show how to use them.</p>
           <div class="table-wrap">
            <table class="confluenceTable">
@@ -328,7 +333,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-configuration"></span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-configuration" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -367,7 +372,7 @@
               <td class="confluenceTd"><p>Values to use for various <a href="Configuration+properties.html">Configuration properties</a>.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;propertiesFile&gt;</code> element to load configuration properties from a file.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">Default configuration properties</a> <br class="atl-forced-newline"> <br class="atl-forced-newline"> Note that these configuration properties can also be overriden using Java properties; for example:</p>
-               <div class="code panel pdl" style="border-width: 1px;">
+               <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
                 <div class="codeContent panelContent pdl"> 
                  <pre>mvn -Dcargo.servlet.port=8082 cargo:start
 </pre> 
@@ -388,7 +393,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-container"></span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-container" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -472,7 +477,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-deployer"></span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-deployer" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -496,7 +501,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><br><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-configfile"></span></p>
+          </div><p><br><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-configfile" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -526,7 +531,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-file"></span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-file" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -568,7 +573,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-deployable"></span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-deployable" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -628,7 +633,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-prop2"></span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-prop2" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -677,13 +682,13 @@
             </tbody>
            </table>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">About WAR contexts</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Many containers have their specific files for redefining context roots (Tomcat has context.xml, JBoss has jboss-web.xml, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
            </div>
-          </div><p><br><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-dependency"></span></p>
+          </div><p><br><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-dependency" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -720,7 +725,7 @@
              <tr>
               <td class="confluenceTd"><p><code>&lt;location&gt;</code></p></td>
               <td class="confluenceTd"><p>The path of a folder or a jar file you wish to add to deployable classpath. This element can be used to explicitly add entries to the classpath. For example:</p>
-               <div class="code panel pdl" style="border-width: 1px;">
+               <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
                 <div class="codeContent panelContent pdl"> 
                  <pre>&lt;dependency&gt;
    &lt;location&gt;src/main/resources/conf&lt;/location&gt;
@@ -733,7 +738,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-zipUrlInstaller"></span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-zipUrlInstaller" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -769,10 +774,10 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-proxy"></span></p>
-          <div class="confluence-information-macro confluence-information-macro-information">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-proxy" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Automatic proxy settings</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Note that CARGO will by default reuse existing Maven2 proxy configuration -so you won't need to type the proxy settings for the <code>zipUrlInstaller</code> element.</p>
            </div>
@@ -812,7 +817,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-artifactInstaller"></span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-artifactInstaller" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -860,10 +865,10 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-daemon"></span></p><h1 id="Maven2PluginReferenceGuide-Daemonconfiguration">Daemon configuration</h1><p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
-          <div class="confluence-information-macro confluence-information-macro-information">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-daemon" data-hasbody="false" data-macro-name="anchor"> </span></p><h1 id="Maven2PluginReferenceGuide-Daemonconfiguration">Daemon configuration</h1><p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Container configuration for the Daemon</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>For the Maven2/Maven3 plugin, the "daemonized server" is actually a <a href="Local+Container.html">local container</a> with a <a href="Configuration+properties.html">hostname</a> that points to a remote machine. This implies that:</p>
             <ul>
@@ -953,8 +958,8 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link" id="Maven2PluginReferenceGuide-settingsXML"></span></p><h1 id="Maven2PluginReferenceGuide-SettingconfigurationoptionsviatheMavensettings.xml">Setting configuration options via the Maven settings.xml</h1><p>The Cargo Maven2/Maven3 plugin also allows you to define container configuration properties using the <code>settings.xml</code> file. This way, you can for example store properties like usernames and passwords in a centralized location (as opposed to <code>pom.xml</code> files).</p><p>First, add the configuration properties you would like in your <code>settings.xml</code> file's <code>&lt;servers&gt;</code> section:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-settingsXML" data-hasbody="false" data-macro-name="anchor"> </span></p><h1 id="Maven2PluginReferenceGuide-SettingconfigurationoptionsviatheMavensettings.xml">Setting configuration options via the Maven settings.xml</h1><p>The Cargo Maven2/Maven3 plugin also allows you to define container configuration properties using the <code>settings.xml</code> file. This way, you can for example store properties like usernames and passwords in a centralized location (as opposed to <code>pom.xml</code> files).</p><p>First, add the configuration properties you would like in your <code>settings.xml</code> file's <code>&lt;servers&gt;</code> section:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;servers&gt;
   &lt;server&gt;
@@ -970,7 +975,7 @@
 </pre> 
            </div>
           </div><p>Then, in the Cargo plugin's configuration, use the <code>cargo.server.settings</code> property in order to reference the configuration properties that you have previously defined. For example:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
@@ -987,7 +992,7 @@
 </pre> 
            </div>
           </div><p>In this case, the plugin will internally "expand" the configuration into:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
@@ -1007,9 +1012,9 @@
 </pre> 
            </div>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-note">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
            <p class="title">Careful with properties set in the POM</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Priority for property values are as follows:</p>
             <ul>

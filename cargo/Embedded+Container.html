@@ -280,10 +280,15 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="EmbeddedContainer-Definition">Definition</h3><p>A container executing in the same JVM where Cargo is running</p><h3 id="EmbeddedContainer-Explanation">Explanation</h3><p>An embedded container means that Cargo is using directly the container's Java API to control it and starts the container in the same JVM as where it is running. This implies you can do many advanced things programmatically - such as playing with the class loader, adding proxy classes, etc.</p><p>Please note that if you're using one of the embedded implementation you'll need to ensure that you have the container's JARs in your classpath.</p>
-          <div class="confluence-information-macro confluence-information-macro-note">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
            <p class="title">Be very careful when using embedded containers</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Embedded containers, since they run in an existing JVM, will come with a large number of limitations:</p>
             <ul>

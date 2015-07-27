@@ -280,6 +280,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <p>Releases are now performed using Maven 2 or Maven 3 so you need to have one of these installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
           <ul>
            <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html" class="external-link" rel="nofollow">OSSRH guide</a></li>
@@ -288,7 +293,7 @@
              <li>The secret key's public part must have been uploaded to the <a href="http://pgp.mit.edu/" class="external-link" rel="nofollow">MIT PGP Public Key Server</a>.</li>
             </ul></li>
            <li><p>To provide your&nbsp;Sonatype Nexus credentials using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
-            <div class="code panel pdl" style="border-width: 1px;">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
               <pre>&lt;settings&gt;
   [...]
@@ -366,9 +371,9 @@
             </ol></li>
            <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>
           </ol><p>&nbsp;</p>
-          <div class="confluence-information-macro confluence-information-macro-information">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">How to insert using the Wiki Markup</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>To insert content using <strong>Wiki Markup</strong>:</p>
             <ol>

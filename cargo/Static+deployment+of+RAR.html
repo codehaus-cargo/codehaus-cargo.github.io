@@ -280,15 +280,20 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="StaticdeploymentofRAR-Definition">Definition</h3>Deploy a Java EE resource adapter (RAR) that will be started when the container starts
-          <div class="confluence-information-macro confluence-information-macro-information">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">DataSource and Resource Support</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>An alternative to using RARs is to use the <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a> provided by CARGO.</p>
            </div>
           </div><h3 id="StaticdeploymentofRAR-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting JOnAS 5.x with a RAR to deploy:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>InstalledLocalContainer container = new Jonas5xInstalledLocalContainer(
     new Jonas5xStandaloneLocalConfiguration("target/jonas5x"));
@@ -301,7 +306,7 @@ container.start();
 </pre> 
            </div>
           </div><h3 id="StaticdeploymentofRAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting JOnAS 5.x with a RAR to deploy:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;cargo containerId="jonas5x" home="c:/jonas/jonas-5.1.2" action="start"&gt;
   &lt;configuration&gt;
@@ -311,7 +316,7 @@ container.start();
 </pre> 
            </div>
           </div><h3 id="StaticdeploymentofRAR-ExampleusingtheMaven2/Maven3API">Example using the Maven2/Maven3 API</h3><p>Here is the plugin configuration defining a JOnAS 5.x container with a RAR to deploy:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;dependencies&gt;
   &lt;dependency&gt;

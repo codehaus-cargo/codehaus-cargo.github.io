@@ -280,6 +280,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <p>The way the <a href="Container+Classpath.html">container classpath</a> is managed in all JBoss 7.x&nbsp;containers and all WildFly containers is slightly different from most others.</p><h3 id="JBoss7seriesandWildFlycontainerclasspath-HowthecontainerclasspathisaddedtotheJBoss/WildFlycontainer">How the container classpath is added to the JBoss / WildFly container</h3><p>In order to add the <a href="Container+Classpath.html">container classpath</a> to the JBoss / WildFly container, CARGO takes the below steps:</p>
           <ol>
            <li>The JAR files which are in the <a href="Container+Classpath.html">container classpath</a> are copied in the&nbsp;<code>modules/org/codehaus/cargo/classpath</code> subdirectory of the container home<br><strong>Attention</strong>: The JAR files are copied in the container home, and not into the configuration home. Hence, the JBoss / WildFly container's binaries are actually modified ad vidam eternam (until you manually clean it up).</li>

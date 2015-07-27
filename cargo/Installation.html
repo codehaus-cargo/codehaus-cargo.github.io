@@ -280,6 +280,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="Installation-JavaAPI">Java API</h3><p>Cargo offers primarily a Java API. It is meant to be embedded in your application. You'll need Java SE version 5 or greater.</p><p>You have two choices to pick from the <a href="Downloads.html">Downloads</a> page:</p>
           <ul>
            <li>the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars)</li>
@@ -301,7 +306,7 @@
            <li>The same jars as for the Java API (i.e., either the API JARs + the container(s) <strong>or</strong> the uberjar)</li>
            <li>The <code>cargo-ant</code> JAR, containing the <code>&lt;taskdef&gt;</code> definition (see the <a href="Ant+support.html">Ant support</a> page)</li>
           </ul><h3 id="Installation-Maven2andMaven2">Maven2 and Maven2</h3><p>Maven2/Maven3 will automatically download all required dependencies: see the <a href="Maven2+plugin.html">Maven2 plugin</a> page. As a result, no installation is required for Maven2 nor Maven3.</p><p>If you are creating a Java applications which use the CARGO via API, you need to add as dependency either the artifact for your favorite container or the uberjar (which contains all containers). See below</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Example for adding the CARGO uberjar as dependency</b>
            </div>
@@ -313,7 +318,7 @@
 &lt;/dependency&gt;</pre> 
            </div>
           </div>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Example for adding the CARGO Tomcat container as dependency</b>
            </div>

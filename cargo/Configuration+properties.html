@@ -280,6 +280,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="Configurationproperties-Definition">Definition</h3>Properties to configure a container (request port, shutdown port, logging level, threads, etc)<h3 id="Configurationproperties-Explanations">Explanations</h3><p>It is possible to set container configuration properties using the Cargo API. These properties are applied to a <a href="Configuration.html">Configuration</a>.</p><p>There are 2 kinds of properties:</p>
           <ul>
            <li>General properties</li>
@@ -371,9 +376,9 @@
             </tbody>
            </table>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Datasource and Resource configuration</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>In addition to the "simple" properties presented here, some container also support properties for setting up datasources. You can read more on: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</p>
            </div>
@@ -394,7 +399,7 @@
             </tbody>
            </table>
           </div><h3 id="Configurationproperties-JavaAPI">Java API</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>Configuration configuration = 
     new Tomcat5xStandaloneLocalConfiguration("target/tomcat5x"));
@@ -403,13 +408,13 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
 </pre> 
            </div>
           </div><p>You can check if a configuration supports a given property by using <code>Configuration.getCapability().supportsProperty(String propertyName)</code>.</p><p>For example if you want to check if the configuration supports setting the port property:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>boolean isPropertySupported = configuration.getCapability().supportsProperty(ServletPropertySet.PORT);
 </pre> 
            </div>
           </div><h3 id="Configurationproperties-AntTask">Ant Task</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;cargo containerId="tomcat5x" home="c:/apps/jakarta-tomcat-5.0.29" action="start"&gt;
   &lt;configuration&gt;
@@ -419,7 +424,7 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
 </pre> 
            </div>
           </div><h3 id="Configurationproperties-Maven2Plugin">Maven 2 Plugin</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;build&gt;
   &lt;plugins&gt;
@@ -444,7 +449,7 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
 </pre> 
            </div>
           </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or Maven2/Maven3 goals) can also be overriden using Java properties.</p><p>For example, with Maven:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>mvn -Dcargo.servlet.port=8082 cargo:start
 </pre> 

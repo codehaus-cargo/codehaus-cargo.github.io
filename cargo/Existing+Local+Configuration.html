@@ -280,6 +280,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
                 </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
           </center> <h3 id="ExistingLocalConfiguration-Definition">Definition</h3>Re-use an existing container installation<h3 id="ExistingLocalConfiguration-Explanations">Explanations</h3><p>An existing configuration plugs itself onto an existing container installation that exists on your hard disk. This is by opposition to the <a href="Standalone+Local+Configuration.html">Standalone Local Configuration</a> which creates a new container installation from scratch in a directory of your choice. Existing configurations require that the user creates a valid configuration directory and points Cargo to it.</p><p>Whenever you configure or start a container which uses an existing configuration, Cargo will:</p>
           <ul>
            <li>Copy all <a href="Configuration+files+option.html">configuration files</a></li>
@@ -304,7 +309,7 @@
           <ul>
            <li>By directly instantiating the configuration matching your container. For example:</li>
           </ul>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>[...]
 Configuration configuration = new ResinExistingLocalConfiguration("target/resin3x");
@@ -315,7 +320,7 @@ Configuration configuration = new ResinExistingLocalConfiguration("target/resin3
           <ul>
            <li>By using the <code>DefaultConfigurationFactory</code> which automatically maps the right implementation for the container you're using. For example:</li>
           </ul>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>[...]
 ConfigurationFactory factory = new DefaultConfigurationFactory();
@@ -325,7 +330,7 @@ Configuration configuration = factory.createConfiguration("resin3x",
 </pre> 
            </div>
           </div><h3 id="ExistingLocalConfiguration-AntTask">Ant Task</h3><p>Example:</p>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>&lt;cargo containerId="resin3x" [...]&gt;
   &lt;configuration type="existing" home="c:/apps/resin-3.0.9"/&gt;
@@ -334,7 +339,7 @@ Configuration configuration = factory.createConfiguration("resin3x",
 </pre> 
            </div>
           </div><h3 id="ExistingLocalConfiguration-Maven2Plugin">Maven2 Plugin</h3>
-          <div class="code panel pdl" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre>[...]
 &lt;container&gt;
