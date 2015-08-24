@@ -348,6 +348,7 @@ public class WebsiteGenerator implements Runnable
                     if (!attachment.startsWith("https://semaphoreci.com/"))
                     {
                         sb.append("attachments/");
+                        attachment = attachment.replace("&amp;", "&");
                         if ("http://www.codehaus.org/newtest.gif".equals(attachment))
                         {
                             attachment = "blank.gif";
