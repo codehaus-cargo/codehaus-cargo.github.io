@@ -289,7 +289,7 @@
           <ul>
            <li><a href="#JBossRemoteDeployer-jboss4x">JBoss 4.0.x and 4.2.x</a></li>
            <li><a href="#JBossRemoteDeployer-jboss5x6x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</a></li>
-           <li><a href="#JBossRemoteDeployer-jboss7x">JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x / WildFly 8.x</a></li>
+           <li><a href="#JBossRemoteDeployer-jboss7x">JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x / WildFly 8.x and 9.x</a></li>
           </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss4x" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="JBossRemoteDeployer-JBoss4.0.xand4.2.x">JBoss 4.0.x and 4.2.x</h3><p>In JBoss 4.x, the JMX-based remote deployer can accept URLs that point to another machine. For example:</p>
           <blockquote>
            <p><code><a href="http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war" class="external-link" rel="nofollow">http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war</a></code></p>
@@ -436,11 +436,94 @@ Thread.currentThread().setContextClassLoader(classLoader);
           <ul>
            <li><code>cargo.jboss.clustered</code>: if <code>true</code>, deployment is done in the <code>farm</code> directory</li>
            <li><code>cargo.jboss.configuration</code>: JBoss profile name, default name is <code>default</code></li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss7x" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="JBossRemoteDeployer-JBoss7.0.x,7.1.x,7.2.xand7.3.x/WildFly8.x">JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x / WildFly 8.x</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x as well as WildFly 8.x, with some differences:</p>
+          </ul><p>&nbsp;</p>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
+           <p class="title">JBoss socket connection bug - java.lang.IllegalArgumentException: port out of range:-1</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>On some Linux distributions, remote deployment may fail with an exception like:</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+             <div class="codeContent panelContent pdl"> 
+              <pre>org.codehaus.cargo.container.ContainerException: Cannot get the JBoss Deployment Manager on Provider URL jnp://localhost:44399
+    at org.codehaus.cargo.tools.jboss.JBossDeployer.getDeploymentManager(JBossDeployer.java:193)
+    at org.codehaus.cargo.tools.jboss.JBossDeployer.deploy(JBossDeployer.java:70)
+    [...]
+Caused by: org.jboss.remoting.CannotConnectException: Can not get connection to server. Problem establishing socket connection for InvokerLocator [socket://LXC_trusty_1509-a5724cdf/?dataType=invocation&amp;enableTcpNoDelay=true&amp;marshaller=org.jboss.invocation.unified.marshall.InvocationMarshaller&amp;unmarshaller=org.jboss.invocation.unified.marshall.InvocationUnMarshaller]
+    at org.jboss.remoting.transport.socket.MicroSocketClientInvoker.transport(MicroSocketClientInvoker.java:831)
+    [...]
+Caused by: java.lang.IllegalArgumentException: port out of range:-1
+</pre> 
+             </div>
+            </div>
+            <p>That is a known bug, documented in&nbsp;<a href="https://developer.jboss.org/message/528140" class="external-link" rel="nofollow">https://developer.jboss.org/message/528140</a> due to the fact that the host, machine or DNS name you set on your machine as an underscore (i.e., _) character in it.</p>
+            <p>To fix it, simply rename your host, machine or DNS name to not include underscores anymore; for example on Linux you achieve this by executing a command similar to: <code>sudo hostname codehaus-cargo-ci</code></p>
+           </div>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
+           <p class="title">JBoss socket connection bug - Problem establishing socket connection for InvokerLocator</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>On some Linux distributions, remote deployment may fail with an exception like:</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+             <div class="codeContent panelContent pdl"> 
+              <pre>Caused by: java.io.IOException: Can not get connection to server.
+           Problem establishing socket connection for InvokerLocator
+           [socket://host:32342/]
+</pre> 
+             </div>
+            </div>
+            <p>That is a known bug, documented in <a class="external-link" href="http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS" rel="nofollow">http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS</a> and the solution presented on that document is to use a cron job as the root user to fix the file when it gets broken.</p>
+            <p>First, create the correct version of <code>/etc/hosts</code> and save it somewhere, such as <code>/etc/hosts.fixed</code>, and populate it with the following contents (replace <code>myhost</code> with the hostname of your computer, as reported by the <code>hostname</code> command, and the correct IP assignment, as reported by <code>ipconfig</code>):</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+             <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+              <b>/etc/hosts.fixed</b>
+             </div>
+             <div class="codeContent panelContent pdl"> 
+              <pre>127.0.0.1 myhost localhost localhost.localdomain
+::1 myhost localhost6 localhost6.localdomain6
+127.0.1.1 myhost
+## (optional entry); update if assigned a new address from DHCP
+192.168.1.5 myhost
+
+## The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost  ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+</pre> 
+             </div>
+            </div>
+            <p><strong>Important</strong>: If possible, enter your hostname with both the "basic" hostname and the fully-qualified domain name.</p>
+            <p>Next, create a script named <code>/etc/restore-etc-hosts.sh</code> to replace the <code>/etc/hosts</code> file if Network Manager breaks it:</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+             <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+              <b>/etc/restore-etc-hosts.sh</b>
+             </div>
+             <div class="codeContent panelContent pdl"> 
+              <pre>#!/bin/sh
+
+if [ `grep -c NetworkManager /etc/hosts` -eq 1 ]; then
+   cp /etc/hosts.fixed /etc/hosts
+fi
+</pre> 
+             </div>
+            </div>
+            <p>Finally, setup a cron job to run this script as often as you like. We recommend every couple of minutes.</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+             <div class="codeContent panelContent pdl"> 
+              <pre>*/3 * * * * /etc/restore-etc-hosts.sh
+</pre> 
+             </div>
+            </div>
+            <p>Once the <code>/etc/hosts</code> file is corrected, restart JBoss AS and run the tests again. Your socket connection error should be gone!</p>
+           </div>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss7x" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="JBossRemoteDeployer-JBoss7.0.x,7.1.x,7.2.xand7.3.x/WildFly8.xand9.x">JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x / WildFly 8.x and 9.x</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x as well as WildFly 8.x and 9.x, with some differences:</p>
           <ul>
            <li>The JAR files to include are different</li>
            <li>JBoss 7.0.x, 7.1.x, 7.2.x and 7.3.x&nbsp;use the <code>cargo.jboss.management-native.port</code> port</li>
-           <li>WildFly 8.x uses the <code>cargo.jboss.management-http.port</code> port</li>
+           <li>WildFly 8.x and 9.x use the <code>cargo.jboss.management-http.port</code> port</li>
           </ul><p>The following examples detail these differences.</p><p>Here is an example code for the users of the Java API:</p>
           <blockquote>
            <p>&nbsp;</p>
@@ -523,68 +606,8 @@ Thread.currentThread().setContextClassLoader(classLoader);
 </pre> 
             </div>
            </div>
-          </blockquote>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
-           <p class="title">JBoss socket connection bugs</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>On some Linux distributions, remote deployment may fail with an exception like:</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-             <div class="codeContent panelContent pdl"> 
-              <pre>Caused by: java.io.IOException: Can not get connection to server.
-           Problem establishing socket connection for InvokerLocator
-           [socket://host:32342/]
-</pre> 
-             </div>
-            </div>
-            <p>That is a known bug, documented in <a class="external-link" href="http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS" rel="nofollow">http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS</a> and the solution presented on that document is to use a cron job as the root user to fix the file when it gets broken.</p>
-            <p>First, create the correct version of <code>/etc/hosts</code> and save it somewhere, such as <code>/etc/hosts.fixed</code>, and populate it with the following contents (replace <code>myhost</code> with the hostname of your computer, as reported by the <code>hostname</code> command, and the correct IP assignment, as reported by <code>ipconfig</code>):</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-             <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-              <b>/etc/hosts.fixed</b>
-             </div>
-             <div class="codeContent panelContent pdl"> 
-              <pre>127.0.0.1 myhost localhost localhost.localdomain
-::1 myhost localhost6 localhost6.localdomain6
-127.0.1.1 myhost
-## (optional entry); update if assigned a new address from DHCP
-192.168.1.5 myhost
-
-## The following lines are desirable for IPv6 capable hosts
-::1     ip6-localhost  ip6-loopback
-fe00::0 ip6-localnet
-ff00::0 ip6-mcastprefix
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
-ff02::3 ip6-allhosts
-</pre> 
-             </div>
-            </div>
-            <p><strong>Important</strong>: If possible, enter your hostname with both the "basic" hostname and the fully-qualified domain name.</p>
-            <p>Next, create a script named <code>/etc/restore-etc-hosts.sh</code> to replace the <code>/etc/hosts</code> file if Network Manager breaks it:</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-             <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-              <b>/etc/restore-etc-hosts.sh</b>
-             </div>
-             <div class="codeContent panelContent pdl"> 
-              <pre>#!/bin/sh
-
-if [ `grep -c NetworkManager /etc/hosts` -eq 1 ]; then
-   cp /etc/hosts.fixed /etc/hosts
-fi
-</pre> 
-             </div>
-            </div>
-            <p>Finally, setup a cron job to run this script as often as you like. We recommend every couple of minutes.</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-             <div class="codeContent panelContent pdl"> 
-              <pre>*/3 * * * * /etc/restore-etc-hosts.sh
-</pre> 
-             </div>
-            </div>
-            <p>Once the <code>/etc/hosts</code> file is corrected, restart JBoss AS and run the tests again. Your socket connection error should be gone!</p>
-           </div>
-          </div> </td> 
+           <p>&nbsp;</p>
+          </blockquote><p>&nbsp;</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
