@@ -289,7 +289,7 @@
           </center> <h3 id="StaticdeploymentofEAR-Definition">Definition</h3>Deploy an EAR that will be started when the container starts<h3 id="StaticdeploymentofEAR-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Orion 2.x with an EAR to deploy:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>InstalledLocalContainer container = new Orion2xInstalledLocalContainer(
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">InstalledLocalContainer container = new Orion2xInstalledLocalContainer(
     new OrionStandaloneConfiguration("target/orion2x"));
 container.setHome("c:/apps/orion-2.0.3");
 
@@ -302,7 +302,7 @@ container.start();
           </div><h3 id="StaticdeploymentofEAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting Orion 2.x with an EAR to deploy:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;cargo containerId="orion2x" home="c:/apps/orion-2.0.3" action="start"&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="orion2x" home="c:/apps/orion-2.0.3" action="start"&gt;
   &lt;configuration&gt;
     &lt;deployable type="ear" file="src/data/some.ear"/&gt;
   &lt;/configuration&gt;
@@ -312,7 +312,7 @@ container.start();
           </div><h3 id="StaticdeploymentofEAR-ExampleusingtheMaven2/Maven3API">Example using the Maven2/Maven3 API</h3><p>Here is the plugin configuration defining a JOnAS 5.x container with an EAR to deploy:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;dependencies&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
     &lt;artifactId&gt;simple-ear&lt;/artifactId&gt;

@@ -375,7 +375,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">Default configuration properties</a> <br class="atl-forced-newline"> <br class="atl-forced-newline"> Note that these configuration properties can also be overriden using Java properties; for example:</p>
                <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
                 <div class="codeContent panelContent pdl"> 
-                 <pre>mvn -Dcargo.servlet.port=8082 cargo:start
+                 <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">mvn -Dcargo.servlet.port=8082 cargo:start
 </pre> 
                 </div>
                </div><p>In addition to this, properties can also be set using the Maven2 <code>settings.xml</code> file. See the <a href="#Maven2PluginReferenceGuide-settingsXML">setting configuration options via the Maven settings.xml</a> section for details.</p></td>
@@ -728,7 +728,7 @@
               <td class="confluenceTd"><p>The path of a folder or a jar file you wish to add to deployable classpath. This element can be used to explicitly add entries to the classpath. For example:</p>
                <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
                 <div class="codeContent panelContent pdl"> 
-                 <pre>&lt;dependency&gt;
+                 <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependency&gt;
    &lt;location&gt;src/main/resources/conf&lt;/location&gt;
 &lt;/dependency&gt;
 </pre> 
@@ -962,7 +962,7 @@
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-settingsXML" data-hasbody="false" data-macro-name="anchor"> </span></p><h1 id="Maven2PluginReferenceGuide-SettingconfigurationoptionsviatheMavensettings.xml">Setting configuration options via the Maven settings.xml</h1><p>The Cargo Maven2/Maven3 plugin also allows you to define container configuration properties using the <code>settings.xml</code> file. This way, you can for example store properties like usernames and passwords in a centralized location (as opposed to <code>pom.xml</code> files).</p><p>First, add the configuration properties you would like in your <code>settings.xml</code> file's <code>&lt;servers&gt;</code> section:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;servers&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;servers&gt;
   &lt;server&gt;
     &lt;id&gt;jonas1&lt;/id&gt;
     &lt;configuration&gt;
@@ -978,7 +978,7 @@
           </div><p>Then, in the Cargo plugin's configuration, use the <code>cargo.server.settings</code> property in order to reference the configuration properties that you have previously defined. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;plugin&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
@@ -995,7 +995,7 @@
           </div><p>In this case, the plugin will internally "expand" the configuration into:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;plugin&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;

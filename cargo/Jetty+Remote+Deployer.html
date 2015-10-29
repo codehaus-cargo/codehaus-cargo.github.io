@@ -304,7 +304,7 @@
              <li><p>Add, for example, the following definition</p>
               <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
                <div class="codeContent panelContent pdl"> 
-                <pre>someusername: somepassword,manager
+                <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">someusername: somepassword,manager
 </pre> 
                </div>
               </div></li>
@@ -329,7 +329,7 @@
           </ul>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;dependencies&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;test.somegroup&lt;/groupId&gt;
     &lt;artifactId&gt;somewar&lt;/artifactId&gt;
@@ -383,7 +383,7 @@
           </div><p>To run the given Maven2 plugin configuration on a simple Maven2 WAR project, simply execute:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>mvn war:war
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">mvn war:war
 mvn cargo:deploy
 </pre> 
            </div>
@@ -395,7 +395,7 @@ mvn cargo:deploy
             <p>By default, Jetty sets the&nbsp;<code>maxIdleTime</code> parameter in the&nbsp;<code>etc/jetty.xml</code> file 30 seconds. This means that if the actual deployment takes more than 30 seconds, you might get error messages like:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
-              <pre>[ERROR] Failed to execute goal org.codehaus.cargo:cargo-maven2-plugin:1.2.2:deploy (default-cli)
+              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">[ERROR] Failed to execute goal org.codehaus.cargo:cargo-maven2-plugin:1.2.2:deploy (default-cli)
         on project display: Execution default-cli of goal org.codehaus.cargo:cargo-maven2-plugin:1.2.2:deploy
         failed: Failed to deploy [/var/lib/jenkins/workspace/Vanessa-cargo/target/display-1.2.2.1-SNAPSHOT.war]:
         Unexpected end of file from server -&gt; [Help 1]
@@ -417,7 +417,7 @@ Caused by: java.net.SocketException: Unexpected end of file from server
             <p>In this case, open the target Jetty container's <code>etc/jetty.xml</code> file and set the <code>maxIdleTime</code> parameter to longer. For example:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
-              <pre>&lt;?xml version="1.0"?&gt;
+              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;?xml version="1.0"?&gt;
 &lt;!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd"&gt;
 
 &lt;Configure id="Server" class="org.mortbay.jetty.Server"&gt;

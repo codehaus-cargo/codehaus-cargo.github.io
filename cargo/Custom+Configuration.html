@@ -305,7 +305,7 @@
           </div><h3 id="CustomConfiguration-JavaAPI">Java API</h3><p>You can register your configuration against the <code>DefaultConfigurationFactory</code> class. It's optional and only required if you want to let users use the <code>DefaultConfigurationFactory</code> class to instantiate your configuration. For example you could write:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>ConfigurationFactory factory = new DefaultConfigurationFactory();
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">ConfigurationFactory factory = new DefaultConfigurationFactory();
 factory.registerConfiguration("containerIdOfAssociatedContainer", ContainerType.INSTALLED, 
     ConfigurationType.STANDALONE, MyCustomConfiguration.class);
 </pre> 
@@ -313,7 +313,7 @@ factory.registerConfiguration("containerIdOfAssociatedContainer", ContainerType.
           </div><h3 id="CustomConfiguration-AntTask">Ant Task</h3><p>Use the <code>class</code> attribute of the <code>configuration</code> element. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;cargo containerId="containerIdOfAssociatedContainer" [...]&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="containerIdOfAssociatedContainer" [...]&gt;
   &lt;configuration class="package.to.MyCustomConfiguration" type="standalone"&gt;
 [...]  
 </pre> 
@@ -321,7 +321,7 @@ factory.registerConfiguration("containerIdOfAssociatedContainer", ContainerType.
           </div><h3 id="CustomConfiguration-Maven2Plugin">Maven2 Plugin</h3><p>Use the <code>implementation</code> element under the <code>configuration</code> element. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>[...]
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;configuration&gt;
   &lt;container&gt;
     &lt;containerId&gt;containerIdOfAssociatedContainer&lt;/containerId&gt;

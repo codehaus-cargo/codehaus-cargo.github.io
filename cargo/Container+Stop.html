@@ -295,7 +295,7 @@
           </div> <p>Note: The stop action waits till the container is fully stopped before returning.</p> <h3 id="ContainerStop-ExampleusingtheJavaAPI">Example using the Java API</h3> <p>Stopping Orion 1.x:</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 InstalledLocalContainer container = new Orion1xInstalledLocalContainer(
     new OrionStandaloneConfiguration("target/orion1x"));
 container.setHome("c:/apps/orion-1.6.0b");
@@ -306,14 +306,14 @@ container.stop();
           </div> <h3 id="ContainerStop-ExampleusingtheAntAPI">Example using the Ant API</h3> <p>Stopping Orion 1.x:</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;cargo refId="mycontainerid" home="c:/apps/orion-1.6.0b" action="stop"/&gt;
 </pre> 
            </div>
           </div> <p>Note that if you use the <code>refid</code> attribute you'll need to have defined it using an <code>id</code> attribute when you started the container. For example:</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;cargo id="mycontainerid" [...] action="start"&gt;
   [...]
 &lt;/cargo&gt;

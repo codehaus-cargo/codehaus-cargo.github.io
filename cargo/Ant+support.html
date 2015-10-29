@@ -296,7 +296,7 @@
           </div><h3 id="Antsupport-Explanation">Explanation</h3><p>Before using the Ant API you need to register the Cargo Ant tasks into Ant. This is done in the following manner:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;taskdef resource="cargo.tasks"&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
     &lt;pathelement location="${cargo-core-uberjar.jar}"/&gt;
     &lt;pathelement location="${cargo-ant.jar}"/&gt;
@@ -386,7 +386,7 @@
           </div><h3 id="Antsupport-Examples">Examples</h3><p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-examples" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="Antsupport-Orion2.x">Orion 2.x</h4><p>Here's a full example showing how to deploy a WAR, and expanded WAR and an EAR in an Orion 2.x container. Please note that the <code>output</code> and <code>log</code> attribute are optional. The <code>property</code> elements allow you to tune how the container is configured. Here we're telling it to start on port 8180 and to generate the maximum amount of logs in the container <code>output</code> file.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;taskdef resource="cargo.tasks"&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
     &lt;pathelement location="path/to/cargo-uberjar.jar"/&gt;
     &lt;pathelement location="path/to/cargo-ant-tasks.jar"/&gt;
@@ -427,7 +427,7 @@
           </ul>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;property name="cargolib.dir" value="${basedir}/cargolib"/&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;property name="cargolib.dir" value="${basedir}/cargolib"/&gt;
 </pre> 
            </div>
           </div>
@@ -436,7 +436,7 @@
           </ul>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;property name="cargo-uberjar" value="${cargolib.dir}/cargo-core-uberjar.jar"/&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;property name="cargo-uberjar" value="${cargolib.dir}/cargo-core-uberjar.jar"/&gt;
 &lt;property name="cargo-antjar" value="${cargolib.dir}/cargo-ant.jar"/&gt;
 </pre> 
            </div>
@@ -474,7 +474,7 @@
            <li><p>Add the following code to your build.xml :</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
-              <pre>&lt;taskdef resource="cargo.tasks"&gt;
+              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
     &lt;pathelement location="${cargo-uberjar}"/&gt;
     &lt;pathelement location="${cargo-antjar}"/&gt;
@@ -506,7 +506,7 @@
           </ul><h4 id="Antsupport-Remotedeployment">Remote deployment</h4><p>Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;taskdef resource="cargo.tasks"&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
     &lt;pathelement location="path/to/cargo-uberjar.jar"/&gt;
     &lt;pathelement location="path/to/cargo-ant-tasks.jar"/&gt;

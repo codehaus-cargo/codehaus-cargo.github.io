@@ -299,7 +299,7 @@
             <p>If the given timeout is too small, the CARGO container will give you an error message similar to this:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
-              <pre>[INFO] ------------------------------------------------------------------------
+              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">[INFO] ------------------------------------------------------------------------
 [ERROR] FATAL ERROR
 [INFO] ------------------------------------------------------------------------
 [INFO] Failed to start the JBoss 5.1.0 container.
@@ -313,7 +313,7 @@ within the timeout period [5000]. The Deployable state is thus unknown.
           </div><h3 id="ContainerTimeout-ExampleusingtheJavaAPI">Example using the Java API</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>LocalContainer container = ...;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalContainer container = ...;
 container.setTimeout(180000L);
 System.out.println("Timeout = " + container.getTimeout());
 </pre> 
@@ -321,7 +321,7 @@ System.out.println("Timeout = " + container.getTimeout());
           </div><h3 id="ContainerTimeout-ExampleusingtheMaven2plugin">Example using the Maven 2 plugin</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;container&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;container&gt;
   [...]
   &lt;timeout&gt;180000&lt;/timeout&gt;
   [...]
@@ -331,7 +331,7 @@ System.out.println("Timeout = " + container.getTimeout());
           </div><h3 id="ContainerTimeout-Disablingtimeout">Disabling timeout</h3><p>If you set the timeout to&nbsp;<code>0</code>, CARGO will not wait for the container to start or stop.</p><h3 id="ContainerTimeout-Usingdifferenttimeoutswhenstartingandstoppingthecontainer">Using different timeouts when starting and stopping the container</h3><p>Shutdown usually takes much much shorther than startup, it therefore often makes sense to use a shorter timeout for stopping the container than for starting it. With the Cargo Maven2 plugin, this is easy to do: indeed, in each <code>&lt;execution&gt;</code> block of the Maven2 plugin, you can have different <code>&lt;configuration&gt;</code> blocks. When done so, the plugin will use an inheritance scheme; i.e. for each execution the outermost configuration elements will be overriden by innermost elements each time these are defined.</p><p>Here is an example that uses different timeouts when starting and stopping the container:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;plugin&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
   &lt;executions&gt;

@@ -308,7 +308,7 @@
           </div><h3 id="ApplicationClasspath-Explanation">Explanation</h3><p>This topic is not about the classpath requirements to run Cargo (see the <a href="Installation.html">Installation</a> page for this); it's about configuring the classpath for the application being executed on a container.</p><p>Some environments may require you to add some libraries to your application, without exposing them to the server itself. This concept is called a <strong>Shared Classpath</strong>.</p><h3 id="ApplicationClasspath-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting a WAR on Tomcat 6.x with some additional classpath entries:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>LocalConfiguration configuration = new Tomcat6xStandaloneLocalConfiguration("target/tomcat6x");
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalConfiguration configuration = new Tomcat6xStandaloneLocalConfiguration("target/tomcat6x");
 Deployable war = new WAR("target/war/grails-example-without-libs.war");
 configuration.addDeployable(war);
 
@@ -332,7 +332,7 @@ container.start();
           </div><h3 id="ApplicationClasspath-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting a WAR on Tomcat 6.x with some additional classpath entries:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;cargo containerId="tomcat6x" home="/srv/tomcat/catalina-home" action="start"&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat6x" home="/srv/tomcat/catalina-home" action="start"&gt;
   &lt;sharedClasspath&gt;
     &lt;fileset dir="/opt/grails"&gt;
       &lt;include name="*.jar"/&gt;
@@ -347,7 +347,7 @@ container.start();
           </div><h3 id="ApplicationClasspath-ExampleusingtheMavenPlugin">Example using the Maven Plugin</h3><p>Configuring a Tomcat6 container with a com.foo bar-api-1.0.jar dependency provided using the shared classpath:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>[...]
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;com.foo&lt;/groupId&gt;

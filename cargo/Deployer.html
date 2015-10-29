@@ -297,7 +297,7 @@
           </ul> <h3 id="Deployer-ExampleusingtheJavaAPI">Example using the Java API</h3> <p>To instantiate a <code>Deployer</code> you need to know its class name. A <code>Deployer</code> is specific to a container (you can find the class names on the <a href="Containers.html">container</a> page listing all containers).</p> <p>The deployment is done using one of the <code>Deployer.deploy(...)</code> APIs. Some <code>deploy(...)</code> signatures accept a <code>DeployableMonitor</code> which is used to wait till the container has not finished deploying. Cargo currently offers a <code>URLDeployableMonitor</code> which waits by polling a provided URL (see below in the example). Whent the URL becomes available the monitor considers that the <code>Deployable</code> is fully deployed. In the future, Cargo will provide other <code>DeployableMonitor</code> such as a <code>Jsr88DeployableMonitor</code>.</p> <h4 id="Deployer-ExamplewithoutusingaDeployableMonitor">Example without using a DeployableMonitor</h4> <p>Hot-deploying a WAR on Resin 3.0.9 without waiting for the deployment to finish:</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
     new Resin3xStandaloneConfiguration("target/resin3x"));
 container.setHome("c:/apps/resin-3.0.9");
@@ -315,7 +315,7 @@ deployer.deploy(war);
           </div> <p>Please note that the <code>Deployer.deploy()</code> method call does not wait for the <code>Deployable</code> to be fully deployed before returning.</p> <h4 id="Deployer-ExampleusingaURLDeployableMonitor">Example using a URLDeployableMonitor</h4> <p>Hot-deploying an WAR on Resin 3.0.9 and waiting for the deployment to finish:</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
     new Resin3xStandaloneConfiguration("target/resin3x"));
 container.setHome("c:/apps/resin-3.0.9");
@@ -333,7 +333,7 @@ deployer.deploy(war, new URLDeployableMonitor("http://server:port/some/url"));
           </div> <p>The <code><a class="external-link" href="http://server:port/some/url" rel="nofollow">http://server:port/some/url</a></code> must point to a resource that is serviced by the <code>Deployable</code> being deployed.</p> <h3 id="Deployer-ExampleusingtheAnttasks">Example using the Ant tasks</h3> <p>Starting from CARGO version 1.1.0, the CARGO ANT tasks gained support for remote deployers. Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;taskdef resource="cargo.tasks"&gt;
   &lt;classpath&gt;
     &lt;pathelement location="path/to/cargo-uberjar.jar"/&gt;

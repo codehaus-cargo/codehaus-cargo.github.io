@@ -289,7 +289,7 @@
           </center> <p>This example will create a Topic Connection Factory and a Topic, and also includes a spring configuration example.</p> <p>Add the following to your cargo configuration in pom.xml:</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;cargo.resource.resource.jmsConnectionFactory&gt;
    cargo.resource.name=jms/ConnectionFactory|
    cargo.resource.type=com.caucho.jms.JVMTopicConnectionFactory|
@@ -306,7 +306,7 @@
           </div> <p>After you run 'mvn cargo:start', you can verify the config made it into your resin.conf with:<br> $&gt; less target/resin3x/home/conf/resin.conf</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 ....
 &lt;resource&gt;
    &lt;jndi-name&gt;jms/ConnectionFactory&lt;/jndi-name&gt;
@@ -322,7 +322,7 @@
           </div> <p>In web.xml:</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;resource-ref&gt;
     &lt;res-ref-name&gt;jms/ConnectionFactory&lt;/res-ref-name&gt;
     &lt;res-type&gt;javax.jms.ConnectionFactory&lt;/res-type&gt;
@@ -334,7 +334,7 @@
           </div> <p>You can also add a resource-ref for the Topic, but that is not necessarily required.</p> <p>A spring config might look like this:</p> 
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;jee:jndi-lookup id="jmsConnectionFactory" jndi-name="jms/ConnectionFactory" proxy-interface="javax.jms.ConnectionFactory" lookup-on-startup="false" resource-ref="true"/&gt;
 
    &lt;bean id="myTopicListener" class="foo.bar.MyTopicListenerBean"/&gt;

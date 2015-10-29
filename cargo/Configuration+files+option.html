@@ -312,7 +312,7 @@
           </div>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>LocalContainer container = ...;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalContainer container = ...;
 StandaloneLocalConfiguration configuration = (StandaloneLocalConfiguration) getLocalContainer().getConfiguration();
 
 FileConfig loginConfigXml = new FileConfig();
@@ -334,7 +334,7 @@ configuration.setConfigFileProperty(sampleUsersProperties);
           </div><h3 id="Configurationfilesoption-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;cargo containerId="@{containerId}" action="@{action}"&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="@{containerId}" action="@{action}"&gt;
   &lt;configuration home="${configuration.home}"&gt;
     &lt;configfile file="${basedir}/src/main/jboss5/login-config.xml" todir="conf"/&gt;
     &lt;configfile file="${basedir}/src/main/jboss5/sample-roles.properties" todir="conf/props"/&gt;
@@ -346,7 +346,7 @@ configuration.setConfigFileProperty(sampleUsersProperties);
           </div><h3 id="Configurationfilesoption-ExampleusingtheMaven2plugin">Example using the Maven 2 plugin</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;plugin&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
@@ -383,7 +383,7 @@ configuration.setConfigFileProperty(sampleUsersProperties);
            <li><p>Finally, for each deployable, add the following to your local container's configuration:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
-              <pre>&lt;configfiles&gt;
+              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;configfiles&gt;
   &lt;configfile&gt; 
     &lt;file&gt;${basedir}/src/main/config/jetty-env.xml&lt;/file&gt;
     &lt;todir&gt;webapps/webapp-context/WEB-INF&lt;/todir&gt;
@@ -398,7 +398,7 @@ configuration.setConfigFileProperty(sampleUsersProperties);
           </ul><p>As a reference, please find below the full configuration for Jetty 7.x:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;configuration&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;configuration&gt;
   &lt;container&gt;
     &lt;containerId&gt;jetty7x&lt;/containerId&gt;
     &lt;zipUrlInstaller&gt;

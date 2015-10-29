@@ -303,7 +303,7 @@
           </div><h3 id="Deployingtoarunningcontainer-Usingalocaldeployer">Using a local deployer</h3><p>A local <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Local+Container.html">Local Container</a> (i.e. a container installed on the same machine where the deployer is executing). Thus you'll need to use a local container id in <code>&lt;containerId&gt;</code>. You can check that by reviewing the supported <a href="Containers.html">container list</a> and selecting the container you wish to use.</p><p><strong>Example of doing a local deploy to an existing configuration</strong>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>[...]
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;configuration&gt;
 
   &lt;!-- Container configuration --&gt;
@@ -360,7 +360,7 @@
           </div><p><strong>Example of doing a remote deploy using a runtime configuration</strong>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>[...]
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;configuration&gt;
 
   &lt;!-- Container configuration --&gt;
@@ -400,7 +400,7 @@
           </div><p>As you can see the information to connect and do the deployment to the remote container is specified in the runtime configuration (<code>cargo.remote.username</code> and <code>cargo.remote.password</code>). The properties to define are deployer-dependent.</p><p>Here's an another example, this time deploying the current project's artifact to a running JBoss 4.2.x container using a default 8080 port and default authorizations:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>[...]
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;configuration&gt;
   &lt;container&gt;
     &lt;containerId&gt;jboss42x&lt;/containerId&gt;
@@ -416,7 +416,7 @@
             <b>Deployable with a ping URL</b>
            </div>
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;deployables&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;deployables&gt;
   &lt;deployable&gt;
     &lt;location&gt;${project.build.directory}/${project.build.finalName}.${project.packaging}&lt;/location&gt;
     &lt;pingURL&gt;http://localhost:${servlet.port}/mycontext/index.html&lt;/pingURL&gt;

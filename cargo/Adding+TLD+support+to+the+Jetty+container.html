@@ -289,7 +289,7 @@
           </center> <h1 id="AddingTLDsupporttotheJettycontainer-Symptoms">Symptoms</h1><p>The embedded jetty container starting up for integration tests in a separate module fails to successfully run web apps which use tag libraries. The app server starts successfully however when the test case attempts to hit a jsp which imports the tag libraries the server fails with the following exception. This behaviour is not seen when deploying the webapp to an installed tomcat instance or whe using the jetty maven plugin to start the container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>org.apache.jasper.JasperException: Unable to initialize
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">org.apache.jasper.JasperException: Unable to initialize
 TldLocationsCache: null
 	at
 org.apache.jasper.compiler.TldLocationsCache.init(TldLocationsCache.java:253)

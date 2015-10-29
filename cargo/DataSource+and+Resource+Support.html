@@ -653,7 +653,7 @@
           </ul><h3 id="DataSourceandResourceSupport-DataSourceproperties">DataSource properties</h3><p>DataSources are added through pipe-delimited configuration properties that starts with <code>cargo.datasource.datasource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>cargo.datasource.datasource1=cargo.datasource.url=jdbc:mydriver:userdb\|cargo.datasource.driver=org.database.Driver\|...
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">cargo.datasource.datasource1=cargo.datasource.url=jdbc:mydriver:userdb\|cargo.datasource.driver=org.database.Driver\|...
 cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|cargo.datasource.driver=org.database.Driver\|...
 </pre> 
            </div>
@@ -750,7 +750,7 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
           </div><h3 id="DataSourceandResourceSupport-Resourceproperties">Resource properties</h3><p>Resources are added through pipe-delimited configuration properties that starts with <code>cargo.resource.resource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>cargo.resource.resource1=cargo.resource.name=resource/apple\|cargo.resource.class=org.mycompany.Apple\|...
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">cargo.resource.resource1=cargo.resource.name=resource/apple\|cargo.resource.class=org.mycompany.Apple\|...
 cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.driver=org.mycompany.Pear\|...
 </pre> 
            </div>
@@ -802,12 +802,12 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
           </div><h3 id="DataSourceandResourceSupport-Knownissues">Known issues</h3><p>The&nbsp;Glassfish container has various known issues with regards to datasource support.</p><p>When you try to use <a href="Glassfish+3.x.html">Glassfish 3.x</a> or&nbsp;<a href="Glassfish+4.x.html">Glassfish 4.x</a> with Derby datasources, you might run into issues where Glassfish doesn't start, and the Glassfish logs show you messages such as the below:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>java.lang.SecurityException: sealing violation: package org.apache.derby is sealed</pre> 
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">java.lang.SecurityException: sealing violation: package org.apache.derby is sealed</pre> 
            </div>
           </div><p>This is because Glassfish is already shipped with Derby, and the Glassfish class loaders do not know how to the manage the situation where the same class is duplicated. So, the solution is to simply remove the Derby JAR from dependencies; on the other hand this is not feasible if you are using the same CARGO profile with different containers. Here is how you can work around the issue:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>&lt;dependencies&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;org.apache.derby&lt;/groupId&gt;
     &lt;artifactId&gt;derby&lt;/artifactId&gt;

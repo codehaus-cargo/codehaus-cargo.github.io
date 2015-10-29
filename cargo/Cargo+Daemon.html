@@ -310,12 +310,12 @@
           </ol>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>java -jar target/cargo-daemon-webapp-&lt;version&gt;.war</pre> 
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence">java -jar target/cargo-daemon-webapp-&lt;version&gt;.war</pre> 
            </div>
           </div><p style="margin-left: 30.0px;">where &lt;version&gt; is the version number of the daemon that you have downloaded.</p><p>By default, the Cargo Daemon will run on HTTP port&nbsp;<code>18000</code>. To change it, use the&nbsp;<code>-p</code> option:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>java -jar target/cargo-daemon-webapp-&lt;version&gt;.war -p 18001</pre> 
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence">java -jar target/cargo-daemon-webapp-&lt;version&gt;.war -p 18001</pre> 
            </div>
           </div><p>Additionally, Cargo Daemon will save log files in the cargo home directory unless&nbsp;the&nbsp;<code>-nologging</code>&nbsp;option is used.</p><p><span style="font-size: 10.0pt;line-height: 13.0pt;">Note that the Cargo Daemon is a WAR file; you can actually also deploy it as a WAR on any existing container. This can be useful if you want to, for example, reuse a certain security configuration.</span></p><p>&nbsp;</p><p>The daemon also accepts other parameters, in the form of system properties:</p>
           <div class="table-wrap">
@@ -354,7 +354,7 @@
            <li><p>To use the Daemon via ANT tasks, simply add the&nbsp;<code>&lt;daemon&gt;</code> tag in the task and use the <strong>daemon-start</strong> or <strong>daemon-stop</strong> tasks:<br><br></p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
-              <pre>&lt;cargo containerId="tomcat6x" action="daemon-start"&gt;
+              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat6x" action="daemon-start"&gt;
   &lt;zipUrlInstaller
     installURL="http://archive.apache.org/dist/tomcat/tomcat-6/v6.0.39/bin/apache-tomcat-6.0.39.zip"
         downloadDir="${basedir}/../../../../core/samples/java/installs"

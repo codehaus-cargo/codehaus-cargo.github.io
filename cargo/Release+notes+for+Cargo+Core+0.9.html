@@ -298,7 +298,7 @@
            <li>Added DataSource configuration support to Standalone configurations for containers: XXXX</li>
            <li>TODO</li>
           </ul><p>The full list of all issues fixed and features implemented is available below.</p><p>Please note that version 0.9 has broken some APIs as explained below in the migration guide. This is the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-issues" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="ReleasenotesforCargoCore0.9-Changelog">Changelog</h3><p> </p>
-          <div class="conf-macro output-block" data-hasbody="false" data-macro-name="jiraissues"> 
+          <div class="refresh-module-id conf-macro output-block" data-hasbody="false" data-macro-name="jiraissues"> 
            <p> </p> 
            <div style="width: 100%;  overflow: auto;"> 
             <table class="aui"> 
@@ -306,178 +306,17 @@
               <tr> 
               </tr> 
               <tr> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport jira-tablesorter-header"><span class="jim-table-header-content">T</span></th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport jira-tablesorter-header"><span class="jim-table-header-content">Key</span></th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport jira-tablesorter-header"><span class="jim-table-header-content">Resolution</span></th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport jira-tablesorter-header"><span class="jim-table-header-content">Summary</span></th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport jira-tablesorter-header"><span class="jim-table-header-content">Assignee</span></th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport jira-tablesorter-header"><span class="jim-table-header-content">Reporter</span></th> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-499?src=confmacro"><img src="attachments/viewavatar" alt="Bug" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-499?src=confmacro">CARGO-499</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-499?src=confmacro"> Deploying war with relative path under orion1x fails </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-497?src=confmacro"><img src="attachments/viewavatar" alt="Test" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-497?src=confmacro">CARGO-497</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-497?src=confmacro"> Test on Jetty 6.1.1 </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-496?src=confmacro"><img src="attachments/viewavatar" alt="Test" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-496?src=confmacro">CARGO-496</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-496?src=confmacro"> Test on Tomcat 5.0.30 </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-495?src=confmacro"><img src="attachments/viewavatar" alt="Test" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-495?src=confmacro">CARGO-495</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-495?src=confmacro"> Test on Resin 3.0.23 </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-493?src=confmacro"><img src="attachments/viewavatar" alt="Bug" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-493?src=confmacro">CARGO-493</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-493?src=confmacro"> OrionEjbJarXml.getJndiName returns wrong name for local EJB:s on oc4j 10.1.3 </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> grimsell grimsell </td> 
-               <td class="jira-macro-table-underline-pdfexport"> grimsell grimsell </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-490?src=confmacro"><img src="attachments/viewavatar" alt="Bug" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-490?src=confmacro">CARGO-490</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-490?src=confmacro"> Deploying war with relative filename fails on tomcat3x </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-489?src=confmacro"><img src="attachments/viewavatar" alt="Bug" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-489?src=confmacro">CARGO-489</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-489?src=confmacro"> Tomcat 5.x doesn't build in samples/java with the Maven2 build </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-487?src=confmacro"><img src="attachments/viewavatar" alt="Improvement" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-487?src=confmacro">CARGO-487</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-487?src=confmacro"> Complete SVN reorganization </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-479?src=confmacro"><img src="attachments/viewavatar" alt="Improvement" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-479?src=confmacro">CARGO-479</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-479?src=confmacro"> Improve DefaultAntTaskFactory so that it can create Ant tasks for tasks requiring a valid Ant Target object </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Petar Tahchiev </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-475?src=confmacro"><img src="attachments/viewavatar" alt="Test" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-475?src=confmacro">CARGO-475</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-475?src=confmacro"> Test on Jetty 6.1.1rc0 </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-474?src=confmacro"><img src="attachments/viewavatar" alt="New Feature" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-474?src=confmacro">CARGO-474</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-474?src=confmacro"> Add support for Jetty 6.1 </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Jan Bartel </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-472?src=confmacro"><img src="attachments/viewavatar" alt="Test" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-472?src=confmacro">CARGO-472</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-472?src=confmacro"> Test on Tomcat 4.1.34 </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-471?src=confmacro"><img src="attachments/viewavatar" alt="Test" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-471?src=confmacro">CARGO-471</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-471?src=confmacro"> Test on Resin 3.0.22 </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-470?src=confmacro"><img src="attachments/viewavatar" alt="Bug" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-470?src=confmacro">CARGO-470</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-470?src=confmacro"> FileNotFoundException in FileUtils.copyFile when specifying relative paths </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-469?src=confmacro"><img src="attachments/viewavatar" alt="Improvement" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-469?src=confmacro">CARGO-469</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-469?src=confmacro"> Log downloading of container </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-466?src=confmacro"><img src="attachments/viewavatar" alt="Improvement" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-466?src=confmacro">CARGO-466</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-466?src=confmacro"> Use vfs 1.0 (and remove unneeded dependency) </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-465?src=confmacro"><img src="attachments/viewavatar" alt="Bug" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-465?src=confmacro">CARGO-465</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-465?src=confmacro"> Orion testGetRoleToken unit test is failing </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> David J. M. Karlsen </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-458?src=confmacro"><img src="attachments/viewavatar" alt="New Feature" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-458?src=confmacro">CARGO-458</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-458?src=confmacro"> Add cargo:package goal to package a container distribution, its configuration and deployed deployables </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-              </tr> 
-              <tr class="rowNormal"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-457?src=confmacro"><img src="attachments/viewavatar" alt="New Feature" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-457?src=confmacro">CARGO-457</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-457?src=confmacro"> Add Packager API to packager a container's distribution, a Configuration and deployed Deployables </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-              </tr> 
-              <tr class="rowAlternate"> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-446?src=confmacro"><img src="attachments/viewavatar" alt="Improvement" class="icon"></a> </td> 
-               <td nowrap="true" class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-446?src=confmacro">CARGO-446</a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Fixed </td> 
-               <td class="jira-macro-table-underline-pdfexport"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-446?src=confmacro"> ConfigurationFactory and ConfigurationCapabilityFactory APIs should take a ContainerType as parameter </a> </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
-               <td class="jira-macro-table-underline-pdfexport"> Vincent Massol </td> 
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">T</th> 
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Key</th> 
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Resolution</th> 
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Summary</th> 
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Assignee</th> 
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">Reporter</th> 
               </tr> 
              </tbody> 
             </table> 
            </div> 
            <div class="refresh-issues-bottom"> 
-            <span> <span>Showing 20 out of</span> <a rel="nofollow" title="View all matching issues in JIRA." href="https://codehaus-cargo.atlassian.net/secure/IssueNavigator.jspa?reset=true&amp;&amp;pid=10000&amp;fixfor=10012&amp;sorter/field=issuekey&amp;sorter/order=DESC&amp;src=confmacro"> 86 issues </a> </span> 
            </div> 
            <p> </p> 
           </div> <p></p><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-migration" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="ReleasenotesforCargoCore0.9-Migrationguidefrom0.8to0.9">Migration guide from 0.8 to 0.9</h3><p>This sections lists the principal differences in Cargo 0.9 which you may require you to modify the way you use Cargo. The full list of changes is shown below in the <a href="#ReleasenotesforCargoCore0.9-clirr">Clirr section</a>.</p>
@@ -508,7 +347,7 @@
           </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-container" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-CoreContainerAPI">Core Container API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>ERROR: 7006: org.codehaus.cargo.container.InstalledLocalContainer: Return type of method 'public java.io.File getHome()' has been changed to java.lang.String
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">ERROR: 7006: org.codehaus.cargo.container.InstalledLocalContainer: Return type of method 'public java.io.File getHome()' has been changed to java.lang.String
 ERROR: 7005: org.codehaus.cargo.container.InstalledLocalContainer: Parameter 1 of 'public void setHome(java.io.File)' has changed its type to java.lang.String
 ERROR: 7006: org.codehaus.cargo.container.configuration.LocalConfiguration: Return type of method 'public java.io.File getHome()' has been changed to java.lang.String
 ERROR: 7006: org.codehaus.cargo.container.deployable.Deployable: Return type of method 'public java.io.File getFile()' has been changed to java.lang.String
@@ -547,7 +386,7 @@ INFO: 8000: org.codehaus.cargo.container.property.DatasourcePropertySet: Class o
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-generic" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-CoreGenericAPI">Core Generic API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>ERROR: 7012: org.codehaus.cargo.generic.ContainerFactory: Method 'public java.util.Map getContainerIds()' has been added to an interface
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">ERROR: 7012: org.codehaus.cargo.generic.ContainerFactory: Method 'public java.util.Map getContainerIds()' has been added to an interface
 INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method 'public java.util.Map getContainerIds()' has been added
 ERROR: 7005: org.codehaus.cargo.generic.DefaultContainerFactory: Parameter 2 of 'public void registerContainer(java.lang.String, java.lang.String, org.codehaus.cargo.container.ContainerType)' has changed its type to org.codehaus.cargo.container.ContainerType
 ERROR: 7005: org.codehaus.cargo.generic.DefaultContainerFactory: Parameter 3 of 'public void registerContainer(java.lang.String, java.lang.String, org.codehaus.cargo.container.ContainerType)' has changed its type to java.lang.String
@@ -582,7 +421,7 @@ INFO: 8000: org.codehaus.cargo.generic.packager.PackagerFactory: Class org.codeh
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-module" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-CoreModuleAPI">Core Module API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>INFO: 4000: org.codehaus.cargo.module.AbstractDescriptor: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">INFO: 4000: org.codehaus.cargo.module.AbstractDescriptor: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
 ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 1 of 'protected org.w3c.dom.Element addElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element, org.w3c.dom.Element)' has changed its type to org.codehaus.cargo.module.DescriptorTag
 INFO: 7015: org.codehaus.cargo.module.AbstractDescriptor: Method 'protected org.w3c.dom.Element addElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element, org.w3c.dom.Element)' is no longer final
 ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 2 of 'protected void checkElement(org.w3c.dom.Element, org.codehaus.cargo.module.AbstractDescriptorTag)' has changed its type to org.codehaus.cargo.module.DescriptorTag
@@ -668,7 +507,7 @@ INFO: 4000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmi: Added org.c
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-util" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-CoreUtilAPI">Core Util API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>INFO: 8000: org.codehaus.cargo.util.AntTaskFactory: Class org.codehaus.cargo.util.AntTaskFactory added
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">INFO: 8000: org.codehaus.cargo.util.AntTaskFactory: Class org.codehaus.cargo.util.AntTaskFactory added
 INFO: 8000: org.codehaus.cargo.util.AntUtils: Class org.codehaus.cargo.util.AntUtils added
 INFO: 8000: org.codehaus.cargo.util.DefaultAntTaskFactory: Class org.codehaus.cargo.util.DefaultAntTaskFactory added
 INFO: 8000: org.codehaus.cargo.util.DefaultFileHandler: Class org.codehaus.cargo.util.DefaultFileHandler added
@@ -701,7 +540,7 @@ INFO: 7003: org.codehaus.cargo.util.log.SimpleLogger: Method 'public void warn(j
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-jboss" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-JBossAPI">JBoss API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>INFO: 4000: org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer: Added org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer to the set of implemented interfaces
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">INFO: 4000: org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer: Added org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer to the set of implemented interfaces
 INFO: 4000: org.codehaus.cargo.container.jboss.JBoss4xInstalledLocalContainer: Added org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer to the set of implemented interfaces
 ERROR: 8001: org.codehaus.cargo.container.jboss.JBossDeployer: Class org.codehaus.cargo.container.jboss.JBossDeployer removed
 ERROR: 7005: org.codehaus.cargo.container.jboss.JBossExistingLocalConfiguration: Parameter 1 of 'public JBossExistingLocalConfiguration(java.io.File)' has changed its type to java.lang.String
@@ -720,37 +559,37 @@ INFO: 5000: org.codehaus.cargo.container.jboss.JBossWAR: Added org.codehaus.carg
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-jetty" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-JettyAPI">Jetty API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>TODO
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">TODO
 </pre> 
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-jo" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-JoAPI">Jo API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>TODO
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">TODO
 </pre> 
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-orion" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-OrionAPI">Orion API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>TODO
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">TODO
 </pre> 
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-resin" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-ResinAPI">Resin API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>TODO
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">TODO
 </pre> 
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-tomcat" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-TomcatAPI">Tomcat API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>TODO
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">TODO
 </pre> 
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-weblogic" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="ReleasenotesforCargoCore0.9-WebLogicAPI">WebLogic API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre>TODO
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">TODO
 </pre> 
            </div>
           </div><p>&nbsp;</p>
