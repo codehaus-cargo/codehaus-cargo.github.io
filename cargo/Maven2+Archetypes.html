@@ -294,7 +294,7 @@
                         -DarchetypeVersion=&lt;version&gt;
 </pre> 
            </div>
-          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>The Maven archetype plugin will then ask you what groupId, artifactId, version, and package you would like to use for generation. Once your Maven project is generated, simply run:</p>
+          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>The Maven archetype plugin will then ask you what&nbsp;<code>groupId</code>, <code>artifactId</code>, <code>version</code>, and&nbsp;<code>package</code> you would like to use for generation. Once your Maven project is generated, simply run:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn clean verify
@@ -350,7 +350,15 @@
           <ul>
            <li>Not all containers support datasources. For details configuring datasource, please read: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</li>
            <li>The profiles that ship with this archetype are&nbsp;<a href="Jetty+7.x.html"><strong>jetty7x</strong></a> (default), <a href="Tomcat+6.x.html"><strong>tomcat6x</strong></a>, <a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a>, <a href="JBoss+5.1.x.html"><strong>jboss51x</strong></a>,&nbsp;<a href="JBoss+7.1.x.html"><strong>jboss71x</strong></a>, <a href="JOnAS+5.x.html"><strong>jonas5x</strong></a> and <strong><a href="Geronimo+3.x.html">geronimo3x</a></strong>.</li>
-          </ul><p>As in the other examples, what's interesting to see is that the datasource definition on CARGO remains the same even if you switch container; as CARGO handles all the container-specific datasource setup steps.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-remote" data-hasbody="false" data-macro-name="anchor"> </span></p><h2 id="Maven2Archetypes-WebappCreationandRemoteDeploymentArchetype">Webapp Creation and Remote Deployment Archetype</h2><p>This example shows you how to use Cargo to deploy your webapp to a running container remotely and perform integration tests on it. That container can therefore be running on any machine. To run it, execute (one one line):</p>
+          </ul><p>As in the other examples, what's interesting to see is that the datasource definition on CARGO remains the same even if you switch container; as CARGO handles all the container-specific datasource setup steps.</p><h2 id="Maven2Archetypes-Archetypeshowingthestartingandstoppingofmultiplecontainerssimultaneously">Archetype showing the starting and stopping of multiple containers simultaneously</h2><p>Shows how to configure the&nbsp;<a href="Maven2+plugin.html">Maven2 plugin</a> and&nbsp;<a href="Ant+support.html">Ant tasks</a> in order to be able of starting (and stopping) multiple containers at the same time. To run it, execute (one one line):</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn archetype:generate -DarchetypeGroupId=org.codehaus.cargo
+                        -DarchetypeArtifactId=cargo-archetype-multiple-containers
+                        -DarchetypeVersion=&lt;version&gt;
+</pre> 
+           </div>
+          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-remote" data-hasbody="false" data-macro-name="anchor"> </span></p><h2 id="Maven2Archetypes-WebappCreationandRemoteDeploymentArchetype">Webapp Creation and Remote Deployment Archetype</h2><p>This example shows you how to use Cargo to deploy your webapp to a running container remotely and perform integration tests on it. That container can therefore be running on any machine. To run it, execute (one one line):</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn archetype:generate -DarchetypeGroupId=org.codehaus.cargo
@@ -395,7 +403,7 @@
                         -DarchetypeVersion=&lt;version&gt;
 </pre> 
            </div>
-          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>The Maven archetype plugin will then ask you what groupId, artifactId, version, and package you would like to use for generation. Once your Maven project is generated, you need to first start the <a href="Cargo+Daemon.html">Cargo Daemon</a>. Then, simply run:</p>
+          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>The Maven archetype plugin will then ask you what <code>groupId</code>, <code>artifactId</code>, <code>version</code>, and&nbsp;<code>package</code> you would like to use for generation. Once your Maven project is generated, you need to first start the <a href="Cargo+Daemon.html">Cargo Daemon</a>. Then, simply run:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn clean verify -Dhostname=&lt;daemon.hostname&gt; -Ddaemon.port=&lt;daemon.port&gt;
