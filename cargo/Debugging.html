@@ -286,7 +286,7 @@
             <br> 
             <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
            </div> 
-          </center> <h3 id="Debugging-Definition">Definition</h3><p>Explain how to perform debugging when something doesn't work in Cargo&nbsp;</p><p>Sometimes, it can happen that the container does not start or stop as expected or you might have reasons to believe that CARGO is "acting weird". Here is a short list of things you can do to try debugging the problem.</p><h3 id="Debugging-Debuggingthecontainer">Debugging the container</h3><p>Most Java Virtual Machine implementations support remote debugging. Once started in debug mode, you can then remotely connect to your container using any IDE and debug your container and/or application.</p><p>In order to do so, add the following arguments to the JVM arguments configuration:</p>
+          </center> <h3 id="Debugging-Definition">Definition</h3><p>Explain how to perform debugging when something doesn't work in Cargo&nbsp;</p><p>Sometimes, it can happen that the container does not start or stop as expected or you might have reasons to believe that CARGO is "acting weird". Here is a short list of things you can do to try debugging the problem.</p><h3 id="Debugging-Debuggingthecontainer">Debugging the container</h3><p>Most Java Virtual Machine implementations support remote debugging. Once started in debug mode, you can then remotely connect to your container using any IDE and debug your container and/or application.</p><p>In order to do so, add the following arguments to the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">-Xdebug
@@ -317,45 +317,35 @@
       &lt;home&gt;${jonas.base}&lt;/home&gt;
       &lt;properties&gt;
         &lt;cargo.servlet.port&gt;${http.port}&lt;/cargo.servlet.port&gt;
+        &lt;cargo.start.jvmargs&gt;
+          -Xdebug
+          -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000
+          -Xnoagent
+          -Djava.compiler=NONE
+        &lt;/cargo.start.jvmargs&gt;
       &lt;/properties&gt;
     &lt;/configuration&gt;
   &lt;/configuration&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;id&gt;run&lt;/id&gt;
-      &lt;configuration&gt;
-        &lt;configuration&gt;
-          &lt;properties&gt;
-            &lt;cargo.jvmargs&gt;
-              -Xdebug
-              -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000
-              -Xnoagent
-              -Djava.compiler=NONE
-            &lt;/cargo.jvmargs&gt;
-          &lt;/properties&gt;
-        &lt;/configuration&gt;
-      &lt;/configuration&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;run&lt;/goal&gt;
-      &lt;/goals&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
 &lt;/plugin&gt;
 </pre> 
            </div>
-          </div>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
-           <p class="title">Make sure the Debug arguments are only on one goal</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>Please remember to map the Debug arguments to only one goal; else you will get exceptions such as the below when you try to stop your container:</p>
-            <pre><br>[INFO] [talledLocalContainer] FATAL ERROR in native method: JDWP No transports initialized, jvmtiError=AGENT_ERROR_TRANSPORT_INIT(197)<br>[WARNING] [talledLocalContainer] ERROR: transport error 202: bind failed: Address already in use<br>[WARNING] [talledLocalContainer] ERROR: JDWP Transport dt_socket failed to initialize, TRANSPORT_INIT(510)<br>[WARNING] [talledLocalContainer] JDWP exit error AGENT_ERROR_TRANSPORT_INIT(197): No transports initialized [../../../src/share/back/debugInit.c:741]</pre>
-           </div>
-          </div><p>&nbsp;</p><p>Once the server is started, follow these steps to remotely debug your server and/or application:</p>
+          </div><p>Once the server is started, follow these steps to remotely debug your server and/or application:</p>
           <ol>
            <li>Click <strong>Debug</strong> - <strong>Attach Debugger...</strong></li>
            <li>In the window that appears, type in the remote host name and the port number then click OK</li>
-          </ol><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/NetBeans%20remote%20debugger.png" data-image-src="attachments/NetBeans%20remote%20debugger.png" data-unresolved-comment-count="0" data-linked-resource-id="493508" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="NetBeans remote debugger.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491671" data-linked-resource-container-version="36"></span></p><p>Steps for achieving the same in Eclipse IDE are similar.</p><h3 id="Debugging-Redirectingcontaineroutputtoafile">Redirecting container output to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI">Example using the Java API</h4><p>The <code>Container.setOutput(File)</code> API allows you to redirect the container console (<code>stdout</code>) to a file. This is the first file you should check in case of problem.</p><p>Cargo is able to configure containers to generate various levels logs. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/LoggingLevel.html" class="external-link" rel="nofollow"><code>o.c.c.container.property.LoggingLevel</code></a>: <code>LoggingLevel.LOW</code>, <code>LoggingLevel.MEDIUM</code> and <code>LoggingLevel.HIGH</code> (<code>LoggingLevel.MEDIUM</code> is the default value). They represent the quantity of information you wish to have in the generated log file. You can tune container logging by using the following API:</p>
+          </ol><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/NetBeans%20remote%20debugger.png" data-image-src="attachments/NetBeans%20remote%20debugger.png" data-unresolved-comment-count="0" data-linked-resource-id="493508" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="NetBeans remote debugger.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491671" data-linked-resource-container-version="38"></span></p><p>Steps for achieving the same in Eclipse IDE are similar.</p>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
+           <p class="title">About the cargo.start.jvmargs property</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>The <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a> is rather recent (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1353" class="external-link" rel="nofollow">Codehaus CARGO 1.4.18 and onwards</a>).</p>
+            <p>With older versions, you'll have to use <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Configuration+properties" rel="nofollow"><code>cargo.jvmargs</code></a> and make sure you set the execution property only on the&nbsp;<code>start</code> goal - Else you will get error messages such as:</p>
+            <pre>[INFO] [talledLocalContainer] FATAL ERROR in native method: JDWP No transports initialized, jvmtiError=AGENT_ERROR_TRANSPORT_INIT(197)</pre>
+            <pre>[WARNING] [talledLocalContainer] ERROR: transport error 202: bind failed: Address already in use</pre>
+            <pre>[WARNING] [talledLocalContainer] ERROR: JDWP Transport dt_socket failed to initialize, TRANSPORT_INIT(510)</pre>
+            <pre>[WARNING] [talledLocalContainer] JDWP exit error AGENT_ERROR_TRANSPORT_INIT(197): No transports initialized [../../../src/share/back/debugInit.c:741]</pre>
+           </div>
+          </div><h3 id="Debugging-Redirectingcontaineroutputtoafile">Redirecting container output to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI">Example using the Java API</h4><p>The <code>Container.setOutput(File)</code> API allows you to redirect the container console (<code>stdout</code>) to a file. This is the first file you should check in case of problem.</p><p>Cargo is able to configure containers to generate various levels logs. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/LoggingLevel.html" class="external-link" rel="nofollow"><code>o.c.c.container.property.LoggingLevel</code></a>: <code>LoggingLevel.LOW</code>, <code>LoggingLevel.MEDIUM</code> and <code>LoggingLevel.HIGH</code> (<code>LoggingLevel.MEDIUM</code> is the default value). They represent the quantity of information you wish to have in the generated log file. You can tune container logging by using the following API:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">configuration.setProperty(GeneralPropertySet.LOGGING, LoggingLevel.HIGH.getLevel());
