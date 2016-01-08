@@ -271,8 +271,18 @@ public class WebsiteGenerator implements Runnable
                 {
                     sb.append(value.substring(start, matcher.start()));
                     sb.append("href=\"");
-                    sb.append(value.substring(matcher.start() + 26, matcher.end() - 1));
-                    sb.append(".html\"");
+                    String filename = value.substring(matcher.start() + 26, matcher.end() - 1);
+                    int hash = filename.indexOf('#');
+                    String anchor = "";
+                    if (hash != -1)
+                    {
+                        anchor = filename.substring(hash);
+                        filename = filename.substring(0, hash);
+                    }
+                    sb.append(filename);
+                    sb.append(".html");
+                    sb.append(anchor);
+                    sb.append("\"");
                     start = matcher.end();
                 }
                 sb.append(value.substring(start));
