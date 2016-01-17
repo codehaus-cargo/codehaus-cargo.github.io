@@ -189,6 +189,7 @@
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
+         <li><a href="WildFly+10.x.html">WildFly 10.x</a></li>
         </ul></li>
       </ul><h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
@@ -601,20 +602,6 @@
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.resource.name</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">ResourcePropertySet.RESOURCE_NAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ResourcePropertySet.html#RESOURCE_NAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.resource.type</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">ResourcePropertySet.RESOURCE_TYPE</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ResourcePropertySet.html#RESOURCE_TYPE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
@@ -671,6 +658,13 @@
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#BEA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
              <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.logging.rotation.type</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.LOG_ROTATION_TYPE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>none</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#LOG_ROTATION_TYPE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.script.jython.offline</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.JYTHON_SCRIPT_OFFLINE</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
@@ -690,6 +684,20 @@
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><code>server</code></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SERVER" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.ssl.verification.hostname.class</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.SSL_HOSTNAME_VERIFIER_CLASS</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>None</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SSL_HOSTNAME_VERIFIER_CLASS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.ssl.verification.hostname.ignored</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.SSL_HOSTNAME_VERIFICATION_IGNORED</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>true</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SSL_HOSTNAME_VERIFICATION_IGNORED" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
             </tbody>
            </table>
@@ -823,7 +831,7 @@
              </tr>
             </tbody>
            </table>
-          </div> </td> 
+          </div><p>&nbsp;</p><p>&nbsp;</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
