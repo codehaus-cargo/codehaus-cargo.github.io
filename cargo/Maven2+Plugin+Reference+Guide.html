@@ -240,10 +240,18 @@
        <tbody>
         <tr> 
          <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px;border-top:none"> 
-          <form action="Search.html" method="GET"> 
-           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-           <input type="submit" value="Search"> 
-          </form> </td> 
+          <table width="100%"> 
+           <tbody>
+            <tr> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Maven2 Plugin Reference Guide</b> </td> 
+             <td align="right"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
         </tr> 
         <tr> 
          <td id="rightColumn"> 
@@ -273,22 +281,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <script type="text/javascript">
-                // Google Ads code
-                google_ad_client = "ca-pub-7996505557003356";
-                google_ad_slot = "5363897989";
-                google_ad_width = 728;
-                google_ad_height = 90;
-              </script> 
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script> 
-           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
-             Our advertisement provider, Google, uses cookies for the proper management of their services.
-            <br> 
-            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
-           </div> 
-          </center> <h1 id="Maven2PluginReferenceGuide-ReferenceGuide">Reference Guide</h1><p>These are the various XML configuration elements that you can use to configure the Cargo Maven2 plugin. Make sure you also check the <a href="#Maven2PluginReferenceGuide-features">use cases</a> which show how to use them.</p>
+              </script> <h1 id="Maven2PluginReferenceGuide-ReferenceGuide">Reference Guide</h1><p>These are the various XML configuration elements that you can use to configure the Cargo Maven2 plugin. Make sure you also check the <a href="#Maven2PluginReferenceGuide-features">use cases</a> which show how to use them.</p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -332,7 +325,7 @@
               <td class="confluenceTd"><p><code>&lt;skip&gt;</code></p></td>
               <td class="confluenceTd"><p>Set this to <code>true</code> to bypass cargo execution</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to <code>false</code></p></td>
+              <td class="confluenceTd"><p>Defaults to <code>false</code>, you can also steer it using the system property <code>cargo.maven.skip<br></code></p></td>
              </tr>
             </tbody>
            </table>

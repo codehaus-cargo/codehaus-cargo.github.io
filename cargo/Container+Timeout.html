@@ -240,10 +240,18 @@
        <tbody>
         <tr> 
          <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px;border-top:none"> 
-          <form action="Search.html" method="GET"> 
-           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-           <input type="submit" value="Search"> 
-          </form> </td> 
+          <table width="100%"> 
+           <tbody>
+            <tr> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Container Timeout</b> </td> 
+             <td align="right"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
         </tr> 
         <tr> 
          <td id="rightColumn"> 
@@ -273,22 +281,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <script type="text/javascript">
-                // Google Ads code
-                google_ad_client = "ca-pub-7996505557003356";
-                google_ad_slot = "5363897989";
-                google_ad_width = 728;
-                google_ad_height = 90;
-              </script> 
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script> 
-           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
-             Our advertisement provider, Google, uses cookies for the proper management of their services.
-            <br> 
-            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
-           </div> 
-          </center> <h3 id="ContainerTimeout-Definition">Definition</h3>Timeout after which the container start/stop is deemed failed
+              </script> <h3 id="ContainerTimeout-Definition">Definition</h3>Timeout after which the container start/stop is deemed failed
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -312,7 +305,22 @@ within the timeout period [5000]. The Deployable state is thus unknown.
              </div>
             </div>
            </div>
-          </div><h3 id="ContainerTimeout-ExampleusingtheJavaAPI">Example using the Java API</h3>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
+          </center><h3 id="ContainerTimeout-ExampleusingtheJavaAPI">Example using the Java API</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalContainer container = ...;
@@ -330,7 +338,22 @@ System.out.println("Timeout = " + container.getTimeout());
 &lt;/container&gt;
 </pre> 
            </div>
-          </div><h3 id="ContainerTimeout-Disablingtimeout">Disabling timeout</h3><p>If you set the timeout to&nbsp;<code>0</code>, CARGO will not wait for the container to start or stop.</p><h3 id="ContainerTimeout-Usingdifferenttimeoutswhenstartingandstoppingthecontainer">Using different timeouts when starting and stopping the container</h3><p>Shutdown usually takes much much shorther than startup, it therefore often makes sense to use a shorter timeout for stopping the container than for starting it. With the Cargo Maven2 plugin, this is easy to do: indeed, in each <code>&lt;execution&gt;</code> block of the Maven2 plugin, you can have different <code>&lt;configuration&gt;</code> blocks. When done so, the plugin will use an inheritance scheme; i.e. for each execution the outermost configuration elements will be overriden by innermost elements each time these are defined.</p><p>Here is an example that uses different timeouts when starting and stopping the container:</p>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
+          </center><h3 id="ContainerTimeout-Disablingtimeout">Disabling timeout</h3><p>If you set the timeout to&nbsp;<code>0</code>, CARGO will not wait for the container to start or stop.</p><h3 id="ContainerTimeout-Usingdifferenttimeoutswhenstartingandstoppingthecontainer">Using different timeouts when starting and stopping the container</h3><p>Shutdown usually takes much much shorther than startup, it therefore often makes sense to use a shorter timeout for stopping the container than for starting it. With the Cargo Maven2 plugin, this is easy to do: indeed, in each <code>&lt;execution&gt;</code> block of the Maven2 plugin, you can have different <code>&lt;configuration&gt;</code> blocks. When done so, the plugin will use an inheritance scheme; i.e. for each execution the outermost configuration elements will be overriden by innermost elements each time these are defined.</p><p>Here is an example that uses different timeouts when starting and stopping the container:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;

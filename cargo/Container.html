@@ -240,10 +240,18 @@
        <tbody>
         <tr> 
          <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px;border-top:none"> 
-          <form action="Search.html" method="GET"> 
-           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-           <input type="submit" value="Search"> 
-          </form> </td> 
+          <table width="100%"> 
+           <tbody>
+            <tr> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Container</b> </td> 
+             <td align="right"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
         </tr> 
         <tr> 
          <td id="rightColumn"> 
@@ -273,22 +281,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <script type="text/javascript">
-                // Google Ads code
-                google_ad_client = "ca-pub-7996505557003356";
-                google_ad_slot = "5363897989";
-                google_ad_width = 728;
-                google_ad_height = 90;
-              </script> 
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script> 
-           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
-             Our advertisement provider, Google, uses cookies for the proper management of their services.
-            <br> 
-            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
-           </div> 
-          </center> <h3 id="Container-Definition">Definition</h3>A top level interface wrapping a real physical container<h3 id="Container-Explanation">Explanation</h3><p>A container is the base concept in Cargo. It represents an existing container runtime. A container is composed of a <a href="Configuration.html">Configuration</a>. There are 2 types of containers:</p>
+              </script> <h3 id="Container-Definition">Definition</h3>A top level interface wrapping a real physical container<h3 id="Container-Explanation">Explanation</h3><p>A container is the base concept in Cargo. It represents an existing container runtime. A container is composed of a <a href="Configuration.html">Configuration</a>. There are 2 types of containers:</p>
           <ul>
            <li><a href="Local+Container.html">Local Container</a></li>
            <li><a href="Remote+Container.html">Remote Container</a></li>
@@ -308,7 +301,22 @@
              </tr>
             </tbody>
            </table>
-          </div><h3 id="Container-Containerfeatures">Container features</h3><p></p>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
+          </center><h3 id="Container-Containerfeatures">Container features</h3><p></p>
           <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children">
            <li><a href="Container+Instantiation.html">Container Instantiation</a> — <span class="smalltext">Create a container instance</span></li>
            <li><a href="Local+Container.html">Local Container</a> — <span class="smalltext">A container executing on the machine where Cargo executes</span>

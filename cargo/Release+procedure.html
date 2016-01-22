@@ -240,10 +240,18 @@
        <tbody>
         <tr> 
          <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px;border-top:none"> 
-          <form action="Search.html" method="GET"> 
-           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-           <input type="submit" value="Search"> 
-          </form> </td> 
+          <table width="100%"> 
+           <tbody>
+            <tr> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Release procedure</b> </td> 
+             <td align="right"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
         </tr> 
         <tr> 
          <td id="rightColumn"> 
@@ -273,22 +281,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <script type="text/javascript">
-                // Google Ads code
-                google_ad_client = "ca-pub-7996505557003356";
-                google_ad_slot = "5363897989";
-                google_ad_width = 728;
-                google_ad_height = 90;
-              </script> 
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script> 
-           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
-             Our advertisement provider, Google, uses cookies for the proper management of their services.
-            <br> 
-            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
-           </div> 
-          </center> <p>Releases are now performed using Maven 2 or Maven 3 so you need to have one of these installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
+              </script> <p>Releases are now performed using Maven 2 or Maven 3 so you need to have one of these installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
           <ul>
            <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html" class="external-link" rel="nofollow">OSSRH guide</a></li>
            <li><a href="http://www.gnupg.org/" class="external-link" rel="nofollow">The GNU privacy guard (GPG)</a> installed on your machine and at least one secret key.
@@ -329,7 +322,22 @@
              <li>All versions of WebLogic</li>
              <li>All versions of WebSphere</li>
             </ul></li>
-          </ul><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><p>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p><p>The typical Maven release procedure is to execute these commands:</p>
+          </ul><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
+          </center><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><p>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p><p>The typical Maven release procedure is to execute these commands:</p>
           <ol>
            <li>A dry-run before doing the actual release to ensure there aren't any problems:<br> <code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
            <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process</li>

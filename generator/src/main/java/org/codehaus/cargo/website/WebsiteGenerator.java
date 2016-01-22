@@ -33,9 +33,11 @@ import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
@@ -56,6 +58,23 @@ public class WebsiteGenerator implements Runnable
 
     private static final boolean downloadAttachments =
         Boolean.parseBoolean(System.getProperty("cargo.downloadAttachments", "true"));
+
+    private static final String googleAds =
+        "<script type=\"text/javascript\">\n" +
+        "  // Google Ads code\n" +
+        "  google_ad_client = \"ca-pub-7996505557003356\";\n" +
+        "  google_ad_slot = \"5363897989\";\n" +
+        "  google_ad_width = 728;\n" +
+        "  google_ad_height = 90;\n" +
+        "</script>" +
+        "<center style=\"padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee\">\n" +
+        "  <script type=\"text/javascript\" src=\"https://pagead2.googlesyndication.com/pagead/show_ads.js\">\n" +
+        "  </script>\n" +
+        "  <div style=\"width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px\">\n" +
+        "    Our advertisement provider, Google, uses cookies for the proper management of their services.<br/>\n" +
+        "    <a href=\"https://www.google.com/policies/technologies/ads/\" target=\"_blank\">Click here to learn more</a>.\n" +
+        "  </div>\n" +
+        "</center>";
 
     private static final ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(8);
 
@@ -175,6 +194,52 @@ public class WebsiteGenerator implements Runnable
             value = value.replaceAll("(?s)<span class=\"refresh-action-group\".*?</span>", "");
             value = value.replaceAll("(?s)<textarea id=\"refresh-wiki-\\d*\".*?</textarea>", "");
             value = value.replaceAll("<input id=\"refresh-page-id-\\d*\"[^>]+>", "");
+            List<Integer> headerIndexes = new ArrayList<Integer>();
+            int lastIndex = 0;
+            while (lastIndex >= 0)
+            {
+                if (headerIndexes.size() > 0)
+                {
+                    lastIndex = headerIndexes.get(headerIndexes.size() - 1) + 1;
+                }
+                int nextIndex = value.length();
+                int h1 = value.indexOf("<h1", lastIndex);
+                if (h1 != -1)
+                {
+                    nextIndex = Math.min(nextIndex, h1);
+                }
+                int h2 = value.indexOf("<h2", lastIndex);
+                if (h2 != -1)
+                {
+                    nextIndex = Math.min(nextIndex, h2);
+                }
+                int h3 = value.indexOf("<h3", lastIndex);
+                if (h3 != -1)
+                {
+                    nextIndex = Math.min(nextIndex, h3);
+                }
+                int h4 = value.indexOf("<h4", lastIndex);
+                if (h4 != -1)
+                {
+                    nextIndex = Math.min(nextIndex, h4);
+                }
+                if (nextIndex == value.length())
+                {
+                    nextIndex = -1;
+                }
+                lastIndex = nextIndex;
+                if (lastIndex >= 0)
+                {
+                    headerIndexes.add(lastIndex);
+                }
+            }
+            lastIndex = headerIndexes.size() - 2;
+            while (lastIndex > 1)
+            {
+                int cut = headerIndexes.get(lastIndex);
+                value = value.substring(0, cut) + googleAds + value.substring(cut);
+                lastIndex = lastIndex - 2;
+            }
             writeFile(file, Jsoup.parse(template.replace("$name", name).replace("$title",
                 URLDecoder.decode(name, "UTF-8")).replace("$value", value).replace(
                     "http://jira.codehaus.org/browse/CARGO-",

@@ -240,10 +240,18 @@
        <tbody>
         <tr> 
          <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px;border-top:none"> 
-          <form action="Search.html" method="GET"> 
-           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-           <input type="submit" value="Search"> 
-          </form> </td> 
+          <table width="100%"> 
+           <tbody>
+            <tr> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; XML replacements</b> </td> 
+             <td align="right"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
         </tr> 
         <tr> 
          <td id="rightColumn"> 
@@ -273,22 +281,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <script type="text/javascript">
-                // Google Ads code
-                google_ad_client = "ca-pub-7996505557003356";
-                google_ad_slot = "5363897989";
-                google_ad_width = 728;
-                google_ad_height = 90;
-              </script> 
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script> 
-           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
-             Our advertisement provider, Google, uses cookies for the proper management of their services.
-            <br> 
-            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
-           </div> 
-          </center> <h3 id="XMLreplacements-Definition">Definition</h3>
+              </script> <h3 id="XMLreplacements-Definition">Definition</h3>
           <div class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt">
            The 
            <strong>XML replacements</strong> option allows you to modify XML files of your container's configuration using XPath statements.
@@ -317,7 +310,22 @@ configuration.addXmlReplacement(defaultHost);
            <li>The&nbsp;<code>attributeName</code> parameter is optional -if you don't specify it, then Cargo will replace directly the value of the node</li>
            <li>If the&nbsp;<code>value</code> corresponds to an existing <a href="Configuration+properties.html">configuration property</a> (such as&nbsp;<code>cargo.hostname</code> for example) then Cargo will reuse it from the configuration</li>
            <li>Finally, there is another parameter&nbsp;<code>ignoreIfNonExisting</code> which, when set to&nbsp;<code>TRUE</code>, will make the XML replacement tool ignore if that specific XPath doesn't exist in the XML file</li>
-          </ul><h3 id="XMLreplacements-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
+          </ul><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
+          </center><h3 id="XMLreplacements-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="@{containerId}" action="@{action}"&gt;

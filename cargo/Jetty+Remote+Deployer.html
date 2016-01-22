@@ -240,10 +240,18 @@
        <tbody>
         <tr> 
          <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px;border-top:none"> 
-          <form action="Search.html" method="GET"> 
-           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-           <input type="submit" value="Search"> 
-          </form> </td> 
+          <table width="100%"> 
+           <tbody>
+            <tr> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Jetty Remote Deployer</b> </td> 
+             <td align="right"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
         </tr> 
         <tr> 
          <td id="rightColumn"> 
@@ -273,22 +281,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <script type="text/javascript">
-                // Google Ads code
-                google_ad_client = "ca-pub-7996505557003356";
-                google_ad_slot = "5363897989";
-                google_ad_width = 728;
-                google_ad_height = 90;
-              </script> 
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script> 
-           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
-             Our advertisement provider, Google, uses cookies for the proper management of their services.
-            <br> 
-            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
-           </div> 
-          </center> <p>This document explains how to configure Cargo remote deployment support on a Jetty container.</p><h3 id="JettyRemoteDeployer-Overview">Overview</h3><p>By default, Jetty does not come with possibilities for remote deployment. In order to add such a support to Jetty, Cargo uses a "Jetty remote deployer" Web application.</p><p>This application is a simple servlet-based application which exposes methods such as deploy or undeploy on standard HTTP POST URLs. When thse HTTP methods are called, the servlet implementing these methods connects to the Jetty Server implementation and does deployment related actions on the server; this Web application can therefore be seen as a kind of remote administration proxy.</p><p>Being a standard Web application, the Cargo Jetty remote deployer application can be secured using Jetty users and roles.</p><h3 id="JettyRemoteDeployer-Downloadingtheremotedeployer">Downloading the remote deployer</h3><p>Two versions of the Jetty remote deployer WAR are available on the <a href="Downloads.html">Cargo downloads</a> page (scroll down to the <strong>Tools</strong> section):</p>
+              </script> <p>This document explains how to configure Cargo remote deployment support on a Jetty container.</p><h3 id="JettyRemoteDeployer-Overview">Overview</h3><p>By default, Jetty does not come with possibilities for remote deployment. In order to add such a support to Jetty, Cargo uses a "Jetty remote deployer" Web application.</p><p>This application is a simple servlet-based application which exposes methods such as deploy or undeploy on standard HTTP POST URLs. When thse HTTP methods are called, the servlet implementing these methods connects to the Jetty Server implementation and does deployment related actions on the server; this Web application can therefore be seen as a kind of remote administration proxy.</p><p>Being a standard Web application, the Cargo Jetty remote deployer application can be secured using Jetty users and roles.</p><h3 id="JettyRemoteDeployer-Downloadingtheremotedeployer">Downloading the remote deployer</h3><p>Two versions of the Jetty remote deployer WAR are available on the <a href="Downloads.html">Cargo downloads</a> page (scroll down to the <strong>Tools</strong> section):</p>
           <ul>
            <li><code>cargo-jetty-7-and-onwards-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 7.x and later (Jetty from Eclipse.org)</li>
            <li><code>cargo-jetty-6-and-earlier-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 6.x and earlier (Jetty from Mortbay.org)</li>
@@ -323,7 +316,22 @@
            <div class="confluence-information-macro-body">
             <p><strong>Note</strong>: Jetty's website has documentation on hashing the password.</p>
            </div>
-          </div><h3 id="JettyRemoteDeployer-Examples">Examples</h3><p>Here is an example Maven2 plugin configuration that:</p>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
+          </center><h3 id="JettyRemoteDeployer-Examples">Examples</h3><p>Here is an example Maven2 plugin configuration that:</p>
           <ul>
            <li>Deploys on a remote Jetty 6.x server</li>
            <li>The server is on <code>production17</code>, port <code>8080</code></li>

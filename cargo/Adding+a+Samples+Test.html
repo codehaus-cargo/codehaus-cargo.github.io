@@ -240,10 +240,18 @@
        <tbody>
         <tr> 
          <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px;border-top:none"> 
-          <form action="Search.html" method="GET"> 
-           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-           <input type="submit" value="Search"> 
-          </form> </td> 
+          <table width="100%"> 
+           <tbody>
+            <tr> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Adding a Samples Test</b> </td> 
+             <td align="right"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
         </tr> 
         <tr> 
          <td id="rightColumn"> 
@@ -273,22 +281,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <script type="text/javascript">
-                // Google Ads code
-                google_ad_client = "ca-pub-7996505557003356";
-                google_ad_slot = "5363897989";
-                google_ad_width = 728;
-                google_ad_height = 90;
-              </script> 
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script> 
-           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
-             Our advertisement provider, Google, uses cookies for the proper management of their services.
-            <br> 
-            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
-           </div> 
-          </center> <p>updating samples test cases.</p><p>1. find the test case you wish to copy.</p><p>copy recursively&nbsp;<code>resources/testdata/&lt;you_want_to_copy&gt;-war</code> to a new folder (ex.&nbsp;<code>resources/testdata/NEW-war</code>)<br> edit&nbsp;<code>resources/testdata/new-war/pom.xml</code> (change&nbsp;<code>artifact-id</code> to <code>NEW-war</code>, and name to something descriptive )<br> edit&nbsp;<code>resources/testdata/pom.xml</code> and add module <code>NEW-war</code></p><p>edit <code>core/samples/pom.xml</code><br> under Test data artifacts, add</p>
+              </script> <p>updating samples test cases.</p><p>1. find the test case you wish to copy.</p><p>copy recursively&nbsp;<code>resources/testdata/&lt;you_want_to_copy&gt;-war</code> to a new folder (ex.&nbsp;<code>resources/testdata/NEW-war</code>)<br> edit&nbsp;<code>resources/testdata/new-war/pom.xml</code> (change&nbsp;<code>artifact-id</code> to <code>NEW-war</code>, and name to something descriptive )<br> edit&nbsp;<code>resources/testdata/pom.xml</code> and add module <code>NEW-war</code></p><p>edit <code>core/samples/pom.xml</code><br> under Test data artifacts, add</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">  &lt;dependency&gt;

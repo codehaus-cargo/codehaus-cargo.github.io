@@ -240,10 +240,18 @@
        <tbody>
         <tr> 
          <td id="breadcrumbs" valign="top" align="right" style="padding:10px 17px;border-top:none"> 
-          <form action="Search.html" method="GET"> 
-           <input type="text" id="search_query" name="q" size="30"> &nbsp; 
-           <input type="submit" value="Search"> 
-          </form> </td> 
+          <table width="100%"> 
+           <tbody>
+            <tr> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Adding TLD support to the Jetty container</b> </td> 
+             <td align="right"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
         </tr> 
         <tr> 
          <td id="rightColumn"> 
@@ -273,22 +281,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <script type="text/javascript">
-                // Google Ads code
-                google_ad_client = "ca-pub-7996505557003356";
-                google_ad_slot = "5363897989";
-                google_ad_width = 728;
-                google_ad_height = 90;
-              </script> 
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script> 
-           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
-             Our advertisement provider, Google, uses cookies for the proper management of their services.
-            <br> 
-            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
-           </div> 
-          </center> <h1 id="AddingTLDsupporttotheJettycontainer-Symptoms">Symptoms</h1><p>The embedded jetty container starting up for integration tests in a separate module fails to successfully run web apps which use tag libraries. The app server starts successfully however when the test case attempts to hit a jsp which imports the tag libraries the server fails with the following exception. This behaviour is not seen when deploying the webapp to an installed tomcat instance or whe using the jetty maven plugin to start the container.</p>
+              </script> <h1 id="AddingTLDsupporttotheJettycontainer-Symptoms">Symptoms</h1><p>The embedded jetty container starting up for integration tests in a separate module fails to successfully run web apps which use tag libraries. The app server starts successfully however when the test case attempts to hit a jsp which imports the tag libraries the server fails with the following exception. This behaviour is not seen when deploying the webapp to an installed tomcat instance or whe using the jetty maven plugin to start the container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">org.apache.jasper.JasperException: Unable to initialize
@@ -322,7 +315,22 @@ org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:314)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
 </pre> 
            </div>
-          </div><h1 id="AddingTLDsupporttotheJettycontainer-Reason">Reason</h1><p>For whatever reason, Jetty's thread's context class loader is set to something other than the webapp classloader when the TldLocationsCache is first initialized. The code will try to scan the context classloader for all jars in WEB-INF/lib, but if the context classloader is set to something else, the jars won't be found.</p><h1 id="AddingTLDsupporttotheJettycontainer-Workaround">Workaround</h1><p>The workaround is to place the tld files anywhere in WEB-INF. The secondary scan, after the above one, will look for any tld files in WEB-INF and automatically register them.</p><h1 id="AddingTLDsupporttotheJettycontainer-Formoredetails...">For more details...</h1><p>See: <span class="jira-issue resolved conf-macro output-block" data-jira-key="CARGO-651" data-hasbody="false" data-macro-name="jira"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-651?src=confmacro" class="jira-issue-key"><img class="icon" src="attachments/viewavatar">CARGO-651</a> - <span class="summary">Embedded Jetty Container fails to compile JSPs with tag libraries: Unable to initialize TldLocationsCache</span> <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success jira-macro-single-issue-export-pdf">Closed</span> </span> </p> </td> 
+          </div><h1 id="AddingTLDsupporttotheJettycontainer-Reason">Reason</h1><p>For whatever reason, Jetty's thread's context class loader is set to something other than the webapp classloader when the TldLocationsCache is first initialized. The code will try to scan the context classloader for all jars in WEB-INF/lib, but if the context classloader is set to something else, the jars won't be found.</p><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+           <div style="width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px">
+             Our advertisement provider, Google, uses cookies for the proper management of their services.
+            <br> 
+            <a href="https://www.google.com/policies/technologies/ads/" target="_blank">Click here to learn more</a>. 
+           </div> 
+          </center><h1 id="AddingTLDsupporttotheJettycontainer-Workaround">Workaround</h1><p>The workaround is to place the tld files anywhere in WEB-INF. The secondary scan, after the above one, will look for any tld files in WEB-INF and automatically register them.</p><h1 id="AddingTLDsupporttotheJettycontainer-Formoredetails...">For more details...</h1><p>See: <span class="jira-issue resolved conf-macro output-block" data-jira-key="CARGO-651" data-hasbody="false" data-macro-name="jira"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-651?src=confmacro" class="jira-issue-key"><img class="icon" src="attachments/viewavatar">CARGO-651</a> - <span class="summary">Embedded Jetty Container fails to compile JSPs with tag libraries: Unable to initialize TldLocationsCache</span> <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success jira-macro-single-issue-export-pdf">Closed</span> </span> </p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
