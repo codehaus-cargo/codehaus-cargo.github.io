@@ -70,10 +70,6 @@ public class WebsiteGenerator implements Runnable
         "<center style=\"padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee\">\n" +
         "  <script type=\"text/javascript\" src=\"https://pagead2.googlesyndication.com/pagead/show_ads.js\">\n" +
         "  </script>\n" +
-        "  <div style=\"width:718px;background-color:#fffdf6;border-style:solid;border-color:#ffeaae;border-radius:7px;border-width:1px;padding:7px 5px\">\n" +
-        "    Our advertisement provider, Google, uses cookies for the proper management of their services.<br/>\n" +
-        "    <a href=\"https://www.google.com/policies/technologies/ads/\" target=\"_blank\">Click here to learn more</a>.\n" +
-        "  </div>\n" +
         "</center>";
 
     private static final ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(8);
