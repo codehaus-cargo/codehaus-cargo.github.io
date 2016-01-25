@@ -27,19 +27,28 @@
   </script> 
  </head> 
  <body> 
-  <table width="100%" id="layout" style="border-collapse:collapse"> 
+  <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
+   <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+    <tbody>
+     <tr> 
+      <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+      <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+  </div> 
+  <div style="position:fixed;width:100%;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
+   <table width="100%"> 
+    <tbody>
+     <tr> 
+      <td align="left" valign="top"> Copyright 2004-2016. All rights reserved unless otherwise noted.<br> </td> 
+      <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+  </div> 
+  <table width="100%" id="layout" style="border-collapse:collapse;margin-top:83px;margin-bottom:23px"> 
    <tbody>
-    <tr> 
-     <td colspan="2" style="padding:0px;border-bottom:1px solid #39434F"> 
-      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
-       <tbody>
-        <tr> 
-         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
-         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
-        </tr> 
-       </tbody>
-      </table> </td> 
-    </tr> 
     <tr> 
      <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
@@ -759,18 +768,7 @@ ERROR: 8001: org.codehaus.cargo.ant.weblogic.WebLogic8xCargoTask: Class org.code
        </tbody>
       </table> </td> 
     </tr> 
-    <tr> 
-     <td colspan="2" id="footer"> 
-      <table width="100%"> 
-       <tbody>
-        <tr> 
-         <td align="left" valign="top"> Copyright 2004-2016. All rights reserved unless otherwise noted.<br> </td> 
-         <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a>. </td> 
-        </tr> 
-       </tbody>   
-      </table>   </td>
-    </tr>
    </tbody>
-  </table>
+  </table>   
  </body>
 </html>

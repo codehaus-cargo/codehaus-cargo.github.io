@@ -27,19 +27,28 @@
   </script> 
  </head> 
  <body> 
-  <table width="100%" id="layout" style="border-collapse:collapse"> 
+  <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
+   <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+    <tbody>
+     <tr> 
+      <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+      <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+  </div> 
+  <div style="position:fixed;width:100%;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
+   <table width="100%"> 
+    <tbody>
+     <tr> 
+      <td align="left" valign="top"> Copyright 2004-2016. All rights reserved unless otherwise noted.<br> </td> 
+      <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+  </div> 
+  <table width="100%" id="layout" style="border-collapse:collapse;margin-top:83px;margin-bottom:23px"> 
    <tbody>
-    <tr> 
-     <td colspan="2" style="padding:0px;border-bottom:1px solid #39434F"> 
-      <table width="100%" id="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
-       <tbody>
-        <tr> 
-         <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
-         <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
-        </tr> 
-       </tbody>
-      </table> </td> 
-    </tr> 
     <tr> 
      <td id="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
@@ -591,7 +600,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 7 or newer</em></p></td>
+              <td class="confluenceTd"><p><em>JAVA_HOME version 8 or newer</em></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -745,7 +754,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 7 or newer</em></p></td>
+              <td class="confluenceTd"><p><em>JAVA_HOME version 8 or newer</em></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -919,23 +928,12 @@
              </tr>
             </tbody>
            </table>
-          </div><h3 id="WildFly10.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br> The server used for tests is downloaded from: <a class="external-link" href="http://download.jboss.org/wildfly/10.0.0.CR5/wildfly-10.0.0.CR5.tar.gz" rel="nofollow">http://download.jboss.org/wildfly/10.0.0.CR5/wildfly-10.0.0.CR5.tar.gz</a></p> </td> 
+          </div><h3 id="WildFly10.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br> The server used for tests is downloaded from: <a class="external-link" href="http://download.jboss.org/wildfly/10.0.0.CR5/wildfly-10.0.0.CR5.tar.gz" rel="nofollow">http://download.jboss.org/wildfly/10.0.0.CR5/wildfly-10.0.0.CR5.tar.gz</a></p><p>&nbsp;</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
     </tr> 
-    <tr> 
-     <td colspan="2" id="footer"> 
-      <table width="100%"> 
-       <tbody>
-        <tr> 
-         <td align="left" valign="top"> Copyright 2004-2016. All rights reserved unless otherwise noted.<br> </td> 
-         <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a>. </td> 
-        </tr> 
-       </tbody>   
-      </table>   </td>
-    </tr>
    </tbody>
-  </table>
+  </table>   
  </body>
 </html>
