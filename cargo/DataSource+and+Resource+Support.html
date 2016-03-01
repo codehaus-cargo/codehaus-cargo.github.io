@@ -771,7 +771,64 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
              </tr>
             </tbody>
            </table>
-          </div><h3 id="DataSourceandResourceSupport-Resourceproperties">Resource properties</h3><p>Resources are added through pipe-delimited configuration properties that starts with <code>cargo.resource.resource</code>. Example:</p>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h3 id="DataSourceandResourceSupport-JMSresourceproperties">JMS resource properties</h3><p>JMS resources (such as connection factories, queues or topics) are added through pipe-delimited configuration properties that starts with <code>cargo.resource.resource</code>. Example:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">cargo.resource.resource.jms.cf=cargo.resource.name=jms/cf/MyCf\|cargo.resource.type=javax.jms.ConnectionFactory\|cargo.resource.id=MyCf
+cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resource.type=javax.jms.Queue\|cargo.resource.id=MyQueue
+</pre> 
+           </div>
+          </div><p>Here are the properties that are valid for this:</p>
+          <ul>
+           <li>Note that&nbsp;<code>c.r</code> means&nbsp;<code>cargo.resource</code></li>
+           <li>Note that if you specify a property marked <strong>do not set</strong> you will get a <code>CargoException</code>.</li>
+          </ul>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><p>Property</p></th>
+              <th class="confluenceTh"><p>Purpose</p></th>
+              <th class="confluenceTh"><p>Valid Values</p></th>
+              <th class="confluenceTh"><p>Mandatory?</p></th>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code>c.r.id</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>The ID for the JNDI entry of this JMS resource</p></td>
+              <td colspan="1" class="confluenceTd">ID used in configuration files, if not specified an identifier is created using the&nbsp;<code>name</code></td>
+              <td colspan="1" class="confluenceTd">optional</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code>c.r.name</code></p></td>
+              <td class="confluenceTd"><p>The path to this&nbsp;JMS resource in JNDI</p></td>
+              <td class="confluenceTd"><p>Any JNDI path, like&nbsp;<code>jms/cf/MyCf</code> or <code>jms/cf/MyQueue</code></p></td>
+              <td class="confluenceTd"><p>mandatory</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code>c.r.type</code></p></td>
+              <td class="confluenceTd"><p>Interface of the object</p></td>
+              <td class="confluenceTd"><p>Any JNDI path, like&nbsp;<code>javax.jms.ConnectionFactory</code> or&nbsp;<code>javax.jms.Queue</code></p></td>
+              <td class="confluenceTd"><p>mandatory</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code>c.r.parameters</code></p></td>
+              <td class="confluenceTd"><p>Properties to to populate the class with</p></td>
+              <td class="confluenceTd"><p>Semi-colon delimited string; must correspond to setters</p></td>
+              <td class="confluenceTd"><p>optional</p></td>
+             </tr>
+            </tbody>
+           </table>
+          </div><h3 id="DataSourceandResourceSupport-Otherresourceproperties">Other resource properties</h3><p>All other resources are added through pipe-delimited configuration properties that starts with <code>cargo.resource.resource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">cargo.resource.resource1=cargo.resource.name=resource/apple\|cargo.resource.class=org.mycompany.Apple\|...
@@ -799,7 +856,7 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>c.r.name</code></p></td>
-              <td class="confluenceTd"><p>The path to this datasource in JNDI</p></td>
+              <td class="confluenceTd"><p>The path to this resource in JNDI</p></td>
               <td class="confluenceTd"><p>Any JNDI path, like&nbsp;<code>resource/apple</code></p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
              </tr>
@@ -935,6 +992,18 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
            </div>
           </div><h3 id="DataSourceandResourceSupport-Examples">Examples</h3><p>Users of the Java API can take a look at the following classes as example:</p>
           <ul>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/api/container/src/test/java/org/codehaus/cargo/container/configuration/entry/ConfigurationFixtureFactory.java" class="external-link" rel="nofollow"><code>ConfigurationFixtureFactory</code></a>: class with method showing example for creating various datasource and resource types:
+            <ul>
+             <li><code>createDataSource</code> and&nbsp;<code>createAnotherDataSource</code>: Creation of a DataSource</li>
+             <li><code>createDriverConfiguredDataSourceWithLocalTransactionSupport</code>: Creation of a&nbsp;DataSource with local transaction support</li>
+             <li><code>createDriverConfiguredDataSourceWithXaTransactionSupport</code>: Creation of a&nbsp;DataSource with XA transaction support</li>
+             <li><code>createXADataSourceConfiguredDataSource</code>: Creation of an XA DataSource as DataSource</li>
+             <li><code>createConnectionPoolDataSourceAsResource</code>: Creation of a connection pool</li>
+             <li><code>createXADataSourceAsResource</code>: Creation of an XA DataSource as a resource</li>
+             <li><code>createMailSessionAsResource</code>: Creation of a Mail resource</li>
+             <li><code>createDataSourceWithWindowsPath</code>: Creation of a DataSource with a Windows path</li>
+             <li><code>createJmsQueueAsResource</code>: Creation of a JMS resource</li>
+            </ul></li>
            <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/DataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>DataSourceOnStandaloneConfigurationTest</code></a>: datasource definition.</li>
            <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/TransactionEmulationDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>TransactionEmulationDataSourceOnStandaloneConfigurationTest</code></a>: datasource definition with transaction emulation.</li>
            <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/XATransactionDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>XATransactionDataSourceOnStandaloneConfigurationTest</code></a>: XA datasource definition.</li>
