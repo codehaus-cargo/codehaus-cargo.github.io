@@ -285,6 +285,73 @@
            <div class="blog-post-listing"> 
             <div class="logo-heading-block"> 
              <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
+             <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=19103755">Codehaus Cargo 1.4.19 is now available!</a> 
+              <div class="page-metadata not-personal"> 
+               <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Mar 20, 2016
+              </div> </span> 
+            </div> 
+            <div class="wiki-content"> 
+             <p>Dear enthusiasts<br> <br> We're now 2 months from the last release, and there have been a large number of fixes, improvements and news features. We are hence happy to announce the immediate availability of our version 1.4.19:</p>
+             <ul>
+              <li><u>Documentation</u></li>
+              <ul>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1340" rel="nofollow" class="external-link">CARGO-1340</a>] - Update Cargo Datasource and Resource Configuration documentation to show JMS configuration possibilities</li>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1363" rel="nofollow" class="external-link">CARGO-1363</a>] - How can make the Cargo Maven2/Maven3 plugin skip if tests are disabled?</li>
+              </ul>
+              <li><u>General</u></li>
+              <ul>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1376" rel="nofollow" class="external-link">CARGO-1376</a>] - User name doesn't trim leading and trailing whitespaces</li>
+              </ul>
+              <li><u>Containers - JBoss</u></li>
+              <ul>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1366" rel="nofollow" class="external-link">CARGO-1366</a>] - Add support for resources features in JBoss 7.5.x (EAP 6.4)</li>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1374" rel="nofollow" class="external-link">CARGO-1374</a>] - Error when referencing a JBoss 5.0 web descriptor (<code>jboss-web_5_0.dtd</code>)</li>
+              </ul>
+              <li><u>Containers - Jetty</u></li>
+              <ul>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1372" rel="nofollow" class="external-link">CARGO-1372</a>] - Jetty 9.x embedded doesn't start when used with the Maven2/Maven3 plugin</li>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1378" rel="nofollow" class="external-link">CARGO-1378</a>] - Upgrade to Jetty 9.3.x</li>
+              </ul>
+              <li><u>Containers - Tomcat</u></li>
+              <ul>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1364" rel="nofollow" class="external-link">CARGO-1364</a>] - Defining custom valves for Tomcat</li>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1367" rel="nofollow" class="external-link">CARGO-1367</a>] - Possible wrong loading of Tomcat 8 PostResources</li>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1371" rel="nofollow" class="external-link">CARGO-1371</a>] - Add support for multipart parsing since Servlet 3.0 for Tomcat &gt;= 7.x.</li>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1373" rel="nofollow" class="external-link">CARGO-1373</a>] - Deploying expanded web app with context.xml file in Tomcat8 with extraClasspath doesn't work</li>
+              </ul>
+              <li><u>Containers - WebLogic</u></li>
+              <ul>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1319" rel="nofollow" class="external-link">CARGO-1319</a>] - Add remote support for WebLogic</li>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1365" rel="nofollow" class="external-link">CARGO-1365</a>] - WebLogic 12.1.x and 12.2.x log level configuration doesn't work</li>
+              </ul>
+              <li><u>Containers - WebSphere</u></li>
+              <ul>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1365" rel="nofollow" class="external-link">CARGO-1365</a>] - WebSphere log level configuration doesn't work</li>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1368" rel="nofollow" class="external-link">CARGO-1368</a>] - WebSphere server remains running if build fails</li>
+              </ul>
+              <li><u>Extensions - Cargo Daemon</u></li>
+              <ul>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1379" rel="nofollow" class="external-link">CARGO-1379</a>] - Clean shutdown of cargo-daemon-webapp</li>
+              </ul>
+              <li><u>Extensions - Maven2/Maven3 plugin</u></li>
+              <ul>
+               <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1375" rel="nofollow" class="external-link">CARGO-1375</a>] - Make cargo:start stop the container if startup / deployment of deployables fail</li>
+              </ul>
+             </ul>
+             <p>To try it out:</p>
+             <ul>
+              <li>Users of the <a class="external-link" href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" rel="nofollow">Maven2/Maven3 plugin</a> simply need to use the&nbsp;Codehaus Cargo plugin version <strong>1.4.19</strong></li>
+              <li>Users of the <a class="external-link" href="https://codehaus-cargo.github.io/cargo/Javadocs.html" rel="nofollow">Java API</a> can download the new Uberjar from <a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.19/cargo-core-uberjar-1.4.19.jar" class="external-link" rel="nofollow">http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.19/cargo-core-uberjar-1.4.19.jar</a></li>
+              <li>Similarly, users of the&nbsp;<a class="external-link" href="https://codehaus-cargo.github.io/cargo/Ant+support.html" rel="nofollow">ANT tasks</a> can download the new ANT tasks from <a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.19/cargo-ant-1.4.19.jar" class="external-link" rel="nofollow">http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.19/cargo-ant-1.4.19.jar</a></li>
+              <li>Finally, the ones who want to see the&nbsp;<a class="external-link" href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" rel="nofollow">Cargo Daemon</a> can get it from&nbsp;<a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.19/cargo-daemon-webapp-1.4.19.war" class="external-link" rel="nofollow">http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.19/cargo-daemon-webapp-1.4.19.war</a> and can try the instructions on <a class="external-link" href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" rel="nofollow">https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html</a></li>
+             </ul>
+             <p>Enjoy!</p>
+             <p>&nbsp;</p> 
+            </div> 
+           </div> 
+           <div class="blog-post-listing"> 
+            <div class="logo-heading-block"> 
+             <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
              <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=13172770">Welcome 2016 - With Codehaus Cargo 1.4.18!</a> 
               <div class="page-metadata not-personal"> 
                <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Jan 17, 2016
@@ -525,47 +592,6 @@
                   </ul>
                   <p>Enjoy!</p>
                  </div>
-                </div>
-               </div>
-              </div>
-             </div> 
-            </div> 
-           </div> 
-           <div class="blog-post-listing"> 
-            <div class="logo-heading-block"> 
-             <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
-             <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=2162694">Codehaus Cargo's new Web site is ready - So is version 1.4.14!</a> 
-              <div class="page-metadata not-personal"> 
-               <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Apr 28, 2015
-              </div> </span> 
-            </div> 
-            <div class="wiki-content"> 
-             <div class="wiki-content">
-              <div class="wiki-content">
-               <div class="wiki-content">
-                <div class="wiki-content">
-                 <p>Dear Codehaus Cargo enthusiasts</p>
-                 <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity:</p>
-                 <ul>
-                  <li>We have moved our Web site, and with the move also added an amazing new feature: You can finally <u>search</u> in the site&nbsp;<img class="emoticon emoticon-smile" src="attachments/smile.png" data-emoticon-name="smile" alt="(smile)"> Try it out on&nbsp;<a href="https://codehaus-cargo.github.io/" class="external-link" rel="nofollow">https://codehaus-cargo.github.io/</a></li>
-                  <li>The&nbsp;<a href="https://codehaus-cargo.github.io/cargo/Mailing+Lists.html" class="external-link" rel="nofollow">Codehaus Cargo mailing lists</a> are now on Google Groups</li>
-                  <li>We moved out issues tracker to the <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" class="external-link" rel="nofollow">Codehaus Cargo JIRA on Atlassian</a></li>
-                 </ul>
-                 <p>We are also happy to present to you Codehaus Cargo's new version, 1.4.14. This version updates all references and pages to the new Web site, and comes with a small number of bug fixes and improvements:</p>
-                 <ul>
-                  <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1251" class="external-link" rel="nofollow">CARGO-1251</a>] - Replace&nbsp;<code>weblogic.Admin</code> with&nbsp;<code>weblogic.WLST</code></li>
-                  <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1312" class="external-link" rel="nofollow">CARGO-1312</a>] -&nbsp;<code>CargoDaemonServlet</code> should load on startup</li>
-                  <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1313" class="external-link" rel="nofollow">CARGO-1313</a>] - Add support for JBoss&nbsp;<code>virtual-host</code> statements</li>
-                  <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1315" class="external-link" rel="nofollow">CARGO-1315</a>] - The&nbsp;<code>undeploy</code> command of the Jetty remote deployer doesn't work for WARs outside the&nbsp;<code>webapps</code> folder</li>
-                 </ul>
-                 <p>To try it out:</p>
-                 <ul>
-                  <li>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" class="external-link" rel="nofollow">Maven2/Maven3 plugin</a> simply need to use the&nbsp;Codehaus Cargo plugin version <strong>1.4.14</strong></li>
-                  <li>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html" class="external-link" rel="nofollow">Java API</a> can download the new Uberjar from <a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.14/cargo-core-uberjar-1.4.14.jar" class="external-link" rel="nofollow">http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.14/cargo-core-uberjar-1.4.14.jar</a></li>
-                  <li>Similarly, users of the&nbsp;<a href="https://codehaus-cargo.github.io/cargo/Ant+support.html" class="external-link" rel="nofollow">ANT tasks</a> can download the new ANT tasks from <a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.14/cargo-ant-1.4.14.jar" class="external-link" rel="nofollow">http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.14/cargo-ant-1.4.14.jar</a></li>
-                  <li>Finally, the ones who want to see the&nbsp;<a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">Cargo Daemon</a> can get it from&nbsp;<a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.14/cargo-daemon-webapp-1.4.14.war" class="external-link" rel="nofollow">http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.14/cargo-daemon-webapp-1.4.14.war</a> and can try the instructions on <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html</a></li>
-                 </ul>
-                 <p>We hope you enjoy our new features on our Web site, and of course also this new version of Codehaus Cargo!</p>
                 </div>
                </div>
               </div>

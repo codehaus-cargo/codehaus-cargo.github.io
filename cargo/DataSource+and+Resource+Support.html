@@ -280,7 +280,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <h3 id="DataSourceandResourceSupport-Containersupport">Container support</h3><p>Here are the configurations that currently support DataSource or Resource configuration:</p><p></p>
+              </script> <h1 id="DataSourceandResourceSupport-Containersupport">Container support</h1><p>Here are the configurations that currently support DataSource or Resource configuration:</p><p></p>
           <div class="conf-macro output-block" data-hasbody="false" data-macro-name="include">
            <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
             <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
@@ -690,16 +690,16 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Property</p></th>
-              <th class="confluenceTh"><p>Purpose</p></th>
-              <th class="confluenceTh"><p>Valid Values</p></th>
-              <th class="confluenceTh"><p>DataSource</p></th>
-              <th class="confluenceTh"><p>Transactional DataSource</p></th>
-              <th class="confluenceTh"><p>XA DataSource</p></th>
+              <td class="confluenceTd"><p>Property</p></td>
+              <td class="confluenceTd"><p>Purpose</p></td>
+              <td class="confluenceTd"><p>Valid Values</p></td>
+              <td class="confluenceTd"><p>DataSource</p></td>
+              <td class="confluenceTd"><p>Transactional DataSource</p></td>
+              <td class="confluenceTd"><p>XA DataSource</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>c.d.jndi</code></p></td>
-              <td class="confluenceTd"><p>The path to this datasource in JNDI</p></td>
+              <td class="confluenceTd"><p>The path to this DataSource in JNDI</p></td>
               <td class="confluenceTd"><p>Any jndi path, like&nbsp;<code>jdbc/userds</code></p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
@@ -747,7 +747,7 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>c.d.id</code></p></td>
-              <td class="confluenceTd"><p>Identifier used in configuration files to reference this datasource</p></td>
+              <td class="confluenceTd"><p>Identifier used in configuration files to reference this DataSource</p></td>
               <td class="confluenceTd"><p>Must contain no path-like characters</p></td>
               <td class="confluenceTd"><p>optional</p></td>
               <td class="confluenceTd"><p>optional</p></td>
@@ -791,7 +791,6 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
           </div><p>Here are the properties that are valid for this:</p>
           <ul>
            <li>Note that&nbsp;<code>c.r</code> means&nbsp;<code>cargo.resource</code></li>
-           <li>Note that if you specify a property marked <strong>do not set</strong> you will get a <code>CargoException</code>.</li>
           </ul>
           <div class="table-wrap">
            <table class="confluenceTable">
@@ -890,7 +889,7 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="DataSourceandResourceSupport-Knownissues">Known issues</h3><p>The&nbsp;Glassfish container has various known issues with regards to datasource support.</p><p>When you try to use <a href="Glassfish+3.x.html">Glassfish 3.x</a> or&nbsp;<a href="Glassfish+4.x.html">Glassfish 4.x</a> with Derby datasources, you might run into issues where Glassfish doesn't start, and the Glassfish logs show you messages such as the below:</p>
+          </center><h3 id="DataSourceandResourceSupport-Knownissues">Known issues</h3><p>The&nbsp;Glassfish container has various known issues with regards to DataSource support.</p><p>When you try to use <a href="Glassfish+3.x.html">Glassfish 3.x</a> or&nbsp;<a href="Glassfish+4.x.html">Glassfish 4.x</a> with Derby DataSources, you might run into issues where Glassfish doesn't start, and the Glassfish logs show you messages such as the below:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">java.lang.SecurityException: sealing violation: package org.apache.derby is sealed</pre> 
@@ -992,7 +991,7 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
            </div>
           </div><h3 id="DataSourceandResourceSupport-Examples">Examples</h3><p>Users of the Java API can take a look at the following classes as example:</p>
           <ul>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/api/container/src/test/java/org/codehaus/cargo/container/configuration/entry/ConfigurationFixtureFactory.java" class="external-link" rel="nofollow"><code>ConfigurationFixtureFactory</code></a>: class with method showing example for creating various datasource and resource types:
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/api/container/src/test/java/org/codehaus/cargo/container/configuration/entry/ConfigurationFixtureFactory.java" class="external-link" rel="nofollow"><code>ConfigurationFixtureFactory</code></a>: class with static methods showing examples for creating various&nbsp;DataSource and resource types:
             <ul>
              <li><code>createDataSource</code> and&nbsp;<code>createAnotherDataSource</code>: Creation of a DataSource</li>
              <li><code>createDriverConfiguredDataSourceWithLocalTransactionSupport</code>: Creation of a&nbsp;DataSource with local transaction support</li>
@@ -1004,12 +1003,12 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
              <li><code>createDataSourceWithWindowsPath</code>: Creation of a DataSource with a Windows path</li>
              <li><code>createJmsQueueAsResource</code>: Creation of a JMS resource</li>
             </ul></li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/DataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>DataSourceOnStandaloneConfigurationTest</code></a>: datasource definition.</li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/TransactionEmulationDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>TransactionEmulationDataSourceOnStandaloneConfigurationTest</code></a>: datasource definition with transaction emulation.</li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/XATransactionDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>XATransactionDataSourceOnStandaloneConfigurationTest</code></a>: XA datasource definition.</li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/MailResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>MailResourceOnStandaloneConfigurationTest</code></a>: resource definition, showing for example <code>mailsession</code>.</li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/JmsResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>JmsResourceOnStandaloneConfigurationTest</code></a>: resource definition, showing for example a JMS queue.</li>
-          </ul><p>Users of the Maven2/Maven3 plugin can use the Maven2 Archetype showing datasource support. Please read: <a href="Maven2+Archetypes.html#Maven2Archetypes-datasource">Datasource Definition Archetype</a>.</p> </td> 
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/DataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>DataSourceOnStandaloneConfigurationTest</code></a>:&nbsp;DataSource definition.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/TransactionEmulationDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>TransactionEmulationDataSourceOnStandaloneConfigurationTest</code></a>:&nbsp;DataSource definition with transaction emulation.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/XATransactionDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>XATransactionDataSourceOnStandaloneConfigurationTest</code></a>: XA&nbsp;DataSource definition.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/MailResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>MailResourceOnStandaloneConfigurationTest</code></a>: Resource definition, showing for example <code>mailsession</code>.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/JmsResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>JmsResourceOnStandaloneConfigurationTest</code></a>: Resource definition, showing for example a JMS queue.</li>
+          </ul><p>Users of the Maven2/Maven3 plugin can use the Maven2 Archetype showing&nbsp;DataSource support. Please read: <a href="Maven2+Archetypes.html#Maven2Archetypes-datasource">DataSource Definition Archetype</a>.</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
