@@ -280,7 +280,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <p>Releases are now performed using Maven 2 or Maven 3 so you need to have one of these installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
+              </script> <p>Releases are performed using Maven 3.2.2 and onwards so you need to have that installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
           <ul>
            <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html" class="external-link" rel="nofollow">OSSRH guide</a></li>
            <li><a href="http://www.gnupg.org/" class="external-link" rel="nofollow">The GNU privacy guard (GPG)</a> installed on your machine and at least one secret key.
@@ -310,7 +310,7 @@
             <ol>
              <li>Open the CI page and click on the latest build</li>
              <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="113"></span><br><br></li>
+             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="114"></span><br><br></li>
             </ol></li>
            <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
             <ul>
@@ -337,7 +337,6 @@
            <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process</li>
            <li><code><strong>mvn release:perform</strong></code>: deploys the tagged artifacts on the Sonatype Nexus staging repository
             <ul>
-             <li>If you're running on Maven 2.2.0 (note: that's the version that ships with some flavors of MacOS X), you might run into SHA1 and MD5 signature verification issues. Please upgrade to Maven 2.2.1.</li>
              <li>If you get a message saying: <code>Error deploying artifact: Failed to transfer file. Return code is: 401 Unauthorized</code>, please make sure your credentials in the <code>settings.xml</code> file are correct.</li>
             </ul></li>
           </ol><h3 id="Releaseprocedure-Promotingthestagedversion">Promoting the staged version</h3><p>Once the new Codehaus Cargo version is in the&nbsp;Sonatype Nexus staging repository, follow the below steps for promoting the staged version:</p>
@@ -384,7 +383,7 @@
             <ol>
              <li>Edit the document in the Codehaus Confluence</li>
              <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
-             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="113" title="Insert wiki markup.png"></span></li>
+             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="114" title="Insert wiki markup.png"></span></li>
              <li>Paste the wiki markup content</li>
             </ol>
            </div>
