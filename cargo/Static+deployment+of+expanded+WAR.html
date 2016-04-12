@@ -294,11 +294,11 @@ container.getConfiguration().addDeployable(war);
 container.start();
 </pre> 
            </div>
-          </div><h3 id="StaticdeploymentofexpandedWAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting Tomcat 6.x with a WAR to deploy:</p>
+          </div><h3 id="StaticdeploymentofexpandedWAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting Tomcat 7.x with a WAR to deploy:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat6x" home="c:/tomcat/tomcat-6.0.33" action="start"&gt;
-  &lt;configuration&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat7x" home="C:/Program Files/Apache/Apache Tomcat 7.0.68" action="start"&gt;
+  &lt;configuration home="C:/Tomcat/7.0.68_BASE"&gt;
     &lt;deployable type="war" file="some/expanded/war/directory"&gt;
       &lt;property name="context" value="application-context"/&gt;
     &lt;/deployable&gt;
@@ -316,7 +316,7 @@ container.start();
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="StaticdeploymentofexpandedWAR-ExampleusingtheMaven2/Maven3API">Example using the Maven2/Maven3 API</h3><p>Here is the plugin configuration defining a Tomcat 6.x container with a WAR to deploy expanded:</p>
+          </center><h3 id="StaticdeploymentofexpandedWAR-ExampleusingtheMaven2/Maven3API">Example using the Maven2/Maven3 API</h3><p>Here is the plugin configuration defining a Tomcat 7.x container with a WAR to deploy expanded:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependencies&gt;
@@ -334,9 +334,9 @@ container.start();
     &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
     &lt;version&gt;${cargo.version}&lt;/version&gt;
     &lt;configuration&gt;
-      &lt;containerId&gt;tomcat6x&lt;/containerId&gt;
+      &lt;containerId&gt;tomcat7x&lt;/containerId&gt;
       &lt;zipUrlInstaller&gt;
-        &lt;url&gt;http://archive.apache.org/dist/tomcat/tomcat-6/v6.0.33/bin/apache-tomcat-6.0.33.zip&lt;/url&gt;
+        &lt;url&gt;http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip&lt;/url&gt;
       &lt;/zipUrlInstaller&gt;
       &lt;deployables&gt;
         &lt;deployable&gt;

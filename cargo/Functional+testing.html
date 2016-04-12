@@ -312,15 +312,15 @@ public class CargoTestSetup extends TestSetup
     {
         // (1) Optional step to install the container from a URL pointing to its distribution
         Installer installer = new ZipURLInstaller(
-            new URL("http://archive.apache.org/dist/tomcat/tomcat-6/v6.0.32/bin/apache-tomcat-6.0.32.zip"));
+            new URL("http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip"));
         installer.install();
 
         // (2) Create the Cargo Container instance wrapping our physical container
         LocalConfiguration configuration = (LocalConfiguration) new DefaultConfigurationFactory().createConfiguration(
-            "tomcat6x", ContainerType.INSTALLED, ConfigurationType.STANDALONE);
+            "tomcat7x", ContainerType.INSTALLED, ConfigurationType.STANDALONE);
         InstalledLocalContainer container =
             (InstalledLocalContainer) new DefaultContainerFactory().createContainer(
-                "tomcat6x", ContainerType.INSTALLED, configuration);
+                "tomcat7x", ContainerType.INSTALLED, configuration);
         container.setHome(installer.getHome());
 
         // (3) Statically deploy some WAR (optional)
@@ -364,7 +364,7 @@ public class MyTest extends TestCase
            </div>
           </div><h3 id="Functionaltesting-References">References</h3>
           <ul>
-           <li><a href="attachments/Vincent%20Massol%20Think%20Tank%20-%20Using%20Cargo%200.4%20for%20functional%20testing.pdf" data-linked-resource-id="493239" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Vincent Massol Think Tank - Using Cargo 0.4 for functional testing.pdf" data-nice-type="PDF Document" data-linked-resource-content-type="application/pdf" data-linked-resource-container-id="491549" data-linked-resource-container-version="19">Using Cargo 0.4 for functional testing</a></li>
+           <li><a href="attachments/Vincent%20Massol%20Think%20Tank%20-%20Using%20Cargo%200.4%20for%20functional%20testing.pdf" data-linked-resource-id="493239" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Vincent Massol Think Tank - Using Cargo 0.4 for functional testing.pdf" data-nice-type="PDF Document" data-linked-resource-content-type="application/pdf" data-linked-resource-container-id="491549" data-linked-resource-container-version="20">Using Cargo 0.4 for functional testing</a></li>
           </ul> </td> 
         </tr> 
        </tbody>

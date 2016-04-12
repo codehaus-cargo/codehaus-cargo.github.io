@@ -355,25 +355,25 @@
 
   &lt;!-- Container configuration --&gt;
   &lt;container&gt;
-    &lt;containerId&gt;tomcat6x&lt;/containerId&gt;
+    &lt;containerId&gt;tomcat7x&lt;/containerId&gt;
     &lt;zipUrlInstaller&gt;
-      &lt;url&gt;http://archive.apache.org/dist/tomcat/tomcat-6/v6.0.32/bin/apache-tomcat-6.0.32.zip&lt;/url&gt;
+      &lt;url&gt;http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip&lt;/url&gt;
     &lt;/zipUrlInstaller&gt;
     &lt;!--
       Instead of downloading the container, you can also reuse an
       existing installation by settings its directory:
 
-      &lt;home&gt;c:/apps/tomcat-6.0.32&lt;/home&gt;
+      &lt;home&gt;C:/Program Files/Apache/Apache Tomcat 7.0.68&lt;/home&gt;
       --&gt;
-    &lt;output&gt;${project.build.directory}/tomcat6x/container.log&lt;/output&gt;
+    &lt;output&gt;${project.build.directory}/tomcat7x/container.log&lt;/output&gt;
     &lt;append&gt;false&lt;/append&gt;
-    &lt;log&gt;${project.build.directory}/tomcat6x/cargo.log&lt;/log&gt;
+    &lt;log&gt;${project.build.directory}/tomcat7x/cargo.log&lt;/log&gt;
   &lt;/container&gt;
 
   &lt;!-- Configuration to use with the container or the deployer --&gt;
   &lt;configuration&gt;
     &lt;type&gt;standalone&lt;/type&gt;
-    &lt;home&gt;${project.build.directory}/tomcat6x&lt;/home&gt;
+    &lt;home&gt;${project.build.directory}/tomcat7x&lt;/home&gt;
     &lt;properties&gt;
       &lt;cargo.servlet.port&gt;8080&lt;/cargo.servlet.port&gt;
       &lt;cargo.logging&gt;high&lt;/cargo.logging&gt;
@@ -399,7 +399,7 @@
 [...]
 </pre> 
            </div>
-          </div><p>This example shows the usage of a standalone configuration for configuring Tomcat 6.x. Note that it's possible to define <a href="Deployable.html">deployables</a> in the <code>&lt;configuration&gt;</code> element and they'll be deployed before the container starts (this is what we call <a href="Static+Deployment.html">static deployment</a>). We have also defined some <a href="Configuration+properties.html">configuration properties</a> to tell Cargo to configure Tomcat 6.x to start on port 8080 and to output highly verbose logs (useful for debugging).</p><p>If you have a container that is already installed and configured, say with other deployables already in there, you may want to use an <a href="Existing+Local+Configuration.html">existing configuration</a>. This done by specifying <code>&lt;type&gt;existing&lt;/type&gt;</code>. In that case you won't be able to control the configuration from Cargo (like port to use, logging levels, etc) as it'll be defined externally.</p>
+          </div><p>This example shows the usage of a standalone configuration for configuring Tomcat 7.x. Note that it's possible to define <a href="Deployable.html">deployables</a> in the <code>&lt;configuration&gt;</code> element and they'll be deployed before the container starts (this is what we call <a href="Static+Deployment.html">static deployment</a>). We have also defined some <a href="Configuration+properties.html">configuration properties</a> to tell Cargo to configure Tomcat 7.x to start on port 8080 and to output highly verbose logs (useful for debugging).</p><p>If you have a container that is already installed and configured, say with other deployables already in there, you may want to use an <a href="Existing+Local+Configuration.html">existing configuration</a>. This done by specifying <code>&lt;type&gt;existing&lt;/type&gt;</code>. In that case you won't be able to control the configuration from Cargo (like port to use, logging levels, etc) as it'll be defined externally.</p>
           <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block" data-hasbody="true" data-macro-name="tip">
            <p class="title">Timeouts</p>
            <span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"> </span>
