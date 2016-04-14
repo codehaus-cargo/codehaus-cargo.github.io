@@ -386,6 +386,12 @@
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><code>standalone</code></p></td>
              </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><code><a href="#Maven2PluginReferenceGuide-user">&lt;users&gt;</a></code></td>
+              <td colspan="1" class="confluenceTd">List of users to be created in container configuration.</td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+             </tr>
             </tbody>
            </table>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-container" data-hasbody="false" data-macro-name="anchor"> </span></p>
@@ -860,7 +866,44 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-daemon" data-hasbody="false" data-macro-name="anchor"> </span></p><h1 id="Maven2PluginReferenceGuide-Daemonconfiguration">Daemon configuration</h1><p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-user" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><strong><code><strong>&lt;user&gt;</strong></code> elements</strong></th>
+              <th class="confluenceTh">Description</th>
+              <th class="confluenceTh">Mandatory?</th>
+              <th class="confluenceTh">Default value</th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><code>&lt;name&gt;</code></td>
+              <td class="confluenceTd">User name.</td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+              <td class="confluenceTd">No default</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><code>&lt;password&gt;</code></td>
+              <td class="confluenceTd">User password.</td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td class="confluenceTd">No default</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><code>&lt;roles&gt;</code></td>
+              <td colspan="1" class="confluenceTd"><p>List of roles which should be assigned to user.</p><p>Example of roles configuration:</p>
+               <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+                <div class="codeContent panelContent pdl"> 
+                 <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;roles&gt;
+    &lt;role&gt;cargo&lt;/role&gt;
+&lt;/roles&gt;</pre> 
+                </div>
+               </div></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">No default</td>
+             </tr>
+            </tbody>
+           </table>
+          </div><p>&nbsp;</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-daemon" data-hasbody="false" data-macro-name="anchor"> </span></p><h1 id="Maven2PluginReferenceGuide-Daemonconfiguration">Daemon configuration</h1><p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Container configuration for the Daemon</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
