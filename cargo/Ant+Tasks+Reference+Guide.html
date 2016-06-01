@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - Maven2 Plugin Reference Guide</title> 
+  <title>Codehaus Cargo - Ant Tasks Reference Guide</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -243,7 +243,7 @@
           <table width="100%"> 
            <tbody>
             <tr> 
-             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Maven2 Plugin Reference Guide</b> </td> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Ant Tasks Reference Guide</b> </td> 
              <td align="right"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -281,7 +281,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <h1 id="Maven2PluginReferenceGuide-ReferenceGuide">Reference Guide</h1><p>These are the various XML configuration elements that you can use to configure the Cargo Maven2 plugin. Make sure you also check the <a href="#Maven2PluginReferenceGuide-features">use cases</a> which show how to use them.</p>
+              </script> <p>These are the various XML configuration elements that you can use to configure the Cargo Ant tasks. Make sure you also check the <a href="Ant+support.html#Antsupport-Examples">examples</a> which show how to use them.</p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -298,44 +298,97 @@
               <th class="confluenceTh"><p>Default value</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-configuration">&lt;configuration&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>Definition of a <a href="Configuration.html">Configuration</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to a <a href="Standalone+Local+Configuration.html">standalone configuration</a> if the container is of type local and a <a href="Runtime+Configuration.html">runtime</a> one if it's of type remote</p></td>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;action&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Action to execute. These can be:</p>
+               <ul>
+                <li>Container actions: <code>configure</code>, <code>start</code>, <code>restart</code>,&nbsp;<code>run</code> or&nbsp;<code>stop</code></li>
+                <li>Deployer actions: <code>deploy</code>, <code>undeploy</code> or <code>redeploy</code></li>
+                <li><a href="Cargo+Daemon.html">Cargo Daemon</a> actions: <code>daemon-start</code> or <code>daemon-stop</code></li>
+               </ul></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-container">&lt;container&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>Definition of a <a href="Container.html">Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to a <a href="Jetty+7.x.html">Jetty 7.x</a> <a href="Installed+Container.html">installed container</a> if not specified</p></td>
+              <td colspan="1" class="confluenceTd"><code>&lt;containerId&gt;</code></td>
+              <td colspan="1" class="confluenceTd"><p>Id of the container to use. Valid values can be found in the <a href="Containers.html">description page for each container</a></p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-deployer">&lt;deployer&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>Definition of a <a href="Deployer.html">Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to a <a href="Deployer.html">deployer</a> matching the container's type if none is specified (installed local deployer for an installed container, remote deployer for a remote container and embedded local deployer for an embedded container)</p></td>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;containerType&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>The <a href="Container.html">container's type</a>. Valid values are <code>installed</code>, <code>embedded</code> and <code>remote</code></p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>Default value is <code>installed</code></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-deployable">&lt;deployables&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>A list of <a href="Deployable.html">deployable</a>s that are going to be deployed in the container when it is started or when&nbsp;<code><a href="http://cargodeploy" class="external-link" rel="nofollow">cargo:deploy</a></code> /&nbsp;<code><a href="http://cargoundeploy" class="external-link" rel="nofollow">cargo:undeploy</a></code> is called.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>If the project's packaging is&nbsp;<code>war</code>,&nbsp;<code>ear</code> or&nbsp;<code>ejb</code>, the generated artifact is added automatically to the list of deployables to deploy. If you wish the generated artifact not to be added to the deployables list, just add an empty&nbsp;<code><a href="#Maven2PluginReferenceGuide-deployer">&lt;deployer/&gt;</a></code> element.</p></td>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;home&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Location where the container is installed. If specified in conjunction with the <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element, it will override the home directory defined by the installer</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code> nor <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-daemon">&lt;daemon&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p><code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a></p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code> nor <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code><a href="Container+Timeout.html">&lt;timeout&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p>The timeout after which Cargo reports an error if the container is not started or stopped</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p><code>120000</code> ms (2 minutes)</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code><a href="Passing+system+properties.html">&lt;systemProperties&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p>List of <code>&lt;key&gt;value&lt;/key&gt;</code> pairs to be passed as System properties to the container when it is started.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;systemPropertiesFile&gt;</code> element to load system properties from a file.</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;extraClasspath&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Additional classpath entries for the classpath that will be used to start the containers.</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;sharedClasspath&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Classpath entries for the classpath that will be shared the applications deployed in a container. Shared application classpath deployment is only available for local containers which support shared <a href="Application+Classpath.html">Application Classpaths</a>.</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;log&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Path to a file where Cargo logs are saved</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>Logs to the Ant console if no log file is specified</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;output&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Path to a file where container logs are saved</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>Logs to the file specified by the <code>&lt;log&gt;</code> element or to the&nbsp;Ant console if no such file has been specified</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;append&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>If <code>true</code>, then the file specified by <code>&lt;output&gt;</code> will not be erased across different runs</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p><code>false</code></p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code><a href="#AntTasksReferenceGuide-configuration">&lt;configuration&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Definition of a <a href="Configuration.html">Configuration</a></p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>Defaults to a <a href="Standalone+Local+Configuration.html">standalone configuration</a> if the container is of type local and a <a href="Runtime+Configuration.html">runtime</a> one if it's of type remote</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code><a href="#AntTasksReferenceGuide-daemon">&lt;daemon&gt;</a></code></p></td>
               <td colspan="1" class="confluenceTd"><p>Additional configuration that is used when deploying with the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td colspan="1" class="confluenceTd"><p>For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td>
              </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;skip&gt;</code></p></td>
-              <td class="confluenceTd"><p>Set this to <code>true</code> to bypass cargo execution</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to <code>false</code>, you can also steer it using the system property <code>cargo.maven.skip<br></code></p></td>
-             </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-configuration" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-configuration" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -352,44 +405,48 @@
               <th class="confluenceTh"><p>Default value</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="Configuration+files+option.html">&lt;configfiles&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#Maven2PluginReferenceGuide-configfile">&lt;configfile&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p></td>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p><a href="Configuration.html">Configuration's type</a>. Valid values are <code>standalone</code>, <code>existing</code> and <code>runtime</code></p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p><code>standalone</code></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="Configuration+files+option.html">&lt;files&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#Maven2PluginReferenceGuide-file">&lt;file&gt;</a></code> element.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p></td>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;home&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>For standalone configuration this is the location where Cargo will create the configuration and for existing configuration this is where it is located</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;home&gt;</code></p></td>
-              <td class="confluenceTd"><p>For standalone configuration this is the location where Cargo will create the configuration and for existing configuration this is where it is located</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p><code>${project.build.directory}/cargo/configurations/${containerId</code>}</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;implementation&gt;</code></p></td>
-              <td class="confluenceTd"><p>Full classname of a custom configuration implementation to use. In that case the custom configuration is registered with the <code>&lt;containerId&gt;</code> and <code>&lt;type&gt;</code> specified</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to the Cargo-provided implementation if not specified</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code><a href="Configuration+properties.html">&lt;properties&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>Values to use for various <a href="Configuration+properties.html">Configuration properties</a>.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;propertiesFile&gt;</code> element to load configuration properties from a file.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd">
+              <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+properties.html">&lt;properties&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Values to use for various <a href="Configuration+properties.html">Configuration properties</a>.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;propertiesFile&gt;</code> element to load configuration properties from a file.</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">
                <div class="content-wrapper">
                 <p><a href="Configuration+properties.html">Default configuration properties</a> <br class="atl-forced-newline"> <br class="atl-forced-newline"> Note that these configuration properties can also be overriden using Java properties; for example:</p>
                 <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
                  <div class="codeContent panelContent pdl"> 
-                  <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">mvn -Dcargo.servlet.port=8082 cargo:start
-</pre> 
+                  <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">ant -Dcargo.servlet.port=8082</pre> 
                  </div>
                 </div>
-                <p>In addition to this, properties can also be set using the Maven2 <code>settings.xml</code> file. See the <a href="#Maven2PluginReferenceGuide-settingsXML">setting configuration options via the Maven settings.xml</a> section for details.</p>
                </div></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code><a href="#AntTasksReferenceGuide-deployable">&lt;deployables&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p>A list of <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Deployable" rel="nofollow">deployable</a>s that are going to be deployed in the container when it is started or when <code><span class="external-link">deploy</span></code> / <code><span class="external-link">undeploy</span></code> is called.</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code><a href="#AntTasksReferenceGuide-fileconfig">&lt;fileConfigs&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#AntTasksReferenceGuide-fileconfig">&lt;fileConfig&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+files+option.html">&lt;files&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#AntTasksReferenceGuide-file">&lt;file&gt;</a></code> element.</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><a href="XML+replacements.html"><code>&lt;xmlReplacements&gt;</code></a></td>
@@ -398,20 +455,14 @@
               <td colspan="1" class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
-              <td class="confluenceTd"><p><a href="Configuration.html">Configuration's type</a>. Valid values are <code>standalone</code>, <code>existing</code> and <code>runtime</code></p></td>
+              <td class="confluenceTd"><code><a href="#AntTasksReferenceGuide-user">&lt;users&gt;</a></code></td>
+              <td class="confluenceTd">List of users to be created in container configuration.</td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p><code>standalone</code></p></td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><code><a href="#Maven2PluginReferenceGuide-user">&lt;users&gt;</a></code></td>
-              <td colspan="1" class="confluenceTd">List of users to be created in container configuration.</td>
-              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+              <td class="confluenceTd"><p>No default</p></td>
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-container" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-fileconfig" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -422,115 +473,7 @@
             </colgroup>
             <tbody>
              <tr>
-              <th class="confluenceTh"><p><code><strong>&lt;container&gt;</strong></code> <strong>elements</strong></p></th>
-              <th class="confluenceTh"><p>Description</p></th>
-              <th class="confluenceTh"><p>Mandatory?</p></th>
-              <th class="confluenceTh"><p>Default value</p></th>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;append&gt;</code></p></td>
-              <td class="confluenceTd"><p>If <code>true</code>, then the file specified by <code>&lt;output&gt;</code> will not be erased across different runs</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p><code>false</code></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;containerId&gt;</code></p></td>
-              <td class="confluenceTd"><p>Id of the container to use. Valid values can be found in the <a href="Containers.html">description page for each container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p><code>jetty7x</code></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-dependency">&lt;dependencies&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>List of <a href="Container+Classpath.html">extra dependencies</a> or <a href="Application+Classpath.html">shared dependencies</a> that will be added to the container or applications execution classpath.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;home&gt;</code></p></td>
-              <td class="confluenceTd"><p>Location where the container is installed. If specified in conjunction with the <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> or <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element, it will override the home directory defined by the installer</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;implementation&gt;</code></p></td>
-              <td class="confluenceTd"><p>Full classname of a custom container implementation to use. In that case, the custom container is registered with the <code>&lt;containerId&gt;</code> and <code>&lt;type&gt;</code> specified</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to the Cargo-provided implementation if not specified</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;log&gt;</code></p></td>
-              <td class="confluenceTd"><p>Path to a file where Cargo logs are saved</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Logs to the Maven console if no log file is specified</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;output&gt;</code></p></td>
-              <td class="confluenceTd"><p>Path to a file where container logs are saved</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Logs to the file specified by the <code>&lt;log&gt;</code> element or to the Maven console if no such file has been specified</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code><a href="Passing+system+properties.html">&lt;systemProperties&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>List of <code>&lt;key&gt;value&lt;/key&gt;</code> pairs to be passed as System properties to the container when it is started.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;systemPropertiesFile&gt;</code> element to load system properties from a file.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code><a href="Container+Timeout.html">&lt;timeout&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>The timeout after which Cargo reports an error if the container is not started or stopped</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p><code>120000</code> ms (2 minutes)</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
-              <td class="confluenceTd"><p>The <a href="Container.html">container's type</a>. Valid values are <code>installed</code>, <code>embedded</code> and <code>remote</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Default value is <code>installed</code> unless the <code>&lt;containerId&gt;</code> has not been specified, in which case the default is to use the Jetty 7.x installed container</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>Defines the location of a container Maven artifact that will be <a href="Installer.html">downloaded and installed</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
-             </tr>
-            </tbody>
-           </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-deployer" data-hasbody="false" data-macro-name="anchor"> </span></p>
-          <div class="table-wrap">
-           <table class="wrapped confluenceTable">
-            <tbody>
-             <tr>
-              <th class="confluenceTh"><p><code><strong>&lt;deployer&gt;</strong></code> <strong>elements</strong></p></th>
-              <th class="confluenceTh"><p>Description</p></th>
-              <th class="confluenceTh"><p>Mandatory?</p></th>
-              <th class="confluenceTh"><p>Default value</p></th>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;implementation&gt;</code></p></td>
-              <td class="confluenceTd"><p>Deployer implementation class. <strong>Usage of this option is not recommended, please prefer</strong> <code><strong>type</strong></code> <strong>instead</strong>.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
-              <td class="confluenceTd"><p>The <a href="Deployer.html">deployer's type</a>.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to a deployer matching the container's type if none is specified (installed local deployer for an installed container, remote deployer for a remote container and embedded local deployer for an embedded container)</p></td>
-             </tr>
-            </tbody>
-           </table>
-          </div><p><br><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-configfile" data-hasbody="false" data-macro-name="anchor"> </span></p>
-          <div class="table-wrap">
-           <table class="wrapped confluenceTable">
-            <tbody>
-             <tr>
-              <th class="confluenceTh"><p><code><strong>&lt;configfile&gt;</strong></code> <strong>elements</strong></p></th>
+              <th class="confluenceTh"><p><code><strong>&lt;fileConfigs&gt;</strong></code> <strong>elements</strong></p></th>
               <th class="confluenceTh"><p>Description</p></th>
               <th class="confluenceTh"><p>Mandatory?</p></th>
               <th class="confluenceTh"><p>Default value</p></th>
@@ -555,7 +498,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-file" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-file" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -603,7 +546,7 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-deployable" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-deployable" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -620,28 +563,16 @@
               <th class="confluenceTh"><p>Default value</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;artifactId&gt;</code></p></td>
-              <td class="confluenceTd"><p>Maven artifact id for the module. This artifact id must match either the project's artifact id if your project generates a J2EE artifact (WAR, EAR, EJB and RAR) or it must match a specified <code>&lt;project&gt;/&lt;dependencies&gt;/&lt;dependency&gt;</code> artifact id</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to the project's artifact id</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;groupId&gt;</code></p></td>
-              <td class="confluenceTd"><p>Maven group id for the module. This group id must match either the project's group id if your project generates a J2EE artifact (WAR, EAR, EJB and RAR) or it must match a specified <code>&lt;project&gt;/&lt;dependencies&gt;/&lt;dependency&gt;</code> group id</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to the project's group id</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;implementation&gt;</code></p></td>
-              <td class="confluenceTd"><p>Deployable implementation class. <strong>Usage of this option is not recommended, please prefer</strong> <code><strong>type</strong></code> <strong>instead</strong>.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
+              <td class="confluenceTd"><p>Deployable type, i.e.&nbsp;<code>war</code>,&nbsp;<code>ear</code>,&nbsp;<code>ejb</code>, etc.</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;location&gt;</code></p></td>
-              <td class="confluenceTd"><p>Path location where the module can be found</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Default's to the project's generated artifact location or to the specified <code>&lt;project&gt;/&lt;dependencies&gt;/&lt;dependency&gt;</code> location</p></td>
+              <td class="confluenceTd"><p><code>&lt;file&gt;</code></p></td>
+              <td class="confluenceTd"><p>The deployable file.</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+              <td class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;pingURL&gt;</code></p></td>
@@ -650,34 +581,29 @@
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><code>&lt;pingUrlPath&gt;</code></td>
-              <td colspan="1" class="confluenceTd"><p>URL path used to ping the deployed or undeployed application. It has similar functionality as <code>&lt;pingURL&gt;</code>, but in this case there is omitted protocol, server and port informations - they are retrieved from container configuration. For example for URL <a href="http://localhost:8080/cargo" class="external-link" rel="nofollow">http://localhost:8080/cargo</a>&nbsp; its URL path is just&nbsp;<code>/cargo</code>.</p></td>
-              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td colspan="1" class="confluenceTd">No default</td>
-             </tr>
-             <tr>
               <td class="confluenceTd"><p><code>&lt;pingTimeout&gt;</code></p></td>
               <td class="confluenceTd"><p>If <code>&lt;pingURL&gt;</code> is set, the number of milliseconds after which the ping fails the build if still not successful.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><code>20000</code> (i.e.,&nbsp;<code>20</code> seconds)</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-prop2">&lt;properties&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#AntTasksReferenceGuide-prop2">&lt;properties&gt;</a></code></p></td>
               <td class="confluenceTd"><p>User-defined properties of a deployable.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
-              <td class="confluenceTd"><p>Maven type for the module. This type must match either the project's packaging if your project generates a J2EE artifact (WAR, EAR, EJB and RAR) or it must match a specified <code>&lt;project&gt;/&lt;dependencies&gt;/&lt;dependency&gt;</code> type</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to the project's packaging</p></td>
-             </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-prop2" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-prop2" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p><code><strong>&lt;properties&gt;</strong></code> <strong>elements</strong></p></th>
@@ -691,35 +617,35 @@
               <td class="confluenceTd"><p>WAR</p></td>
               <td class="confluenceTd"><p>The context name to use when deploying the web application.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Default's to the artifact's&nbsp;<code>${artifactId}</code></p></td>
+              <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;war&gt;</code></p></td>
               <td class="confluenceTd"><p>WAR</p></td>
               <td class="confluenceTd"><p>The path of the WAR being deployed.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Default's to the project's generated artifact location</p></td>
+              <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;ear&gt;</code></p></td>
               <td class="confluenceTd"><p>EAR</p></td>
               <td class="confluenceTd"><p>The path of the EAR being deployed.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Default's to the project's generated artifact location</p></td>
+              <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;name&gt;</code></p></td>
               <td class="confluenceTd"><p>EAR</p></td>
               <td class="confluenceTd"><p>The name of EAR deployable (it can be anything, there's no special rule).</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Default's to the artifact's&nbsp;<code>${artifactId}</code></p></td>
+              <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;ejb&gt;</code></p></td>
               <td class="confluenceTd"><p>EJB</p></td>
               <td class="confluenceTd"><p>The path of the EJB being deployed.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Default's to the project's generated artifact location</p></td>
+              <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
              </tr>
             </tbody>
            </table>
@@ -730,7 +656,7 @@
            <div class="confluence-information-macro-body">
             <p>Many containers have their specific files for redefining context roots (Tomcat has <code>context.xml</code>, JBoss has <code>jboss-web.xml</code>, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
            </div>
-          </div><p><br><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-dependency" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-zipUrlInstaller" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -739,59 +665,6 @@
              <col>
              <col>
             </colgroup>
-            <tbody>
-             <tr>
-              <th class="confluenceTh"><p><code><strong>&lt;dependency&gt;</strong></code> <strong>elements</strong></p></th>
-              <th class="confluenceTh"><p>Description</p></th>
-              <th class="confluenceTh"><p>Mandatory?</p></th>
-              <th class="confluenceTh"><p>Default value</p></th>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;artifactId&gt;</code></p></td>
-              <td class="confluenceTd"><p>Maven's artifact id. This artifact id must match a specified <code>&lt;project&gt;/&lt;dependencies&gt;/&lt;dependency&gt;</code> artifact id</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to the project's artifact id</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;groupId&gt;</code></p></td>
-              <td class="confluenceTd"><p>Maven's group id. This group id must match a specified <code>&lt;project&gt;/&lt;dependencies&gt;/&lt;dependency&gt;</code> group id</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to the project's group id</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
-              <td class="confluenceTd"><p>Maven's type. This type must match a specified <code>&lt;project&gt;/&lt;dependencies&gt;/&lt;dependency&gt;</code> type</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>Defaults to the project's packaging</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;classpath&gt;</code></p></td>
-              <td class="confluenceTd"><p>Target classpath, either <code>extra</code> (default) or <code>shared</code>. Shared application classpath deployment is only available for local containers which support shared <a href="Application+Classpath.html">Application Classpaths</a>.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p><code>extra</code> (container classpath)</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;location&gt;</code></p></td>
-              <td class="confluenceTd">
-               <div class="content-wrapper">
-                <p>The path of a folder or a jar file you wish to add to deployable classpath. This element can be used to explicitly add entries to the classpath. For example:</p>
-                <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-                 <div class="codeContent panelContent pdl"> 
-                  <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependency&gt;
-   &lt;location&gt;src/main/resources/conf&lt;/location&gt;
-&lt;/dependency&gt;
-</pre> 
-                 </div>
-                </div>
-               </div></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>If the groupId and artifactId match those of the project then the deployable is the artifact generated by the project. Otherwise the location is the location of the dependency in your local repository.</p></td>
-             </tr>
-            </tbody>
-           </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-zipUrlInstaller" data-hasbody="false" data-macro-name="anchor"> </span></p>
-          <div class="table-wrap">
-           <table class="wrapped confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p><code><strong>&lt;zipUrlInstaller&gt;</strong></code> <strong>elements</strong></p></th>
@@ -809,7 +682,7 @@
               <td class="confluenceTd"><p><code>&lt;downloadDir&gt;</code></p></td>
               <td class="confluenceTd"><p>Directory in which the <code>zipUrlInstaller</code> should download the container's ZIP or TAR.GZ file.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p><code>${java.io.tmpdir}/cargo/installs</code></p></td>
+              <td class="confluenceTd"><p><code>${<a href="http://java.io" class="external-link" rel="nofollow">java.io</a>.tmpdir}/cargo/installs</code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;extractDir&gt;</code></p></td>
@@ -818,21 +691,14 @@
               <td class="confluenceTd"><p><code>${project.build.directory}/cargo/installs</code></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-proxy">&lt;proxy&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#AntTasksReferenceGuide-proxy">&lt;proxy&gt;</a></code></p></td>
               <td class="confluenceTd"><p>Proxy server settings, if required.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-proxy" data-hasbody="false" data-macro-name="anchor"> </span></p>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
-           <p class="title">Automatic proxy settings</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>Note that CARGO will by default reuse existing Maven2 proxy configuration -so you won't need to type the proxy settings for the <code>zipUrlInstaller</code> element.</p>
-           </div>
-          </div>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-proxy" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -849,80 +715,32 @@
               <th class="confluenceTh"><p>Default value</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;cargo.proxy.host&gt;</code></p></td>
+              <td class="confluenceTd"><p><code>&lt;host&gt;</code></p></td>
               <td class="confluenceTd"><p>Proxy host name or IP address.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;cargo.proxy.port&gt;</code></p></td>
+              <td class="confluenceTd"><p><code>&lt;port&gt;</code></p></td>
               <td class="confluenceTd"><p>Proxy port.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Very probably <code>80</code></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;cargo.proxy.user&gt;</code></p></td>
+              <td class="confluenceTd"><p><code>&lt;user&gt;</code></p></td>
               <td class="confluenceTd"><p>User name to connect to the proxy server.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;cargo.proxy.password&gt;</code></p></td>
+              <td class="confluenceTd"><p><code>&lt;password&gt;</code></p></td>
               <td class="confluenceTd"><p>Password to connect to the proxy server.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-artifactInstaller" data-hasbody="false" data-macro-name="anchor"> </span></p>
-          <div class="table-wrap">
-           <table class="wrapped confluenceTable">
-            <tbody>
-             <tr>
-              <th class="confluenceTh"><p><code><strong>&lt;artifactInstaller&gt;</strong></code> <strong>elements</strong></p></th>
-              <th class="confluenceTh"><p>Description</p></th>
-              <th class="confluenceTh"><p>Mandatory?</p></th>
-              <th class="confluenceTh"><p>Default value</p></th>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;groupId&gt;</code></p></td>
-              <td class="confluenceTd"><p>Group id.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
-              <td class="confluenceTd"><p>No default</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;artifactId&gt;</code></p></td>
-              <td class="confluenceTd"><p>Artifact id.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
-              <td class="confluenceTd"><p>No default</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;version&gt;</code></p></td>
-              <td class="confluenceTd"><p>Version.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
-              <td class="confluenceTd"><p>No default</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
-              <td class="confluenceTd"><p>Artifact type.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p><code>zip</code></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;classifier&gt;</code></p></td>
-              <td class="confluenceTd"><p>Classifier.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><code>&lt;extractDir&gt;</code></p></td>
-              <td class="confluenceTd"><p>Directory in which the <code>artifactInstaller</code> should extract the container's ZIP or TAR.GZ file.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p><code>${project.build.directory}/cargo/installs</code></p></td>
-             </tr>
-            </tbody>
-           </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-user" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-user" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -969,17 +787,17 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-daemon" data-hasbody="false" data-macro-name="anchor"> </span></p><h1 id="Maven2PluginReferenceGuide-Daemonconfiguration">Daemon configuration</h1><p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-daemon" data-hasbody="false" data-macro-name="anchor"> </span></p><h1 id="AntTasksReferenceGuide-Daemonconfiguration">Daemon configuration</h1><p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Container configuration for the Daemon</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>For the Maven2/Maven3 plugin, the "daemonized server" is actually a <a href="Local+Container.html">local container</a> with a <a href="Configuration+properties.html">hostname</a> that points to a remote machine. This implies that:</p>
+            <p>For the Ant tasks, the "daemonized server" is actually a <a href="Local+Container.html">local container</a> with a <a href="Configuration+properties.html">hostname</a> that points to a remote machine. This implies that:</p>
             <ul>
              <li>You should <u>not</u> set the container type to a <a href="Remote+Container.html">remote container</a> nor add any <a href="Remote+Deployer.html">remote deployer</a>s to the configuration; but instead define the container as a <a href="Local+Container.html">local container</a> (with either a <a href="Standalone+Local+Configuration.html">standalone</a> or&nbsp;<a href="Existing+Local+Configuration.html">existing</a> configuration)</li>
              <li>When you define the home paths for the container and the configuration, remember these paths are for the machine where the Daemon is running (and, preferably, use absolute paths)</li>
             </ul>
-            <p>When you call <code>cargo:daemon-start</code>, the Maven2/Maven3 plugin will do the following:</p>
+            <p>When you call <code>daemon-start</code>, the Ant tasks will do the following:</p>
             <ul>
              <li>If an <a href="Installer.html">installer</a> is defined:<br>
               <ul>
@@ -999,12 +817,6 @@
           </div>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
-            <colgroup>
-             <col>
-             <col>
-             <col>
-             <col>
-            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p><code>&lt;daemon&gt;</code> <strong>elements</strong></p></th>
@@ -1029,6 +841,12 @@
           </div>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p><code>&lt;properties&gt;</code> <strong>elements</strong></p></th>
@@ -1068,72 +886,6 @@
              </tr>
             </tbody>
            </table>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-settingsXML" data-hasbody="false" data-macro-name="anchor"> </span></p><h1 id="Maven2PluginReferenceGuide-SettingconfigurationoptionsviatheMavensettings.xml">Setting configuration options via the Maven settings.xml</h1><p>The Cargo Maven2/Maven3 plugin also allows you to define container configuration properties using the <code>settings.xml</code> file. This way, you can for example store properties like usernames and passwords in a centralized location (as opposed to <code>pom.xml</code> files).</p><p>First, add the configuration properties you would like in your <code>settings.xml</code> file's <code>&lt;servers&gt;</code> section:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-           <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;servers&gt;
-  &lt;server&gt;
-    &lt;id&gt;jonas1&lt;/id&gt;
-    &lt;configuration&gt;
-      &lt;cargo.remote.uri&gt;jmx://jonas1&lt;/cargo.remote.uri&gt;
-      &lt;cargo.jonas.domain.name&gt;jonas&lt;/cargo.jonas.domain.name&gt;
-      &lt;cargo.remote.username&gt;jonas&lt;/cargo.remote.username&gt;
-      &lt;cargo.remote.password&gt;jonas&lt;/cargo.remote.password&gt;
-    &lt;/configuration&gt;
-  &lt;/server&gt;
-&lt;servers&gt;
-</pre> 
-           </div>
-          </div><p>Then, in the Cargo plugin's configuration, use the <code>cargo.server.settings</code> property in order to reference the configuration properties that you have previously defined. For example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-           <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
-  &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
-  &lt;configuration&gt;
-    [...]
-    &lt;configuration&gt;
-      &lt;properties&gt;
-        &lt;cargo.server.settings&gt;jonas1&lt;/cargo.server.settings&gt;
-      &lt;/properties&gt;
-    &lt;/configuration&gt;
-  &lt;/configuration&gt;
-&lt;/plugin&gt;
-</pre> 
-           </div>
-          </div><p>In this case, the plugin will internally "expand" the configuration into:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-           <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
-  &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
-  &lt;configuration&gt;
-    [...]
-    &lt;configuration&gt;
-      &lt;properties&gt;
-        &lt;cargo.remote.uri&gt;jmx://jonas1&lt;/cargo.remote.uri&gt;
-        &lt;cargo.jonas.domain.name&gt;jonas&lt;/cargo.jonas.domain.name&gt;
-        &lt;cargo.remote.username&gt;jonas&lt;/cargo.remote.username&gt;
-        &lt;cargo.remote.password&gt;jonas&lt;/cargo.remote.password&gt;
-      &lt;/properties&gt;
-    &lt;/configuration&gt;
-  &lt;/configuration&gt;
-&lt;/plugin&gt;
-</pre> 
-           </div>
-          </div>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
-           <p class="title">Careful with properties set in the POM</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>Priority for property values are as follows:</p>
-            <ul>
-             <li>Highest priority: Properties set using environment variables</li>
-             <li>Second priority: Properties that should be loaded using the&nbsp;<code>cargo.server.settings</code> option</li>
-             <li>Third&nbsp;priority: Properties loaded from a file</li>
-             <li>Lowest priority: Properties set in the POM</li>
-            </ul>
-           </div>
           </div> </td> 
         </tr> 
        </tbody>

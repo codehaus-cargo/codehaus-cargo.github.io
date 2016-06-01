@@ -307,7 +307,12 @@
   </script> 
           </center><h2 id="Home-DevelopmentStatus">Development Status</h2><h3 id="Home-CurrentVersions">Current Versions</h3><p>You can click on the version number to access the <a href="Downloads.html">Downloads</a> page and in the status column to get release notes:</p>
           <div class="table-wrap">
-           <table class="confluenceTable">
+           <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Version</p></th>
@@ -315,9 +320,9 @@
               <th class="confluenceTh"><p>Comments</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Downloads.html">1.4.19</a></p></td>
+              <td class="confluenceTd"><p><a href="Downloads.html">1.5.0</a></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10500" class="external-link" rel="nofollow"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></a></p></td>
-              <td class="confluenceTd"><p>Released on 20 Mar 2016</p></td>
+              <td class="confluenceTd"><p>Released on 1 Jun 2016</p></td>
              </tr>
             </tbody>
            </table>
@@ -335,7 +340,7 @@
           <div class="conf-macro output-block" data-hasbody="false" data-macro-name="include">
            List of supported containers and the extensions that are implemented for each container (Java API, Ant tasks and Maven2/Maven3 plugin). The specified version is the version of the associated Cargo module where the feature was first made available (for example 0.2 for the Maven2 plugin means version 0.2 of the Cargo Maven 2 extension release). Click on a container's name to see a detailed list of features it supports.
            <div class="table-wrap">
-            <table class="confluenceTable">
+            <table class="wrapped confluenceTable">
              <colgroup>
               <col>
               <col>
@@ -645,9 +650,9 @@
               </tr>
               <tr>
                <td colspan="1" class="confluenceTd"><a href="WebSphere+Liberty.html">WebSphere Liberty</a></td>
-               <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.20 / 1.5.0</td>
-               <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.20 / 1.5.0</td>
-               <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.4.20 / 1.5.0</td>
+               <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline">1.5.0</td>
+               <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.5.0</td>
+               <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"><br class="atl-forced-newline"> 1.5.0</td>
               </tr>
               <tr>
                <td colspan="1" class="confluenceTd"><a href="WildFly+8.x.html">WildFly 8.x</a></td>
@@ -677,6 +682,18 @@
            <div class="blog-post-listing"> 
             <div class="logo-heading-block"> 
              <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
+             <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=28704799">Codehaus Cargo 1.5.0 - At your service!</a> 
+              <div class="page-metadata not-personal"> 
+               <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Jun 01, 2016
+              </div> </span> 
+            </div> 
+            <div class="wiki-content">
+              Dear enthusiasts Cargo's 1.4.x versions have been around for a long time now, moreover we meanwhile had the opportunity to welcome a new container, WebSphere Liberty https://codehaus-cargo.github.io/cargo/WebSphere+Liberty.html and also simplified drastically the way users and roles are defined in the ANT tasks https://codehaus-cargo.github.io/cargo/Ant+support.html and Maven2/Maven3 plugin https://codehaus-cargo.github.io/cargo/Maven2+plugin.html.… 
+            </div> 
+           </div> 
+           <div class="blog-post-listing"> 
+            <div class="logo-heading-block"> 
+             <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
              <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=19103755">Codehaus Cargo 1.4.19 is now available!</a> 
               <div class="page-metadata not-personal"> 
                <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Mar 20, 2016
@@ -696,18 +713,6 @@
             </div> 
             <div class="wiki-content">
               Dear Cargo enthusiasts Happy 2016 - And to start the celebrations well here comes the version 1.4.18! This new version comes with the below improvements and fixes: Core [CARGO-1353 https://codehaus-cargo.atlassian.net/browse/CARGO-1353] - Add support for start-only JVM arguments [CARGO-1352 https://codehaus-cargo.atlassian.net/browse/CARGO-1352] - Deployable name for every deployment type Documentation [CARGO-1356 https://codehaus-cargo.atlassian.… 
-            </div> 
-           </div> 
-           <div class="blog-post-listing"> 
-            <div class="logo-heading-block"> 
-             <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/blank.gif" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
-             <span class="blogHeading"> <a class="blogHeading" href="https://codehaus-cargo.atlassian.net/wiki/pages/viewpage.action?pageId=11632654">Santa Claus presents ... Codehaus Cargo 1.4.17 :)</a> 
-              <div class="page-metadata not-personal"> 
-               <a href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen" class="url fn confluence-userlink" data-username="alitokmen">Ali Tokmen [Administrator]</a> posted on Dec 13, 2015
-              </div> </span> 
-            </div> 
-            <div class="wiki-content">
-              &nbsp; Dear Codehaus Cargo enthusiasts As very few of us have been naughty over the year, Santa decided we can have our new version of Codehaus Cargo a bit earlier&nbsp; So, we are happy to announce our latest version for 2015, version 1.4.17, is out. It comes with many bugfixes and small improvements: We finally documented how to achieve multi-container configurations by combining our ANT tasks https://codehaus-cargo.github.io/cargo/Ant+support.html and Maven2/Maven3 plugin https://codehaus-cargo.github.… 
             </div> 
            </div> 
           </div><p></p> </td> 

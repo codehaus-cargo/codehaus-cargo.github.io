@@ -301,7 +301,11 @@
            </div>
           </div><p>Some additional dependencies might also be required for the ANT task. Please see the <a href="Installation.html">Installation</a> page for details.</p><h2 id="Antsupport-TheCargoANTtasksindetail">The Cargo ANT tasks in detail</h2><p>Here are the different task actions available to call on this plugin:</p>
           <div class="table-wrap">
-           <table class="confluenceTable">
+           <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Action</p></th>
@@ -388,6 +392,636 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
+          </center><h3 id="Antsupport-ThesearethevariousXMLconfigurationelementsthatyoucanusetoconfiguretheCargoAnttasks.Makesureyoualsochecktheexampleswhichshowhowtousethem.ToplevelconfigurationelementsDescriptionMandatory?Defaultvalue<action>Actiontoexecute.Thesecanbe:Containerac">
+           <div class="conf-macro output-block" data-hasbody="false" data-macro-name="include">
+            These are the various XML configuration elements that you can use to configure the Cargo Ant tasks. Make sure you also check the 
+            <a href="Ant+support.html#Antsupport-Examples">examples</a> which show how to use them.
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><strong>Top level configuration elements</strong></p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;action&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Action to execute. These can be:</p>
+                 <ul>
+                  <li>Container actions: <code>configure</code>, <code>start</code>, <code>restart</code>,&nbsp;<code>run</code> or&nbsp;<code>stop</code></li>
+                  <li>Deployer actions: <code>deploy</code>, <code>undeploy</code> or <code>redeploy</code></li>
+                  <li><a href="Cargo+Daemon.html">Cargo Daemon</a> actions: <code>daemon-start</code> or <code>daemon-stop</code></li>
+                 </ul></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><code>&lt;containerId&gt;</code></td>
+                <td colspan="1" class="confluenceTd"><p>Id of the container to use. Valid values can be found in the <a href="Containers.html">description page for each container</a></p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;containerType&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p>The <a href="Container.html">container's type</a>. Valid values are <code>installed</code>, <code>embedded</code> and <code>remote</code></p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>Default value is <code>installed</code></p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;home&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Location where the container is installed. If specified in conjunction with the <code><a href="#Antsupport-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element, it will override the home directory defined by the installer</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code> nor <code><a href="#Antsupport-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code><a href="#Antsupport-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a></p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code> nor <code><a href="#Antsupport-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code><a href="Container+Timeout.html">&lt;timeout&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p>The timeout after which Cargo reports an error if the container is not started or stopped</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p><code>120000</code> ms (2 minutes)</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code><a href="Passing+system+properties.html">&lt;systemProperties&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p>List of <code>&lt;key&gt;value&lt;/key&gt;</code> pairs to be passed as System properties to the container when it is started.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;systemPropertiesFile&gt;</code> element to load system properties from a file.</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;extraClasspath&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Additional classpath entries for the classpath that will be used to start the containers.</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;sharedClasspath&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Classpath entries for the classpath that will be shared the applications deployed in a container. Shared application classpath deployment is only available for local containers which support shared <a href="Application+Classpath.html">Application Classpaths</a>.</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;log&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Path to a file where Cargo logs are saved</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>Logs to the Ant console if no log file is specified</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;output&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Path to a file where container logs are saved</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>Logs to the file specified by the <code>&lt;log&gt;</code> element or to the&nbsp;Ant console if no such file has been specified</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;append&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p>If <code>true</code>, then the file specified by <code>&lt;output&gt;</code> will not be erased across different runs</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p><code>false</code></p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code><a href="#Antsupport-configuration">&lt;configuration&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Definition of a <a href="Configuration.html">Configuration</a></p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>Defaults to a <a href="Standalone+Local+Configuration.html">standalone configuration</a> if the container is of type local and a <a href="Runtime+Configuration.html">runtime</a> one if it's of type remote</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code><a href="#Antsupport-daemon">&lt;daemon&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Additional configuration that is used when deploying with the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-configuration" data-hasbody="false" data-macro-name="anchor"> </span></p>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><code><strong>&lt;configuration&gt;</strong></code> <strong>elements</strong></p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p><a href="Configuration.html">Configuration's type</a>. Valid values are <code>standalone</code>, <code>existing</code> and <code>runtime</code></p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p><code>standalone</code></p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code>&lt;home&gt;</code></p></td>
+                <td colspan="1" class="confluenceTd"><p>For standalone configuration this is the location where Cargo will create the configuration and for existing configuration this is where it is located</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+properties.html">&lt;properties&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p>Values to use for various <a href="Configuration+properties.html">Configuration properties</a>.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;propertiesFile&gt;</code> element to load configuration properties from a file.</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd">
+                 <div class="content-wrapper">
+                  <p><a href="Configuration+properties.html">Default configuration properties</a> <br class="atl-forced-newline"> <br class="atl-forced-newline"> Note that these configuration properties can also be overriden using Java properties; for example:</p>
+                  <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+                   <div class="codeContent panelContent pdl"> 
+                    <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">ant -Dcargo.servlet.port=8082</pre> 
+                   </div>
+                  </div>
+                 </div></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code><a href="#Antsupport-deployable">&lt;deployables&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p>A list of <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Deployable" rel="nofollow">deployable</a>s that are going to be deployed in the container when it is started or when <code><span class="external-link">deploy</span></code> / <code><span class="external-link">undeploy</span></code> is called.</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code><a href="#Antsupport-fileconfig">&lt;fileConfigs&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#Antsupport-fileconfig">&lt;fileConfig&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+files+option.html">&lt;files&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#Antsupport-file">&lt;file&gt;</a></code> element.</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><a href="XML+replacements.html"><code>&lt;xmlReplacements&gt;</code></a></td>
+                <td colspan="1" class="confluenceTd"><p>Values to use for various <a href="XML+replacements.html">XML replacements</a>.</p></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><code><a href="#Antsupport-user">&lt;users&gt;</a></code></td>
+                <td class="confluenceTd">List of users to be created in container configuration.</td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-fileconfig" data-hasbody="false" data-macro-name="anchor"> </span></p>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><code><strong>&lt;fileConfigs&gt;</strong></code> <strong>elements</strong></p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;file&gt;</code></p></td>
+                <td class="confluenceTd"><p>The configuration file or directory containing configuration files.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;todir&gt;</code></p></td>
+                <td class="confluenceTd"><p>The target directory, relative to configuration home, where the file should be copied</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>If not specified, the file will be copied to the configuration's home directory</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;tofile&gt;</code></p></td>
+                <td class="confluenceTd"><p>The target file name to use</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>The original file name</p></td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-file" data-hasbody="false" data-macro-name="anchor"> </span></p>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><code><strong>&lt;file&gt;</strong></code> <strong>elements</strong></p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;file&gt;</code></p></td>
+                <td class="confluenceTd"><p>The file, or directory, to add</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;todir&gt;</code></p></td>
+                <td class="confluenceTd"><p>The target directory, relative to configuration home, where the file should be copied</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>If not specified, the file will be copied to the configuration's home directory</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;tofile&gt;</code></p></td>
+                <td class="confluenceTd"><p>The target file name to use</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>The original file name</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;configfile&gt;</code></p></td>
+                <td class="confluenceTd"><p>Indicates if Cargo token replacement should be applied (<code>true</code>) when copying. Do not use this option on a non-ascii file as it will corrupt it!</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p><code>false</code></p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;overwrite&gt;</code></p></td>
+                <td class="confluenceTd"><p>If any existing file should be overwritten or not</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p><code>true</code></p></td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-deployable" data-hasbody="false" data-macro-name="anchor"> </span></p>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><code><strong>&lt;deployable&gt;</strong></code> <strong>elements</strong></p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
+                <td class="confluenceTd"><p>Deployable type, i.e.&nbsp;<code>war</code>,&nbsp;<code>ear</code>,&nbsp;<code>ejb</code>, etc.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;file&gt;</code></p></td>
+                <td class="confluenceTd"><p>The deployable file.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;pingURL&gt;</code></p></td>
+                <td class="confluenceTd"><p>URL on which to ping the deployed or undeployed application (to check if deployment or undeployment is successful), that should return an HTTP OK response only after the deployment is complete. If not set, the deployed or undeployed application will not be pinged, hence the deployment considered as complete as soon as the target server's method returns successfully.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;pingTimeout&gt;</code></p></td>
+                <td class="confluenceTd"><p>If <code>&lt;pingURL&gt;</code> is set, the number of milliseconds after which the ping fails the build if still not successful.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p><code>20000</code> (i.e.,&nbsp;<code>20</code> seconds)</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code><a href="#Antsupport-prop2">&lt;properties&gt;</a></code></p></td>
+                <td class="confluenceTd"><p>User-defined properties of a deployable.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-prop2" data-hasbody="false" data-macro-name="anchor"> </span></p>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><code><strong>&lt;properties&gt;</strong></code> <strong>elements</strong></p></th>
+                <th class="confluenceTh"><p>&nbsp;Deployable Type</p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;context&gt;</code></p></td>
+                <td class="confluenceTd"><p>WAR</p></td>
+                <td class="confluenceTd"><p>The context name to use when deploying the web application.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;war&gt;</code></p></td>
+                <td class="confluenceTd"><p>WAR</p></td>
+                <td class="confluenceTd"><p>The path of the WAR being deployed.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;ear&gt;</code></p></td>
+                <td class="confluenceTd"><p>EAR</p></td>
+                <td class="confluenceTd"><p>The path of the EAR being deployed.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;name&gt;</code></p></td>
+                <td class="confluenceTd"><p>EAR</p></td>
+                <td class="confluenceTd"><p>The name of EAR deployable (it can be anything, there's no special rule).</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;ejb&gt;</code></p></td>
+                <td class="confluenceTd"><p>EJB</p></td>
+                <td class="confluenceTd"><p>The path of the EJB being deployed.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>Default's to the file name without the extension<code><br></code></p></td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+             <p class="title">About WAR contexts</p>
+             <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+             <div class="confluence-information-macro-body">
+              <p>Many containers have their specific files for redefining context roots (Tomcat has <code>context.xml</code>, JBoss has <code>jboss-web.xml</code>, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
+             </div>
+            </div>
+            <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-zipUrlInstaller" data-hasbody="false" data-macro-name="anchor"> </span></p>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><code><strong>&lt;zipUrlInstaller&gt;</strong></code> <strong>elements</strong></p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;url&gt;</code></p></td>
+                <td class="confluenceTd"><p>URL from which to download the container's ZIP or TAR.GZ file.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;downloadDir&gt;</code></p></td>
+                <td class="confluenceTd"><p>Directory in which the <code>zipUrlInstaller</code> should download the container's ZIP or TAR.GZ file.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p><code>${<a href="http://java.io" class="external-link" rel="nofollow">java.io</a>.tmpdir}/cargo/installs</code></p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;extractDir&gt;</code></p></td>
+                <td class="confluenceTd"><p>Directory in which the <code>zipUrlInstaller</code> should extract the container's ZIP or TAR.GZ file.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p><code>${project.build.directory}/cargo/installs</code></p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code><a href="#Antsupport-proxy">&lt;proxy&gt;</a></code></p></td>
+                <td class="confluenceTd"><p>Proxy server settings, if required.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-proxy" data-hasbody="false" data-macro-name="anchor"> </span></p>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><code><strong>&lt;proxy&gt;</strong></code> <strong>elements</strong> (under the <code>zipUrlInstaller</code> element)</p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;host&gt;</code></p></td>
+                <td class="confluenceTd"><p>Proxy host name or IP address.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;port&gt;</code></p></td>
+                <td class="confluenceTd"><p>Proxy port.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>Very probably <code>80</code></p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;user&gt;</code></p></td>
+                <td class="confluenceTd"><p>User name to connect to the proxy server.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;password&gt;</code></p></td>
+                <td class="confluenceTd"><p>Password to connect to the proxy server.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-user" data-hasbody="false" data-macro-name="anchor"> </span></p>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><strong><code><strong>&lt;user&gt;</strong></code> elements</strong></th>
+                <th class="confluenceTh">Description</th>
+                <th class="confluenceTh">Mandatory?</th>
+                <th class="confluenceTh">Default value</th>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><code>&lt;name&gt;</code></td>
+                <td class="confluenceTd">User name.</td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd">No default</td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><code>&lt;password&gt;</code></td>
+                <td class="confluenceTd">User password.</td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd">No default</td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><code>&lt;roles&gt;</code></td>
+                <td colspan="1" class="confluenceTd">
+                 <div class="content-wrapper">
+                  <p>List of roles which should be assigned to user.</p>
+                  <p>Example of roles configuration:</p>
+                  <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+                   <div class="codeContent panelContent pdl"> 
+                    <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;roles&gt;
+    &lt;role&gt;cargo&lt;/role&gt;
+&lt;/roles&gt;</pre> 
+                   </div>
+                  </div>
+                 </div></td>
+                <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td colspan="1" class="confluenceTd">No default</td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-daemon" data-hasbody="false" data-macro-name="anchor"> </span></p>
+            <h1 id="Antsupport-Daemonconfiguration">Daemon configuration</h1>
+            <p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
+            <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+             <p class="title">Container configuration for the Daemon</p>
+             <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+             <div class="confluence-information-macro-body">
+              <p>For the Ant tasks, the "daemonized server" is actually a <a href="Local+Container.html">local container</a> with a <a href="Configuration+properties.html">hostname</a> that points to a remote machine. This implies that:</p>
+              <ul>
+               <li>You should <u>not</u> set the container type to a <a href="Remote+Container.html">remote container</a> nor add any <a href="Remote+Deployer.html">remote deployer</a>s to the configuration; but instead define the container as a <a href="Local+Container.html">local container</a> (with either a <a href="Standalone+Local+Configuration.html">standalone</a> or&nbsp;<a href="Existing+Local+Configuration.html">existing</a> configuration)</li>
+               <li>When you define the home paths for the container and the configuration, remember these paths are for the machine where the Daemon is running (and, preferably, use absolute paths)</li>
+              </ul>
+              <p>When you call <code>daemon-start</code>, the Ant tasks will do the following:</p>
+              <ul>
+               <li>If an <a href="Installer.html">installer</a> is defined:<br>
+                <ul>
+                 <li>Download the archive locally</li>
+                 <li>Send the archive over to the machine running the Daemon</li>
+                 <li>Instruct the Daemon to extract the archive</li>
+                </ul></li>
+               <li>If a <a href="Standalone+Local+Configuration.html">standalone local configuration</a> is defined, instruct the Daemon to create it</li>
+               <li>In all cases:<br>
+                <ul>
+                 <li>Send the <a href="Configuration+files+option.html">configuration files</a> and <a href="Deployable.html">deployables</a> to the machine running the Daemon</li>
+                 <li>Instruct the Daemon to deploy them</li>
+                </ul></li>
+               <li>Finally, instruct the Daemon to start the container</li>
+              </ul>
+             </div>
+            </div>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><code>&lt;daemon&gt;</code> <strong>elements</strong></p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;classpaths&gt;</code></p></td>
+                <td class="confluenceTd"><p>A list of&nbsp;<code>&lt;classpath&gt;myclasspath&lt;/classpath&gt;</code> items, that will be added by the JVM launcher when starting a container.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;properties&gt;</code></p></td>
+                <td class="confluenceTd"><p>A list of properties used to configure the <a href="Cargo+Daemon.html">Cargo Daemon</a><span>.</span></p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+            <div class="table-wrap">
+             <table class="wrapped confluenceTable">
+              <colgroup>
+               <col>
+               <col>
+               <col>
+               <col>
+              </colgroup>
+              <tbody>
+               <tr>
+                <th class="confluenceTh"><p><code>&lt;properties&gt;</code> <strong>elements</strong></p></th>
+                <th class="confluenceTh"><p>Description</p></th>
+                <th class="confluenceTh"><p>Mandatory?</p></th>
+                <th class="confluenceTh"><p>Default value</p></th>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;cargo.daemon.url&gt;</code></p></td>
+                <td class="confluenceTd"><p>URL to connect with the daemon.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;cargo.daemon.handleid&gt;</code></p></td>
+                <td class="confluenceTd"><p>The handle id to register this container with.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+                <td class="confluenceTd"><p>No default</p></td>
+               </tr>
+               <tr>
+                <td class="confluenceTd"><p><code>&lt;cargo.daemon.autostart&gt;</code></p></td>
+                <td class="confluenceTd"><p>When set to&nbsp;<code>true</code>, the dameon will automatically restart the container if the daemon notices it is stopped.</p></td>
+                <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+                <td class="confluenceTd"><p><code>false</code></p></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><code>&lt;cargo.daemon.username&gt;</code></td>
+                <td colspan="1" class="confluenceTd">Username used when authenticating against the daemon host</td>
+                <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></td>
+                <td colspan="1" class="confluenceTd"><code>admin</code></td>
+               </tr>
+               <tr>
+                <td colspan="1" class="confluenceTd"><code>&lt;cargo.daemon.password&gt;</code></td>
+                <td colspan="1" class="confluenceTd">Password used when authenticating against the daemon host</td>
+                <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></td>
+                <td colspan="1" class="confluenceTd"><code>""</code> (empty String)</td>
+               </tr>
+              </tbody>
+             </table>
+            </div>
+           </div></h3><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
           </center><h3 id="Antsupport-Examples">Examples</h3><p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-examples" data-hasbody="false" data-macro-name="anchor"> </span></p><h4 id="Antsupport-Orion2.x">Orion 2.x</h4><p>Here's a full example showing how to deploy a WAR, and expanded WAR and an EAR in an Orion 2.x container. Please note that the <code>output</code> and <code>log</code> attribute are optional. The <code>property</code> elements allow you to tune how the container is configured. Here we're telling it to start on port 8180 and to generate the maximum amount of logs in the container <code>output</code> file.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
@@ -459,7 +1093,7 @@
           <ul>
            <li><p>Add additional properties for defining the following:</p>
             <div class="table-wrap">
-             <table class="confluenceTable">
+             <table class="wrapped confluenceTable">
               <tbody>
                <tr>
                 <th class="confluenceTh"><p>Property</p></th>

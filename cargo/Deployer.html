@@ -296,7 +296,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Deployer-Deployerfeatures">Deployer features</h3> 
-          <ul class="childpages-macro">
+          <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children">
            <li><a href="Local+Deployer.html">Local Deployer</a> — <span class="smalltext">Performs a hot deployment of a Deployable on a locally installed container</span></li>
            <li><a href="Remote+Deployer.html">Remote Deployer</a> — <span class="smalltext">Performs a hot deployment of a Deployable on a container running on a remote machine</span></li>
           </ul> <h3 id="Deployer-ExampleusingtheJavaAPI">Example using the Java API</h3> <p>To instantiate a <code>Deployer</code> you need to know its class name. A <code>Deployer</code> is specific to a container (you can find the class names on the <a href="Containers.html">container</a> page listing all containers).</p> <p>The deployment is done using one of the <code>Deployer.deploy(...)</code> APIs. Some <code>deploy(...)</code> signatures accept a <code>DeployableMonitor</code> which is used to wait till the container has not finished deploying. Cargo currently offers a <code>URLDeployableMonitor</code> which waits by polling a provided URL (see below in the example). Whent the URL becomes available the monitor considers that the <code>Deployable</code> is fully deployed. In the future, Cargo will provide other <code>DeployableMonitor</code> such as a <code>Jsr88DeployableMonitor</code>.</p> <script type="text/javascript">
