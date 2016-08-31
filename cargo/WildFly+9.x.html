@@ -291,6 +291,13 @@
           </div><h3 id="WildFly9.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Feature name</p></th>
@@ -666,20 +673,6 @@
               <td class="confluenceTd"><p>&nbsp;</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
@@ -713,6 +706,20 @@
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.wildfly.script.cli.embedded</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">WildFlyPropertySet.CLI_EMBEDDED_SCRIPT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/wildfly/WildFlyPropertySet.html#CLI_EMBEDDED_SCRIPT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.wildfly.script.cli.offline</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">WildFlyPropertySet.CLI_OFFLINE_SCRIPT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/wildfly/WildFlyPropertySet.html#CLI_OFFLINE_SCRIPT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
             </tbody>
            </table>
@@ -920,7 +927,7 @@
              </tr>
             </tbody>
            </table>
-          </div><h3 id="WildFly9.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br> The server used for tests is downloaded from: <a class="external-link" href="http://download.jboss.org/wildfly/9.0.2.Final/wildfly-9.0.2.Final.tar.gz" rel="nofollow">http://download.jboss.org/wildfly/9.0.2.Final/wildfly-9.0.2.Final.tar.gz</a></p><p>&nbsp;</p> </td> 
+          </div><h3 id="WildFly9.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br> The server used for tests is downloaded from: <a class="external-link" href="http://download.jboss.org/wildfly/9.0.2.Final/wildfly-9.0.2.Final.tar.gz" rel="nofollow">http://download.jboss.org/wildfly/9.0.2.Final/wildfly-9.0.2.Final.tar.gz</a></p><p><br></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
