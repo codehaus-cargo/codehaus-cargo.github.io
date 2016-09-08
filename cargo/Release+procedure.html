@@ -65,7 +65,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Maven+plugin.html">Maven2/Maven3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -199,7 +199,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+       <li><a href="Maven+plugin.html">Maven2/Maven3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -312,7 +312,7 @@
             <ol>
              <li>Open the CI page and click on the latest build</li>
              <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="114"></span><br><br></li>
+             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-id="1802255" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="115"></span><br><br></li>
             </ol></li>
            <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
             <ul>
@@ -358,7 +358,7 @@
                <li>Make sure the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Containers+with+DataSource+and+Resource+support" rel="nofollow">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code></li>
                <li>Make sure the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Project+Structure" rel="nofollow">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
               </ul></li>
-             <li>Modify the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Home" rel="nofollow">Home</a> page to update the available version number and release date</li>
+             <li>Modify the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Home" rel="nofollow">Home</a> page to update the available version number, the release notes URL the checkbox is pointing to and the release date</li>
              <li>Modify the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Maven2+Plugin+Installation" rel="nofollow">Maven2 Plugin Installation</a> page to update the&nbsp;<code>SNAPSHOT</code> version</li>
              <li>Create a <a href="https://codehaus-cargo.atlassian.net/wiki/pages/createblogpost.action?spaceKey=CARGO" rel="nofollow">blog post</a></li>
              <li><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/exportspacehtml.action?key=CARGO" rel="nofollow">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="https://codehaus-cargo.atlassian.net/wiki/display/CARGO/Downloads" rel="nofollow">Downloads</a> page</li>
@@ -376,7 +376,7 @@
              <li>Check in and push all changes, this will automatically update the Codehaus Cargo Web site</li>
             </ol></li>
            <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>
-          </ol><p>&nbsp;</p>
+          </ol><p><br></p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">How to insert using the Wiki Markup</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
@@ -385,7 +385,7 @@
             <ol>
              <li>Edit the document in the Codehaus Confluence</li>
              <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
-             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="114" title="Insert wiki markup.png"></span></li>
+             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-id="494003" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="115" title="Insert wiki markup.png"></span></li>
              <li>Paste the wiki markup content</li>
             </ol>
            </div>

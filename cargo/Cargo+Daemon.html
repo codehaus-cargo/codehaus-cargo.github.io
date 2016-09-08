@@ -65,7 +65,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Maven+plugin.html">Maven2/Maven3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -199,7 +199,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+       <li><a href="Maven+plugin.html">Maven2/Maven3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -282,7 +282,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <h1 id="CargoDaemon-Introduction">Introduction</h1><p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine.</p><p>The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command.</p><p>It can be accessed using a browser-based UI, via Java API or Maven2 plugin.</p><h1 id="CargoDaemon-WhyusetheCargoDaemon?">Why use the Cargo Daemon?</h1><p>Most web containers (e.g. Tomcat, Jetty) provide built-in remote deployment facilities already, also many of them already have daemon integrations; so why use the Cargo Daemon?</p>
+              </script> <h1 id="CargoDaemon-Introduction">Introduction</h1><p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine.</p><p>The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command.</p><p>It can be accessed using a browser-based UI, via Java API or Maven plugin.</p><h1 id="CargoDaemon-WhyusetheCargoDaemon?">Why use the Cargo Daemon?</h1><p>Most web containers (e.g. Tomcat, Jetty) provide built-in remote deployment facilities already, also many of them already have daemon integrations; so why use the Cargo Daemon?</p>
           <ul>
            <li><strong>During intense redeployment</strong> (i.e., testing and even sometimes QA or production hot deployments): All of the remote deployment facilities that keep the JVM alive will eventually suffer from the dreaded <code>java.lang.OutOfMemoryError: PermGen space</code> exception if something in the web application is leaking memory.<br>Most web containers try their best to track down these 'dead' objects and forcefully remove them, but it does not always succeed to reclaim the memory. With a leaking web application, the available memory starts to shrink after each redeploy, and eventually the memory is exhausted.<br>The only solution to this is to kill the JVM, and restart it. And that is exactly what the Cargo Daemon tries to manage. It will try to shutdown the web application cleanly, but if that fails it will forcefully kill the JVM.<br>It is the only way to guarantee that a new version of your web application always starts when you want it to.</li>
            <li><strong>In heterogeneous environments</strong>: With Cargo, the way you configure the container is independent from the underlying server -you can set the different <a href="Configuration+properties.html">configuration properties</a>, define <a href="DataSource+and+Resource+Support.html">datasources</a>, add <a href="Deployer.html">deployables</a>, etc. transparently. You can therefore use the Cargo Daemon as a container-independent daemon, with support for the generation of the proper configuration on all supported containers.</li>
@@ -301,15 +301,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h1 id="CargoDaemon-installation"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-installation" data-hasbody="false" data-macro-name="anchor"> </span></h1><h1 id="CargoDaemon-Installation">Installation</h1>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
-           <p class="title">Java versions for running the Daemon</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>Cargo Daemon requires Java 6 or greater in order to run in standalone mode.</p>
-            <p>If you deploy the Cargo Daemon WAR file on an existing container, the minimum requirement is Java version 5.</p>
-           </div>
-          </div><p>To install and run the Cargo Daemon:</p>
+          </center><h1 id="CargoDaemon-installation"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-installation" data-hasbody="false" data-macro-name="anchor"> </span></h1><h1 id="CargoDaemon-Installation">Installation</h1><p>To install and run the Cargo Daemon:</p>
           <ol>
            <li>Download the Cargo Daemon from the <a href="Downloads.html">Downloads</a> page</li>
            <li>Execute by typing:</li>
@@ -323,9 +315,15 @@
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence">java -jar target/cargo-daemon-webapp-&lt;version&gt;.war -p 18001</pre> 
            </div>
-          </div><p>Additionally, Cargo Daemon will save log files in the cargo home directory unless&nbsp;the&nbsp;<code>-nologging</code>&nbsp;option is used.</p><p><span style="font-size: 10.0pt;line-height: 13.0pt;">Note that the Cargo Daemon is a WAR file; you can actually also deploy it as a WAR on any existing container. This can be useful if you want to, for example, reuse a certain security configuration.</span></p><p>&nbsp;</p><p>The daemon also accepts other parameters, in the form of system properties:</p>
+          </div><p>Additionally, Cargo Daemon will save log files in the cargo home directory unless&nbsp;the&nbsp;<code>-nologging</code>&nbsp;option is used.</p><p><span style="font-size: 10.0pt;line-height: 13.0pt;">Note that the Cargo Daemon is a WAR file; you can actually also deploy it as a WAR on any existing container. This can be useful if you want to, for example, reuse a certain security configuration.</span></p><p><br></p><p>The daemon also accepts other parameters, in the form of system properties:</p>
           <div class="table-wrap">
-           <table class="confluenceTable">
+           <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -359,8 +357,8 @@
   </script> 
           </center><h1 id="CargoDaemon-gettingStarted"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-gettingStarted" data-hasbody="false" data-macro-name="anchor"> </span></h1><h1 id="CargoDaemon-GettingstartedusingthebrowserUI">Getting started using the browser UI</h1><p>To use the Cargo Daemon via the browser UI, simply open&nbsp;<code>http://&lt;machine&gt;:&lt;port&gt;/</code> -where&nbsp;<code>&lt;machine&gt;</code> is the machine host name or IP address and&nbsp;<code>&lt;port&gt;</code> is the port number used (default is&nbsp;<code>18000</code>):</p>
           <ul>
-           <li>To start a container, fill in the form and press <strong>Start</strong>:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20options.png" data-image-src="attachments/Container%20options.png" data-unresolved-comment-count="0" data-linked-resource-id="495262" data-linked-resource-version="10" data-linked-resource-type="attachment" data-linked-resource-default-alias="Container options.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="36"></span><br><br><strong>Note</strong>: The <strong>start</strong> button is actually equivalent to a <strong>restart</strong> in CARGO's terms; in the case a container with the same&nbsp;<code>handle id</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.<br><br></li>
-           <li>To <strong>stop</strong>, <strong>restart</strong>, <strong>delete</strong> or <strong>view logs</strong> of a container, use the actions on the containers list:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20actions.png" data-image-src="attachments/Container%20actions.png" data-unresolved-comment-count="0" data-linked-resource-id="492157" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Container actions.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="36"></span></li>
+           <li>To start a container, fill in the form and press <strong>Start</strong>:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20options.png" data-image-src="attachments/Container%20options.png" data-unresolved-comment-count="0" data-linked-resource-id="495262" data-linked-resource-version="10" data-linked-resource-type="attachment" data-linked-resource-default-alias="Container options.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="38"></span><br><br><strong>Note</strong>: The <strong>start</strong> button is actually equivalent to a <strong>restart</strong> in CARGO's terms; in the case a container with the same&nbsp;<code>handle id</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.<br><br></li>
+           <li>To <strong>stop</strong>, <strong>restart</strong>, <strong>delete</strong> or <strong>view logs</strong> of a container, use the actions on the containers list:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20actions.png" data-image-src="attachments/Container%20actions.png" data-unresolved-comment-count="0" data-linked-resource-id="492157" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Container actions.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="38"></span></li>
            <li>The Cargo Daemon keeps a persistent record on disk of all the containers that have been submitted. Containers that have been submitted will stay in the list, even when they are stopped. This allows you to manually restart them, or view the logs even after the container is stopped.</li>
            <li>If you want the container to be removed from the list, simply press the <strong>delete</strong> button.</li>
            <li>Containers can also be submitted with the&nbsp;<code>autostart</code> property, this will automatically restart the container if the daemon notices it is stopped.</li>
@@ -374,7 +372,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h1 id="CargoDaemon-gettingStarted.1"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-gettingStarted" data-hasbody="false" data-macro-name="anchor"> </span></h1><h1 id="CargoDaemon-GettingstartedwiththeJavaAPI/ANTtasks/Maven2/Maven3plugin">Getting started with the Java API / ANT tasks / Maven2/Maven3 plugin</h1><p>As stated before, the Cargo Daemon is also available programmatically:</p>
+          </center><h1 id="CargoDaemon-gettingStarted.1"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-gettingStarted" data-hasbody="false" data-macro-name="anchor"> </span></h1><h1 id="CargoDaemon-GettingstartedwiththeJavaAPI/ANTtasks/Mavenplugin">Getting started with the Java API / ANT tasks / Maven plugin</h1><p>As stated before, the Cargo Daemon is also available programmatically:</p>
           <ul>
            <li>The details of the Java API can be seen on the <a href="https://codehaus-cargo.github.io/apidocs/index.html?org/codehaus/cargo/tools/daemon/DaemonClient.html" class="external-link" rel="nofollow">Javadoc for o.c.c.tools.daemon.DaemonClient</a></li>
            <li><p>To use the Daemon via ANT tasks, simply add the&nbsp;<code>&lt;daemon&gt;</code> tag in the task and use the <strong>daemon-start</strong> or <strong>daemon-stop</strong> tasks:<br><br></p>
@@ -399,16 +397,8 @@
 </pre> 
              </div>
             </div></li>
-           <li class="confluence-link">The details of the configuration for the Maven2/Maven3 plugin is documented in the <span class="confluence-link">&nbsp;</span><a href="Maven2+Plugin+Reference+Guide.html#Maven2PluginReferenceGuide-daemon"><span class="confluence-link">Daemon configuration section of the Maven2/Maven3 plugin reference guide</span></a> and the example can be seen via the <a href="Maven2+Archetypes.html#Maven2Archetypes-daemon"><span class="confluence-link"><span class="confluence-link"><span class="confluence-link">Daemon archetype</span></span></span></a>.</li>
-          </ul><p>&nbsp;</p>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
-           <p class="title">Java versions for connecting to the Daemon via Java API or Maven2/Maven3 plugin</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>In order to connect to the Daemon via Java API or Maven2/Maven3 plugin, the minimum requirement is Java version 5.</p>
-            <p>To get the required libraries for using the Daemon via Java API, please check the <a href="Downloads.html">Downloads</a> page.</p>
-           </div>
-          </div> </td> 
+           <li class="confluence-link">The details of the configuration for the Maven plugin is documented in the <span class="confluence-link">&nbsp;</span><a href="Maven+Plugin+Reference+Guide.html#MavenPluginReferenceGuide-daemon"><span class="confluence-link">Daemon configuration section of the Maven plugin reference guide</span></a> and the example can be seen via the <a href="Maven+Archetypes.html#MavenArchetypes-daemon"><span class="confluence-link"><span class="confluence-link"><span class="confluence-link">Daemon archetype</span></span></span></a>.</li>
+          </ul> </td> 
         </tr> 
        </tbody>
       </table> </td> 

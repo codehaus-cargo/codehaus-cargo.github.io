@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - Maven2 Plugin Tips</title> 
+  <title>Codehaus Cargo - Maven Plugin Getting Started</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -65,7 +65,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Maven+plugin.html">Maven2/Maven3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -199,7 +199,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+       <li><a href="Maven+plugin.html">Maven2/Maven3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -244,7 +244,7 @@
           <table width="100%"> 
            <tbody>
             <tr> 
-             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Maven2 Plugin Tips</b> </td> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Maven Plugin Getting Started</b> </td> 
              <td align="right"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -282,117 +282,30 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <h1 id="Maven2PluginTips-Tips">Tips</h1> 
-          <ul> 
-           <li><a href="#Maven2PluginTips-tip1">Starting mutiple containers conditionally</a></li> 
-           <li><a href="#Maven2PluginTips-tip2">Starting Tomcat in security mode</a></li> 
-           <li><a href="#Maven2PluginTips-tip3">How to get Tomcat 5 working with the Java 5 XML Parsers</a></li> 
-           <li><a href="Installer.html#Installer-installer_with_maven2_dependencies">How to use the ZIP or TAR.GZ distributions provided by servers on a Maven2 repository</a></li> 
-          </ul> <p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginTips-tip1" data-hasbody="false" data-macro-name="anchor"> </span></p> <h2 id="Maven2PluginTips-Startingmultiplecontainersconditionally">Starting multiple containers conditionally</h2> <p>Maven 2 supports the notion of <a href="http://maven.apache.org/guides/introduction/introduction-to-profiles.html" class="external-link" rel="nofollow">profiles</a> which can be used with Cargo to decide for example when to run tests on a specific container. Here's how you could use the Cargo m2 plugin to that effect:</p> 
+              </script> <h1 id="MavenPluginGettingStarted-GettingStarted">Getting Started</h1><h2 id="MavenPluginGettingStarted-Veryquickstart">Very quick start</h2><p>CARGO can be directly run on any existing Maven Java EE project (WAR, EAR or other) by running:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
-&lt;project&gt;
-[...]
-  &lt;profiles&gt;
-    &lt;profile&gt;
-      &lt;id&gt;tomcat5x&lt;/id&gt;
-      &lt;build&gt;
-        &lt;plugins&gt;
-          &lt;plugin&gt;
-            &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-            &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
-            &lt;configuration&gt;
-              &lt;container&gt;
-                &lt;containerId&gt;tomcat5x&lt;/containerId&gt;
-                &lt;zipUrlInstaller&gt;
-                  &lt;url&gt;http://www.apache.org/dist/jakarta/tomcat-5/v5.0.30/bin/jakarta-tomcat-5.0.30.zip&lt;/url&gt;
-                  &lt;downloadDir&gt;${project.build.directory}/downloads&lt;/downloadDir&gt;
-                  &lt;extractDir&gt;${project.build.directory}/extracts&lt;/extractDir&gt;
-                &lt;/zipUrlInstaller&gt;
-              &lt;/container&gt;
-              &lt;configuration&gt;
-                &lt;home&gt;${project.build.directory}/tomcat5x/container&lt;/home&gt;
-              &lt;/configuration&gt;
-            &lt;/configuration&gt;
-            &lt;executions&gt;
-              &lt;execution&gt;
-                &lt;id&gt;start-container&lt;/id&gt;
-                &lt;phase&gt;pre-integration-test&lt;/phase&gt;
-                &lt;goals&gt;
-                  &lt;goal&gt;start&lt;/goal&gt;
-                &lt;/goals&gt;
-              &lt;/execution&gt;
-              &lt;execution&gt;
-                &lt;id&gt;stop-container&lt;/id&gt;
-                &lt;phase&gt;post-integration-test&lt;/phase&gt;
-                &lt;goals&gt;
-                  &lt;goal&gt;stop&lt;/goal&gt;
-                &lt;/goals&gt;
-              &lt;/execution&gt;
-            &lt;/executions&gt;
-          &lt;/plugin&gt;
-        &lt;/plugins&gt;
-      &lt;/build&gt;
-    &lt;/profile&gt;
-    &lt;profile&gt;
-      &lt;id&gt;orion2x&lt;/id&gt;
-      &lt;build&gt;
-        &lt;plugins&gt;
-          &lt;plugin&gt;
-            &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-            &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
-            &lt;configuration&gt;
-              &lt;container&gt;
-                &lt;containerId&gt;orion2x&lt;/containerId&gt;
-                &lt;zipUrlInstaller&gt;
-                  &lt;url&gt;http://www.orionserver.com/distributions/orion2.0.5.zip&lt;/url&gt;
-                  &lt;downloadDir&gt;${project.build.directory}/downloads&lt;/downloadDir&gt;
-                  &lt;extractDir&gt;${project.build.directory}/extracts&lt;/extractDir&gt;
-                &lt;/zipUrlInstaller&gt;
-              &lt;/container&gt;
-              &lt;configuration&gt;
-                &lt;home&gt;${project.build.directory}/orion2x/container&lt;/home&gt;
-              &lt;/configuration&gt;
-            &lt;/configuration&gt;
-            &lt;executions&gt;
-              &lt;execution&gt;
-                &lt;id&gt;start-container&lt;/id&gt;
-                &lt;phase&gt;pre-integration-test&lt;/phase&gt;
-                &lt;goals&gt;
-                  &lt;goal&gt;start&lt;/goal&gt;
-                &lt;/goals&gt;
-              &lt;/execution&gt;
-              &lt;execution&gt;
-                &lt;id&gt;stop-container&lt;/id&gt;
-                &lt;phase&gt;post-integration-test&lt;/phase&gt;
-                &lt;goals&gt;
-                  &lt;goal&gt;stop&lt;/goal&gt;
-                &lt;/goals&gt;
-              &lt;/execution&gt;
-            &lt;/executions&gt;
-          &lt;/plugin&gt;
-        &lt;/plugins&gt;
-      &lt;/build&gt;
-    &lt;/profile&gt;
-  &lt;/profiles&gt;
-&lt;/project&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run
 </pre> 
            </div>
-          </div> <p>Then to start the tomcat 5.x container you would type <code>mvn -P tomcat5x install</code>. if you want to start both containers you would type <code>mvn -P tomcat5x,orion2x install</code>.</p> <p>If you want to define a profile as the default you can use the <code>&lt;activation&gt;</code> element with an activation strategy. For example if you want a profile to be always on, use:</p> 
+          </div><p>This will create a default <a href="Jetty+7.x.html">Jetty 7.x</a> <a href="Installed+Container.html">installed local container</a> and start it using the Cargo Maven plugin with your Maven project's deployable (a WAR, for example) deployed to it; so you can run manual tests (as a first introduction).</p><p>What is magic is that if you now want to run the same tests with <a href="Tomcat+7.x.html">Tomcat 7.x</a> you simply need to run (in one line):</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
-&lt;profiles&gt;
-    &lt;profile&gt;
-      &lt;id&gt;tomcat5x&lt;/id&gt;
-      &lt;activation&gt;
-        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
-       &lt;/activation&gt;
-[...]
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run
+    -Dcargo.maven.containerId=tomcat7x
+    -Dcargo.maven.containerUrl=http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginTips-tip2" data-hasbody="false" data-macro-name="anchor"> </span></p> <script type="text/javascript">
+          </div><p>That command will automatically download Tomcat 7.0.68 from the specified URL (taking into account any proxy server setting you would have in Maven), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+Plugin+Reference+Guide.html">Maven Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p><p>Now, if you want to run this time on <a href="Glassfish+3.x.html">Glassfish 3.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run
+    -Dcargo.maven.containerId=glassfish3x
+    -Dcargo.maven.containerUrl=http://download.java.net/glassfish/3.1.1/release/glassfish-3.1.1.zip
+    -Dcargo.servlet.port=9000
+</pre> 
+           </div>
+          </div><p>CARGO's main advantage is that the commands and configuration remains the same for any version of any container supported by CARGO -be it Tomcat, Jetty, JBoss, JOnAS, GlassFish, WebLogic, etc.</p><p>Like it? Well, keep on reading, then!</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -402,74 +315,111 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h2 id="Maven2PluginTips-StartingTomcatinsecuritymode">Starting Tomcat in security mode</h2> <p>Cargo supports passing system properties <a href="Passing+system+properties.html">Passing system properties</a>. So, to start Tomcat in security mode, you need to specify two system properties:</p> 
-          <ul> 
-           <li>java.security.manager</li> 
-           <li>java.security.policy</li> 
-          </ul> <p>For instance,</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-           <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
-[...]
-  &lt;plugins&gt;
-    [...]
-    &lt;plugin&gt;
-      &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-      &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
-      &lt;configuration&gt;
-        &lt;container&gt;
-          &lt;containerId&gt;tomcat5x&lt;/containerId&gt;
-          &lt;home&gt;${catalina.home}&lt;/home&gt;
-          [...]
-          &lt;systemProperties&gt;
-            &lt;java.security.manager&gt;default&lt;/java.security.manager&gt;
-            &lt;java.security.policy&gt;${catalina.home}\conf\catalina.policy&lt;/java.security.policy&gt;
-          &lt;/systemProperties&gt;
-        &lt;/container&gt;
-      &lt;/configuration&gt;
-    &lt;/plugin&gt;
-    [...]
-  &lt;/plugins&gt;
-[...]
-</pre> 
-           </div>
-          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginTips-tip3" data-hasbody="false" data-macro-name="anchor"> </span></p> <h2 id="Maven2PluginTips-HowtogetTomcat5workingwiththeJava5XMLParsers">How to get Tomcat 5 working with the Java 5 XML Parsers</h2> <p><strong>Tip submitted by Ben P.</strong></p> <p>Imagine that you have some XML jars in the <code>common/endorsed</code> folder of Tomcat and you have edited your <code>catalina.bat</code> file to specify some extra JVM opts to specify the XML parser. Here's how to achieve the same using Cargo:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
-           <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
-&lt;plugin&gt;
-  &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
-  &lt;configuration&gt;
-    &lt;container&gt;
-      &lt;containerId&gt;tomcat5x&lt;/containerId&gt;
-      &lt;home&gt;${tomcat.home}&lt;/home&gt;
-      &lt;dependencies&gt;
-        &lt;dependency&gt;
-          &lt;location&gt;${tomcat.home}/common/endorsed/xalan.jar&lt;/location&gt;
-        &lt;/dependency&gt;
-        &lt;dependency&gt;
-          &lt;location&gt;${tomcat.home}/common/endorsed/xercesImpl.jar&lt;/location&gt;
-        &lt;/dependency&gt;
-      &lt;/dependencies&gt;
-      &lt;systemProperties&gt;
-        &lt;javax.xml.parsers.DocumentBuilderFactory&gt;
-          org.apache.xerces.jaxp.DocumentBuilderFactoryImpl
-        &lt;/javax.xml.parsers.DocumentBuilderFactory&gt;
-        &lt;javax.xml.parsers.SAXParserFactory&gt;
-          org.apache.xerces.jaxp.SAXParserFactoryImpl
-        &lt;/javax.xml.parsers.SAXParserFactory&gt;
-      &lt;/systemProperties&gt;
-    &lt;/container&gt;
-    &lt;configuration&gt;
-      &lt;type&gt;existing&lt;/type&gt;
-      &lt;home&gt;${tomcat.home}&lt;/home&gt;
-    &lt;/configuration&gt;
-  &lt;/configuration&gt;
-&lt;/plugin&gt;
-</pre> 
-           </div>
-          </div> <p>This shows how to add classpath elements to a Cargo container using the <code>&lt;dependencies&gt;</code> element.</p> </td> 
+          </center><h2 id="MavenPluginGettingStarted-Moreexamples">More examples</h2><p>As usual the best way to learn to use a tool is through examples.</p><p>We have several <a href="Maven+Archetypes.html">Maven Archetypes</a> that contain sample Maven projects with different use cases for the CARGO plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven+Archetypes.html">Maven Archetypes</a>.</p><p>In addition here are the typical uses cases covered by the plugin:</p><p></p>
+          <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children">
+           <li><a href="Deploying+to+a+running+container.html">Deploying to a running container</a></li>
+           <li><a href="Generating+a+container+configuration+deployment+structure.html">Generating a container configuration deployment structure</a></li>
+           <li><a href="Merging+WAR+files.html">Merging WAR files</a></li>
+           <li><a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a></li>
+          </ul><p></p><h2 id="MavenPluginGettingStarted-TheCargoMavenpluginindetail">The Cargo Maven plugin in detail</h2><p>Here are the different goals available to call on this plugin:</p>
+          <div class="table-wrap">
+           <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+            </colgroup>
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><p>Goals</p></th>
+              <th class="confluenceTh"><p>Description</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:start</strong></code></p></td>
+              <td class="confluenceTd"><p>Start a container. That goal will:</p>
+               <ul>
+                <li style="list-style-type: none;">
+                 <ul>
+                  <li class="confluence-link">If the plugin configuration requires so, installs the container.</li>
+                  <li class="confluence-link">If the plugin configuration defines a container with a <a href="Standalone+Local+Configuration.html">standalone local configuration</a>, it will create the configuration.</li>
+                  <li class="confluence-link">If the plugin configuration contains one or more <a href="Deployable.html">deployables</a>, it will deploy these to the container automatically.</li>
+                  <li class="confluence-link">If the plugin configuration contains no <a href="Deployable.html">deployables</a> but the project's packaging is Java EE (WAR, EAR, etc.), it will deploy the project's deployable to to the container automatically.</li>
+                  <li class="confluence-link">And, of course, start the container.</li>
+                 </ul></li>
+               </ul><p><strong>Note</strong>: A container that's started with <code>cargo:start</code> will automatically shut down as soon as the parent Maven instance quits (i.e., you see a <code>BUILD SUCCESSFUL</code> or <code>BUILD FAILED</code> message). If you want to start a container and perform manual testing, see our next goal <code>cargo:run</code>.</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:run</strong></code></p></td>
+              <td class="confluenceTd"><p>Start a container and wait for the user to press <code>CTRL + C</code> to stop. That goal will:</p>
+               <ul>
+                <li style="list-style-type: none;">
+                 <ul>
+                  <li class="confluence-link">If the plugin configuration requires so, installs the container.</li>
+                  <li class="confluence-link">If the plugin configuration defines a container with a <a href="Standalone+Local+Configuration.html">standalone local configuration</a>, it will create the configuration.</li>
+                  <li class="confluence-link">If the plugin configuration contains one or more <a href="Deployable.html">deployables</a>, it will deploy these to the container automatically.</li>
+                  <li class="confluence-link">If the plugin configuration contains no <a href="Deployable.html">deployables</a> but the project's packaging is Java EE (WAR, EAR, etc.), it will deploy the project's deployable to to the container automatically.</li>
+                  <li class="confluence-link">And, of course, start the container and wait for the user to press <code>CTRL + C</code> to stop.</li>
+                 </ul></li>
+               </ul></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:stop</strong></code></p></td>
+              <td class="confluenceTd"><p>Stop a container.</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><p><code><strong>cargo:restart</strong></code></p></td>
+              <td colspan="1" class="confluenceTd">Stop and start again a container. If the container was not running before calling <code>cargo:restart</code>, it will simply be started.</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:configure</strong></code></p></td>
+              <td class="confluenceTd"><p>Create the configuration for a <a href="Local+Container.html">local container</a>, without starting it. Note that the <code>cargo:start</code> and <code>cargo:run</code> goals will also install the container automatically (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-780" class="external-link" rel="nofollow">but will not call <code>cargo:install</code></a>).</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:package</strong></code></p></td>
+              <td class="confluenceTd"><p>Package the <a href="Local+Container.html">local container</a>.</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><strong><code>cargo:daemon-start</code></strong></td>
+              <td colspan="1" class="confluenceTd"><p>Start a container via the daemon. Read more on: <a href="Cargo+Daemon.html">Cargo Daemon</a></p><p><strong>Note</strong>: The&nbsp;<code>daemon:start</code> goal is actually equivalent to a <strong>restart</strong> in CARGO's terms; in the case a container with the same&nbsp;<code>cargo.daemon.handleid</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><strong><code>cargo:daemon-stop</code></strong></td>
+              <td colspan="1" class="confluenceTd">Stop a container via the daemon. Read more on: <a href="Cargo+Daemon.html">Cargo Daemon</a></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:deployer-deploy</strong></code> (aliased to <code><strong>cargo:deploy</strong></code>)</p></td>
+              <td class="confluenceTd"><p>Deploy a deployable to a running container.</p><p><strong>Note</strong>: The <code>cargo:start</code> and <code>cargo:run</code> do already deploy the deployables specified in the configuration to the container; as a result calling&nbsp;<code>cargo:deploy</code> for a container which has been started by CARGO in the same Maven project will most likely cause a second deployment of the same deployables (and might even fail).</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:deployer-undeploy</strong></code> (aliased to <code><strong>cargo:undeploy</strong></code>)</p></td>
+              <td class="confluenceTd"><p>Undeploy a deployable from a running container.</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:deployer-start</strong></code></p></td>
+              <td class="confluenceTd"><p>Start a deployable already installed in a running container.</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:deployer-stop</strong></code></p></td>
+              <td class="confluenceTd"><p>Stop a deployed deployable without undeploying it.</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:deployer-redeploy</strong></code> (aliased to <code><strong>cargo:redeploy</strong></code>)</p></td>
+              <td class="confluenceTd"><p>Undeploy and deploy again a deployable. If the deployable was not deployed before calling <code>cargo:deployer-redeploy</code> (or its alias <code>cargo:redeploy</code>) it will simply be deployed.</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:uberwar</strong></code></p></td>
+              <td class="confluenceTd"><p>Merge several WAR files into one.</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:install</strong></code></p></td>
+              <td class="confluenceTd"><p>Installs a container distribution on the file system. Note that the <code>cargo:start</code> goal will also install the container automatically (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-780" class="external-link" rel="nofollow">but will not call <code>cargo:install</code></a>).</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><code><strong>cargo:help</strong></code></p></td>
+              <td class="confluenceTd"><p>Get help (list of available goals, available options, etc.).</p></td>
+             </tr>
+            </tbody>
+           </table>
+          </div><p><br class="atl-forced-newline"> The configuration elements are described in the <a href="Maven+Plugin+Reference+Guide.html">Reference Guide</a> section.</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - Maven2 plugin</title> 
+  <title>Codehaus Cargo - Maven plugin</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -65,7 +65,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Maven+plugin.html">Maven2/Maven3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -199,7 +199,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+       <li><a href="Maven+plugin.html">Maven2/Maven3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -244,7 +244,7 @@
           <table width="100%"> 
            <tbody>
             <tr> 
-             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Maven2 plugin</b> </td> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Maven plugin</b> </td> 
              <td align="right"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -282,31 +282,31 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> A Maven 2 / Maven 3 plugin that wraps the Cargo Java API
+              </script> A Maven 3 plugin that wraps the Cargo Java API
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Functional tests</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>The usage of Cargo for executing functional tests on a container does not mandate this m2 plugin. You could also directly use the Cargo Java API from your Java unit test classes (JUnit, TestNG, etc), as described on the <a href="Functional+testing.html">Functional testing</a> page. The choice is yours, thought the Maven2 plugin is generally more straightforward to use and integrates better with the whole build process (with profiles, easier to use deployer, proxy server support, etc.)</p>
+            <p>The usage of Cargo for executing functional tests on a container does not mandate this Maven plugin. You could also directly use the Cargo Java API from your Java unit test classes (JUnit, TestNG, etc), as described on the <a href="Functional+testing.html">Functional testing</a> page. The choice is yours, thought the Maven plugin is generally more straightforward to use and integrates better with the whole build process (with profiles, easier to use deployer, proxy server support, etc.)</p>
            </div>
-          </div><h1 id="Maven2plugin-TableofContents">Table of Contents</h1><p>The documentatation for this Maven2 plugin includes:</p>
+          </div><h1 id="Mavenplugin-TableofContents">Table of Contents</h1><p>The documentatation for this Maven plugin includes:</p>
           <ul>
-           <li><a href="Maven2+Plugin+Installation.html">Installation</a>: explains how to install the plugin</li>
-           <li><a href="#Maven2plugin-gettingstarted">Getting started</a>: explains how to use the plugin on several use cases</li>
-           <li><a href="Maven2+Plugin+Reference+Guide.html">Reference Guide</a>: provide reference documentation for all configuration options</li>
-           <li><a href="Maven2+Plugin+Tips.html">Tips</a>: tips for using the plugin</li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2plugin-gettingstarted" data-hasbody="false" data-macro-name="anchor"> </span></p><p></p>
+           <li><a href="Maven+Plugin+Installation.html">Installation</a>: explains how to install the plugin</li>
+           <li><a href="#Mavenplugin-gettingstarted">Getting started</a>: explains how to use the plugin on several use cases</li>
+           <li><a href="Maven+Plugin+Reference+Guide.html">Reference Guide</a>: provide reference documentation for all configuration options</li>
+           <li><a href="Maven+Plugin+Tips.html">Tips</a>: tips for using the plugin</li>
+          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Mavenplugin-gettingstarted" data-hasbody="false" data-macro-name="anchor"> </span></p><p></p>
           <div class="conf-macro output-block" data-hasbody="false" data-macro-name="include">
-           <h1 id="Maven2plugin-GettingStarted">Getting Started</h1>
-           <h2 id="Maven2plugin-Veryquickstart">Very quick start</h2>
-           <p>CARGO can be directly run on any existing Maven2 Java EE project (WAR, EAR or other) by running:</p>
+           <h1 id="Mavenplugin-GettingStarted">Getting Started</h1>
+           <h2 id="Mavenplugin-Veryquickstart">Very quick start</h2>
+           <p>CARGO can be directly run on any existing Maven Java EE project (WAR, EAR or other) by running:</p>
            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run
 </pre> 
             </div>
            </div>
-           <p>This will create a default <a href="Jetty+7.x.html">Jetty 7.x</a> <a href="Installed+Container.html">installed local container</a> and start it using the Cargo Maven2 plugin with your Maven2 project's deployable (a WAR, for example) deployed to it; so you can run manual tests (as a first introduction).</p>
+           <p>This will create a default <a href="Jetty+7.x.html">Jetty 7.x</a> <a href="Installed+Container.html">installed local container</a> and start it using the Cargo Maven plugin with your Maven project's deployable (a WAR, for example) deployed to it; so you can run manual tests (as a first introduction).</p>
            <p>What is magic is that if you now want to run the same tests with <a href="Tomcat+7.x.html">Tomcat 7.x</a> you simply need to run (in one line):</p>
            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
@@ -316,7 +316,7 @@
 </pre> 
             </div>
            </div>
-           <p>That command will automatically download Tomcat 7.0.68 from the specified URL (taking into account any proxy server setting you would have in Maven2/Maven3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven2+Plugin+Reference+Guide.html">Maven2 Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p>
+           <p>That command will automatically download Tomcat 7.0.68 from the specified URL (taking into account any proxy server setting you would have in Maven), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+Plugin+Reference+Guide.html">Maven Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p>
            <p>Now, if you want to run this time on <a href="Glassfish+3.x.html">Glassfish 3.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
@@ -340,9 +340,9 @@
             <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
            </center>
-           <h2 id="Maven2plugin-Moreexamples">More examples</h2>
+           <h2 id="Mavenplugin-Moreexamples">More examples</h2>
            <p>As usual the best way to learn to use a tool is through examples.</p>
-           <p>We have several <a href="Maven2+Archetypes.html">Maven2 Archetypes</a> that contain sample Maven2/Maven3 projects with different use cases for the CARGO plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven2+Archetypes.html">Maven2 Archetypes</a>.</p>
+           <p>We have several <a href="Maven+Archetypes.html">Maven Archetypes</a> that contain sample Maven projects with different use cases for the CARGO plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven+Archetypes.html">Maven Archetypes</a>.</p>
            <p>In addition here are the typical uses cases covered by the plugin:</p>
            <p></p>
            <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children">
@@ -352,10 +352,14 @@
             <li><a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a></li>
            </ul>
            <p></p>
-           <h2 id="Maven2plugin-TheCargoMavenpluginindetail">The Cargo Maven plugin in detail</h2>
+           <h2 id="Mavenplugin-TheCargoMavenpluginindetail">The Cargo Maven plugin in detail</h2>
            <p>Here are the different goals available to call on this plugin:</p>
            <div class="table-wrap">
-            <table class="confluenceTable">
+            <table class="wrapped confluenceTable">
+             <colgroup>
+              <col>
+              <col>
+             </colgroup>
              <tbody>
               <tr>
                <th class="confluenceTh"><p>Goals</p></th>
@@ -415,7 +419,7 @@
               </tr>
               <tr>
                <td class="confluenceTd"><p><code><strong>cargo:deployer-deploy</strong></code> (aliased to <code><strong>cargo:deploy</strong></code>)</p></td>
-               <td class="confluenceTd"><p>Deploy a deployable to a running container.</p><p><strong>Note</strong>: The <code>cargo:start</code> and <code>cargo:run</code> do already deploy the deployables specified in the configuration to the container; as a result calling&nbsp;<code>cargo:deploy</code> for a container which has been started by CARGO in the same Maven2/Maven3 project will most likely cause a second deployment of the same deployables (and might even fail).</p></td>
+               <td class="confluenceTd"><p>Deploy a deployable to a running container.</p><p><strong>Note</strong>: The <code>cargo:start</code> and <code>cargo:run</code> do already deploy the deployables specified in the configuration to the container; as a result calling&nbsp;<code>cargo:deploy</code> for a container which has been started by CARGO in the same Maven project will most likely cause a second deployment of the same deployables (and might even fail).</p></td>
               </tr>
               <tr>
                <td class="confluenceTd"><p><code><strong>cargo:deployer-undeploy</strong></code> (aliased to <code><strong>cargo:undeploy</strong></code>)</p></td>
@@ -448,7 +452,7 @@
              </tbody>
             </table>
            </div>
-           <p><br class="atl-forced-newline"> The configuration elements are described in the <a href="Maven2+Plugin+Reference+Guide.html">Reference Guide</a> section.</p>
+           <p><br class="atl-forced-newline"> The configuration elements are described in the <a href="Maven+Plugin+Reference+Guide.html">Reference Guide</a> section.</p>
           </div><p></p> </td> 
         </tr> 
        </tbody>

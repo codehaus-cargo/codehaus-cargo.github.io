@@ -65,7 +65,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Maven+plugin.html">Maven2/Maven3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -199,7 +199,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+       <li><a href="Maven+plugin.html">Maven2/Maven3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -288,7 +288,15 @@
            <li>Container-specific properties. See each <a href="Containers.html">container</a>'s page for a list of all the properties it supports.</li>
           </ul><p>Some general properties:</p>
           <div class="table-wrap">
-           <table class="confluenceTable">
+           <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -389,7 +397,7 @@
            </div>
           </div><h3 id="Configurationproperties-SupportMatrix">Support Matrix</h3>
           <div class="table-wrap">
-           <table class="confluenceTable">
+           <table class="wrapped confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Java</p></th>
@@ -448,7 +456,7 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="Configurationproperties-Maven2Plugin">Maven 2 Plugin</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
+          </center><h3 id="Configurationproperties-MavenPlugin">Maven Plugin</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;build&gt;
@@ -473,7 +481,7 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
 &lt;/build&gt;
 </pre> 
            </div>
-          </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or Maven2/Maven3 goals) can also be overriden using Java properties.</p><p>For example, with Maven:</p>
+          </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or Maven goals) can also be overriden using Java properties.</p><p>For example, with Maven:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">mvn -Dcargo.servlet.port=8082 cargo:start

@@ -65,7 +65,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Maven+plugin.html">Maven2/Maven3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -199,7 +199,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+       <li><a href="Maven+plugin.html">Maven2/Maven3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -292,9 +292,9 @@
              <li>Any existing JVM setting, such as JVM properties or debuggers, will be inherited from the parent JVM and cannot be changed.</li>
              <li>Some features such as <a href="Debugging.html">logging</a> might not work as expected as they inherit existing Java logger settings.</li>
              <li>You might very quickly run into a JAR hell. While the Cargo samples' <code><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/main/java/org/codehaus/cargo/sample/java/EmbeddedContainerClasspathResolver.java" class="external-link" rel="nofollow">EmbeddedContainerClasspathResolver.java</a></code> might give you ideas on how to avoid it, this might not work in all circumstances.</li>
-             <li>If you are using either the <a class="unresolved" href="#">ANT tasks</a> or <a href="Maven2+plugin.html">Maven2/Maven3 plugin</a>, the container will most likely inherit even more "uncontrollable" items that come from these tools.</li>
-             <li>When using embedded containers with the <a href="Maven2+plugin.html">Maven2/Maven3 plugin</a>, Cargo will be deciding on the version of the container you use - and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-571" class="external-link" rel="nofollow">you cannot change it</a>.</li>
-             <li>Again when using embedded containers with the <a href="Maven2+plugin.html">Maven2/Maven3 plugin</a>, Cargo will only load a minimal set of dependencies and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-862" class="external-link" rel="nofollow">advanced features might be missing</a>.</li>
+             <li>If you are using either the <a class="unresolved" href="#">ANT tasks</a> or <a href="Maven+plugin.html">Maven2/Maven3 plugin</a>, the container will most likely inherit even more "uncontrollable" items that come from these tools.</li>
+             <li>When using embedded containers with the <a href="Maven+plugin.html">Maven2/Maven3 plugin</a>, Cargo will be deciding on the version of the container you use - and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-571" class="external-link" rel="nofollow">you cannot change it</a>.</li>
+             <li>Again when using embedded containers with the <a href="Maven+plugin.html">Maven2/Maven3 plugin</a>, Cargo will only load a minimal set of dependencies and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-862" class="external-link" rel="nofollow">advanced features might be missing</a>.</li>
              <li><p>Some containers contain classed that have <code>final</code> attributes defined on certain classes, that remain set to their updated values even if you reset the class loader - The only way to revert this is to restart the JVM. This implies that:</p>
               <ul>
                <li><p>It might not possible to execute different versions of these containers in the same JVM</p></li>
