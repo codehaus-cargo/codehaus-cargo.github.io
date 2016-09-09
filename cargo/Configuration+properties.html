@@ -65,7 +65,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -199,7 +199,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven+plugin.html">Maven2/Maven3</a></li>
+       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -381,7 +381,7 @@
              <tr>
               <td class="confluenceTd"><pre>cargo.servlet.users</pre></td>
               <td class="confluenceTd"><pre>ServletPropertySet.USERS</pre></td>
-              <td class="confluenceTd"><p>Allow defining users, passwords and map to roles. Note that having no roles at all for a user is allowed.</p><p>Users can be also set using dedicated Maven2 or ANT tags, see chapters with Maven2 and ANT documentation.</p></td>
+              <td class="confluenceTd"><p>Allow defining users, passwords and map to roles. Note that having no roles at all for a user is allowed.</p><p>Users can be also set using dedicated&nbsp;Maven 2 / Maven 3 or ANT tags, see chapters with&nbsp;Maven 2 / Maven 3 and ANT documentation.</p></td>
               <td class="confluenceTd"><p>string</p></td>
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><pre>name1:pwd1:role11,...,role1N|name2:pwd2:role21,...,role2N|...</pre></td>
@@ -481,7 +481,7 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
 &lt;/build&gt;
 </pre> 
            </div>
-          </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or Maven goals) can also be overriden using Java properties.</p><p>For example, with Maven:</p>
+          </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or&nbsp;Maven 2 / Maven 3 goals) can also be overriden using Java properties.</p><p>For example, with the <a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">mvn -Dcargo.servlet.port=8082 cargo:start
