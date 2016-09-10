@@ -65,7 +65,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -199,7 +199,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -346,6 +346,7 @@
                  <li><span style="color: red;"><strong>jboss-deployer-api/</strong></span>: JBoss remote deployer API</li>
                  <li><span style="color: red;"><strong>jboss-deployer-5/</strong></span>: Remote deployer for JBoss 5.0.x</li>
                  <li><span style="color: red;"><strong>jboss-deployer-5.1-and-6/</strong></span>: Remote deployer for JBoss 5.1.x and 6.x</li>
+                 <li><span style="color: red;"><strong>jboss-deployer-7/</strong></span>: Remote deployer for JBoss 7.x</li>
                 </ul></li>
                <li><span style="color: red;"><strong>containers/</strong></span>: Core API Container Implementations
                 <ul>
@@ -391,6 +392,8 @@
                  <li><span style="color: red;"><strong>webapp/</strong></span>: Cargo Daemon Web Application</li>
                  <li><span style="color: red;"><strong>itests/</strong></span>: Cargo Daemon Integration Tests
                   <ul>
+                   <li><span style="color: red;"><strong>browser/</strong></span>: Cargo Daemon Client - Browser</li>
+                   <li><span style="color: red;"><strong>client/</strong></span>: Cargo Daemon Client - Java client</li>
                    <li><span style="color: red;"><strong>deployable-on-jetty/</strong></span>: Cargo Daemon Client - Deployable on Jetty</li>
                    <li><span style="color: red;"><strong>deployable-on-tomcat/</strong></span>: Cargo Daemon Client - Deployable on Tomcat</li>
                   </ul></li>
@@ -400,38 +403,38 @@
                  <li><span style="color: red;"><strong>plugin/</strong></span>: Cargo Maven 2 Plugin</li>
                  <li><span style="color: red;"><strong>archetypes/</strong></span>: Sample Maven archetypes for using Cargo
                   <ul>
+                   <li><span style="color: red;"><strong>daemon/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to generate a webapp and remotely start and stop a container with the application deployed on it.</li>
+                   <li><span style="color: red;"><strong>multiple-containers/</strong></span>: Sample Maven archetype showing how to start / stop multiple containers.</li>
                    <li><span style="color: red;"><strong>webapp-single-module/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to run functional tests directly from a single webapp module.</li>
                    <li><span style="color: red;"><strong>webapp-functional-tests-module/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to run functional tests for a webapp by creating a separate functional-tests module.</li>
-                   <li><span style="color: rgb(255,0,0);"><strong>webapp-with-datasource/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to run functional tests directly from a webapp with datasource. Cargo will be used to configure the datasource on the container.</li>
-                   <li><span style="color: rgb(255,0,0);"><strong>multiple-containers/</strong></span>: Sample Maven archetype showing how to start / stop multiple containers.</li>
+                   <li><span style="color: red;"><strong>webapp-with-datasource/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to run functional tests directly from a webapp with datasource. Cargo will be used to configure the datasource on the container.</li>
                    <li><span style="color: red;"><strong>remote-deployment/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to generate a webapp and deploy it to a remote container.</li>
-                   <li><span style="color: red;"><strong>daemon/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to generate a webapp and remotely start and stop a container with the application deployed on it.</li>
                   </ul></li>
                  <li><span style="color: red;"><strong>samples/</strong></span>: Cargo Samples for Maven 2
                   <ul>
                    <li><span style="color: red;"><strong>artifactInstaller-test/</strong></span>: Sample application that tests the artifact installer</li>
-                   <li><span style="color: red;"><strong>autoDeployable-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin's AutoDeployable capabilities</li>
+                   <li><span style="color: red;"><strong>autoDeployable-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's AutoDeployable capabilities</li>
                    <li><span style="color: red;"><strong>configurationFiles-xmlReplacements-test/</strong></span>: Sample application that tests the configuration files and XML replacement options</li>
-                   <li><span style="color: red;"><strong>implementationClasses-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with personalized implementation classes</li>
-                   <li><span style="color: red;"><strong>inPlaceDevelopment-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin's in-place development capabilities. Note that this sample currently works only for Jetty and Tomcat as it requires that container implementations support deploying an expanded WAR from a directory without copying it to the container deploy directory.</li>
-                   <li><span style="color: red;"><strong>jetty4x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Jetty 4.x container</li>
-                   <li><span style="color: red;"><strong>jetty5x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Jetty 5.x container</li>
-                   <li><span style="color: red;"><strong>jetty6x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Jetty 6.x container</li>
-                   <li><span style="color: red;"><strong>jetty7x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Jetty 7.x container</li>
-                   <li><span style="color: red;"><strong>jetty7x-root-context-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with a Jetty 7.x container and the root context</li>
-                   <li><span style="color: red;"><strong>jetty8x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Jetty 8.x container</li>
-                   <li><span style="color: red;"><strong>jetty9x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Jetty 9.x container</li>
-                   <li><span style="color: red;"><strong>ping-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin's deployable pinging capabilities</li>
-                   <li><span style="color: red;"><strong>multi-datasource-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with a Tomcat 6.x container and multiple datasources</li>
+                   <li><span style="color: red;"><strong>implementationClasses-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with personalized implementation classes</li>
+                   <li><span style="color: red;"><strong>inPlaceDevelopment-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's in-place development capabilities. Note that this sample currently works only for Jetty and Tomcat as it requires that container implementations support deploying an expanded WAR from a directory without copying it to the container deploy directory.</li>
+                   <li><span style="color: red;"><strong>jetty4x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 4.x container</li>
+                   <li><span style="color: red;"><strong>jetty5x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 5.x container</li>
+                   <li><span style="color: red;"><strong>jetty6x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 6.x container</li>
+                   <li><span style="color: red;"><strong>jetty7x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 7.x container</li>
+                   <li><span style="color: red;"><strong>jetty7x-root-context-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Jetty 7.x container and the root context</li>
+                   <li><span style="color: red;"><strong>jetty8x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 8.x container</li>
+                   <li><span style="color: red;"><strong>jetty9x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 9.x container</li>
+                   <li><span style="color: red;"><strong>ping-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's deployable pinging capabilities</li>
+                   <li><span style="color: red;"><strong>multi-datasource-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Tomcat 6.x container and multiple datasources</li>
                    <li><span style="color: red;"><strong>remoteDeploy-test/</strong></span>: Sample application that tries remote deployment</li>
                    <li><span style="color: red;"><strong>runMojo-test/</strong></span>: Sample application that tries the cargo:run MOJO</li>
-                   <li><span style="color: red;"><strong>tomcat6x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Tomcat 6.x container</li>
-                   <li><span style="color: red;"><strong>tomcat7x-context-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with a Tomcat 7.x container and a user-defined context</li>
-                   <li><span style="color: red;"><strong>tomcat7x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Tomcat 7.x container</li>
-                   <li><span style="color: red;"><strong>tomcat7x-systemProperty-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with a Tomcat 7.x container and a user-defined system properties</li>
-                   <li><span style="color: red;"><strong>tomcat8x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Tomcat 8.x container</li>
-                   <li><span style="color: red;"><strong>tomcat9x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin with an embedded Tomcat 9.x container</li>
-                   <li><span style="color: red;"><strong>uberwar-test/</strong></span>: Sample application that exercises the Cargo Maven2 plugin's uberwar feature</li>
+                   <li><span style="color: red;"><strong>tomcat6x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Tomcat 6.x container</li>
+                   <li><span style="color: red;"><strong>tomcat7x-context-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Tomcat 7.x container and a user-defined context</li>
+                   <li><span style="color: red;"><strong>tomcat7x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Tomcat 7.x container</li>
+                   <li><span style="color: red;"><strong>tomcat7x-systemProperty-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Tomcat 7.x container and a user-defined system properties</li>
+                   <li><span style="color: red;"><strong>tomcat8x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Tomcat 8.x container</li>
+                   <li><span style="color: red;"><strong>tomcat9x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Tomcat 9.x container</li>
+                   <li><span style="color: red;"><strong>uberwar-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's uberwar feature</li>
                    <li><span style="color: red;"><strong>users-test/</strong></span>: Sample application that will be used to test configuration of users and roles.</li>
                    <li><span style="color: red;"><strong>weblogic-test/</strong></span>: Sample application that will be used to test the WebLogic container</li>
                    <li><span style="color: red;"><strong>websphere-test/</strong></span>: Sample application that will be used to test the WebSphere container</li>

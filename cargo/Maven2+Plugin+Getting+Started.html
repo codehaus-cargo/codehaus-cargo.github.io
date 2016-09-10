@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - Maven 2Plugin Getting Started</title> 
+  <title>Codehaus Cargo - Maven2 Plugin Getting Started</title> 
   <script type="text/javascript">
     // Google Analytics code
 
@@ -65,7 +65,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven2/Maven3 plugin</a></li>
+         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -199,7 +199,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven2/Maven3</a></li>
+       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -244,7 +244,7 @@
           <table width="100%"> 
            <tbody>
             <tr> 
-             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Maven 2Plugin Getting Started</b> </td> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; Maven2 Plugin Getting Started</b> </td> 
              <td align="right"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -296,7 +296,7 @@
     -Dcargo.maven.containerUrl=http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip
 </pre> 
            </div>
-          </div><p>That command will automatically download Tomcat 7.0.68 from the specified URL (taking into account any proxy server setting you would have in Maven 2 / Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven2+Plugin+Reference+Guide.html">Maven2 Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p><p>Now, if you want to run this time on <a href="Glassfish+3.x.html">Glassfish 3.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
+          </div><p>That command will automatically download Tomcat 7.0.68 from the specified URL (taking into account any proxy server setting you would have in Maven 2 / Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven2+Plugin+Reference+Guide.html">Maven</a><a href="Maven2+Plugin+Reference+Guide.html"> 2 / Maven 3</a><a href="Maven2+Plugin+Reference+Guide.html"> Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p><p>Now, if you want to run this time on <a href="Glassfish+3.x.html">Glassfish 3.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run
