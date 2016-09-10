@@ -286,18 +286,15 @@
           <ul>
            <li>the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars)</li>
            <li><strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars</li>
-          </ul><p>CARGO's base dependencies are as follows:</p>
+          </ul><p>Cargo's base dependencies are as follows:</p>
           <ul>
-           <li><a href="http://www.ibiblio.org/maven/ant/jars/ant-1.5.4.jar" class="external-link" rel="nofollow">Ant 1.5.4</a> or greater.</li>
-           <li><a href="http://repo1.maven.org/maven2/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar" class="external-link" rel="nofollow">Commons discovery 0.5</a> or greater.</li>
-           <li><a href="http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" class="external-link" rel="nofollow">Commong logging 1.1.1</a> or greater.</li>
-          </ul><p>If you want to deploy datasources (database, resources, etc.) with CARGO, you also need:</p>
+           <li><a href="http://www.ibiblio.org/maven/ant/jars/ant-1.5.4.jar" class="external-link" rel="nofollow">Ant 1.5.4</a> or greater</li>
+           <li><a href="http://repo1.maven.org/maven2/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar" class="external-link" rel="nofollow">Commons discovery 0.5</a> or greater</li>
+           <li><a href="http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" class="external-link" rel="nofollow">Commons logging 1.1.1</a> or greater</li>
+          </ul><p>In addition, some specific containers (for example, JRun) and some deployables (for example, Tomcat WARs) require the following:</p>
           <ul>
-           <li><a href="http://repo1.maven.org/maven2/dom4j/dom4j/1.4/dom4j-1.4.jar" class="external-link" rel="nofollow">dom4j 1.4</a> or greater.</li>
-           <li>JAXB 2.1 (both the <a href="http://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1.jar" class="external-link" rel="nofollow">API</a> and the <a href="http://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-impl-2.1.13.jar" class="external-link" rel="nofollow">implementation</a>) or greater.</li>
-          </ul><p>Finally, some specific deployables (for example, Tomcat WARs) require the following:</p>
-          <ul>
-           <li><a href="http://repo1.maven.org/maven2/jdom/jdom/1.0/jdom-1.0.jar" class="external-link" rel="nofollow">jdom 1.0</a> or greater.</li>
+           <li><a href="http://repo1.maven.org/maven2/org/jdom/jdom/1.1.3/jdom-1.1.3.jar" class="external-link" rel="nofollow">jdom 1.1.3</a><em> (<u>not</u> any jdom2 version)</em></li>
+           <li><a href="http://repo1.maven.org/maven2/jaxen/jaxen/1.1.6/jaxen-1.1.6.jar" class="external-link" rel="nofollow">jaxen 1.1.6</a> or greater</li>
           </ul><h3 id="Installation-ApacheAnt">Apache Ant</h3><p>If you want use the Cargo Ant tasks, add the following JARs to ANT's classpath:</p>
           <ul>
            <li>The same jars as for the Java API (i.e., either the API JARs + the container(s) <strong>or</strong> the uberjar)</li>
@@ -305,10 +302,10 @@
           </ul><h3 id="Installation-ApacheMaven2/Maven3">Apache Maven 2 / Maven 3</h3><p>Maven 2 / Maven 3&nbsp;will automatically download all required dependencies: see the <a href="Maven2+plugin.html">Maven2 plugin</a> page. As a result, no installation is required for Maven 2 / Maven 3.</p><p>If you are creating a Java applications which use the Cargo via API, you need to add as dependency either the artifact for your favorite container or the uberjar (which contains all containers). See below</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-            <b>Example for adding the CARGO uberjar as dependency</b>
+            <b>Example for adding the Codehaus Cargo uberjar as dependency</b>
            </div>
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependency&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependency&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-core-uberjar&lt;/artifactId&gt;
   &lt;version&gt;${cargo.version}&lt;/version&gt;
@@ -317,10 +314,10 @@
           </div>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-            <b>Example for adding the CARGO Tomcat container as dependency</b>
+            <b>Example for adding the Codehaus Cargo Tomcat container as dependency</b>
            </div>
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependency&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependency&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-core-container-tomcat&lt;/artifactId&gt;
   &lt;version&gt;${cargo.version}&lt;/version&gt;

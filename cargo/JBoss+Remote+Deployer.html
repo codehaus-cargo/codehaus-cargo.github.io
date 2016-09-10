@@ -300,7 +300,6 @@
            <li>JBoss remoting client JARs</li>
           </ul><p>Here is an example code for the users of the Java API:</p>
           <blockquote>
-           <p>&nbsp;</p>
            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
@@ -332,10 +331,8 @@ Thread.currentThread().setContextClassLoader(classLoader);
 </pre> 
             </div>
            </div>
-           <p>&nbsp;</p>
           </blockquote><p>Here is an example Maven2 plugin configuration:</p>
           <blockquote>
-           <p>&nbsp;</p>
            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;!--
@@ -428,12 +425,11 @@ Thread.currentThread().setContextClassLoader(classLoader);
 </pre> 
             </div>
            </div>
-           <p>&nbsp;</p>
           </blockquote><p>You can also use the CARGO JBoss remote deployer to remotely deploy to JBoss farms versions 5.x and newer. To do so, use these two properties:</p>
           <ul>
            <li><code>cargo.jboss.clustered</code>: if <code>true</code>, deployment is done in the <code>farm</code> directory</li>
            <li><code>cargo.jboss.configuration</code>: JBoss profile name, default name is <code>default</code></li>
-          </ul><p>&nbsp;</p>
+          </ul>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
            <p class="title">JBoss socket connection bug - java.lang.IllegalArgumentException: port out of range:-1</p>
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
@@ -516,14 +512,13 @@ fi
             </div>
             <p>Once the <code>/etc/hosts</code> file is corrected, restart JBoss AS and run the tests again. Your socket connection error should be gone!</p>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss7x" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="JBossRemoteDeployer-JBoss7.0.x,7.1.x,7.2.x,7.3.x,7.4.xand7.5.x/WildFly8.xand9.x">JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x / WildFly 8.x and 9.x</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x as well as WildFly 8.x and 9.x, with some differences:</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss7x" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="JBossRemoteDeployer-JBoss7.0.x,7.1.x,7.2.x,7.3.x,7.4.xand7.5.x/WildFly8.x,9.xand10.x">JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x / WildFly 8.x, 9.x and 10.x</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x as well as WildFly 8.x, 9.x and 10.x, with some differences:</p>
           <ul>
            <li>The JAR files to include are different</li>
            <li>JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x use the <code>cargo.jboss.management-native.port</code> port</li>
-           <li>WildFly 8.x and 9.x use the <code>cargo.jboss.management-http.port</code> port</li>
+           <li>WildFly 8.x, 9.x and 10.x use the <code>cargo.jboss.management-http.port</code> port</li>
           </ul><p>The following examples detail these differences.</p><p>Here is an example code for the users of the Java API:</p>
           <blockquote>
-           <p>&nbsp;</p>
            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">/**
@@ -569,10 +564,8 @@ Thread.currentThread().setContextClassLoader(classLoader);
 </pre> 
             </div>
            </div>
-           <p>&nbsp;</p>
           </blockquote><p>Here is an example Maven2 plugin configuration:</p>
           <blockquote>
-           <p>&nbsp;</p>
            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
@@ -603,8 +596,7 @@ Thread.currentThread().setContextClassLoader(classLoader);
 </pre> 
             </div>
            </div>
-           <p>&nbsp;</p>
-          </blockquote><p>&nbsp;</p> </td> 
+          </blockquote><p><br></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

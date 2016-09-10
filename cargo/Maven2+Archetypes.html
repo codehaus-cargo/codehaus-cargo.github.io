@@ -311,17 +311,17 @@
           </ul><p>That archetype also demonstrates another powerful feature of Codehaus Cargo coupled with Maven 2 / Maven 3. If you now run:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn clean verify -P tomcat6x
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn clean verify -P tomcat7x
 </pre> 
            </div>
-          </div><p>the same steps will be done with Tomcat instead of Jetty; thanks to Maven 2 / Maven 3's profiles.</p><p>The archetype actually ships with&nbsp;Maven 2 / Maven 3 profiles for the&nbsp;<a href="Jetty+7.x.html"><strong>jetty7x</strong></a> (default), <a href="Jetty+6.x.html"><strong>jetty6x</strong></a>, <a href="Tomcat+6.x.html"><strong>tomcat6x</strong></a>, <a href="JOnAS+5.x.html"><strong>jonas5x</strong></a>, <a href="JBoss+5.1.x.html"><strong>jboss51x</strong></a>, <a href="JBoss+7.1.x.html"><strong>jboss71x</strong></a>, <a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a> and <strong><a href="Geronimo+3.x.html">geronimo3x</a></strong> containers. We tried to show with these archetypes as many examples as possible, so you will find that:</p>
+          </div><p>the same steps will be done with Tomcat instead of Jetty; thanks to Maven 2 / Maven 3's profiles.</p><p>The archetype actually ships with&nbsp;Maven 2 / Maven 3 profiles for the&nbsp;<a href="Jetty+8.x.html"><strong>jetty8x</strong></a> (default), <a href="Jetty+7.x.html"><strong>jetty7x</strong></a>, <a href="Tomcat+7.x.html"><strong>tomcat7x</strong></a>, <a href="JOnAS+5.x.html"><strong>jonas5x</strong></a>, <a href="JBoss+7.1.x.html"><strong>jboss71x</strong></a>, <a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a>, <strong><a href="Geronimo+3.x.html">geronimo3x</a></strong> and <strong><a href="WildFly+10.x.html">wildfly10x</a></strong> containers. We tried to show with these archetypes as many examples as possible, so you will find that:</p>
           <ul>
            <li>Some of these profiles define a <a href="Standalone+Local+Configuration.html"><strong>standalone</strong></a>&nbsp; container:
             <ul>
-             <li>The profiles <a href="Jetty+7.x.html"><strong>jetty7x</strong></a>,&nbsp;<a href="JOnAS+5.x.html"><strong>jonas5x</strong></a>, <a href="JBoss+7.1.x.html"><strong>jboss71x</strong></a>,&nbsp;<a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a> and <strong><a href="Geronimo+3.x.html">geronimo3x</a></strong> download the server using the <a href="Installer.html#Installer-installer_with_maven2_dependencies">ArtifactInstaller</a>.</li>
-             <li>The profiles <a href="JBoss+5.1.x.html"><strong>jboss51x</strong></a><a href="Glassfish+3.x.html">Glassfish 3.x</a> and&nbsp;<a href="Tomcat+6.x.html"><strong>tomcat6x</strong></a> download the server using the <a href="Installer.html">ZipUrlInstaller</a>.</li>
+             <li>The profiles <a href="Jetty+8.x.html"><strong>jetty8x</strong></a>,&nbsp;<a href="JOnAS+5.x.html"><strong>jonas5x</strong></a>, <a href="JBoss+7.1.x.html"><strong>jboss71x</strong></a>,&nbsp;<a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a>, <strong><a href="Geronimo+3.x.html">geronimo3x</a></strong> and <strong><a href="WildFly+10.x.html">wildfly10x</a></strong> download the server using the <a href="Installer.html#Installer-installer_with_maven2_dependencies">ArtifactInstaller</a>.</li>
+             <li>The profile <a href="Tomcat+7.x.html"><strong>tomcat7x</strong></a> downloads the server using the <a href="Installer.html">ZipUrlInstaller</a>.</li>
             </ul></li>
-           <li>The profile&nbsp;<a href="Jetty+6.x.html"><strong>jetty6x</strong></a> define an <a href="Embedded+Container.html"><strong>embedded</strong></a> container.</li>
+           <li>The profile&nbsp;<a href="Jetty+7.x.html"><strong>jetty7x</strong></a> define an <a href="Embedded+Container.html"><strong>embedded</strong></a> container.</li>
           </ul><p>You can of course add and use any other container from the <a href="Containers.html">Containers</a> list.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-separate" data-hasbody="false" data-macro-name="anchor"> </span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
@@ -355,7 +355,7 @@
           </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>The overall remaining instructions for this archetype remain the same as the <em>Single Webapp Module Archetype</em> archetype, with the following differences:</p>
           <ul>
            <li>Not all containers support DataSources. For details configuring DataSource, please read: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</li>
-           <li>The profiles that ship with this archetype are&nbsp;<a href="Jetty+7.x.html"><strong>jetty7x</strong></a> (default), <a href="Tomcat+6.x.html"><strong>tomcat6x</strong></a>, <a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a>, <a href="JBoss+5.1.x.html"><strong>jboss51x</strong></a>,&nbsp;<a href="JBoss+7.1.x.html"><strong>jboss71x</strong></a>, <a href="JOnAS+5.x.html"><strong>jonas5x</strong></a> and <strong><a href="Geronimo+3.x.html">geronimo3x</a></strong>.</li>
+           <li>The profiles that ship with this archetype are&nbsp;<a href="Jetty+7.x.html"><strong>jetty7x</strong></a> (default), <a href="Tomcat+7.x.html"><strong>tomcat7x</strong></a>, <a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a>,&nbsp;<a href="JBoss+7.1.x.html"><strong>jboss71x</strong></a>, <a href="JOnAS+5.x.html"><strong>jonas5x</strong></a>, <strong><a href="Geronimo+3.x.html">geronimo3x</a></strong> and <strong><a href="WildFly+10.x.html">wildfly10x</a></strong>.</li>
           </ul><p>As in the other examples, what's interesting to see is that the DataSource definition on CARGO remains the same even if you switch container; as CARGO handles all the container-specific DataSource setup steps.</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
@@ -366,7 +366,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h2 id="Maven2Archetypes-Archetypeshowingthestartingandstoppingofmultiplecontainerssimultaneously">Archetype showing the starting and stopping of multiple containers simultaneously</h2><p>Shows how to configure the&nbsp;<a href="Maven2+plugin.html">Maven2 plugin</a> and&nbsp;<a href="Ant+support.html">Ant tasks</a> in order to be able of starting (and stopping) multiple containers at the same time. To run it, execute (one one line):</p>
+          </center><h2 id="Maven2Archetypes-Archetypeshowingthestartingandstoppingofmultiplecontainerssimultaneously">Archetype showing the starting and stopping of multiple containers simultaneously</h2><p>Shows how to configure the various Maven capabilities together with the <a href="Ant+support.html">Codehaus Cargo Ant tasks</a> in order to be able of starting (and stopping) multiple containers at the same time. To run it, execute (one one line):</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn archetype:generate -DarchetypeGroupId=org.codehaus.cargo
@@ -406,10 +406,10 @@
            <li><strong>password</strong> sets the password, the archetype sets it to an empty password</li>
           </ul><p>This archetype ships with Maven 2 / Maven 3 profiles for the following containers:</p>
           <ul>
-           <li><a href="Tomcat+6.x.html"><strong>tomcat6x</strong></a> (default), using the Tomcat manager</li>
-           <li><a href="Jetty+6.x.html"><strong>jetty6x</strong></a> and <a href="Jetty+7.x.html"><strong>jetty7x</strong></a>. Before using the Jetty remote deployer, please read: <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a>.</li>
+           <li><strong><a href="Tomcat+7.x.html"><strong>tomcat7x</strong></a></strong> (default), using the Tomcat manager</li>
+           <li><a href="Jetty+8.x.html"><strong>jetty8x</strong></a>. Before using the Jetty remote deployer, please read: <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a>.</li>
            <li><strong><a href="JOnAS+5.x.html"><strong>jonas5x</strong></a></strong></li>
-           <li><a href="JBoss+5.1.x.html"><strong>jboss51x</strong></a> and <a href="JBoss+7.x.html"><strong>jboss7x</strong></a>, including adding in the special dependencies for the JBoss remote deployer. For more details, please read: <a href="JBoss+Remote+Deployer.html">JBoss Remote Deployer</a>.</li>
+           <li><a href="JBoss+7.x.html"><strong>jboss7x</strong></a>, including adding in the special dependencies for the JBoss remote deployer. For more details, please read: <a href="JBoss+Remote+Deployer.html">JBoss Remote Deployer</a>.</li>
            <li><a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a>, including adding in the GlassFish-specific dependencies for JSR88. For more details, please read: <a href="JSR88.html">JSR88</a>.</li>
           </ul><script type="text/javascript">
   // Google Ads code
@@ -438,17 +438,17 @@
           </div><p>where <strong>&lt;daemon.hostname&gt;</strong> is the hostname / IP address of the machine running the <a href="Cargo+Daemon.html">Cargo Daemon</a> and <strong>&lt;daemon.port&gt;</strong> the port for it.That command will:</p>
           <ul>
            <li>Build the web application</li>
-           <li>If needed, download Jetty</li>
-           <li>Send the downloaded Jetty package to the remote <a href="Cargo+Daemon.html">Cargo Daemon</a> instance</li>
-           <li>Configure Jetty on the remote machine</li>
-           <li>Start the Jetty container on the remote machine</li>
-           <li>Deploy your web application to the Jetty container on the remote machine</li>
+           <li>If needed, download the container to start on the Cargo Daemon</li>
+           <li>Send the downloaded container package to the remote <a href="Cargo+Daemon.html">Cargo Daemon</a> instance</li>
+           <li>Configure the&nbsp;container on the machine running the Cargo Daemon</li>
+           <li>Start the container on the machine running the Cargo Daemon</li>
+           <li>Deploy your web application to the container on the machine running the Cargo Daemon</li>
            <li>Run some tests on the deployed application<br>
             <ul>
              <li>We've used classic JUnit tests, but you can use whatever you like, really</li>
             </ul></li>
-           <li>Stop the Jetty container on the remote machine</li>
-          </ul><p>The archetype actually ships with Maven 2 / Maven 3 profiles for the&nbsp;<a href="Jetty+7.x.html"><strong>jetty7x</strong></a> (default),&nbsp;<a href="Tomcat+6.x.html"><strong>tomcat6x</strong></a>, <a href="JOnAS+5.x.html"><strong>jonas5x</strong></a>, <a href="JBoss+5.1.x.html"><strong>jboss51x</strong></a>, <a href="JBoss+7.1.x.html"><strong>jboss71x</strong></a>, <a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a> and <strong><a href="Geronimo+3.x.html">geronimo3x</a></strong> containers.</p><p>You can of course add and use any other container from the <a href="Containers.html">Containers</a> list.</p> </td> 
+           <li>Stop the container on the machine running the Cargo Daemon</li>
+          </ul><p>The archetype actually ships with Maven 2 / Maven 3 profiles for the&nbsp;<a href="Jetty+7.x.html"><strong>jetty7x</strong></a> (default),&nbsp;<a href="Tomcat+7.x.html"><strong>tomcat7x</strong></a>, <a href="JOnAS+5.x.html"><strong>jonas5x</strong></a>, <a href="JBoss+7.1.x.html"><strong>jboss71x</strong></a>, <a href="Glassfish+3.x.html"><strong>glassfish3x</strong></a>, <strong><a href="Geronimo+3.x.html">geronimo3x</a></strong> and <strong><a href="WildFly+10.x.html">wildfly10x</a></strong> containers.</p><p>You can of course add and use any other container from the <a href="Containers.html">Containers</a> list.</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
