@@ -167,6 +167,7 @@
        <li>TomEE
         <ul class="alternate">
          <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+         <li><a href="TomEE+7.x.html">TomEE 7.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -1228,6 +1229,16 @@
              </tr>
             </tbody>
            </table>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>With Tomcat 9, the Tomcat manager has multiple aspects to be careful about:</p>
+            <ul>
+             <li>Your browser by default accesses the HTML-based manager whereas CARGO needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a class="external-link" href="http://production27:8080/manager/text" rel="nofollow">http://production27:8080/manager/text</a></code></li>
+             <li>The text-based manager requires to be accessed by a user with the <code>manager-script</code> role; and by default no user has that role. As a result, please make sure you modify your <code>tomcat-users.xml</code> file to give that role to a user.<br> You can read more in the Tomcat documentation: <a class="external-link" href="http://tomcat.apache.org/tomcat-9.0-doc/manager-howto.html" rel="nofollow">http://tomcat.apache.org/tomcat-9.0-doc/manager-howto.html</a></li>
+            </ul>
+           </div>
           </div><h3 id="Tomcat9.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br> The server used for tests is downloaded from: <a class="external-link" href="http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/9.0.0.M10/tomcat-9.0.0.M10.zip" rel="nofollow">http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/9.0.0.M10/tomcat-9.0.0.M10.zip</a></p><p><br></p> </td> 
         </tr> 
        </tbody>
