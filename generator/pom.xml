@@ -71,6 +71,7 @@
                 <delete dir="../cargo/attachments"/>
                 <mkdir dir="../cargo/attachments"/>
                 <copy todir="../cargo">
+                  <fileset dir="." includes="index.html"/>
                   <fileset dir="${project.build.directory}" includes="*.html" excludes=".*.html"/>
                 </copy>
                 <copy todir="../cargo/attachments">

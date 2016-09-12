@@ -1,0 +1,325 @@
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - CARGO 1.4.10 is now available</title> 
+  <script type="text/javascript">
+    // Google Analytics code
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31476258-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script> 
+  <script type="text/javascript">
+    if (location.href.indexOf("http://") === 0) {
+      location.replace("https://" + location.href.substring(7));
+    }
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" class="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr height="83"> 
+     <td colspan="2" style="padding:0px"> 
+      <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
+       <table width="100%" class="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+        <tbody>
+         <tr> 
+          <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+          <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> </td> 
+    </tr> 
+    <tr> 
+     <td class="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
+         <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
+         <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+         <li><a href="JBoss+7.5.x.html">JBoss 7.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+         <li><a href="Tomcat+9.x.html">Tomcat 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+         <li><a href="TomEE+7.x.html">TomEE 7.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+         <li><a href="WebLogic+12.2.x.html">WebLogic 12.2.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+         <li><a href="WebSphere+Liberty.html">WebSphere Liberty</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+         <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
+         <li><a href="WildFly+10.x.html">WildFly 10.x</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="Source+code.html">Source code</a></li>
+       <li><a href="Mailing+Lists.html">Mailing Lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Project+Structure.html">Project Structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Cargo+Code+Style.html">Code style</a></li>
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/collector/pages.action?key=CARGO">Site</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/pages/viewrecentblogposts.action?key=CARGO">News</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td valign="top" style="padding:0px"> 
+      <table width="100%" style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td class="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
+          <table width="100%"> 
+           <tbody>
+            <tr> 
+             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; CARGO 1.4.10 is now available</b> </td> 
+             <td align="right"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td class="rightColumn"> 
+          <div class="decommission-warning" style="display:none"> 
+           <p class="title">Action required!</p> 
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
+           <div class="confluence-information-macro-body"> 
+            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
+            <ul> 
+             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
+               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo mailing lists are now on Google Groups. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
+              </ul> </li> 
+             <li> The Cargo issue tracker is on Atlassian. 
+              <ul> 
+               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
+              </ul> </li> 
+            </ul> 
+            <p></p> 
+           </div> 
+          </div> <script type="text/javascript">
+                if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
+                  document.getElementById("decommission-warning").style.display = "";
+                }
+              </script> <p>Dear CARGO enthusiasts</p><p>CARGO 1.4.10 is now available - with this time only two bug fixes and two new features:</p>
+          <ul>
+           <li>Bug fixes:
+            <ul>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1277" class="external-link" rel="nofollow">CARGO-1277</a>] - Cannot release CARGO on JDK 8</li>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1279" class="external-link" rel="nofollow">CARGO-1279</a>] - The default deployable created by the Maven2/Maven3 plugin ignores the&nbsp;<code>&lt;finalName&gt;</code></li>
+            </ul></li>
+           <li>Improvements:
+            <ul>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1281" class="external-link" rel="nofollow">CARGO-1281</a>] - Allow binding Tomcat&nbsp;<code>&lt;Connector&gt;</code> to bind to specific address</li>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1275" class="external-link" rel="nofollow">CARGO-1275</a>] - Add support for <a href="http://en.wikipedia.org/wiki/Digest_access_authentication" class="external-link" rel="nofollow">DIGEST</a> authentication to remote HTTP deployments on Tomcat</li>
+            </ul></li>
+          </ul><p>To try it out:</p>
+          <ul>
+           <li>Users of the <a class="external-link" href="http://cargo.codehaus.org/Maven2+plugin" rel="nofollow">Maven2/Maven3 plugin</a> simply need to use the CARGO plugin version <strong>1.4.10</strong></li>
+           <li>Users of the <a class="external-link" href="http://cargo.codehaus.org/Javadocs" rel="nofollow">Java API</a> can download the new Uberjar from <a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.10/cargo-core-uberjar-1.4.10.jar" class="external-link" rel="nofollow">http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.4.10/cargo-core-uberjar-1.4.10.jar</a></li>
+           <li>Similarly, users of the&nbsp;<a class="external-link" href="http://cargo.codehaus.org/Ant+support" rel="nofollow">ANT tasks</a> can download the new ANT tasks from <a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.10/cargo-ant-1.4.10.jar" class="external-link" rel="nofollow">http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.4.10/cargo-ant-1.4.10.jar</a></li>
+           <li>Finally, the ones who want to see the&nbsp;<a class="external-link" href="http://cargo.codehaus.org/Cargo+Daemon" rel="nofollow">Cargo Daemon</a> can get it from&nbsp;<a href="http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.10/cargo-daemon-webapp-1.4.10.war" class="external-link" rel="nofollow">http://repo1.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.4.10/cargo-daemon-webapp-1.4.10.war</a> and can try the instructions on <a class="external-link" href="http://cargo.codehaus.org/Cargo+Daemon" rel="nofollow">http://cargo.codehaus.org/Cargo+Daemon</a></li>
+          </ul><p>Enjoy!</p> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr height="23"> 
+     <td colspan="2" style="padding:0px"> 
+      <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
+       <table width="100%"> 
+        <tbody>
+         <tr> 
+          <td align="left" valign="top"> Copyright 2004-2016. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> </td> 
+    </tr> 
+   </tbody>
+  </table>   
+ </body>
+</html>

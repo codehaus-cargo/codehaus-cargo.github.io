@@ -103,7 +103,7 @@ public class WebsiteGenerator implements Runnable
             tempDirectory.mkdirs();
         }
 
-        URL url = new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/space/CARGO/content/page?limit=2048");
+        URL url = new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/space/CARGO/content?limit=2048");
         URLConnection connection = url.openConnection();
         StringBuilder sb = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream())))
@@ -113,31 +113,46 @@ public class WebsiteGenerator implements Runnable
                 sb.append(line);
             }
         }
-        JSONArray results = new JSONObject(sb.toString()).getJSONArray("results");
-        System.out.println("Found " + results.length() + " objects to handle");
 
-        files = Collections.synchronizedSet(new HashSet<File>(results.length()));
+        JSONArray pages = new JSONObject(sb.toString()).getJSONObject("page").getJSONArray("results");
+        System.out.println("Found " + pages.length() + " pages to handle");
+        files = Collections.synchronizedSet(new HashSet<File>(pages.length()));
         exceptions = Collections.synchronizedMap(new HashMap<URL, Exception>());
-        attachments = Collections.synchronizedSet(new HashSet<URL>(results.length()));
-        for (int i = 0; i < results.length(); i++)
+        attachments = Collections.synchronizedSet(new HashSet<URL>(pages.length()));
+        for (int i = 0; i < pages.length(); i++)
         {
-            JSONObject links = results.getJSONObject(i).getJSONObject("_links");
+            JSONObject links = pages.getJSONObject(i).getJSONObject("_links");
             WebsiteGenerator runnable = new WebsiteGenerator();
             runnable.url = new URL(links.getString("self") + "?expand=body.view");
             Thread thread = new Thread(runnable);
             executor.submit(thread);
         }
 
-        while (executor.getCompletedTaskCount() < results.length() + attachments.size())
+        JSONArray blogposts = new JSONObject(sb.toString()).getJSONObject("blogpost").getJSONArray("results");
+        System.out.println("Found " + blogposts.length() + " blog posts to handle");
+        files = Collections.synchronizedSet(new HashSet<File>(blogposts.length()));
+        exceptions = Collections.synchronizedMap(new HashMap<URL, Exception>());
+        attachments = Collections.synchronizedSet(new HashSet<URL>(blogposts.length()));
+        for (int i = 0; i < blogposts.length(); i++)
+        {
+            JSONObject links = blogposts.getJSONObject(i).getJSONObject("_links");
+            WebsiteGenerator runnable = new WebsiteGenerator();
+            runnable.url = new URL(links.getString("self") + "?expand=body.view");
+            Thread thread = new Thread(runnable);
+            executor.submit(thread);
+        }
+
+        while (executor.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
         {
             Thread.sleep(5000);
             System.out.println("  - Completed " + executor.getCompletedTaskCount() + "/"
-                + (results.length() + attachments.size()) + " tasks - "
+                + (pages.length() + blogposts.length() + attachments.size()) + " tasks - "
                 +  ((System.currentTimeMillis() - start) / 1000) + " seconds spent so far");
         }
-        if (executor.getCompletedTaskCount() < results.length() + attachments.size())
+        if (executor.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
         {
-            throw new Exception("WARNING: Only completed " + executor.getCompletedTaskCount() + " tasks out of " + (results.length() + attachments.size()));
+            throw new Exception("WARNING: Only completed " + executor.getCompletedTaskCount()
+                + " tasks out of " + (pages.length() + blogposts.length() + attachments.size()));
         }
         System.out.println("All tasks complete");
         for (File file : files)
@@ -339,6 +354,10 @@ public class WebsiteGenerator implements Runnable
                     {
                         anchor = filename.substring(hash);
                         filename = filename.substring(0, hash);
+                    }
+                    if (filename.contains("/"))
+                    {
+                        filename = filename.substring(filename.lastIndexOf('/') + 1);
                     }
                     sb.append(filename);
                     sb.append(".html");
