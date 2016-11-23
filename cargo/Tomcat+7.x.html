@@ -381,10 +381,10 @@
            </table>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
-           <p class="title">Running multiple Tomcat 7.x / Tomcat 8.x embedded containers within the same JVM</p>
+           <p class="title">Running multiple Tomcat 7.x / Tomcat 8.x / Tomcat 9.x embedded containers within the same JVM</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>Tomcat 7.x has introduced a class called <code>TomcatURLStreamHandlerFactory</code> where the singleton has a static <code>instance</code> field and a final <code>registered</code> attribute which are not always in sync and cause unexpected exceptions. Due to this, it is not possible to execute Tomcat 7.x and Tomcat 8.x embedded in the same JVM, in addition running one of these Tomcat embedded versions one after the other within the same JVM but different classpaths might also fail.</p>
+            <p>Tomcat 7.x has introduced a class called <code>TomcatURLStreamHandlerFactory</code> where the singleton has a static <code>instance</code> field and a final <code>registered</code> attribute which are not always in sync and cause unexpected exceptions. Due to this, it is not possible to execute Tomcat 7.x, Tomcat 8.x and / or Tomcat 9.x embedded in the same JVM, in addition running one of these Tomcat embedded versions one after the other within the same JVM but different classpaths might also fail.</p>
             <p>If you want to be safe, prefer using the <a href="Installed+Container.html">Installed Container</a>.</p>
            </div>
           </div><h3 id="Tomcat7.x-ConfigurationFeatures">Configuration Features</h3>
