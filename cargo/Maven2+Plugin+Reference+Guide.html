@@ -335,6 +335,12 @@
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Defaults to <code>false</code>, you can also steer it using the system property <code>cargo.maven.skip<br></code></p></td>
              </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><code>&lt;ignoreFailures&gt;</code></td>
+              <td colspan="1" class="confluenceTd"><p>Set this to <code>true</code> to make the mojo ignore failures, so that Maven 2 / Maven 3 can still progress through on integration tests with more than one container domain started</p></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">Defaults to <code>false</code>, you can also steer it using the system property <code>cargo.ignore.failures</code></td>
+             </tr>
             </tbody>
            </table>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-configuration" data-hasbody="false" data-macro-name="anchor"> </span></p>
@@ -454,6 +460,12 @@
               <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
              <tr>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;id&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd">Unique identifier for the Maven 2 / Maven 3 to be able to start, configure and stop multiple containers separately.</td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+             </tr>
+             <tr>
               <td class="confluenceTd"><p><code>&lt;implementation&gt;</code></p></td>
               <td class="confluenceTd"><p>Full classname of a custom container implementation to use. In that case, the custom container is registered with the <code>&lt;containerId&gt;</code> and <code>&lt;type&gt;</code> specified</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
@@ -506,6 +518,12 @@
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-deployer" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p><code><strong>&lt;deployer&gt;</strong></code> <strong>elements</strong></p></th>
