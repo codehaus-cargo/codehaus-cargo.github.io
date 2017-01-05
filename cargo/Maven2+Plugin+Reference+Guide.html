@@ -448,6 +448,12 @@
               <td class="confluenceTd"><p><code>jetty7x</code></p></td>
              </tr>
              <tr>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;contextKeySuffix&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd">Unique suffix for the Maven 2 / Maven 3 plugin to be able to start, configure and stop multiple containers separately with different deployments.</td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+             </tr>
+             <tr>
               <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-dependency">&lt;dependencies&gt;</a></code></p></td>
               <td class="confluenceTd"><p>List of <a href="Container+Classpath.html">extra dependencies</a> or <a href="Application+Classpath.html">shared dependencies</a> that will be added to the container or applications execution classpath.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
@@ -458,12 +464,6 @@
               <td class="confluenceTd"><p>Location where the container is installed. If specified in conjunction with the <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> or <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element, it will override the home directory defined by the installer</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><p><code>&lt;id&gt;</code></p></td>
-              <td colspan="1" class="confluenceTd">Unique identifier for the Maven 2 / Maven 3 to be able to start, configure and stop multiple containers separately.</td>
-              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td colspan="1" class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;implementation&gt;</code></p></td>
