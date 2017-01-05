@@ -373,13 +373,13 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;home&gt;</code></p></td>
-              <td class="confluenceTd"><p>For standalone configuration this is the location where Cargo will create the configuration and for existing configuration this is where it is located</p></td>
+              <td class="confluenceTd"><p>For standalone configuration this is the location where Cargo will create the configuration and for existing configuration this is where it is located.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><code>${project.build.directory}/cargo/configurations/${containerId</code>}</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;implementation&gt;</code></p></td>
-              <td class="confluenceTd"><p>Full classname of a custom configuration implementation to use. In that case the custom configuration is registered with the <code>&lt;containerId&gt;</code> and <code>&lt;type&gt;</code> specified</p></td>
+              <td class="confluenceTd"><p>Full classname of a custom configuration implementation to use. In that case the custom configuration is registered with the <code>&lt;containerId&gt;</code> and <code>&lt;type&gt;</code> specified.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Defaults to the Cargo-provided implementation if not specified</p></td>
              </tr>
@@ -407,7 +407,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
-              <td class="confluenceTd"><p><a href="Configuration.html">Configuration's type</a>. Valid values are <code>standalone</code>, <code>existing</code> and <code>runtime</code></p></td>
+              <td class="confluenceTd"><p><a href="Configuration.html">Configuration's type</a>. Valid values are <code>standalone</code>, <code>existing</code> and <code>runtime</code>.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><code>standalone</code></p></td>
              </tr>
@@ -437,21 +437,21 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;append&gt;</code></p></td>
-              <td class="confluenceTd"><p>If <code>true</code>, then the file specified by <code>&lt;output&gt;</code> will not be erased across different runs</p></td>
+              <td class="confluenceTd"><p>If <code>true</code>, then the file specified by <code>&lt;output&gt;</code> will not be erased across different runs.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><code>false</code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;containerId&gt;</code></p></td>
-              <td class="confluenceTd"><p>Id of the container to use. Valid values can be found in the <a href="Containers.html">description page for each container</a></p></td>
+              <td class="confluenceTd"><p>Id of the container to use. Valid values can be found in the <a href="Containers.html">description page for each container</a>.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><code>jetty7x</code></p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><p><code>&lt;contextKeySuffix&gt;</code></p></td>
-              <td colspan="1" class="confluenceTd">Unique suffix for the Maven 2 / Maven 3 plugin to be able to start, configure and stop multiple containers separately with different deployments.</td>
+              <td colspan="1" class="confluenceTd"><p><code>&lt;contextKey&gt;</code></p></td>
+              <td colspan="1" class="confluenceTd"><p>Container context key, which can be used to&nbsp;start, stop, configure or deploy to the same Cargo container (together with its configuration) from different Maven artifacts.</p></td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
-              <td colspan="1" class="confluenceTd"><p>No default</p></td>
+              <td colspan="1" class="confluenceTd"><p>No reusable default</p><p>The Cargo Maven 2 / Maven 3 plugin will actually generate a unique context key for each container based on the container and configuration's type and home - Which is not meant to be reused by end users.</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-dependency">&lt;dependencies&gt;</a></code></p></td>
@@ -461,25 +461,25 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;home&gt;</code></p></td>
-              <td class="confluenceTd"><p>Location where the container is installed. If specified in conjunction with the <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> or <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element, it will override the home directory defined by the installer</p></td>
+              <td class="confluenceTd"><p>Location where the container is installed. If specified in conjunction with the <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> or <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element, it will override the home directory defined by the installer.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;implementation&gt;</code></p></td>
-              <td class="confluenceTd"><p>Full classname of a custom container implementation to use. In that case, the custom container is registered with the <code>&lt;containerId&gt;</code> and <code>&lt;type&gt;</code> specified</p></td>
+              <td class="confluenceTd"><p>Full classname of a custom container implementation to use. In that case, the custom container is registered with the <code>&lt;containerId&gt;</code> and <code>&lt;type&gt;</code> specified.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Defaults to the Cargo-provided implementation if not specified</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;log&gt;</code></p></td>
-              <td class="confluenceTd"><p>Path to a file where Cargo logs are saved</p></td>
+              <td class="confluenceTd"><p>Path to a file where Cargo logs are saved.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Logs to the Maven 2 / Maven 3 console if no log file is specified</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;output&gt;</code></p></td>
-              <td class="confluenceTd"><p>Path to a file where container logs are saved</p></td>
+              <td class="confluenceTd"><p>Path to a file where container logs are saved.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Logs to the file specified by the <code>&lt;log&gt;</code> element or to the Maven 2 / Maven 3 console if no such file has been specified</p></td>
              </tr>
@@ -491,25 +491,25 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><a href="Container+Timeout.html">&lt;timeout&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>The timeout after which Cargo reports an error if the container is not started or stopped</p></td>
+              <td class="confluenceTd"><p>The timeout after which Cargo reports an error if the container is not started or stopped.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><code>120000</code> ms (2 minutes)</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;type&gt;</code></p></td>
-              <td class="confluenceTd"><p>The <a href="Container.html">container's type</a>. Valid values are <code>installed</code>, <code>embedded</code> and <code>remote</code></p></td>
+              <td class="confluenceTd"><p>The <a href="Container.html">container's type</a>. Valid values are <code>installed</code>, <code>embedded</code> and <code>remote</code>.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Default value is <code>installed</code> unless the <code>&lt;containerId&gt;</code> has not been specified, in which case the default is to use the <a href="Jetty+8.x.html">Jetty 8.x</a> <a href="Installed+Container.html">installed local container</a>.</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a></p></td>
+              <td class="confluenceTd"><p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a>.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>Defines the location of a container Maven 2 / Maven 3 artifact that will be <a href="Installer.html">downloaded and installed</a></p></td>
+              <td class="confluenceTd"><p>Defines the location of a container Maven 2 / Maven 3 artifact that will be <a href="Installer.html">downloaded and installed</a>.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven2PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven2PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
@@ -548,6 +548,12 @@
           </div><p><br><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-configfile" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p><code><strong>&lt;configfile&gt;</strong></code> <strong>elements</strong></p></th>
@@ -563,13 +569,13 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;todir&gt;</code></p></td>
-              <td class="confluenceTd"><p>The target directory, relative to configuration home, where the file should be copied</p></td>
+              <td class="confluenceTd"><p>The target directory, relative to configuration home, where the file should be copied.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>If not specified, the file will be copied to the configuration's home directory</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;tofile&gt;</code></p></td>
-              <td class="confluenceTd"><p>The target file name to use</p></td>
+              <td class="confluenceTd"><p>The target file name to use.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>The original file name</p></td>
              </tr>
@@ -812,6 +818,12 @@
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-zipUrlInstaller" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p><code><strong>&lt;zipUrlInstaller&gt;</strong></code> <strong>elements</strong></p></th>
