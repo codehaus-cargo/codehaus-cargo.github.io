@@ -449,7 +449,11 @@
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><p><code>&lt;contextKey&gt;</code></p></td>
-              <td colspan="1" class="confluenceTd"><p>Container context key, which can be used to&nbsp;start, stop, configure or deploy to the same Cargo container (together with its configuration) from different Maven artifacts.</p></td>
+              <td colspan="1" class="confluenceTd"><p>Container context key, which can be used for two purposes:</p>
+               <ol>
+                <li>Start, stop, configure or deploy to the same Cargo container (together with its configuration) from different Maven artifacts.</li>
+                <li>Inject configuration properties via the Maven&nbsp;<code>settings.xml</code> file, as explained in the <a href="#Maven2PluginReferenceGuide-settingsXML">setting configuration options via the Maven 2 / Maven 3 settings.xml section</a>.</li>
+               </ol></td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td colspan="1" class="confluenceTd"><p>No reusable default</p><p>The Cargo Maven 2 / Maven 3 plugin will actually generate a unique context key for each container based on the container and configuration's type and home - Which is not meant to be reused by end users.</p></td>
              </tr>
@@ -1122,7 +1126,11 @@
 &lt;servers&gt;
 </pre> 
            </div>
-          </div><p>Then, in the Cargo plugin's configuration, use the <code>cargo.server.settings</code> property in order to reference the configuration properties that you have previously defined. For example:</p>
+          </div><p>Then, in the Cargo plugin's configuration, do either of the following in order to inject the configuration properties that you have previously defined in the&nbsp;<code>settings.xml</code> file:</p>
+          <ul>
+           <li>Define a container&nbsp;<code>&lt;contextKey&gt;</code> attribute<br>... or</li>
+           <li>Use the <code>cargo.server.settings</code> property in&nbsp; the container configuration</li>
+          </ul><p>Here comes an example with the second technique:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
@@ -1165,12 +1173,14 @@
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Priority for property values are as follows:</p>
-            <ul>
-             <li>Highest priority: Properties set using environment variables</li>
-             <li>Second priority: Properties that should be loaded using the&nbsp;<code>cargo.server.settings</code> option</li>
-             <li>Third&nbsp;priority: Properties loaded from a file</li>
-             <li>Lowest priority: Properties set in the POM</li>
-            </ul>
+            <ol>
+             <li>First and highest priority: Properties set using environment variables</li>
+             <li>Second priority: Properties loaded from a file</li>
+             <li>Third priority: Properties set in the POM</li>
+             <li>Fourth priority: Properties that should be loaded using the&nbsp;<code>cargo.server.settings</code> option</li>
+             <li>Fifth priority: Properties that should be loaded using <code>&lt;contextKey&gt;</code> option</li>
+             <li>Sixth and lowest priority: Default properties set by the container itself</li>
+            </ol>
            </div>
           </div> </td> 
         </tr> 
