@@ -195,6 +195,7 @@
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
          <li><a href="WildFly+10.x.html">WildFly 10.x</a></li>
+         <li><a href="WildFly+11.x.html">WildFly 11.x</a></li>
         </ul></li>
       </ul><h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
@@ -416,6 +417,12 @@
               <td colspan="1" class="confluenceTd">List of users to be created in container configuration.</td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td colspan="1" class="confluenceTd"><p>No default</p></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><a href="#Maven2PluginReferenceGuide-datasource">&lt;datasources&gt;</a></td>
+              <td colspan="1" class="confluenceTd">List of&nbsp;datasources to be created in container configuration.</td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">No default</td>
              </tr>
             </tbody>
            </table>
@@ -708,6 +715,13 @@
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-prop2" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p><code><strong>&lt;properties&gt;</strong></code> <strong>elements</strong></p></th>
@@ -913,6 +927,12 @@
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-artifactInstaller" data-hasbody="false" data-macro-name="anchor"> </span></p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p><code><strong>&lt;artifactInstaller&gt;</strong></code> <strong>elements</strong></p></th>
@@ -1000,6 +1020,82 @@
                  </div>
                 </div>
                </div></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">No default</td>
+             </tr>
+            </tbody>
+           </table>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginReferenceGuide-datasource" data-hasbody="false" data-macro-name="anchor"> </span></p>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><strong><code><strong>&lt;datasource&gt;</strong></code> elements</strong></th>
+              <th class="confluenceTh">Description</th>
+              <th class="confluenceTh">Mandatory?</th>
+              <th class="confluenceTh">Default value</th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><code>&lt;jndiName&gt;</code></td>
+              <td class="confluenceTd">JNDI name where to find this DataSource.</td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" src="attachments/thumbs_up.png" data-emoticon-name="thumbs-up" alt="(thumbs up)"></p></td>
+              <td class="confluenceTd">No default</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><code>&lt;connectionType&gt;</code></td>
+              <td class="confluenceTd"><p>Type of this DataSource, for example "javax.sql.XADataSource"</p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td class="confluenceTd">No default</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><code>&lt;transactionSupport&gt;</code></td>
+              <td colspan="1" class="confluenceTd">
+               <div class="content-wrapper">
+                Transaction support of the datasource, for example "XA_TRANSACTION"
+                <br>
+               </div></td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">No default</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">&lt;driverClass&gt;</td>
+              <td colspan="1" class="confluenceTd">The class name of the Driver, for example "org.hsqldb.jdbcDriver"</td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">No default</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">&lt;url&gt;</td>
+              <td colspan="1" class="confluenceTd">DataSource connection URL.</td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">No default</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">&lt;username&gt;</td>
+              <td colspan="1" class="confluenceTd">DataSource username.</td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">No default</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">&lt;password&gt;</td>
+              <td colspan="1" class="confluenceTd">DataSource password.</td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">Empty string</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">&lt;id&gt;</td>
+              <td colspan="1" class="confluenceTd">Id used in configuration files.</td>
+              <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td colspan="1" class="confluenceTd">No default</td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">&lt;connectionProperties&gt;</td>
+              <td colspan="1" class="confluenceTd">Extra properties passed to the DataSource.</td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
