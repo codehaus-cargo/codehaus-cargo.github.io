@@ -114,7 +114,7 @@
          <li><a href="Jetty+6.x.html" data-linked-resource-id="491649" data-linked-resource-version="43" data-linked-resource-type="page">Jetty 6.x</a></li>
          <li><a href="Jetty+7.x.html" data-linked-resource-id="491624" data-linked-resource-version="68" data-linked-resource-type="page">Jetty 7.x</a></li>
          <li><a href="Jetty+8.x.html" data-linked-resource-id="491594" data-linked-resource-version="52" data-linked-resource-type="page">Jetty 8.x</a></li>
-         <li><a href="Jetty+9.x.html" data-linked-resource-id="491730" data-linked-resource-version="64" data-linked-resource-type="page">Jetty 9.x</a></li>
+         <li><a href="Jetty+9.x.html" data-linked-resource-id="491730" data-linked-resource-version="65" data-linked-resource-type="page">Jetty 9.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -186,6 +186,7 @@
        <li>WebSphere<br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html" data-linked-resource-id="491587" data-linked-resource-version="26" data-linked-resource-type="page">WebSphere 8.5.x</a></li>
+         <li><a href="WebSphere+9.x.html" data-linked-resource-id="56652121" data-linked-resource-version="1" data-linked-resource-type="page">WebSphere 9.x</a></li>
          <li><a href="WebSphere+Liberty.html" data-linked-resource-id="27295750" data-linked-resource-version="11" data-linked-resource-type="page">WebSphere Liberty</a></li>
         </ul></li>
       </ul>
@@ -299,12 +300,12 @@
            <li>Start Eclipse.</li>
            <li>Go to Windows|Preferences|Java|Build Path|Classpath Variables and add a&nbsp;<code>M2_REPO</code> variable to point to your local Maven2 repository (usually in <code>~user/.m2/repository</code>). See also the documentation on the <a href="http://maven.apache.org/plugins/maven-eclipse-plugin/" class="external-link" rel="nofollow">Maven Eclipse plugin</a>.</li>
            <li>Select Import|Existing Project into Workspace. Point it to the top level directory of the checked-out Cargo sources. You should see something similar to the following figure:</li>
-          </ul><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/import-ide-eclipse-root.jpg" data-image-src="attachments/import-ide-eclipse-root.jpg" data-unresolved-comment-count="0" data-linked-resource-id="491750" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="import-ide-eclipse-root.jpg" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="491688" data-linked-resource-container-version="11"></span></p><p>Note: Maven supports a nested directory structure whereas Eclipse currently only supports a flat structure. The Maven2 Eclipse plugin creates an Eclipse project per Maven module (i.e. per directory containing a <code>pom.xml</code> file). This means that directories with no <code>pom.xml</code> will not be listed. This is a known issue with Eclipse and Maven. In the future the hope is that Eclipse will support nested project structure.</p><h3 id="Importingsources-ForIntelliJIDEAusers">For IntelliJ IDEA users</h3>
+          </ul><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/import-ide-eclipse-root.jpg" data-image-src="attachments/import-ide-eclipse-root.jpg" data-unresolved-comment-count="0" data-linked-resource-id="491750" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="import-ide-eclipse-root.jpg" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="491688" data-linked-resource-container-version="11" data-media-id="f2654c59-e123-4d83-b003-a641f6df5218" data-media-type="file"></span></p><p>Note: Maven supports a nested directory structure whereas Eclipse currently only supports a flat structure. The Maven2 Eclipse plugin creates an Eclipse project per Maven module (i.e. per directory containing a <code>pom.xml</code> file). This means that directories with no <code>pom.xml</code> will not be listed. This is a known issue with Eclipse and Maven. In the future the hope is that Eclipse will support nested project structure.</p><h3 id="Importingsources-ForIntelliJIDEAusers">For IntelliJ IDEA users</h3>
           <ul>
            <li>Type <code>mvn idea:idea</code>. This generates IDEA project files automatically.</li>
            <li>Start IntelliJ IDEA.</li>
            <li>Select File|Open Project... and select the Maven-generated project as shown in the following figure:</li>
-          </ul><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/import-ide-idea-open.jpg" data-image-src="attachments/import-ide-idea-open.jpg" data-unresolved-comment-count="0" data-linked-resource-id="491749" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="import-ide-idea-open.jpg" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="491688" data-linked-resource-container-version="11"></span></p> </td> 
+          </ul><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/import-ide-idea-open.jpg" data-image-src="attachments/import-ide-idea-open.jpg" data-unresolved-comment-count="0" data-linked-resource-id="491749" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="import-ide-idea-open.jpg" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="491688" data-linked-resource-container-version="11" data-media-id="3483d62b-4207-4ddc-8e92-d12ee8508f29" data-media-type="file"></span></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
@@ -315,7 +316,7 @@
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2016. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>
