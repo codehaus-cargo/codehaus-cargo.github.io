@@ -285,28 +285,26 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <h3 id="StaticdeploymentofEAR-Definition">Definition</h3>Deploy an EAR that will be started when the container starts<h3 id="StaticdeploymentofEAR-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Orion 2.x with an EAR to deploy:</p>
+              </script> <h3 id="StaticdeploymentofEAR-Definition">Definition</h3>Deploy an EAR that will be started when the container starts<h3 id="StaticdeploymentofEAR-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting&nbsp;JOnAS 5.x with an EAR to deploy:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">InstalledLocalContainer container = new Orion2xInstalledLocalContainer(
-    new OrionStandaloneConfiguration("target/orion2x"));
-container.setHome("c:/apps/orion-2.0.3");
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">InstalledLocalContainer container = new Jonas5xInstalledLocalContainer(
+    new OrionStandaloneConfiguration("target/jonas5x"));
+container.setHome("c:/apps/jonas-full-5.2.1");
 
 Deployable ear = new EAR("src/data/some.ear");
 container.getConfiguration().addDeployable(ear);
 
-container.start();
-</pre> 
+container.start();</pre> 
            </div>
-          </div><h3 id="StaticdeploymentofEAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting Orion 2.x with an EAR to deploy:</p>
+          </div><h3 id="StaticdeploymentofEAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting&nbsp;JOnAS 5.x with an EAR to deploy:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="orion2x" home="c:/apps/orion-2.0.3" action="start"&gt;
+            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="jonas5x" home="c:/apps/jonas-full-5.2.1" action="start"&gt;
   &lt;configuration&gt;
     &lt;deployable type="ear" file="src/data/some.ear"/&gt;
   &lt;/configuration&gt;
-&lt;/cargo&gt;
-</pre> 
+&lt;/cargo&gt;</pre> 
            </div>
           </div><script type="text/javascript">
   // Google Ads code
