@@ -342,7 +342,7 @@ public class WebsiteGenerator implements Runnable
                 JSONObject result = new JSONObject(value);
                 value = result.getJSONObject("body").getJSONObject("view").getString("value");
 
-                Pattern pattern = Pattern.compile("href=\"/wiki/display/CARGO/[^\"]+\"|href='/wiki/display/CARGO/[^']+'");
+                Pattern pattern = Pattern.compile("href=\"[^\"]*/wiki/[^\"]+/CARGO/[^\"]+\"|href='[^\']*/wiki/[^\']+/CARGO/[^']+'");
                 Matcher matcher = pattern.matcher(value);
                 int start = 0;
                 StringBuilder sb = new StringBuilder();
@@ -350,7 +350,8 @@ public class WebsiteGenerator implements Runnable
                 {
                     sb.append(value.substring(start, matcher.start()));
                     sb.append("href=\"");
-                    String filename = value.substring(matcher.start() + 26, matcher.end() - 1);
+                    String filename = value.substring(matcher.start() + 6, matcher.end() - 1);
+                    filename = filename.substring(filename.lastIndexOf('/') + 1);
                     int hash = filename.indexOf('#');
                     String anchor = "";
                     if (hash != -1)
@@ -358,9 +359,9 @@ public class WebsiteGenerator implements Runnable
                         anchor = filename.substring(hash);
                         filename = filename.substring(0, hash);
                     }
-                    if (filename.contains("/"))
+                    if ("overview".equals(filename))
                     {
-                        filename = filename.substring(filename.lastIndexOf('/') + 1);
+                        filename = "Home";
                     }
                     sb.append(filename);
                     sb.append(".html");
