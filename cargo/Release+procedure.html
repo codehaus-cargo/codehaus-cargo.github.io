@@ -197,6 +197,7 @@
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
          <li><a href="WildFly+10.x.html">WildFly 10.x</a></li>
          <li><a href="WildFly+11.x.html">WildFly 11.x</a></li>
+         <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
       </ul><h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
@@ -315,7 +316,7 @@
             <ol>
              <li>Open the CI page and click on the latest build</li>
              <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="115" data-media-id="d345535c-da97-47b3-8e67-688c219d1cb1" data-media-type="file"></span><br><br></li>
+             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png" data-image-src="attachments/Semaphore%20container%20log.png" data-unresolved-comment-count="0" data-linked-resource-default-alias="Semaphore container log.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="116" data-media-id="d345535c-da97-47b3-8e67-688c219d1cb1" data-media-type="file"></span><br><br></li>
             </ol></li>
            <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
             <ul>
@@ -354,9 +355,8 @@
             <ol>
              <li>Modify the status on the home page about the delivery:<br>
               <ul>
-               <li>Make sure the <a href="Containers.html" rel="nofollow">Containers list</a> is complete</li>
-               <li>Make sure the <a href="Navigation.html" rel="nofollow">Navigation page</a> is complete</li>
-               <li>Make sure the <a href="Javadocs.html" rel="nofollow">Javadocs for the Core Containers</a> are complete</li>
+               <li>Make sure the <a href="Containers.html" rel="nofollow">Containers list</a> is complete.</li>
+               <li>Make sure the <a href="Navigation.html" rel="nofollow">Navigation page</a> is complete.</li>
                <li>Make sure the documentation for each container is up to date.<br><u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code>core/documentation/target/<em>[container's name]</em>.log</code></li>
                <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html" rel="nofollow">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code></li>
                <li>Make sure the <a href="Project+Structure.html" rel="nofollow">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
@@ -374,11 +374,11 @@
            <li>Check that the&nbsp;Codehaus Cargo Web site is up to date. Specifically, perform the following updates:
             <ol>
              <li>Go to the&nbsp;<code>generator</code> subdirectory of the <a href="https://github.com/codehaus-cargo/codehaus-cargo.github.io" class="external-link" rel="nofollow">codehaus-cargo.github.io repository</a> and run a&nbsp;<code>mvn verify</code> command to generate the Web site</li>
-             <li>Download the source code of the tagged version in a temporary location and run a&nbsp;<code>mvn <a rel="nofollow"></a>javadoc:aggregate</code> command to generate the API documentation</li>
-             <li>Move the&nbsp;<code>target/site/apidocs</code> folder to the root of the codehaus-cargo.github.io repository</li>
-             <li>Check in and push all changes, this will automatically update the Codehaus Cargo Web site</li>
+             <li>Download the source code of the tagged version in a temporary location and run a&nbsp;<code>mvn <a rel="nofollow">javadoc:aggregate</a></code><a rel="nofollow"> command to generate the API documentation</a></li>
+             <li><a rel="nofollow">Move the&nbsp;<code>target/site/apidocs</code> folder to the root of the codehaus-cargo.github.io repository</a></li>
+             <li><a rel="nofollow">Check in and push all changes, this will automatically update the Codehaus Cargo Web site</a></li>
             </ol></li>
-           <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>
+           <li><a rel="nofollow">Send an announcement email to </a><a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>
           </ol><p><br></p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">How to insert using the Wiki Markup</p>
@@ -388,7 +388,7 @@
             <ol>
              <li>Edit the document in the Codehaus Confluence</li>
              <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
-             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="115" data-media-id="3126bcc3-11bf-4ba2-81a4-505e088ff5ef" data-media-type="file" title="Insert wiki markup.png"></span></li>
+             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" data-image-src="attachments/Insert%20wiki%20markup.png" data-unresolved-comment-count="0" data-linked-resource-default-alias="Insert wiki markup.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491632" data-linked-resource-container-version="116" data-media-id="3126bcc3-11bf-4ba2-81a4-505e088ff5ef" data-media-type="file" title="Insert wiki markup.png"></span></li>
              <li>Paste the wiki markup content</li>
             </ol>
            </div>
