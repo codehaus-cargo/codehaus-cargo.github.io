@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -287,7 +288,7 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <h1 id="Maven2Archetypes-Maven2/Maven3Archetypes">Maven 2 / Maven 3&nbsp;Archetypes</h1><p>Maven 2 / Maven 3 has a powerful feature called <a href="http://maven.apache.org/guides/introduction/introduction-to-archetypes.html" class="external-link" rel="nofollow">Archetype</a>.</p><p>As part of the Cargo project we have created some archetypes that you can use to get a working sample project that uses the Cargo&nbsp;Maven 2 / Maven 3 plugin.</p><h2 id="Maven2Archetypes-SingleWebappModuleArchetype">Single Webapp Module Archetype</h2><p>This is the most basic example, showing how to configure Cargo and&nbsp;Maven 2 / Maven 3 to run functional tests directly from a single webapp module. To run it, execute (one one line):</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="d4d93499-3b85-4852-a138-b939a2e1671b">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn archetype:generate -DarchetypeGroupId=org.codehaus.cargo
                         -DarchetypeArtifactId=cargo-archetype-webapp-single-module
@@ -295,7 +296,7 @@
 </pre> 
            </div>
           </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>The Maven 2 / Maven 3 archetype plugin will then ask you what&nbsp;<code>groupId</code>, <code>artifactId</code>, <code>version</code>, and&nbsp;<code>package</code> you would like to use for generation. Once your Maven 2 / Maven 3 project is generated, simply run:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="a6fa269e-88de-458d-8f64-266ca520941b">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn clean verify
 </pre> 
@@ -313,7 +314,7 @@
             </ul></li>
            <li>Stop the Jetty container</li>
           </ul><p>That archetype also demonstrates another powerful feature of Codehaus Cargo coupled with Maven 2 / Maven 3. If you now run:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="505beebe-419b-42f6-b54f-bf456ac54722">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn clean verify -P tomcat7x
 </pre> 
@@ -326,7 +327,7 @@
              <li>The profile <a href="Tomcat+7.x.html"><strong>tomcat7x</strong></a> downloads the server using the <a href="Installer.html">ZipUrlInstaller</a>.</li>
             </ul></li>
            <li>The profile&nbsp;<a href="Jetty+7.x.html"><strong>jetty7x</strong></a> define an <a href="Embedded+Container.html"><strong>embedded</strong></a> container.</li>
-          </ul><p>You can of course add and use any other container from the <a href="Containers.html">Containers</a> list.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-separate" data-hasbody="false" data-macro-name="anchor"> </span></p><script type="text/javascript">
+          </ul><p>You can of course add and use any other container from the <a href="Containers.html">Containers</a> list.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-separate" data-hasbody="false" data-macro-name="anchor" data-macro-id="76563d81-6446-4862-b75e-8a6b0e6c1441"> </span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -337,19 +338,19 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h2 id="Maven2Archetypes-SeparateFunctionalTestModuleArchetype">Separate Functional Test Module Archetype</h2><p>Shows how to configure Cargo and Maven 2 / Maven 3 to run functional tests by creating a functional tests module next to the webapp module. To run it, execute (one one line):</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="58ce88a3-572e-4eee-a685-505e4233ffb1">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn archetype:generate -DarchetypeGroupId=org.codehaus.cargo
                         -DarchetypeArtifactId=cargo-archetype-webapp-functional-tests-module
                         -DarchetypeVersion=&lt;version&gt;
 </pre> 
            </div>
-          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>The remaining instructions for this archetype remain the same as the <em>Single Webapp Module Archetype</em> archetype.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-datasource" data-hasbody="false" data-macro-name="anchor"> </span></p><h2 id="Maven2Archetypes-DataSourceDefinitionArchetype">DataSource Definition Archetype</h2><p>Shows how to configure Cargo and Maven 2 / Maven 3 to for a more complex setup, in particular with DataSource definitions. This includes:</p>
+          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>The remaining instructions for this archetype remain the same as the <em>Single Webapp Module Archetype</em> archetype.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-datasource" data-hasbody="false" data-macro-name="anchor" data-macro-id="519b053c-95fb-47a9-8bde-3b3494a0897d"> </span></p><h2 id="Maven2Archetypes-DataSourceDefinitionArchetype">DataSource Definition Archetype</h2><p>Shows how to configure Cargo and Maven 2 / Maven 3 to for a more complex setup, in particular with DataSource definitions. This includes:</p>
           <ul>
            <li>Definition of an Apache Derby DataSource in the container's configuration</li>
            <li>Adding in the Apache Derby driver to the container</li>
           </ul><p>Of course, the same kind of setup works for any other DataSource provider and driver.</p><p>To run it, execute (one one line):</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="513f6b93-c627-433e-8d62-e78b62415ec5">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn archetype:generate -DarchetypeGroupId=org.codehaus.cargo
                         -DarchetypeArtifactId=cargo-archetype-webapp-with-datasource
@@ -371,15 +372,15 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h2 id="Maven2Archetypes-Archetypeshowingthestartingandstoppingofmultiplecontainerssimultaneously">Archetype showing the starting and stopping of multiple containers simultaneously</h2><p>Shows how to configure the various Maven capabilities together with the <a href="Ant+support.html">Codehaus Cargo Ant tasks</a> in order to be able of starting (and stopping) multiple containers at the same time. To run it, execute (one one line):</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="5f8ce776-1bad-41dc-87ec-3b5643928204">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn archetype:generate -DarchetypeGroupId=org.codehaus.cargo
                         -DarchetypeArtifactId=cargo-archetype-multiple-containers
                         -DarchetypeVersion=&lt;version&gt;
 </pre> 
            </div>
-          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-remote" data-hasbody="false" data-macro-name="anchor"> </span></p><h2 id="Maven2Archetypes-WebappCreationandRemoteDeploymentArchetype">Webapp Creation and Remote Deployment Archetype</h2><p>This example shows you how to use Cargo to deploy your webapp to a running container remotely and perform integration tests on it. That container can therefore be running on any machine. To run it, execute (one one line):</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-remote" data-hasbody="false" data-macro-name="anchor" data-macro-id="a2fdc64d-bfde-4581-8e89-671470f8cc9c"> </span></p><h2 id="Maven2Archetypes-WebappCreationandRemoteDeploymentArchetype">Webapp Creation and Remote Deployment Archetype</h2><p>This example shows you how to use Cargo to deploy your webapp to a running container remotely and perform integration tests on it. That container can therefore be running on any machine. To run it, execute (one one line):</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="50eec7cc-d464-4520-b743-7fdf87e43c67">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn archetype:generate -DarchetypeGroupId=org.codehaus.cargo
                         -DarchetypeArtifactId=cargo-archetype-remote-deployment
@@ -387,7 +388,7 @@
 </pre> 
            </div>
           </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>Once your Maven 2 / Maven 3 project is generated, simply run:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="44d6dcb0-6257-4bf1-842f-34a501e0ccbd">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn clean verify
 </pre> 
@@ -425,8 +426,8 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h2 id="Maven2Archetypes-daemon"><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-daemon" data-hasbody="false" data-macro-name="anchor"> </span></h2><h2 id="Maven2Archetypes-DaemonArchetype">Daemon Archetype</h2><p>Shows how to configure Cargo and Maven 2 / Maven 3 to use the <a href="Cargo+Daemon.html">Cargo Daemon</a>'s features in order to remotely start the container, deploy your deployable on it, do some tests, and shut the server down remotely. To run it, execute (one one line):</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          </center><h2 id="Maven2Archetypes-daemon"><span class="confluence-anchor-link conf-macro output-inline" id="Maven2Archetypes-daemon" data-hasbody="false" data-macro-name="anchor" data-macro-id="7d6b4ad5-7470-4f18-a466-633c84f5737c"> </span></h2><h2 id="Maven2Archetypes-DaemonArchetype">Daemon Archetype</h2><p>Shows how to configure Cargo and Maven 2 / Maven 3 to use the <a href="Cargo+Daemon.html">Cargo Daemon</a>'s features in order to remotely start the container, deploy your deployable on it, do some tests, and shut the server down remotely. To run it, execute (one one line):</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="13b73bf0-83b4-466b-866c-b387ff5657cc">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn archetype:generate -DarchetypeGroupId=org.codehaus.cargo
                         -DarchetypeArtifactId=cargo-archetype-daemon
@@ -434,7 +435,7 @@
 </pre> 
            </div>
           </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the CARGO version to use.</p><p>The Maven 2 / Maven 3 archetype plugin will then ask you what <code>groupId</code>, <code>artifactId</code>, <code>version</code>, and&nbsp;<code>package</code> you would like to use for generation. Once your Maven 2 / Maven 3 project is generated, you need to first start the <a href="Cargo+Daemon.html">Cargo Daemon</a>. Then, simply run:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="272633d4-9349-4322-8325-06751d00cfaa">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"> mvn clean verify -Dhostname=&lt;daemon.hostname&gt; -Ddaemon.port=&lt;daemon.port&gt;
 </pre> 
@@ -463,7 +464,7 @@
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

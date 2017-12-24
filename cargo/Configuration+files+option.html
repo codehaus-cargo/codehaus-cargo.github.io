@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -286,14 +287,14 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <h3 id="Configurationfilesoption-Definition">Definition</h3>The <strong class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt">configuration files</strong> are the files to add to your container's configuration. It is internally used by some containers and is accessible for you can to add extra files.
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+              </script> <h3 id="Configurationfilesoption-Definition">Definition</h3>The <strong class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt" data-macro-id="882a958d-e5fb-49e7-895d-2f410f80b8bf">configuration files</strong> are the files to add to your container's configuration. It is internally used by some containers and is accessible for you can to add extra files.
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="c6a0bb4e-0dec-4f8b-9476-bab986889172">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Configuration.html">local containers</a> (i.e., not for <a href="Remote+Container.html">remote containers</a> nor any kind of <a href="Deployer.html">deployers</a>).</p>
            </div>
           </div><h3 id="Configurationfilesoption-Explanation">Explanation</h3><p>In some cases, it is necessary to enrich your container configuration with extra files. This can be done using Cargo's <code>configFiles</code> option, accessible via the Cargo APIs.</p><p>The advantage of using this option is that it can replace <a href="Configuration+properties.html">configuration properties</a> in your files: simply use, for example, <code>@cargo.servlet.port@</code> to have it replaced with the port on which the Servlet/JSP container is listening to.</p>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note" data-macro-id="e2a9de28-2e2c-48a4-a712-f24cbc87da8a">
            <p class="title">Careful with binary files!</p>
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -310,13 +311,13 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Configurationfilesoption-ExampleusingtheJavaAPI">Example using the Java API</h3>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="214feac9-510e-40e9-ad73-db2ffb239372">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>The method's name is <code>setConfigFileProperty</code> rather than <code>addConfigFileProperty</code>; but it actually adds files to the <code>configFiles</code> list.</p>
            </div>
           </div>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="15e023a2-4539-413a-9317-66e080f68df3">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalContainer container = ...;
 StandaloneLocalConfiguration configuration = (StandaloneLocalConfiguration) getLocalContainer().getConfiguration();
@@ -338,7 +339,7 @@ configuration.setConfigFileProperty(sampleUsersProperties);
 </pre> 
            </div>
           </div><h3 id="Configurationfilesoption-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="e963cc39-fa3d-42f6-ac7a-2c61b728e5b5">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="@{containerId}" action="@{action}"&gt;
   &lt;configuration home="${configuration.home}"&gt;
@@ -360,7 +361,7 @@ configuration.setConfigFileProperty(sampleUsersProperties);
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Configurationfilesoption-ExampleusingtheMaven2/Maven3plugin">Example using the&nbsp;Maven 2 / Maven 3 plugin</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="6deaad1c-8846-4d52-b659-5ac398dc72a5">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
@@ -397,7 +398,7 @@ configuration.setConfigFileProperty(sampleUsersProperties);
            <li><p>Make sure the property&nbsp;<code>JettyPropertySet.CREATE_CONTEXT_XML</code> (i.e.&nbsp;<code>cargo.jetty.createContextXml</code>) is set to&nbsp;<code>false</code>; so that CARGO doesn't create a&nbsp;<code>context.xml</code> file for your WAR's deployable but rather copies it from the source to the configuration home folder.</p></li>
            <li><p>For each deployable, make sure the deployable is defined as an expanded WAR; as explained on the&nbsp;<a href="Static+deployment+of+expanded+WAR.html">Static deployment of expanded WAR</a> page.</p></li>
            <li><p>Finally, for each deployable, add the following to your local container's configuration:</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="db0303fd-b82b-44dc-b208-6c8f9fc3861e">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;configfiles&gt;
   &lt;configfile&gt; 
@@ -412,7 +413,7 @@ configuration.setConfigFileProperty(sampleUsersProperties);
            <li>To deploy your WAR, CARGO will copy your WAR's expanded version (i.e., the WAR directory) into the&nbsp;<code>webapps</code> subdirectory of the Jetty configuration</li>
            <li>Once the WAR is copied, CARGO will also copy the&nbsp;<code>jetty-env.xml</code> file into that WAR's WEB-INF directory</li>
           </ul><p>As a reference, please find below the full configuration for Jetty 7.x:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="55c93e52-b010-4844-8234-0c5d228403d6">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;configuration&gt;
   &lt;container&gt;
@@ -456,7 +457,7 @@ configuration.setConfigFileProperty(sampleUsersProperties);
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

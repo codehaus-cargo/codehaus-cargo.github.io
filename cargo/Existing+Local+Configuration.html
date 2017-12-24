@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -310,9 +311,9 @@
               <th class="confluenceTh"><p>Maven2</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="2705" data-emoji-shortname=":white_check_mark:" data-emoji-fallback="✅" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="2705" data-emoji-shortname=":white_check_mark:" data-emoji-fallback="✅" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="2705" data-emoji-shortname=":white_check_mark:" data-emoji-fallback="✅" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
              </tr>
             </tbody>
            </table>
@@ -320,7 +321,7 @@
           <ul>
            <li>By directly instantiating the configuration matching your container. For example:</li>
           </ul>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 Configuration configuration = new ResinExistingLocalConfiguration("target/resin3x");
@@ -331,7 +332,7 @@ Configuration configuration = new ResinExistingLocalConfiguration("target/resin3
           <ul>
            <li>By using the <code>DefaultConfigurationFactory</code> which automatically maps the right implementation for the container you're using. For example:</li>
           </ul>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 ConfigurationFactory factory = new DefaultConfigurationFactory();
@@ -351,7 +352,7 @@ Configuration configuration = factory.createConfiguration("resin3x",
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="ExistingLocalConfiguration-AntTask">Ant Task</h3><p>Example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="resin3x" [...]&gt;
   &lt;configuration type="existing" home="c:/apps/resin-3.0.9"/&gt;
@@ -360,7 +361,7 @@ Configuration configuration = factory.createConfiguration("resin3x",
 </pre> 
            </div>
           </div><h3 id="ExistingLocalConfiguration-Maven2Plugin">Maven2 Plugin</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;container&gt;
@@ -385,7 +386,7 @@ Configuration configuration = factory.createConfiguration("resin3x",
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

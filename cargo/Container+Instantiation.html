@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -296,9 +297,9 @@
               <th class="confluenceTh"><p>Maven2</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="2705" data-emoji-shortname=":white_check_mark:" data-emoji-fallback="✅" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="2705" data-emoji-shortname=":white_check_mark:" data-emoji-fallback="✅" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="2705" data-emoji-shortname=":white_check_mark:" data-emoji-fallback="✅" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
              </tr>
             </tbody>
            </table>
@@ -316,7 +317,7 @@
           <ul>
            <li>by instantiating the Java object implementing the container and passing a <a href="Configuration.html">Configuration</a> object to it. For example:</li>
           </ul>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">Container container = new Orion2xLocalContainer(configuration);
 [...]
@@ -331,20 +332,21 @@ Container container = new TomcatRemoteContainer(configuration);
           <ul>
            <li>by using the <code>DefaultContainerFactory</code> class. The advantage is that you can instantiate the container by name and thus your code can be generic which is nice if you plan to run the same code with different containers. For example, to instantiate a Resin 3.x <a href="Installed+Container.html">installed local container</a>:</li>
           </ul>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">ContainerFactory factory = new DefaultContainerFactory();
 Container container = factory.createContainer("resin3x", ContainerType.INSTALLED, configuration);
 </pre> 
            </div>
           </div><p>In general we recommend that you use the factory method to instantiate a container as this makes your code more flexible.</p><p>The class or container id to use for instantiating a container can be found on each container's documentation page:</p><p></p>
-          <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children">
+          <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children" data-macro-id="">
            <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
            <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
            <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
            <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
            <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
            <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+           <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
            <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
            <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
            <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
@@ -407,7 +409,7 @@ Container container = factory.createContainer("resin3x", ContainerType.INSTALLED
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -287,7 +288,7 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <h2 id="MergingWARfiles-UsingMaven2andCargotomergeWARfiles">Using Maven2 and Cargo to merge WAR files</h2> <p>If you have an application that you are building with maven2 that you wish to merge two WAR files together, then you may wish to use the 'uberwar' mojo present in the cargo maven2 plugin.</p> <p>An "uberwar" is a war file constructed from 2 or more War files, where the deployment descriptors in files such as web.xml have been combined.</p> <h3 id="MergingWARfiles-Settingupyourprojecttooutputanuberwar">Setting up your project to output an uberwar</h3> <p>Create a maven2 project whose output artifact is going to be the uberwar. Don't forget to add as dependencies the War files you're going to make the uberwar from.</p> <p>Your packaging type should be uberwar:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -317,7 +318,7 @@
 </pre> 
            </div>
           </div> <p>Next, you need to add the cargo maven plugin to your <code>&lt;plugins&gt;</code> section, and set it up with the path to a merging descriptor:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;plugin&gt;
@@ -331,12 +332,12 @@
 </pre> 
            </div>
           </div> <p>Here the <code>src/assemble/merge.xml</code> is the descriptor of how you want the merge to work (see next section for detailed explanations).</p> 
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="">
            <p class="title">Maven Archiver</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body"> 
             <p>Note that plugin configuration also supports the <code>&lt;archive&gt;</code> element. For full list of supported values see <a href="http://maven.apache.org/shared/maven-archiver/" class="external-link" rel="nofollow">maven-archiver</a> reference page.<br> Example:</p> 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;plugin&gt;
@@ -369,7 +370,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="MergingWARfiles-Creatingamergedescriptor">Creating a merge descriptor</h3> <p>The merge descriptor file specifies the content of the resulting uberwar file.</p> <p>Here is a sample of the minimal merge descriptor:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;?xml version="1.0"?&gt;
@@ -382,7 +383,7 @@
 </pre> 
            </div>
           </div> <h4 id="MergingWARfiles-Mergedescriptorcontent">Merge descriptor content</h4> <p>The following merge descriptor elements are supported:</p> <h5 id="MergingWARfiles-<wars>">&lt;wars&gt;</h5> <p>In order to know which war files to merge, and in which order (this is significant - for example, when you choose overwrite strategy), specify them in the <code>&lt;wars&gt;</code> element. Each <code>&lt;war&gt;</code> sub-element should be of form <code>&lt;groupId&gt;:&lt;artifactId&gt;</code> to be properly resolved.</p> <h5 id="MergingWARfiles-<merges>">&lt;merges&gt;</h5> <p>If you have files that need to be merged together by some kind of processor, then specify it here. The classname can be <code>org.codehaus.cargo.module.webapp.DocumentMerger</code>, which is a simple class that will merge by copying all xml nodes from the descriptor files. Alternatively, you can provide any class that is available on the classpath, provided it implements <code>org.codehaus.cargo.module.merge.MergeProcessor</code>. The <code>&lt;merges&gt;</code> element is optional. You can have as many <code>&lt;merge&gt;</code> sub-elements as you need.</p> <p>For example:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;?xml version="1.0"?&gt;
@@ -408,13 +409,13 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h4 id="MergingWARfiles-Mergingtheweb.xmlfile">Merging the <code>web.xml</code> file</h4> 
-          <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block" data-hasbody="true" data-macro-name="tip">
+          <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block" data-hasbody="true" data-macro-name="tip" data-macro-id="">
            <span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body"> 
             <p>The uberwar plugin will merge your <code>web.xml</code> file using the default merge strategy even if no explicit definition was provided. Keep reading to learn more about merge strategies!</p>
            </div>
           </div> <p>The ability to merge <code>web.xml</code> is probably the most important piece of uberwar functionality. This is achieved by providing a special <code>&lt;merge&gt;</code> element, as shown in the example below:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;?xml version="1.0"?&gt;
@@ -460,7 +461,7 @@
 </pre> 
            </div>
           </div> 
-          <div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block" data-hasbody="true" data-macro-name="warning">
+          <div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block" data-hasbody="true" data-macro-name="warning" data-macro-id="">
            <span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body"> 
             <p>Note the <code>&lt;default&gt;</code> element that contains merge strategies by tag and is the only child of <code>&lt;parameters&gt;</code> element.</p>
@@ -485,7 +486,7 @@
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

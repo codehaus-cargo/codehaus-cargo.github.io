@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -287,21 +288,21 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <p>Cargo supports <a href="Deployer.html">deploying</a> to an already running container. This feature is called <a href="Hot+Deployment.html">Hot Deployment</a>). You call it by using the (<code><strong>cargo:deploy</strong></code>) goal (e.g. <code>mvn cargo:deploy</code>).</p>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note" data-macro-id="">
            <p class="title">No need to deploy if you are using Cargo to start your container</p>
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>If you are using Cargo for <a href="Starting+and+stopping+a+container.html">starting your container</a>, Cargo will actually be doing a <a href="Static+Deployment.html">static deployment</a> of all your <code>&lt;deployables&gt;</code> automatically. So, no need to deploy anything manually in that case!</p>
            </div>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="">
            <p class="title">About WAR contexts</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Many containers have their specific files for redefining context roots (Tomcat has context.xml, JBoss has jboss-web.xml, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
            </div>
           </div><h3 id="Deployingtoarunningcontainer-Usingalocaldeployer">Using a local deployer</h3><p>A local <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Local+Container.html">Local Container</a> (i.e. a container installed on the same machine where the deployer is executing). Thus you'll need to use a local container id in <code>&lt;containerId&gt;</code>. You can check that by reviewing the supported <a href="Containers.html">container list</a> and selecting the container you wish to use.</p><p><strong>Example of doing a local deploy to an existing configuration</strong>:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;configuration&gt;
@@ -351,14 +352,14 @@
 </pre> 
            </div>
           </div><h3 id="Deployingtoarunningcontainer-Usingaremotedeployer">Using a remote deployer</h3><p>A remote <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Remote+Container.html">Remote Container</a> (i.e. a container that is running and that has been started externally from Cargo). Thus you'll need to use an id for a remote container in <code>&lt;containerId&gt;</code> and a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</p>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="">
            <p class="title">Not all containers have a remote Deployer implemented</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>We haven't finished implementing remote Deployers for all containers yet. Please <a href="Containers.html">check</a> if your favorite container has it implemented. If not you'll need to deploy your deployables by defining them in a standalone local configuration as shown in the <a href="Starting+and+stopping+a+container.html">starting and stopping a container</a> use case or the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
            </div>
           </div><p><strong>Example of doing a remote deploy using a runtime configuration</strong>:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;configuration&gt;
@@ -398,7 +399,7 @@
 </pre> 
            </div>
           </div><p>As you can see the information to connect and do the deployment to the remote container is specified in the runtime configuration (<code>cargo.remote.username</code> and <code>cargo.remote.password</code>). The properties to define are deployer-dependent.</p><p>Here's an another example, this time deploying the current project's artifact to a running JBoss 4.2.x container using a default 8080 port and default authorizations:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;configuration&gt;
@@ -411,7 +412,7 @@
 </pre> 
            </div>
           </div><p>Just type <code>mvn cargo:deploy</code>. Notice that we haven't specified a <code>&lt;deployer&gt;</code> element nor a <code>&lt;configuration&gt;</code> one: this is because the plugin is smart enough to create default instances for you.</p><h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3><p>If the deployment, undeployment or redeployment is done without any watchdog, CARGO will rely on the error codes return by the container's deployer to detect failures.</p><p>This is sometimes not desired: for example, if one calls&nbsp;<code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p><p>To work around the issue, make sure you define your deployable together with a watchdog. For example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Deployable with a ping URL</b>
            </div>
@@ -450,7 +451,7 @@
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -287,7 +288,7 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <h3 id="ReleasenotesforCargo0.5-Implementedissues">Implemented issues</h3> 
-          <div class="jim-error-message jim-error-message-table conf-macro output-block" data-hasbody="false" data-macro-name="jiraissues"> 
+          <div class="jim-error-message jim-error-message-table conf-macro output-block" data-hasbody="false" data-macro-name="jiraissues" data-macro-id=""> 
            <table class="aui"> 
             <tbody> 
              <tr> 
@@ -308,10 +309,10 @@
              </tr> 
             </tbody> 
            </table> 
-          </div> <h3 id="ReleasenotesforCargo0.5-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.5-clirr" data-hasbody="false" data-macro-name="anchor"> </span><br> Changes detected by <a href="http://clirr.sourceforge.net" class="external-link" rel="nofollow">Clirr</a> between <code>cargo-0.4.jar</code> and <code>cargo-0.5.jar</code>:</p> 
+          </div> <h3 id="ReleasenotesforCargo0.5-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.5-clirr" data-hasbody="false" data-macro-name="anchor" data-macro-id=""> </span><br> Changes detected by <a href="http://clirr.sourceforge.net" class="external-link" rel="nofollow">Clirr</a> between <code>cargo-0.4.jar</code> and <code>cargo-0.5.jar</code>:</p> 
           <ul> 
            <li>[Core] <code>org.codehaus.cargo.deployment.*</code> package moved to <code>org.codehaus.cargo.module</code> 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 ERROR: 8001: org.codehaus.cargo.deployment.DefaultJarArchive: Class org.codehaus.cargo.deployment.DefaultJarArchive removed
@@ -412,7 +413,7 @@ INFO: 8000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiIo: Class org
            <li>[Core] Removed ability to add deployables to a Container. They must now either be added to a Configuration for static deployment or using a Deployer for dynamic deployments</li> 
            <li>[Core] Added a <code>StandaloneConfiguration</code> interface which defines ths <code>addDeployable()</code> method.</li> 
            <li>[Ant] Moved <code>&lt;war&gt;</code> and <code>&lt;ear&gt;</code> elements inside the <code>&lt;configuration&gt;</code> element 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public void addDeployable(org.codehaus.cargo.container.deployable.Deployable)' has been removed
@@ -443,7 +444,7 @@ INFO: 7011: org.codehaus.cargo.container.spi.AbstractStandaloneConfiguration: Me
              </div>
             </div></li> 
            <li>[Core] Added Deployer interface for dynamic deployments + implementation for Resin, Jetty and Jo1x 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 8000: org.codehaus.cargo.container.deployer.DefaultDeployerFactory: Class org.codehaus.cargo.container.deployer.DefaultDeployerFactory added
@@ -464,7 +465,7 @@ INFO: 8000: org.codehaus.cargo.container.spi.AbstractCopyingDeployer: Class org.
            <li>[Core] Moved Configuration objects to package <code>org.codehaus.cargo.container.configuration</code> (they were previously in <code>org.codehaus.cargo.container</code>)</li> 
            <li>[Core] Moved <code>org.codehaus.cargo.container.configuration.ConfigurationFactory</code> to an interface and added a <code>org.codehaus.cargo.container.configuration.DefaultConfigurationFactory</code></li> 
            <li>[Core] Added new <code>org.codehaus.cargo.container.configuration.ConfigurationCapability</code> class 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 ERROR: 7005: org.codehaus.cargo.container.Container: Parameter 1 of 'public void setConfiguration(org.codehaus.cargo.container.Configuration)' has changed its type to org.codehaus.cargo.container.configuration.Configuration
@@ -515,7 +516,7 @@ INFO: 7003: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public j
              </div>
             </div></li> 
            <li>[Core] Added Jo 1.x support 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 8000: org.codehaus.cargo.ant.jo.Jo1xCargoTask: Class org.codehaus.cargo.ant.jo.Jo1xCargoTask added
@@ -527,7 +528,7 @@ INFO: 8000: org.codehaus.cargo.container.jo.JoPropertySet: Class org.codehaus.ca
              </div>
             </div></li> 
            <li>[Core] Renamed <code>org.codehaus.cargo.container.Capability</code> to <code>org.codehaus.cargo.container.ContainerCapability</code> 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 ERROR: 8001: org.codehaus.cargo.container.Capability: Class org.codehaus.cargo.container.Capability removed
@@ -543,7 +544,7 @@ ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public 
              </div>
             </div></li> 
            <li>[Core] Moved all Monitor-related classes from <code>org.codehaus.cargo.util</code> to <code>org.codehaus.cargo.util.monitor</code> 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 ERROR: 4001: org.codehaus.cargo.container.Container: Removed org.codehaus.cargo.util.Monitorable from the set of implemented interfaces
@@ -696,7 +697,7 @@ INFO: 8000: org.codehaus.cargo.util.monitor.SimpleMonitor: Class org.codehaus.ca
              </div>
             </div></li> 
            <li>[Core] Added new <code>org.codehaus.cargo.util.monitor.AntMonitor</code> class 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 8000: org.codehaus.cargo.util.monitor.AntMonitor: Class org.codehaus.cargo.util.monitor.AntMonitor added
@@ -704,7 +705,7 @@ INFO: 8000: org.codehaus.cargo.util.monitor.AntMonitor: Class org.codehaus.cargo
              </div>
             </div></li> 
            <li>[Core] Promoted <code>org.codehaus.cargo.container.internal.util.FileUtils</code> class to a public <code>org.codehaus.cargo.util.FileUtils</code> class as it is now used in the <code>org.codehaus.cargo.module</code> package (and we do want to have any dependency from <code>org.codehaus.cargo.module</code> to <code>org.codehaus.cargo.container</code> - only in the other direction) 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 8000: org.codehaus.cargo.util.FileUtils: Class org.codehaus.cargo.util.FileUtils added
@@ -715,7 +716,7 @@ ERROR: 7006: org.codehaus.cargo.container.spi.AbstractContainer: Return type of 
              </div>
             </div></li> 
            <li>[Core] Added new <code>org.codehaus.cargo.util.CargoException</code> which is the base of all Cargo exceptions. 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 8000: org.codehaus.cargo.util.CargoException: Class org.codehaus.cargo.util.CargoException added
@@ -728,7 +729,7 @@ INFO: 7003: org.codehaus.cargo.container.ContainerException: Method 'public void
              </div>
             </div></li> 
            <li>[Core] Added public APIs <code>org.codehaus.cargo.container.Container.getOutput()</code> and <code>org.codehaus.cargo.container.Container.isAppend()</code> 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 ERROR: 7012: org.codehaus.cargo.container.Container: Method 'public java.io.File getOutput()' has been added to an interface
@@ -740,7 +741,7 @@ INFO: 7010: org.codehaus.cargo.container.spi.AbstractContainer: Accessibility of
             </div></li> 
            <li>[Core] Fixed proxy support in the Installer by adding a ProxyAuthenticator class</li> 
            <li>[Core] Added tests for ZipURLInstaller and made small modifications to improve testability 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 8000: org.codehaus.cargo.container.installer.Proxy$ProxyAuthenticator: Class org.codehaus.cargo.container.installer.Proxy$ProxyAuthenticator added
@@ -750,7 +751,7 @@ INFO: 7011: org.codehaus.cargo.container.installer.ZipURLInstaller: Method 'prot
              </div>
             </div></li> 
            <li>[Core] Added handy class when implementing Cargo factories based on a container id and a hint 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 8000: org.codehaus.cargo.container.spi.AbstractGenericHintFactory: Class org.codehaus.cargo.container.spi.AbstractGenericHintFactory added
@@ -759,7 +760,7 @@ INFO: 8000: org.codehaus.cargo.container.spi.AbstractGenericHintFactory$GenericP
              </div>
             </div></li> 
            <li>[Core] Start of a Resin ExistingConfiguration implementation. Does not work yet and must not be used. 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 8000: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Class org.codehaus.cargo.container.resin.ResinExistingConfiguration added
@@ -767,7 +768,7 @@ INFO: 8000: org.codehaus.cargo.container.resin.ResinExistingConfiguration: Class
              </div>
             </div></li> 
            <li>[Core] Added property for supporting container authentication 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 6000: org.codehaus.cargo.container.property.ServletPropertySet: Added public field USERS
@@ -782,7 +783,7 @@ INFO: 7011: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfigurat
              </div>
             </div></li> 
            <li>[Core] Added <code>org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer.getServer()</code> API to allow users to further configure a Jetty server 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 7011: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Method 'public java.lang.Object getServer()' has been added
@@ -790,7 +791,7 @@ INFO: 7011: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Method 
              </div>
             </div></li> 
            <li>[Core] Added possibility to pass JVM arguments to Configurations by introducing a new <code>cargo.jvmargs</code> property 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 INFO: 6000: org.codehaus.cargo.container.property.GeneralPropertySet: Added public field JVMARGS
@@ -808,7 +809,7 @@ INFO: 6000: org.codehaus.cargo.container.property.GeneralPropertySet: Added publ
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -288,7 +289,7 @@
                 }
               </script> <p>Before you start you might be interested in reading the <a href="Project+Structure.html">Project Structure</a> tutorial which shows the directory organization of the Cargo sources. The <a href="Building.html">Building</a> tutorial explains how to build Cargo from sources and the <a href="Contributing.html">Contributing</a> tutorial explains what rules to follow when contributing code.</p><p>Here are some quick steps to follow if you wish to add support for a new container in Cargo:</p>
           <ul>
-           <li>Subscribe to the cargo dev mailing list and ask as many question you'd like there! <img class="emoticon emoticon-smile" src="attachments/smile.png" data-emoticon-name="smile" alt="(smile)"></li>
+           <li>Subscribe to the cargo dev mailing list and ask as many question you'd like there! <img class="emoticon emoticon-smile" data-emoji-id="1f642" data-emoji-shortname=":slight_smile:" data-emoji-fallback="🙂" src="attachments/smile.png" data-emoticon-name="smile" alt="(smile)"></li>
            <li>Create a JIRA issue on <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" class="external-link" rel="nofollow">https://codehaus-cargo.atlassian.net/browse/CARGO</a></li>
            <li>Checkout Cargo from <a href="Source+code.html">Source code</a> trunk</li>
            <li>Understand the Cargo project's <a href="Project+Structure.html">directory structure</a>. Container implementations are located in <code>trunk/core/containers/<em>ContainerName</em></code>.</li>
@@ -308,7 +309,7 @@
               </ul></li>
              <li>Finally, implement the <code>FactoryRegistry</code> that will register your container to CARGO and make sure you've defined a link to your container's factory registry in <code>src/main/resources/META-INF/services/org.codehaus.cargo.generic.AbstractFactoryRegistry</code>.</li>
             </ul></li>
-           <li>Run the Cargo <a href="Building.html">build</a> to ensure everything is working. You'll probably find that you haven't followed the Cargo project's coding conventions... Fix those and build again until it passes! <img class="emoticon emoticon-wink" src="attachments/wink.png" data-emoticon-name="wink" alt="(wink)"> Please note that when you run the build it'll automatically run the samples test suites in your container (provided you've added your container to the generic API as described in the previous step and provided you've defined the right capabilities for your container). See the <a href="Building.html">Building</a> page for more details on the build.</li>
+           <li>Run the Cargo <a href="Building.html">build</a> to ensure everything is working. You'll probably find that you haven't followed the Cargo project's coding conventions... Fix those and build again until it passes! <img class="emoticon emoticon-wink" data-emoji-id="1f609" data-emoji-shortname=":wink:" data-emoji-fallback="😉" src="attachments/wink.png" data-emoticon-name="wink" alt="(wink)"> Please note that when you run the build it'll automatically run the samples test suites in your container (provided you've added your container to the generic API as described in the previous step and provided you've defined the right capabilities for your container). See the <a href="Building.html">Building</a> page for more details on the build.</li>
            <li>Once built, add your new container to the <code>uberpom</code> and check that the <code>uberjar</code> is still looking fine.</li>
            <li>Once added to the <code>uberpom</code>, add your container's download URL to the <code>samples</code> and add profiles for it.
             <ul>
@@ -335,7 +336,7 @@
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

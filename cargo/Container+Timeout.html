@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -287,17 +288,17 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <h3 id="ContainerTimeout-Definition">Definition</h3>Timeout after which the container start/stop is deemed failed
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="d9165e89-dc65-46c8-8258-04c633e5a642">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
           </div><h3 id="ContainerTimeout-Explanation">Explanation</h3><p>Cargo has a timeout for container start and stop operations. If the time taken to start/stop a container exceeds the timeout period the operations is considered failed and the container is then set in the unknown state.</p><p>The default timeout value is 2 minutes (120000 milliseconds). This value can be modified as shown below.</p>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note" data-macro-id="4537dbc3-5ef2-442a-90fc-6d09860652fc">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>If the given timeout is too small, the CARGO container will give you an error message similar to this:</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="c4312caa-76ee-4df7-91ab-7a821bb6ce50">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">[INFO] ------------------------------------------------------------------------
 [ERROR] FATAL ERROR
@@ -321,7 +322,7 @@ within the timeout period [5000]. The Deployable state is thus unknown.
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="ContainerTimeout-ExampleusingtheJavaAPI">Example using the Java API</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="4a6fc754-8116-4461-943b-4911598602f0">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalContainer container = ...;
 container.setTimeout(180000L);
@@ -329,7 +330,7 @@ System.out.println("Timeout = " + container.getTimeout());
 </pre> 
            </div>
           </div><h3 id="ContainerTimeout-ExampleusingtheMaven2/Maven3plugin">Example using the&nbsp;Maven 2 / Maven 3 plugin</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="fdcbc644-f6fd-4ecc-b0fd-de6c9d96f5f0">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;container&gt;
   [...]
@@ -349,7 +350,7 @@ System.out.println("Timeout = " + container.getTimeout());
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="ContainerTimeout-Disablingtimeout">Disabling timeout</h3><p>If you set the timeout to&nbsp;<code>0</code>, CARGO will not wait for the container to start or stop.</p><h3 id="ContainerTimeout-Usingdifferenttimeoutswhenstartingandstoppingthecontainer">Using different timeouts when starting and stopping the container</h3><p>Shutdown usually takes much much shorther than startup, it therefore often makes sense to use a shorter timeout for stopping the container than for starting it. With the Cargo Maven plugin, this is easy to do: indeed, in each <code>&lt;execution&gt;</code> block of the Maven plugin, you can have different <code>&lt;configuration&gt;</code> blocks. When done so, the plugin will use an inheritance scheme; i.e. for each execution the outermost configuration elements will be overriden by innermost elements each time these are defined.</p><p>Here is an example that uses different timeouts when starting and stopping the container:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="f9f8b831-3d5b-4845-9667-aca65f12fe94">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
@@ -393,7 +394,7 @@ System.out.println("Timeout = " + container.getTimeout());
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

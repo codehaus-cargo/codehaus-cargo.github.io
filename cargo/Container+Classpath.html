@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -287,13 +288,13 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <h3 id="ContainerClasspath-Definition">Definition</h3><p>How to configure the executing container's classpath</p>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="dc48c407-3bc7-4ddc-917a-b60776dd1eb9">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
           </div><h3 id="ContainerClasspath-Explanation">Explanation</h3><p>This topic is not about the classpath requirements to run Cargo (see the <a href="Installation.html">Installation</a> page for this); it's about configuring the classpath for the executing container. You can therefore add custom JARs (code instrumentation, DataSource JARs, security-related libraries, etc.) to the container's execution classpath as shown below.</p><p>Note that some containers also support adding custom JARs to the applications' classpath only: see <a href="Application+Classpath.html">Application Classpath</a> for details.</p><h3 id="ContainerClasspath-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Orion 1.x with Clover jar added to its classpath. For example if you have instrumented your source code with Clover you'll need to add the Clover jar to the classpath.</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="51ed6a42-d681-4f75-8020-4db66e7837da">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">InstalledLocalContainer container = new Orion1xInstalledLocalContainer(
     new OrionStandaloneLocalConfiguration("target/orion1x"));
@@ -315,7 +316,7 @@ container.start();
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="ContainerClasspath-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting Orion 1.x with some additional classpath entries:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="a9b54767-b02d-404a-8c59-ffeeaa4d3c50">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="orion1x" home="c:/apps/orion-1.6.0b" action="start"&gt;
   &lt;extraClasspath&gt;
@@ -335,7 +336,7 @@ container.start();
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

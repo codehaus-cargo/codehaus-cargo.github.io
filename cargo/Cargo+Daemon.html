@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -305,17 +306,17 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h1 id="CargoDaemon-installation"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-installation" data-hasbody="false" data-macro-name="anchor"> </span></h1><h1 id="CargoDaemon-Installation">Installation</h1><p>To install and run the Cargo Daemon:</p>
+          </center><h1 id="CargoDaemon-installation"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-installation" data-hasbody="false" data-macro-name="anchor" data-macro-id="df6f450d-12a9-43a9-bda1-be77d955bff1"> </span></h1><h1 id="CargoDaemon-Installation">Installation</h1><p>To install and run the Cargo Daemon:</p>
           <ol>
            <li>Download the Cargo Daemon from the <a href="Downloads.html">Downloads</a> page</li>
            <li>Execute by typing:</li>
           </ol>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="e1b7446a-5f9c-44be-89b3-f091c72e0f84">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence">java -jar target/cargo-daemon-webapp-&lt;version&gt;.war</pre> 
            </div>
           </div><p style="margin-left: 30.0px;">where &lt;version&gt; is the version number of the daemon that you have downloaded.</p><p>By default, the Cargo Daemon will run on HTTP port&nbsp;<code>18000</code>. To change it, use the&nbsp;<code>-p</code> option:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="b47f319e-84cb-4b9f-95c7-d038392b8b3c">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence">java -jar target/cargo-daemon-webapp-&lt;version&gt;.war -p 18001</pre> 
            </div>
@@ -338,13 +339,13 @@
              <tr>
               <td class="confluenceTd"><p><code>daemon.home</code></p></td>
               <td class="confluenceTd"><p>Directory in which the standaone daemon server stores its files. These include the temporary files (such as its own WAR and server temporary files) as well as the server log files (<code>AWS-xxxxxxxxxxxxx.log</code>, where <code>xxxxxxxxxxxxx</code> is the timestamp at which the deamon was started).</p><p>This property is not used and completely ignored if the daemon WAR file is deployed on an existing container.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" data-emoji-id="1f44e" data-emoji-shortname=":thumbsdown:" data-emoji-fallback="👎" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><code>${user.home}/.cargo</code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>cargo.home</code></p></td>
               <td class="confluenceTd"><p>Directory in which the daemon (be it standalone or deployed on an existing container) stores the list of containers, downloaded container archives, container logs, etc.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" data-emoji-id="1f44e" data-emoji-shortname=":thumbsdown:" data-emoji-fallback="👎" src="attachments/thumbs_down.png" data-emoticon-name="thumbs-down" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p><code>${user.home}/.cargo</code></p><p>Note that the standalone daemon by default sets this to <code>${daemon.home}</code></p></td>
              </tr>
             </tbody>
@@ -359,7 +360,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h1 id="CargoDaemon-gettingStarted"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-gettingStarted" data-hasbody="false" data-macro-name="anchor"> </span></h1><h1 id="CargoDaemon-GettingstartedusingthebrowserUI">Getting started using the browser UI</h1><p>To use the Cargo Daemon via the browser UI, simply open&nbsp;<code>http://&lt;machine&gt;:&lt;port&gt;/</code> -where&nbsp;<code>&lt;machine&gt;</code> is the machine host name or IP address and&nbsp;<code>&lt;port&gt;</code> is the port number used (default is&nbsp;<code>18000</code>):</p>
+          </center><h1 id="CargoDaemon-gettingStarted"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-gettingStarted" data-hasbody="false" data-macro-name="anchor" data-macro-id="64bd5294-bdde-4f60-8a71-be41bbc56ae6"> </span></h1><h1 id="CargoDaemon-GettingstartedusingthebrowserUI">Getting started using the browser UI</h1><p>To use the Cargo Daemon via the browser UI, simply open&nbsp;<code>http://&lt;machine&gt;:&lt;port&gt;/</code> -where&nbsp;<code>&lt;machine&gt;</code> is the machine host name or IP address and&nbsp;<code>&lt;port&gt;</code> is the port number used (default is&nbsp;<code>18000</code>):</p>
           <ul>
            <li>To start a container, fill in the form and press <strong>Start</strong>:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20options.png" data-image-src="attachments/Container%20options.png" data-unresolved-comment-count="0" data-linked-resource-default-alias="Container options.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="39" data-media-id="f2b8d7c1-0990-49b8-b401-bdbc8a84476e" data-media-type="file"></span><br><br><strong>Note</strong>: The <strong>start</strong> button is actually equivalent to a <strong>restart</strong> in CARGO's terms; in the case a container with the same&nbsp;<code>handle id</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.<br><br></li>
            <li>To <strong>stop</strong>, <strong>restart</strong>, <strong>delete</strong> or <strong>view logs</strong> of a container, use the actions on the containers list:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" src="attachments/Container%20actions.png" data-image-src="attachments/Container%20actions.png" data-unresolved-comment-count="0" data-linked-resource-default-alias="Container actions.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491535" data-linked-resource-container-version="39" data-media-id="f9e098d1-1e93-489d-991c-a01ec2e7e865" data-media-type="file"></span></li>
@@ -376,11 +377,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h1 id="CargoDaemon-gettingStarted.1"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-gettingStarted" data-hasbody="false" data-macro-name="anchor"> </span></h1><h1 id="CargoDaemon-GettingstartedwiththeJavaAPI/ANTtasks/Maven2/Maven3plugin">Getting started with the Java API / ANT tasks / Maven 2 / Maven 3 plugin</h1><p>As stated before, the Cargo Daemon is also available programmatically:</p>
+          </center><h1 id="CargoDaemon-gettingStarted.1"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-gettingStarted" data-hasbody="false" data-macro-name="anchor" data-macro-id="06a54645-96b6-425e-90dc-e12a1c5bc65b"> </span></h1><h1 id="CargoDaemon-GettingstartedwiththeJavaAPI/ANTtasks/Maven2/Maven3plugin">Getting started with the Java API / ANT tasks / Maven 2 / Maven 3 plugin</h1><p>As stated before, the Cargo Daemon is also available programmatically:</p>
           <ul>
            <li>The details of the Java API can be seen on the <a href="https://codehaus-cargo.github.io/apidocs/index.html?org/codehaus/cargo/tools/daemon/DaemonClient.html" class="external-link" rel="nofollow">Javadoc for o.c.c.tools.daemon.DaemonClient</a></li>
            <li><p>To use the Daemon via ANT tasks, simply add the&nbsp;<code>&lt;daemon&gt;</code> tag in the task and use the <strong>daemon-start</strong> or <strong>daemon-stop</strong> tasks:<br><br></p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="8a9a728c-9744-40ab-833c-215ec92f8d12">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat7x" action="daemon-start"&gt;
   &lt;zipUrlInstaller
@@ -413,7 +414,7 @@
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

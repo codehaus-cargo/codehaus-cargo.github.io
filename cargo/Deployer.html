@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -286,7 +287,7 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <h3 id="Deployer-Definition">Definition</h3> <p>Performs a hot deployment of a <a href="Deployable.html" class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt">Deployable</a></p> <h3 id="Deployer-Explanation">Explanation</h3> <p>You use a <code>Deployer</code> when you wish to deploy a <a href="Deployable.html">Deployable</a> into a running container (this is known as <a href="Hot+Deployment.html">Hot Deployment</a>). There are 2 types of Deployers:</p> 
+              </script> <h3 id="Deployer-Definition">Definition</h3> <p>Performs a hot deployment of a <a href="Deployable.html" class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt" data-macro-id="">Deployable</a></p> <h3 id="Deployer-Explanation">Explanation</h3> <p>You use a <code>Deployer</code> when you wish to deploy a <a href="Deployable.html">Deployable</a> into a running container (this is known as <a href="Hot+Deployment.html">Hot Deployment</a>). There are 2 types of Deployers:</p> 
           <ul> 
            <li><a href="Local+Deployer.html">Local Deployer</a>: A local deployer deploys in a locally installed container. Usually, local deployers use the file system to perform the deployment by copying the deployable to a container-specific target directory.</li> 
            <li><a href="Remote+Deployer.html">Remote Deployer</a>: A remote deployer is used to deploy to a container that can be on the same machine or on some remote machine. Deploying remotely requires passing information such as username and password of the user to use for deploying, etc. These information are passed using a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</li> 
@@ -301,7 +302,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Deployer-Deployerfeatures">Deployer features</h3> 
-          <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children">
+          <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children" data-macro-id="">
            <li><a href="Local+Deployer.html">Local Deployer</a> — <span class="smalltext">Performs a hot deployment of a Deployable on a locally installed container</span></li>
            <li><a href="Remote+Deployer.html">Remote Deployer</a> — <span class="smalltext">Performs a hot deployment of a Deployable on a container running on a remote machine</span></li>
           </ul> <h3 id="Deployer-ExampleusingtheJavaAPI">Example using the Java API</h3> <p>To instantiate a <code>Deployer</code> you need to know its class name. A <code>Deployer</code> is specific to a container (you can find the class names on the <a href="Containers.html">container</a> page listing all containers).</p> <p>The deployment is done using one of the <code>Deployer.deploy(...)</code> APIs. Some <code>deploy(...)</code> signatures accept a <code>DeployableMonitor</code> which is used to wait till the container has not finished deploying. Cargo currently offers a <code>URLDeployableMonitor</code> which waits by polling a provided URL (see below in the example). Whent the URL becomes available the monitor considers that the <code>Deployable</code> is fully deployed. In the future, Cargo will provide other <code>DeployableMonitor</code> such as a <code>Jsr88DeployableMonitor</code>.</p> <script type="text/javascript">
@@ -315,7 +316,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h4 id="Deployer-ExamplewithoutusingaDeployableMonitor">Example without using a DeployableMonitor</h4> <p>Hot-deploying a WAR on Resin 3.0.9 without waiting for the deployment to finish:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
@@ -333,7 +334,7 @@ deployer.deploy(war);
 </pre> 
            </div>
           </div> <p>Please note that the <code>Deployer.deploy()</code> method call does not wait for the <code>Deployable</code> to be fully deployed before returning.</p> <h4 id="Deployer-ExampleusingaURLDeployableMonitor">Example using a URLDeployableMonitor</h4> <p>Hot-deploying an WAR on Resin 3.0.9 and waiting for the deployment to finish:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
@@ -361,7 +362,7 @@ deployer.deploy(war, new URLDeployableMonitor("http://server:port/some/url"));
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Deployer-ExampleusingtheAnttasks">Example using the Ant tasks</h3> <p>Starting from CARGO version 1.1.0, the CARGO ANT tasks gained support for remote deployers. Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;taskdef resource="cargo.tasks"&gt;
@@ -395,7 +396,7 @@ deployer.deploy(war, new URLDeployableMonitor("http://server:port/some/url"));
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

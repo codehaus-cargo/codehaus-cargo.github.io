@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -297,7 +298,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Installer-ExampleusingtheJavaAPI">Example using the Java API</h3> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">
 Installer installer = new ZipURLInstaller(
@@ -312,7 +313,7 @@ container.setHome(installer.getHome());
 </pre> 
            </div>
           </div> <h3 id="Installer-ExampleusingtheAntAPI">Example using the Ant API</h3> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
 &lt;cargo containerId="jetty7x" [...]&gt;
@@ -335,7 +336,7 @@ container.setHome(installer.getHome());
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Installer-ExampleusingtheMaven2plugin">Example using the Maven2 plugin</h3> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
   &lt;plugin&gt;
@@ -355,8 +356,8 @@ container.setHome(installer.getHome());
   &lt;/plugin&gt;
 </pre> 
            </div>
-          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="Installer-installer_with_maven2_dependencies" data-hasbody="false" data-macro-name="anchor"> </span></p> <h3 id="Installer-UsingMaven2-baseddistributions">Using Maven2-based distributions</h3> <p>New versions of most application servers have their distribution packages built by Maven2, hence distribute these as ZIP or TAR.GZ files on a Maven2 repository. It is also rather easy to upload servers' packages to an internal (for example, enterprise) Maven repository. In this case, CARGO lets you directly use such artifacts using an <code>ArtifactInstaller</code>. Here is the example for Jetty 7:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          </div> <p><span class="confluence-anchor-link conf-macro output-inline" id="Installer-installer_with_maven2_dependencies" data-hasbody="false" data-macro-name="anchor" data-macro-id=""> </span></p> <h3 id="Installer-UsingMaven2-baseddistributions">Using Maven2-based distributions</h3> <p>New versions of most application servers have their distribution packages built by Maven2, hence distribute these as ZIP or TAR.GZ files on a Maven2 repository. It is also rather easy to upload servers' packages to an internal (for example, enterprise) Maven repository. In this case, CARGO lets you directly use such artifacts using an <code>ArtifactInstaller</code>. Here is the example for Jetty 7:</p> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
   &lt;properties&gt;
@@ -398,7 +399,7 @@ container.setHome(installer.getHome());
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

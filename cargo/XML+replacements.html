@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -286,14 +287,14 @@
                 if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
                   document.getElementById("decommission-warning").style.display = "";
                 }
-              </script> <h3 id="XMLreplacements-Definition">Definition</h3>The <strong class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt">XML replacements</strong> option allows you to modify XML files of your container's configuration using XPath statements.
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+              </script> <h3 id="XMLreplacements-Definition">Definition</h3>The <strong class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt" data-macro-id="66c505bd-2b44-4022-aa8c-2c0be7a949d3">XML replacements</strong> option allows you to modify XML files of your container's configuration using XPath statements.
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="c4189695-817e-47ea-b072-2405b06786bd">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Standalone+Local+Configuration.html">standalone local containers</a>, and does work with the <a href="Cargo+Daemon.html">Cargo Daemon</a> since version 1.4.12.</p>
            </div>
           </div><h3 id="XMLreplacements-Explanation">Explanation</h3><p>In some cases, it is necessary to modify XML files of your container. This can be done using Cargo's <code>xmlReplacements</code> option, accessible via the Cargo APIs.</p><p>You might for example want to modify the&nbsp;<code>defaultHost</code> for your Tomcat instance.</p><h3 id="XMLreplacements-ExampleusingtheJavaAPI">Example using the Java API</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="e80b6666-3da6-4cb5-baa0-90dabcff743f">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalContainer container = ...;
 StandaloneLocalConfiguration configuration = (StandaloneLocalConfiguration) getLocalContainer().getConfiguration();
@@ -322,7 +323,7 @@ configuration.addXmlReplacement(defaultHost);
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="XMLreplacements-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="d9616ba7-e4f5-4b7d-94da-695219ca31a8">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="@{containerId}" action="@{action}"&gt;
   &lt;configuration home="${configuration.home}"&gt;
@@ -332,7 +333,7 @@ configuration.addXmlReplacement(defaultHost);
 </pre> 
            </div>
           </div><h3 id="XMLreplacements-ExampleusingtheMaven2/Maven3plugin">Example using the&nbsp;Maven 2 / Maven 3 plugin</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="9d9718e6-6d41-4052-94a8-471f06e44420">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
@@ -368,7 +369,7 @@ configuration.addXmlReplacement(defaultHost);
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

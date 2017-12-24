@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -297,14 +298,14 @@
            <li><a href="#Startingandstoppingacontainer-datasources">Adding JDBC DataSources to the container's JNDI tree</a></li>
            <li><a href="#Startingandstoppingacontainer-resources">Adding POJO or JavaMail Resources to the container's JNDI tree</a></li>
           </ul>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="dd687b48-ea77-4a96-a65f-e3a5f9c515b7">
            <p class="title">Like to learn by example? Take a look at our archetypes</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>We have several <a href="Maven2+Archetypes.html">Maven 2 / Maven 3 Archetypes</a> that contain sample&nbsp;Maven 2 / Maven 3 projects with different use cases for the Codehaus Cargo Maven 2 / Maven 3 plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven2+Archetypes.html">Maven2 Archetypes</a>.</p>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-configuration" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="Startingandstoppingacontainer-Configuration">Configuration</h3><p><strong>Example of a minimalist configuration</strong>:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-configuration" data-hasbody="false" data-macro-name="anchor" data-macro-id="6d7ca320-625b-4429-932b-95cdb0535278"> </span></p><h3 id="Startingandstoppingacontainer-Configuration">Configuration</h3><p><strong>Example of a minimalist configuration</strong>:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="cc1ca7da-4f9a-4ed4-82bf-d3effebef2d3">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
   &lt;build&gt;
@@ -319,12 +320,12 @@
 </pre> 
            </div>
           </div><p>Yes, you've read it right, there's no <code>&lt;configuration&gt;</code> element in this example! When you use this setup the Cargo m2 plugin will use a Jetty container by default. You can start the container with <code>mvn cargo:start</code> and stop it with <code>mvn cargo:stop</code>.</p>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="bd7070f7-73b9-4b13-acce-1f093a8ba981">
            <p class="title">Wait after the container has started</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>If you want Cargo to start the container and "wait" (i.e., do not stop it right afterwards, so that you can for example to manual tests), please run the following command:</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="f7d95f91-eb2b-4456-aed6-8a91d468e0eb">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">mvn cargo:run
 </pre> 
@@ -333,7 +334,7 @@
             <p>Cargo will then start the container and show the following message: <code>Press Ctrl-C to stop the container...</code>.</p>
            </div>
           </div><p><strong>Example of a lightweight configuration</strong>:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="867ced3a-c231-4bb3-be96-1ad94f27e549">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;configuration&gt;
@@ -354,7 +355,7 @@
 </pre> 
            </div>
           </div><p>This minimal configuration allows you to configure a default Tomcat 5.x <a href="Standalone+Local+Configuration.html">standalone configuration</a> (when the configuration type is not defined as above, the plugin will use a standalone configuration by default) in <code>${project.basedir}/target/resin</code>.</p><p><strong>Example of a full-fledged&nbsp;Maven 2 / Maven 3 configuration</strong>:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="0265ac70-7d1d-4ab2-8805-b499945f4d23">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;configuration&gt;
@@ -406,14 +407,14 @@
 </pre> 
            </div>
           </div><p>This example shows the usage of a standalone configuration for configuring Tomcat 7.x. Note that it's possible to define <a href="Deployable.html">deployables</a> in the <code>&lt;configuration&gt;</code> element and they'll be deployed before the container starts (this is what we call <a href="Static+Deployment.html">static deployment</a>). We have also defined some <a href="Configuration+properties.html">configuration properties</a> to tell Cargo to configure Tomcat 7.x to start on port 8080 and to output highly verbose logs (useful for debugging).</p><p>If you have a container that is already installed and configured, say with other deployables already in there, you may want to use an <a href="Existing+Local+Configuration.html">existing configuration</a>. This done by specifying <code>&lt;type&gt;existing&lt;/type&gt;</code>. In that case you won't be able to control the configuration from Cargo (like port to use, logging levels, etc) as it'll be defined externally.</p>
-          <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block" data-hasbody="true" data-macro-name="tip">
+          <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block" data-hasbody="true" data-macro-name="tip" data-macro-id="a4337cce-dd1f-4338-9fbc-8b556553892e">
            <p class="title">Timeouts</p>
            <span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>The CARGO container definiton as well as the various application ping options in CARGO have a <code>timeout</code> option (which is extremely useful in real-life applications), the default timeout being set to 2 minutes in most cases. Please check the <a href="Maven2+Plugin+Reference+Guide.html">Maven 2 / Maven 3 Plugin Reference Guide</a> as well as the documentation about <a href="Container+Timeout.html">Container Timeout</a> for details.</p>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-jetty" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="Startingandstoppingacontainer-ConfiguringanEmbeddedJettyContainer">Configuring an Embedded Jetty Container</h3><p>The most basic container you can use in cargo is an Embedded Jetty 4x/5x/6x Container. The following Maven plugin definition will configure an embedded Jetty 6x container. Note the use of the <code>embedded</code> type element to specify an embedded container.</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-jetty" data-hasbody="false" data-macro-name="anchor" data-macro-id="e95627b4-3f5a-4b02-bc66-a822432f6fe5"> </span></p><h3 id="Startingandstoppingacontainer-ConfiguringanEmbeddedJettyContainer">Configuring an Embedded Jetty Container</h3><p>The most basic container you can use in cargo is an Embedded Jetty 4x/5x/6x Container. The following Maven plugin definition will configure an embedded Jetty 6x container. Note the use of the <code>embedded</code> type element to specify an embedded container.</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="de55c77e-f781-4966-81d0-0f06dc370ce8">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;plugin&gt;
@@ -429,7 +430,7 @@
 [...]
 </pre> 
            </div>
-          </div><p>Note: If you wish to use Jetty 5.x, you don't have to specify <code>&lt;containerId&gt;</code> nor <code>&lt;type&gt;</code> in the <code>&lt;container&gt;</code> element because Jetty 5x is Cargo's default container.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-java" data-hasbody="false" data-macro-name="anchor"> </span></p><script type="text/javascript">
+          </div><p>Note: If you wish to use Jetty 5.x, you don't have to specify <code>&lt;containerId&gt;</code> nor <code>&lt;type&gt;</code> in the <code>&lt;container&gt;</code> element because Jetty 5x is Cargo's default container.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-java" data-hasbody="false" data-macro-name="anchor" data-macro-id="334aaa75-d1cf-4ea1-afda-ae24c21abf4b"> </span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -440,7 +441,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Startingandstoppingacontainer-SettingtheJAVA_HOME">Setting the JAVA_HOME</h3><p>You can set an alternate JAVA_HOME for non-embedded containers. This will allow you to run a container that uses JDK 1.4 even if your build runs on Java 5. Here's an example of how to do this.</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="32e63bf1-bf2a-4bf9-8cb2-ed9cbcffecb4">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;plugin&gt;
@@ -457,8 +458,8 @@
 [...]
 </pre> 
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-autodeploy" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="Startingandstoppingacontainer-Automaticdeploymentofproject'sartifact(forJ2EEprojects)">Automatic deployment of project's artifact (for J2EE projects)</h3><p>If your project is a J2EE project (i.e. of type <code>&lt;packaging&gt;war&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ear&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ejb&lt;/packaging&gt;</code> or <code>&lt;packaging&gt;uberwar&lt;/packaging&gt;</code>) and you use the Cargo m2 plugin on that project then the generated artifact will be automatically added to the list of deployables to deploy. You can control the location of the artifact by using the <code>&lt;location&gt;</code> element (it defaults to <code>${project.build.directory}/${project.build.finalName}.${project.packaging</code>}). In addition if you want to wait for the deployment to be finished you can specify a <code>&lt;pingURL&gt;</code> (none is used by default). Here's an example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-autodeploy" data-hasbody="false" data-macro-name="anchor" data-macro-id="9c411030-c4ad-48b5-a59d-134437040947"> </span></p><h3 id="Startingandstoppingacontainer-Automaticdeploymentofproject'sartifact(forJ2EEprojects)">Automatic deployment of project's artifact (for J2EE projects)</h3><p>If your project is a J2EE project (i.e. of type <code>&lt;packaging&gt;war&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ear&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ejb&lt;/packaging&gt;</code> or <code>&lt;packaging&gt;uberwar&lt;/packaging&gt;</code>) and you use the Cargo m2 plugin on that project then the generated artifact will be automatically added to the list of deployables to deploy. You can control the location of the artifact by using the <code>&lt;location&gt;</code> element (it defaults to <code>${project.build.directory}/${project.build.finalName}.${project.packaging</code>}). In addition if you want to wait for the deployment to be finished you can specify a <code>&lt;pingURL&gt;</code> (none is used by default). Here's an example:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="7b82d61a-7ec5-456e-b6c1-3e432abd8c17">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
@@ -474,7 +475,7 @@
     [...]
 </pre> 
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-lifecycle" data-hasbody="false" data-macro-name="anchor"> </span></p><script type="text/javascript">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-lifecycle" data-hasbody="false" data-macro-name="anchor" data-macro-id="aff1be8c-3d51-4514-b2dc-c4afe1c01e3f"> </span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -485,7 +486,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Startingandstoppingacontainer-Automaticallyexecutingandstoppingthecontainerwhenrunningmvninstall">Automatically executing and stopping the container when running mvn install</h3><p>You might to automate the execution of <code>cargo:start</code> and <code>cargo:stop</code>. Of course you can bind those goals to any lifecycle phase (see Maven's <a href="http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html" class="external-link" rel="nofollow">introduction to the lifecycle</a> tutorial). Here's a common example used to start and the stop the container for doing integration tests:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="0f743340-aa8d-46b0-8000-dd6181a904b7">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
@@ -512,8 +513,8 @@
 &lt;/plugin&gt;
 </pre> 
            </div>
-          </div><p>In this example we've bound the execution of the <code>cargo:start</code> goal to the <code>pre-integration-test</code> phase and the <code>cargo:stop</code> goal to the <code>post-integration-test</code> phase. You'd run your tests in the <code>integration-test</code> phase where you'll be assured that your container is already up and running. Running <code>mvn install</code> will execute everything automatically. For a full-fledged example and source code of an integration test with Cargo, see chapter 4 of the <a href="http://www.mergere.com/m2book_download.jsp" class="external-link" rel="nofollow">Better Builds with Maven book</a>.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-extrajars" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="Startingandstoppingacontainer-AddingJARstothecontainer'sclasspath">Adding JARs to the container's classpath</h3><p>There are cases when you want to add extra JARs to your container's classpath, in order to share them between webapps for example. In order to add them, the first step is to define them as standard Maven dependencies. Then you should add a <code>&lt;dependencies&gt;</code> element under the <code>&lt;container&gt;</code> element and one <code>&lt;dependency&gt;</code> element for each JAR to add. For example, to add the Spring 2.0 JAR to your container's classpath you would write:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          </div><p>In this example we've bound the execution of the <code>cargo:start</code> goal to the <code>pre-integration-test</code> phase and the <code>cargo:stop</code> goal to the <code>post-integration-test</code> phase. You'd run your tests in the <code>integration-test</code> phase where you'll be assured that your container is already up and running. Running <code>mvn install</code> will execute everything automatically. For a full-fledged example and source code of an integration test with Cargo, see chapter 4 of the <a href="http://www.mergere.com/m2book_download.jsp" class="external-link" rel="nofollow">Better Builds with Maven book</a>.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-extrajars" data-hasbody="false" data-macro-name="anchor" data-macro-id="7dadbce6-df5f-4a07-9b18-ed0dc74c2769"> </span></p><h3 id="Startingandstoppingacontainer-AddingJARstothecontainer'sclasspath">Adding JARs to the container's classpath</h3><p>There are cases when you want to add extra JARs to your container's classpath, in order to share them between webapps for example. In order to add them, the first step is to define them as standard Maven dependencies. Then you should add a <code>&lt;dependencies&gt;</code> element under the <code>&lt;container&gt;</code> element and one <code>&lt;dependency&gt;</code> element for each JAR to add. For example, to add the Spring 2.0 JAR to your container's classpath you would write:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="68226565-616e-4d23-a811-b950ddda4f7a">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;dependencies&gt;
@@ -542,7 +543,7 @@
 &lt;/plugin&gt;
 </pre> 
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-datasources" data-hasbody="false" data-macro-name="anchor"> </span></p><script type="text/javascript">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-datasources" data-hasbody="false" data-macro-name="anchor" data-macro-id="f0656ada-4b7a-4064-b1b3-7151a8cc10fa"> </span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -557,7 +558,7 @@
            <li>Every configuration that supports Resources also support DataSources, but not visa versa. In other words, you will not be as portable, if you hard-code to a container's Resource implementation.</li>
            <li>Resources are tricky and vary between vendors. Why add more work for yourself?</li>
           </ol><p>The next part of this topic will show how to configure DataSources in a portable way.</p><h4 id="Startingandstoppingacontainer-DataSourceConfigurationExamples">DataSource Configuration Examples</h4><h5 id="Startingandstoppingacontainer-OneDataSource:">One DataSource:</h5><p>Just add a property that starts with <code>cargo.datasource.datasource</code>. Note that you will probably need to add a classpath dependency for the driver.</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="984bd406-e189-4e38-830e-30159d16c277">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;plugin&gt;
@@ -589,7 +590,7 @@
 </pre> 
            </div>
           </div><h5 id="Startingandstoppingacontainer-MultipleDataSources">Multiple DataSources</h5><p>To have multiple DataSources bound to JNDI, simply add more properties that start with <code>cargo.datasource.datasource</code>.</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="397f4d40-c95c-48a0-8662-ae571f23eaac">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;plugin&gt;
@@ -622,7 +623,7 @@
           <ul>
            <li>Note that if you specify this on a container that does not support transactions, you will get a&nbsp;<code>CargoException</code> during the configuration phase.</li>
            <li><p>valid values are&nbsp;<code>LOCAL_TRANSACTION</code> or <code>XA_TRANSACTION</code>. Note that&nbsp;<code>XA_TRANSACTION</code> is emulated in this case.</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="301eac26-9a38-4aef-a495-14e726290745">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;plugin&gt;
@@ -654,7 +655,7 @@
           </ol>
           <ul>
            <li><p>Note that if you specify this on a container that does not support XADataSource configuration, you will get a CargoException during the configuration phase.</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="b75b5963-e201-414c-9400-cefba81fdf77">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;plugin&gt;
@@ -678,7 +679,7 @@
 </pre> 
              </div>
             </div></li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-resources" data-hasbody="false" data-macro-name="anchor"> </span></p><script type="text/javascript">
+          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-resources" data-hasbody="false" data-macro-name="anchor" data-macro-id="56a3020c-d60a-479a-a4a5-d500d1ccfafa"> </span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -692,7 +693,7 @@
           <ul>
            <li>Resin and Tomcat require you supply the mail and activation jars externally due to Sun license requirements. The below example shows this.</li>
           </ul>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="64522157-185d-47b7-9026-43ca78975200">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;plugin&gt;
@@ -739,7 +740,7 @@
 </pre> 
            </div>
           </div><h5 id="Startingandstoppingacontainer-ConnectionPoolDataSource:">ConnectionPoolDataSource:</h5><p>If you use a framework that does its own database connection pooling, you may need to configure a native ConnectionPoolDataSource. Here's how:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="7e6e66ab-2439-45fe-bc08-c7de3a3ee25e">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;plugin&gt;
@@ -770,7 +771,7 @@
 </pre> 
            </div>
           </div><h5 id="Startingandstoppingacontainer-MultipleResources">Multiple Resources</h5><p>To have multiple POJO Resources bound to JNDI, simply add more properties that start with cargo.resource.resource.</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="c7b1c574-363f-4ba4-9835-8336d657e7d7">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 &lt;plugin&gt;
@@ -808,7 +809,7 @@
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

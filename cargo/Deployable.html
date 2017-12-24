@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -303,7 +304,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Deployable-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Deploying a WAR in Tomcat 5.x:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="22cc701f-7aa2-4d1e-8210-6619a0ff29bd">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">Container container = new Tomcat5xContainer(
     new CatalinaStandalineConfiguration("target/tomcat5x"));
@@ -315,7 +316,7 @@ WAR war = new WAR("path/to/my.war");
 </pre> 
            </div>
           </div><h3 id="Deployable-ExampleusingtheGenericAPI">Example using the Generic API</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="170d88e9-ff3f-43a2-9cba-0abdfef67824">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">[...]
 
@@ -335,7 +336,7 @@ WAR war = factory.createDeployable("tomcat5x", "path/to/my.war",
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Deployable-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Statically deploying a WAR in Tomcat 5.x:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="3139021e-582b-4c8f-84ec-44c1926d3ca0">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat5x" home="c:/apps/tomcat-5.0.29" action="start"&gt;
   &lt;configuration&gt;
@@ -345,7 +346,7 @@ WAR war = factory.createDeployable("tomcat5x", "path/to/my.war",
 </pre> 
            </div>
           </div><h3 id="Deployable-ExampleusingtheMaven2/Maven3plugin">Example using the&nbsp;Maven 2 / Maven 3 plugin</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="a0adcb53-3219-4744-b1ef-40d03c9464bc">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependencies&gt;
   [...]
@@ -397,7 +398,7 @@ WAR war = factory.createDeployable("tomcat5x", "path/to/my.war",
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>

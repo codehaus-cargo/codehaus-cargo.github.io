@@ -86,6 +86,7 @@
          <li><a href="Glassfish+2.x.html">Glassfish 2.x</a></li>
          <li><a href="Glassfish+3.x.html">Glassfish 3.x</a></li>
          <li><a href="Glassfish+4.x.html">Glassfish 4.x</a></li>
+         <li><a href="Glassfish+5.x.html">Glassfish 5.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -287,7 +288,7 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <h1 id="AddingTLDsupporttotheJettycontainer-Symptoms">Symptoms</h1><p>The embedded jetty container starting up for integration tests in a separate module fails to successfully run web apps which use tag libraries. The app server starts successfully however when the test case attempts to hit a jsp which imports the tag libraries the server fails with the following exception. This behaviour is not seen when deploying the webapp to an installed tomcat instance or whe using the jetty maven plugin to start the container.</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="a2b300f4-ad2b-49b0-97c6-9f541f5256ec">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">org.apache.jasper.JasperException: Unable to initialize
 TldLocationsCache: null
@@ -330,7 +331,7 @@ org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:314)
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h1 id="AddingTLDsupporttotheJettycontainer-Workaround">Workaround</h1><p>The workaround is to place the tld files anywhere in WEB-INF. The secondary scan, after the above one, will look for any tld files in WEB-INF and automatically register them.</p><h1 id="AddingTLDsupporttotheJettycontainer-Formoredetails...">For more details...</h1><p>See: <span class="confluence-jim-macro jira-issue conf-macro output-block" data-jira-key="CARGO-651" data-client-id="SINGLE_f45e5d61-0f77-35a3-874c-53685b02a124_491732_anonymous" data-hasbody="false" data-macro-name="jira"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-651" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>CARGO-651</a> - <span class="summary">Getting issue details...</span> <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span> </span> </p> </td> 
+          </center><h1 id="AddingTLDsupporttotheJettycontainer-Workaround">Workaround</h1><p>The workaround is to place the tld files anywhere in WEB-INF. The secondary scan, after the above one, will look for any tld files in WEB-INF and automatically register them.</p><h1 id="AddingTLDsupporttotheJettycontainer-Formoredetails...">For more details...</h1><p>See: <span class="confluence-jim-macro jira-issue conf-macro output-block" data-jira-key="CARGO-651" data-client-id="SINGLE_f45e5d61-0f77-35a3-874c-53685b02a124_491732_anonymous" data-hasbody="false" data-macro-name="jira" data-macro-id="0f291fa0-413d-4ae5-991a-41b9f6ad1c98"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-651" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>CARGO-651</a> - <span class="summary">Getting issue details...</span> <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span> </span> </p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
@@ -341,7 +342,7 @@ org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:314)
        <table width="100%"> 
         <tbody>
          <tr> 
-          <td align="left" valign="top"> Copyright 2004-2017. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left" valign="top"> Copyright 2004-2018. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right" valign="top"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>
