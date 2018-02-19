@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLDecoder;
@@ -50,11 +51,15 @@ import org.jsoup.Jsoup;
 
 public class WebsiteGenerator implements Runnable
 {
-    private static Set<File> files;
+    private static Set<File> files = Collections.synchronizedSet(new HashSet<File>());
 
-    private static Set<URL> attachments;
+    private static Set<URL> attachments = Collections.synchronizedSet(new HashSet<URL>());
 
-    private static Map<URL, Exception> exceptions;
+    private static Map<String, String> blogpostIdentifiers =
+        Collections.synchronizedMap(new HashMap<String, String>());
+
+    private static Map<URL, Exception> exceptions =
+        Collections.synchronizedMap(new HashMap<URL, Exception>());
 
     private static final boolean downloadAttachments =
         Boolean.parseBoolean(System.getProperty("cargo.downloadAttachments", "true"));
@@ -81,6 +86,32 @@ public class WebsiteGenerator implements Runnable
             download();
         }
         parse();
+    }
+
+    private static String toFilename(String title) throws UnsupportedEncodingException
+    {
+        StringBuilder sb = new StringBuilder();
+        for (char character : title.toCharArray())
+        {
+            if ((character >= '0' && character <= '9') ||
+                (character >= 'a' && character <= 'z') ||
+                (character >= 'A' && character <= 'Z') ||
+                 character == '.' || character == '-')
+            {
+                sb.append(character);
+            }
+            else
+            {
+                sb.append(' ');
+            }
+        }
+        String result = sb.toString();
+        while (result.contains("  "))
+        {
+            result = result.replace("  ", " ");
+        }
+        result = result.trim();
+        return URLEncoder.encode(result, "UTF-8");
     }
 
     private static void download() throws Exception
@@ -116,9 +147,6 @@ public class WebsiteGenerator implements Runnable
 
         JSONArray pages = new JSONObject(sb.toString()).getJSONObject("page").getJSONArray("results");
         System.out.println("Found " + pages.length() + " pages to handle");
-        files = Collections.synchronizedSet(new HashSet<File>(pages.length()));
-        exceptions = Collections.synchronizedMap(new HashMap<URL, Exception>());
-        attachments = Collections.synchronizedSet(new HashSet<URL>(pages.length()));
         for (int i = 0; i < pages.length(); i++)
         {
             JSONObject links = pages.getJSONObject(i).getJSONObject("_links");
@@ -130,11 +158,11 @@ public class WebsiteGenerator implements Runnable
 
         JSONArray blogposts = new JSONObject(sb.toString()).getJSONObject("blogpost").getJSONArray("results");
         System.out.println("Found " + blogposts.length() + " blog posts to handle");
-        files = Collections.synchronizedSet(new HashSet<File>(blogposts.length()));
-        exceptions = Collections.synchronizedMap(new HashMap<URL, Exception>());
-        attachments = Collections.synchronizedSet(new HashSet<URL>(blogposts.length()));
         for (int i = 0; i < blogposts.length(); i++)
         {
+            blogpostIdentifiers.put(
+                blogposts.getJSONObject(i).getString("id"),
+                toFilename(blogposts.getJSONObject(i).getString("title")));
             JSONObject links = blogposts.getJSONObject(i).getJSONObject("_links");
             WebsiteGenerator runnable = new WebsiteGenerator();
             runnable.url = new URL(links.getString("self") + "?expand=body.view");
@@ -363,6 +391,10 @@ public class WebsiteGenerator implements Runnable
                     {
                         filename = "Home";
                     }
+                    if (blogpostIdentifiers.containsKey(filename))
+                    {
+                        filename = blogpostIdentifiers.get(filename);
+                    }
                     sb.append(filename);
                     sb.append(".html");
                     sb.append(anchor);
@@ -484,8 +516,7 @@ public class WebsiteGenerator implements Runnable
                 sb.append(value.substring(start));
                 value = sb.toString();
 
-                String title = result.getString("title");
-                File file = new File("target/source", URLEncoder.encode(title, "UTF-8"));
+                File file = new File("target/source", toFilename(result.getString("title")));
                 writeFile(file, value);
                 files.add(file);
             }
