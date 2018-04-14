@@ -285,7 +285,7 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <h3 id="Debugging-Definition">Definition</h3><p>Explain how to perform debugging when something doesn't work in Cargo&nbsp;</p><p>Sometimes, it can happen that the container does not start or stop as expected or you might have reasons to believe that CARGO is "acting weird". Here is a short list of things you can do to try debugging the problem.</p><h3 id="Debugging-Debuggingthecontainer">Debugging the container</h3><p>Most Java Virtual Machine implementations support remote debugging. Once started in debug mode, you can then remotely connect to your container using any IDE and debug your container and/or application.</p><p>In order to do so, add the following arguments to the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a>:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="739aea0f-0078-4eff-b039-f2f26dbc639c">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">-Xdebug
 -Xrunjdwp:transport=dt_socket,server=y,suspend=&lt;suspend&gt;,address=&lt;port&gt;
@@ -298,7 +298,7 @@
            <li><strong>suspend</strong> is whether the launch of the container should first wait for a remote debugger to connect. If <code>y</code>, the container will wait for you to connect with your remote debugger before starting; if <code>n</code> the container will start immediately and at the same time listen on the remote debugging port.</li>
            <li><strong>port</strong> is the port number to use for remote debugging.</li>
           </ul><p>Here is an example for starting a JOnAS 5.x container in Remote Debug on port 8000 without suspend mode using the Maven2 plugin:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="538cae8a-64b7-4f1a-9faf-182e4c52a8f5">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
@@ -332,7 +332,7 @@
            <li>Click <strong>Debug</strong> - <strong>Attach Debugger...</strong></li>
            <li>In the window that appears, type in the remote host name and the port number then click OK</li>
           </ol><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/NetBeans%20remote%20debugger.png" data-image-src="attachments/NetBeans%20remote%20debugger.png" data-unresolved-comment-count="0" data-linked-resource-default-alias="NetBeans remote debugger.png" data-base-url="https://codehaus-cargo.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="491671" data-linked-resource-container-version="38" data-media-id="8eb520ae-cab4-4462-92d3-d6e3b2c96b4b" data-media-type="file"></span></p><p>Steps for achieving the same in Eclipse IDE are similar.</p>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note" data-macro-id="aa3371f7-24c6-434e-8d82-0eded63bb451">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
            <p class="title">About the cargo.start.jvmargs property</p>
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -354,13 +354,13 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h4 id="Debugging-ExampleusingtheJavaAPI">Example using the Java API</h4><p>The <code>Container.setOutput(File)</code> API allows you to redirect the container console (<code>stdout</code>) to a file. This is the first file you should check in case of problem.</p><p>Cargo is able to configure containers to generate various levels logs. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/LoggingLevel.html" class="external-link" rel="nofollow"><code>o.c.c.container.property.LoggingLevel</code></a>: <code>LoggingLevel.LOW</code>, <code>LoggingLevel.MEDIUM</code> and <code>LoggingLevel.HIGH</code> (<code>LoggingLevel.MEDIUM</code> is the default value). They represent the quantity of information you wish to have in the generated log file. You can tune container logging by using the following API:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="f8e7c555-92da-4468-9faf-09baa1abef53">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">configuration.setProperty(GeneralPropertySet.LOGGING, LoggingLevel.HIGH.getLevel());
 </pre> 
            </div>
           </div><p>The generated log files will then be found in the working directory you have specified on the container (through the <code>container.setWorkingDir()</code> call).</p><p>Starting Tomcat 4.x specifying an output console log file:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="14cd9be8-e78f-4f09-8811-24bac00a0bcf">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalContainer container = new Tomcat4xLocalContainer(
     new CatalinaStandaloneLocalConfiguration("target/tomcat4x"));
@@ -372,7 +372,7 @@ container.start();
 </pre> 
            </div>
           </div><p>Use the <code>container.setAppend(true|false)</code> method to decide whether the log file is recreated or whether it is appended to, keeping the previous execution logs (by default, the file is recreated at every container start or stop).</p><h4 id="Debugging-ExampleusingtheAntAPI">Example using the Ant API</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="aee12d9f-5dff-4525-9706-9ce1e23efdc1">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat4x" home="c:/apps/jakarta-tomcat-4.1.30" 
     action="start"
@@ -394,7 +394,7 @@ container.start();
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h4 id="Debugging-ExampleusingtheMaven2/Maven3plugin">Example using the Maven2/Maven3 plugin</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="7154ff21-4c8c-46d6-9ee8-19023c5e3d37">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;container&gt;
   &lt;containerId&gt;tomcat4x&lt;/containerId&gt;
@@ -409,12 +409,12 @@ container.start();
 &lt;/configuration&gt;&nbsp;</pre> 
            </div>
           </div><p>Use the <code>append="true|false"</code> attribute for controlling the log file creation behavior.</p><h3 id="Debugging-DebuggingCARGOitself">Debugging CARGO itself</h3><p>To enable the Java debugger on ANT, export the&nbsp;<code>ANT_OPTS</code> system property using the parameters specified above. For example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="7b16cbfa-7040-4a6e-99ba-ab47fad53f54">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: bash; gutter: false; theme: Confluence" data-theme="Confluence">export ANT_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000"</pre> 
            </div>
           </div><p>On Maven2/Maven3, enabling Java debugger is done using the&nbsp;<code>mvnDebug</code> executable instead of&nbsp;<code>mvn</code>.</p>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="2a6aaf6b-dff3-4854-8cd9-caa8d0dfc5b8">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">mvnDebug command on MacOS X</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -431,7 +431,7 @@ container.start();
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Debugging-RedirectingCARGOlogstoafile">Redirecting CARGO logs to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI.1">Example using the Java API</h4><p>Some Cargo classes support generation of logs. This is implemented through the notion of <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/Logger.html" class="external-link" rel="nofollow"><code>Logger</code></a> and levels are managed using <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>LogLevel</code></a>. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>o.c.c.util.log.LogLevel</code></a>: <code>LogLevel.DEBUG</code>, <code>LogLevel.INFO</code> and <code>LogLevel.WARN</code> (<code>LogLevel.INFO</code> is the default value).</p><p>For example to turn on logging monitoring on a <code>Container</code> class, you can use:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="83ae0768-a1ae-4a4c-b7ce-5929a28077f8">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">Logger fileLogger = new FileLogger(new File("c:/tmp/cargo.log"), true);
 fileLogger.setLevel(LogLevel.DEBUG);
@@ -454,7 +454,7 @@ container.setLogger(fileLogger);
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h4 id="Debugging-ExampleusingtheAntAPI.1">Example using the Ant API</h4><p>When using the Ant tasks, CARGO will by default use the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/AntLogger.html" class="external-link" rel="nofollow">AntLogger</a>. You can specify the log level using the&nbsp;<code>logLevel</code> attribute, and the log file by using the <code>log</code> attribute. For example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="6b0d09fc-759b-499a-861f-c76f56bb2abc">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat4x" home="c:/apps/jakarta-tomcat-4.1.30" 
     action="start"
@@ -463,7 +463,7 @@ container.setLogger(fileLogger);
 </pre> 
            </div>
           </div><h4 id="Debugging-ExampleusingtheMaven2/Maven3plugin.1">Example using the Maven2/Maven3 plugin</h4><p>When using the Maven2/Maven3 plugin, CARGO will by default use the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/maven2/log/MavenLogger.html" class="external-link" rel="nofollow">MavenLogger</a>.</p><p>When you use&nbsp;<code>mvn</code> with the&nbsp;<code>-e</code> option, both Maven itself and the CARGO plugin will log everything in debug mode.</p><p>If you want to use the plugin in debug mode without having Maven itself in debug mode, you can specify the log level using the&nbsp;<code>logLevel</code> attribute, and the log file by using the <code>log</code> attribute. For example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="bb702617-b5ca-42af-bc89-2a4ebc929587">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;container&gt;
   &lt;containerId&gt;tomcat4x&lt;/containerId&gt;

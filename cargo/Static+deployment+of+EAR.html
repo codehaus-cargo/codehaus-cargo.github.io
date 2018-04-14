@@ -285,7 +285,7 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> <h3 id="StaticdeploymentofEAR-Definition">Definition</h3>Deploy an EAR that will be started when the container starts<h3 id="StaticdeploymentofEAR-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting&nbsp;JOnAS 5.x with an EAR to deploy:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="57b1f50f-5e70-47b5-89fe-482d01298d4f">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">InstalledLocalContainer container = new Jonas5xInstalledLocalContainer(
     new OrionStandaloneConfiguration("target/jonas5x"));
@@ -297,7 +297,7 @@ container.getConfiguration().addDeployable(ear);
 container.start();</pre> 
            </div>
           </div><h3 id="StaticdeploymentofEAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting&nbsp;JOnAS 5.x with an EAR to deploy:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="683dec99-303d-4c37-89f0-eceadb6d5de0">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="jonas5x" home="c:/apps/jonas-full-5.2.1" action="start"&gt;
   &lt;configuration&gt;
@@ -316,7 +316,7 @@ container.start();</pre>
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="StaticdeploymentofEAR-ExampleusingtheMaven2/Maven3API">Example using the Maven2/Maven3 API</h3><p>Here is the plugin configuration defining a JOnAS 5.x container with an EAR to deploy:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="916e426b-ed9c-4459-8292-d488df32a957">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependencies&gt;
   &lt;dependency&gt;

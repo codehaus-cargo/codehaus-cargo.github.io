@@ -394,7 +394,7 @@
             </tbody>
            </table>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="c2c83e1b-683d-4e8e-87a3-1958d11ff59a">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Datasource and Resource configuration</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -427,7 +427,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Configurationproperties-JavaAPI">Java API</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="5ac203b2-93f1-4b2f-b788-63c6e2916b6a">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">Configuration configuration = 
     new Tomcat5xStandaloneLocalConfiguration("target/tomcat5x"));
@@ -436,13 +436,13 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
 </pre> 
            </div>
           </div><p>You can check if a configuration supports a given property by using <code>Configuration.getCapability().supportsProperty(String propertyName)</code>.</p><p>For example if you want to check if the configuration supports setting the port property:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="de3ba8bb-3549-4b66-8d1c-09ddfbfeebf7">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">boolean isPropertySupported = configuration.getCapability().supportsProperty(ServletPropertySet.PORT);
 </pre> 
            </div>
           </div><h3 id="Configurationproperties-AntTask">Ant Task</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="9b6f2788-d9db-43bb-9922-50176c565672">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat5x" home="c:/apps/jakarta-tomcat-5.0.29" action="start"&gt;
   &lt;configuration&gt;
@@ -462,7 +462,7 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Configurationproperties-MavenPlugin">Maven Plugin</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="d51bc98d-0a86-47d5-a600-f18779bb6b58">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;build&gt;
   &lt;plugins&gt;
@@ -487,7 +487,7 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
 </pre> 
            </div>
           </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or&nbsp;Maven 2 / Maven 3 goals) can also be overriden using Java properties.</p><p>For example, with the <a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a>:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="7bb8c706-ec47-4cf8-bf6e-57062f2646d3">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">mvn -Dcargo.servlet.port=8082 cargo:start
 </pre> 

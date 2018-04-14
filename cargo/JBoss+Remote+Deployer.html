@@ -289,20 +289,20 @@
            <li><a href="#JBossRemoteDeployer-jboss4x">JBoss 4.0.x and 4.2.x</a></li>
            <li><a href="#JBossRemoteDeployer-jboss5x6x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</a></li>
            <li><a href="#JBossRemoteDeployer-jboss7x">JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x / WildFly 8.x and 9.x</a></li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss4x" data-hasbody="false" data-macro-name="anchor" data-macro-id="8370f646-08c4-4e62-8139-69a6b24f6b72"> </span></p><h3 id="JBossRemoteDeployer-JBoss4.0.xand4.2.x">JBoss 4.0.x and 4.2.x</h3><p>In JBoss 4.x, the JMX-based remote deployer can accept URLs that point to another machine. For example:</p>
+          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss4x" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="JBossRemoteDeployer-JBoss4.0.xand4.2.x">JBoss 4.0.x and 4.2.x</h3><p>In JBoss 4.x, the JMX-based remote deployer can accept URLs that point to another machine. For example:</p>
           <blockquote>
            <p><code><a href="http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war" class="external-link" rel="nofollow">http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war</a></code></p>
           </blockquote><p>In this case, our JBoss server on <code>10.156.216.127</code> will connect to <code>10.156.220.90</code> via HTTP and download the <code>paruemas-1.0-SNAPSHOT.war</code> file. Once the file is downloaded, JBoss will automatically deploy it.</p><p>The CARGO JBoss container uses this principle to expose your Java EE application to JBoss using an HTTP server that is started on the machine where CARGO is currently running. That HTTP server is controlled using two parameters:</p>
           <ul>
            <li><code><strong>JBossPropertySet.REMOTEDEPLOY_HOSTNAME</strong></code> (i.e., <code>cargo.jboss.remotedeploy.hostname</code>): sets the hostname that the JBoss server will attempt to connect to. By default, the CARGO JBoss container will automatically resolve the current machine's network name or IP address and fill this accordingly.</li>
            <li><code><strong>JBossPropertySet.REMOTEDEPLOY_PORT</strong></code> (i.e., <code>cargo.jboss.remotedeploy.port</code>): sets the port number on which the HTTP server will be started on the machine running CARGO. By default, that one is set to <em>1 + the HTTP port for JBoss</em>. For example, if JBoss is running on HTTP port <code>8080</code>, then the default for <code>JBossPropertySet.REMOTEDEPLOY_PORT</code> will be <code>18080</code>.</li>
-          </ul><p>The obvious limitation you should be aware of is that JBoss needs to have direct access to the machine running CARGO.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss5x6x" data-hasbody="false" data-macro-name="anchor" data-macro-id="13a3b6b3-8dc3-4076-8abd-3ced7ad44487"> </span></p><h3 id="JBossRemoteDeployer-JBoss5.0.x,5.1.x,6.0.xand6.1.x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</h3><p>Starting from JBoss 5.x, JBoss has a Deployment Manager that can be used for deploying things on the JBoss server. If you really want to know how it works under the hood, you can read about this feature on the <a href="http://community.jboss.org/wiki/ProfileServiceDeploymentManagerin5x" class="external-link" rel="nofollow">JBoss Website</a>. If you only want to remotely deploy applications using CARGO to your JBoss server, you can of course ignore that document.</p><p>To connect to the JBoss Deployment Manager, CARGO uses JBoss' JMX RMI port; and that's what makes things get a bit complicated. For the connection to succeed, the following JARs need to be in the container classpath or in the current Java Thread's context classloader:</p>
+          </ul><p>The obvious limitation you should be aware of is that JBoss needs to have direct access to the machine running CARGO.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss5x6x" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="JBossRemoteDeployer-JBoss5.0.x,5.1.x,6.0.xand6.1.x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</h3><p>Starting from JBoss 5.x, JBoss has a Deployment Manager that can be used for deploying things on the JBoss server. If you really want to know how it works under the hood, you can read about this feature on the <a href="http://community.jboss.org/wiki/ProfileServiceDeploymentManagerin5x" class="external-link" rel="nofollow">JBoss Website</a>. If you only want to remotely deploy applications using CARGO to your JBoss server, you can of course ignore that document.</p><p>To connect to the JBoss Deployment Manager, CARGO uses JBoss' JMX RMI port; and that's what makes things get a bit complicated. For the connection to succeed, the following JARs need to be in the container classpath or in the current Java Thread's context classloader:</p>
           <ul>
            <li>JBoss deployment manager JARs</li>
            <li>JBoss remoting client JARs</li>
           </ul><p>Here is an example code for the users of the Java API:</p>
           <blockquote>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="e9379a74-75e1-44ac-bfb4-6522d196196f">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
 
@@ -335,7 +335,7 @@ Thread.currentThread().setContextClassLoader(classLoader);
            </div>
           </blockquote><p>Here is an example Maven2 plugin configuration:</p>
           <blockquote>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="4d814126-27fe-4102-b5a0-fb34ff482587">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;!--
   Some transitive dependencies of JBoss artifacts, for example apache-xerces:xml-apis, are
@@ -432,12 +432,12 @@ Thread.currentThread().setContextClassLoader(classLoader);
            <li><code>cargo.jboss.clustered</code>: if <code>true</code>, deployment is done in the <code>farm</code> directory</li>
            <li><code>cargo.jboss.configuration</code>: JBoss profile name, default name is <code>default</code></li>
           </ul>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note" data-macro-id="dea9d291-1dfa-400f-9bbb-9fc3a3cf708e">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
            <p class="title">JBoss socket connection bug - java.lang.IllegalArgumentException: port out of range:-1</p>
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>On some Linux distributions, remote deployment may fail with an exception like:</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="c15e2c06-548b-4283-869e-a561f29202cb">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">org.codehaus.cargo.container.ContainerException: Cannot get the JBoss Deployment Manager on Provider URL jnp://localhost:44399
     at org.codehaus.cargo.tools.jboss.JBossDeployer.getDeploymentManager(JBossDeployer.java:193)
@@ -454,12 +454,12 @@ Caused by: java.lang.IllegalArgumentException: port out of range:-1
             <p>To fix it, simply rename your host, machine or DNS name to not include underscores anymore; for example on Linux you achieve this by executing a command similar to: <code>sudo hostname codehaus-cargo-ci</code></p>
            </div>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note" data-macro-id="b1e9f228-a607-45cc-9562-b739ab8e95af">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
            <p class="title">JBoss socket connection bug - Problem establishing socket connection for InvokerLocator</p>
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>On some Linux distributions, remote deployment may fail with an exception like:</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="976806d5-07fa-4f96-a403-5cb816a28099">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">Caused by: java.io.IOException: Can not get connection to server.
            Problem establishing socket connection for InvokerLocator
@@ -469,7 +469,7 @@ Caused by: java.lang.IllegalArgumentException: port out of range:-1
             </div>
             <p>That is a known bug, documented in <a class="external-link" href="http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS" rel="nofollow">http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS</a> and the solution presented on that document is to use a cron job as the root user to fix the file when it gets broken.</p>
             <p>First, create the correct version of <code>/etc/hosts</code> and save it somewhere, such as <code>/etc/hosts.fixed</code>, and populate it with the following contents (replace <code>myhost</code> with the hostname of your computer, as reported by the <code>hostname</code> command, and the correct IP assignment, as reported by <code>ipconfig</code>):</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="105950e9-1b38-487b-ae38-cbd23a24001f">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
               <b>/etc/hosts.fixed</b>
              </div>
@@ -492,7 +492,7 @@ ff02::3 ip6-allhosts
             </div>
             <p><strong>Important</strong>: If possible, enter your hostname with both the "basic" hostname and the fully-qualified domain name.</p>
             <p>Next, create a script named <code>/etc/restore-etc-hosts.sh</code> to replace the <code>/etc/hosts</code> file if Network Manager breaks it:</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="faa3539d-269b-4d58-a977-a126ad1d57d7">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
               <b>/etc/restore-etc-hosts.sh</b>
              </div>
@@ -506,7 +506,7 @@ fi
              </div>
             </div>
             <p>Finally, setup a cron job to run this script as often as you like. We recommend every couple of minutes.</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="6b0b776e-f07f-44fc-b24d-c67163ef359e">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">*/3 * * * * /etc/restore-etc-hosts.sh
 </pre> 
@@ -514,14 +514,14 @@ fi
             </div>
             <p>Once the <code>/etc/hosts</code> file is corrected, restart JBoss AS and run the tests again. Your socket connection error should be gone!</p>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss7x" data-hasbody="false" data-macro-name="anchor" data-macro-id="43a15269-4aa7-4564-aef1-cde613af1eb7"> </span></p><h3 id="JBossRemoteDeployer-JBoss7.0.x,7.1.x,7.2.x,7.3.x,7.4.xand7.5.x/WildFly8.x,9.xand10.x">JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x / WildFly 8.x, 9.x and 10.x</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x as well as WildFly 8.x, 9.x and 10.x, with some differences:</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss7x" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="JBossRemoteDeployer-JBoss7.0.x,7.1.x,7.2.x,7.3.x,7.4.xand7.5.x/WildFly8.x,9.xand10.x">JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x / WildFly 8.x, 9.x and 10.x</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x as well as WildFly 8.x, 9.x and 10.x, with some differences:</p>
           <ul>
            <li>The JAR files to include are different</li>
            <li>JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x use the <code>cargo.jboss.management-native.port</code> port</li>
            <li>WildFly 8.x, 9.x and 10.x use the <code>cargo.jboss.management-http.port</code> port</li>
           </ul><p>The following examples detail these differences.</p><p>Here is an example code for the users of the Java API:</p>
           <blockquote>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="4e34aeae-a90c-43da-90b6-c2acdc17f7f5">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">/**
  * Add all JARs in a folder in the list of files (recursive).
@@ -548,7 +548,7 @@ public static void addAllJars(File folder, List&lt;URL&gt; files) throws Excepti
 </pre> 
             </div>
            </div>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="77308747-2b4d-4dfa-9400-090c7e0cd26a">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
 
@@ -568,7 +568,7 @@ Thread.currentThread().setContextClassLoader(classLoader);
            </div>
           </blockquote><p>Here is an example Maven2 plugin configuration:</p>
           <blockquote>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="5010ae19-5e2d-4918-b631-6e9bc3f0b529">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;

@@ -285,7 +285,7 @@
                   document.getElementById("decommission-warning").style.display = "";
                 }
               </script> A&nbsp;Maven 2 / Maven 3 plugin that wraps the Cargo Java API
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="f84decc8-d418-4b1c-b341-d51eb1f45ba3">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
            <p class="title">Functional tests</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -297,12 +297,12 @@
            <li><a href="#Maven2plugin-gettingstarted">Getting started</a>: explains how to use the plugin on several use cases</li>
            <li><a href="Maven2+Plugin+Reference+Guide.html">Reference Guide</a>: provide reference documentation for all configuration options</li>
            <li><a href="Maven2+Plugin+Tips.html">Tips</a>: tips for using the plugin</li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2plugin-gettingstarted" data-hasbody="false" data-macro-name="anchor" data-macro-id="3336dda2-4695-425a-acf9-52d31643278b"> </span></p><p></p>
-          <div class="conf-macro output-block" data-hasbody="false" data-macro-name="include" data-macro-id="5b321d9b-4615-4539-8265-af47ca88aa65">
+          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2plugin-gettingstarted" data-hasbody="false" data-macro-name="anchor"> </span></p><p></p>
+          <div class="conf-macro output-block" data-hasbody="false" data-macro-name="include">
            <h1 id="Maven2plugin-GettingStarted">Getting Started</h1>
            <h2 id="Maven2plugin-Veryquickstart">Very quick start</h2>
            <p>Codehaus Cargo can be directly run on any existing Maven Java EE project (WAR, EAR or other) by running:</p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="77024384-1fac-44c2-80e9-8b1c97ac5f8e">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run
 </pre> 
@@ -310,7 +310,7 @@
            </div>
            <p>This will create a default <a href="Jetty+7.x.html">Jetty 7.x</a> <a href="Installed+Container.html">installed local container</a> and start it using the Cargo&nbsp;Maven 2 / Maven 3 plugin with your&nbsp;Maven 2 / Maven 3 project's deployable (a WAR, for example) deployed to it; so you can run manual tests (as a first introduction).</p>
            <p>What is magic is that if you now want to run the same tests with <a href="Tomcat+7.x.html">Tomcat 7.x</a> you simply need to run (in one line):</p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="4528562f-2385-46aa-9597-086b61a07840">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run
     -Dcargo.maven.containerId=tomcat7x
@@ -320,7 +320,7 @@
            </div>
            <p>That command will automatically download Tomcat 7.0.68 from the specified URL (taking into account any proxy server setting you would have in Maven 2 / Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven2+Plugin+Reference+Guide.html">Maven</a><a href="Maven2+Plugin+Reference+Guide.html"> 2 / Maven 3</a><a href="Maven2+Plugin+Reference+Guide.html"> Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p>
            <p>Now, if you want to run this time on <a href="GlassFish+3.x.html">GlassFish 3.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="ad45af14-731d-4e74-8d63-cbce79954e20">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
             <div class="codeContent panelContent pdl"> 
              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run
     -Dcargo.maven.containerId=glassfish3x
@@ -347,7 +347,7 @@
            <p>We have several <a href="Maven2+Archetypes.html">Maven 2 / Maven 3 Archetypes</a> that contain sample&nbsp;Maven 2 / Maven 3 projects with different use cases for the CARGO plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven2+Archetypes.html">Maven2 Archetypes</a>.</p>
            <p>In addition here are the typical uses cases covered by the plugin:</p>
            <p></p>
-           <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children" data-macro-id="42427b69-d34b-4051-8677-98830adfea09">
+           <ul class="childpages-macro conf-macro output-block" data-hasbody="false" data-macro-name="children">
             <li><a href="Deploying+to+a+running+container.html">Deploying to a running container</a></li>
             <li><a href="Generating+a+container+configuration+deployment+structure.html">Generating a container configuration deployment structure</a></li>
             <li><a href="Merging+WAR+files.html">Merging WAR files</a></li>

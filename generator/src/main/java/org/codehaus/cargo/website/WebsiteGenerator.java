@@ -282,8 +282,9 @@ public class WebsiteGenerator implements Runnable
             writeFile(file, Jsoup.parse(template.replace("$name", name).replace("$title",
                 URLDecoder.decode(name, "UTF-8")).replace("$value", value).replaceAll(
                     "\\s*data-linked-resource-id=\"[^\"]+\"", "").replaceAll(
+                    "\\s*data-linked-resource-type=\"[^\"]+\"", "").replaceAll(
                     "\\s*data-linked-resource-version=\"[^\"]+\"", "").replaceAll(
-                    "\\s*data-linked-resource-type=\"[^\"]+\"", "").replace(
+                    "\\s*data-macro-id=\"[^\"]+\"", "").replace(
                     "http://jira.codehaus.org/browse/CARGO-",
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-").replace(
                     "https://jira.codehaus.org/browse/CARGO-",
