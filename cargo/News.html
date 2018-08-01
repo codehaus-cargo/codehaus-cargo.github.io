@@ -195,6 +195,7 @@
          <li><a href="WildFly+10.x.html">WildFly 10.x</a></li>
          <li><a href="WildFly+11.x.html">WildFly 11.x</a></li>
          <li><a href="WildFly+12.x.html">WildFly 12.x</a></li>
+         <li><a href="WildFly+13.x.html">WildFly 13.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
       </ul><h3 id="Navigation-Extensions">Extensions</h3>
@@ -286,6 +287,38 @@
                 }
               </script> <h2 id="News-RSS">RSS</h2> <p><br class="atl-forced-newline"> An <a href="http://docs.codehaus.org/spaces/blogrss.action?key=CARGO" class="external-link" rel="nofollow">RSS</a> feed is available.</p> <h2 id="News-News">News</h2> <p><br class="atl-forced-newline"></p> 
           <div class="conf-macro output-block" data-hasbody="false" data-macro-name="blog-posts" data-macro-id=""> 
+           <div class="blog-post-listing"> 
+            <div class="logo-heading-block"> 
+             <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/686f57e5eaa0e027c6d126701dc2710b" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
+             <span class="blogHeading"> <a class="blogHeading" href="Codehaus+Cargo+1.6.9+is+here.html">Codehaus Cargo 1.6.9 is here!</a> 
+              <div class="page-metadata not-personal"> 
+               <a href="https://codehaus-cargo.atlassian.net/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6?ref=confluence" target="_blank" class="url fn confluence-userlink" data-username="alitokmen">S. Ali Tokmen</a> posted on Aug 01, 2018
+              </div> </span> 
+            </div> 
+            <div class="wiki-content"> 
+             <p>Dear Codehaus Cargo enthusiasts</p>
+             <p>Codehaus Cargo 1.6.9 is here! This small release features some version updates in sub-components, minor optimizations and the below new features / bug fixes:</p>
+             <ul>
+              <li><p>Containers - WildFly</p>
+               <ul>
+                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1459" class="external-link" rel="nofollow">CARGO-1459</a>] - Using more advanced technique to test WildFly availability</p></li>
+                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1461" class="external-link" rel="nofollow">CARGO-1461</a>] - Add support for <a href="https://codehaus-cargo.github.io/cargo/WildFly+13.x.html" class="external-link" rel="nofollow">WildFly 13.x</a></p></li>
+               </ul></li>
+              <li><p>Extensions - Maven2/Maven3 plugin</p>
+               <ul>
+                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1460" class="external-link" rel="nofollow">CARGO-1460</a>] - <code>ContainerStopMojo</code> does not honour the <code>ignoreFailures</code> option</p></li>
+               </ul></li>
+             </ul>
+             <p>To try it out:</p>
+             <ul>
+              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" class="external-link" rel="nofollow">Maven 2 / Maven 3 plugin</a> simply need to use the&nbsp;Codehaus Cargo plugin version <strong>1.6.9</strong></p></li>
+              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html" class="external-link" rel="nofollow">Java API</a> can download the new Uberjar from&nbsp;<a href="http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.6.9/cargo-core-uberjar-1.6.9.jar" class="external-link" rel="nofollow">http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.6.9/cargo-core-uberjar-1.6.9.jar</a><br></p></li>
+              <li><p>Similarly, users of the&nbsp;<a href="https://codehaus-cargo.github.io/cargo/Ant+support.html" class="external-link" rel="nofollow">ANT tasks</a> can download the new ANT tasks from&nbsp;<a href="http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.6.9/cargo-ant-1.6.9.jar" class="external-link" rel="nofollow">http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.6.9/cargo-ant-1.6.9.jar</a><br></p></li>
+              <li><p>Finally, the ones who want to see the&nbsp;<a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">Cargo Daemon</a> can get it from <a href="http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.6.9/cargo-daemon-webapp-1.6.9.war" class="external-link" rel="nofollow">http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.6.9/cargo-daemon-webapp-1.6.9.war</a> and can try the instructions on <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html</a></p></li>
+             </ul>
+             <p>Enjoy!</p> 
+            </div> 
+           </div> 
            <div class="blog-post-listing"> 
             <div class="logo-heading-block"> 
              <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/686f57e5eaa0e027c6d126701dc2710b" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
@@ -441,37 +474,6 @@
               </ul>
               <p>Enjoy!</p>
              </div> 
-            </div> 
-           </div> 
-           <div class="blog-post-listing"> 
-            <div class="logo-heading-block"> 
-             <span class="logoBlock"> <a class="userLogoLink" data-username="alitokmen" href="https://codehaus-cargo.atlassian.net/wiki/display/~alitokmen"> <img class="userLogo logo" src="attachments/686f57e5eaa0e027c6d126701dc2710b" alt="User icon: alitokmen" title="alitokmen"> </a> </span> 
-             <span class="blogHeading"> <a class="blogHeading" href="Just+before+summer+holidays+-+Say+hello+to+Codehaus+Cargo+1.6.4.html">Just before summer holidays - Say hello to Codehaus Cargo 1.6.4!</a> 
-              <div class="page-metadata not-personal"> 
-               <a href="https://codehaus-cargo.atlassian.net/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6?ref=confluence" target="_blank" class="url fn confluence-userlink" data-username="alitokmen">S. Ali Tokmen</a> posted on Jul 02, 2017
-              </div> </span> 
-            </div> 
-            <div class="wiki-content"> 
-             <p>Dear Codehaus Cargo enthusiasts</p>
-             <p>With summer holidays approaching, a new release of Codehaus Cargo, version 1.6.4, is now available; with two small improvements and new features:</p>
-             <ul>
-              <li><strong>Core</strong>
-               <ul>
-                <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1438" class="external-link" rel="nofollow">CARGO-1438</a>] - Only check / offset port numbers for configuration properties prefixed with <code>cargo.</code></li>
-               </ul></li>
-              <li><strong>Containers - WebSphere</strong>
-               <ul>
-                <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1432" class="external-link" rel="nofollow">CARGO-1432</a>] - Add support for WebSphere 9.0</li>
-               </ul></li>
-             </ul>
-             <p>To try it out:</p>
-             <ul>
-              <li>Users of the <a class="external-link" href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" rel="nofollow">Maven 2 / Maven 3 plugin</a> simply need to use the&nbsp;Codehaus Cargo plugin version <strong>1.6.4</strong></li>
-              <li>Users of the <a class="external-link" href="https://codehaus-cargo.github.io/cargo/Javadocs.html" rel="nofollow">Java API</a> can download the new Uberjar from&nbsp;<span class="external-link"><span class="external-link"><a href="http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.6.4/cargo-core-uberjar-1.6.4.jar" class="external-link" rel="nofollow">http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.6.4/cargo-core-uberjar-1.6.4.jar</a><br></span></span></li>
-              <li>Similarly, users of the&nbsp;<a class="external-link" href="https://codehaus-cargo.github.io/cargo/Ant+support.html" rel="nofollow">ANT tasks</a> can download the new ANT tasks from&nbsp;<span class="external-link"><span class="external-link"><a href="http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.6.4/cargo-ant-1.6.4.jar" class="external-link" rel="nofollow">http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.6.4/cargo-ant-1.6.4.jar</a><br></span></span></li>
-              <li>Finally, the ones who want to see the&nbsp;<a class="external-link" href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" rel="nofollow">Cargo Daemon</a> can get it from <span class="external-link"><span class="external-link"><a href="http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.6.4/cargo-daemon-webapp-1.6.4.war" class="external-link" rel="nofollow">http://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.6.4/cargo-daemon-webapp-1.6.4.war</a> </span></span>and can try the instructions on <a class="external-link" href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" rel="nofollow">https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html</a></li>
-             </ul>
-             <p>Enjoy!</p> 
             </div> 
            </div> 
           </div> </td> 
