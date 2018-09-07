@@ -677,6 +677,13 @@
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_CLIENT_AUTH" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" data-emoji-id="atlassian-green_star" data-emoji-shortname=":green_star:" data-emoji-fallback=":green_star:" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
              <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.httpUpgradeProtocol</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_HTTP_UPGRADE_PROTOCOL</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_HTTP_UPGRADE_PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" data-emoji-id="atlassian-green_star" data-emoji-shortname=":green_star:" data-emoji-fallback=":green_star:" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.keyAlias</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_KEY_ALIAS</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
@@ -710,6 +717,13 @@
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_MAX_HTTP_HEADER_SIZE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" data-emoji-id="atlassian-green_star" data-emoji-shortname=":green_star:" data-emoji-fallback=":green_star:" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.sslImplementationName</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_SSL_IMPLEMENTATION_NAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_SSL_IMPLEMENTATION_NAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" data-emoji-id="atlassian-green_star" data-emoji-shortname=":green_star:" data-emoji-fallback=":green_star:" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.sslProtocol</a></p></td>
@@ -812,9 +826,24 @@
             <p>In addition to the forementioned properties, this container configuration can also set up datasources and/or resources.</p>
             <p>For more details, please read: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</p>
            </div>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+           <p class="title">Configuring HTTP/2 for Tomcat 8.5 and above</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Tomcat 8.5 and above support HTTP/2.</p>
+            <p>For further information on how to enable this, please refer to <a href="476119041.html">Configuring HTTP/2 for Tomcat 8.5 and above</a>.</p>
+           </div>
           </div><h5 id="Tomcat9.x-Forembeddedcontainero.c.c.c.tomcat.Tomcat9xEmbeddedLocalContainer">For embedded container o.c.c.c.tomcat.Tomcat9xEmbeddedLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -922,6 +951,13 @@
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_CLIENT_AUTH" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" data-emoji-id="atlassian-green_star" data-emoji-shortname=":green_star:" data-emoji-fallback=":green_star:" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
              <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.httpUpgradeProtocol</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_HTTP_UPGRADE_PROTOCOL</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_HTTP_UPGRADE_PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" data-emoji-id="atlassian-green_star" data-emoji-shortname=":green_star:" data-emoji-fallback=":green_star:" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.keyAlias</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_KEY_ALIAS</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
@@ -955,6 +991,13 @@
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_MAX_HTTP_HEADER_SIZE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" data-emoji-id="atlassian-green_star" data-emoji-shortname=":green_star:" data-emoji-fallback=":green_star:" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.sslImplementationName</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_SSL_IMPLEMENTATION_NAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_SSL_IMPLEMENTATION_NAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" data-emoji-id="atlassian-green_star" data-emoji-shortname=":green_star:" data-emoji-fallback=":green_star:" src="attachments/star_green.png" data-emoticon-name="green-star" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.sslProtocol</a></p></td>
@@ -1056,6 +1099,14 @@
            <div class="confluence-information-macro-body">
             <p>In addition to the forementioned properties, this container configuration can also set up datasources and/or resources.</p>
             <p>For more details, please read: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</p>
+           </div>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+           <p class="title">Configuring HTTP/2 for Tomcat 8.5 and above</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Tomcat 8.5 and above support HTTP/2.</p>
+            <p>For further information on how to enable this, please refer to <a href="476119041.html">Configuring HTTP/2 for Tomcat 8.5 and above</a>.</p>
            </div>
           </div><h4 id="Tomcat9.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4><h5 id="Tomcat9.x-Forinstalledcontainero.c.c.c.tomcat.Tomcat9xInstalledLocalContainer.1">For installed container o.c.c.c.tomcat.Tomcat9xInstalledLocalContainer</h5>
           <div class="table-wrap">
@@ -1222,13 +1273,6 @@
           </center><h4 id="Tomcat9.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4><h5 id="Tomcat9.x-Forremotecontainero.c.c.c.tomcat.Tomcat9xRemoteContainer">For remote container o.c.c.c.tomcat.Tomcat9xRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
-            <colgroup>
-             <col>
-             <col>
-             <col>
-             <col>
-             <col>
-            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
