@@ -19,7 +19,7 @@
     }
     var results = "Your search query for <b>" + query.replace(/</g, "&lt;") + "</b> returned <b>" + result.length + "</b> results<ul>";
     for (i = 0; i < result.length; i++) {
-      results += "<li><a href=\"" + result[i].title.replace(/\s/g, "+") + ".html\"><b>" + result[i].title + "</b></a><br/><br/>";
+      results += "<li><a href=\"" + result[i].title.replace(/[\s\/]/g, "+") + ".html\"><b>" + result[i].title + "</b></a><br/><br/>";
       var body = result[i].body.view.value.replace(/<[^>]*>?/g, " ");
       if (body.length > 500) {
         body = body.substring(0, 500) + " [...]";
