@@ -169,6 +169,7 @@ public class WebsiteGenerator implements Runnable
             Thread thread = new Thread(runnable);
             executor.submit(thread);
         }
+        blogpostIdentifiers.put("476119041", "Configuring+HTTP+2+for+Tomcat+8.5+and+above");
 
         while (executor.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
         {
@@ -284,7 +285,9 @@ public class WebsiteGenerator implements Runnable
                     "\\s*data-linked-resource-id=\"[^\"]+\"", "").replaceAll(
                     "\\s*data-linked-resource-type=\"[^\"]+\"", "").replaceAll(
                     "\\s*data-linked-resource-version=\"[^\"]+\"", "").replaceAll(
-                    "\\s*data-macro-id=\"[^\"]+\"", "").replace(
+                    "\\s*data-macro-id=\"[^\"]+\"", "").replaceAll(
+                    "\\s*data-wikimarkup=\"[^\"]+\"", "").replaceAll(
+                    "\\s*id=\"refresh-[^\"]+\"", "").replace(
                     "http://jira.codehaus.org/browse/CARGO-",
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-").replace(
                     "https://jira.codehaus.org/browse/CARGO-",
