@@ -248,7 +248,7 @@
           <table width="100%"> 
            <tbody>
             <tr> 
-             <td valign="top" align="left" width="50%"> <b>Codehaus Cargo &gt; DataSource and Resource Support</b> </td> 
+             <td valign="top" align="left" width="50%"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Configuration.html">Configuration</a> &gt; <a href="Local+Configuration.html">Local Configuration</a> &gt; <a href="Standalone+Local+Configuration.html">Standalone Local Configuration</a> &gt; DataSource and Resource Support</b> </td> 
              <td align="right"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -780,7 +780,7 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
            <li>Note that if you specify a property marked <strong>do not set</strong> you will get a <code>CargoException</code>.</li>
           </ul>
           <div class="table-wrap">
-           <table class="confluenceTable">
+           <table class="wrapped confluenceTable">
             <tbody>
              <tr>
               <td class="confluenceTd"><p>Property</p></td>
@@ -886,7 +886,7 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
            <li>Note that&nbsp;<code>c.r</code> means&nbsp;<code>cargo.resource</code></li>
           </ul>
           <div class="table-wrap">
-           <table class="confluenceTable">
+           <table class="wrapped confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property</p></th>
@@ -932,7 +932,7 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
            <li>Note that&nbsp;<code>c.r</code> means&nbsp;<code>cargo.resource</code></li>
           </ul>
           <div class="table-wrap">
-           <table class="confluenceTable">
+           <table class="wrapped confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property</p></th>
@@ -1094,13 +1094,13 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
              <li><code>createXADataSourceAsResource</code>: Creation of an XA DataSource as a resource</li>
              <li><code>createMailSessionAsResource</code>: Creation of a Mail resource</li>
              <li><code>createDataSourceWithWindowsPath</code>: Creation of a DataSource with a Windows path</li>
-             <li><code>createJmsQueueAsResource</code>: Creation of a JMS resource</li>
+             <li><code>createJmsQueueAsResource</code> and <code>createJmsTopicAsResource</code>: Creation of a JMS queue and topic resource, respectively</li>
             </ul></li>
            <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/DataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>DataSourceOnStandaloneConfigurationTest</code></a>:&nbsp;DataSource definition.</li>
            <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/TransactionEmulationDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>TransactionEmulationDataSourceOnStandaloneConfigurationTest</code></a>:&nbsp;DataSource definition with transaction emulation.</li>
            <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/XATransactionDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>XATransactionDataSourceOnStandaloneConfigurationTest</code></a>: XA&nbsp;DataSource definition.</li>
            <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/MailResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>MailResourceOnStandaloneConfigurationTest</code></a>: Resource definition, showing for example <code>mailsession</code>.</li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/JmsResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>JmsResourceOnStandaloneConfigurationTest</code></a>: Resource definition, showing for example a JMS queue.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/JmsQueueResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>JmsQueueResourceOnStandaloneConfigurationTest</code></a> and <a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/JmsTopicResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>JmsTopicResourceOnStandaloneConfigurationTest</code></a>: Resource definition, showing for example a JMS queue and topic, respectively.</li>
           </ul><p>Users of the Maven2/Maven3 plugin can use the Maven2 Archetype showing&nbsp;DataSource support. Please read: <a href="Maven2+Archetypes.html#Maven2Archetypes-datasource">DataSource Definition Archetype</a>.</p> </td> 
         </tr> 
        </tbody>

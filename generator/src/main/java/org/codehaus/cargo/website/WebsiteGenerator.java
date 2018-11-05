@@ -134,7 +134,7 @@ public class WebsiteGenerator implements Runnable
             tempDirectory.mkdirs();
         }
 
-        URL url = new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/space/CARGO/content?limit=2048");
+        URL url = new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/space/CARGO/content?limit=2048&expand=ancestors");
         URLConnection connection = url.openConnection();
         StringBuilder sb = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream())))
@@ -196,6 +196,7 @@ public class WebsiteGenerator implements Runnable
             }
             throw new Exception("Some files have failed download");
         }
+        writeFile(new File(tempDirectory, "pages.json"), pages.toString(4));
         System.out.println("Export completed, total time taken " + ((System.currentTimeMillis() - start) / 1000) + " seconds");
     }
 
@@ -205,6 +206,19 @@ public class WebsiteGenerator implements Runnable
         File target = new File("target");
         File attachments = new File(target, "attachments");
         File classes = new File(target, "classes");
+        Map<String, List<String>> breadcrumbs = new HashMap<String, List<String>>();
+        JSONArray pages = new JSONArray(readFile(new File(target, "temp/pages.json")));
+        for (int i = 0; i < pages.length(); i++)
+        {
+            JSONObject page = pages.getJSONObject(i);
+            JSONArray ancestors = page.getJSONArray("ancestors");
+            List<String> breadcrumb = new ArrayList<String>(ancestors.length());
+            for (int j = 0; j < ancestors.length(); j++)
+            {
+                breadcrumb.add(ancestors.getJSONObject(j).getString("title"));
+            }
+            breadcrumbs.put(toFilename(page.getString("title")), breadcrumb);
+        }
         Files.copy(new File(classes, "blank.gif").toPath(),
             new File(attachments, "blank.gif").toPath(), StandardCopyOption.REPLACE_EXISTING);
         Files.copy(new File(classes, "favicon.ico").toPath(),
@@ -280,8 +294,21 @@ public class WebsiteGenerator implements Runnable
                 value = value.substring(0, cut) + googleAds + value.substring(cut);
                 lastIndex = lastIndex - 2;
             }
+            StringBuilder breadcrumbsSB = new StringBuilder();
+            if (breadcrumbs.containsKey(name))
+            {
+                for (String breadcrumb : breadcrumbs.get(name))
+                {
+                    breadcrumbsSB.append("<a href=\"");
+                    breadcrumbsSB.append(toFilename(breadcrumb));
+                    breadcrumbsSB.append(".html\">");
+                    breadcrumbsSB.append(breadcrumb);
+                    breadcrumbsSB.append("</a> &gt; ");
+                }
+            }
             writeFile(file, Jsoup.parse(template.replace("$name", name).replace("$title",
-                URLDecoder.decode(name, "UTF-8")).replace("$value", value).replaceAll(
+                URLDecoder.decode(name, "UTF-8")).replace("$breadcrumbs", breadcrumbsSB.toString())
+                .replace("$value", value).replaceAll(
                     "\\s*data-linked-resource-id=\"[^\"]+\"", "").replaceAll(
                     "\\s*data-linked-resource-type=\"[^\"]+\"", "").replaceAll(
                     "\\s*data-linked-resource-version=\"[^\"]+\"", "").replaceAll(
