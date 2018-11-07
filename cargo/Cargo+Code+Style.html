@@ -247,9 +247,9 @@
          <td class="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
           <table width="100%"> 
            <tbody>
-            <tr> 
+            <tr valign="top"> 
              <td valign="top" align="left" width="50%"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Developers.html">Developers</a> &gt; Cargo Code Style</b> </td> 
-             <td align="right"> 
+             <td align="right" width="300"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
                <input type="submit" value="Search"> 
@@ -260,33 +260,7 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> 
-          <div class="decommission-warning" style="display:none"> 
-           <p class="title">Action required!</p> 
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-           <div class="confluence-information-macro-body"> 
-            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-            <ul> 
-             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
-              <ul> 
-               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-              </ul> </li> 
-             <li> The Cargo mailing lists are now on Google Groups. 
-              <ul> 
-               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-              </ul> </li> 
-             <li> The Cargo issue tracker is on Atlassian. 
-              <ul> 
-               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-              </ul> </li> 
-            </ul> 
-            <p></p> 
-           </div> 
-          </div> <script type="text/javascript">
-                if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
-                  document.getElementById("decommission-warning").style.display = "";
-                }
-              </script> <h1 id="CargoCodeStyle-CargoCodeStyle">Cargo Code Style</h1><p>The following sections show how to set up the code style for Cargo in IDEA and Eclipse. It is strongly preferred that patches use this style before they are applied.</p><h2 id="CargoCodeStyle-Eclipse3.x">Eclipse 3.x</h2><p>Download <a href="https://github.com/codehaus-cargo/cargo/blob/master/core/documentation/src/site/confluence/codestyles/cargo-eclipse-codestyle.xml" class="external-link" rel="nofollow">cargo-eclipse-codestyle.xml</a>.</p><p>After this, select <code>Window &gt; Preferences</code>, and open up the configuration for <code>Java &gt; Code Style &gt; Code Formatter</code>. Click on the button labeled <code>Import...</code> and select the file you downloaded. Give the style a name, and click OK.</p><h2 id="CargoCodeStyle-IntelliJIDEA4.5+">IntelliJ IDEA 4.5+</h2><p>Download <a href="https://github.com/codehaus-cargo/cargo/blob/master/core/documentation/src/site/confluence/codestyles/cargo-idea-codestyle.xml" class="external-link" rel="nofollow">cargo-idea-codestyle.xml</a>.</p><p>Close IntelliJ IDEA. Place the file in your IntelliJ IDEA user configuration directory. For example for Windows Vista users of Intellij IDEA v6.x, it's in <code>C:\Users[username]\.IntelliJIdea60\config\codestyles</code>. Then open IntelliJ IDEA again, select <code>File &gt; Project Settings &gt; Project Code Style</code>, select <code>Use per-project code style scheme</code>, click on <code>Import...</code> and select <code>cargo</code>.</p> </td> 
+          <h1 id="CargoCodeStyle-CargoCodeStyle">Cargo Code Style</h1><p>The following sections show how to set up the code style for Cargo in IDEA and Eclipse. It is strongly preferred that patches use this style before they are applied.</p><h2 id="CargoCodeStyle-Eclipse3.x">Eclipse 3.x</h2><p>Download <a href="https://github.com/codehaus-cargo/cargo/blob/master/core/documentation/src/site/confluence/codestyles/cargo-eclipse-codestyle.xml" class="external-link" rel="nofollow">cargo-eclipse-codestyle.xml</a>.</p><p>After this, select <code>Window &gt; Preferences</code>, and open up the configuration for <code>Java &gt; Code Style &gt; Code Formatter</code>. Click on the button labeled <code>Import...</code> and select the file you downloaded. Give the style a name, and click OK.</p><h2 id="CargoCodeStyle-IntelliJIDEA4.5+">IntelliJ IDEA 4.5+</h2><p>Download <a href="https://github.com/codehaus-cargo/cargo/blob/master/core/documentation/src/site/confluence/codestyles/cargo-idea-codestyle.xml" class="external-link" rel="nofollow">cargo-idea-codestyle.xml</a>.</p><p>Close IntelliJ IDEA. Place the file in your IntelliJ IDEA user configuration directory. For example for Windows Vista users of Intellij IDEA v6.x, it's in <code>C:\Users[username]\.IntelliJIdea60\config\codestyles</code>. Then open IntelliJ IDEA again, select <code>File &gt; Project Settings &gt; Project Code Style</code>, select <code>Use per-project code style scheme</code>, click on <code>Import...</code> and select <code>cargo</code>.</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

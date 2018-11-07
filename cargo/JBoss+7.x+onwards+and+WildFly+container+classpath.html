@@ -247,9 +247,9 @@
          <td class="breadcrumbs" valign="top" align="right" style="padding:10px 17px"> 
           <table width="100%"> 
            <tbody>
-            <tr> 
+            <tr valign="top"> 
              <td valign="top" align="left" width="50%"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Container.html">Container</a> &gt; <a href="Local+Container.html">Local Container</a> &gt; <a href="Container+Classpath.html">Container Classpath</a> &gt; JBoss 7.x onwards and WildFly container classpath</b> </td> 
-             <td align="right"> 
+             <td align="right" width="300"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
                <input type="submit" value="Search"> 
@@ -260,33 +260,7 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> 
-          <div class="decommission-warning" style="display:none"> 
-           <p class="title">Action required!</p> 
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"></span> 
-           <div class="confluence-information-macro-body"> 
-            <p>As you might have heard, Codehaus is getting shut down. Obviously, it would be a pity to lose Cargo, so we took action to ensure its continuity: </p>
-            <ul> 
-             <li> The Cargo source code as well as the Web site have both been moved to a very popular repository called <a href="https://github.com/codehaus-cargo" target="_blank">Github</a>. 
-              <ul> 
-               <li> <u>IMPORTANT</u>: Please make sure you update all existing bookmarks on the Cargo Web site to our moved site, <a href="https://codehaus-cargo.github.io/">https://codehaus-cargo.github.io/</a> and its children. </li> 
-               <li> Those of you who access the Cargo sources should update their SCM to point to either the new git or SVN repository, read more on the <a href="Source+code.html">source code page</a>. </li> 
-              </ul> </li> 
-             <li> The Cargo mailing lists are now on Google Groups. 
-              <ul> 
-               <li> <u>IMPORTANT</u>: Please make sure you subscribe to the new <a href="Mailing+Lists.html">Codehaus Cargo mailing lists</a>. </li> 
-              </ul> </li> 
-             <li> The Cargo issue tracker is on Atlassian. 
-              <ul> 
-               <li> <u>IMPORTANT</u>: In the future, please make sure you report your issues on the new <a href="https://codehaus-cargo.atlassian.net/browse/CARGO" target="_blank">Codehaus Cargo JIRA on Atlassian</a>. </li> 
-              </ul> </li> 
-            </ul> 
-            <p></p> 
-           </div> 
-          </div> <script type="text/javascript">
-                if (document.referrer && document.referrer.indexOf("http://cargo.codehaus.org/") === 0) {
-                  document.getElementById("decommission-warning").style.display = "";
-                }
-              </script> <p>The way the <a href="Container+Classpath.html">container classpath</a> is managed in all JBoss containers version 7 and onwards as well as all WildFly containers is slightly different from most others.</p><h3 id="JBoss7.xonwardsandWildFlycontainerclasspath-HowthecontainerclasspathisaddedtotheJBoss/WildFlycontainer">How the container classpath is added to the JBoss / WildFly container</h3><p>In order to add the <a href="Container+Classpath.html">container classpath</a> to the JBoss / WildFly container, CARGO takes the below steps:</p>
+          <p>The way the <a href="Container+Classpath.html">container classpath</a> is managed in all JBoss containers version 7 and onwards as well as all WildFly containers is slightly different from most others.</p><h3 id="JBoss7.xonwardsandWildFlycontainerclasspath-HowthecontainerclasspathisaddedtotheJBoss/WildFlycontainer">How the container classpath is added to the JBoss / WildFly container</h3><p>In order to add the <a href="Container+Classpath.html">container classpath</a> to the JBoss / WildFly container, CARGO takes the below steps:</p>
           <ol>
            <li>The JAR files which are in the <a href="Container+Classpath.html">container classpath</a> are copied in the&nbsp;<code>modules/org/codehaus/cargo/classpath</code> subdirectory of the container home<br><strong>Attention</strong>: The JAR files are copied in the container home, and not into the configuration home. Hence, the JBoss / WildFly container's binaries are actually modified ad vidam eternam (until you manually clean it up).</li>
            <li>For each JAR file, a <code>module.xml</code> file is created with the below rule for dependencies:
