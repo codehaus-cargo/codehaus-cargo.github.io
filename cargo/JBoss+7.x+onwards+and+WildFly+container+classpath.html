@@ -259,8 +259,7 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> 
-          <p>The way the <a href="Container+Classpath.html">container classpath</a> is managed in all JBoss containers version 7 and onwards as well as all WildFly containers is slightly different from most others.</p><h3 id="JBoss7.xonwardsandWildFlycontainerclasspath-HowthecontainerclasspathisaddedtotheJBoss/WildFlycontainer">How the container classpath is added to the JBoss / WildFly container</h3><p>In order to add the <a href="Container+Classpath.html">container classpath</a> to the JBoss / WildFly container, CARGO takes the below steps:</p>
+         <td class="rightColumn"> <p>The way the <a href="Container+Classpath.html">container classpath</a> is managed in all JBoss containers version 7 and onwards as well as all WildFly containers is slightly different from most others.</p><h3 id="JBoss7.xonwardsandWildFlycontainerclasspath-HowthecontainerclasspathisaddedtotheJBoss/WildFlycontainer">How the container classpath is added to the JBoss / WildFly container</h3><p>In order to add the <a href="Container+Classpath.html">container classpath</a> to the JBoss / WildFly container, CARGO takes the below steps:</p>
           <ol>
            <li>The JAR files which are in the <a href="Container+Classpath.html">container classpath</a> are copied in the&nbsp;<code>modules/org/codehaus/cargo/classpath</code> subdirectory of the container home<br><strong>Attention</strong>: The JAR files are copied in the container home, and not into the configuration home. Hence, the JBoss / WildFly container's binaries are actually modified ad vidam eternam (until you manually clean it up).</li>
            <li>For each JAR file, a <code>module.xml</code> file is created with the below rule for dependencies:
