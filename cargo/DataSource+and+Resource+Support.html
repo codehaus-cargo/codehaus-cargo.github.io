@@ -21,6 +21,14 @@
 
   	gtag('config', 'UA-31476258-1');
   </script> 
+  <!-- Google Ads --> 
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7996505557003356",
+      enable_page_level_ads: true
+    });
+  </script> 
  </head> 
  <body> 
   <table width="100%" class="layout" style="border-collapse:collapse"> 
@@ -831,17 +839,7 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
              </tr>
             </tbody>
            </table>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="DataSourceandResourceSupport-JMSresourceproperties">JMS resource properties</h3><p>JMS resources (such as connection factories, queues or topics) are added through pipe-delimited configuration properties that starts with <code>cargo.resource.resource</code>. Example:</p>
+          </div><h3 id="DataSourceandResourceSupport-JMSresourceproperties">JMS resource properties</h3><p>JMS resources (such as connection factories, queues or topics) are added through pipe-delimited configuration properties that starts with <code>cargo.resource.resource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">cargo.resource.resource.jms.cf=cargo.resource.name=jms/cf/MyCf\|cargo.resource.type=javax.jms.ConnectionFactory\|cargo.resource.id=MyCf
@@ -939,17 +937,7 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
              </tr>
             </tbody>
            </table>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="DataSourceandResourceSupport-Knownissues">Known issues</h3><p>The&nbsp;Glassfish container has various known issues with regards to DataSource support.</p><p>When you try to use <a href="GlassFish+3.x.html">GlassFish 3.x</a> or&nbsp;<a href="GlassFish+4.x.html">GlassFish 4.x</a> with Derby DataSources, you might run into issues where Glassfish doesn't start, and the Glassfish logs show you messages such as the below:</p>
+          </div><h3 id="DataSourceandResourceSupport-Knownissues">Known issues</h3><p>The&nbsp;Glassfish container has various known issues with regards to DataSource support.</p><p>When you try to use <a href="GlassFish+3.x.html">GlassFish 3.x</a> or&nbsp;<a href="GlassFish+4.x.html">GlassFish 4.x</a> with Derby DataSources, you might run into issues where Glassfish doesn't start, and the Glassfish logs show you messages such as the below:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">java.lang.SecurityException: sealing violation: package org.apache.derby is sealed</pre> 

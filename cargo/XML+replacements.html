@@ -21,6 +21,14 @@
 
   	gtag('config', 'UA-31476258-1');
   </script> 
+  <!-- Google Ads --> 
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7996505557003356",
+      enable_page_level_ads: true
+    });
+  </script> 
  </head> 
  <body> 
   <table width="100%" class="layout" style="border-collapse:collapse"> 
@@ -284,17 +292,7 @@ configuration.addXmlReplacement(defaultHost);
            <li>The&nbsp;<code>attributeName</code> parameter is optional -if you don't specify it, then Cargo will replace directly the value of the node</li>
            <li>If the&nbsp;<code>value</code> corresponds to an existing <a href="Configuration+properties.html">configuration property</a> (such as&nbsp;<code>cargo.hostname</code> for example) then Cargo will reuse it from the configuration</li>
            <li>Finally, there is another parameter&nbsp;<code>ignoreIfNonExisting</code> which, when set to&nbsp;<code>TRUE</code>, will make the XML replacement tool ignore if that specific XPath doesn't exist in the XML file</li>
-          </ul><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="XMLreplacements-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
+          </ul><h3 id="XMLreplacements-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="@{containerId}" action="@{action}"&gt;

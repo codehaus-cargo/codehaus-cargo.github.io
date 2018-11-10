@@ -21,6 +21,14 @@
 
   	gtag('config', 'UA-31476258-1');
   </script> 
+  <!-- Google Ads --> 
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7996505557003356",
+      enable_page_level_ads: true
+    });
+  </script> 
  </head> 
  <body> 
   <table width="100%" class="layout" style="border-collapse:collapse"> 
@@ -274,17 +282,7 @@
            <div class="confluence-information-macro-body">
             <p>The&nbsp;Codehaus Cargo build contains functional tests. Those tests are run on different containers. The first time you build&nbsp;Codehaus Cargo it will download those container distributions which will take some time (the containers are installed into <code>core/samples/java/installs</code>). If you want to tell&nbsp;Codehaus Cargo to run only on some specific container, see below.</p>
            </div>
-          </div><h3 id="Building-Selectingcontainers">Selecting containers</h3><p>The default list of containers to run on depends a property cargo.containers defined in <code>CARGOHOME/core/samples/pom.xml</code>. It can also be supplied at the commandline by using profiles (<code>-P&lt;containerId&gt;</code>).</p><p>For example if you only want to run on Tomcat 5.x you'd write: <code>mvn -Ptomcat5x clean install</code></p><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="Building-Tips">Tips</h3>
+          </div><h3 id="Building-Selectingcontainers">Selecting containers</h3><p>The default list of containers to run on depends a property cargo.containers defined in <code>CARGOHOME/core/samples/pom.xml</code>. It can also be supplied at the commandline by using profiles (<code>-P&lt;containerId&gt;</code>).</p><p>For example if you only want to run on Tomcat 5.x you'd write: <code>mvn -Ptomcat5x clean install</code></p><h3 id="Building-Tips">Tips</h3>
           <ul>
            <li>Type <code>mvn -o</code> to work offline. This improves the build speed as Maven does not check for updates on the remote repository for <code>SNAPSHOT</code> versions.</li>
           </ul><h3 id="Building-Proxysettings">Proxy settings</h3><p>If you need to build&nbsp;Codehaus Cargo from behind a proxy, proceed as follows:</p>
