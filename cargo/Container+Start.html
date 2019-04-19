@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -271,7 +271,7 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> <h3 id="ContainerStart-Definition">Definition</h3>Start a container that is not already running
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-macro-id="">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
@@ -287,9 +287,9 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="ContainerStart-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Resin 3.x with no deployable:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
+            <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
   new Resin3xStandaloneLocalConfiguration("target/resin3x"));
 container.setHome("c:/apps/resin-3.0.15");
 
@@ -297,9 +297,9 @@ container.start();
 </pre> 
            </div>
           </div><h3 id="ContainerStart-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Before being able to use the Cargo Ant tasks you need to register them against Ant. This is done by using the Ant <code>&lt;taskdef&gt;</code> element. See the <a href="Ant+support.html">Ant support page</a>. The action to start the container is specified using the <code>action="start"</code> attribute as shown below.</p><p>Starting Resin 3.x with no deployable:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="resin3x" home="c:/apps/resin-3.0.15" action="start"/&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo containerId="resin3x" home="c:/apps/resin-3.0.15" action="start"/&gt;
 </pre> 
            </div>
           </div><script type="text/javascript">

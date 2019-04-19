@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -271,13 +271,13 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> <h3 id="ApplicationClasspath-Definition">Definition</h3>How to configure the classpath of the application without changing the container's own classpath
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-macro-id="">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note" data-macro-id="">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-macro-id="">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is not available on all containers! Currently, the only containers that support shared classpaths are:</p>
@@ -290,9 +290,9 @@
             <p>On other containers, please change the <a href="Container+Classpath.html">container classpath</a> instead.</p>
            </div>
           </div><h3 id="ApplicationClasspath-Explanation">Explanation</h3><p>This topic is not about the classpath requirements to run Cargo (see the <a href="Installation.html">Installation</a> page for this); it's about configuring the classpath for the application being executed on a container.</p><p>Some environments may require you to add some libraries to your application, without exposing them to the server itself. This concept is called a <strong>Shared Classpath</strong>.</p><h3 id="ApplicationClasspath-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting a WAR on Tomcat 6.x with some additional classpath entries:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalConfiguration configuration = new Tomcat6xStandaloneLocalConfiguration("target/tomcat6x");
+            <pre class="syntaxhighlighter-pre">LocalConfiguration configuration = new Tomcat6xStandaloneLocalConfiguration("target/tomcat6x");
 Deployable war = new WAR("target/war/grails-example-without-libs.war");
 configuration.addDeployable(war);
 
@@ -324,9 +324,9 @@ container.start();
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="ApplicationClasspath-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting a WAR on Tomcat 6.x with some additional classpath entries:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat6x" home="/srv/tomcat/catalina-home" action="start"&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat6x" home="/srv/tomcat/catalina-home" action="start"&gt;
   &lt;sharedClasspath&gt;
     &lt;fileset dir="/opt/grails"&gt;
       &lt;include name="*.jar"/&gt;
@@ -339,9 +339,9 @@ container.start();
 </pre> 
            </div>
           </div><h3 id="ApplicationClasspath-ExampleusingtheMavenPlugin">Example using the Maven Plugin</h3><p>Configuring a Tomcat6 container with a com.foo bar-api-1.0.jar dependency provided using the shared classpath:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
+            <pre class="syntaxhighlighter-pre">[...]
 &lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;com.foo&lt;/groupId&gt;

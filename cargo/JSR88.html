@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -284,9 +284,9 @@
           </ul><p>Here is an example code for the users of the Java API:</p>
           <blockquote>
            <p>&nbsp;</p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
             <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
+             <pre class="syntaxhighlighter-pre">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
 
 // Add many libraries from GlassFish
 for (File jar : new File(this.localContainer.getHome(), "glassfish/modules").listFiles())
@@ -312,9 +312,9 @@ Thread.currentThread().setContextClassLoader(classLoader);
           </blockquote><p>Here is an example Maven2 plugin configuration:</p>
           <blockquote>
            <p>&nbsp;</p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
             <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;pluginRepositories&gt;
+             <pre class="syntaxhighlighter-pre">&lt;pluginRepositories&gt;
   &lt;pluginRepository&gt;
      &lt;id&gt;glassfish&lt;/id&gt;
      &lt;url&gt;http://download.java.net/maven/glassfish&lt;/url&gt;
@@ -359,21 +359,21 @@ Thread.currentThread().setContextClassLoader(classLoader);
             </div>
            </div>
           </blockquote>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note">
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>When adding the <code>org.glassfish.deployment:deployment-client</code> dependency, please make sure that the version matches <strong>exactly</strong> the targeted GlassFish server's version (beware the updates that you install on GlassFish, these indeed change the version of your server); else you might run into unexpected surprises like:</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl"> 
-              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">error submitting remote command: com.sun.enterprise.admin.cli.CommandException:
+              <pre class="syntaxhighlighter-pre">error submitting remote command: com.sun.enterprise.admin.cli.CommandException:
    CLI001 Invalid Command: list: InvalidCommandException -&gt; [Help 1]
 </pre> 
              </div>
             </div>
             <p>or</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl"> 
-              <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">GlassFish list help command report
+              <pre class="syntaxhighlighter-pre">GlassFish list help command report
 
 Exit Code : SUCCESS
 list - null

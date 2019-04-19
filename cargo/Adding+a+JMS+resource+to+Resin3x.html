@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -271,9 +271,9 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> <p>This example will create a Topic Connection Factory and a Topic, and also includes a spring configuration example.</p> <p>Add the following to your cargo configuration in pom.xml:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
+            <pre class="syntaxhighlighter-pre">
 &lt;cargo.resource.resource.jmsConnectionFactory&gt;
    cargo.resource.name=jms/ConnectionFactory|
    cargo.resource.type=com.caucho.jms.JVMTopicConnectionFactory|
@@ -288,9 +288,9 @@
 </pre> 
            </div>
           </div> <p>After you run 'mvn cargo:start', you can verify the config made it into your resin.conf with:<br> $&gt; less target/resin3x/home/conf/resin.conf</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
+            <pre class="syntaxhighlighter-pre">
 ....
 &lt;resource&gt;
    &lt;jndi-name&gt;jms/ConnectionFactory&lt;/jndi-name&gt;
@@ -304,9 +304,9 @@
 </pre> 
            </div>
           </div> <p>In web.xml:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
+            <pre class="syntaxhighlighter-pre">
 &lt;resource-ref&gt;
     &lt;res-ref-name&gt;jms/ConnectionFactory&lt;/res-ref-name&gt;
     &lt;res-type&gt;javax.jms.ConnectionFactory&lt;/res-type&gt;
@@ -316,9 +316,9 @@
 </pre> 
            </div>
           </div> <p>You can also add a resource-ref for the Topic, but that is not necessarily required.</p> <p>A spring config might look like this:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">
+            <pre class="syntaxhighlighter-pre">
 &lt;jee:jndi-lookup id="jmsConnectionFactory" jndi-name="jms/ConnectionFactory" proxy-interface="javax.jms.ConnectionFactory" lookup-on-startup="false" resource-ref="true"/&gt;
 
    &lt;bean id="myTopicListener" class="foo.bar.MyTopicListenerBean"/&gt;

@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -271,9 +271,9 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> <h3 id="StaticdeploymentofWAR-Definition">Definition</h3>Deploy a WAR that will be started when the container starts<h3 id="StaticdeploymentofWAR-Example">Example</h3><p>Let's see how to use Jetty 4.x (an <a href="Embedded+Container.html">embedded container</a>) with a WAR to deploy in it.</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalContainer container = new Jetty4xEmbeddedLocalContainer(
+            <pre class="syntaxhighlighter-pre">LocalContainer container = new Jetty4xEmbeddedLocalContainer(
     new JettyStandaloneConfiguration("target/jetty4x"));
 
 Deployable war = new WAR("src/data/some.war");
@@ -284,9 +284,9 @@ container.start();
 </pre> 
            </div>
           </div><h3 id="StaticdeploymentofWAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting JOnAS 5.x with a WAR to deploy:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="jonas5x" home="c:/jonas/jonas-5.1.2" action="start"&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo containerId="jonas5x" home="c:/jonas/jonas-5.1.2" action="start"&gt;
   &lt;configuration&gt;
     &lt;deployable type="war" file="path/to/simple-war.war"&gt;
       &lt;property name="context" value="application-context"/&gt;
@@ -306,9 +306,9 @@ container.start();
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="StaticdeploymentofWAR-ExampleusingtheMaven2/Maven3API">Example using the Maven2/Maven3 API</h3><p>Here is the plugin configuration defining a JOnAS 5.x container with a WAR to deploy:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependencies&gt;
+            <pre class="syntaxhighlighter-pre">&lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
     &lt;artifactId&gt;simple-war&lt;/artifactId&gt;

@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -271,9 +271,9 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> <h3 id="Passingsystemproperties-Definition">Definition</h3>How to pass system properties that will be available to the container while executing<h3 id="Passingsystemproperties-Explanations">Explanations</h3><p>It is sometime useful to pass system properties to the container that is executing. These properties are then available to the code executing in the container.</p><h3 id="Passingsystemproperties-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Tomcat 3.x with some System properties set in the container JVM:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">InstalledLocalContainer container = new Tomcat3xInstalledLocalContainer(
+            <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Tomcat3xInstalledLocalContainer(
     new TomcatStandaloneLocalConfiguration("target/tomcat3x"));
 container.setHome("c:/apps/jakarta-tomcat-3.3.2");
 
@@ -295,24 +295,24 @@ container.start();
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Passingsystemproperties-ExampleusingtheAnttask">Example using the Ant task</h3><p>Starting Tomcat 3.x with some System properties set in the container JVM:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat3x" home="c:/apps/jakarta-tomcat-3.3.2" action="start"&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat3x" home="c:/apps/jakarta-tomcat-3.3.2" action="start"&gt;
   &lt;sysproperty key="myproperty" value="myvalue"/&gt;
 &lt;/cargo&gt;
 </pre> 
            </div>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-macro-id="">
            <p class="title">Loading system properties from a file</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>It is also possible to load the system properties from a file - simply use the&nbsp;<code>systemPropertiesFile</code> attribute of the&nbsp;<code>cargo</code> XML element.</p>
            </div>
           </div><h3 id="Passingsystemproperties-ExampleusingtheMaven2plugin">Example using the Maven2 plugin</h3><p>Starting Tomcat 3.x with some System properties set in the container JVM:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;container&gt;
+            <pre class="syntaxhighlighter-pre">&lt;container&gt;
   [...]
   &lt;systemProperties&gt;
     &lt;myproperty&gt;myvalue&lt;/myproperty&gt;

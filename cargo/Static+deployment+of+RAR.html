@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -271,16 +271,16 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> <h3 id="StaticdeploymentofRAR-Definition">Definition</h3>Deploy a Java EE resource adapter (RAR) that will be started when the container starts
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info" data-macro-id="">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-macro-id="">
            <p class="title">DataSource and Resource Support</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>An alternative to using RARs is to use the <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a> provided by CARGO.</p>
            </div>
           </div><h3 id="StaticdeploymentofRAR-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting JOnAS 5.x with a RAR to deploy:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">InstalledLocalContainer container = new Jonas5xInstalledLocalContainer(
+            <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Jonas5xInstalledLocalContainer(
     new Jonas5xStandaloneLocalConfiguration("target/jonas5x"));
 container.setHome("c:/jonas/jonas-5.1.2");
 
@@ -291,9 +291,9 @@ container.start();
 </pre> 
            </div>
           </div><h3 id="StaticdeploymentofRAR-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Starting JOnAS 5.x with a RAR to deploy:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="jonas5x" home="c:/jonas/jonas-5.1.2" action="start"&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo containerId="jonas5x" home="c:/jonas/jonas-5.1.2" action="start"&gt;
   &lt;configuration&gt;
     &lt;deployable type="rar" file="src/data/src/data/mysql-5.1-localhost.rar"/&gt;
   &lt;/configuration&gt;
@@ -311,9 +311,9 @@ container.start();
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="StaticdeploymentofRAR-ExampleusingtheMaven2/Maven3API">Example using the Maven2/Maven3 API</h3><p>Here is the plugin configuration defining a JOnAS 5.x container with a RAR to deploy:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependencies&gt;
+            <pre class="syntaxhighlighter-pre">&lt;dependencies&gt;
   &lt;dependency&gt;
     &lt;groupId&gt;com.myProject&lt;/groupId&gt;
     &lt;artifactId&gt;mysql-5.1-localhost&lt;/artifactId&gt;

@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -270,16 +270,16 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h3 id="XMLreplacements-Definition">Definition</h3>The <strong class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt">XML replacements</strong> option allows you to modify XML files of your container's configuration using XPath statements.
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+         <td class="rightColumn"> <h3 id="XMLreplacements-Definition">Definition</h3>The <strong class="conf-macro output-inline">XML replacements</strong> option allows you to modify XML files of your container's configuration using XPath statements.
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Standalone+Local+Configuration.html">standalone local containers</a>, and does work with the <a href="Cargo+Daemon.html">Cargo Daemon</a> since version 1.4.12.</p>
            </div>
           </div><h3 id="XMLreplacements-Explanation">Explanation</h3><p>In some cases, it is necessary to modify XML files of your container. This can be done using Cargo's <code>xmlReplacements</code> option, accessible via the Cargo APIs.</p><p>You might for example want to modify the&nbsp;<code>defaultHost</code> for your Tomcat instance.</p><h3 id="XMLreplacements-ExampleusingtheJavaAPI">Example using the Java API</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">LocalContainer container = ...;
+            <pre class="syntaxhighlighter-pre">LocalContainer container = ...;
 StandaloneLocalConfiguration configuration = (StandaloneLocalConfiguration) getLocalContainer().getConfiguration();
 
 XmlReplacement defaultHost = new XmlReplacement();
@@ -306,9 +306,9 @@ configuration.addXmlReplacement(defaultHost);
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="XMLreplacements-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="@{containerId}" action="@{action}"&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo containerId="@{containerId}" action="@{action}"&gt;
   &lt;configuration home="${configuration.home}"&gt;
     &lt;xmlreplacement file="conf/server.xml" xpathexpression="//Server/Engine" attributename="defaultHost" value="myhost"/&gt;
   &lt;/configuration&gt;
@@ -316,9 +316,9 @@ configuration.addXmlReplacement(defaultHost);
 </pre> 
            </div>
           </div><h3 id="XMLreplacements-ExampleusingtheMaven2/Maven3plugin">Example using the&nbsp;Maven 2 / Maven 3 plugin</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: html/xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;plugin&gt;
+            <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;

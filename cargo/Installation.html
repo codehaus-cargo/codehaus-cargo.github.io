@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -288,24 +288,24 @@
            <li>The same jars as for the Java API (i.e., either the API JARs + the container(s) <strong>or</strong> the uberjar)</li>
            <li>The <code>cargo-ant</code> JAR, containing the <code>&lt;taskdef&gt;</code> definition (see the <a href="Ant+support.html">Ant support</a> page)</li>
           </ul><h3 id="Installation-ApacheMaven2/Maven3">Apache Maven 2 / Maven 3</h3><p>Maven 2 / Maven 3&nbsp;will automatically download all required dependencies: see the <a href="Maven2+plugin.html">Maven2 plugin</a> page. As a result, no installation is required for Maven 2 / Maven 3.</p><p>If you are creating a Java applications which use the Cargo via API, you need to add as dependency either the artifact for your favorite container or the uberjar (which contains all containers). See below</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Example for adding the Codehaus Cargo uberjar as dependency</b>
            </div>
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependency&gt;
+            <pre class="syntaxhighlighter-pre">&lt;dependency&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-core-uberjar&lt;/artifactId&gt;
   &lt;version&gt;${cargo.version}&lt;/version&gt;
 &lt;/dependency&gt;</pre> 
            </div>
           </div>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Example for adding the Codehaus Cargo Tomcat container as dependency</b>
            </div>
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependency&gt;
+            <pre class="syntaxhighlighter-pre">&lt;dependency&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-core-container-tomcat&lt;/artifactId&gt;
   &lt;version&gt;${cargo.version}&lt;/version&gt;

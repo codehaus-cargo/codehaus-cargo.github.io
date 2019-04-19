@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -380,7 +380,7 @@
             </tbody>
            </table>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Datasource and Resource configuration</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -396,9 +396,9 @@
               <th class="confluenceTh"><p>Maven2</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
              </tr>
             </tbody>
            </table>
@@ -413,24 +413,24 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Configurationproperties-JavaAPI">Java API</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">Configuration configuration = 
+            <pre class="syntaxhighlighter-pre">Configuration configuration = 
     new Tomcat5xStandaloneLocalConfiguration("target/tomcat5x"));
 configuration.setProperty(ServletPropertySet.PORT, "8081");
 [...]
 </pre> 
            </div>
           </div><p>You can check if a configuration supports a given property by using <code>Configuration.getCapability().supportsProperty(String propertyName)</code>.</p><p>For example if you want to check if the configuration supports setting the port property:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">boolean isPropertySupported = configuration.getCapability().supportsProperty(ServletPropertySet.PORT);
+            <pre class="syntaxhighlighter-pre">boolean isPropertySupported = configuration.getCapability().supportsProperty(ServletPropertySet.PORT);
 </pre> 
            </div>
           </div><h3 id="Configurationproperties-AntTask">Ant Task</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat5x" home="c:/apps/jakarta-tomcat-5.0.29" action="start"&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat5x" home="c:/apps/jakarta-tomcat-5.0.29" action="start"&gt;
   &lt;configuration&gt;
     &lt;property name="cargo.servlet.port" value="8081"/&gt;
   &lt;/configuration&gt;
@@ -448,9 +448,9 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Configurationproperties-MavenPlugin">Maven Plugin</h3><p>Example of starting Tomcat 5.x on port 8081:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;build&gt;
+            <pre class="syntaxhighlighter-pre">&lt;build&gt;
   &lt;plugins&gt;
     &lt;plugin&gt;
       &lt;groupId&gt;org.codehaus.cargo.maven2&lt;/groupId&gt;
@@ -473,9 +473,9 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
 </pre> 
            </div>
           </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or&nbsp;Maven 2 / Maven 3 goals) can also be overriden using Java properties.</p><p>For example, with the <a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a>:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">mvn -Dcargo.servlet.port=8082 cargo:start
+            <pre class="syntaxhighlighter-pre">mvn -Dcargo.servlet.port=8082 cargo:start
 </pre> 
            </div>
           </div> </td> 

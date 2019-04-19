@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -287,9 +287,9 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Deployable-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Deploying a WAR in Tomcat 5.x:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">Container container = new Tomcat5xContainer(
+            <pre class="syntaxhighlighter-pre">Container container = new Tomcat5xContainer(
     new CatalinaStandalineConfiguration("target/tomcat5x"));
 container.setHome("c:/apps/tomcat-5.0.29");
 
@@ -299,9 +299,9 @@ WAR war = new WAR("path/to/my.war");
 </pre> 
            </div>
           </div><h3 id="Deployable-ExampleusingtheGenericAPI">Example using the Generic API</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">[...]
+            <pre class="syntaxhighlighter-pre">[...]
 
 DeployableFactory factory = new DefaultDeployableFactory();
 WAR war = factory.createDeployable("tomcat5x", "path/to/my.war", 
@@ -319,9 +319,9 @@ WAR war = factory.createDeployable("tomcat5x", "path/to/my.war",
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="Deployable-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Statically deploying a WAR in Tomcat 5.x:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="tomcat5x" home="c:/apps/tomcat-5.0.29" action="start"&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat5x" home="c:/apps/tomcat-5.0.29" action="start"&gt;
   &lt;configuration&gt;
     &lt;war warfile="path/to/my.war"/&gt;
   &lt;/configuration&gt;
@@ -329,9 +329,9 @@ WAR war = factory.createDeployable("tomcat5x", "path/to/my.war",
 </pre> 
            </div>
           </div><h3 id="Deployable-ExampleusingtheMaven2/Maven3plugin">Example using the&nbsp;Maven 2 / Maven 3 plugin</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;dependencies&gt;
+            <pre class="syntaxhighlighter-pre">&lt;dependencies&gt;
   [...]
   &lt;dependency&gt;
     &lt;groupId&gt;my.war.groupId&lt;/groupId&gt;

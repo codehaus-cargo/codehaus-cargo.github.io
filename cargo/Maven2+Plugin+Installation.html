@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -270,10 +270,10 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h1 id="Maven2PluginInstallation-Installation">Installation</h1><p>The Cargo Maven Plugin is found at (<code>groupId:artifactId</code>) <code>org.codehaus.cargo:cargo-maven2-plugin</code>.</p><p>This plugin works and is tested with Maven 3.x. Please note that though we have no explicit blockage of any Maven 2.x versions, the Codehaus Cargo Maven 2 / Maven 3 Plugin is not regularly tested on that old version.</p><h3 id="Maven2PluginInstallation-Releases">Releases</h3><p>The Codehaus Cargo Maven 2 / Maven 3 Plugin (and all other Cargo artifacts) are hosted at <a href="http://repo1.maven.org/maven2/org/codehaus/cargo/" class="external-link" rel="nofollow">Maven central</a>. As Maven is configured for Maven central by default, no additional installation or repository configuration is necessary to use the plugin.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginInstallation-snapshots" data-hasbody="false" data-macro-name="anchor"> </span></p><h3 id="Maven2PluginInstallation-Snapshots">Snapshots</h3><p>There are also snapshot releases of the Codehaus Cargo&nbsp;Maven 2 / Maven 3 plugin (and all other Cargo artifacts) available through the <a href="https://oss.sonatype.org/content/repositories/snapshots/" class="external-link" rel="nofollow">Sonatype snapshot repository</a>. Snapshot releases are deployed automatically by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a>.</p><p>If you want use snapshot versions of the Cargo Maven Plugin, you'll need to add this repository to your POM, settings file, or repository manager:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+         <td class="rightColumn"> <h1 id="Maven2PluginInstallation-Installation">Installation</h1><p>The Cargo Maven Plugin is found at (<code>groupId:artifactId</code>) <code>org.codehaus.cargo:cargo-maven2-plugin</code>.</p><p>This plugin works and is tested with Maven 3.x. Please note that though we have no explicit blockage of any Maven 2.x versions, the Codehaus Cargo Maven 2 / Maven 3 Plugin is not regularly tested on that old version.</p><h3 id="Maven2PluginInstallation-Releases">Releases</h3><p>The Codehaus Cargo Maven 2 / Maven 3 Plugin (and all other Cargo artifacts) are hosted at <a href="http://repo1.maven.org/maven2/org/codehaus/cargo/" class="external-link" rel="nofollow">Maven central</a>. As Maven is configured for Maven central by default, no additional installation or repository configuration is necessary to use the plugin.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven2PluginInstallation-snapshots"> </span></p><h3 id="Maven2PluginInstallation-Snapshots">Snapshots</h3><p>There are also snapshot releases of the Codehaus Cargo&nbsp;Maven 2 / Maven 3 plugin (and all other Cargo artifacts) available through the <a href="https://oss.sonatype.org/content/repositories/snapshots/" class="external-link" rel="nofollow">Sonatype snapshot repository</a>. Snapshot releases are deployed automatically by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a>.</p><p>If you want use snapshot versions of the Cargo Maven Plugin, you'll need to add this repository to your POM, settings file, or repository manager:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
+            <pre class="syntaxhighlighter-pre">[...]
 &lt;pluginRepositories&gt;
   &lt;pluginRepository&gt;
     &lt;id&gt;sonatype-snapshots&lt;/id&gt;
@@ -305,7 +305,7 @@
 </pre> 
            </div>
           </div>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-hasbody="true" data-macro-name="info">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">&lt;pluginRepository&gt; and &lt;repository&gt; declarations</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -316,9 +316,9 @@
            <li>To find out what the latest&nbsp;<code>SNAPSHOT</code> version is, you can simply look at <a href="https://github.com/codehaus-cargo/cargo/blob/master/pom.xml" class="external-link" rel="nofollow">the root POM file for Codehaus Cargo</a>.</li>
            <li>Configure the Cargo Maven Plugin by specifying the <code>SNAPSHOT</code> version you want.</li>
           </ul><p>For example, to use version <code>1.7.4-SNAPSHOT</code> you would declare something similar to the following in your POM:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
+            <pre class="syntaxhighlighter-pre">[...]
   &lt;build&gt;
     &lt;plugins&gt;
       &lt;plugin&gt;

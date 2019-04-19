@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -290,16 +290,16 @@
               <th class="confluenceTh"><p>Maven2</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" data-emoji-id="atlassian-check_mark" data-emoji-shortname=":check_mark:" data-emoji-fallback=":check_mark:" src="attachments/check.png" data-emoticon-name="tick" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
              </tr>
             </tbody>
            </table>
           </div><h3 id="CustomConfiguration-JavaAPI">Java API</h3><p>You can register your configuration against the <code>DefaultConfigurationFactory</code> class. It's optional and only required if you want to let users use the <code>DefaultConfigurationFactory</code> class to instantiate your configuration. For example you could write:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">ConfigurationFactory factory = new DefaultConfigurationFactory();
+            <pre class="syntaxhighlighter-pre">ConfigurationFactory factory = new DefaultConfigurationFactory();
 factory.registerConfiguration("containerIdOfAssociatedContainer", ContainerType.INSTALLED, 
     ConfigurationType.STANDALONE, MyCustomConfiguration.class);
 </pre> 
@@ -315,17 +315,17 @@ factory.registerConfiguration("containerIdOfAssociatedContainer", ContainerType.
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="CustomConfiguration-AntTask">Ant Task</h3><p>Use the <code>class</code> attribute of the <code>configuration</code> element. For example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">&lt;cargo containerId="containerIdOfAssociatedContainer" [...]&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo containerId="containerIdOfAssociatedContainer" [...]&gt;
   &lt;configuration class="package.to.MyCustomConfiguration" type="standalone"&gt;
 [...]  
 </pre> 
            </div>
           </div><h3 id="CustomConfiguration-Maven2Plugin">Maven2 Plugin</h3><p>Use the <code>implementation</code> element under the <code>configuration</code> element. For example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: xml; gutter: false; theme: Confluence" data-theme="Confluence">[...]
+            <pre class="syntaxhighlighter-pre">[...]
 &lt;configuration&gt;
   &lt;container&gt;
     &lt;containerId&gt;containerIdOfAssociatedContainer&lt;/containerId&gt;

@@ -237,7 +237,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" data-image-src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -271,9 +271,9 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> <p>updating samples test cases.</p><p>1. find the test case you wish to copy.</p><p>copy recursively&nbsp;<code>resources/testdata/&lt;you_want_to_copy&gt;-war</code> to a new folder (ex.&nbsp;<code>resources/testdata/NEW-war</code>)<br> edit&nbsp;<code>resources/testdata/new-war/pom.xml</code> (change&nbsp;<code>artifact-id</code> to <code>NEW-war</code>, and name to something descriptive )<br> edit&nbsp;<code>resources/testdata/pom.xml</code> and add module <code>NEW-war</code></p><p>edit <code>core/samples/pom.xml</code><br> under Test data artifacts, add</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">  &lt;dependency&gt;
+            <pre class="syntaxhighlighter-pre">  &lt;dependency&gt;
     &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
     &lt;artifactId&gt;NEW-war&lt;/artifactId&gt;
     &lt;version&gt;${project.version}&lt;/version&gt;
@@ -282,9 +282,9 @@
 </pre> 
            </div>
           </div><p>under Location of testdata dependencies..., add</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">  &lt;property&gt;
+            <pre class="syntaxhighlighter-pre">  &lt;property&gt;
     &lt;name&gt;cargo.testdata.NEW-war&lt;/name&gt;
     &lt;value&gt;org/codehaus/cargo/NEW-war/${project.version}/simple-NEW-${project.version}.war&lt;/value&gt;
   &lt;/property&gt;
