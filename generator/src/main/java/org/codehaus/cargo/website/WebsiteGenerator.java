@@ -409,8 +409,12 @@ public class WebsiteGenerator implements Runnable
                 JSONObject result = new JSONObject(value);
                 value = result.getJSONObject("body").getJSONObject("view").getString("value");
 
-                Pattern pattern = Pattern.compile("href=\"[^\"]*/wiki/[^\"]+/CARGO/[^\"]+\"|href='[^\']*/wiki/[^\']+/CARGO/[^']+'");
+                Pattern pattern = Pattern.compile("<span class=\"logoBlock\"[^>]*>(.*?)<\\/span>", Pattern.DOTALL);
                 Matcher matcher = pattern.matcher(value);
+                value = matcher.replaceAll("");
+
+                pattern = Pattern.compile("href=\"[^\"]*/wiki/[^\"]+/CARGO/[^\"]+\"|href='[^\']*/wiki/[^\']+/CARGO/[^']+'");
+                matcher = pattern.matcher(value);
                 int start = 0;
                 StringBuilder sb = new StringBuilder();
                 while (matcher.find())
