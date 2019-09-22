@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - WebLogic 12.1.x</title> 
+  <title>Codehaus Cargo - Payara</title> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
@@ -264,7 +264,7 @@
           <table width="100%"> 
            <tbody>
             <tr valign="top"> 
-             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Containers.html">Containers</a> &gt; WebLogic 12.1.x</b> </td> 
+             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Containers.html">Containers</a> &gt; Payara</b> </td> 
              <td align="right" width="300"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -275,13 +275,7 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> 
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>If you are using the WebLogic 12 Developer's Edition, after you have downloaded the distribution, please remember to also configure WebLogic.<br>You can read <a class="external-link" href="http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/wls_12c_netbeans_install/wls_12c_netbeans_install.html" rel="nofollow">http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/wls_12c_netbeans_install/wls_12c_netbeans_install.html</a> for details.</p>
-           </div>
-          </div><h3 id="WebLogic12.1.x-ContainerFeatures">Container Features</h3>
+         <td class="rightColumn"> <h3 id="Payara-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -294,9 +288,9 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Container+Instantiation.html">Container Instantiation</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>ContainerFactory.createContainer("weblogic121x"...)</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>&lt;cargo containerId="weblogic121x".../&gt;</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>&lt;containerId&gt;weblogic121x&lt;/containerId&gt;</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>ContainerFactory.createContainer("payara"...)</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>&lt;cargo containerId="payara".../&gt;</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>&lt;containerId&gt;payara&lt;/containerId&gt;</code></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
@@ -343,7 +337,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p>&nbsp; <a href="Installed+Container.html">Installed Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.weblogic.WebLogic121xInstalledLocalContainer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.payara.PayaraInstalledLocalContainer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -364,14 +358,14 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Remote+Container.html">Remote Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.weblogic.WebLogic121xRemoteContainer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.payara.PayaraRemoteContainer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="WebLogic12.1.x-ConfigurationFeatures">Configuration Features</h3>
+          </div><h3 id="Payara-ConfigurationFeatures">Configuration Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -384,7 +378,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.weblogic.WebLogic121xStandaloneLocalConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.payara.PayaraStandaloneLocalConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -398,7 +392,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Existing+Local+Configuration.html">Existing Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.weblogic.WebLogic121xExistingLocalConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.payara.PayaraExistingLocalConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -412,7 +406,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Runtime+Configuration.html">Runtime Configuration</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.weblogic.WebLogic121xRuntimeConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.payara.PayaraRuntimeConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -433,9 +427,9 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Static+deployment+of+EJB.html">Static deployment of EJB</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
@@ -461,24 +455,14 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Static+deployment+of+OSGi+Bundles.html">Static deployment of OSGi Bundles</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="WebLogic12.1.x-DeployerFeatures">Deployer Features</h3>
+          </div><h3 id="Payara-DeployerFeatures">Deployer Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -491,7 +475,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a class="unresolved" href="#">Installed Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.weblogic.WebLogic9x10x103x12xCopyingInstalledLocalDeployer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.payara.PayaraInstalledLocalDeployer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -505,14 +489,31 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Remote+Deployer.html">Remote Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.weblogic.WebLogicWlstRemoteDeployer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.payara.PayaraRemoteDeployer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="WebLogic12.1.x-OtherFeatures">Other Features</h3>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <p class="title">Adding arguments to the Deployer</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>The GlassFish / Payara installed deployer allows for additional deployment and undeployment arguments by adding properties prefixed with <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.DEPLOY_ARG_PREFIX</a></code> and <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#UNDEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.UNDEPLOY_ARG_PREFIX</a></code> respectively followed by a number starting at <code>1</code>.</p>
+           </div>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h3 id="Payara-OtherFeatures">Other Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -532,7 +533,7 @@
              </tr>
             </tbody>
            </table>
-          </div><script type="text/javascript">
+          </div><h3 id="Payara-SupportedConfigurationproperties">Supported Configuration properties</h3><p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -542,7 +543,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="WebLogic12.1.x-SupportedConfigurationproperties">Supported Configuration properties</h3><p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p><h4 id="WebLogic12.1.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4><h5 id="WebLogic12.1.x-Forinstalledcontainero.c.c.c.weblogic.WebLogic121xInstalledLocalContainer">For installed container o.c.c.c.weblogic.WebLogic121xInstalledLocalContainer</h5>
+          </center><h4 id="Payara-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4><h5 id="Payara-Forinstalledcontainero.c.c.c.payara.PayaraInstalledLocalContainer">For installed container o.c.c.c.payara.PayaraInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -552,6 +553,97 @@
               <th class="confluenceTh"><p>Supported?</p></th>
               <th class="confluenceTh"><p>Default value</p></th>
               <th class="confluenceTh"><p>Javadoc</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.admin.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.ADMIN_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>4848</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.debug</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DEBUG_MODE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>false</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEBUG_MODE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.jmxPort</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.JMX_ADMIN_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>8686</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#JMX_ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.name</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DOMAIN_NAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>cargo-domain</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DOMAIN_NAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.http.ssl.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.HTTPS_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>8181</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#HTTPS_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.java.debugger.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DEBUGGER_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>9009</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEBUGGER_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.jms.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.JMS_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>7676</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#JMS_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.orb.listener.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.IIOP_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>3700</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#IIOP_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.orb.mutualauth.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.IIOP_MUTUAL_AUTH_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>3920</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#IIOP_MUTUAL_AUTH_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.orb.ssl.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.IIOPS_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>3820</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#IIOPS_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.osgi.shell.telnet.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.OSGI_SHELL_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>6666</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#OSGI_SHELL_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.portbase</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.PORT_BASE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#PORT_BASE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.removeDefaultDatasource</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.REMOVE_DEFAULT_DATASOURCE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>true</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#REMOVE_DEFAULT_DATASOURCE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
@@ -564,7 +656,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 7 or newer</em></p></td>
+              <td class="confluenceTd"><p><em>JAVA_HOME version 8 or newer</em></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -577,9 +669,9 @@
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.logging</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.LOGGING</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
               <td class="confluenceTd"><p><code>medium</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#LOGGING" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+              <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.port.offset</a></p></td>
@@ -603,6 +695,20 @@
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>adminadmin</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>admin</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
@@ -613,7 +719,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>7001</code></p></td>
+              <td class="confluenceTd"><p><code>8080</code></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -637,90 +743,6 @@
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.administrator.password</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.ADMIN_PWD</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>weblogic1</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ADMIN_PWD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.administrator.user</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.ADMIN_USER</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>weblogic</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ADMIN_USER" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.bea.home</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.BEA_HOME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#BEA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.jta.timeout</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.JTA_TRANSACTION_TIMEOUT</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#JTA_TRANSACTION_TIMEOUT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.logging.rotation.type</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.LOG_ROTATION_TYPE</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>none</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#LOG_ROTATION_TYPE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.password.length.min</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.PASSWORD_LENGTH_MIN</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>8</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#PASSWORD_LENGTH_MIN" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.password.spnum.min</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.PASSWORD_SPNUM_MIN</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>1</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#PASSWORD_SPNUM_MIN" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.script.jython.offline</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.JYTHON_SCRIPT_OFFLINE</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#JYTHON_SCRIPT_OFFLINE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.script.jython.online</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.JYTHON_SCRIPT_ONLINE</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#JYTHON_SCRIPT_ONLINE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.server</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.SERVER</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>server</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SERVER" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.ssl.verification.hostname.class</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.SSL_HOSTNAME_VERIFIER_CLASS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>None</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SSL_HOSTNAME_VERIFIER_CLASS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.ssl.verification.hostname.ignored</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.SSL_HOSTNAME_VERIFICATION_IGNORED</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>true</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SSL_HOSTNAME_VERIFICATION_IGNORED" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
             </tbody>
            </table>
           </div>
@@ -731,44 +753,9 @@
             <p>In addition to the forementioned properties, this container configuration can also set up datasources and/or resources.</p>
             <p>For more details, please read: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</p>
            </div>
-          </div>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>Some versions of WebLogic require you to have a complex password, i.e. only <code>weblogic</code> is not enough.<br>If you get an error message similar to the below, please include a number in your WebLogic password, for example <code>weblogic1</code>.</p>
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-             <div class="codeContent panelContent pdl"> 
-              <pre class="syntaxhighlighter-pre">&lt;Critical&gt; &lt;WebLogicServer&gt; &lt;BEA-000386&gt; &lt;Server subsystem failed. Reason: java.lang.AssertionError:java.lang.reflect.InvocationTargetException
-    at weblogic.descriptor.DescriptorManager$SecurityServiceImpl$SecurityProxy._invokeServiceMethod
-    at weblogic.descriptor.DescriptorManager$SecurityServiceImpl$SecurityProxy.decrypt
-    at weblogic.descriptor.DescriptorManager$SecurityServiceImpl.decrypt
-    at weblogic.descriptor.internal.AbstractDescriptorBean._decrypt
-    at weblogic.management.configuration.SecurityConfigurationMBeanImpl.getCredential
-    at weblogic.security.internal.ServerPrincipalValidatorImpl.getSecret
-    at weblogic.security.internal.ServerPrincipalValidatorImpl.sign</pre> 
-             </div>
-            </div>
-           </div>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h4 id="WebLogic12.1.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4><h5 id="WebLogic12.1.x-Forinstalledcontainero.c.c.c.weblogic.WebLogic121xInstalledLocalContainer.1">For installed container o.c.c.c.weblogic.WebLogic121xInstalledLocalContainer</h5>
+          </div><h4 id="Payara-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4><h5 id="Payara-Forinstalledcontainero.c.c.c.payara.PayaraInstalledLocalContainer.1">For installed container o.c.c.c.payara.PayaraInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
-            <colgroup>
-             <col>
-             <col>
-             <col>
-             <col>
-             <col>
-            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -778,18 +765,32 @@
               <th class="confluenceTh"><p>Javadoc</p></th>
              </tr>
              <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.admin.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.ADMIN_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>4848</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.debug</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DEBUG_MODE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>false</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEBUG_MODE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.domain.name</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.DOMAIN_NAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>cargo-domain</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DOMAIN_NAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><code>localhost</code></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 7 or newer</em></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jvmargs</a></p></td>
@@ -813,11 +814,18 @@
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.protocol</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.PROTOCOL</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>http</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+              <td class="confluenceTd"><p><code>adminadmin</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>admin</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
@@ -830,7 +838,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>7001</code></p></td>
+              <td class="confluenceTd"><p><code>8080</code></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -840,39 +848,34 @@
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.administrator.password</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.ADMIN_PWD</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>weblogic1</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ADMIN_PWD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.administrator.user</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.ADMIN_USER</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>weblogic</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ADMIN_USER" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.bea.home</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.BEA_HOME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#BEA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.server</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.SERVER</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>server</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SERVER" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
             </tbody>
            </table>
-          </div><h4 id="WebLogic12.1.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4><h5 id="WebLogic12.1.x-Forremotecontainero.c.c.c.weblogic.WebLogic121xRemoteContainer">For remote container o.c.c.c.weblogic.WebLogic121xRemoteContainer</h5>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h4 id="Payara-RuntimeConfigurationProperties">Runtime Configuration Properties</h4>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Before using the GlassFish remote deployer, please read: <a href="JSR88.html">JSR88</a></p>
+           </div>
+          </div><h5 id="Payara-Forremotecontainero.c.c.c.payara.PayaraRemoteContainer">For remote container o.c.c.c.payara.PayaraRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -880,6 +883,20 @@
               <th class="confluenceTh"><p>Supported?</p></th>
               <th class="confluenceTh"><p>Default value</p></th>
               <th class="confluenceTh"><p>Javadoc</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.admin.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.ADMIN_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>4848</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#ADMIN_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.glassfish.target</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GlassFishPropertySet.TARGET</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#TARGET" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
@@ -892,40 +909,26 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>weblogic1</code></p></td>
+              <td class="confluenceTd"><p><code>adminadmin</code></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.timeout</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.TIMEOUT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>120000</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#TIMEOUT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>weblogic</code></p></td>
+              <td class="confluenceTd"><p><code>admin</code></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>7001</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.installation.home</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.LOCAL_WEBLOGIC_HOME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#LOCAL_WEBLOGIC_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.weblogic.server</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">WebLogicPropertySet.SERVER</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SERVER" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
             </tbody>
            </table>
-          </div> </td> 
+          </div><h3 id="Payara-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a class="external-link" href="http://repo.maven.apache.org/maven2/fish/payara/distributions/payara/5.193/payara-5.193.zip" rel="nofollow">http://repo.maven.apache.org/maven2/fish/payara/distributions/payara/5.193/payara-5.193.zip</a></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

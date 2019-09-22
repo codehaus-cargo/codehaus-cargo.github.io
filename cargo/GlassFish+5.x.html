@@ -147,6 +147,10 @@
          <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
          <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
         </ul></li>
+       <li>Payara
+        <ul>
+         <li><a href="Payara.html">Payara</a></li>
+        </ul></li>
       </ul>
       <ul class="alternate">
        <li>Resin
@@ -271,15 +275,9 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> 
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>The GlassFish 4.x and GlassFish 5.x containers also work with <a href="http://www.payara.fish/" class="external-link" rel="nofollow">Payara</a>.</p>
-           </div>
-          </div><h3 id="GlassFish5.x-ContainerFeatures">Container Features</h3>
+         <td class="rightColumn"> <h3 id="GlassFish5.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
-           <table class="wrapped confluenceTable">
+           <table class="confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Feature name</p></th>
@@ -369,7 +367,7 @@
            </table>
           </div><h3 id="GlassFish5.x-ConfigurationFeatures">Configuration Features</h3>
           <div class="table-wrap">
-           <table class="wrapped confluenceTable">
+           <table class="confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Feature name</p></th>
@@ -466,7 +464,7 @@
            </table>
           </div><h3 id="GlassFish5.x-DeployerFeatures">Deployer Features</h3>
           <div class="table-wrap">
-           <table class="wrapped confluenceTable">
+           <table class="confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Feature name</p></th>
@@ -503,7 +501,7 @@
            <p class="title">Adding arguments to the Deployer</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>The GlassFish installed deployer allows for additional deployment and undeployment arguments by adding properties prefixed with <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.DEPLOY_ARG_PREFIX</a></code> and <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#UNDEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.UNDEPLOY_ARG_PREFIX</a></code> respectively followed by a number starting at <code>1</code>.</p>
+            <p>The GlassFish / Payara installed deployer allows for additional deployment and undeployment arguments by adding properties prefixed with <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#DEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.DEPLOY_ARG_PREFIX</a></code> and <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/glassfish/GlassFishPropertySet.html#UNDEPLOY_ARG_PREFIX" class="external-link" rel="nofollow">GlassFishPropertySet.UNDEPLOY_ARG_PREFIX</a></code> respectively followed by a number starting at <code>1</code>.</p>
            </div>
           </div><script type="text/javascript">
   // Google Ads code
@@ -517,7 +515,7 @@
   </script> 
           </center><h3 id="GlassFish5.x-OtherFeatures">Other Features</h3>
           <div class="table-wrap">
-           <table class="wrapped confluenceTable">
+           <table class="confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Feature name</p></th>
@@ -547,7 +545,7 @@
   </script> 
           </center><h4 id="GlassFish5.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4><h5 id="GlassFish5.x-Forinstalledcontainero.c.c.c.glassfish.GlassFish5xInstalledLocalContainer">For installed container o.c.c.c.glassfish.GlassFish5xInstalledLocalContainer</h5>
           <div class="table-wrap">
-           <table class="wrapped confluenceTable">
+           <table class="confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -757,14 +755,7 @@
            </div>
           </div><h4 id="GlassFish5.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4><h5 id="GlassFish5.x-Forinstalledcontainero.c.c.c.glassfish.GlassFish5xInstalledLocalContainer.1">For installed container o.c.c.c.glassfish.GlassFish5xInstalledLocalContainer</h5>
           <div class="table-wrap">
-           <table class="wrapped confluenceTable">
-            <colgroup>
-             <col>
-             <col>
-             <col>
-             <col>
-             <col>
-            </colgroup>
+           <table class="confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -869,9 +860,15 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h4 id="GlassFish5.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4><h5 id="GlassFish5.x-Forremotecontainero.c.c.c.glassfish.GlassFish5xRemoteContainer">For remote container o.c.c.c.glassfish.GlassFish5xRemoteContainer</h5>
+          </center><h4 id="GlassFish5.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Before using the GlassFish remote deployer, please read: <a href="JSR88.html">JSR88</a></p>
+           </div>
+          </div><h5 id="GlassFish5.x-Forremotecontainero.c.c.c.glassfish.GlassFish5xRemoteContainer">For remote container o.c.c.c.glassfish.GlassFish5xRemoteContainer</h5>
           <div class="table-wrap">
-           <table class="wrapped confluenceTable">
+           <table class="confluenceTable">
             <colgroup>
              <col>
              <col>
@@ -931,7 +928,7 @@
              </tr>
             </tbody>
            </table>
-          </div><h3 id="GlassFish5.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a href="http://repo.maven.apache.org/maven2/org/glassfish/main/distributions/glassfish/5.1.0/glassfish-5.1.0.zip" class="external-link" rel="nofollow">http://repo.maven.apache.org/maven2/org/glassfish/main/distributions/glassfish/5.1.0/glassfish-5.1.0.zip</a></p> </td> 
+          </div><h3 id="GlassFish5.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a class="external-link" href="http://repo.maven.apache.org/maven2/org/glassfish/main/distributions/glassfish/5.1.0/glassfish-5.1.0.zip" rel="nofollow">http://repo.maven.apache.org/maven2/org/glassfish/main/distributions/glassfish/5.1.0/glassfish-5.1.0.zip</a></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
