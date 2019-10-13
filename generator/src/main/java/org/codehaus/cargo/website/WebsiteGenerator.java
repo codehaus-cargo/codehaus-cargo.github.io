@@ -145,7 +145,8 @@ public class WebsiteGenerator implements Runnable
             }
         }
 
-        JSONArray pages = new JSONObject(sb.toString()).getJSONObject("page").getJSONArray("results");
+        JSONObject response = new JSONObject(sb.toString());
+        JSONArray pages = response.getJSONObject("page").getJSONArray("results");
         System.out.println("Found " + pages.length() + " pages to handle");
         for (int i = 0; i < pages.length(); i++)
         {
@@ -156,7 +157,7 @@ public class WebsiteGenerator implements Runnable
             executor.submit(thread);
         }
 
-        JSONArray blogposts = new JSONObject(sb.toString()).getJSONObject("blogpost").getJSONArray("results");
+        JSONArray blogposts = response.getJSONObject("blogpost").getJSONArray("results");
         System.out.println("Found " + blogposts.length() + " blog posts to handle");
         for (int i = 0; i < blogposts.length(); i++)
         {
