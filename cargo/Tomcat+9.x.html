@@ -1245,6 +1245,13 @@
           </center><h4 id="Tomcat9.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4><h5 id="Tomcat9.x-Forremotecontainero.c.c.c.tomcat.Tomcat9xRemoteContainer">For remote container o.c.c.c.tomcat.Tomcat9xRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -1273,6 +1280,13 @@
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.timeout</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.TIMEOUT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>7200000</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#TIMEOUT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.uri</a></p></td>
@@ -1314,7 +1328,7 @@
              <li>The text-based manager requires to be accessed by a user with the <code>manager-script</code> role; and by default no user has that role. As a result, please make sure you modify your <code>tomcat-users.xml</code> file to give that role to a user.<br>You can read more in the Tomcat documentation: <a class="external-link" href="http://tomcat.apache.org/tomcat-9.0-doc/manager-howto.html" rel="nofollow">http://tomcat.apache.org/tomcat-9.0-doc/manager-howto.html</a></li>
             </ul>
            </div>
-          </div><h3 id="Tomcat9.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a class="external-link" href="http://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/9.0.29/tomcat-9.0.29.zip" rel="nofollow">http://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/9.0.29/tomcat-9.0.29.zip</a></p> </td> 
+          </div><h3 id="Tomcat9.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a class="external-link" href="http://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/9.0.30/tomcat-9.0.30.zip" rel="nofollow">http://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/9.0.30/tomcat-9.0.30.zip</a></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
@@ -1325,7 +1339,7 @@
        <table width="100%"> 
         <tbody>
          <tr valign="top"> 
-          <td align="left"> Copyright 2004-2019. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="left"> Copyright 2004-2020. All rights reserved unless otherwise noted.<br> </td> 
           <td align="right"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
          </tr> 
         </tbody>
