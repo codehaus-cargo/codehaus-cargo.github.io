@@ -291,7 +291,68 @@
     &lt;container&gt;
       &lt;containerId&gt;tomcat7x&lt;/containerId&gt;
       &lt;zipUrlInstaller&gt;
-        &lt;url&gt;http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip&lt;/url&gt;
+        &lt;url&gt;https://repo.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip&lt;/url&gt;
+      &lt;/zipUrlInstaller&gt;
+    &lt;/container&gt;
+    &lt;configuration&gt;
+      &lt;home&gt;${project.build.directory}/catalina-base&lt;/home&gt;
+      &lt;properties&gt;
+        &lt;cargo.servlet.port&gt;${cargo.samples.servlet.port}&lt;/cargo.servlet.port&gt;
+        &lt;cargo.rmi.port&gt;${cargo.samples.rmi.port}&lt;/cargo.rmi.port&gt;
+        &lt;cargo.tomcat.ajp.port&gt;${cargo.samples.tomcat.ajp.port}&lt;/cargo.tomcat.ajp.port&gt;
+      &lt;/properties&gt;
+    &lt;/configuration&gt;
+    &lt;deployables&gt;
+      &lt;deployable&gt;
+        &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
+        &lt;artifactId&gt;sample-war&lt;/artifactId&gt;
+        &lt;type&gt;war&lt;/type&gt;
+      &lt;/deployable&gt;
+    &lt;/deployables&gt;
+    &lt;packager&gt;
+      &lt;outputLocation&gt;${project.build.directory}/tomcat-packaged&lt;/outputLocation&gt;
+    &lt;/packager&gt;
+  &lt;/configuration&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;start&lt;/id&gt;
+      &lt;phase&gt;pre-integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;start&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+    &lt;execution&gt;
+      &lt;id&gt;stop&lt;/id&gt;
+      &lt;phase&gt;post-integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;stop&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+    &lt;execution&gt;
+      &lt;id&gt;package&lt;/id&gt;
+      &lt;phase&gt;post-integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;package&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;</pre> 
+           </div>
+          </div><p>In the example, after execution of the&nbsp;<code>cargo:package</code> goal, a copy of the container and its configuration will be copied to <code>${project.build.directory}/tomcat-packaged</code>.</p><p>You could then use the <a href="http://maven.apache.org/plugins/maven-assembly-plugin/" class="external-link" rel="nofollow">Maven Assembly Plugin</a> to generate an artifact assembly out of it.</p><p>Ability to create a fully working custom configuration and possibly package some deployables in it; then deliver this configuration as an artifact (<strong><code>cargo:package</code></strong>).</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+            <b>Example configuration</b>
+           </div>
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
+  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;version&gt;${cargo.version}&lt;/version&gt;
+  &lt;configuration&gt;
+    &lt;container&gt;
+      &lt;containerId&gt;tomcat7x&lt;/containerId&gt;
+      &lt;zipUrlInstaller&gt;
+        &lt;url&gt;https://repo.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip&lt;/url&gt;
       &lt;/zipUrlInstaller&gt;
     &lt;/container&gt;
     &lt;configuration&gt;

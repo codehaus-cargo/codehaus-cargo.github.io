@@ -1,0 +1,330 @@
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
+  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
+  <link rel="shortcut icon" href="attachments/favicon.ico"> 
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
+  <title>Codehaus Cargo - Hello 2020 - And hello Codehaus Cargo 1.7.10</title> 
+  <script type="text/javascript">
+    if (location.href.indexOf("http://") === 0) {
+      location.replace("https://" + location.href.substring(7));
+    }
+  </script> 
+  <!-- Global site tag (gtag.js) - Google Analytics --> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31476258-1"></script> 
+  <script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-31476258-1');
+  </script> 
+  <!-- Google Ads --> 
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7996505557003356",
+      enable_page_level_ads: true
+    });
+  </script> 
+ </head> 
+ <body> 
+  <table width="100%" class="layout" style="border-collapse:collapse"> 
+   <tbody>
+    <tr height="83"> 
+     <td colspan="2" style="padding:0px"> 
+      <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
+       <table width="100%" class="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+        <tbody>
+         <tr> 
+          <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
+          <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> </td> 
+    </tr> 
+    <tr> 
+     <td class="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+      <ul class="alternate">
+       <li><a href="Home.html">Home</a></li>
+       <li><a href="Downloads.html">Downloads</a></li>
+       <li><a href="Quick+start.html">Quick start</a></li>
+       <li><a href="Contributing.html">How to contribute?</a>
+        <ul class="alternate">
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
+      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      <ul class="alternate">
+       <li>Overview<br>
+        <ul class="alternate">
+         <li><a href="Architecture.html">Architecture</a></li>
+         <li><a href="Features.html">Features</a></li>
+        </ul></li>
+       <li><a href="Installation.html">Installation</a></li>
+       <li>Usage<br>
+        <ul class="alternate">
+         <li><a href="Javadocs.html">Java API</a></li>
+         <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
+         <li><a href="Ant+support.html">Ant tasks</a></li>
+         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+        </ul></li>
+       <li><a href="Articles.html">Articles</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Containers">Containers</h3>
+      <ul class="alternate">
+       <li>Geronimo
+        <ul class="alternate">
+         <li><a href="Geronimo+1.x.html">Geronimo 1.x</a></li>
+         <li><a href="Geronimo+2.x.html">Geronimo 2.x</a></li>
+         <li><a href="Geronimo+3.x.html">Geronimo 3.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Glassfish
+        <ul class="alternate">
+         <li><a href="GlassFish+2.x.html">GlassFish 2.x</a></li>
+         <li><a href="GlassFish+3.x.html">GlassFish 3.x</a></li>
+         <li><a href="GlassFish+4.x.html">GlassFish 4.x</a></li>
+         <li><a href="GlassFish+5.x.html">GlassFish 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JBoss
+        <ul class="alternate">
+         <li><a href="JBoss+3.x.html">JBoss 3.x</a></li>
+         <li><a href="JBoss+4.x.html">JBoss 4.x</a></li>
+         <li><a href="JBoss+4.2.x.html">JBoss 4.2.x</a></li>
+         <li><a href="JBoss+5.x.html">JBoss 5.x</a></li>
+         <li><a href="JBoss+5.1.x.html">JBoss 5.1.x</a></li>
+         <li><a href="JBoss+6.x.html">JBoss 6.x</a></li>
+         <li><a href="JBoss+6.1.x.html">JBoss 6.1.x</a></li>
+         <li><a href="JBoss+7.x.html">JBoss 7.x</a></li>
+         <li><a href="JBoss+7.1.x.html">JBoss 7.1.x</a></li>
+         <li><a href="JBoss+7.2.x.html">JBoss 7.2.x</a></li>
+         <li><a href="JBoss+7.3.x.html">JBoss 7.3.x</a></li>
+         <li><a href="JBoss+7.4.x.html">JBoss 7.4.x</a></li>
+         <li><a href="JBoss+7.5.x.html">JBoss 7.5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jetty
+        <ul class="alternate">
+         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
+         <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
+         <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
+         <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
+         <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
+         <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Jo!
+        <ul class="alternate">
+         <li><a href="jo+1.x.html">jo 1.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JOnAS
+        <ul class="alternate">
+         <li><a href="JOnAS+4.x.html">JOnAS 4.x</a></li>
+         <li><a href="JOnAS+5.x.html">JOnAS 5.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>JRun
+        <ul class="alternate">
+         <li><a href="JRun+4.x.html">JRun 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Orion/OC4J
+        <ul class="alternate">
+         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
+         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Payara
+        <ul>
+         <li><a href="Payara.html">Payara</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Resin
+        <ul class="alternate">
+         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
+         <li><a href="Resin+3.x.html">Resin 3.x</a></li>
+         <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
+         <li><a href="Resin+4.x.html">Resin 4.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>Tomcat
+        <ul class="alternate">
+         <li><a href="Tomcat+4.x.html">Tomcat 4.x</a></li>
+         <li><a href="Tomcat+5.x.html">Tomcat 5.x</a></li>
+         <li><a href="Tomcat+6.x.html">Tomcat 6.x</a></li>
+         <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
+         <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
+         <li><a href="Tomcat+9.x.html">Tomcat 9.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>TomEE
+        <ul class="alternate">
+         <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
+         <li><a href="TomEE+7.x.html">TomEE 7.x</a></li>
+         <li><a href="TomEE+8.x.html">TomEE 8.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebLogic<br>
+        <ul class="alternate">
+         <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
+         <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
+         <li><a href="WebLogic+10.x.html">WebLogic 10.x</a></li>
+         <li><a href="WebLogic+10.3.x.html">WebLogic 10.3.x</a></li>
+         <li><a href="WebLogic+12.x.html">WebLogic 12.x</a></li>
+         <li><a href="WebLogic+12.1.x.html">WebLogic 12.1.x</a></li>
+         <li><a href="WebLogic+12.2.x.html">WebLogic 12.2.x</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WebSphere<br>
+        <ul class="alternate">
+         <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
+         <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
+         <li><a href="WebSphere+Liberty.html">WebSphere Liberty</a></li>
+        </ul></li>
+      </ul>
+      <ul class="alternate">
+       <li>WildFly<br>
+        <ul class="alternate">
+         <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
+         <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
+         <li><a href="WildFly+10.x.html">WildFly 10.x</a></li>
+         <li><a href="WildFly+11.x.html">WildFly 11.x</a></li>
+         <li><a href="WildFly+12.x.html">WildFly 12.x</a></li>
+         <li><a href="WildFly+13.x.html">WildFly 13.x</a></li>
+         <li><a href="WildFly+14.x.html">WildFly 14.x</a></li>
+         <li><a href="WildFly+15.x.html">WildFly 15.x</a></li>
+         <li><a href="WildFly+16.x.html">WildFly 16.x</a></li>
+         <li><a href="WildFly+17.x.html">WildFly 17.x</a></li>
+         <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
+        </ul></li>
+      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      <ul class="alternate">
+       <li><a href="Ant+support.html">Ant</a></li>
+       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
+       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+      </ul><p>Independent extensions:</p>
+      <ul class="alternate">
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      <ul class="alternate">
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="News.html">News</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="Source+code.html">Source code</a></li>
+       <li><a href="Mailing+Lists.html">Mailing lists</a></li>
+       <li><a href="License.html">License</a></li>
+       <li><a href="Credits.html">Credits</a></li>
+      </ul><h3 id="Navigation-Development">Development</h3>
+      <ul class="alternate">
+       <li><a href="Project+Structure.html">Project structure</a></li>
+       <li><a href="Importing+sources.html">Importing sources</a></li>
+       <li><a href="Building.html">Building</a></li>
+       <li><a href="Cargo+Code+Style.html">Code style</a></li>
+       <li><a href="Contributing.html">Contributing</a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+      </ul> <h3 class="heading3">RSS Feeds</h3> 
+      <table border="0" cellspacing="4px"> 
+       <tbody>
+        <tr> 
+         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts"><img src="attachments/rss.gif" border="0"></a><br> </td> 
+         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts">Pages and Blog posts</a> </td> 
+        </tr> 
+        <tr> 
+         <td align="right"> <a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml"><img src="attachments/rss.gif" border="0"></a> </td> 
+         <td align="left"> <a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml">Mailing list</a> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+     <td valign="top" style="padding:0px"> 
+      <table width="100%" style="border-collapse:collapse"> 
+       <tbody>
+        <tr> 
+         <td class="breadcrumbs" style="padding:10px 17px"> 
+          <table width="100%"> 
+           <tbody>
+            <tr valign="top"> 
+             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; Hello 2020 - And hello Codehaus Cargo 1.7.10</b> </td> 
+             <td align="right" width="300"> 
+              <form method="GET" action="Search.html"> 
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
+               <input type="submit" value="Search"> 
+              </form> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td class="rightColumn"> <p>Dear Codehaus Cargo enthusiasts</p><p>First of all, we wish you a great start to this new decade! Since our last release in early December 2019 we accumulated many interesting fixes and improvements, moreover we had important adaptations as <a href="https://www.alphabot.com/security/blog/2020/java/Your-Java-builds-might-break-starting-January-13th.html" class="external-link" rel="nofollow">Maven and many other repositories switched to HTTPS-only since mid January 2020</a>. We are hence excited to announce the immediate availability of Codehaus Cargo 1.7.10 which comes with the below new features and bug fixes:</p>
+          <ul>
+           <li><p>General</p>
+            <ul>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1505" class="external-link" rel="nofollow">CARGO-1505</a>] - Cargo can't download many container binaries, because HTTPS is now enforced on <code>repo.maven.apache.org</code></p></li>
+            </ul></li>
+           <li><p>Containers - JBoss and Wildfly</p>
+            <ul>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1504" class="external-link" rel="nofollow">CARGO-1504</a>] - Add ability to change the JBoss / WildFly HTTPS port</p></li>
+            </ul></li>
+           <li><p>Containers - Tomcat</p>
+            <ul>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1498" class="external-link" rel="nofollow">CARGO-1498</a>] - Tomcat 7.x and below show exception logs when the stopping with Codehaus Cargo on JDK 11</p></li>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1503" class="external-link" rel="nofollow">CARGO-1503</a>] - Ability to specify timeout for <code>operation</code> with runtime Tomcat</p></li>
+            </ul></li>
+           <li><p>Extension - ANT tasks</p>
+            <ul>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1482" class="external-link" rel="nofollow">CARGO-1482</a>] - Using Ant 1.10.* yields to <code>NoSuchMethodError: o.a.t.ant.filters.util.ChainReaderHelper.getAssembledReader()Ljava/io/Reader;</code></p></li>
+            </ul></li>
+           <li><p>Extensions - Maven2/Maven3 plugin</p>
+            <ul>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1494" class="external-link" rel="nofollow">CARGO-1494</a>] - Add the <code>cargo-licensed-dtds</code> dependency to the Maven2/Maven3 plugin</p></li>
+            </ul></li>
+          </ul><p>To try it out:</p>
+          <ul>
+           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" class="external-link" rel="nofollow">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.7.10</strong></p></li>
+           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html" class="external-link" rel="nofollow">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.7.10/cargo-core-uberjar-1.7.10.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.7.10/cargo-core-uberjar-1.7.10.jar</a></p></li>
+           <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html" class="external-link" rel="nofollow">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.7.10/cargo-ant-1.7.10.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.7.10/cargo-ant-1.7.10.jar</a></p></li>
+           <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.7.10/cargo-daemon-webapp-1.7.10.war" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.7.10/cargo-daemon-webapp-1.7.10.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
+          </ul><p>Enjoy!</p> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr height="23"> 
+     <td colspan="2" style="padding:0px"> 
+      <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
+       <table width="100%"> 
+        <tbody>
+         <tr valign="top"> 
+          <td align="left"> Copyright 2004-2020. All rights reserved unless otherwise noted.<br> </td> 
+          <td align="right"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> </td> 
+    </tr> 
+   </tbody>
+  </table>   
+ </body>
+</html>

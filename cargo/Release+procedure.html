@@ -277,7 +277,7 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <p>Releases are performed using Maven 3.2.2 and onwards so you need to have that installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
+         <td class="rightColumn"> <p>Releases are performed using Maven 3.2.3 and onwards so you need to have that installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
           <ul>
            <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html" class="external-link" rel="nofollow">OSSRH guide</a></li>
            <li><a href="http://www.gnupg.org/" class="external-link" rel="nofollow">The GNU privacy guard (GPG)</a> installed on your machine and at least one secret key.
@@ -330,7 +330,7 @@
   </script> 
           </center><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><p>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p><p>The typical Maven release procedure is to execute these commands:</p>
           <ol>
-           <li>A dry-run before doing the actual release to ensure there aren't any problems:<br> <code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
+           <li>A dry-run before doing the actual release to ensure there aren't any problems:<br><code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
            <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process</li>
            <li><code><strong>mvn release:perform</strong></code>: deploys the tagged artifacts on the Sonatype Nexus staging repository
             <ul>

@@ -40,6 +40,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.regex.Matcher;
@@ -134,8 +135,15 @@ public class WebsiteGenerator implements Runnable
             tempDirectory.mkdirs();
         }
 
+        System.out.println(
+            "In order to work around the Confluence bug JST-520353 (Blog posts not visible to " +
+            "unauthenticated users), please enter your Confluence cookie for Codehaus Cargo: ");
+        Scanner keyboard = new Scanner(System.in);
+        String cookie = keyboard.nextLine();
+
         URL url = new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/space/CARGO/content?limit=2048&expand=ancestors");
         URLConnection connection = url.openConnection();
+        connection.setRequestProperty("Cookie", cookie);
         StringBuilder sb = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream())))
         {
@@ -238,6 +246,8 @@ public class WebsiteGenerator implements Runnable
             String name = sourceFile.getName();
             File file = new File(target, name + ".html");
             String value = readFile(sourceFile);
+            value = value.replace("http://repo.maven", "https://repo.maven");
+            value = value.replace("http://repo1.maven", "https://repo.maven");
             value = value.replaceAll(
                 "<script type=\"syntaxhighlighter\"[^>]+><\\!\\[CDATA\\[", "<pre>");
             value = value.replace("]]></script>", "</pre>");
