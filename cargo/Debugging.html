@@ -215,6 +215,8 @@
          <li><a href="WildFly+15.x.html">WildFly 15.x</a></li>
          <li><a href="WildFly+16.x.html">WildFly 16.x</a></li>
          <li><a href="WildFly+17.x.html">WildFly 17.x</a></li>
+         <li><a href="WildFly+18.x.html">WildFly 18.x</a></li>
+         <li><a href="WildFly+19.x.html">WildFly 19.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
       </ul><h3 id="Navigation-Extensions">Extensions</h3>
@@ -277,7 +279,7 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h3 id="Debugging-Definition">Definition</h3><p>Explain how to perform debugging when something doesn't work in Cargo&nbsp;</p><p>Sometimes, it can happen that the container does not start or stop as expected or you might have reasons to believe that CARGO is "acting weird". Here is a short list of things you can do to try debugging the problem.</p><h3 id="Debugging-Debuggingthecontainer">Debugging the container</h3><p>Most Java Virtual Machine implementations support remote debugging. Once started in debug mode, you can then remotely connect to your container using any IDE and debug your container and/or application.</p><p>In order to do so, add the following arguments to the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a>:</p>
+         <td class="rightColumn"> <h3 id="Debugging-Definition">Definition</h3><p><br>Explain how to perform debugging when something doesn't work in Cargo<br></p><p>Sometimes, it can happen that the container does not start or stop as expected or you might have reasons to believe that CARGO is "acting weird". Here is a short list of things you can do to try debugging the problem.</p><h3 id="Debugging-Debuggingthecontainer">Debugging the container</h3><p>Most Java Virtual Machine implementations support remote debugging. Once started in debug mode, you can then remotely connect to your container using any IDE and debug your container and/or application.</p><p>In order to do so, add the following arguments to the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">-Xdebug
@@ -329,7 +331,7 @@
            <p class="title">About the cargo.start.jvmargs property</p>
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>The <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a> is rather recent (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1353" class="external-link" rel="nofollow">Codehaus CARGO 1.4.18 and onwards</a>).</p>
+            <p>The <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a> only exists since <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1353" class="external-link" rel="nofollow">Codehaus CARGO 1.4.18</a>.</p>
             <p>With older versions, you'll have to use <a href="Configuration+properties.html" rel="nofollow"><code>cargo.jvmargs</code></a> and make sure you set the execution property only on the&nbsp;<code>start</code> goal - Else you will get error messages such as:</p>
             <pre>[INFO] [talledLocalContainer] FATAL ERROR in native method: JDWP No transports initialized, jvmtiError=AGENT_ERROR_TRANSPORT_INIT(197)</pre>
             <pre>[WARNING] [talledLocalContainer] ERROR: transport error 202: bind failed: Address already in use</pre>
