@@ -172,6 +172,7 @@
          <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
          <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
          <li><a href="Tomcat+9.x.html">Tomcat 9.x</a></li>
+         <li><a href="Tomcat+10.x.html">Tomcat 10.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -371,10 +372,10 @@
            </table>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">Running multiple Tomcat 7.x / Tomcat 8.x / Tomcat 9.x embedded containers within the same JVM</p>
+           <p class="title">Running multiple Tomcat 7.x / Tomcat 8.x / Tomcat 9.x / Tomcat 10.x embedded containers within the same JVM</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>Tomcat 7.x has introduced a class called <code>TomcatURLStreamHandlerFactory</code> where the singleton has a static <code>instance</code> field and a final <code>registered</code> attribute which are not always in sync and cause unexpected exceptions. Due to this, it is not possible to execute Tomcat 7.x, Tomcat 8.x and / or Tomcat 9.x embedded in the same JVM, in addition running one of these Tomcat embedded versions one after the other within the same JVM but different classpaths might also fail.</p>
+            <p>Tomcat 7.x has introduced a class called <code>TomcatURLStreamHandlerFactory</code> where the singleton has a static <code>instance</code> field and a final <code>registered</code> attribute which are not always in sync and cause unexpected exceptions. Due to this, it is not possible to execute Tomcat 7.x, Tomcat 8.x, Tomcat 9.x and / or Tomcat 10.x embedded in the same JVM, in addition running one of these Tomcat embedded versions one after the other within the same JVM but different classpaths might also fail.</p>
             <p>If you want to be safe, prefer using the <a href="Installed+Container.html">Installed Container</a>.</p>
            </div>
           </div><h3 id="Tomcat7.x-ConfigurationFeatures">Configuration Features</h3>
@@ -1203,6 +1204,13 @@
           </center><h4 id="Tomcat7.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4><h5 id="Tomcat7.x-Forremotecontainero.c.c.c.tomcat.Tomcat7xRemoteContainer">For remote container o.c.c.c.tomcat.Tomcat7xRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -1279,7 +1287,7 @@
              <li>The text-based manager requires to be accessed by a user with the <code>manager-script</code> role; and by default no user has that role. As a result, please make sure you modify your <code>tomcat-users.xml</code> file to give that role to a user.<br>You can read more in the Tomcat documentation: <a class="external-link" href="http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html" rel="nofollow">http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html</a></li>
             </ul>
            </div>
-          </div><h3 id="Tomcat7.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a class="external-link" href="https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/7.0.100/tomcat-7.0.100.zip" rel="nofollow">https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/7.0.100/tomcat-7.0.100.zip</a></p> </td> 
+          </div><h3 id="Tomcat7.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a class="external-link" href="https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/7.0.103/tomcat-7.0.103.zip" rel="nofollow">https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/7.0.103/tomcat-7.0.103.zip</a></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

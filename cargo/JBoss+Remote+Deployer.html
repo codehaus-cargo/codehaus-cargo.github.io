@@ -172,6 +172,7 @@
          <li><a href="Tomcat+7.x.html">Tomcat 7.x</a></li>
          <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
          <li><a href="Tomcat+9.x.html">Tomcat 9.x</a></li>
+         <li><a href="Tomcat+10.x.html">Tomcat 10.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -283,7 +284,7 @@
           <ul>
            <li><a href="#JBossRemoteDeployer-jboss4x">JBoss 4.0.x and 4.2.x</a></li>
            <li><a href="#JBossRemoteDeployer-jboss5x6x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</a></li>
-           <li><a href="#JBossRemoteDeployer-jboss7x">JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x / WildFly 8.x and 9.x</a></li>
+           <li><a href="#JBossRemoteDeployer-jboss7x">JBoss 7.0.x onwards / WildFly 8.x onwards</a></li>
           </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss4x"> </span></p><h3 id="JBossRemoteDeployer-JBoss4.0.xand4.2.x">JBoss 4.0.x and 4.2.x</h3><p>In JBoss 4.x, the JMX-based remote deployer can accept URLs that point to another machine. For example:</p>
           <blockquote>
            <p><code><a href="http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war" class="external-link" rel="nofollow">http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war</a></code></p>
@@ -509,11 +510,11 @@ fi
             </div>
             <p>Once the <code>/etc/hosts</code> file is corrected, restart JBoss AS and run the tests again. Your socket connection error should be gone!</p>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss7x"> </span></p><h3 id="JBossRemoteDeployer-JBoss7.0.x,7.1.x,7.2.x,7.3.x,7.4.xand7.5.x/WildFly8.x,9.xand10.x">JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x / WildFly 8.x, 9.x and 10.x</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x as well as WildFly 8.x, 9.x and 10.x, with some differences:</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss7x"> </span></p><h3 id="JBossRemoteDeployer-JBoss7.0.xonwards/WildFly8.xonwards">JBoss 7.0.x onwards / WildFly 8.x onwards</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x onwards as well as WildFly 8.x onwards, with some differences:</p>
           <ul>
            <li>The JAR files to include are different</li>
-           <li>JBoss 7.0.x, 7.1.x, 7.2.x, 7.3.x, 7.4.x and 7.5.x use the <code>cargo.jboss.management-native.port</code> port</li>
-           <li>WildFly 8.x, 9.x and 10.x use the <code>cargo.jboss.management-http.port</code> port</li>
+           <li>JBoss (Application Server) as well as JBoss Enterprise Application Platform (EAP) 6.x use the <code>cargo.jboss.management-native.port</code> port</li>
+           <li>All WildFly versions as well as&nbsp;JBoss Enterprise Application Platform (EAP) 7.x use the <code>cargo.jboss.management-http.port</code> port</li>
           </ul><p>The following examples detail these differences.</p><p>Here is an example code for the users of the Java API:</p>
           <blockquote>
            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">

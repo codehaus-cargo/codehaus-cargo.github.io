@@ -136,8 +136,8 @@ public class WebsiteGenerator implements Runnable
         }
 
         System.out.println(
-            "In order to work around the Confluence bug JST-520353 (Blog posts not visible to " +
-            "unauthenticated users), please enter your Confluence cookie for Codehaus Cargo: ");
+            "In order to work around the Confluence bug CONFCLOUD-68205 (Blog posts not visible " +
+            "to unauthenticated users), please enter your Confluence cookie for Codehaus Cargo: ");
         Scanner keyboard = new Scanner(System.in);
         String cookie = keyboard.nextLine();
 
