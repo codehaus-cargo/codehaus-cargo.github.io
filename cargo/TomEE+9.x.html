@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - Resin 2.x</title> 
+  <title>Codehaus Cargo - TomEE 9.x</title> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
@@ -114,7 +114,6 @@
       <ul class="alternate">
        <li>Jetty
         <ul class="alternate">
-         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
          <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
          <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
          <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
@@ -157,7 +156,6 @@
       <ul class="alternate">
        <li>Resin
         <ul class="alternate">
-         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
          <li><a href="Resin+3.x.html">Resin 3.x</a></li>
          <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
          <li><a href="Resin+4.x.html">Resin 4.x</a></li>
@@ -181,6 +179,7 @@
          <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
          <li><a href="TomEE+7.x.html">TomEE 7.x</a></li>
          <li><a href="TomEE+8.x.html">TomEE 8.x</a></li>
+         <li><a href="TomEE+9.x.html">TomEE 9.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -271,7 +270,7 @@
           <table width="100%"> 
            <tbody>
             <tr valign="top"> 
-             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Containers.html">Containers</a> &gt; Resin 2.x</b> </td> 
+             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Containers.html">Containers</a> &gt; TomEE 9.x</b> </td> 
              <td align="right" width="300"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -282,7 +281,7 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h3 id="Resin2.x-ContainerFeatures">Container Features</h3>
+         <td class="rightColumn"> <h3 id="TomEE9.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -295,9 +294,9 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Container+Instantiation.html">Container Instantiation</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>ContainerFactory.createContainer("resin2x"...)</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>&lt;cargo containerId="resin2x".../&gt;</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>&lt;containerId&gt;resin2x&lt;/containerId&gt;</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>ContainerFactory.createContainer("tomee9x"...)</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>&lt;cargo containerId="tomee9x".../&gt;</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>&lt;containerId&gt;tomee9x&lt;/containerId&gt;</code></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
@@ -344,7 +343,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p>&nbsp; <a href="Installed+Container.html">Installed Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.resin.Resin2xInstalledLocalContainer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.tomee.Tomee9xInstalledLocalContainer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -365,14 +364,14 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Remote+Container.html">Remote Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.tomee.Tomee9xRemoteContainer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="Resin2.x-ConfigurationFeatures">Configuration Features</h3>
+          </div><h3 id="TomEE9.x-ConfigurationFeatures">Configuration Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -385,7 +384,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.resin.Resin2xStandaloneLocalConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.tomee.Tomee9xStandaloneLocalConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -399,7 +398,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Existing+Local+Configuration.html">Existing Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.resin.Resin2xExistingLocalConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.tomee.TomeeExistingLocalConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -413,9 +412,9 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Runtime+Configuration.html">Runtime Configuration</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.tomee.Tomee9xRuntimeConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
@@ -434,16 +433,16 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Static+deployment+of+EJB.html">Static deployment of EJB</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Static+deployment+of+EAR.html">Static deployment of EAR</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
@@ -455,9 +454,9 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a class="unresolved" href="#">Static deployment of files</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
@@ -465,6 +464,40 @@
               <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><br></p></td>
+             </tr>
+            </tbody>
+           </table>
+          </div><h3 id="TomEE9.x-DeployerFeatures">Deployer Features</h3>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><p>Feature name</p></th>
+              <th class="confluenceTh"><p>Java API</p></th>
+              <th class="confluenceTh"><p>Ant tasks</p></th>
+              <th class="confluenceTh"><p>Maven 2 / Maven 3 plugin</p></th>
+              <th class="confluenceTh"><p>Comment</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a class="unresolved" href="#">Installed Deployer</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.tomee.TomeeCopyingInstalledLocalDeployer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><br></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a class="unresolved" href="#">Embedded Deployer</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><br></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Remote+Deployer.html">Remote Deployer</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.tomee.Tomee9xRemoteDeployer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
             </tbody>
@@ -479,41 +512,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="Resin2.x-DeployerFeatures">Deployer Features</h3>
-          <div class="table-wrap">
-           <table class="confluenceTable">
-            <tbody>
-             <tr>
-              <th class="confluenceTh"><p>Feature name</p></th>
-              <th class="confluenceTh"><p>Java API</p></th>
-              <th class="confluenceTh"><p>Ant tasks</p></th>
-              <th class="confluenceTh"><p>Maven 2 / Maven 3 plugin</p></th>
-              <th class="confluenceTh"><p>Comment</p></th>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a class="unresolved" href="#">Installed Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"> <code>o.c.c.c.resin.ResinInstalledLocalDeployer</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a class="unresolved" href="#">Embedded Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><p><a href="Remote+Deployer.html">Remote Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
-             </tr>
-            </tbody>
-           </table>
-          </div><h3 id="Resin2.x-OtherFeatures">Other Features</h3>
+          </center><h3 id="TomEE9.x-OtherFeatures">Other Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -533,7 +532,7 @@
              </tr>
             </tbody>
            </table>
-          </div><script type="text/javascript">
+          </div><h3 id="TomEE9.x-SupportedConfigurationproperties">Supported Configuration properties</h3><p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -543,7 +542,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="Resin2.x-SupportedConfigurationproperties">Supported Configuration properties</h3><p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p><h4 id="Resin2.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4><h5 id="Resin2.x-Forinstalledcontainero.c.c.c.resin.Resin2xInstalledLocalContainer">For installed container o.c.c.c.resin.Resin2xInstalledLocalContainer</h5>
+          </center><h4 id="TomEE9.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4><h5 id="TomEE9.x-Forinstalledcontainero.c.c.c.tomee.Tomee9xInstalledLocalContainer">For installed container o.c.c.c.tomee.Tomee9xInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -557,15 +556,15 @@
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><code>localhost</code></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 4 or newer</em></p></td>
+              <td class="confluenceTd"><p><em>JAVA_HOME version 8 or newer</em></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -599,9 +598,16 @@
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.protocol</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.PROTOCOL</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><code>http</code></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.rmi.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RMI_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>8205</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RMI_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
@@ -621,7 +627,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.users</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.USERS</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><code>admin::manager-script</code></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#USERS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -638,6 +644,160 @@
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.ajp.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.AJP_PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>8009</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#AJP_PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.clientAuth</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_CLIENT_AUTH</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_CLIENT_AUTH" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.keyAlias</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_KEY_ALIAS</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_KEY_ALIAS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.keystoreFile</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_KEY_STORE_FILE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_KEY_STORE_FILE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.keystorePass</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_KEY_STORE_PASSWORD</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_KEY_STORE_PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.keystoreType</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_KEY_STORE_TYPE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_KEY_STORE_TYPE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.maxHttpHeaderSize</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_MAX_HTTP_HEADER_SIZE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_MAX_HTTP_HEADER_SIZE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.protocolClass</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_PROTOCOL_CLASS</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_PROTOCOL_CLASS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.sslProtocol</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_SSL_PROTOCOL</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_SSL_PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.truststoreFile</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_TRUST_STORE_FILE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_TRUST_STORE_FILE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.truststorePass</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_TRUST_STORE_PASSWORD</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_TRUST_STORE_PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.connector.truststoreType</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONNECTOR_TRUST_STORE_TYPE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONNECTOR_TRUST_STORE_TYPE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.context.allowCasualMultipartParsing</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONTEXT_ALLOWMULTIPART</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>true</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONTEXT_ALLOWMULTIPART" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.context.reloadable</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CONTEXT_RELOADABLE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>false</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CONTEXT_RELOADABLE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.copywars</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.COPY_WARS</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>true</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#COPY_WARS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.host.startStopThreads</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.HOST_STARTSTOPTHREADS</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#HOST_STARTSTOPTHREADS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.httpSecure</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.HTTP_SECURE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>false</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#HTTP_SECURE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.uriencoding</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.URI_ENCODING</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>UTF-8</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#URI_ENCODING" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.useHttpOnly</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.USE_HTTP_ONLY</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#USE_HTTP_ONLY" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.valve</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.CUSTOM_VALVE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#CUSTOM_VALVE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.webappsDirectory</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.WEBAPPS_DIRECTORY</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>webapps</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#WEBAPPS_DIRECTORY" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomee.appsDirectory</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomeePropertySet.APPS_DIRECTORY</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>apps</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomee/TomeePropertySet.html#APPS_DIRECTORY" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
             </tbody>
            </table>
           </div>
@@ -648,26 +808,9 @@
             <p>In addition to the forementioned properties, this container configuration can also set up datasources and/or resources.</p>
             <p>For more details, please read: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</p>
            </div>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h4 id="Resin2.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4><h5 id="Resin2.x-Forinstalledcontainero.c.c.c.resin.Resin2xInstalledLocalContainer.1">For installed container o.c.c.c.resin.Resin2xInstalledLocalContainer</h5>
+          </div><h4 id="TomEE9.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4><h5 id="TomEE9.x-Forinstalledcontainero.c.c.c.tomee.Tomee9xInstalledLocalContainer.1">For installed container o.c.c.c.tomee.Tomee9xInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
-            <colgroup>
-             <col>
-             <col>
-             <col>
-             <col>
-             <col>
-            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -679,15 +822,15 @@
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><code>localhost</code></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 4 or newer</em></p></td>
+              <td class="confluenceTd"><p><em>JAVA_HOME version 8 or newer</em></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -714,9 +857,9 @@
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.protocol</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.PROTOCOL</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" alt="(error)"></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><code>http</code></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
@@ -741,7 +884,103 @@
              </tr>
             </tbody>
            </table>
-          </div><h3 id="Resin2.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a class="external-link" href="https://www.caucho.com/download/resin-2.1.17.zip" rel="nofollow">https://www.caucho.com/download/resin-2.1.17.zip</a></p> </td> 
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h4 id="TomEE9.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4><h5 id="TomEE9.x-Forremotecontainero.c.c.c.tomee.Tomee9xRemoteContainer">For remote container o.c.c.c.tomee.Tomee9xRemoteContainer</h5>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh"><p>Property name</p></th>
+              <th class="confluenceTh"><p>Java Property</p></th>
+              <th class="confluenceTh"><p>Supported?</p></th>
+              <th class="confluenceTh"><p>Default value</p></th>
+              <th class="confluenceTh"><p>Javadoc</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>localhost</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.protocol</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.PROTOCOL</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>http</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PROTOCOL" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.timeout</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.TIMEOUT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>7200000</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#TIMEOUT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.uri</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.URI</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#URI" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p>N/A</p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>8080</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.deploy.update</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.DEPLOY_UPDATE</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>false</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#DEPLOY_UPDATE" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.tomcat.undeploy.allVersions</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">TomcatPropertySet.UNDEPLOY_ALL_VERSIONS</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>false</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#UNDEPLOY_ALL_VERSIONS" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>With TomEE, the Tomcat manager has multiple aspects to be careful about:</p>
+            <ul>
+             <li>Your browser by default accesses the HTML-based manager whereas CARGO needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a class="external-link" href="http://production27:8080/manager/text" rel="nofollow">http://production27:8080/manager/text</a></code></li>
+             <li>The text-based manager requires to be accessed by a user with the <code>manager-script</code> role; and by default no user has that role. As a result, please make sure you modify your <code>tomcat-users.xml</code> file to give that role to a user.<br>You can read more in the Tomcat documentation: <a class="external-link" href="http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html" rel="nofollow">http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html</a></li>
+            </ul>
+           </div>
+          </div><h3 id="TomEE9.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a class="external-link" href="https://downloads.apache.org/tomee/tomee-9.0.0-M2/apache-tomee-9.0.0-M2-plus.zip" rel="nofollow">https://downloads.apache.org/tomee/tomee-9.0.0-M2/apache-tomee-9.0.0-M2-plus.zip</a></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

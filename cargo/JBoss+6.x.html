@@ -114,7 +114,6 @@
       <ul class="alternate">
        <li>Jetty
         <ul class="alternate">
-         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
          <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
          <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
          <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
@@ -157,7 +156,6 @@
       <ul class="alternate">
        <li>Resin
         <ul class="alternate">
-         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
          <li><a href="Resin+3.x.html">Resin 3.x</a></li>
          <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
          <li><a href="Resin+4.x.html">Resin 4.x</a></li>
@@ -181,6 +179,7 @@
          <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
          <li><a href="TomEE+7.x.html">TomEE 7.x</a></li>
          <li><a href="TomEE+8.x.html">TomEE 8.x</a></li>
+         <li><a href="TomEE+9.x.html">TomEE 9.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -286,7 +285,7 @@
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>With the opening of the JBoss EAP to the public and the split between JBoss and WildFly, the below naming correspondance should be used with JBoss EAP containers:</p>
+            <p>With the opening of the JBoss EAP to the public and the split between JBoss and WildFly, the below naming correspondence should be used with JBoss EAP containers:</p>
             <ul>
              <li>What Cargo calls <a href="JBoss+6.1.x.html">JBoss 6.1.x</a> is what JBoss refers to as JBoss Application Server version 6.1; i.e. the version released in August 2011</li>
              <li>What Cargo calls <a href="JBoss+7.2.x.html">JBoss 7.2.x</a> is what JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.1; i.e. the build from JBoss Application Server (AS) version 7.2 released in May 2013</li>
@@ -602,7 +601,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 6 or newer</em></p></td>
+              <td class="confluenceTd"><p><em>JAVA_HOME version 6 or newer</em><br><em>Due to incompatibilities with its JSP environment, JBoss 6.x doesn't run on Java 8 and above</em></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -857,7 +856,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 6 or newer</em></p></td>
+              <td class="confluenceTd"><p><em>JAVA_HOME version 6 or newer</em><br><em>Due to incompatibilities with its JSP environment, JBoss 6.x doesn't run on Java 8 and above</em></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -965,13 +964,6 @@
           </div><h5 id="JBoss6.x-Forremotecontainero.c.c.c.jboss.JBoss6xRemoteContainer">For remote container o.c.c.c.jboss.JBoss6xRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
-            <colgroup>
-             <col>
-             <col>
-             <col>
-             <col>
-             <col>
-            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>

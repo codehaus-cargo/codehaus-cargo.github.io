@@ -114,7 +114,6 @@
       <ul class="alternate">
        <li>Jetty
         <ul class="alternate">
-         <li><a href="Jetty+4.x.html">Jetty 4.x</a></li>
          <li><a href="Jetty+5.x.html">Jetty 5.x</a></li>
          <li><a href="Jetty+6.x.html">Jetty 6.x</a></li>
          <li><a href="Jetty+7.x.html">Jetty 7.x</a></li>
@@ -157,7 +156,6 @@
       <ul class="alternate">
        <li>Resin
         <ul class="alternate">
-         <li><a href="Resin+2.x.html">Resin 2.x</a></li>
          <li><a href="Resin+3.x.html">Resin 3.x</a></li>
          <li><a href="Resin+3.1.x.html">Resin 3.1.x</a></li>
          <li><a href="Resin+4.x.html">Resin 4.x</a></li>
@@ -181,6 +179,7 @@
          <li><a href="TomEE+1.x.html">TomEE 1.x</a></li>
          <li><a href="TomEE+7.x.html">TomEE 7.x</a></li>
          <li><a href="TomEE+8.x.html">TomEE 8.x</a></li>
+         <li><a href="TomEE+9.x.html">TomEE 9.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -299,6 +298,7 @@
              <li><span style="color: red;"><strong>resources/</strong></span>: Cargo Shared Resources (License files, Checkstyle configuration files, etc)
               <ul>
                <li><span style="color: red;"><strong>build-tools/</strong></span>: Cargo Build Tools</li>
+               <li><span style="color: red;"><strong>cargo-ping-component/</strong></span>: Cargo Ping Component</li>
                <li><span style="color: red;"><strong>jetty-6-and-earlier-deployer/</strong></span>: Webapp used by Cargo to remotely deploy applications of a Jetty 6.x server</li>
                <li><span style="color: red;"><strong>jetty-7-and-onwards-deployer/</strong></span>: Webapp used by Cargo to remotely deploy applications of a Jetty server (versions 7 and onwards)</li>
                <li><span style="color: red;"><strong>licensed-dtds/</strong></span>: DTDs that are used by some Cargo components which have licenses incompatible with the rest of Cargo</li>
@@ -417,14 +417,12 @@
                    <li><span style="color: red;"><strong>configurationFiles-xmlReplacements-test/</strong></span>: Sample application that tests the configuration files and XML replacement options</li>
                    <li><span style="color: red;"><strong>implementationClasses-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with personalized implementation classes</li>
                    <li><span style="color: red;"><strong>inPlaceDevelopment-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's in-place development capabilities. Note that this sample currently works only for Jetty and Tomcat as it requires that container implementations support deploying an expanded WAR from a directory without copying it to the container deploy directory.</li>
-                   <li><span style="color: red;"><strong>jetty4x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 4.x container</li>
                    <li><span style="color: red;"><strong>jetty5x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 5.x container</li>
                    <li><span style="color: red;"><strong>jetty6x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 6.x container</li>
                    <li><span style="color: red;"><strong>jetty7x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 7.x container</li>
                    <li><span style="color: red;"><strong>jetty7x-root-context-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Jetty 7.x container and the root context</li>
                    <li><span style="color: red;"><strong>jetty8x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 8.x container</li>
                    <li><span style="color: red;"><strong>jetty9x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 9.x container</li>
-                   <li><span style="color: red;"><strong>jonas5x-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a JOnAS 5.x container</li>
                    <li><span style="color: red;"><strong>ping-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's deployable pinging capabilities</li>
                    <li><span style="color: red;"><strong>license-test/</strong></span>: Sample application that exercises checks the Uberjar with regards to its license needs (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1489" class="external-link" rel="nofollow">CARGO-1489</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1494" class="external-link" rel="nofollow">CARGO-1494</a>)</li>
                    <li><span style="color: red;"><strong>multi-datasource-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Tomcat 6.x container and multiple datasources</li>
