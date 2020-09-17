@@ -286,14 +286,14 @@
            <p class="title">Security issues with older versions of Apache Ant</p>
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>As documented in <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1945" class="external-link" rel="nofollow">CVE-2020-1945</a>, Apache Ant 1.1 to 1.9.14 and 1.10.0 to 1.10.7 uses the default temporary directory identified by the Java system property <code>java.io.tmpdir</code> for several tasks and may thus leak sensitive information. Moreover, the <code>fixcrlf</code> and <code>replaceregexp</code> tasks copy files from the temporary directory back into the build tree allowing an attacker to inject modified source files into the&nbsp;Codehaus Cargo container configuration generation process. We hence strongly recommend only using versions 1.9.15 (for Ant 1.9.x) or versions 1.10.8 and above.</p>
+            <p>As documented in <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1945" class="external-link" rel="nofollow">CVE-2020-1945</a>, Apache Ant 1.1 to 1.9.14 and 1.10.0 to 1.10.7 uses the default temporary directory identified by the Java system property <code>java.io.tmpdir</code> for several tasks and may thus leak sensitive information. Moreover, the <code>fixcrlf</code> and <code>replaceregexp</code> tasks copy files from the temporary directory back into the build tree allowing an attacker to inject modified source files into the Codehaus Cargo container configuration generation process. We hence strongly recommend only using versions 1.9.15 (for Ant 1.9.x) or versions 1.10.8 and above.</p>
            </div>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Functional tests</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>The usage of Cargo for executing functional tests on a container does not mandate these&nbsp;Ant tasks. You could directly use the Cargo Java API from your Java unit test classes (JUnit, TestNG, etc), as described on the <a href="Functional+testing.html">Functional testing</a> page.</p>
+            <p>The usage of Cargo for executing functional tests on a container does not mandate these Ant tasks. You could directly use the Cargo Java API from your Java unit test classes (JUnit, TestNG, etc), as described on the <a href="Functional+testing.html">Functional testing</a> page.</p>
            </div>
           </div><h3 id="Antsupport-Explanation">Explanation</h3><p>Before using the Ant API you need to register the Cargo Ant tasks into Ant. This is done in the following manner:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
@@ -306,7 +306,7 @@
 &lt;/taskdef&gt;
 </pre> 
            </div>
-          </div><p>Some additional dependencies might also be required for the&nbsp;Ant task. Please see the <a href="Installation.html">Installation</a> page for details.</p><h2 id="Antsupport-TheCargoAnttasksindetail">The Cargo&nbsp;Ant tasks in detail</h2><p>Here are the different task actions available to call on this plugin:</p>
+          </div><p>Some additional dependencies might also be required for the Ant task. Please see the <a href="Installation.html">Installation</a> page for details.</p><h2 id="Antsupport-TheCargoAnttasksindetail">The Cargo Ant tasks in detail</h2><p>Here are the different task actions available to call on this plugin:</p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -325,11 +325,11 @@
                 <li style="list-style-type: none;">
                  <ul>
                   <li class="confluence-link">If the task configuration requires so, installs the container.</li>
-                  <li class="confluence-link">If the&nbsp;task configuration defines a container with a <a href="http://docs.codehaus.org/display/CARGO/Standalone+Local+Configuration" class="external-link" rel="nofollow">standalone local configuration</a>, it will create the configuration.</li>
-                  <li class="confluence-link">If the&nbsp;task configuration contains one or more <a href="http://docs.codehaus.org/display/CARGO/Deployable" class="external-link" rel="nofollow">deployables</a>, it will deploy these to the container automatically.</li>
+                  <li class="confluence-link">If the task configuration defines a container with a <a href="http://docs.codehaus.org/display/CARGO/Standalone+Local+Configuration" class="external-link" rel="nofollow">standalone local configuration</a>, it will create the configuration.</li>
+                  <li class="confluence-link">If the task configuration contains one or more <a href="http://docs.codehaus.org/display/CARGO/Deployable" class="external-link" rel="nofollow">deployables</a>, it will deploy these to the container automatically.</li>
                   <li class="confluence-link">And, of course, start the container.</li>
                  </ul></li>
-               </ul><p><strong>Note</strong>: A container that's started with the <code>start</code> task will automatically shut down as soon as the parent&nbsp;Ant instance quits (i.e., you see a <code>BUILD SUCCESSFUL</code> or <code>BUILD FAILED</code> message). If you want to start a container and perform manual testing, see our next task <code>run</code>.</p></td>
+               </ul><p><strong>Note</strong>: A container that's started with the <code>start</code> task will automatically shut down as soon as the parent Ant instance quits (i.e., you see a <code>BUILD SUCCESSFUL</code> or <code>BUILD FAILED</code> message). If you want to start a container and perform manual testing, see our next task <code>run</code>.</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><strong>run</strong></code></p></td>
@@ -337,9 +337,9 @@
                <ul>
                 <li style="list-style-type: none;">
                  <ul>
-                  <li class="confluence-link">If the&nbsp;task configuration requires so, installs the container.</li>
-                  <li class="confluence-link">If the&nbsp;task configuration defines a container with a <a href="Standalone+Local+Configuration.html">standalone local configuration</a>, it will create the configuration.</li>
-                  <li class="confluence-link">If the&nbsp;task configuration contains one or more <a href="Deployable.html">deployables</a>, it will deploy these to the container automatically.</li>
+                  <li class="confluence-link">If the task configuration requires so, installs the container.</li>
+                  <li class="confluence-link">If the task configuration defines a container with a <a href="Standalone+Local+Configuration.html">standalone local configuration</a>, it will create the configuration.</li>
+                  <li class="confluence-link">If the task configuration contains one or more <a href="Deployable.html">deployables</a>, it will deploy these to the container automatically.</li>
                   <li class="confluence-link">And, of course, start the container and wait for the user to press <code>CTRL + C</code> to stop.</li>
                  </ul></li>
                </ul></td>
@@ -350,7 +350,7 @@
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code><strong>restart</strong></code></td>
-              <td colspan="1" class="confluenceTd"><p>Stop and start again a container. If the container was not running before calling&nbsp;<code>restart</code>, it will simply be started.</p></td>
+              <td colspan="1" class="confluenceTd"><p>Stop and start again a container. If the container was not running before calling <code>restart</code>, it will simply be started.</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><strong>configure</strong></code></p></td>
@@ -374,7 +374,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><strong>redeploy</strong></code></p></td>
-              <td class="confluenceTd"><p>Undeploy and deploy again a deployable. If the deployable was not deployed before calling&nbsp;<code>redeploy</code>, it will simply be deployed.</p></td>
+              <td class="confluenceTd"><p>Undeploy and deploy again a deployable. If the deployable was not deployed before calling <code>redeploy</code>, it will simply be deployed.</p></td>
              </tr>
             </tbody>
            </table>
@@ -386,7 +386,7 @@
             <p>Many wonder the difference between the <code>start</code> and <code>run</code> actions:</p>
             <ul>
              <li>If you want to just start the container and then do other tasks (for example, execute tests), use the <code>start</code> action. That action should therefore <span style="text-decoration: underline;">ONLY</span> be used for integration testing.</li>
-             <li>If you want start the container and have&nbsp;Ant "blocked" afterwards (i.e., until you press <code>CTRL + C</code> to stop), use the <code>run</code> action. <code>run</code> is therefore the action to use for manual testing.</li>
+             <li>If you want start the container and have Ant "blocked" afterwards (i.e., until you press <code>CTRL + C</code> to stop), use the <code>run</code> action. <code>run</code> is therefore the action to use for manual testing.</li>
             </ul>
            </div>
           </div><script type="text/javascript">
@@ -1135,7 +1135,7 @@
            <p class="title">Loading configuration properties from a file</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>It is also possible to load the configuration properties from a file - simply use the&nbsp;<code>propertiesFile</code> attribute of the&nbsp;<code>configuration</code> XML element.</p>
+            <p>It is also possible to load the configuration properties from a file - simply use the <code>propertiesFile</code> attribute of the <code>configuration</code> XML element.</p>
            </div>
           </div><script type="text/javascript">
   // Google Ads code
@@ -1261,7 +1261,7 @@
 &lt;/cargo&gt;
 </pre> 
            </div>
-          </div><p>For more details, please check the example in the <a href="Remote+Container.html">Remote Container</a> section for the&nbsp;Ant tasks. The&nbsp;Ant tasks support the deployer actions <code>deploy</code>, <code>undeploy</code> and <code>redeploy</code>.</p> </td> 
+          </div><p>For more details, please check the example in the <a href="Remote+Container.html">Remote Container</a> section for the Ant tasks. The Ant tasks support the deployer actions <code>deploy</code>, <code>undeploy</code> and <code>redeploy</code>.</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
