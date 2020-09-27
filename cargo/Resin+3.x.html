@@ -564,7 +564,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 5 or newer</em><br><em>Due to incompatibilities between <code>com.caucho.log.EnvironmentLogger</code> and the behaviour described in <a href="https://bugs.openjdk.java.net/browse/JDK-8015098" class="external-link" rel="nofollow">JDK-8015098</a>, Resin 3.x doesn't run on Java 7 and above</em></p></td>
+              <td class="confluenceTd"><p><em>JAVA_HOME version 6, as the Codehaus Cargo</em> <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/resin/internal/ResinRun.html" class="external-link" rel="nofollow">ResinRun</a></code> <em>class requires Java 6 or newer</em><br><em>Due to incompatibilities between</em> <code>com.caucho.log.EnvironmentLogger</code> <em>and the behaviour described in <a href="https://bugs.openjdk.java.net/browse/JDK-8015098" class="external-link" rel="nofollow">JDK-8015098</a>, Resin 3.x doesn't run on Java 7 and above</em></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -693,7 +693,7 @@
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 5 or newer</em><br><em>Due to incompatibilities between <code>com.caucho.log.EnvironmentLogger</code> and the behaviour described in <a href="https://bugs.openjdk.java.net/browse/JDK-8015098" class="external-link" rel="nofollow">JDK-8015098</a>, Resin 3.x doesn't run on Java 7 and above</em></p></td>
+              <td class="confluenceTd"><p><em>JAVA_HOME version 6, as the Codehaus Cargo</em> <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/resin/internal/ResinRun.html" class="external-link" rel="nofollow">ResinRun</a></code> <em>class requires Java 6 or newer</em><br><em>Due to incompatibilities between</em> <code>com.caucho.log.EnvironmentLogger</code> <em>and the behaviour described in <a href="https://bugs.openjdk.java.net/browse/JDK-8015098" class="external-link" rel="nofollow">JDK-8015098</a>, Resin 3.x doesn't run on Java 7 and above</em></p></td>
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME" class="external-link" rel="nofollow"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" alt="(green star)"></a></p></td>
              </tr>
              <tr>
@@ -754,7 +754,7 @@
              </tr>
             </tbody>
            </table>
-          </div><h3 id="Resin3.x-TestedOn">Tested On</h3><p>Due to incompatibilities between <code>com.caucho.log.EnvironmentLogger</code> and the behaviour described in <a href="https://bugs.openjdk.java.net/browse/JDK-8015098" class="external-link" rel="nofollow">JDK-8015098</a>, Resin 3.x doesn't run on Java 7 and above and hence cannot be tested on our Continous Integration system (which has Java 7 as the lowest JDK version for testing samples and Java 8 for compiling and packaging Codehaus Cargo).</p> </td> 
+          </div><h3 id="Resin3.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a class="external-link" href="https://www.caucho.com/download/resin-3.0.27.zip" rel="nofollow">https://www.caucho.com/download/resin-3.0.27.zip</a></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
