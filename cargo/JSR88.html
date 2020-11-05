@@ -283,7 +283,14 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h3 id="JSR88-Definition">Definition</h3><p><br>JSR88-compliant containers support<br></p><h3 id="JSR88-Explanation">Explanation</h3><p>Cargo supports <a href="http://www.jcp.org/en/jsr/detail?id=88" class="external-link" rel="nofollow">JSR 88: J2EE Application Deployment</a> API, allowing it to be used with any JSR88-compliant container.</p><p>The core functionality is implemented by the <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/spi/deployer/AbstractJsr88Deployer.html" class="external-link" rel="nofollow">o.c.c.container.spi.deployer.AbstractJsr88Deployer</a></code> class (a <a href="Deployer.html">Deployer</a> implementation), which acts as a proxy to the JSR88 DeploymentManager.</p><h3 id="JSR88-GlassFishandPayara">GlassFish and Payara</h3><p>The <a href="GlassFish+3.x.html">GlassFish 3.x</a>, <a href="GlassFish+4.x.html">GlassFish 4.x</a>,&nbsp;<a href="GlassFish+5.x.html">GlassFish 5.x</a> and&nbsp;<a href="Payara.html">Payara</a> remote containers use the JSR-88 API. For the connection to succeed, the following JARs need to be in the container classpath or in the current Java Thread's context classloader:</p>
+         <td class="rightColumn"> <h3 id="JSR88-Definition">Definition</h3><p><br>JSR88-compliant containers support<br></p><h3 id="JSR88-Explanation">Explanation</h3><p>Cargo supports <a href="http://www.jcp.org/en/jsr/detail?id=88" class="external-link" rel="nofollow">JSR 88: J2EE Application Deployment</a> API, allowing it to be used with any JSR88-compliant container.</p><p>The core functionality is implemented by the <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/spi/deployer/AbstractJsr88Deployer.html" class="external-link" rel="nofollow">o.c.c.container.spi.deployer.AbstractJsr88Deployer</a></code> class (a <a href="Deployer.html">Deployer</a> implementation), which acts as a proxy to the JSR88 <code>DeploymentManager</code>.</p><h3 id="JSR88-GlassFish3.xto5.xandPayara">GlassFish 3.x to 5.x and Payara</h3>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <p class="title">GlassFish 6.x and remote deployment</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>The <a href="GlassFish+6.x.html">GlassFish 6.x</a> container doesn't have any remote deployers yet, as GlassFish 6.0 lacks JSR-88 support and it is unclear whether this will be included in a future release.</p>
+           </div>
+          </div><p>The <a href="GlassFish+3.x.html">GlassFish 3.x</a>, <a href="GlassFish+4.x.html">GlassFish 4.x</a>,&nbsp;<a href="GlassFish+5.x.html">GlassFish 5.x</a> and&nbsp;<a href="Payara.html">Payara</a> remote containers use the JSR-88 API. For the connection to succeed, the following JARs need to be in the container classpath or in the current Java Thread's context classloader:</p>
           <ul>
            <li>deployment-client.jar and its dependencies - for <a href="GlassFish+3.x.html">GlassFish 3.x</a>, these seem to be:
             <ul>
@@ -295,11 +302,9 @@
              <li>hk2-core.jar</li>
             </ul></li>
           </ul><p>Here is an example code for the users of the Java API:</p>
-          <blockquote>
-           <p><br></p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
 
 // Add many libraries from GlassFish
 for (File jar : new File(this.localContainer.getHome(), "glassfish/modules").listFiles())
@@ -319,14 +324,11 @@ Thread.currentThread().setContextClassLoader(classLoader);
 // Now, create the GlassFish Remote container
 ...
 </pre> 
-            </div>
            </div>
-          </blockquote><p>Here is an example Maven2 plugin configuration:</p>
-          <blockquote>
-           <p><br></p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
+          </div><p>Here is an example Maven2 plugin configuration:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
   &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
   &lt;version&gt;${cargo.plugin.version}&lt;/version&gt;
@@ -352,9 +354,8 @@ Thread.currentThread().setContextClassLoader(classLoader);
   &lt;/dependencies&gt;
 &lt;/plugin&gt;
 </pre> 
-            </div>
            </div>
-          </blockquote>
+          </div>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
