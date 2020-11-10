@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - Features</title> 
+  <title>Codehaus Cargo - Remote deployments to GlassFish 6.x</title> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
@@ -272,7 +272,7 @@
           <table width="100%"> 
            <tbody>
             <tr valign="top"> 
-             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; Features</b> </td> 
+             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Deployment.html">Deployment</a> &gt; Remote deployments to GlassFish 6.x</b> </td> 
              <td align="right" width="300"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -283,100 +283,58 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> 
-          <ul class="childpages-macro conf-macro output-block" data-macro-id="">
-           <li><a href="Configuration.html">Configuration</a> — <span class="smalltext">A Configuration specifies how the container is configured (logging, security, data sources, location where to put deployables, etc).</span>
-            <ul class="childpages-macro">
-             <li><a href="Configuration+properties.html">Configuration properties</a> — <span class="smalltext">Properties to configure a container (request port, shutdown port, logging level, threads, etc)</span></li>
-             <li><a href="Custom+Configuration.html">Custom Configuration</a> — <span class="smalltext">A user-provided configuration to use instead of the default Cargo-provided ones</span></li>
-             <li><a href="Local+Configuration.html">Local Configuration</a> — <span class="smalltext">A configuration for a container that is running on the local machine where Cargo is executing</span>
-              <ul class="childpages-macro">
-               <li><a href="Custom+File+Configurations.html">Custom File Configurations</a></li>
-               <li><a href="Existing+Local+Configuration.html">Existing Local Configuration</a> — <span class="smalltext">Re-use an existing container installation</span></li>
-               <li><a href="Standalone+Local+Configuration.html">Standalone Local Configuration</a> — <span class="smalltext">Configures your container in a specific directory</span>
-                <ul class="childpages-macro">
-                 <li><a href="Configuration+files+option.html">Configuration files option</a> — <span class="smalltext">The configuration files are the files to add to your container's configuration. It is internally used by some containers and is accessible for you can to add extra files.</span></li>
-                 <li><a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>
-                  <ul class="childpages-macro">
-                   <li><a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a></li>
-                  </ul></li>
-                 <li><a href="XML+replacements.html">XML replacements</a> — <span class="smalltext">The XML replacements option allows you to modify XML files of your container's configuration using XPath statements.</span></li>
-                </ul></li>
-              </ul></li>
-             <li><a href="Runtime+Configuration.html">Runtime Configuration</a> — <span class="smalltext">A configuration for a container that is already started</span></li>
-            </ul></li>
-           <li><a href="Container.html">Container</a> — <span class="smalltext">A top level interface wrapping a real physical container</span>
-            <ul class="childpages-macro">
-             <li><a href="Container+Instantiation.html">Container Instantiation</a> — <span class="smalltext">Create a container instance</span></li>
-             <li><a href="Local+Container.html">Local Container</a> — <span class="smalltext">A container executing on the machine where Cargo executes</span>
-              <ul class="childpages-macro">
-               <li><a href="Container+Classpath.html">Container Classpath</a> — <span class="smalltext">How to configure the executing container's classpath</span>
-                <ul class="childpages-macro">
-                 <li><a href="Application+Classpath.html">Application Classpath</a> — <span class="smalltext">How to configure the classpath of the application without changing the container's own classpath</span></li>
-                 <li><a href="JBoss+7.x+onwards+and+WildFly+container+classpath.html">JBoss 7.x onwards and WildFly container classpath</a></li>
-                </ul></li>
-               <li><a href="Container+Start.html">Container Start</a> — <span class="smalltext">Start a container that is not already running</span></li>
-               <li><a href="Container+Stop.html">Container Stop</a> — <span class="smalltext">Stop a running container</span></li>
-               <li><a href="Container+Timeout.html">Container Timeout</a> — <span class="smalltext">Timeout after which the container start/stop is deemed failed</span></li>
-               <li><a href="Embedded+Container.html">Embedded Container</a> — <span class="smalltext">A container executing in the same JVM where Cargo is running</span></li>
-               <li><a href="Installed+Container.html">Installed Container</a> — <span class="smalltext">A container installed on the machine where Cargo executes.</span>
-                <ul class="childpages-macro">
-                 <li><a href="Installer.html">Installer</a> — <span class="smalltext">Installs a container</span></li>
-                 <li><a href="Passing+system+properties.html">Passing system properties</a> — <span class="smalltext">How to pass system properties that will be available to the container while executing</span></li>
-                </ul></li>
-              </ul></li>
-             <li><a href="Remote+Container.html">Remote Container</a> — <span class="smalltext">A container that is already running on some machine (local or remote)</span></li>
-            </ul></li>
-           <li><a href="Debugging.html">Debugging</a> — <span class="smalltext">Explain how to perform debugging when something doesn't work in Cargo</span></li>
-           <li><a href="Deployment.html">Deployment</a> — <span class="smalltext">How to deploy components to a container</span>
-            <ul class="childpages-macro">
-             <li><a href="Deployable.html">Deployable</a> — <span class="smalltext">Deployables are archives (WAR, EAR, etc) that can be deployed in the container</span></li>
-             <li><a href="Deployer.html">Deployer</a> — <span class="smalltext">Performs a hot deployment of a Deployable</span>
-              <ul class="childpages-macro">
-               <li><a href="Local+Deployer.html">Local Deployer</a> — <span class="smalltext">Performs a hot deployment of a Deployable on a locally installed container</span></li>
-               <li><a href="Remote+Deployer.html">Remote Deployer</a> — <span class="smalltext">Performs a hot deployment of a Deployable on a container running on a remote machine</span>
-                <ul class="childpages-macro">
-                 <li><a href="JBoss+Remote+Deployer.html">JBoss Remote Deployer</a></li>
-                 <li><a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a></li>
-                </ul></li>
-              </ul></li>
-             <li><a href="Hot+Deployment.html">Hot Deployment</a> — <span class="smalltext">Ability to deploy/undeploy Deployables into a running container</span></li>
-             <li><a href="JSR88.html">JSR88</a> — <span class="smalltext">JSR88-compliant containers support</span></li>
-             <li><a href="Static+Deployment.html">Static Deployment</a>
-              <ul class="childpages-macro">
-               <li><a href="Static+deployment+of+EAR.html">Static deployment of EAR</a> — <span class="smalltext">Deploy an EAR that will be started when the container starts</span></li>
-               <li><a href="Static+deployment+of+EJB.html">Static deployment of EJB</a> — <span class="smalltext">Deploy an EJB (any version) that will be started when the container starts</span></li>
-               <li><a href="Static+deployment+of+expanded+WAR.html">Static deployment of expanded WAR</a> — <span class="smalltext">Deploy an expanded WAR that will be started when the container starts</span></li>
-               <li><a href="Static+deployment+of+OSGi+Bundles.html">Static deployment of OSGi Bundles</a> — <span class="smalltext">Deploy an OSGi bundle that will be started when the container starts</span></li>
-               <li><a href="Static+deployment+of+RAR.html">Static deployment of RAR</a> — <span class="smalltext">Deploy a Java EE resource adapter (RAR) that will be started when the container starts</span></li>
-               <li><a href="Static+deployment+of+WAR.html">Static deployment of WAR</a> — <span class="smalltext">Deploy a WAR that will be started when the container starts</span></li>
-              </ul></li>
-             <li><a href="Remote+deployments+to+GlassFish+6.x.html">Remote deployments to GlassFish 6.x</a> — <span class="smalltext">How to perform deployments to a remote GlassFish 6.x container</span></li>
-            </ul></li>
-           <li><a href="Extensions.html">Extensions</a> — <span class="smalltext">Extensions are additions to the Cargo core Java API such as build tool plugins, IDE plugins, etc</span>
-            <ul class="childpages-macro">
-             <li><a href="Ant+support.html">Ant support</a> — <span class="smalltext">Cargo provides Ant tasks to perform all the operations available from the Java API. The minimum supported version is Ant 1.9.15.</span>
-              <ul class="childpages-macro">
-               <li><a href="Ant+Tasks+Reference+Guide.html">Ant Tasks Reference Guide</a></li>
-              </ul></li>
-             <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-             <li><a href="Maven2+plugin.html">Maven2 plugin</a> — <span class="smalltext">A Maven 2 / Maven 3 plugin that wraps the Cargo Java API. Though there are no minimum version requirements, all building, continous testing and release activities are performed using Maven 3.2.3 and onwards so we would recommend you have that installed.</span>
-              <ul class="childpages-macro">
-               <li><a href="Maven2+Archetypes.html">Maven2 Archetypes</a></li>
-               <li><a href="Maven2+Plugin+Getting+Started.html">Maven2 Plugin Getting Started</a>
-                <ul class="childpages-macro">
-                 <li><a href="Deploying+to+a+running+container.html">Deploying to a running container</a></li>
-                 <li><a href="Generating+a+container+configuration+deployment+structure.html">Generating a container configuration deployment structure</a></li>
-                 <li><a href="Merging+WAR+files.html">Merging WAR files</a></li>
-                 <li><a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a></li>
-                </ul></li>
-               <li><a href="Maven2+Plugin+Installation.html">Maven2 Plugin Installation</a></li>
-               <li><a href="Maven2+Plugin+Reference+Guide.html">Maven2 Plugin Reference Guide</a></li>
-               <li><a href="Maven2+Plugin+Tips.html">Maven2 Plugin Tips</a></li>
-              </ul></li>
-            </ul></li>
-           <li><a href="Module+API.html">Module API</a> — <span class="smalltext">API to manipulate J2EE archives, including vendor-specific deployment descriptors</span></li>
-          </ul> </td> 
+         <td class="rightColumn"> <h3 id="RemotedeploymentstoGlassFish6.x-Definition">Definition</h3><p>How to perform deployments to a remote <a href="GlassFish+6.x.html" class="conf-macro output-inline">GlassFish 6.x</a> container</p><h3 id="RemotedeploymentstoGlassFish6.x-Explanation">Explanation</h3><p>All Cargo GlassFish deployers use the GlassFish <code>asadmin</code> behind the scenes, and all of them set the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><code>cargo.hostname</code></a> as the target host.</p><p>As a result, all GlassFish Installed Local Deployers can <em>actually</em> be used to perform remote deployments, the main "downside" being that this requires the GlassFish container ZIP file to be downloaded (which can be done transparently using an <a href="Installer.html">installer</a>).</p><p>Here is an example code for the users of the Java API:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">Installer installer = new ZipURLInstaller(
+    "https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-RC2.zip",
+    "target/downloads", "target/extracts");
+installer.install();
+ 
+InstalledLocalContainer container = new GlassFish6xInstalledLocalContainer(
+    new GlassFish6xStandaloneConfiguration("target/glassfish6x"));
+container.setHome(installer.getHome());
+
+// Set the hostname to a running, remote GlassFish 6.0 instance
+// for the GlassFish6xInstalledLocalDeployer to perform a remote deployment
+container.getConfiguration.setProperty(GeneralPropertySet.HOSTNAME, "10.0.2.15");
+
+DeployableFactory factory = new DefaultDeployableFactory();
+WAR war = factory.createDeployable(container.getId(), "path/to/my.war",
+    DeployableType.WAR);
+ 
+Deployer deployer = new GlassFish6xInstalledLocalDeployer(container);
+deployer.deploy(war);
+</pre> 
+           </div>
+          </div><p>Here is an example Maven2 plugin configuration:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
+  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;version&gt;${cargo.plugin.version}&lt;/version&gt;
+  &lt;configuration&gt;
+    &lt;container&gt;
+      &lt;containerId&gt;glassfish6x&lt;/containerId&gt;
+      &lt;zipUrlInstaller&gt;
+        &lt;url&gt;https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-RC2.zip&lt;/url&gt;
+        &lt;downloadDir&gt;${project.build.directory}/../installers&lt;/downloadDir&gt;
+      &lt;/zipUrlInstaller&gt;
+    &lt;/container&gt;
+    &lt;configuration&gt;
+      &lt;home&gt;${project.build.directory}/glassfish6x-home&lt;/home&gt;
+      &lt;properties&gt;
+        &lt;cargo.hostname&gt;10.0.2.15&lt;/cargo.hostname&gt;
+        &lt;cargo.servlet.port&gt;8080&lt;/cargo.servlet.port&gt;
+        &lt;cargo.glassfish.admin.port&gt;4848&lt;/cargo.glassfish.admin.port&gt;
+      &lt;/properties&gt;
+    &lt;/configuration&gt;
+  &lt;/configuration&gt;
+&lt;/plugin&gt;
+</pre> 
+           </div>
+          </div> </td> 
         </tr> 
        </tbody>
       </table> </td> 
