@@ -307,7 +307,7 @@ Deployer deployer = new GlassFish6xInstalledLocalDeployer(container);
 deployer.deploy(war);
 </pre> 
            </div>
-          </div><p>Here is an example Maven2 plugin configuration:</p>
+          </div><p>Here is an example Maven2 plugin configuration, where one can use the <a href="Installer.html#Installer-installer_with_maven2_dependencies">Maven Artifact Installer</a>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
@@ -317,10 +317,11 @@ deployer.deploy(war);
   &lt;configuration&gt;
     &lt;container&gt;
       &lt;containerId&gt;glassfish6x&lt;/containerId&gt;
-      &lt;zipUrlInstaller&gt;
-        &lt;url&gt;https://download.eclipse.org/ee4j/glassfish/glassfish-6.0.0-RC2.zip&lt;/url&gt;
-        &lt;downloadDir&gt;${project.build.directory}/../installers&lt;/downloadDir&gt;
-      &lt;/zipUrlInstaller&gt;
+      &lt;artifactInstaller&gt;
+        &lt;groupId&gt;org.glassfish.main.distributions&lt;/groupId&gt;
+        &lt;artifactId&gt;glassfish&lt;/artifactId&gt;
+        &lt;version&gt;6.0.0-RC2&lt;/version&gt;
+      &lt;/artifactInstaller&gt;
     &lt;/container&gt;
     &lt;configuration&gt;
       &lt;home&gt;${project.build.directory}/glassfish6x-home&lt;/home&gt;
