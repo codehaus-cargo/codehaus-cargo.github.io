@@ -121,6 +121,7 @@
          <li><a href="Jetty+8.x.html">Jetty 8.x</a></li>
          <li><a href="Jetty+9.x.html">Jetty 9.x</a></li>
          <li><a href="Jetty+10.x.html">Jetty 10.x</a></li>
+         <li><a href="Jetty+11.x.html">Jetty 11.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -286,6 +287,7 @@
         <tr> 
          <td class="rightColumn"> <p>This document explains how to configure Cargo remote deployment support on a Jetty container.</p><h3 id="JettyRemoteDeployer-Overview">Overview</h3><p>By default, Jetty does not come with possibilities for remote deployment. In order to add such a support to Jetty, Cargo uses a "Jetty remote deployer" Web application.</p><p>This application is a simple servlet-based application which exposes methods such as deploy or undeploy on standard HTTP POST URLs. When thse HTTP methods are called, the servlet implementing these methods connects to the Jetty Server implementation and does deployment related actions on the server; this Web application can therefore be seen as a kind of remote administration proxy.</p><p>Being a standard Web application, the Cargo Jetty remote deployer application can be secured using Jetty users and roles.</p><h3 id="JettyRemoteDeployer-Downloadingtheremotedeployer">Downloading the remote deployer</h3><p>Two versions of the Jetty remote deployer WAR are available on the <a href="Downloads.html">Cargo downloads</a> page (scroll down to the <strong>Tools</strong> section):</p>
           <ul>
+           <li><code>cargo-jetty-11-onwards-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 11.x onwards (Jetty from Eclipse.org, implementing Jakarta EE)</li>
            <li><code>cargo-jetty-10-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 10.x (Jetty from Eclipse.org)</li>
            <li><code>cargo-jetty-7-to-jetty-9-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 7.x to Jetty 9.x (Jetty from Eclipse.org)</li>
            <li><code>cargo-jetty-6-and-earlier-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 6.x and earlier (Jetty from Mortbay.org)</li>
