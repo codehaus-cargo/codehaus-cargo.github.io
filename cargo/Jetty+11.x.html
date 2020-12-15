@@ -223,6 +223,7 @@
          <li><a href="WildFly+19.x.html">WildFly 19.x</a></li>
          <li><a href="WildFly+20.x.html">WildFly 20.x</a></li>
          <li><a href="WildFly+21.x.html">WildFly 21.x</a></li>
+         <li><a href="WildFly+22.x.html">WildFly 22.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
       </ul><h3 id="Navigation-Extensions">Extensions</h3>
@@ -285,9 +286,22 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h3 id="Jetty11.x-ContainerFeatures">Container Features</h3>
+         <td class="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Users of Jetty 11.x onwards should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.*</code> to <code>jakarta.*</code>. This will almost certainly require code changes to enable applications to migrate to Jetty 11.x and later.</p>
+           </div>
+          </div><h3 id="Jetty11.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Feature name</p></th>
@@ -378,6 +392,13 @@
           </div><h3 id="Jetty11.x-ConfigurationFeatures">Configuration Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Feature name</p></th>
