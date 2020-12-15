@@ -316,11 +316,11 @@
             <ol>
              <li>Open the CI page and click on the latest build</li>
              <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all threads). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png"></span><br><br></li>
+             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all CI jobs for the last build, as we split the container tests into multiple parallel jobs to reduce the total time required for integration testing). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png"></span><br><br></li>
             </ol></li>
            <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
             <ul>
-             <li><a href="JBoss+7.2.x.html" rel="nofollow">JBoss 7.2.x</a>, i.e. JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.1, and onwards</li>
+             <li><a href="JBoss+7.2.x.html" rel="nofollow">JBoss 7.2.x</a>, i.e. what JBoss refers to as the JBoss Enterprise Application Platform (EAP) version 6.1, and onwards</li>
              <li><a href="GlassFish+2.x.html">GlassFish 2.x</a></li>
              <li><a href="JRun+4.x.html">JRun 4.x</a></li>
              <li>All versions of Orion/OC4J</li>
