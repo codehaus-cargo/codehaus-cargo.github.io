@@ -343,7 +343,7 @@
               <tr>
                <td class="confluenceTd"><p><a href="GlassFish+6.x.html">GlassFish 6.x</a></p></td>
                <td class="confluenceTd"><p><code>o.c.c.c.glassfish.GlassFish6xStandaloneLocalConfiguration</code></p></td>
-               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"><sup>Q</sup><sup>T</sup><sup>M</sup></p></td>
+               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"><sup>M</sup></p></td>
                <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
                <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
                <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
@@ -647,7 +647,7 @@
               <tr>
                <td class="confluenceTd"><p><a href="TomEE+9.x.html">TomEE 9.x</a></p></td>
                <td class="confluenceTd"><p><code>o.c.c.c.tomee.Tomee9xStandaloneLocalConfiguration</code></p></td>
-               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"><sup>Q</sup><sup>T</sup></p></td>
+               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
                <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
                <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
                <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
@@ -993,6 +993,12 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
           </ul>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property</p></th>
@@ -1015,7 +1021,11 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
              <tr>
               <td class="confluenceTd"><p><code>c.r.type</code></p></td>
               <td class="confluenceTd"><p>Interface of the object</p></td>
-              <td class="confluenceTd"><p>Any JNDI path, like&nbsp;<code>javax.jms.ConnectionFactory</code> or&nbsp;<code>javax.jms.Queue</code></p></td>
+              <td class="confluenceTd"><p>Any JNDI path, like:</p>
+               <ul>
+                <li>On J2EE / Java EE containers: <code>javax.jms.ConnectionFactory</code> or&nbsp;<code>javax.jms.Queue</code></li>
+                <li>On Jakarta EE containers: <code>jakarta.jms.ConnectionFactory</code> or <code>jakarta.jms.Queue</code></li>
+               </ul></td>
               <td class="confluenceTd"><p>mandatory</p></td>
              </tr>
              <tr>
@@ -1026,6 +1036,14 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
              </tr>
             </tbody>
            </table>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <p class="title">Java EE vs. Jakarta EE</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Even when you use Codehaus Cargo with a Jakarta EE container, you can keep on using <code>javax.jms.</code> definitions, which Codehaus Cargo will automatically translate to <code>jakarta.jms.</code> for your specific container if need be. This ensures you can easily test on Java EE and Jakarta EE without having to create very complex Codehaus Cargo property sets.</p>
+            <p>Please note that this doesn't work the other way round:&nbsp;<code>jakarta.jms.</code> definitions will not be "mapped back" to <code>javax.jms.</code> definitions on non Jakarta EE containers.</p>
+           </div>
           </div><h3 id="DataSourceandResourceSupport-Otherresourceproperties">Other resource properties</h3><p>All other resources are added through pipe-delimited configuration properties that starts with <code>cargo.resource.resource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
@@ -1039,6 +1057,12 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
           </ul>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property</p></th>
