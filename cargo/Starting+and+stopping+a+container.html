@@ -303,7 +303,7 @@
            <div class="confluence-information-macro-body">
             <p>We have several <a href="Maven2+Archetypes.html">Maven 2 / Maven 3 Archetypes</a> that contain sample&nbsp;Maven 2 / Maven 3 projects with different use cases for the Codehaus Cargo Maven 2 / Maven 3 plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven2+Archetypes.html">Maven2 Archetypes</a>.</p>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-configuration"> </span></p><h3 id="Startingandstoppingacontainer-Configuration">Configuration</h3><p><strong>Example of a minimalist configuration</strong>:</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-configuration"><span class="confluence-anchor-link" id="configuration"> </span></span></p><h3 id="Startingandstoppingacontainer-Configuration">Configuration</h3><p><strong>Example of a minimalist configuration</strong>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
@@ -412,7 +412,7 @@
            <div class="confluence-information-macro-body">
             <p>The CARGO container definiton as well as the various application ping options in CARGO have a <code>timeout</code> option (which is extremely useful in real-life applications), the default timeout being set to 2 minutes in most cases. Please check the <a href="Maven2+Plugin+Reference+Guide.html">Maven 2 / Maven 3 Plugin Reference Guide</a> as well as the documentation about <a href="Container+Timeout.html">Container Timeout</a> for details.</p>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-jetty"> </span></p><h3 id="Startingandstoppingacontainer-ConfiguringanEmbeddedJettyContainer">Configuring an Embedded Jetty Container</h3><p>The most basic container you can use in cargo is an Embedded Jetty 4x/5x/6x Container. The following Maven plugin definition will configure an embedded Jetty 6x container. Note the use of the <code>embedded</code> type element to specify an embedded container.</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-jetty"><span class="confluence-anchor-link" id="jetty"> </span></span></p><h3 id="Startingandstoppingacontainer-ConfiguringanEmbeddedJettyContainer">Configuring an Embedded Jetty Container</h3><p>The most basic container you can use in cargo is an Embedded Jetty 4x/5x/6x Container. The following Maven plugin definition will configure an embedded Jetty 6x container. Note the use of the <code>embedded</code> type element to specify an embedded container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
@@ -429,7 +429,7 @@
 [...]
 </pre> 
            </div>
-          </div><p>Note: If you wish to use Jetty 5.x, you don't have to specify <code>&lt;containerId&gt;</code> nor <code>&lt;type&gt;</code> in the <code>&lt;container&gt;</code> element because Jetty 5x is Cargo's default container.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-java"> </span></p><script type="text/javascript">
+          </div><p>Note: If you wish to use Jetty 5.x, you don't have to specify <code>&lt;containerId&gt;</code> nor <code>&lt;type&gt;</code> in the <code>&lt;container&gt;</code> element because Jetty 5x is Cargo's default container.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-java"><span class="confluence-anchor-link" id="java"> </span></span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -457,7 +457,7 @@
 [...]
 </pre> 
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-autodeploy"> </span></p><h3 id="Startingandstoppingacontainer-Automaticdeploymentofproject'sartifact(forJ2EEprojects)">Automatic deployment of project's artifact (for J2EE projects)</h3><p>If your project is a J2EE project (i.e. of type <code>&lt;packaging&gt;war&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ear&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ejb&lt;/packaging&gt;</code> or <code>&lt;packaging&gt;uberwar&lt;/packaging&gt;</code>) and you use the Cargo m2 plugin on that project then the generated artifact will be automatically added to the list of deployables to deploy. You can control the location of the artifact by using the <code>&lt;location&gt;</code> element (it defaults to <code>${project.build.directory}/${project.build.finalName}.${project.packaging</code>}). In addition if you want to wait for the deployment to be finished you can specify a <code>&lt;pingURL&gt;</code> (none is used by default). Here's an example:</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-autodeploy"><span class="confluence-anchor-link" id="autodeploy"> </span></span></p><h3 id="Startingandstoppingacontainer-Automaticdeploymentofproject'sartifact(forJ2EEprojects)">Automatic deployment of project's artifact (for J2EE projects)</h3><p>If your project is a J2EE project (i.e. of type <code>&lt;packaging&gt;war&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ear&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ejb&lt;/packaging&gt;</code> or <code>&lt;packaging&gt;uberwar&lt;/packaging&gt;</code>) and you use the Cargo m2 plugin on that project then the generated artifact will be automatically added to the list of deployables to deploy. You can control the location of the artifact by using the <code>&lt;location&gt;</code> element (it defaults to <code>${project.build.directory}/${project.build.finalName}.${project.packaging</code>}). In addition if you want to wait for the deployment to be finished you can specify a <code>&lt;pingURL&gt;</code> (none is used by default). Here's an example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
@@ -474,7 +474,7 @@
     [...]
 </pre> 
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-lifecycle"> </span></p><script type="text/javascript">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-lifecycle"><span class="confluence-anchor-link" id="lifecycle"> </span></span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -512,7 +512,7 @@
 &lt;/plugin&gt;
 </pre> 
            </div>
-          </div><p>In this example we've bound the execution of the <code>cargo:start</code> goal to the <code>pre-integration-test</code> phase and the <code>cargo:stop</code> goal to the <code>post-integration-test</code> phase. You'd run your tests in the <code>integration-test</code> phase where you'll be assured that your container is already up and running. Running <code>mvn install</code> will execute everything automatically. For a full-fledged example and source code of an integration test with Cargo, see chapter 4 of the <a href="http://www.mergere.com/m2book_download.jsp" class="external-link" rel="nofollow">Better Builds with Maven book</a>.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-extrajars"> </span></p><h3 id="Startingandstoppingacontainer-AddingJARstothecontainer'sclasspath">Adding JARs to the container's classpath</h3><p>There are cases when you want to add extra JARs to your container's classpath, in order to share them between webapps for example. In order to add them, the first step is to define them as standard Maven dependencies. Then you should add a <code>&lt;dependencies&gt;</code> element under the <code>&lt;container&gt;</code> element and one <code>&lt;dependency&gt;</code> element for each JAR to add. For example, to add the Spring 2.0 JAR to your container's classpath you would write:</p>
+          </div><p>In this example we've bound the execution of the <code>cargo:start</code> goal to the <code>pre-integration-test</code> phase and the <code>cargo:stop</code> goal to the <code>post-integration-test</code> phase. You'd run your tests in the <code>integration-test</code> phase where you'll be assured that your container is already up and running. Running <code>mvn install</code> will execute everything automatically. For a full-fledged example and source code of an integration test with Cargo, see chapter 4 of the <a href="http://www.mergere.com/m2book_download.jsp" class="external-link" rel="nofollow">Better Builds with Maven book</a>.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-extrajars"><span class="confluence-anchor-link" id="extrajars"> </span></span></p><h3 id="Startingandstoppingacontainer-AddingJARstothecontainer'sclasspath">Adding JARs to the container's classpath</h3><p>There are cases when you want to add extra JARs to your container's classpath, in order to share them between webapps for example. In order to add them, the first step is to define them as standard Maven dependencies. Then you should add a <code>&lt;dependencies&gt;</code> element under the <code>&lt;container&gt;</code> element and one <code>&lt;dependency&gt;</code> element for each JAR to add. For example, to add the Spring 2.0 JAR to your container's classpath you would write:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
@@ -542,7 +542,7 @@
 &lt;/plugin&gt;
 </pre> 
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-datasources"> </span></p><script type="text/javascript">
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-datasources"><span class="confluence-anchor-link" id="datasources"> </span></span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -678,7 +678,7 @@
 </pre> 
              </div>
             </div></li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-resources"> </span></p><script type="text/javascript">
+          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-resources"><span class="confluence-anchor-link" id="resources"> </span></span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
