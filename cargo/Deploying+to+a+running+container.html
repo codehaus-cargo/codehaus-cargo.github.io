@@ -1,5 +1,5 @@
 <!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
   <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
@@ -11,8 +11,7 @@
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> 
-  <!-- Global site tag (gtag.js) - Google Analytics --> 
+  </script> <!-- Global site tag (gtag.js) - Google Analytics --> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31476258-1"></script> 
   <script>
   	window.dataLayer = window.dataLayer || [];
@@ -20,8 +19,7 @@
   	gtag('js', new Date());
 
   	gtag('config', 'UA-31476258-1');
-  </script> 
-  <!-- Google Ads --> 
+  </script> <!-- Google Ads --> 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -288,15 +286,13 @@
         <tr> 
          <td class="rightColumn"> <p>Cargo supports <a href="Deployer.html">deploying</a> to an already running container. This feature is called <a href="Hot+Deployment.html">Hot Deployment</a>). You call it by using the (<code><strong>cargo:deploy</strong></code>) goal (e.g. <code>mvn cargo:deploy</code>).</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-macro-id="">
-           <p class="title">No need to deploy if you are using Cargo to start your container</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <p class="title">No need to deploy if you are using Cargo to start your container</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>If you are using Cargo for <a href="Starting+and+stopping+a+container.html">starting your container</a>, Cargo will actually be doing a <a href="Static+Deployment.html">static deployment</a> of all your <code>&lt;deployables&gt;</code> automatically. So, no need to deploy anything manually in that case!</p>
            </div>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-macro-id="">
-           <p class="title">About WAR contexts</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">About WAR contexts</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Many containers have their specific files for redefining context roots (Tomcat has context.xml, JBoss has jboss-web.xml, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
            </div>
@@ -352,8 +348,7 @@
            </div>
           </div><h3 id="Deployingtoarunningcontainer-Usingaremotedeployer">Using a remote deployer</h3><p>A remote <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Remote+Container.html">Remote Container</a> (i.e. a container that is running and that has been started externally from Cargo). Thus you'll need to use an id for a remote container in <code>&lt;containerId&gt;</code> and a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-macro-id="">
-           <p class="title">Not all containers have a remote Deployer implemented</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">Not all containers have a remote Deployer implemented</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>We haven't finished implementing remote Deployers for all containers yet. Please <a href="Containers.html">check</a> if your favorite container has it implemented. If not you'll need to deploy your deployables by defining them in a standalone local configuration as shown in the <a href="Starting+and+stopping+a+container.html">starting and stopping a container</a> use case or the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
            </div>
@@ -458,6 +453,6 @@
       </div> </td> 
     </tr> 
    </tbody>
-  </table>   
+  </table>  
  </body>
 </html>

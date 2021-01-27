@@ -1,5 +1,5 @@
 <!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
   <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
@@ -11,8 +11,7 @@
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> 
-  <!-- Global site tag (gtag.js) - Google Analytics --> 
+  </script> <!-- Global site tag (gtag.js) - Google Analytics --> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31476258-1"></script> 
   <script>
   	window.dataLayer = window.dataLayer || [];
@@ -20,8 +19,7 @@
   	gtag('js', new Date());
 
   	gtag('config', 'UA-31476258-1');
-  </script> 
-  <!-- Google Ads --> 
+  </script> <!-- Google Ads --> 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -291,6 +289,14 @@
            <br>
            <div class="table-wrap">
             <table class="confluenceTable">
+             <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+             </colgroup>
              <tbody>
               <tr>
                <th class="confluenceTh"><p>Container</p></th>
@@ -1046,8 +1052,7 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
            </table>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">Java EE vs. Jakarta EE</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">Java EE vs. Jakarta EE</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Even when you use Codehaus Cargo with a Jakarta EE container, you can keep on using <code>javax.jms.</code> definitions, which Codehaus Cargo will automatically translate to <code>jakarta.jms.</code> for your specific container if need be. This ensures you can easily test on Java EE and Jakarta EE without having to create very complex Codehaus Cargo property sets.</p>
             <p>Please note that this doesn't work the other way round:&nbsp;<code>jakarta.jms.</code> definitions will not be "mapped back" to <code>javax.jms.</code> definitions on non Jakarta EE containers.</p>
@@ -1258,6 +1263,6 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
       </div> </td> 
     </tr> 
    </tbody>
-  </table>   
+  </table>  
  </body>
 </html>

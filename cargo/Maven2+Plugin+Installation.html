@@ -1,5 +1,5 @@
 <!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
   <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
@@ -11,8 +11,7 @@
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> 
-  <!-- Global site tag (gtag.js) - Google Analytics --> 
+  </script> <!-- Global site tag (gtag.js) - Google Analytics --> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31476258-1"></script> 
   <script>
   	window.dataLayer = window.dataLayer || [];
@@ -20,8 +19,7 @@
   	gtag('js', new Date());
 
   	gtag('config', 'UA-31476258-1');
-  </script> 
-  <!-- Google Ads --> 
+  </script> <!-- Google Ads --> 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -322,8 +320,7 @@
            </div>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">&lt;pluginRepository&gt; and &lt;repository&gt; declarations</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">&lt;pluginRepository&gt; and &lt;repository&gt; declarations</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Note that you need to declare both the <code>pluginRepository</code> and <code>repository</code>, due to the way how the CARGO plugin's container artifact loading mechanism works.</p>
            </div>
@@ -331,7 +328,7 @@
           <ul>
            <li>To find out what the latest&nbsp;<code>SNAPSHOT</code> version is, you can simply look at <a href="https://github.com/codehaus-cargo/cargo/blob/master/pom.xml" class="external-link" rel="nofollow">the root POM file for Codehaus Cargo</a>.</li>
            <li>Configure the Cargo Maven Plugin by specifying the <code>SNAPSHOT</code> version you want.</li>
-          </ul><p>For example, to use version <code>1.8.5-SNAPSHOT</code> you would declare something similar to the following in your POM:</p>
+          </ul><p>For example, to use version <code>1.9.0-SNAPSHOT</code> you would declare something similar to the following in your POM:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
@@ -340,7 +337,7 @@
       &lt;plugin&gt;
         &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
         &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.8.5-SNAPSHOT&lt;/version&gt;
+        &lt;version&gt;1.9.0-SNAPSHOT&lt;/version&gt;
 [...]
       &lt;/plugin&gt;
 [...]
@@ -368,6 +365,6 @@
       </div> </td> 
     </tr> 
    </tbody>
-  </table>   
+  </table>  
  </body>
 </html>

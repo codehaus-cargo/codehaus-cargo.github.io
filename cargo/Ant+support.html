@@ -1,5 +1,5 @@
 <!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
   <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
@@ -11,8 +11,7 @@
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> 
-  <!-- Global site tag (gtag.js) - Google Analytics --> 
+  </script> <!-- Global site tag (gtag.js) - Google Analytics --> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31476258-1"></script> 
   <script>
   	window.dataLayer = window.dataLayer || [];
@@ -20,8 +19,7 @@
   	gtag('js', new Date());
 
   	gtag('config', 'UA-31476258-1');
-  </script> 
-  <!-- Google Ads --> 
+  </script> <!-- Google Ads --> 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -288,15 +286,13 @@
         <tr> 
          <td class="rightColumn"> <h3 id="Antsupport-Definition">Definition</h3>Cargo provides Ant tasks to perform all the operations available from the Java API. The minimum supported version is Ant 1.9.15.
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <p class="title">Security issues with older versions of Apache Ant</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <p class="title">Security issues with older versions of Apache Ant</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>As documented in <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1945" class="external-link" rel="nofollow">CVE-2020-1945</a>, Apache Ant 1.1 to 1.9.14 and 1.10.0 to 1.10.7 uses the default temporary directory identified by the Java system property <code>java.io.tmpdir</code> for several tasks and may thus leak sensitive information. Moreover, the <code>fixcrlf</code> and <code>replaceregexp</code> tasks copy files from the temporary directory back into the build tree allowing an attacker to inject modified source files into the Codehaus Cargo container configuration generation process. We hence strongly recommend only using versions 1.9.15 (for Ant 1.9.x) or versions 1.10.8 and above.</p>
            </div>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">Functional tests</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">Functional tests</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>The usage of Cargo for executing functional tests on a container does not mandate these Ant tasks. You could directly use the Cargo Java API from your Java unit test classes (JUnit, TestNG, etc), as described on the <a href="Functional+testing.html">Functional testing</a> page.</p>
            </div>
@@ -385,8 +381,7 @@
            </table>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">Wait after the container has started</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">Wait after the container has started</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Many wonder the difference between the <code>start</code> and <code>run</code> actions:</p>
             <ul>
@@ -406,8 +401,7 @@
   </script> 
           </center><h3 id="Antsupport-ThesearethevariousXMLconfigurationelementsthatyoucanusetoconfiguretheCargoAnttasks.Makesureyoualsochecktheexampleswhichshowhowtousethem.ToplevelconfigurationelementsDescriptionMandatory?Defaultvalue<action>Actiontoexecute.Thesecanbe:Containerac">
            <div class="conf-macro output-block">
-            These are the various XML configuration elements that you can use to configure the Cargo Ant tasks. Make sure you also check the 
-            <a href="Ant+support.html#Antsupport-Examples">examples</a> which show how to use them.
+            These are the various XML configuration elements that you can use to configure the Cargo Ant tasks. Make sure you also check the <a href="Ant+support.html#Antsupport-Examples">examples</a> which show how to use them.
             <div class="table-wrap">
              <table class="wrapped confluenceTable">
               <colgroup>
@@ -788,8 +782,7 @@
              </table>
             </div>
             <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-             <p class="title">About WAR contexts</p>
-             <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+             <p class="title">About WAR contexts</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
              <div class="confluence-information-macro-body">
               <p>Many containers have their specific files for redefining context roots (Tomcat has <code>context.xml</code>, JBoss has <code>jboss-web.xml</code>, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
              </div>
@@ -1005,8 +998,7 @@
             <h1 id="Antsupport-Daemonconfiguration">Daemon configuration</h1>
             <p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
             <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-             <p class="title">Container configuration for the Daemon</p>
-             <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+             <p class="title">Container configuration for the Daemon</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
              <div class="confluence-information-macro-body">
               <p>For the Ant tasks, the "daemonized server" is actually a <a href="Local+Container.html">local container</a> with a <a href="Configuration+properties.html">hostname</a> that points to a remote machine. This implies that:</p>
               <ul>
@@ -1137,8 +1129,7 @@
            </div>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">Loading configuration properties from a file</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">Loading configuration properties from a file</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>It is also possible to load the configuration properties from a file - simply use the <code>propertiesFile</code> attribute of the <code>configuration</code> XML element.</p>
            </div>
@@ -1285,6 +1276,6 @@
       </div> </td> 
     </tr> 
    </tbody>
-  </table>   
+  </table>  
  </body>
 </html>

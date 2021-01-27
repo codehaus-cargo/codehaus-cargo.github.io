@@ -1,5 +1,5 @@
 <!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
   <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
@@ -11,8 +11,7 @@
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> 
-  <!-- Global site tag (gtag.js) - Google Analytics --> 
+  </script> <!-- Global site tag (gtag.js) - Google Analytics --> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31476258-1"></script> 
   <script>
   	window.dataLayer = window.dataLayer || [];
@@ -20,8 +19,7 @@
   	gtag('js', new Date());
 
   	gtag('config', 'UA-31476258-1');
-  </script> 
-  <!-- Google Ads --> 
+  </script> <!-- Google Ads --> 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -289,10 +287,34 @@
          <td class="rightColumn"> <h2 id="News-RSS">RSS</h2><p><br class="atl-forced-newline">An <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Blog+posts" rel="nofollow">RSS</a> feed is available.</p><h2 id="News-News">News</h2><p><br></p><p></p>
           <div class="conf-macro output-block"> 
            <div class="blog-post-listing"> 
-            <div class="logo-heading-block"> 
-             <span class="blogHeading"> <a class="blogHeading" href="Hello+2021+and+hello+Jakarta+EE+support+with+Codehaus+Cargo+1.8.4.html">Hello 2021, and hello Jakarta EE support with Codehaus Cargo 1.8.4!</a> 
-              <div class="page-metadata not-personal"> 
-               <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Jan 02, 2021
+            <div class="logo-heading-block"> <span class="blogHeading"> <a class="blogHeading" href="Codehaus+Cargo+1.8.5+is+here.html">Codehaus Cargo 1.8.5 is here!</a> 
+              <div class="page-metadata not-personal"> <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Jan 27, 2021
+              </div> </span> 
+            </div> 
+            <div class="wiki-content"> 
+             <p>Dear Codehaus Cargo enthusiasts</p>
+             <p>A couple weeks after our last release, please give a warm welcome to Codehaus Cargo 1.8.5! This new version has many “under the hood” changes (in particular, around the dependency versions we use) and features the below improvements:</p>
+             <ul>
+              <li><p>Extensions - <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" class="external-link" rel="nofollow">Maven 2 / Maven 3 plugin</a></p>
+               <ul>
+                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1543" class="external-link" rel="nofollow">CARGO-1543</a>] - Added <code>tomcat-dbcp</code> to the embedded Tomcat container classpath</p></li>
+                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1501" class="external-link" rel="nofollow">CARGO-1501</a>] - Mojos that are thread safe should be marked with the appropriate annotation so that maven can run parallel builds<br><strong>Note</strong>: Though Codehaus Cargo itself is thread safe, we would recommend to use this feature with great care: you are <em>most likely</em> using Codehaus Cargo to perform integration tests on containers, you might run into port number clashes when executing the containers in parallel if you’re not careful.</p></li>
+               </ul></li>
+             </ul>
+             <p>This will also be our last <code>1.8.x</code> version, the reason being that the current <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" class="external-link" rel="nofollow">Maven 2 / Maven 3 plugin</a> (which behind the scenes is a Maven 2 plugin which Maven 3 can also use) will be removed and become a Maven 3 only plugin. This is quite nicely in line with <a href="https://maven.apache.org/maven-2.x-eol.html" class="external-link" rel="nofollow">the Maven 2.x end of life from November 2009</a>.</p>
+             <p>To try out this latest version:</p>
+             <ul>
+              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" class="external-link" rel="nofollow">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.8.5</strong></p></li>
+              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html" class="external-link" rel="nofollow">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.5/cargo-core-uberjar-1.8.5.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.5/cargo-core-uberjar-1.8.5.jar</a></p></li>
+              <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html" class="external-link" rel="nofollow">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.5/cargo-ant-1.8.5.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.5/cargo-ant-1.8.5.jar</a></p></li>
+              <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">Cargo Daemon</a> can get it from&nbsp;<a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.5/cargo-daemon-webapp-1.8.5.war" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.5/cargo-daemon-webapp-1.8.5.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
+             </ul>
+             <p>Enjoy!</p> 
+            </div> 
+           </div> 
+           <div class="blog-post-listing"> 
+            <div class="logo-heading-block"> <span class="blogHeading"> <a class="blogHeading" href="Hello+2021+and+hello+Jakarta+EE+support+with+Codehaus+Cargo+1.8.4.html">Hello 2021, and hello Jakarta EE support with Codehaus Cargo 1.8.4!</a> 
+              <div class="page-metadata not-personal"> <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Jan 02, 2021
               </div> </span> 
             </div> 
             <div class="wiki-content"> 
@@ -325,10 +347,8 @@
             </div> 
            </div> 
            <div class="blog-post-listing"> 
-            <div class="logo-heading-block"> 
-             <span class="blogHeading"> <a class="blogHeading" href="Before+we+say+goodbye+to+2020+time+to+say+hello+to+Codehaus+Cargo+1.8.3.html">Before we say goodbye to 2020, time to say hello to Codehaus Cargo 1.8.3!</a> 
-              <div class="page-metadata not-personal"> 
-               <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Dec 15, 2020
+            <div class="logo-heading-block"> <span class="blogHeading"> <a class="blogHeading" href="Before+we+say+goodbye+to+2020+time+to+say+hello+to+Codehaus+Cargo+1.8.3.html">Before we say goodbye to 2020, time to say hello to Codehaus Cargo 1.8.3!</a> 
+              <div class="page-metadata not-personal"> <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Dec 15, 2020
               </div> </span> 
             </div> 
             <div class="wiki-content"> 
@@ -373,10 +393,8 @@
             </div> 
            </div> 
            <div class="blog-post-listing"> 
-            <div class="logo-heading-block"> 
-             <span class="blogHeading"> <a class="blogHeading" href="Codehaus+Cargo+1.8.2+is+here.html">Codehaus Cargo 1.8.2 is here!</a> 
-              <div class="page-metadata not-personal"> 
-               <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Sep 27, 2020
+            <div class="logo-heading-block"> <span class="blogHeading"> <a class="blogHeading" href="Codehaus+Cargo+1.8.2+is+here.html">Codehaus Cargo 1.8.2 is here!</a> 
+              <div class="page-metadata not-personal"> <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Sep 27, 2020
               </div> </span> 
             </div> 
             <div class="wiki-content"> 
@@ -407,10 +425,8 @@
             </div> 
            </div> 
            <div class="blog-post-listing"> 
-            <div class="logo-heading-block"> 
-             <span class="blogHeading"> <a class="blogHeading" href="Be+secure+-+Upgrade+to+Codehaus+Cargo+1.8.1.html">Be secure - Upgrade to Codehaus Cargo 1.8.1!</a> 
-              <div class="page-metadata not-personal"> 
-               <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Sep 17, 2020
+            <div class="logo-heading-block"> <span class="blogHeading"> <a class="blogHeading" href="Be+secure+-+Upgrade+to+Codehaus+Cargo+1.8.1.html">Be secure - Upgrade to Codehaus Cargo 1.8.1!</a> 
+              <div class="page-metadata not-personal"> <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Sep 17, 2020
               </div> </span> 
             </div> 
             <div class="wiki-content"> 
@@ -425,52 +441,6 @@
               <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.1/cargo-daemon-webapp-1.8.1.war" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.1/cargo-daemon-webapp-1.8.1.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
              </ul>
              <p>Please also do pass this message to any projects you know of, and ensure they upgrade their Codehaus Cargo, and if require Apache Ant, dependencies.</p>
-             <p>Enjoy!</p> 
-            </div> 
-           </div> 
-           <div class="blog-post-listing"> 
-            <div class="logo-heading-block"> 
-             <span class="blogHeading"> <a class="blogHeading" href="Another+jump+in+Codehaus+Cargo+s+history+version+1.8.0+is+here.html">Another jump in Codehaus Cargo's history: version 1.8.0 is here!</a> 
-              <div class="page-metadata not-personal"> 
-               <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Aug 13, 2020
-              </div> </span> 
-            </div> 
-            <div class="wiki-content"> 
-             <p>Dear Codehaus Cargo enthusiasts</p>
-             <p>We are happy to announce another jump in Codehaus Cargo’s history, version 1.8.0.</p>
-             <p>As with other such jumps, this comes with the change in the minimum Java version for Codehaus Cargo: our minimum requirement is now Java 8 (of course, you can still set the <code>JAVA_HOME</code> of the container executions to “any” Java version). Differently from other times, though, the motivations for this change are different:</p>
-             <ul>
-              <li><p>Contrarily to previous times, Java 7 itself is not “fully EOL” yet: <a href="https://www.oracle.com/java/technologies/java-se-support-roadmap.html" class="external-link" rel="nofollow">Java 7’s extended support will actually last until July 2022</a>, on the other hand the last public release of Java 7 lacks the support for the TLS 1.2 protocol - which is used by most HTTPS-based Web servers (and hence many Maven2/Maven3 repositories) today - while the “only” way to have such “modern” versions of Java 7 is to have an Oracle Extended Support subscription. That hence made Java 7 very difficult to justify for a free of charge, open source project.</p></li>
-              <li><p>In addition, some parts of Codehaus Cargo which have been backwards compatible to the level where it would be considered “ancient” finally ended up failing us: yes, I’m talking about our various WARs, used for testing and for the Cargo Ping Component, which so far had been using the DTD-based servlet 2.3 definitions. <a href="https://codehaus-cargo.github.io/cargo/TomEE+9.x.html" class="external-link" rel="nofollow">TomEE 9.x</a> has been the first container to drop the support for such ancient servlet versions, we hence have “upgraded” these to servlet 2.4 (which dates back to 2003!), which in turn implies Codehaus Cargo’s support for the “antique” Jetty 4.x and Resin 2.x containers is now gone.</p></li>
-             </ul>
-             <p>As you know, though, there are many other “old” Java containers that do not work with Java 8. For all these, our <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration system</a> takes advantage of Codehaus Cargo’s flexible <code>JAVA_HOME</code> definition abilities, and hence runs these containers with Java 7 even though the core build itself (including the tests we execute) are on Java 8. For more details, have a look at <a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/AbstractCargoTestCase.java" class="external-link" rel="nofollow">how we run our Java samples</a> and the <em>non JDK 8 containers</em> section of our CI configuration.</p>
-             <p>Here come the full details of what’s new with Codehaus Cargo 1.8.0:</p>
-             <ul>
-              <li><p>Core</p>
-               <ul>
-                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1520" class="external-link" rel="nofollow">CARGO-1520</a>] - Upgrade various dependencies to the latest versions compatible with Java 8</p></li>
-                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1526" class="external-link" rel="nofollow">CARGO-1526</a>] - Change the minimum servlet requirement to version 2.4</p></li>
-               </ul></li>
-              <li><p>Containers - Jetty</p>
-               <ul>
-                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1527" class="external-link" rel="nofollow">CARGO-1527</a>] - Remove Jetty 4.x (as it doesn't support servlet 2.4)</p></li>
-               </ul></li>
-              <li><p>Containers - Resin</p>
-               <ul>
-                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1527" class="external-link" rel="nofollow">CARGO-1527</a>] - Remove Resin 2.x (as it doesn't support servlet 2.4)</p></li>
-               </ul></li>
-              <li><p>Containers - TomEE</p>
-               <ul>
-                <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1525" class="external-link" rel="nofollow">CARGO-1525</a>] - Add support for <a href="https://codehaus-cargo.github.io/cargo/TomEE+8.x.html" class="external-link" rel="nofollow">TomEE 9.x</a></p></li>
-               </ul></li>
-             </ul>
-             <p>To try it out:</p>
-             <ul>
-              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" class="external-link" rel="nofollow">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.8.0</strong></p></li>
-              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html" class="external-link" rel="nofollow">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.0/cargo-core-uberjar-1.8.0.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.0/cargo-core-uberjar-1.8.0.jar</a></p></li>
-              <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html" class="external-link" rel="nofollow">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.0/cargo-ant-1.8.0.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.0/cargo-ant-1.8.0.jar</a></p></li>
-              <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.0/cargo-daemon-webapp-1.8.0.war" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.0/cargo-daemon-webapp-1.8.0.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
-             </ul>
              <p>Enjoy!</p> 
             </div> 
            </div> 
@@ -493,6 +463,6 @@
       </div> </td> 
     </tr> 
    </tbody>
-  </table>   
+  </table>  
  </body>
 </html>

@@ -1,5 +1,5 @@
 <!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
  <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
   <meta charset="UTF-8"> 
   <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
@@ -11,8 +11,7 @@
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> 
-  <!-- Global site tag (gtag.js) - Google Analytics --> 
+  </script> <!-- Global site tag (gtag.js) - Google Analytics --> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31476258-1"></script> 
   <script>
   	window.dataLayer = window.dataLayer || [];
@@ -20,8 +19,7 @@
   	gtag('js', new Date());
 
   	gtag('config', 'UA-31476258-1');
-  </script> 
-  <!-- Google Ads --> 
+  </script> <!-- Google Ads --> 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -294,8 +292,7 @@
            </div>
           </div><h3 id="Configurationfilesoption-Explanation">Explanation</h3><p>In some cases, it is necessary to enrich your container configuration with extra files. This can be done using Cargo's <code>configFiles</code> option, accessible via the Cargo APIs.</p><p>The advantage of using this option is that it can replace <a href="Configuration+properties.html">configuration properties</a> in your files: simply use, for example, <code>@cargo.servlet.port@</code> to have it replaced with the port on which the Servlet/JSP container is listening to.</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <p class="title">Careful with binary files!</p>
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <p class="title">Careful with binary files!</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>If you want to inject binary configuration files (JAR files, for example), you should use <code>setFileProperty</code> (instead of <code>setConfigFileProperty</code>) with the Java API and <code>&lt;files&gt;</code> and <code>&lt;file&gt;</code> (instead of <code>&lt;configfiles&gt;</code> and <code>&lt;configfile&gt;</code>) with the Maven2/Maven3 plugin.</p>
            </div>
@@ -464,6 +461,6 @@ configuration.setConfigFileProperty(sampleUsersProperties);
       </div> </td> 
     </tr> 
    </tbody>
-  </table>   
+  </table>  
  </body>
 </html>
