@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -402,9 +402,9 @@
                    <li><span style="color: red;"><strong>deployable-on-tomcat/</strong></span>: Cargo Daemon Client - Deployable on Tomcat</li>
                   </ul></li>
                 </ul></li>
-               <li><span style="color: red;"><strong>maven2/</strong></span>: Cargo Extensions for Maven 2
+               <li><span style="color: red;"><strong>maven3/</strong></span>: Cargo Extensions for Maven 3
                 <ul>
-                 <li><span style="color: red;"><strong>plugin/</strong></span>: Cargo Maven 2 Plugin</li>
+                 <li><span style="color: red;"><strong>plugin/</strong></span>: Cargo Maven 3 Plugin</li>
                  <li><span style="color: red;"><strong>archetypes/</strong></span>: Sample Maven archetypes for using Cargo
                   <ul>
                    <li><span style="color: red;"><strong>daemon/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to generate a webapp and remotely start and stop a container with the application deployed on it.</li>
@@ -414,35 +414,35 @@
                    <li><span style="color: red;"><strong>webapp-with-datasource/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to run functional tests directly from a webapp with datasource. Cargo will be used to configure the datasource on the container.</li>
                    <li><span style="color: red;"><strong>remote-deployment/</strong></span>: Sample Maven archetype showing how to configure Cargo and Maven to generate a webapp and deploy it to a remote container.</li>
                   </ul></li>
-                 <li><span style="color: red;"><strong>samples/</strong></span>: Cargo Samples for Maven 2
+                 <li><span style="color: red;"><strong>samples/</strong></span>: Cargo Samples for Maven 3
                   <ul>
                    <li><span style="color: red;"><strong>artifactInstaller-test/</strong></span>: Sample application that tests the artifact installer</li>
-                   <li><span style="color: red;"><strong>autoDeployable-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's AutoDeployable capabilities</li>
+                   <li><span style="color: red;"><strong>autoDeployable-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin's AutoDeployable capabilities</li>
                    <li><span style="color: red;"><strong>configurationFiles-xmlReplacements-test/</strong></span>: Sample application that tests the configuration files and XML replacement options</li>
                    <li><span style="color: red;"><strong>glassfish6x-remoteDeploy-test/</strong></span>: Sample application that tries remote deployment on a GlassFish 6.x container</li>
-                   <li><span style="color: red;"><strong>implementationClasses-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with personalized implementation classes</li>
-                   <li><span style="color: red;"><strong>inPlaceDevelopment-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's in-place development capabilities. Note that this sample currently works only for Jetty and Tomcat as it requires that container implementations support deploying an expanded WAR from a directory without copying it to the container deploy directory.</li>
-                   <li><span style="color: red;"><strong>jetty5x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 5.x container</li>
-                   <li><span style="color: red;"><strong>jetty6x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 6.x container</li>
-                   <li><span style="color: red;"><strong>jetty7x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 7.x container</li>
-                   <li><span style="color: red;"><strong>jetty7x-root-context-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Jetty 7.x container and the root context</li>
-                   <li><span style="color: red;"><strong>jetty8x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 8.x container</li>
-                   <li><span style="color: red;"><strong>jetty9x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 9.x container</li>
-                   <li><span style="color: red;"><strong>jetty10x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 10.x container</li>
-                   <li><span style="color: red;"><strong>jetty11x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Jetty 11.x container</li>
-                   <li><span style="color: red;"><strong>ping-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's deployable pinging capabilities</li>
+                   <li><span style="color: red;"><strong>implementationClasses-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with personalized implementation classes</li>
+                   <li><span style="color: red;"><strong>inPlaceDevelopment-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin's in-place development capabilities. Note that this sample currently works only for Jetty and Tomcat as it requires that container implementations support deploying an expanded WAR from a directory without copying it to the container deploy directory.</li>
+                   <li><span style="color: red;"><strong>jetty5x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Jetty 5.x container</li>
+                   <li><span style="color: red;"><strong>jetty6x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Jetty 6.x container</li>
+                   <li><span style="color: red;"><strong>jetty7x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Jetty 7.x container</li>
+                   <li><span style="color: red;"><strong>jetty7x-root-context-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with a Jetty 7.x container and the root context</li>
+                   <li><span style="color: red;"><strong>jetty8x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Jetty 8.x container</li>
+                   <li><span style="color: red;"><strong>jetty9x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Jetty 9.x container</li>
+                   <li><span style="color: red;"><strong>jetty10x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Jetty 10.x container</li>
+                   <li><span style="color: red;"><strong>jetty11x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Jetty 11.x container</li>
+                   <li><span style="color: red;"><strong>ping-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin's deployable pinging capabilities</li>
                    <li><span style="color: red;"><strong>license-test/</strong></span>: Sample application that exercises checks the Uberjar with regards to its license needs (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1489" class="external-link" rel="nofollow">CARGO-1489</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1494" class="external-link" rel="nofollow">CARGO-1494</a>)</li>
-                   <li><span style="color: red;"><strong>multi-datasource-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Tomcat 6.x container and multiple datasources</li>
+                   <li><span style="color: red;"><strong>multi-datasource-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with a Tomcat 6.x container and multiple datasources</li>
                    <li><span style="color: red;"><strong>remoteDeploy-test/</strong></span>: Sample application that tries remote deployment</li>
                    <li><span style="color: red;"><strong>runMojo-test/</strong></span>: Sample application that tries the cargo:run MOJO</li>
-                   <li><span style="color: red;"><strong>tomcat6x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Tomcat 6.x container</li>
-                   <li><span style="color: red;"><strong>tomcat7x-context-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Tomcat 7.x container and a user-defined context</li>
-                   <li><span style="color: red;"><strong>tomcat7x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Tomcat 7.x container</li>
-                   <li><span style="color: red;"><strong>tomcat7x-systemProperty-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with a Tomcat 7.x container and a user-defined system properties</li>
-                   <li><span style="color: red;"><strong>tomcat8x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Tomcat 8.x container</li>
-                   <li><span style="color: red;"><strong>tomcat9x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Tomcat 9.x container</li>
-                   <li><span style="color: red;"><strong>tomcat10x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin with an embedded Tomcat 10.x container</li>
-                   <li><span style="color: red;"><strong>uberwar-test/</strong></span>: Sample application that exercises the Cargo Maven 2 / Maven 3 plugin's uberwar feature</li>
+                   <li><span style="color: red;"><strong>tomcat6x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Tomcat 6.x container</li>
+                   <li><span style="color: red;"><strong>tomcat7x-context-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with a Tomcat 7.x container and a user-defined context</li>
+                   <li><span style="color: red;"><strong>tomcat7x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Tomcat 7.x container</li>
+                   <li><span style="color: red;"><strong>tomcat7x-systemProperty-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with a Tomcat 7.x container and a user-defined system properties</li>
+                   <li><span style="color: red;"><strong>tomcat8x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Tomcat 8.x container</li>
+                   <li><span style="color: red;"><strong>tomcat9x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Tomcat 9.x container</li>
+                   <li><span style="color: red;"><strong>tomcat10x-embedded-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin with an embedded Tomcat 10.x container</li>
+                   <li><span style="color: red;"><strong>uberwar-test/</strong></span>: Sample application that exercises the Cargo Maven 3 plugin's uberwar feature</li>
                    <li><span style="color: red;"><strong>users-test/</strong></span>: Sample application that will be used to test configuration of users and roles.</li>
                    <li><span style="color: red;"><strong>weblogic-test/</strong></span>: Sample application that will be used to test the WebLogic container</li>
                    <li><span style="color: red;"><strong>websphere-test/</strong></span>: Sample application that will be used to test the WebSphere container</li>

@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -273,7 +273,7 @@
           <table width="100%"> 
            <tbody>
             <tr valign="top"> 
-             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven2+plugin.html">Maven2 plugin</a> &gt; <a href="Maven2+Plugin+Getting+Started.html">Maven2 Plugin Getting Started</a> &gt; Merging WAR files</b> </td> 
+             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> &gt; <a href="Maven+3+Plugin+Getting+Started.html">Maven 3 Plugin Getting Started</a> &gt; Merging WAR files</b> </td> 
              <td align="right" width="300"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -284,11 +284,10 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h2 id="MergingWARfiles-UsingMaven2andCargotomergeWARfiles">Using Maven2 and Cargo to merge WAR files</h2> <p>If you have an application that you are building with maven2 that you wish to merge two WAR files together, then you may wish to use the 'uberwar' mojo present in the cargo maven2 plugin.</p> <p>An "uberwar" is a war file constructed from 2 or more War files, where the deployment descriptors in files such as web.xml have been combined.</p> <h3 id="MergingWARfiles-Settingupyourprojecttooutputanuberwar">Setting up your project to output an uberwar</h3> <p>Create a maven2 project whose output artifact is going to be the uberwar. Don't forget to add as dependencies the War files you're going to make the uberwar from.</p> <p>Your packaging type should be uberwar:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+         <td class="rightColumn"> <h2 id="MergingWARfiles-UsingMaven3andCargotomergeWARfiles">Using Maven 3 and Cargo to merge WAR files</h2><p>If you have an application that you are building with&nbsp;Maven 3 that you wish to merge two WAR files together, then you may wish to use the 'uberwar' mojo present in the cargo&nbsp;Maven 3 plugin.</p><p>An "uberwar" is a war file constructed from 2 or more War files, where the deployment descriptors in files such as web.xml have been combined.</p><h3 id="MergingWARfiles-Settingupyourprojecttooutputanuberwar">Setting up your project to output an uberwar</h3><p>Create a&nbsp;Maven 3 project whose output artifact is going to be the uberwar. Don't forget to add as dependencies the War files you're going to make the uberwar from.</p><p>Your packaging type should be uberwar:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre">
-&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+            <pre class="syntaxhighlighter-pre">&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
@@ -314,13 +313,12 @@
 &lt;/project&gt;
 </pre> 
            </div>
-          </div> <p>Next, you need to add the cargo maven plugin to your <code>&lt;plugins&gt;</code> section, and set it up with the path to a merging descriptor:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          </div><p>Next, you need to add the cargo maven plugin to your <code>&lt;plugins&gt;</code> section, and set it up with the path to a merging descriptor:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre">
-&lt;plugin&gt;
+            <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;extensions&gt;true&lt;/extensions&gt;
   &lt;configuration&gt;
     &lt;descriptor&gt;src/assemble/merge.xml&lt;/descriptor&gt;
@@ -328,17 +326,16 @@
 &lt;/plugin&gt;
 </pre> 
            </div>
-          </div> <p>Here the <code>src/assemble/merge.xml</code> is the descriptor of how you want the merge to work (see next section for detailed explanations).</p> 
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-macro-id="">
+          </div><p>Here the <code>src/assemble/merge.xml</code> is the descriptor of how you want the merge to work (see next section for detailed explanations).</p>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Maven Archiver</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body"> 
-            <p>Note that plugin configuration also supports the <code>&lt;archive&gt;</code> element. For full list of supported values see <a href="http://maven.apache.org/shared/maven-archiver/" class="external-link" rel="nofollow">maven-archiver</a> reference page.<br> Example:</p> 
-            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+           <div class="confluence-information-macro-body">
+            <p>Note that plugin configuration also supports the <code>&lt;archive&gt;</code> element. For full list of supported values see <a href="http://maven.apache.org/shared/maven-archiver/" class="external-link" rel="nofollow">maven-archiver</a> reference page.<br>Example:</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl"> 
-              <pre class="syntaxhighlighter-pre">
-&lt;plugin&gt;
+              <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;extensions&gt;true&lt;/extensions&gt;
   &lt;configuration&gt;
     &lt;descriptor&gt;src/assemble/merge.xml&lt;/descriptor&gt;
@@ -355,7 +352,7 @@
              </div>
             </div>
            </div>
-          </div> <script type="text/javascript">
+          </div><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -365,11 +362,10 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="MergingWARfiles-Creatingamergedescriptor">Creating a merge descriptor</h3> <p>The merge descriptor file specifies the content of the resulting uberwar file.</p> <p>Here is a sample of the minimal merge descriptor:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          </center><h3 id="MergingWARfiles-Creatingamergedescriptor">Creating a merge descriptor</h3><p>The merge descriptor file specifies the content of the resulting uberwar file.</p><p>Here is a sample of the minimal merge descriptor:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre">
-&lt;?xml version="1.0"?&gt;
+            <pre class="syntaxhighlighter-pre">&lt;?xml version="1.0"?&gt;
 &lt;uberwar&gt;
   &lt;wars&gt;
     &lt;war&gt;com.mycorp:baseWarFile&lt;/war&gt;
@@ -378,11 +374,10 @@
 &lt;/uberwar&gt;
 </pre> 
            </div>
-          </div> <h4 id="MergingWARfiles-Mergedescriptorcontent">Merge descriptor content</h4> <p>The following merge descriptor elements are supported:</p> <h5 id="MergingWARfiles-<wars>">&lt;wars&gt;</h5> <p>In order to know which war files to merge, and in which order (this is significant - for example, when you choose overwrite strategy), specify them in the <code>&lt;wars&gt;</code> element. Each <code>&lt;war&gt;</code> sub-element should be of form <code>&lt;groupId&gt;:&lt;artifactId&gt;</code> to be properly resolved.</p> <h5 id="MergingWARfiles-<merges>">&lt;merges&gt;</h5> <p>If you have files that need to be merged together by some kind of processor, then specify it here. The classname can be <code>org.codehaus.cargo.module.webapp.DocumentMerger</code>, which is a simple class that will merge by copying all xml nodes from the descriptor files. Alternatively, you can provide any class that is available on the classpath, provided it implements <code>org.codehaus.cargo.module.merge.MergeProcessor</code>. The <code>&lt;merges&gt;</code> element is optional. You can have as many <code>&lt;merge&gt;</code> sub-elements as you need.</p> <p>For example:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          </div><h4 id="MergingWARfiles-Mergedescriptorcontent">Merge descriptor content</h4><p>The following merge descriptor elements are supported:</p><h5 id="MergingWARfiles-<wars>">&lt;wars&gt;</h5><p>In order to know which war files to merge, and in which order (this is significant - for example, when you choose overwrite strategy), specify them in the <code>&lt;wars&gt;</code> element. Each <code>&lt;war&gt;</code> sub-element should be of form <code>&lt;groupId&gt;:&lt;artifactId&gt;</code> to be properly resolved.</p><h5 id="MergingWARfiles-<merges>">&lt;merges&gt;</h5><p>If you have files that need to be merged together by some kind of processor, then specify it here. The classname can be <code>org.codehaus.cargo.module.webapp.DocumentMerger</code>, which is a simple class that will merge by copying all xml nodes from the descriptor files. Alternatively, you can provide any class that is available on the classpath, provided it implements <code>org.codehaus.cargo.module.merge.MergeProcessor</code>. The <code>&lt;merges&gt;</code> element is optional. You can have as many <code>&lt;merge&gt;</code> sub-elements as you need.</p><p>For example:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre">
-&lt;?xml version="1.0"?&gt;
+            <pre class="syntaxhighlighter-pre">&lt;?xml version="1.0"?&gt;
 &lt;uberwar&gt;
   ...
   &lt;merges&gt;
@@ -394,7 +389,7 @@
 &lt;/uberwar&gt;
 </pre> 
            </div>
-          </div> <script type="text/javascript">
+          </div><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -404,17 +399,16 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h4 id="MergingWARfiles-Mergingtheweb.xmlfile">Merging the <code>web.xml</code> file</h4> 
-          <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block" data-macro-id="">
+          </center><h4 id="MergingWARfiles-Mergingtheweb.xmlfile">Merging the <code>web.xml</code> file</h4>
+          <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body"> 
+           <div class="confluence-information-macro-body">
             <p>The uberwar plugin will merge your <code>web.xml</code> file using the default merge strategy even if no explicit definition was provided. Keep reading to learn more about merge strategies!</p>
            </div>
-          </div> <p>The ability to merge <code>web.xml</code> is probably the most important piece of uberwar functionality. This is achieved by providing a special <code>&lt;merge&gt;</code> element, as shown in the example below:</p> 
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          </div><p>The ability to merge <code>web.xml</code> is probably the most important piece of uberwar functionality. This is achieved by providing a special <code>&lt;merge&gt;</code> element, as shown in the example below:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre">
-&lt;?xml version="1.0"?&gt;
+            <pre class="syntaxhighlighter-pre">&lt;?xml version="1.0"?&gt;
 &lt;uberwar&gt;
   ...
   &lt;merges&gt;
@@ -456,21 +450,21 @@
 &lt;/uberwar&gt;
 </pre> 
            </div>
-          </div> 
-          <div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block" data-macro-id="">
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body"> 
+           <div class="confluence-information-macro-body">
             <p>Note the <code>&lt;default&gt;</code> element that contains merge strategies by tag and is the only child of <code>&lt;parameters&gt;</code> element.</p>
            </div>
-          </div> <p>For each tag in the <code>web.xml</code>, the descriptor is defining how you want the merge to happen (the 'strategy'). There are 4 out-of-the-box strategies, and you can provide your own by passing the name of a class that implements <code>org.codehaus.cargo.module.merge.strategy.MergeStrategy</code>. These strategies define what should happen if an entry is just in one file, or what to do if there is a conflict. When merging, each successive file is merged in sequence - so if there are 3 merges to do, the first two files will be merged together, then the result will be merged with the last file. In each merge operation, the first of the two files is the 'left hand side', and the second of the two files is the 'right hand side' (think of source code merge utilities).</p> <p>The defaults strategies are:</p> <h5 id="MergingWARfiles-Preserve">Preserve</h5> <p>Preserve means "if there is a conflict, then preserve the original".</p> <h5 id="MergingWARfiles-Overwrite">Overwrite</h5> <p>Overwrite means "if there is a conflict, then use the values in the right-hand side". This is the <span style="text-decoration: underline;">default</span> strategy if nothing else is specified.</p> <h5 id="MergingWARfiles-NodeMerge">NodeMerge</h5> <p>NodeMerge means "I want to do some merge resolution". The configuration of this strategy is the XML that the conflicting node will be replaced with. Anything starting with <code>$left:</code> will be translated as an XPath expression, executed against the left-hand descriptor. The effect of <code>$right:</code> is the same for the right-hand side.</p> <h5 id="MergingWARfiles-ChooseByName">ChooseByName</h5> <p>ChooseByName means "most of the time, I want to use one strategy, but for a particular named item, I want to do something else". The configuration of this strategy must contain single <code>&lt;default&gt;</code> sub-element (specifying default merge strategy) and multiple <code>&lt;choice&gt;</code> sub-elements (specifying merge strategy for specific tag instances).</p> <p>In the example above:</p> 
-          <ul> 
-           <li>the <code>&lt;display-name&gt;</code> element from the last war file being merged will be used</li> 
-           <li>the <code>&lt;welcome-file-list&gt;</code> definitions will be merged (assuming that we are merging two war files, each one specifies at most single welcome file)</li> 
-           <li>the list of Spring configuration files will be merged, the rest of <code>&lt;context-param&gt;</code> elements will be preserved</li> 
-          </ul> <h3 id="MergingWARfiles-KnownProblems">Known Problems</h3> 
-          <ul> 
-           <li>If you build as a part of a multiproject build, maven2 may incorrectly store your output war file in the repository with a <code>.uberwar</code> extension. It does not do this if the project is built on its own.</li> 
-           <li>If you're experiencing issues with the plugin because Maven is telling you that some Xerces classes cannot be found, please also add <code>xerces:xercesImpl</code> to the plugin's dependencies. That error should not be happening as of Java 6.</li> 
+          </div><p>For each tag in the <code>web.xml</code>, the descriptor is defining how you want the merge to happen (the 'strategy'). There are 4 out-of-the-box strategies, and you can provide your own by passing the name of a class that implements <code>org.codehaus.cargo.module.merge.strategy.MergeStrategy</code>. These strategies define what should happen if an entry is just in one file, or what to do if there is a conflict. When merging, each successive file is merged in sequence - so if there are 3 merges to do, the first two files will be merged together, then the result will be merged with the last file. In each merge operation, the first of the two files is the 'left hand side', and the second of the two files is the 'right hand side' (think of source code merge utilities).</p><p>The defaults strategies are:</p><h5 id="MergingWARfiles-Preserve">Preserve</h5><p>Preserve means "if there is a conflict, then preserve the original".</p><h5 id="MergingWARfiles-Overwrite">Overwrite</h5><p>Overwrite means "if there is a conflict, then use the values in the right-hand side". This is the <span style="text-decoration: underline;">default</span> strategy if nothing else is specified.</p><h5 id="MergingWARfiles-NodeMerge">NodeMerge</h5><p>NodeMerge means "I want to do some merge resolution". The configuration of this strategy is the XML that the conflicting node will be replaced with. Anything starting with <code>$left:</code> will be translated as an XPath expression, executed against the left-hand descriptor. The effect of <code>$right:</code> is the same for the right-hand side.</p><h5 id="MergingWARfiles-ChooseByName">ChooseByName</h5><p>ChooseByName means "most of the time, I want to use one strategy, but for a particular named item, I want to do something else". The configuration of this strategy must contain single <code>&lt;default&gt;</code> sub-element (specifying default merge strategy) and multiple <code>&lt;choice&gt;</code> sub-elements (specifying merge strategy for specific tag instances).</p><p>In the example above:</p>
+          <ul>
+           <li>the <code>&lt;display-name&gt;</code> element from the last war file being merged will be used</li>
+           <li>the <code>&lt;welcome-file-list&gt;</code> definitions will be merged (assuming that we are merging two war files, each one specifies at most single welcome file)</li>
+           <li>the list of Spring configuration files will be merged, the rest of <code>&lt;context-param&gt;</code> elements will be preserved</li>
+          </ul><h3 id="MergingWARfiles-KnownProblems">Known Problems</h3>
+          <ul>
+           <li>If you build as a part of a multiproject build,&nbsp;Maven 3 may incorrectly store your output war file in the repository with a <code>.uberwar</code> extension. It does not do this if the project is built on its own.</li>
+           <li>If you're experiencing issues with the plugin because Maven is telling you that some Xerces classes cannot be found, please also add <code>xerces:xercesImpl</code> to the plugin's dependencies. That error should not be happening as of Java 6.</li>
           </ul> </td> 
         </tr> 
        </tbody>

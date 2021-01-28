@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -386,7 +386,7 @@
              <tr>
               <td class="confluenceTd"><pre>cargo.servlet.users</pre></td>
               <td class="confluenceTd"><pre>ServletPropertySet.USERS</pre></td>
-              <td class="confluenceTd"><p>Allow defining users, passwords and map to roles. Note that having no roles at all for a user is allowed.</p><p>Users can be also set using dedicated&nbsp;Maven 2 / Maven 3 or ANT tags, see chapters with&nbsp;Maven 2 / Maven 3 and ANT documentation.</p></td>
+              <td class="confluenceTd"><p>Allow defining users, passwords and map to roles. Note that having no roles at all for a user is allowed.</p><p>Users can be also set using dedicated Maven 3 goals or Ant tags, see chapters with <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 plugin</a> and <a href="Ant+support.html">Ant tasks</a>' documentation.</p></td>
               <td class="confluenceTd"><p>string</p></td>
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><pre>name1:pwd1:role11,...,role1N|name2:pwd2:role21,...,role2N|...</pre></td>
@@ -406,7 +406,7 @@
              <tr>
               <th class="confluenceTh"><p>Java</p></th>
               <th class="confluenceTh"><p>Ant</p></th>
-              <th class="confluenceTh"><p>Maven2</p></th>
+              <th class="confluenceTh"><p>Maven 3</p></th>
              </tr>
              <tr>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
@@ -466,8 +466,8 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
             <pre class="syntaxhighlighter-pre">&lt;build&gt;
   &lt;plugins&gt;
     &lt;plugin&gt;
-      &lt;groupId&gt;org.codehaus.cargo.maven2&lt;/groupId&gt;
-      &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+      &lt;groupId&gt;org.codehaus.cargo.maven3&lt;/groupId&gt;
+      &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
       &lt;configuration&gt;
         &lt;container&gt;
           &lt;containerId&gt;tomcat5x&lt;/containerId&gt;
@@ -485,7 +485,7 @@ configuration.setProperty(ServletPropertySet.PORT, "8081");
 &lt;/build&gt;
 </pre> 
            </div>
-          </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, ANT tasks or&nbsp;Maven 2 / Maven 3 goals) can also be overriden using Java properties.</p><p>For example, with the <a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a>:</p>
+          </div><h3 id="Configurationproperties-UsingJavaproperties">Using Java properties</h3><p>All configuration properties (be it with the Java API, Ant tasks or Maven 3 goals) can also be overriden using Java properties.</p><p>For example, with the <a href="Maven+3+Plugin.html">Maven 3 plugin</a>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">mvn -Dcargo.servlet.port=8082 cargo:start

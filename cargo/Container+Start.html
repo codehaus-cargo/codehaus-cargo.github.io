@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -285,7 +285,7 @@
         </tr> 
         <tr> 
          <td class="rightColumn"> <h3 id="ContainerStart-Definition">Definition</h3>Start a container that is not already running
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block" data-macro-id="">
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
@@ -301,7 +301,7 @@
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="ContainerStart-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Resin 3.x with no deployable:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
   new Resin3xStandaloneLocalConfiguration("target/resin3x"));
@@ -310,8 +310,8 @@ container.setHome("c:/apps/resin-3.0.15");
 container.start();
 </pre> 
            </div>
-          </div><h3 id="ContainerStart-ExampleusingtheAntAPI">Example using the Ant API</h3><p>Before being able to use the Cargo Ant tasks you need to register them against Ant. This is done by using the Ant <code>&lt;taskdef&gt;</code> element. See the <a href="Ant+support.html">Ant support page</a>. The action to start the container is specified using the <code>action="start"</code> attribute as shown below.</p><p>Starting Resin 3.x with no deployable:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          </div><h3 id="ContainerStart-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Before being able to use the Cargo Ant tasks you need to register them against Ant. This is done by using the Ant <code>&lt;taskdef&gt;</code> element. See the <a href="Ant+support.html">Ant support page</a>. The action to start the container is specified using the <code>action="start"</code> attribute as shown below.</p><p>Starting Resin 3.x with no deployable:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;cargo containerId="resin3x" home="c:/apps/resin-3.0.15" action="start"/&gt;
 </pre> 
@@ -326,7 +326,7 @@ container.start();
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="ContainerStart-ExampleusingtheMaven2/Maven3plugin">Example using the Maven2/Maven3 plugin</h3><p>For the Maven2/Maven plugin, please read: <a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a>.</p><h3 id="ContainerStart-Othertips">Other tips</h3><h5 id="ContainerStart-LettingthestartedcontaineroutliveCARGO'sprocess">Letting the started container outlive CARGO's process</h5><p>By default, the container started by CARGO is linked to CARGO's process; which means that once the Java process that has started the container is finished (be it via Java API, ANT or the Maven2/Maven3 plugin) the started container will also be killed.</p><p>In some cases, mostly if you want to use CARGO as a "launcher script", you need the started container to "outlive" CARGO's process, i.e. that the started container keeps running even after CARGO itself has terminated. This can be achieved by simply setting the property&nbsp;<code>GeneralPropertySet.SPAWN_PROCESS</code> (or, in the ANT tasks or Maven2/Maven3 plugin, the&nbsp;<code>cargo.process.spawn</code> property) to&nbsp;<code>true</code>.</p><p>Note that this feature is only available for standalone containers (i.e., not for embeded containers).</p> </td> 
+          </center><h3 id="ContainerStart-ExampleusingtheMaven3plugin">Example using the Maven3 plugin</h3><p>For the Maven 3 plugin, please read: <a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a>.</p><h3 id="ContainerStart-Othertips">Other tips</h3><h5 id="ContainerStart-LettingthestartedcontaineroutliveCodehausCargo'sprocess">Letting the started container outlive Codehaus Cargo's process</h5><p>By default, the container started by&nbsp;Codehaus Cargo is linked to Codehaus Cargo's process; which means that once the Java process that has started the container is finished (be it via Java API, ANT or the Maven 3 plugin) the started container will also be killed.</p><p>In some cases, mostly if you want to use&nbsp;Codehaus Cargo as a "launcher script", you need the started container to "outlive" Codehaus Cargo's process, i.e. that the started container keeps running even after&nbsp;Codehaus Cargo itself has terminated. This can be achieved by simply setting the property&nbsp;<code>GeneralPropertySet.SPAWN_PROCESS</code> (or, in the Ant tasks or Maven 3 plugin, the&nbsp;<code>cargo.process.spawn</code> property) to&nbsp;<code>true</code>.</p><p>Note that this feature is only available for standalone containers (i.e., not for embeded containers).</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -314,7 +314,7 @@
             <ol>
              <li>Open the CI page and click on the latest build</li>
              <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all CI jobs for the last build, as we split the container tests into multiple parallel jobs to reduce the total time required for integration testing). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Semaphore%20container%20log.png"></span><br><br></li>
+             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all CI jobs for the last build, as we split the container tests into multiple parallel jobs to reduce the total time required for integration testing). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" loading="lazy" src="attachments/Semaphore%20container%20log.png"></span><br><br></li>
             </ol></li>
            <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
             <ul>
@@ -360,7 +360,7 @@
                <li>Make sure the <a href="Project+Structure.html" rel="nofollow">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
               </ul></li>
              <li>Modify the <a href="Home.html" rel="nofollow">Home</a> page to update the available version number, the release notes URL the checkbox is pointing to and the release date</li>
-             <li>Modify the <a href="Maven2+Plugin+Installation.html" rel="nofollow">Maven2 Plugin Installation</a> page to update the&nbsp;<code>SNAPSHOT</code> version</li>
+             <li>Modify the <a href="Maven+3+Plugin+Installation.html" rel="nofollow">Maven 3 Plugin Installation</a> page to update the&nbsp;<code>SNAPSHOT</code> version</li>
              <li>Create a <a href="https://codehaus-cargo.atlassian.net/wiki/pages/createblogpost.action?spaceKey=CARGO" rel="nofollow">blog post</a></li>
              <li><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/exportspacehtml.action?key=CARGO" rel="nofollow">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="Downloads.html" rel="nofollow">Downloads</a> page</li>
              <li>Move the old version to the <a href="Archived+Downloads.html" rel="nofollow">Archived Downloads</a> page<br>
@@ -373,7 +373,7 @@
             <ol>
              <li>Go to the&nbsp;<code>generator</code> subdirectory of the <a href="https://github.com/codehaus-cargo/codehaus-cargo.github.io" class="external-link" rel="nofollow">codehaus-cargo.github.io repository</a> and run a&nbsp;<code>mvn verify</code> command to generate the Web site</li>
              <li>Download the source code of the tagged version in a temporary location and run a&nbsp;<code>mvn javadoc:aggregate</code> command to generate the API documentation</li>
-             <li>Move the&nbsp;<code>target/site/apidocs</code> folder to the root of the codehaus-cargo.github.io repository</li>
+             <li>Move the&nbsp;<code>target/site/apidocs</code> folder to the root of the <code>codehaus-cargo.github.io</code> repository</li>
              <li>Check in and push all changes, this will automatically update the Codehaus Cargo Web site</li>
             </ol></li>
            <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>
@@ -385,7 +385,7 @@
             <ol>
              <li>Edit the document in the Codehaus Confluence</li>
              <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
-             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/Insert%20wiki%20markup.png" title="Insert wiki markup.png"></span></li>
+             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" loading="lazy" src="attachments/Insert%20wiki%20markup.png" title="Insert wiki markup.png"></span></li>
              <li>Paste the wiki markup content</li>
             </ol>
            </div>

@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -301,11 +301,16 @@
           </center><h3 id="ExistingLocalConfiguration-SupportMatrix">Support Matrix</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Java</p></th>
               <th class="confluenceTh"><p>Ant</p></th>
-              <th class="confluenceTh"><p>Maven2</p></th>
+              <th class="confluenceTh"><p>Maven 3</p></th>
              </tr>
              <tr>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
@@ -318,7 +323,7 @@
           <ul>
            <li>By directly instantiating the configuration matching your container. For example:</li>
           </ul>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
 Configuration configuration = new ResinExistingLocalConfiguration("target/resin3x");
@@ -329,7 +334,7 @@ Configuration configuration = new ResinExistingLocalConfiguration("target/resin3
           <ul>
            <li>By using the <code>DefaultConfigurationFactory</code> which automatically maps the right implementation for the container you're using. For example:</li>
           </ul>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
 ConfigurationFactory factory = new DefaultConfigurationFactory();
@@ -349,7 +354,7 @@ Configuration configuration = factory.createConfiguration("resin3x",
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
           </center><h3 id="ExistingLocalConfiguration-AntTask">Ant Task</h3><p>Example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;cargo containerId="resin3x" [...]&gt;
   &lt;configuration type="existing" home="c:/apps/resin-3.0.9"/&gt;
@@ -357,8 +362,8 @@ Configuration configuration = factory.createConfiguration("resin3x",
 &lt;/cargo&gt;
 </pre> 
            </div>
-          </div><h3 id="ExistingLocalConfiguration-Maven2Plugin">Maven2 Plugin</h3>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-macro-id="">
+          </div><h3 id="ExistingLocalConfiguration-Maven3Plugin">Maven 3 Plugin</h3>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
 &lt;container&gt;

@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -273,7 +273,7 @@
           <table width="100%"> 
            <tbody>
             <tr valign="top"> 
-             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven2+plugin.html">Maven2 plugin</a> &gt; <a href="Maven2+Plugin+Getting+Started.html">Maven2 Plugin Getting Started</a> &gt; Starting and stopping a container</b> </td> 
+             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> &gt; <a href="Maven+3+Plugin+Getting+Started.html">Maven 3 Plugin Getting Started</a> &gt; Starting and stopping a container</b> </td> 
              <td align="right" width="300"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -284,21 +284,21 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h3 id="Startingandstoppingacontainer-TableofContents">Table of Contents</h3><p>This tutorial demonstrates how to use the Cargo&nbsp;Maven 2 / Maven 3 plugin to automatically start/stop a container (possibly deploying some deployables to it as it starts).</p>
+         <td class="rightColumn"> <h3 id="Startingandstoppingacontainer-TableofContents">Table of Contents</h3><p>This tutorial demonstrates how to use the Cargo Maven 3 plugin to automatically start/stop a container (possibly deploying some deployables to it as it starts).</p>
           <ul>
-           <li><a href="#Startingandstoppingacontainer-configuration">Configuration</a></li>
-           <li><a href="#Startingandstoppingacontainer-jetty">Configuring an Embedded Jetty Container</a></li>
-           <li><a href="#Startingandstoppingacontainer-java">Setting the JAVA_HOME for the container</a></li>
-           <li><a href="#Startingandstoppingacontainer-autodeploy">Automatic deployment of project's artifact (for J2EE projects)</a></li>
-           <li><a href="#Startingandstoppingacontainer-lifecycle">Automatically executing and stopping the container when running mvn install</a></li>
-           <li><a href="#Startingandstoppingacontainer-extrajars">Adding JARs to the container's classpath</a></li>
-           <li><a href="#Startingandstoppingacontainer-datasources">Adding JDBC DataSources to the container's JNDI tree</a></li>
-           <li><a href="#Startingandstoppingacontainer-resources">Adding POJO or JavaMail Resources to the container's JNDI tree</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-configuration">Configuration</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-jetty">Configuring an Embedded Jetty Container</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-java">Setting the JAVA_HOME for the container</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-autodeploy">Automatic deployment of project's artifact (for J2EE projects)</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-lifecycle">Automatically executing and stopping the container when running mvn install</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-extrajars">Adding JARs to the container's classpath</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-datasources">Adding JDBC DataSources to the container's JNDI tree</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-resources">Adding POJO or JavaMail Resources to the container's JNDI tree</a></li>
           </ul>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Like to learn by example? Take a look at our archetypes</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>We have several <a href="Maven2+Archetypes.html">Maven 2 / Maven 3 Archetypes</a> that contain sample&nbsp;Maven 2 / Maven 3 projects with different use cases for the Codehaus Cargo Maven 2 / Maven 3 plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven2+Archetypes.html">Maven2 Archetypes</a>.</p>
+            <p>We have several <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a> that contain sample Maven 3 projects with different use cases for the Codehaus Cargo Maven 3 plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a>.</p>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-configuration"><span class="confluence-anchor-link" id="configuration"> </span></span></p><h3 id="Startingandstoppingacontainer-Configuration">Configuration</h3><p><strong>Example of a minimalist configuration</strong>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
@@ -308,7 +308,7 @@
     &lt;plugins&gt;
       &lt;plugin&gt;
         &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-        &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+        &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
       &lt;/plugin&gt;
     &lt;/plugins&gt;
   &lt;/build&gt;
@@ -349,7 +349,7 @@
 [...]
 </pre> 
            </div>
-          </div><p>This minimal configuration allows you to configure a default Tomcat 5.x <a href="Standalone+Local+Configuration.html">standalone configuration</a> (when the configuration type is not defined as above, the plugin will use a standalone configuration by default) in <code>${project.basedir}/target/resin</code>.</p><p><strong>Example of a full-fledged&nbsp;Maven 2 / Maven 3 configuration</strong>:</p>
+          </div><p>This minimal configuration allows you to configure a default Tomcat 5.x <a href="Standalone+Local+Configuration.html">standalone configuration</a> (when the configuration type is not defined as above, the plugin will use a standalone configuration by default) in <code>${project.basedir}/target/resin</code>.</p><p><strong>Example of a full-fledged Maven 3 configuration</strong>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
@@ -405,7 +405,7 @@
           <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block">
            <p class="title">Timeouts</p><span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>The CARGO container definiton as well as the various application ping options in CARGO have a <code>timeout</code> option (which is extremely useful in real-life applications), the default timeout being set to 2 minutes in most cases. Please check the <a href="Maven2+Plugin+Reference+Guide.html">Maven 2 / Maven 3 Plugin Reference Guide</a> as well as the documentation about <a href="Container+Timeout.html">Container Timeout</a> for details.</p>
+            <p>The CARGO container definiton as well as the various application ping options in CARGO have a <code>timeout</code> option (which is extremely useful in real-life applications), the default timeout being set to 2 minutes in most cases. Please check the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 Plugin Reference Guide</a> as well as the documentation about <a href="Container+Timeout.html">Container Timeout</a> for details.</p>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-jetty"><span class="confluence-anchor-link" id="jetty"> </span></span></p><h3 id="Startingandstoppingacontainer-ConfiguringanEmbeddedJettyContainer">Configuring an Embedded Jetty Container</h3><p>The most basic container you can use in cargo is an Embedded Jetty 4x/5x/6x Container. The following Maven plugin definition will configure an embedded Jetty 6x container. Note the use of the <code>embedded</code> type element to specify an embedded container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
@@ -413,7 +413,7 @@
             <pre class="syntaxhighlighter-pre">[...]
 &lt;plugin&gt;
  &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
- &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+ &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
  &lt;configuration&gt;
    &lt;container&gt;
      &lt;containerId&gt;jetty6x&lt;/containerId&gt;
@@ -440,7 +440,7 @@
             <pre class="syntaxhighlighter-pre">[...]
 &lt;plugin&gt;
  &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
- &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+ &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
  &lt;configuration&gt;
    [...]
    &lt;properties&gt;
@@ -457,7 +457,7 @@
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
     [...]
     &lt;deployables&gt;
@@ -484,7 +484,7 @@
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;executions&gt;
     &lt;execution&gt;
       &lt;id&gt;start-container&lt;/id&gt;
@@ -521,7 +521,7 @@
 [...]
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
     &lt;container&gt;
       [...]
@@ -557,7 +557,7 @@
             <pre class="syntaxhighlighter-pre">[...]
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
     [...]
     &lt;properties&gt;
@@ -589,7 +589,7 @@
             <pre class="syntaxhighlighter-pre">[...]
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
     [...]
     &lt;properties&gt;
@@ -622,7 +622,7 @@
               <pre class="syntaxhighlighter-pre">[...]
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
     [...]
     &lt;properties&gt;
@@ -654,7 +654,7 @@
               <pre class="syntaxhighlighter-pre">[...]
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
     [...]
     &lt;properties&gt;
@@ -692,7 +692,7 @@
             <pre class="syntaxhighlighter-pre">[...]
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
     [...]
     &lt;properties&gt;
@@ -739,7 +739,7 @@
             <pre class="syntaxhighlighter-pre">[...]
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
     [...]
     &lt;properties&gt;
@@ -770,7 +770,7 @@
             <pre class="syntaxhighlighter-pre">[...]
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;configuration&gt;
     [...]
     &lt;properties&gt;

@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -284,7 +284,7 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h3 id="EmbeddedContainer-Definition">Definition</h3><p>A container executing in the same JVM where Cargo is running</p><h3 id="EmbeddedContainer-Explanation">Explanation</h3><p>An embedded container means that Cargo is using directly the container's Java API to control it and starts the container in the same JVM as where it is running. This implies you can do many advanced things programmatically - such as playing with the class loader, adding proxy classes, etc.</p><p>Please note that if you're using one of the embedded implementation you'll need to ensure that you have the container's JARs in your classpath.</p>
+         <td class="rightColumn"> <h3 id="EmbeddedContainer-Definition">Definition</h3><p><br>A container executing in the same JVM where Cargo is running<br></p><h3 id="EmbeddedContainer-Explanation">Explanation</h3><p>An embedded container means that Cargo is using directly the container's Java API to control it and starts the container in the same JVM as where it is running. This implies you can do many advanced things programmatically - such as playing with the class loader, adding proxy classes, etc.</p><p>Please note that if you're using one of the embedded implementation you'll need to ensure that you have the container's JARs in your classpath.</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <p class="title">Be very careful when using embedded containers</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -293,9 +293,9 @@
              <li>Any existing JVM setting, such as JVM properties or debuggers, will be inherited from the parent JVM and cannot be changed.</li>
              <li>Some features such as <a href="Debugging.html">logging</a> might not work as expected as they inherit existing Java logger settings.</li>
              <li>You might very quickly run into a JAR hell. While the Cargo samples' <code><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/main/java/org/codehaus/cargo/sample/java/EmbeddedContainerClasspathResolver.java" class="external-link" rel="nofollow">EmbeddedContainerClasspathResolver.java</a></code> might give you ideas on how to avoid it, this might not work in all circumstances.</li>
-             <li>If you are using either the <a class="unresolved" href="#">ANT tasks</a> or <a href="Maven2+plugin.html">Maven2/Maven3 plugin</a>, the container will most likely inherit even more "uncontrollable" items that come from these tools.</li>
-             <li>When using embedded containers with the <a href="Maven2+plugin.html">Maven2/Maven3 plugin</a>, Cargo will be deciding on the version of the container you use - and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-571" class="external-link" rel="nofollow">you cannot change it</a>.</li>
-             <li>Again when using embedded containers with the <a href="Maven2+plugin.html">Maven2/Maven3 plugin</a>, Cargo will only load a minimal set of dependencies and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-862" class="external-link" rel="nofollow">advanced features might be missing</a>.</li>
+             <li>If you are using either the <a class="unresolved" href="#">ANT tasks</a> or <a href="Maven+3+Plugin.html">Maven 3 plugin</a>, the container will most likely inherit even more "uncontrollable" items that come from these tools.</li>
+             <li>When using embedded containers with the <a href="Maven+3+Plugin.html">Maven 3 plugin</a>, Cargo will be deciding on the version of the container you use - and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-571" class="external-link" rel="nofollow">you cannot change it</a>.</li>
+             <li>Again when using embedded containers with the <a href="Maven+3+Plugin.html">Maven 3 plugin</a>, Cargo will only load a minimal set of dependencies and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-862" class="external-link" rel="nofollow">advanced features might be missing</a>.</li>
              <li><p>Some containers contain classed that have <code>final</code> attributes defined on certain classes, that remain set to their updated values even if you reset the class loader - The only way to revert this is to restart the JVM. This implies that:</p>
               <ul>
                <li><p>It might not possible to execute different versions of these containers in the same JVM</p></li>

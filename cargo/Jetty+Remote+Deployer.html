@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -331,7 +331,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="JettyRemoteDeployer-Examples">Examples</h3><p>Here is an example Maven2 plugin configuration that:</p>
+          </center><h3 id="JettyRemoteDeployer-Examples">Examples</h3><p>Here is an example <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 plugin configuration</a> that:</p>
           <ul>
            <li>Deploys on a remote Jetty 6.x server</li>
            <li>The server is on <code>production17</code>, port <code>8080</code></li>
@@ -354,7 +354,7 @@
 &lt;plugins&gt;
   &lt;plugin&gt;
     &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-    &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+    &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
     &lt;version&gt;${cargo.plugin.version}&lt;/version&gt;
     &lt;configuration&gt;
       &lt;container&gt;
@@ -391,7 +391,7 @@
 &lt;/plugins&gt;
 </pre> 
            </div>
-          </div><p>To run the given Maven2 plugin configuration on a simple Maven2 WAR project, simply execute:</p>
+          </div><p>To run the given Maven 3 plugin configuration on a simple Maven 3 WAR project, simply execute:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">mvn war:war
@@ -405,8 +405,8 @@ mvn cargo:deploy
             <p>By default, Jetty sets the&nbsp;<code>maxIdleTime</code> parameter in the&nbsp;<code>etc/jetty.xml</code> file 30 seconds. This means that if the actual deployment takes more than 30 seconds, you might get error messages like:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl"> 
-              <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.codehaus.cargo:cargo-maven2-plugin:1.2.2:deploy (default-cli)
-        on project display: Execution default-cli of goal org.codehaus.cargo:cargo-maven2-plugin:1.2.2:deploy
+              <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.codehaus.cargo:cargo-maven3-plugin:1.9.0:deploy (default-cli)
+        on project display: Execution default-cli of goal org.codehaus.cargo:cargo-maven3-plugin:1.9.0:deploy
         failed: Failed to deploy [/var/lib/jenkins/workspace/Vanessa-cargo/target/display-1.2.2.1-SNAPSHOT.war]:
         Unexpected end of file from server -&gt; [Help 1]
 

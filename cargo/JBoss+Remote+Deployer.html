@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -286,9 +286,9 @@
         <tr> 
          <td class="rightColumn"> <p>Based on the version of JBoss / WildFly you are using, please use the quick links below to directly go to the associated chapter:</p>
           <ul>
-           <li><a href="#JBossRemoteDeployer-jboss4x">JBoss 4.0.x and 4.2.x</a></li>
-           <li><a href="#JBossRemoteDeployer-jboss5x6x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</a></li>
-           <li><a href="#JBossRemoteDeployer-jboss7x">JBoss 7.0.x onwards / WildFly 8.x onwards</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491704#JBossRemoteDeployer-jboss4x">JBoss 4.0.x and 4.2.x</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491704#JBossRemoteDeployer-jboss5x6x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</a></li>
+           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491704#JBossRemoteDeployer-jboss7x">JBoss 7.0.x onwards / WildFly 8.x onwards</a></li>
           </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss4x"><span class="confluence-anchor-link" id="jboss4x"> </span></span></p><h3 id="JBossRemoteDeployer-JBoss4.0.xand4.2.x">JBoss 4.0.x and 4.2.x</h3><p>In JBoss 4.x, the JMX-based remote deployer can accept URLs that point to another machine. For example:</p>
           <blockquote>
            <p><code><a href="http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war" class="external-link" rel="nofollow">http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war</a></code></p>
@@ -301,10 +301,9 @@
            <li>JBoss deployment manager JARs</li>
            <li>JBoss remoting client JARs</li>
           </ul><p>Here is an example code for the users of the Java API:</p>
-          <blockquote>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
 
 // Add many libraries from JBOSS_HOME
 for (File jar : new File(this.localContainer.getHome(), "lib").listFiles())
@@ -331,13 +330,11 @@ Thread.currentThread().setContextClassLoader(classLoader);
 // Now, create the JBoss Remote container
 ...
 </pre> 
-            </div>
            </div>
-          </blockquote><p>Here is an example Maven2 plugin configuration:</p>
-          <blockquote>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">&lt;!--
+          </div><p>Here is an example <a href="Maven+3+Plugin.html">Maven 3 plugin</a> configuration:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">&lt;!--
   Some transitive dependencies of JBoss artifacts, for example apache-xerces:xml-apis, are
   only available on the JBoss third party repository.
   --&gt;
@@ -395,7 +392,7 @@ Thread.currentThread().setContextClassLoader(classLoader);
 
 &lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;version&gt;${cargo.plugin.version}&lt;/version&gt;
   &lt;configuration&gt;
     &lt;container&gt;
@@ -425,9 +422,8 @@ Thread.currentThread().setContextClassLoader(classLoader);
   &lt;/dependencies&gt;
 &lt;/plugin&gt;
 </pre> 
-            </div>
            </div>
-          </blockquote><p>You can also use the CARGO JBoss remote deployer to remotely deploy to JBoss farms versions 5.x and newer. To do so, use these two properties:</p>
+          </div><p>You can also use the CARGO JBoss remote deployer to remotely deploy to JBoss farms versions 5.x and newer. To do so, use these two properties:</p>
           <ul>
            <li><code>cargo.jboss.clustered</code>: if <code>true</code>, deployment is done in the <code>farm</code> directory</li>
            <li><code>cargo.jboss.configuration</code>: JBoss profile name, default name is <code>default</code></li>
@@ -518,10 +514,9 @@ fi
            <li>JBoss (Application Server) as well as JBoss Enterprise Application Platform (EAP) 6.x use the <code>cargo.jboss.management-native.port</code> port</li>
            <li>All WildFly versions as well as&nbsp;JBoss Enterprise Application Platform (EAP) 7.x use the <code>cargo.jboss.management-http.port</code> port</li>
           </ul><p>The following examples detail these differences.</p><p>Here is an example code for the users of the Java API:</p>
-          <blockquote>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">/**
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">/**
  * Add all JARs in a folder in the list of files (recursive).
  * @param folder Folder to recursively scan.
  * @param files List containing all files.
@@ -544,11 +539,11 @@ public static void addAllJars(File folder, List&lt;URL&gt; files) throws Excepti
     }
 }
 </pre> 
-            </div>
            </div>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
+          </div>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">List&lt;URL&gt; urls = new ArrayList&lt;URL&gt;();
 
 // Add many libraries from JBOSS_HOME/modules
 addAllJars(new File(this.localContainer.getHome(), "modules"), urls);
@@ -562,15 +557,13 @@ Thread.currentThread().setContextClassLoader(classLoader);
 // Now, create the JBoss Remote container
 ...
 </pre> 
-            </div>
            </div>
-          </blockquote><p>Here is an example Maven2 plugin configuration:</p>
-          <blockquote>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
+          </div><p>Here is an example <a href="Maven+3+Plugin.html">Maven 3 plugin</a> configuration:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;version&gt;${cargo.plugin.version}&lt;/version&gt;
   &lt;configuration&gt;
     &lt;container&gt;
@@ -594,9 +587,8 @@ Thread.currentThread().setContextClassLoader(classLoader);
   &lt;/dependencies&gt;
 &lt;/plugin&gt;
 </pre> 
-            </div>
            </div>
-          </blockquote><p><br></p> </td> 
+          </div><p><br></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

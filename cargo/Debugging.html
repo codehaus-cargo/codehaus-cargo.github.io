@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -284,7 +284,7 @@
           </table> </td> 
         </tr> 
         <tr> 
-         <td class="rightColumn"> <h3 id="Debugging-Definition">Definition</h3><p><br>Explain how to perform debugging when something doesn't work in Cargo<br></p><p>Sometimes, it can happen that the container does not start or stop as expected or you might have reasons to believe that CARGO is "acting weird". Here is a short list of things you can do to try debugging the problem.</p><h3 id="Debugging-Debuggingthecontainer">Debugging the container</h3><p>Most Java Virtual Machine implementations support remote debugging. Once started in debug mode, you can then remotely connect to your container using any IDE and debug your container and/or application.</p><p>In order to do so, add the following arguments to the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a>:</p>
+         <td class="rightColumn"> <h3 id="Debugging-Definition">Definition</h3><p>Explain how to perform debugging when something doesn't work in CargoSometimes, it can happen that the container does not start or stop as expected or you might have reasons to believe that&nbsp;Codehaus Cargo is "acting weird". Here is a short list of things you can do to try debugging the problem.</p><h3 id="Debugging-Debuggingthecontainer">Debugging the container</h3><p>Most Java Virtual Machine implementations support remote debugging. Once started in debug mode, you can then remotely connect to your container using any IDE and debug your container and/or application.</p><p>In order to do so, add the following arguments to the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">-Xdebug
@@ -297,12 +297,12 @@
           <ul>
            <li><strong>suspend</strong> is whether the launch of the container should first wait for a remote debugger to connect. If <code>y</code>, the container will wait for you to connect with your remote debugger before starting; if <code>n</code> the container will start immediately and at the same time listen on the remote debugging port.</li>
            <li><strong>port</strong> is the port number to use for remote debugging.</li>
-          </ul><p>Here is an example for starting a JOnAS 5.x container in Remote Debug on port 8000 without suspend mode using the Maven2 plugin:</p>
+          </ul><p>Here is an example for starting a JOnAS 5.x container in Remote Debug on port 8000 without suspend mode using the Maven 3 plugin:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-  &lt;artifactId&gt;cargo-maven2-plugin&lt;/artifactId&gt;
+  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
   &lt;version&gt;${cargo.version}&lt;/version&gt;
   &lt;configuration&gt;
     &lt;container&gt;
@@ -331,11 +331,11 @@
           <ol>
            <li>Click <strong>Debug</strong> - <strong>Attach Debugger...</strong></li>
            <li>In the window that appears, type in the remote host name and the port number then click OK</li>
-          </ol><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/NetBeans%20remote%20debugger.png"></span></p><p>Steps for achieving the same in Eclipse IDE are similar.</p>
+          </ol><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" loading="lazy" src="attachments/NetBeans%20remote%20debugger.png"></span></p><p>Steps for achieving the same in Eclipse IDE are similar.</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <p class="title">About the cargo.start.jvmargs property</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>The <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a> only exists since <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1353" class="external-link" rel="nofollow">Codehaus CARGO 1.4.18</a>.</p>
+            <p>The <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a> only exists since <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1353" class="external-link" rel="nofollow">Codehaus Cargo 1.4.18</a>.</p>
             <p>With older versions, you'll have to use <a href="Configuration+properties.html" rel="nofollow"><code>cargo.jvmargs</code></a> and make sure you set the execution property only on the&nbsp;<code>start</code> goal - Else you will get error messages such as:</p>
             <pre>[INFO] [talledLocalContainer] FATAL ERROR in native method: JDWP No transports initialized, jvmtiError=AGENT_ERROR_TRANSPORT_INIT(197)</pre>
             <pre>[WARNING] [talledLocalContainer] ERROR: transport error 202: bind failed: Address already in use</pre>
@@ -392,7 +392,7 @@ container.start();
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h4 id="Debugging-ExampleusingtheMaven2/Maven3plugin">Example using the Maven2/Maven3 plugin</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
+          </center><h4 id="Debugging-ExampleusingtheMaven3plugin">Example using the Maven 3 plugin</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;container&gt;
@@ -407,12 +407,12 @@ container.start();
   &lt;/properties&gt;
 &lt;/configuration&gt;&nbsp;</pre> 
            </div>
-          </div><p>Use the <code>append="true|false"</code> attribute for controlling the log file creation behavior.</p><h3 id="Debugging-DebuggingCARGOitself">Debugging CARGO itself</h3><p>To enable the Java debugger on ANT, export the&nbsp;<code>ANT_OPTS</code> system property using the parameters specified above. For example:</p>
+          </div><p>Use the <code>append="true|false"</code> attribute for controlling the log file creation behavior.</p><h3 id="Debugging-DebuggingCodehausCargoitself">Debugging Codehaus Cargo itself</h3><p>To enable the Java debugger on ANT, export the&nbsp;<code>ANT_OPTS</code> system property using the parameters specified above. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">export ANT_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000"</pre> 
            </div>
-          </div><p>On Maven2/Maven3, enabling Java debugger is done using the&nbsp;<code>mvnDebug</code> executable instead of&nbsp;<code>mvn</code>.</p>
+          </div><p>On Maven 3, enabling Java debugger is done using the&nbsp;<code>mvnDebug</code> executable instead of&nbsp;<code>mvn</code>.</p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">mvnDebug command on MacOS X</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -428,7 +428,7 @@ container.start();
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="Debugging-RedirectingCARGOlogstoafile">Redirecting CARGO logs to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI.1">Example using the Java API</h4><p>Some Cargo classes support generation of logs. This is implemented through the notion of <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/Logger.html" class="external-link" rel="nofollow"><code>Logger</code></a> and levels are managed using <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>LogLevel</code></a>. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>o.c.c.util.log.LogLevel</code></a>: <code>LogLevel.DEBUG</code>, <code>LogLevel.INFO</code> and <code>LogLevel.WARN</code> (<code>LogLevel.INFO</code> is the default value).</p><p>For example to turn on logging monitoring on a <code>Container</code> class, you can use:</p>
+          </center><h3 id="Debugging-RedirectingCodehausCargologstoafile">Redirecting&nbsp;Codehaus Cargo logs to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI.1">Example using the Java API</h4><p>Some Cargo classes support generation of logs. This is implemented through the notion of <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/Logger.html" class="external-link" rel="nofollow"><code>Logger</code></a> and levels are managed using <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>LogLevel</code></a>. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>o.c.c.util.log.LogLevel</code></a>: <code>LogLevel.DEBUG</code>, <code>LogLevel.INFO</code> and <code>LogLevel.WARN</code> (<code>LogLevel.INFO</code> is the default value).</p><p>For example to turn on logging monitoring on a <code>Container</code> class, you can use:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">Logger fileLogger = new FileLogger(new File("c:/tmp/cargo.log"), true);
@@ -451,7 +451,7 @@ container.setLogger(fileLogger);
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h4 id="Debugging-ExampleusingtheAntAPI.1">Example using the Ant API</h4><p>When using the Ant tasks, CARGO will by default use the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/AntLogger.html" class="external-link" rel="nofollow">AntLogger</a>. You can specify the log level using the&nbsp;<code>logLevel</code> attribute, and the log file by using the <code>log</code> attribute. For example:</p>
+          </center><h4 id="Debugging-ExampleusingtheAntAPI.1">Example using the Ant API</h4><p>When using the Ant tasks,&nbsp;Codehaus Cargo will by default use the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/AntLogger.html" class="external-link" rel="nofollow">AntLogger</a>. You can specify the log level using the&nbsp;<code>logLevel</code> attribute, and the log file by using the <code>log</code> attribute. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat4x" home="c:/apps/jakarta-tomcat-4.1.30" 
@@ -460,7 +460,7 @@ container.setLogger(fileLogger);
     log="target/cargo.log"/&gt;
 </pre> 
            </div>
-          </div><h4 id="Debugging-ExampleusingtheMaven2/Maven3plugin.1">Example using the Maven2/Maven3 plugin</h4><p>When using the Maven2/Maven3 plugin, CARGO will by default use the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/maven2/log/MavenLogger.html" class="external-link" rel="nofollow">MavenLogger</a>.</p><p>When you use&nbsp;<code>mvn</code> with the&nbsp;<code>-e</code> option, both Maven itself and the CARGO plugin will log everything in debug mode.</p><p>If you want to use the plugin in debug mode without having Maven itself in debug mode, you can specify the log level using the&nbsp;<code>logLevel</code> attribute, and the log file by using the <code>log</code> attribute. For example:</p>
+          </div><h4 id="Debugging-ExampleusingtheMaven3plugin.1">Example using the Maven 3 plugin</h4><p>When using the Maven 3 plugin,&nbsp;Codehaus Cargo will by default use the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/maven2/log/MavenLogger.html" class="external-link" rel="nofollow">MavenLogger</a>.</p><p>When you use&nbsp;<code>mvn</code> with the&nbsp;<code>-e</code> option, both Maven itself and the&nbsp;Codehaus Cargo plugin will log everything in debug mode.</p><p>If you want to use the plugin in debug mode without having Maven itself in debug mode, you can specify the log level using the&nbsp;<code>logLevel</code> attribute, and the log file by using the <code>log</code> attribute. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;container&gt;

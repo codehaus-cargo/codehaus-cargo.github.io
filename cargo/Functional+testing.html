@@ -67,7 +67,7 @@
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
-         <li><a href="Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></li>
+         <li><a href="Maven+3+Plugin.html">Maven 3 Plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
        <li><a href="Articles.html">Articles</a></li>
@@ -228,7 +228,7 @@
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven2+plugin.html">Maven 2 / Maven 3</a></li>
+       <li><a href="Maven+3+Plugin.html">Maven 2 / Maven 3</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
@@ -251,7 +251,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -286,16 +286,16 @@
         <tr> 
          <td class="rightColumn"> <h2 id="Functionaltesting-FunctionalTestingwithCargo">Functional Testing with Cargo</h2>This page explains how to do functional testing with the Cargo Java API and JUnit.
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">Are you using ANT or Maven2/Maven3?</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">Are you using Ant or Maven 3?</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>If you are relying on ANT or Maven2/Maven3 for your build, it is probably easier for you to use the associated tasks/plugin directly:</p>
+            <p>If you are relying on Ant or Maven 3 for your build, it is probably easier for you to use the associated tasks/plugin directly:</p>
             <ul>
-             <li>The documentation for the CARGO ANT tasks can be found here: <a href="Ant+support.html">Ant support</a>.</li>
-             <li>The documentation for the CARGO Maven2/Maven3 plugin can be found here: <a href="Maven2+plugin.html">Maven2 plugin</a>.</li>
+             <li>The documentation for our Ant tasks can be found here: <a href="Ant+support.html">Ant support</a>.</li>
+             <li>The documentation for our Maven 3 plugin can be found here: <a href="Maven+3+Plugin.html">Maven 3 Plugin</a>.</li>
             </ul>
-            <p>Note that the Maven2/Maven3 plugin also has <a href="Maven2+Archetypes.html">archetypes</a> you can directly use as a skeleton for integration.</p>
+            <p>Note that the Maven 3 plugin also has <a href="Maven+3+Archetypes.html">archetypes</a> you can directly use as a skeleton for integration.</p>
            </div>
-          </div><p><br></p><h3 id="Functionaltesting-Example">Example</h3><p>The best is to create a JUnit <code>TestSetup</code> extension so that you start and stop your container once for the whole test suite. For example:</p>
+          </div><h3 id="Functionaltesting-Example">Example</h3><p>The best is to create a JUnit <code>TestSetup</code> extension so that you start and stop your container once for the whole test suite. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">import junit.extensions.TestSetup;
@@ -365,111 +365,7 @@ public class MyTest extends TestCase
 }
 </pre> 
            </div>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="Functionaltesting-References">References</h3>
-          <ul>
-           <li><a href="attachments/Vincent%20Massol%20Think%20Tank%20-%20Using%20Cargo%200.4%20for%20functional%20testing.pdf">Using Cargo 0.4 for functional testing</a></li>
-          </ul><h2 id="Functionaltesting-FunctionalTestingwithCargo.1">Functional Testing with Cargo</h2>This page explains how to do functional testing with the Cargo Java API and JUnit.
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">Are you using ANT or Maven2/Maven3?</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>If you are relying on ANT or Maven2/Maven3 for your build, it is probably easier for you to use the associated tasks/plugin directly:</p>
-            <ul>
-             <li>The documentation for the CARGO ANT tasks can be found here: <a href="Ant+support.html">Ant support</a>.</li>
-             <li>The documentation for the CARGO Maven2/Maven3 plugin can be found here: <a href="Maven2+plugin.html">Maven2 plugin</a>.</li>
-            </ul>
-            <p>Note that the Maven2/Maven3 plugin also has <a href="Maven2+Archetypes.html">archetypes</a> you can directly use as a skeleton for integration.</p>
-           </div>
-          </div><p><br></p><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="Functionaltesting-Example.1">Example</h3><p>The best is to create a JUnit <code>TestSetup</code> extension so that you start and stop your container once for the whole test suite. For example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre">import junit.extensions.TestSetup;
-import junit.framework.Test;
-[...]
-
-public class CargoTestSetup extends TestSetup
-{
-    InstalledLocalContainer container;
-
-    public CargoTestSetup(Test test)
-    {
-        super(test);
-    }
-
-    protected void setUp() throws Exception
-    {
-        // (1) Optional step to install the container from a URL pointing to its distribution
-        Installer installer = new ZipURLInstaller(
-            new URL("https://repo.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip"));
-        installer.install();
-
-        // (2) Create the Cargo Container instance wrapping our physical container
-        LocalConfiguration configuration = (LocalConfiguration) new DefaultConfigurationFactory().createConfiguration(
-            "tomcat7x", ContainerType.INSTALLED, ConfigurationType.STANDALONE);
-        InstalledLocalContainer container =
-            (InstalledLocalContainer) new DefaultContainerFactory().createContainer(
-                "tomcat7x", ContainerType.INSTALLED, configuration);
-        container.setHome(installer.getHome());
-
-        // (3) Statically deploy some WAR (optional)
-        configuration.addDeployable(new WAR("cargo.war"));
-
-        // (4) Start the container
-        container.start();
-    }
-
-    protected void tearDown() throws Exception
-    {
-        // (6) Stop the container
-        container.stop();
-    }
-}
-</pre> 
-           </div>
-          </div><p>Then write your test case. For example:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre">import junit.framework.TestCase;
-import junit.framework.Test;
-import junit.framework.TestSuite;
-[...]
-
-public class MyTest extends TestCase
-{
-    public static Test suite()
-    {
-        TestSuite suite = new TestSuite(MyTest.class);
-        return new CargoTestSetup(suite);
-    }
-
-    public void testSomething()
-    {
-        // (5) Perform any test you wish here
-        [...]
-    }
-}
-</pre> 
-           </div>
-          </div><h3 id="Functionaltesting-References.1">References</h3>
+          </div><h3 id="Functionaltesting-References">References</h3>
           <ul>
            <li><a href="attachments/Vincent%20Massol%20Think%20Tank%20-%20Using%20Cargo%200.4%20for%20functional%20testing.pdf">Using Cargo 0.4 for functional testing</a></li>
           </ul> </td> 
