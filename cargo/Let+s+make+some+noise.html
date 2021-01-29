@@ -29,12 +29,12 @@
   </script> 
  </head> 
  <body> 
-  <table width="100%" class="layout" style="border-collapse:collapse"> 
+  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%"> 
    <tbody>
-    <tr height="83"> 
+    <tr style="height:83px"> 
      <td colspan="2" style="padding:0px"> 
       <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
-       <table width="100%" class="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')"> 
         <tbody>
          <tr> 
           <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
@@ -44,7 +44,7 @@
        </table> 
       </div> </td> 
     </tr> 
-    <tr> 
+    <tr valign="top"> 
      <td class="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
@@ -265,16 +265,16 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td valign="top" style="padding:0px"> 
-      <table width="100%" style="border-collapse:collapse"> 
+     <td style="padding:0px"> 
+      <table style="border-collapse:collapse;width:100%;height:100%"> 
        <tbody>
-        <tr> 
-         <td class="breadcrumbs" style="padding:10px 17px"> 
-          <table width="100%"> 
+        <tr style="height:38px"> 
+         <td class="breadcrumbs"> 
+          <table style="border-collapse:collapse;width:100%;height:100%"> 
            <tbody>
-            <tr valign="top"> 
+            <tr valign="middle"> 
              <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Home.html">Home</a> &gt; Let s make some noise</b> </td> 
-             <td align="right" width="300"> 
+             <td align="right" style="width:300px"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
                <input type="submit" value="Search"> 
@@ -283,7 +283,7 @@
            </tbody>
           </table> </td> 
         </tr> 
-        <tr> 
+        <tr valign="top"> 
          <td class="rightColumn"> <p>Hello, &lt;application server&gt; enthusiasts</p> <p>This is &lt;name&gt; from the Codehaus CARGO team. I'm sending this short e-mail to tell you about the immediate availability of CARGO 1.0.4.</p> <p>First question, what is CARGO? CARGO is an open source application that can start, stop, configure and deploy applications as well as configuration files on many, many Java server containers. CARGO is available as a simple Java library, a set of ANT tasks as well as a Maven2 plugin.</p> <p>Of course, &lt;application server&gt; is part of the servers supported by CARGO... In detail, supported versions include &lt;supported versions&gt;.</p> <p>Second question, what would you need CARGO for? Well, typical use cases for CARGO are:</p> 
           <ul> 
            <li><strong>Functional and integration testing on a real server environment</strong>: indeed, CARGO can be used to download, configure, start and stop &lt;application server&gt; and also to deploy all your datasources and applications to it; so you can do real-world tests. 
@@ -313,7 +313,7 @@
     <tr height="23"> 
      <td colspan="2" style="padding:0px"> 
       <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
-       <table width="100%"> 
+       <table style="width:100%"> 
         <tbody>
          <tr valign="top"> 
           <td align="left"> Copyright 2004-2021. All rights reserved unless otherwise noted.<br> </td> 

@@ -29,12 +29,12 @@
   </script> 
  </head> 
  <body> 
-  <table width="100%" class="layout" style="border-collapse:collapse"> 
+  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%"> 
    <tbody>
-    <tr height="83"> 
+    <tr style="height:83px"> 
      <td colspan="2" style="padding:0px"> 
       <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
-       <table width="100%" class="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')"> 
         <tbody>
          <tr> 
           <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
@@ -44,7 +44,7 @@
        </table> 
       </div> </td> 
     </tr> 
-    <tr> 
+    <tr valign="top"> 
      <td class="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
@@ -265,16 +265,16 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td valign="top" style="padding:0px"> 
-      <table width="100%" style="border-collapse:collapse"> 
+     <td style="padding:0px"> 
+      <table style="border-collapse:collapse;width:100%;height:100%"> 
        <tbody>
-        <tr> 
-         <td class="breadcrumbs" style="padding:10px 17px"> 
-          <table width="100%"> 
+        <tr style="height:38px"> 
+         <td class="breadcrumbs"> 
+          <table style="border-collapse:collapse;width:100%;height:100%"> 
            <tbody>
-            <tr valign="top"> 
+            <tr valign="middle"> 
              <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; Cargo Daemon</b> </td> 
-             <td align="right" width="300"> 
+             <td align="right" style="width:300px"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
                <input type="submit" value="Search"> 
@@ -283,7 +283,7 @@
            </tbody>
           </table> </td> 
         </tr> 
-        <tr> 
+        <tr valign="top"> 
          <td class="rightColumn"> <h1 id="CargoDaemon-Introduction">Introduction</h1><p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine.</p><p>The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command.</p><p>It can be accessed using a browser-based UI, via Java API, <a href="Ant+Tasks+Reference+Guide.html#AntTasksReferenceGuide-daemon">Ant tasks</a> or <a href="Maven+3+Plugin+Reference+Guide.html#Maven3PluginReferenceGuide-daemon">Maven 3 plugin</a>.</p><h1 id="CargoDaemon-WhyusetheCargoDaemon?">Why use the Cargo Daemon?</h1><p>Most web containers (e.g. Tomcat, Jetty) provide built-in remote deployment facilities already, also many of them already have daemon integrations; so why use the Cargo Daemon?</p>
           <ul>
            <li><strong>During intense redeployment</strong> (i.e., testing and even sometimes QA or production hot deployments): All of the remote deployment facilities that keep the JVM alive will eventually suffer from the dreaded <code>java.lang.OutOfMemoryError: PermGen space</code> exception if something in the web application is leaking memory.<br>Most web containers try their best to track down these 'dead' objects and forcefully remove them, but it does not always succeed to reclaim the memory. With a leaking web application, the available memory starts to shrink after each redeploy, and eventually the memory is exhausted.<br>The only solution to this is to kill the JVM, and restart it. And that is exactly what the Cargo Daemon tries to manage. It will try to shutdown the web application cleanly, but if that fails it will forcefully kill the JVM.<br>It is the only way to guarantee that a new version of your web application always starts when you want it to.</li>
@@ -408,7 +408,7 @@
     <tr height="23"> 
      <td colspan="2" style="padding:0px"> 
       <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
-       <table width="100%"> 
+       <table style="width:100%"> 
         <tbody>
          <tr valign="top"> 
           <td align="left"> Copyright 2004-2021. All rights reserved unless otherwise noted.<br> </td> 

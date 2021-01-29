@@ -29,12 +29,12 @@
   </script> 
  </head> 
  <body> 
-  <table width="100%" class="layout" style="border-collapse:collapse"> 
+  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%"> 
    <tbody>
-    <tr height="83"> 
+    <tr style="height:83px"> 
      <td colspan="2" style="padding:0px"> 
       <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
-       <table width="100%" class="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')"> 
         <tbody>
          <tr> 
           <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
@@ -44,7 +44,7 @@
        </table> 
       </div> </td> 
     </tr> 
-    <tr> 
+    <tr valign="top"> 
      <td class="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
@@ -265,16 +265,16 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td valign="top" style="padding:0px"> 
-      <table width="100%" style="border-collapse:collapse"> 
+     <td style="padding:0px"> 
+      <table style="border-collapse:collapse;width:100%;height:100%"> 
        <tbody>
-        <tr> 
-         <td class="breadcrumbs" style="padding:10px 17px"> 
-          <table width="100%"> 
+        <tr style="height:38px"> 
+         <td class="breadcrumbs"> 
+          <table style="border-collapse:collapse;width:100%;height:100%"> 
            <tbody>
-            <tr valign="top"> 
+            <tr valign="middle"> 
              <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; Another jump in Codehaus Cargo s history version 1.8.0 is here</b> </td> 
-             <td align="right" width="300"> 
+             <td align="right" style="width:300px"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
                <input type="submit" value="Search"> 
@@ -283,7 +283,7 @@
            </tbody>
           </table> </td> 
         </tr> 
-        <tr> 
+        <tr valign="top"> 
          <td class="rightColumn"> <p>Dear Codehaus Cargo enthusiasts</p><p>We are happy to announce another jump in Codehaus Cargo’s history, version 1.8.0.</p><p>As with other such jumps, this comes with the change in the minimum Java version for Codehaus Cargo: our minimum requirement is now Java 8 (of course, you can still set the <code>JAVA_HOME</code> of the container executions to “any” Java version). Differently from other times, though, the motivations for this change are different:</p>
           <ul>
            <li><p>Contrarily to previous times, Java 7 itself is not “fully EOL” yet: <a href="https://www.oracle.com/java/technologies/java-se-support-roadmap.html" class="external-link" rel="nofollow">Java 7’s extended support will actually last until July 2022</a>, on the other hand the last public release of Java 7 lacks the support for the TLS 1.2 protocol - which is used by most HTTPS-based Web servers (and hence many Maven2/Maven3 repositories) today - while the “only” way to have such “modern” versions of Java 7 is to have an Oracle Extended Support subscription. That hence made Java 7 very difficult to justify for a free of charge, open source project.</p></li>
@@ -321,7 +321,7 @@
     <tr height="23"> 
      <td colspan="2" style="padding:0px"> 
       <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
-       <table width="100%"> 
+       <table style="width:100%"> 
         <tbody>
          <tr valign="top"> 
           <td align="left"> Copyright 2004-2021. All rights reserved unless otherwise noted.<br> </td> 

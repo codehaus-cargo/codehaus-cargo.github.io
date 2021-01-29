@@ -29,12 +29,12 @@
   </script> 
  </head> 
  <body> 
-  <table width="100%" class="layout" style="border-collapse:collapse"> 
+  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%"> 
    <tbody>
-    <tr height="83"> 
+    <tr style="height:83px"> 
      <td colspan="2" style="padding:0px"> 
       <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
-       <table width="100%" class="banner" style="padding:0px;background-image:url('attachments/cargo-banner-center.png')"> 
+       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')"> 
         <tbody>
          <tr> 
           <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
@@ -44,7 +44,7 @@
        </table> 
       </div> </td> 
     </tr> 
-    <tr> 
+    <tr valign="top"> 
      <td class="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
@@ -265,16 +265,16 @@
         </tr> 
        </tbody>
       </table> </td> 
-     <td valign="top" style="padding:0px"> 
-      <table width="100%" style="border-collapse:collapse"> 
+     <td style="padding:0px"> 
+      <table style="border-collapse:collapse;width:100%;height:100%"> 
        <tbody>
-        <tr> 
-         <td class="breadcrumbs" style="padding:10px 17px"> 
-          <table width="100%"> 
+        <tr style="height:38px"> 
+         <td class="breadcrumbs"> 
+          <table style="border-collapse:collapse;width:100%;height:100%"> 
            <tbody>
-            <tr valign="top"> 
+            <tr valign="middle"> 
              <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Configuration.html">Configuration</a> &gt; <a href="Local+Configuration.html">Local Configuration</a> &gt; Custom File Configurations</b> </td> 
-             <td align="right" width="300"> 
+             <td align="right" style="width:300px"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
                <input type="submit" value="Search"> 
@@ -283,7 +283,7 @@
            </tbody>
           </table> </td> 
         </tr> 
-        <tr> 
+        <tr valign="top"> 
          <td class="rightColumn"> <h3 id="CustomFileConfigurations-CustomFileConfigurations">Custom File Configurations</h3><p>It is sometimes necessary to make changes to files within a Cargo standalone configuration. Normally Cargo will create this configuration and then start the server leaving the user with no chance to replace or modify these files before the server is started.</p><h4 id="CustomFileConfigurations-CustomConfigurationFiles">Custom Configuration Files</h4><p>The main reason for file changes is to make changes to configuration files to add, remove or modify configuration settings that are not yet covered by Cargo.</p><p>Cargo uses its own default configuration files (located within the cargo jars) which use token replacements to set the Cargo configuration options. These files can be extracted out of the jar so that modification can be made and Cargo can be instructed to use these new configuration files instead.</p><p>Custom tokens can also be specified in the configuration files and their values set in the cargo properties.</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
@@ -429,7 +429,7 @@
     <tr height="23"> 
      <td colspan="2" style="padding:0px"> 
       <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
-       <table width="100%"> 
+       <table style="width:100%"> 
         <tbody>
          <tr valign="top"> 
           <td align="left"> Copyright 2004-2021. All rights reserved unless otherwise noted.<br> </td> 
