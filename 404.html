@@ -14,6 +14,8 @@
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
+    } else if (location.pathname === "/cargo/") {
+      location.replace("/cargo/Home.html");
     } else if (location.href.indexOf("/cargo/Maven2+plugin.html") >= 0) {
       location.replace(location.href.replace("/cargo/Maven2+plugin.html", "/cargo/Maven+3+Plugin.html"));
     } else if (location.href.indexOf("/cargo/Maven2+Plugin+") >= 0) {
@@ -41,7 +43,7 @@
 </head>
 
 <body>
-  <table width="100%" class="layout" style="border-collapse:collapse">
+  <table width="100%" height="100%" class="layout" style="border-collapse:collapse">
     <tr height="83">
       <td colspan="2" style="padding:0px">
         <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2">
@@ -63,7 +65,7 @@
         &nbsp;
       </td>
       <td valign="top" style="padding:0px">
-        <table width="100%" style="border-collapse:collapse">
+        <table width="100%" height="100%" style="border-collapse:collapse">
           <tr>
             <td class="breadcrumbs" style="padding:10px 17px">
               <table width="100%">
@@ -85,7 +87,8 @@
             <td class="rightColumn">
               We are sorry, the page you are looking for does not exist anymore - Either it never did or it has been moved.<br/><br/>
               If you suspect the page has been moved, we would suggest trying to search for it using the search box on the top right.<br/><br/>
-              Please do reach out to us via our <a href="/cargo/Mailing+Lists.html">mailing lists</a> if this comes as a surprise.
+              Please do reach out to us via our <a href="/cargo/Mailing+Lists.html">mailing lists</a> if this comes as a surprise.<br/><br/>
+              <br/><br/>&nbsp;
             </td>
           </tr>
         </table>
