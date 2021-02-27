@@ -16,6 +16,8 @@
       location.replace("https://" + location.href.substring(7));
     } else if (location.pathname === "/cargo/") {
       location.replace("/cargo/Home.html");
+    } else if (location.href.indexOf("/cargo/Maven2+Archetypes.html") >= 0) {
+      location.replace(location.href.replace("/cargo/Maven2+Archetypes.html", "/cargo/Maven+3+Archetypes.html").replace("#Maven2Archetypes", "#Maven3Archetypes"));
     } else if (location.href.indexOf("/cargo/Maven2+plugin.html") >= 0) {
       location.replace(location.href.replace("/cargo/Maven2+plugin.html", "/cargo/Maven+3+Plugin.html"));
     } else if (location.href.indexOf("/cargo/Maven2+Plugin+") >= 0) {
