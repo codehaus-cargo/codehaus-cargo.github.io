@@ -363,15 +363,7 @@ public class WebsiteGenerator implements Runnable
                 try (InputStream is = connection.getInputStream())
                 {
                     String filePath = url.getPath();
-                    int questionMark = filePath.lastIndexOf('?');
-                    if (questionMark != -1)
-                    {
-                        filePath = filePath.substring(filePath.lastIndexOf('/'), questionMark);
-                    }
-                    else
-                    {
-                        filePath = filePath.substring(filePath.lastIndexOf('/'));
-                    }
+                    filePath = filePath.substring(filePath.lastIndexOf('/'));
                     filePath = URLDecoder.decode(filePath, "UTF-8");
                     File file = new File("target");
                     if (url.getPath().contains("/wiki/rest/api/content/"))
@@ -529,7 +521,16 @@ public class WebsiteGenerator implements Runnable
                         {
                             attachment = "https://codehaus-cargo.atlassian.net" + attachment;
                         }
-                        if (!"blank.gif".equals(attachment))
+                        int questionMark = attachment.indexOf('?');
+                        if (questionMark != -1)
+                        {
+                            attachment = attachment.substring(0, questionMark);
+                        }
+                        if (attachment.endsWith("default.png"))
+                        {
+                            attachment = "blank.gif";
+                        }
+                        if (!attachment.endsWith("blank.gif"))
                         {
                             URL attachmentUrl = new URL(attachment);
                             synchronized (attachments)
@@ -545,15 +546,6 @@ public class WebsiteGenerator implements Runnable
                             }
                         }
                         attachment = attachment.substring(attachment.lastIndexOf('/') + 1);
-                        int questionMark = attachment.lastIndexOf('?');
-                        if (questionMark != -1)
-                        {
-                            attachment = attachment.substring(0, questionMark);
-                        }
-                        if ("default.png".equals(attachment))
-                        {
-                            attachment = "blank.gif";
-                        }
                     }
                     sb.append(attachment);
                     sb.append("\"");

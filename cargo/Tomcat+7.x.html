@@ -1219,13 +1219,6 @@
           </center><h4 id="Tomcat7.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4><h5 id="Tomcat7.x-Forremotecontainero.c.c.c.tomcat.Tomcat7xRemoteContainer">For remote container o.c.c.c.tomcat.Tomcat7xRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
-            <colgroup>
-             <col>
-             <col>
-             <col>
-             <col>
-             <col>
-            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -1305,7 +1298,7 @@
            <div class="confluence-information-macro-body">
             <p>With Tomcat 7, the Tomcat manager has multiple aspects to be careful about:</p>
             <ul>
-             <li>Your browser by default accesses the HTML-based manager whereas CARGO needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a class="external-link" href="http://production27:8080/manager/text" rel="nofollow">http://production27:8080/manager/text</a></code></li>
+             <li>Your browser by default accesses the HTML-based manager whereas Codehaus Cargo needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a class="external-link" href="http://production27:8080/manager/text" rel="nofollow">http://production27:8080/manager/text</a></code></li>
              <li>The text-based manager requires to be accessed by a user with the <code>manager-script</code> role; and by default no user has that role. As a result, please make sure you modify your <code>tomcat-users.xml</code> file to give that role to a user.<br>You can read more in the Tomcat documentation: <a class="external-link" href="http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html" rel="nofollow">http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html</a></li>
             </ul>
            </div>
