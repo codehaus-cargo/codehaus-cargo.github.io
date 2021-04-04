@@ -31,7 +31,7 @@
     <dependency>
       <groupId>org.json</groupId>
       <artifactId>json</artifactId>
-      <version>20201115</version>
+      <version>20210307</version>
     </dependency>
     <dependency>
       <groupId>org.jsoup</groupId>
@@ -42,7 +42,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.13.1</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -96,16 +96,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>
-        <!--
-          We consciously don't upgrade to the maven-antrun-plugin's 3.0 and newer versions,
-          as these have removed the <tasks> parameter
-          -->
-        <version>1.8</version>
+        <version>3.0.0</version>
         <executions>
           <execution>
             <phase>verify</phase>
             <configuration>
-              <tasks>
+              <target>
                 <mkdir dir="../cargo"/>
                 <delete includeemptydirs="false">
                   <fileset dir="../cargo" includes="*"/>
@@ -120,7 +116,7 @@
                 <copy todir="../cargo/attachments">
                   <fileset dir="${project.build.directory}/attachments"/>
                 </copy>
-              </tasks>
+              </target>
             </configuration>
             <goals>
               <goal>run</goal>
