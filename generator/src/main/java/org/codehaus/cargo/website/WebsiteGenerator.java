@@ -555,6 +555,10 @@ public class WebsiteGenerator implements Runnable
                 value = sb.toString();
 
                 File file = new File("target/source", toFilename(result.getString("title")));
+                if (value.contains("https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action"))
+                {
+                    throw new IllegalArgumentException("Page " + result.getString("title") + " contains a draft link");
+                }
                 writeFile(file, value);
                 files.add(file);
             }

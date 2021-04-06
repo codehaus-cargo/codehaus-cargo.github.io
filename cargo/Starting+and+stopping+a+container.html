@@ -287,14 +287,14 @@
         <tr valign="top"> 
          <td class="rightColumn"> <h3 id="Startingandstoppingacontainer-TableofContents">Table of Contents</h3><p>This tutorial demonstrates how to use the Cargo Maven 3 plugin to automatically start/stop a container (possibly deploying some deployables to it as it starts).</p>
           <ul>
-           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-configuration">Configuration</a></li>
-           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-jetty">Configuring an Embedded Jetty Container</a></li>
-           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-java">Setting the JAVA_HOME for the container</a></li>
-           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-autodeploy">Automatic deployment of project's artifact (for J2EE projects)</a></li>
-           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-lifecycle">Automatically executing and stopping the container when running mvn install</a></li>
-           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-extrajars">Adding JARs to the container's classpath</a></li>
-           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-datasources">Adding JDBC DataSources to the container's JNDI tree</a></li>
-           <li><a href="https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action?draftId=491608#Startingandstoppingacontainer-resources">Adding POJO or JavaMail Resources to the container's JNDI tree</a></li>
+           <li><a href="#Startingandstoppingacontainer-configuration">Configuration</a></li>
+           <li><a href="#Startingandstoppingacontainer-jetty">Configuring an Embedded Jetty or Tomcat container</a></li>
+           <li><a href="#Startingandstoppingacontainer-java">Setting the <code>JAVA_HOME</code> for the container</a></li>
+           <li><a href="#Startingandstoppingacontainer-autodeploy">Automatic deployment of project's artifact (for&nbsp;J2EE, Java EE or Jakarta EE projects)</a></li>
+           <li><a href="#Startingandstoppingacontainer-lifecycle">Automatically executing and stopping the container when running <code>mvn install</code></a></li>
+           <li><a href="#Startingandstoppingacontainer-extrajars">Adding JARs to the container's classpath</a></li>
+           <li><a href="#Startingandstoppingacontainer-datasources">Adding JDBC DataSources to the container's JNDI tree</a></li>
+           <li><a href="#Startingandstoppingacontainer-resources">Adding POJO or JavaMail Resources to the container's JNDI tree</a></li>
           </ul>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Like to learn by example? Take a look at our archetypes</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
@@ -316,7 +316,7 @@
 [...]
 </pre> 
            </div>
-          </div><p>Yes, you've read it right, there's no <code>&lt;configuration&gt;</code> element in this example! When you use this setup the Cargo m2 plugin will use a Jetty container by default. You can start the container with <code>mvn cargo:start</code> and stop it with <code>mvn cargo:stop</code>.</p>
+          </div><p>Yes, you've read it right, there's no <code>&lt;configuration&gt;</code> element in this example! When you use this setup the <a href="Maven+3+Plugin.html">Cargo Maven 3 plugin</a> will use a Jetty container by default. You can start the container with <code>mvn cargo:start</code> and stop it with <code>mvn cargo:stop</code>.</p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Wait after the container has started</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -406,9 +406,9 @@
           <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block">
            <p class="title">Timeouts</p><span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>The CARGO container definiton as well as the various application ping options in CARGO have a <code>timeout</code> option (which is extremely useful in real-life applications), the default timeout being set to 2 minutes in most cases. Please check the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 Plugin Reference Guide</a> as well as the documentation about <a href="Container+Timeout.html">Container Timeout</a> for details.</p>
+            <p>The Codehaus Cargo container definiton as well as the various application ping options in&nbsp;Codehaus Cargo have a <code>timeout</code> option (which is extremely useful in real-life applications), the default timeout being set to 2 minutes in most cases. Please check the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 Plugin Reference Guide</a> as well as the documentation about <a href="Container+Timeout.html">Container Timeout</a> for details.</p>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-jetty"><span class="confluence-anchor-link" id="jetty"> </span></span></p><h3 id="Startingandstoppingacontainer-ConfiguringanEmbeddedJettyContainer">Configuring an Embedded Jetty Container</h3><p>The most basic container you can use in cargo is an Embedded Jetty 4x/5x/6x Container. The following Maven plugin definition will configure an embedded Jetty 6x container. Note the use of the <code>embedded</code> type element to specify an embedded container.</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-jetty"><span class="confluence-anchor-link" id="jetty"> </span></span></p><h3 id="Startingandstoppingacontainer-ConfiguringanEmbeddedJettyorTomcatcontainer">Configuring an Embedded Jetty or Tomcat container</h3><p>The most basic container you can use in cargo is an Embedded Jetty or Tomcat containers. The following Maven plugin definition will configure an embedded <a href="Jetty+10.x.html">Jetty 10.x</a> container. Note the use of the <code>embedded</code> type element to specify an embedded container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
@@ -417,7 +417,7 @@
  &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
  &lt;configuration&gt;
    &lt;container&gt;
-     &lt;containerId&gt;jetty6x&lt;/containerId&gt;
+     &lt;containerId&gt;jetty10x&lt;/containerId&gt;
      &lt;type&gt;embedded&lt;/type&gt;
    &lt;/container&gt;
  &lt;/configuration&gt;
@@ -425,7 +425,7 @@
 [...]
 </pre> 
            </div>
-          </div><p>Note: If you wish to use Jetty 5.x, you don't have to specify <code>&lt;containerId&gt;</code> nor <code>&lt;type&gt;</code> in the <code>&lt;container&gt;</code> element because Jetty 5x is Cargo's default container.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-java"><span class="confluence-anchor-link" id="java"> </span></span></p><script type="text/javascript">
+          </div><p><strong>Note</strong>: If you wish to use <a href="Jetty+9.x.html">Jetty 9.x</a>, you don't have to specify <code>&lt;containerId&gt;</code> nor <code>&lt;type&gt;</code> in the <code>&lt;container&gt;</code> element because <a href="Jetty+9.x.html">Jetty 9.x</a> is the Cargo Maven 3 plugin's default container.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-java"><span class="confluence-anchor-link" id="java"> </span></span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -435,7 +435,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="Startingandstoppingacontainer-SettingtheJAVA_HOME">Setting the JAVA_HOME</h3><p>You can set an alternate JAVA_HOME for non-embedded containers. This will allow you to run a container that uses JDK 1.4 even if your build runs on Java 5. Here's an example of how to do this.</p>
+          </center><h3 id="Startingandstoppingacontainer-SettingtheJAVA_HOME">Setting the <code>JAVA_HOME</code></h3><p>You can set an alternate <code>JAVA_HOME</code> for non-embedded containers. This will allow you to run a container that uses JDK 6 even if your build runs on Java 8. Here's an example of how to do this.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">[...]
@@ -445,7 +445,7 @@
  &lt;configuration&gt;
    [...]
    &lt;properties&gt;
-     &lt;cargo.java.home&gt;/usr/package/j2dsk1.4.2_11&lt;/cargo.java.home&gt;
+     &lt;cargo.java.home&gt;/usr/package/jdk-6u45-linux-x64&lt;/cargo.java.home&gt;
    &lt;/properties&gt;
    [...]
  &lt;/configuration&gt;
@@ -453,7 +453,7 @@
 [...]
 </pre> 
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-autodeploy"><span class="confluence-anchor-link" id="autodeploy"> </span></span></p><h3 id="Startingandstoppingacontainer-Automaticdeploymentofproject'sartifact(forJ2EEprojects)">Automatic deployment of project's artifact (for J2EE projects)</h3><p>If your project is a J2EE project (i.e. of type <code>&lt;packaging&gt;war&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ear&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ejb&lt;/packaging&gt;</code> or <code>&lt;packaging&gt;uberwar&lt;/packaging&gt;</code>) and you use the Cargo m2 plugin on that project then the generated artifact will be automatically added to the list of deployables to deploy. You can control the location of the artifact by using the <code>&lt;location&gt;</code> element (it defaults to <code>${project.build.directory}/${project.build.finalName}.${project.packaging</code>}). In addition if you want to wait for the deployment to be finished you can specify a <code>&lt;pingURL&gt;</code> (none is used by default). Here's an example:</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-autodeploy"><span class="confluence-anchor-link" id="autodeploy"> </span></span></p><h3 id="Startingandstoppingacontainer-Automaticdeploymentofproject'sartifact(forJ2EE,JavaEEorJakartaEEprojects)">Automatic deployment of project's artifact (for&nbsp;J2EE, Java EE or Jakarta EE projects)</h3><p>If your project is a J2EE, Java EE or Jakarta EE project (i.e. of type <code>&lt;packaging&gt;war&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ear&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ejb&lt;/packaging&gt;</code> or <code>&lt;packaging&gt;uberwar&lt;/packaging&gt;</code>) and you use the <a href="Maven+3+Plugin.html">Cargo Maven 3 plugin</a> on that project then the generated artifact will be automatically added to the list of deployables to deploy. You can control the location of the artifact by using the <code>&lt;location&gt;</code> element (it defaults to <code>${project.build.directory}/${project.build.finalName}.${project.packaging</code>}). In addition if you want to wait for the deployment to be finished you can specify a <code>&lt;pingURL&gt;</code> (none is used by default). Here's an example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
@@ -480,7 +480,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="Startingandstoppingacontainer-Automaticallyexecutingandstoppingthecontainerwhenrunningmvninstall">Automatically executing and stopping the container when running mvn install</h3><p>You might to automate the execution of <code>cargo:start</code> and <code>cargo:stop</code>. Of course you can bind those goals to any lifecycle phase (see Maven's <a href="http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html" class="external-link" rel="nofollow">introduction to the lifecycle</a> tutorial). Here's a common example used to start and the stop the container for doing integration tests:</p>
+          </center><h3 id="Startingandstoppingacontainer-Automaticallyexecutingandstoppingthecontainerwhenrunningmvninstall">Automatically executing and stopping the container when running <code>mvn install</code></h3><p>You might to automate the execution of <code>cargo:start</code> and <code>cargo:stop</code>. Of course you can bind those goals to any lifecycle phase (see Maven's <a href="http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html" class="external-link" rel="nofollow">introduction to the lifecycle</a> tutorial). Here's a common example used to start and the stop the container for doing integration tests:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
