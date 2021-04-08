@@ -313,7 +313,27 @@
           <ul>
            <li>Edit the <code>.m2/settings.xml</code> file from your home directory (<code>C:\Documents and Settings\<em>username</em></code> or <code>C:\Users\<em>username</em></code> on Windows),</li>
            <li>Comment out the <code>&lt;proxy&gt;</code> element and fill in the proxy server settings accordingly.</li>
-          </ul><h3 id="Building-HTTPS/TLShandshakeerrors(inJava7)">HTTPS / TLS handshake errors (in Java 7)</h3><p>With Java 7 you might get errors such as: <code>Received fatal alert: protocol_version</code></p><p>To work around the issue, enable the TLS 1.2 protocol using the associated Java property - For <span style="color: rgb(0,0,255);">the build itself</span>, as well as for tests (run using <span style="color: rgb(255,102,0);">surefire</span> and with <span style="color: rgb(128,0,0);">the invoker plugin</span>). Example:</p><p><code>mvn <span style="color: rgb(0,0,255);">-Dhttps.protocols=TLSv1.2</span> <span style="color: rgb(255,102,0);">-DargLine="-Dhttps.protocols=TLSv1.2"</span> <span style="color: rgb(128,0,0);">-Dinvoker.mavenOpts="-Dhttps.protocols=TLSv1.2"</span> clean install<br></code></p> </td> 
+          </ul><h3 id="Building-ArtifactTransferExceptionwithMaven3.8.1onwards">ArtifactTransferException with Maven 3.8.1 onwards</h3><p>With Maven 3.8.1 onwards you might get errors such as: <code>org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.9.4-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [ow2-snapshot (<span class="nolink">http://repository.ow2.org/nexus/content/repositories/snapshots</span>, default, snapshots)]</code></p><p>To work around the issue, create a <code>settings.xml</code> file in your <code>.m2</code> home which overrides the HTTP-based OW2 SNAPSHOTS repository:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+            <b>settings.xml sample</b>
+           </div>
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
+  &lt;mirrors&gt;
+    &lt;mirror&gt;
+      &lt;id&gt;ow2-snapshot-override&lt;/id&gt;
+      &lt;name&gt;ow2-snapshot-override&lt;/name&gt;
+      &lt;url&gt;https://repo.maven.apache.org/maven2&lt;/url&gt;
+      &lt;mirrorOf&gt;ow2-snapshot&lt;/mirrorOf&gt;
+    &lt;/mirror&gt;
+  &lt;/mirrors&gt;
+&lt;/settings&gt;</pre> 
+           </div>
+          </div> </td> 
         </tr> 
        </tbody>
       </table> </td> 
