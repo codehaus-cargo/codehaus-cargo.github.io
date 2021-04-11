@@ -291,7 +291,17 @@
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
-          </div><h3 id="ContainerTimeout-Explanation">Explanation</h3><p>Cargo has a timeout for container start and stop operations. If the time taken to start/stop a container exceeds the timeout period the operations is considered failed and the container is then set in the unknown state.</p><p>The default timeout value is 2 minutes (120000 milliseconds). This value can be modified as shown below.</p>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h3 id="ContainerTimeout-Explanation">Explanation</h3><p>Cargo has a timeout for container start and stop operations. If the time taken to start/stop a container exceeds the timeout period the operations is considered failed and the container is then set in the unknown state.</p><p>The default timeout value is 2 minutes (120000 milliseconds). This value can be modified as shown below.</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -309,17 +319,7 @@ within the timeout period [5000]. The Deployable state is thus unknown.
              </div>
             </div>
            </div>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="ContainerTimeout-ExampleusingtheJavaAPI">Example using the Java API</h3>
+          </div><h3 id="ContainerTimeout-ExampleusingtheJavaAPI">Example using the Java API</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">LocalContainer container = ...;
@@ -337,17 +337,7 @@ System.out.println("Timeout = " + container.getTimeout());
 &lt;/container&gt;
 </pre> 
            </div>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="ContainerTimeout-Disablingtimeout">Disabling timeout</h3><p>If you set the timeout to&nbsp;<code>0</code>, CARGO will not wait for the container to start or stop.</p><h3 id="ContainerTimeout-Usingdifferenttimeoutswhenstartingandstoppingthecontainer">Using different timeouts when starting and stopping the container</h3><p>Shutdown usually takes much much shorther than startup, it therefore often makes sense to use a shorter timeout for stopping the container than for starting it. With the Cargo Maven plugin, this is easy to do: indeed, in each <code>&lt;execution&gt;</code> block of the Maven plugin, you can have different <code>&lt;configuration&gt;</code> blocks. When done so, the plugin will use an inheritance scheme; i.e. for each execution the outermost configuration elements will be overriden by innermost elements each time these are defined.</p><p>Here is an example that uses different timeouts when starting and stopping the container:</p>
+          </div><h3 id="ContainerTimeout-Disablingtimeout">Disabling timeout</h3><p>If you set the timeout to&nbsp;<code>0</code>, CARGO will not wait for the container to start or stop.</p><h3 id="ContainerTimeout-Usingdifferenttimeoutswhenstartingandstoppingthecontainer">Using different timeouts when starting and stopping the container</h3><p>Shutdown usually takes much much shorther than startup, it therefore often makes sense to use a shorter timeout for stopping the container than for starting it. With the Cargo Maven plugin, this is easy to do: indeed, in each <code>&lt;execution&gt;</code> block of the Maven plugin, you can have different <code>&lt;configuration&gt;</code> blocks. When done so, the plugin will use an inheritance scheme; i.e. for each execution the outermost configuration elements will be overriden by innermost elements each time these are defined.</p><p>Here is an example that uses different timeouts when starting and stopping the container:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;

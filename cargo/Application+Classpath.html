@@ -304,7 +304,17 @@
             </ul>
             <p>On other containers, please change the <a href="Container+Classpath.html">container classpath</a> instead.</p>
            </div>
-          </div><h3 id="ApplicationClasspath-Explanation">Explanation</h3><p>This topic is not about the classpath requirements to run Cargo (see the <a href="Installation.html">Installation</a> page for this); it's about configuring the classpath for the application being executed on a container.</p><p>Some environments may require you to add some libraries to your application, without exposing them to the server itself. This concept is called a <strong>Shared Classpath</strong>.</p><h3 id="ApplicationClasspath-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting a WAR on Tomcat 6.x with some additional classpath entries:</p>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h3 id="ApplicationClasspath-Explanation">Explanation</h3><p>This topic is not about the classpath requirements to run Cargo (see the <a href="Installation.html">Installation</a> page for this); it's about configuring the classpath for the application being executed on a container.</p><p>Some environments may require you to add some libraries to your application, without exposing them to the server itself. This concept is called a <strong>Shared Classpath</strong>.</p><h3 id="ApplicationClasspath-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting a WAR on Tomcat 6.x with some additional classpath entries:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">LocalConfiguration configuration = new Tomcat6xStandaloneLocalConfiguration("target/tomcat6x");
@@ -328,17 +338,7 @@ container.setSharedClasspath(jars.toArray());
 container.start();
 </pre> 
            </div>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="ApplicationClasspath-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Starting a WAR on <a href="Tomcat+6.x.html">Tomcat 6.x</a> with some additional classpath entries:</p>
+          </div><h3 id="ApplicationClasspath-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Starting a WAR on <a href="Tomcat+6.x.html">Tomcat 6.x</a> with some additional classpath entries:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat6x" home="/srv/tomcat/catalina-home" action="start"&gt;

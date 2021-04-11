@@ -285,7 +285,17 @@
           </table> </td> 
         </tr> 
         <tr valign="top"> 
-         <td class="rightColumn"> <h3 id="Debugging-Definition">Definition</h3><p>Explain how to perform debugging when something doesn't work in CargoSometimes, it can happen that the container does not start or stop as expected or you might have reasons to believe that&nbsp;Codehaus Cargo is "acting weird". Here is a short list of things you can do to try debugging the problem.</p><h3 id="Debugging-Debuggingthecontainer">Debugging the container</h3><p>Most Java Virtual Machine implementations support remote debugging. Once started in debug mode, you can then remotely connect to your container using any IDE and debug your container and/or application.</p><p>In order to do so, add the following arguments to the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a>:</p>
+         <td class="rightColumn"> <h3 id="Debugging-Definition">Definition</h3><p>Explain how to perform debugging when something doesn't work in CargoSometimes, it can happen that the container does not start or stop as expected or you might have reasons to believe that&nbsp;Codehaus Cargo is "acting weird". Here is a short list of things you can do to try debugging the problem.</p><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h3 id="Debugging-Debuggingthecontainer">Debugging the container</h3><p>Most Java Virtual Machine implementations support remote debugging. Once started in debug mode, you can then remotely connect to your container using any IDE and debug your container and/or application.</p><p>In order to do so, add the following arguments to the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS" class="external-link" rel="nofollow">JVM start arguments configuration property</a>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">-Xdebug
@@ -343,17 +353,7 @@
             <pre>[WARNING] [talledLocalContainer] ERROR: JDWP Transport dt_socket failed to initialize, TRANSPORT_INIT(510)</pre>
             <pre>[WARNING] [talledLocalContainer] JDWP exit error AGENT_ERROR_TRANSPORT_INIT(197): No transports initialized [../../../src/share/back/debugInit.c:741]</pre>
            </div>
-          </div><h3 id="Debugging-Redirectingcontaineroutputtoafile">Redirecting container output to a file</h3><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h4 id="Debugging-ExampleusingtheJavaAPI">Example using the Java API</h4><p>The <code>Container.setOutput(File)</code> API allows you to redirect the container console (<code>stdout</code>) to a file. This is the first file you should check in case of problem.</p><p>Cargo is able to configure containers to generate various levels logs. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/LoggingLevel.html" class="external-link" rel="nofollow"><code>o.c.c.container.property.LoggingLevel</code></a>: <code>LoggingLevel.LOW</code>, <code>LoggingLevel.MEDIUM</code> and <code>LoggingLevel.HIGH</code> (<code>LoggingLevel.MEDIUM</code> is the default value). They represent the quantity of information you wish to have in the generated log file. You can tune container logging by using the following API:</p>
+          </div><h3 id="Debugging-Redirectingcontaineroutputtoafile">Redirecting container output to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI">Example using the Java API</h4><p>The <code>Container.setOutput(File)</code> API allows you to redirect the container console (<code>stdout</code>) to a file. This is the first file you should check in case of problem.</p><p>Cargo is able to configure containers to generate various levels logs. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/LoggingLevel.html" class="external-link" rel="nofollow"><code>o.c.c.container.property.LoggingLevel</code></a>: <code>LoggingLevel.LOW</code>, <code>LoggingLevel.MEDIUM</code> and <code>LoggingLevel.HIGH</code> (<code>LoggingLevel.MEDIUM</code> is the default value). They represent the quantity of information you wish to have in the generated log file. You can tune container logging by using the following API:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">configuration.setProperty(GeneralPropertySet.LOGGING, LoggingLevel.HIGH.getLevel());
@@ -383,17 +383,7 @@ container.start();
   &lt;/configuration&gt;
 &lt;/cargo&gt;</pre> 
            </div>
-          </div><p>Use the <code>append="true|false"</code> attribute for controlling the log file creation behavior.</p><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h4 id="Debugging-ExampleusingtheMaven3plugin">Example using the Maven 3 plugin</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
+          </div><p>Use the <code>append="true|false"</code> attribute for controlling the log file creation behavior.</p><h4 id="Debugging-ExampleusingtheMaven3plugin">Example using the Maven 3 plugin</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;container&gt;
@@ -419,17 +409,7 @@ container.start();
            <div class="confluence-information-macro-body">
             <p>&nbsp;Note that on MacOS X,&nbsp;<code>mvnDebug</code> is not on the default path. To run it, execute the command:&nbsp;<code>/usr/share/maven/bin/mvnDebug</code></p>
            </div>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="Debugging-RedirectingCodehausCargologstoafile">Redirecting&nbsp;Codehaus Cargo logs to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI.1">Example using the Java API</h4><p>Some Cargo classes support generation of logs. This is implemented through the notion of <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/Logger.html" class="external-link" rel="nofollow"><code>Logger</code></a> and levels are managed using <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>LogLevel</code></a>. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>o.c.c.util.log.LogLevel</code></a>: <code>LogLevel.DEBUG</code>, <code>LogLevel.INFO</code> and <code>LogLevel.WARN</code> (<code>LogLevel.INFO</code> is the default value).</p><p>For example to turn on logging monitoring on a <code>Container</code> class, you can use:</p>
+          </div><h3 id="Debugging-RedirectingCodehausCargologstoafile">Redirecting&nbsp;Codehaus Cargo logs to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI.1">Example using the Java API</h4><p>Some Cargo classes support generation of logs. This is implemented through the notion of <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/Logger.html" class="external-link" rel="nofollow"><code>Logger</code></a> and levels are managed using <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>LogLevel</code></a>. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/LogLevel.html" class="external-link" rel="nofollow"><code>o.c.c.util.log.LogLevel</code></a>: <code>LogLevel.DEBUG</code>, <code>LogLevel.INFO</code> and <code>LogLevel.WARN</code> (<code>LogLevel.INFO</code> is the default value).</p><p>For example to turn on logging monitoring on a <code>Container</code> class, you can use:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">Logger fileLogger = new FileLogger(new File("c:/tmp/cargo.log"), true);
@@ -442,17 +422,7 @@ container.setLogger(fileLogger);
            <li><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/FileLogger.html" class="external-link" rel="nofollow">FileLogger</a>: logs messages to a file</li>
            <li><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/SimpleLogger.html" class="external-link" rel="nofollow">SimpleLogger</a>: logs messages to the console (stdout)</li>
            <li><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/AntLogger.html" class="external-link" rel="nofollow">AntLogger</a>: logs messages using Ant's logging mechanism</li>
-          </ul><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h4 id="Debugging-ExampleusingtheAntAPI.1">Example using the Ant API</h4><p>When using the Ant tasks,&nbsp;Codehaus Cargo will by default use the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/AntLogger.html" class="external-link" rel="nofollow">AntLogger</a>. You can specify the log level using the&nbsp;<code>logLevel</code> attribute, and the log file by using the <code>log</code> attribute. For example:</p>
+          </ul><h4 id="Debugging-ExampleusingtheAntAPI.1">Example using the Ant API</h4><p>When using the Ant tasks,&nbsp;Codehaus Cargo will by default use the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/util/log/AntLogger.html" class="external-link" rel="nofollow">AntLogger</a>. You can specify the log level using the&nbsp;<code>logLevel</code> attribute, and the log file by using the <code>log</code> attribute. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat4x" home="c:/apps/jakarta-tomcat-4.1.30" 

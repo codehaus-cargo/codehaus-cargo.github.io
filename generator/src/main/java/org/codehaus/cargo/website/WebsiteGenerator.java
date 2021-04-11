@@ -64,6 +64,8 @@ public class WebsiteGenerator implements Runnable
     private static final boolean downloadAttachments =
         Boolean.parseBoolean(System.getProperty("cargo.downloadAttachments", "true"));
 
+    private static final Pattern headerPattern = Pattern.compile("<h[1-4]");
+
     private static final String googleAds =
         "<script type=\"text/javascript\">\n" +
         "  // Google Ads code\n" +
@@ -251,51 +253,20 @@ public class WebsiteGenerator implements Runnable
             value = value.replaceAll("(?s)<span class=\"refresh-action-group\".*?</span>", "");
             value = value.replaceAll("(?s)<textarea id=\"refresh-wiki-\\d*\".*?</textarea>", "");
             value = value.replaceAll("<input id=\"refresh-page-id-\\d*\"[^>]+>", "");
-            List<Integer> headerIndexes = new ArrayList<Integer>();
-            int lastIndex = 0;
-            while (lastIndex >= 0)
+            Matcher headerMatcher = headerPattern.matcher(value);
+            if (headerMatcher.find())
             {
-                if (headerIndexes.size() > 0)
+                int hIndex = headerMatcher.start();
+                headerMatcher = headerPattern.matcher(value.substring(hIndex + 3));
+                if (headerMatcher.find())
                 {
-                    lastIndex = headerIndexes.get(headerIndexes.size() - 1) + 1;
-                }
-                int nextIndex = value.length();
-                int h1 = value.indexOf("<h1", lastIndex);
-                if (h1 != -1)
-                {
-                    nextIndex = Math.min(nextIndex, h1);
-                }
-                int h2 = value.indexOf("<h2", lastIndex);
-                if (h2 != -1)
-                {
-                    nextIndex = Math.min(nextIndex, h2);
-                }
-                int h3 = value.indexOf("<h3", lastIndex);
-                if (h3 != -1)
-                {
-                    nextIndex = Math.min(nextIndex, h3);
-                }
-                int h4 = value.indexOf("<h4", lastIndex);
-                if (h4 != -1)
-                {
-                    nextIndex = Math.min(nextIndex, h4);
-                }
-                if (nextIndex == value.length())
-                {
-                    nextIndex = -1;
-                }
-                lastIndex = nextIndex;
-                if (lastIndex >= 0)
-                {
-                    headerIndexes.add(lastIndex);
+                    hIndex = hIndex + 3 + headerMatcher.start();
+                    value = value.substring(0, hIndex) + googleAds + value.substring(hIndex);
                 }
             }
-            lastIndex = headerIndexes.size() - 2;
-            while (lastIndex > 1)
+            if (value.indexOf(googleAds) == -1)
             {
-                int cut = headerIndexes.get(lastIndex);
-                value = value.substring(0, cut) + googleAds + value.substring(cut);
-                lastIndex = lastIndex - 2;
+                value = value + googleAds;
             }
             StringBuilder breadcrumbsSB = new StringBuilder();
             if (breadcrumbs.containsKey(name))

@@ -291,7 +291,7 @@
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
-          </div><h3 id="ContainerStart-Explanation">Explanation</h3><p>First you need to create a <a href="Container+Instantiation.html">container instance</a>.</p><p>Once you have this container instance, starting the container is as simple as calling the <code>start()</code> method. Before doing this though you'll need to ensure you have defined the container's <code>home</code> (if you're using a container in <a class="unresolved" href="#">standalone mode</a> - It's not required for containers in <a class="unresolved" href="#">embedded mode</a>).</p><p>Of course it you wish to statically deploy archives, you'll need to add <a href="Deployable.html">deployables</a> to the container.</p><p>It is important to note that the <code>LocalContainer.start()</code> method will wait until the container is <strong>fully started</strong> before returning.</p><script type="text/javascript">
+          </div><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -301,7 +301,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="ContainerStart-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Resin 3.x with no deployable:</p>
+          </center><h3 id="ContainerStart-Explanation">Explanation</h3><p>First you need to create a <a href="Container+Instantiation.html">container instance</a>.</p><p>Once you have this container instance, starting the container is as simple as calling the <code>start()</code> method. Before doing this though you'll need to ensure you have defined the container's <code>home</code> (if you're using a container in <a class="unresolved" href="#">standalone mode</a> - It's not required for containers in <a class="unresolved" href="#">embedded mode</a>).</p><p>Of course it you wish to statically deploy archives, you'll need to add <a href="Deployable.html">deployables</a> to the container.</p><p>It is important to note that the <code>LocalContainer.start()</code> method will wait until the container is <strong>fully started</strong> before returning.</p><h3 id="ContainerStart-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Resin 3.x with no deployable:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
@@ -317,17 +317,7 @@ container.start();
             <pre class="syntaxhighlighter-pre">&lt;cargo containerId="resin3x" home="c:/apps/resin-3.0.15" action="start"/&gt;
 </pre> 
            </div>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="ContainerStart-ExampleusingtheMaven3plugin">Example using the Maven3 plugin</h3><p>For the Maven 3 plugin, please read: <a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a>.</p><h3 id="ContainerStart-Othertips">Other tips</h3><h5 id="ContainerStart-LettingthestartedcontaineroutliveCodehausCargo'sprocess">Letting the started container outlive Codehaus Cargo's process</h5><p>By default, the container started by&nbsp;Codehaus Cargo is linked to Codehaus Cargo's process; which means that once the Java process that has started the container is finished (be it via Java API, ANT or the Maven 3 plugin) the started container will also be killed.</p><p>In some cases, mostly if you want to use&nbsp;Codehaus Cargo as a "launcher script", you need the started container to "outlive" Codehaus Cargo's process, i.e. that the started container keeps running even after&nbsp;Codehaus Cargo itself has terminated. This can be achieved by simply setting the property&nbsp;<code>GeneralPropertySet.SPAWN_PROCESS</code> (or, in the Ant tasks or Maven 3 plugin, the&nbsp;<code>cargo.process.spawn</code> property) to&nbsp;<code>true</code>.</p><p>Note that this feature is only available for standalone containers (i.e., not for embeded containers).</p> </td> 
+          </div><h3 id="ContainerStart-ExampleusingtheMaven3plugin">Example using the Maven3 plugin</h3><p>For the Maven 3 plugin, please read: <a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a>.</p><h3 id="ContainerStart-Othertips">Other tips</h3><h5 id="ContainerStart-LettingthestartedcontaineroutliveCodehausCargo'sprocess">Letting the started container outlive Codehaus Cargo's process</h5><p>By default, the container started by&nbsp;Codehaus Cargo is linked to Codehaus Cargo's process; which means that once the Java process that has started the container is finished (be it via Java API, ANT or the Maven 3 plugin) the started container will also be killed.</p><p>In some cases, mostly if you want to use&nbsp;Codehaus Cargo as a "launcher script", you need the started container to "outlive" Codehaus Cargo's process, i.e. that the started container keeps running even after&nbsp;Codehaus Cargo itself has terminated. This can be achieved by simply setting the property&nbsp;<code>GeneralPropertySet.SPAWN_PROCESS</code> (or, in the Ant tasks or Maven 3 plugin, the&nbsp;<code>cargo.process.spawn</code> property) to&nbsp;<code>true</code>.</p><p>Note that this feature is only available for standalone containers (i.e., not for embeded containers).</p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

@@ -285,7 +285,17 @@
           </table> </td> 
         </tr> 
         <tr valign="top"> 
-         <td class="rightColumn"> <h3 id="RemotedeploymentstoGlassFish6.x-Definition">Definition</h3><p>How to perform deployments to a remote <a href="GlassFish+6.x.html" class="conf-macro output-inline">GlassFish 6.x</a> container</p><h3 id="RemotedeploymentstoGlassFish6.x-Explanation">Explanation</h3><p>All Cargo GlassFish deployers use the GlassFish <code>asadmin</code> behind the scenes, and all of them set the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><code>cargo.hostname</code></a> as the target host.</p><p>As a result, all GlassFish Installed Local Deployers can <em>actually</em> be used to perform remote deployments, the main "downside" being that this requires the GlassFish container ZIP file to be downloaded (which can be done transparently using an <a href="Installer.html">installer</a>).</p><p>Here is an example code for the users of the Java API:</p>
+         <td class="rightColumn"> <h3 id="RemotedeploymentstoGlassFish6.x-Definition">Definition</h3><p>How to perform deployments to a remote <a href="GlassFish+6.x.html" class="conf-macro output-inline">GlassFish 6.x</a> container</p><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h3 id="RemotedeploymentstoGlassFish6.x-Explanation">Explanation</h3><p>All Cargo GlassFish deployers use the GlassFish <code>asadmin</code> behind the scenes, and all of them set the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME" class="external-link" rel="nofollow"><code>cargo.hostname</code></a> as the target host.</p><p>As a result, all GlassFish Installed Local Deployers can <em>actually</em> be used to perform remote deployments, the main "downside" being that this requires the GlassFish container ZIP file to be downloaded (which can be done transparently using an <a href="Installer.html">installer</a>).</p><p>Here is an example code for the users of the Java API:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">Installer installer = new ZipURLInstaller(

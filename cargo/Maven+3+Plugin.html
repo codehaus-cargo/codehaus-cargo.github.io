@@ -295,9 +295,9 @@
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <p class="title">Reg. Lifetime of our Maven 2 plugin</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>Please be aware that the Maven 2 / Maven 3 plugin of Codehaus Cargo has been retired with our version 1.9.0 and has been superceeded by a Maven 3 only plugin.</p>
+            <p>Please be aware that the Maven 2 / Maven 3 plugin of Codehaus Cargo has been retired with our <a href="Codehaus+Cargo+1.9.0+is+here+with+a+new+era+for+our+Maven+support.html">version 1.9.0</a> and has been superseded by a Maven 3 only plugin.</p>
            </div>
-          </div><h1 id="Maven3Plugin-TableofContents">Table of Contents</h1><p>The documentatation for this Maven plugin includes:</p>
+          </div><h1 id="Maven3Plugin-TableofContents">Table of Contents</h1><p>The documentation for this Maven plugin includes:</p>
           <ul>
            <li><a href="Maven+3+Plugin+Installation.html">Installation</a>: explains how to install the plugin</li>
            <li><a href="#Maven3Plugin-gettingstarted">Getting started</a>: explains how to use the plugin on several use cases</li>
@@ -305,38 +305,6 @@
            <li><a href="Maven+3+Plugin+Tips.html">Tips</a>: tips for using the plugin</li>
           </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven3Plugin-gettingstarted"><span class="confluence-anchor-link" id="gettingstarted"> </span></span></p><p></p>
           <div class="conf-macro output-block">
-           <h1 id="Maven3Plugin-GettingStarted">Getting Started</h1>
-           <h2 id="Maven3Plugin-Veryquickstart">Very quick start</h2>
-           <p>Codehaus Cargo can be directly run on any existing Maven Java EE project (WAR, EAR or other) by running:</p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
-</pre> 
-            </div>
-           </div>
-           <p>This will create a default <a href="Jetty+7.x.html">Jetty 7.x</a> <a href="Installed+Container.html">installed local container</a> and start it using the Cargo&nbsp;Maven 3 plugin with your&nbsp;Maven 3 project's deployable (a WAR, for example) deployed to it; so you can run manual tests (as a first introduction).</p>
-           <p>What is magic is that if you now want to run the same tests with <a href="Tomcat+7.x.html">Tomcat 7.x</a> you simply need to run (in one line):</p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
-    -Dcargo.maven.containerId=tomcat7x
-    -Dcargo.maven.containerUrl=https://repo.maven.org/maven2/org/apache/tomcat/tomcat/7.0.68/tomcat-7.0.68.zip
-</pre> 
-            </div>
-           </div>
-           <p>That command will automatically download Tomcat 7.0.68 from the specified URL (taking into account any proxy server setting you would have in Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3</a><a href="Maven+3+Plugin+Reference+Guide.html"> Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p>
-           <p>Now, if you want to run this time on <a href="GlassFish+3.x.html">GlassFish 3.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
-           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-            <div class="codeContent panelContent pdl"> 
-             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
-    -Dcargo.maven.containerId=glassfish3x
-    -Dcargo.maven.containerUrl=https://download.java.net/glassfish/3.1.1/release/glassfish-3.1.1.zip
-    -Dcargo.servlet.port=9000
-</pre> 
-            </div>
-           </div>
-           <p>Codehaus Cargo's main advantage is that the commands and configuration remains the same for any version of any supported container - be it Tomcat, Jetty, JBoss, JOnAS, GlassFish, WebLogic, etc.</p>
-           <p>Like it? Well, keep on reading, then!</p>
            <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
@@ -348,9 +316,41 @@
             <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
            </center>
+           <h1 id="Maven3Plugin-GettingStarted">Getting Started</h1>
+           <h2 id="Maven3Plugin-Veryquickstart">Very quick start</h2>
+           <p>Codehaus Cargo can be directly run on any existing Maven Java EE project (WAR, EAR or other) by running:</p>
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+            <div class="codeContent panelContent pdl"> 
+             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
+</pre> 
+            </div>
+           </div>
+           <p>This will create a default <a href="Jetty+9.x.html">Jetty 9.x</a> <a href="Installed+Container.html">installed local container</a> and start it using the Cargo&nbsp;Maven 3 plugin with your&nbsp;Maven 3 project's deployable (a WAR, for example) deployed to it; so you can run manual tests (as a first introduction).</p>
+           <p>What is magic is that if you now want to run the same tests with <a href="Tomcat+9.x.html">Tomcat 9.x</a> you simply need to run (in one line):</p>
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+            <div class="codeContent panelContent pdl"> 
+             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
+    -Dcargo.maven.containerId=tomcat9x
+    -Dcargo.maven.containerUrl=https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/9.0.45/tomcat-9.0.45.zip
+</pre> 
+            </div>
+           </div>
+           <p>That command will automatically download Tomcat 9.0.45 from the specified URL (taking into account any proxy server setting you would have in Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3</a><a href="Maven+3+Plugin+Reference+Guide.html"> Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p>
+           <p>Now, if you want to run this time on <a href="WildFly+20.x.html">WildFly 20.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+            <div class="codeContent panelContent pdl"> 
+             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
+    -Dcargo.maven.containerId=wildfly20x
+    -Dcargo.maven.containerUrl=https://download.jboss.org/wildfly/20.0.1.Final/wildfly-20.0.1.Final.zip
+    -Dcargo.servlet.port=9000
+</pre> 
+            </div>
+           </div>
+           <p>Codehaus Cargo's main advantage is that the commands and configuration remains the same for any version of any supported container - be it Tomcat, Jetty, JBoss, JOnAS, GlassFish, WebLogic, WildFly, etc.</p>
+           <p>Like it? Well, keep on reading, then!</p>
            <h2 id="Maven3Plugin-Moreexamples">More examples</h2>
            <p>As usual the best way to learn to use a tool is through examples.</p>
-           <p>We have several <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a> that contain sample&nbsp;Maven 3 projects with different use cases for the CARGO plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a>.</p>
+           <p>We have several <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a> that contain sample&nbsp;Maven 3 projects with different use cases for the Codehaus Cargo Maven 3 plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a>.</p>
            <p>In addition here are the typical uses cases covered by the plugin:</p>
            <p></p>
            <ul class="childpages-macro conf-macro output-block">
@@ -419,7 +419,7 @@
               </tr>
               <tr>
                <td colspan="1" class="confluenceTd"><strong><code>cargo:daemon-start</code></strong></td>
-               <td colspan="1" class="confluenceTd"><p>Start a container via the daemon. Read more on: <a href="Cargo+Daemon.html">Cargo Daemon</a></p><p><strong>Note</strong>: The&nbsp;<code>daemon:start</code> goal is actually equivalent to a <strong>restart</strong> in CARGO's terms; in the case a container with the same&nbsp;<code>cargo.daemon.handleid</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.</p></td>
+               <td colspan="1" class="confluenceTd"><p>Start a container via the daemon. Read more on: <a href="Cargo+Daemon.html">Cargo Daemon</a></p><p><strong>Note</strong>: The&nbsp;<code>daemon:start</code> goal is actually equivalent to a <strong>restart</strong> in Codehaus Cargo's terms; in the case a container with the same&nbsp;<code>cargo.daemon.handleid</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.</p></td>
               </tr>
               <tr>
                <td colspan="1" class="confluenceTd"><strong><code>cargo:daemon-stop</code></strong></td>
@@ -427,7 +427,7 @@
               </tr>
               <tr>
                <td class="confluenceTd"><p><code><strong>cargo:deployer-deploy</strong></code> (aliased to <code><strong>cargo:deploy</strong></code>)</p></td>
-               <td class="confluenceTd"><p>Deploy a deployable to a running container.</p><p><strong>Note</strong>: The <code>cargo:start</code> and <code>cargo:run</code> do already deploy the deployables specified in the configuration to the container; as a result calling&nbsp;<code>cargo:deploy</code> for a container which has been started by CARGO in the same Maven project will most likely cause a second deployment of the same deployables (and might even fail).</p></td>
+               <td class="confluenceTd"><p>Deploy a deployable to a running container.</p><p><strong>Note</strong>: The <code>cargo:start</code> and <code>cargo:run</code> do already deploy the deployables specified in the configuration to the container; as a result calling&nbsp;<code>cargo:deploy</code> for a container which has been started by&nbsp;Codehaus Cargo in the same Maven project will most likely cause a second deployment of the same deployables (and might even fail).</p></td>
               </tr>
               <tr>
                <td class="confluenceTd"><p><code><strong>cargo:deployer-undeploy</strong></code> (aliased to <code><strong>cargo:undeploy</strong></code>)</p></td>
