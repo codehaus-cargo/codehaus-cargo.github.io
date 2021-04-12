@@ -285,7 +285,13 @@
           </table> </td> 
         </tr> 
         <tr valign="top"> 
-         <td class="rightColumn"> <p>This document explains how to configure Cargo remote deployment support on a Jetty container.</p><h3 id="JettyRemoteDeployer-Overview">Overview</h3><p>By default, Jetty does not come with possibilities for remote deployment. In order to add such a support to Jetty, Cargo uses a "Jetty remote deployer" Web application.</p><p>This application is a simple servlet-based application which exposes methods such as deploy or undeploy on standard HTTP POST URLs. When thse HTTP methods are called, the servlet implementing these methods connects to the Jetty Server implementation and does deployment related actions on the server; this Web application can therefore be seen as a kind of remote administration proxy.</p><p>Being a standard Web application, the Cargo Jetty remote deployer application can be secured using Jetty users and roles.</p><script type="text/javascript">
+         <td class="rightColumn"> <p>This document explains how to configure Cargo remote deployment support on a Jetty container.</p><h3 id="JettyRemoteDeployer-Overview">Overview</h3><p>By default, Jetty does not come with possibilities for remote deployment. In order to add such a support to Jetty, Cargo uses a "Jetty remote deployer" Web application.</p><p>This application is a simple servlet-based application which exposes methods such as deploy or undeploy on standard HTTP POST URLs. When thse HTTP methods are called, the servlet implementing these methods connects to the Jetty Server implementation and does deployment related actions on the server; this Web application can therefore be seen as a kind of remote administration proxy.</p><p>Being a standard Web application, the Cargo Jetty remote deployer application can be secured using Jetty users and roles.</p><h3 id="JettyRemoteDeployer-Downloadingtheremotedeployer">Downloading the remote deployer</h3><p>Two versions of the Jetty remote deployer WAR are available on the <a href="Downloads.html">Cargo downloads</a> page (scroll down to the <strong>Tools</strong> section):</p>
+          <ul>
+           <li><code>cargo-jetty-11-onwards-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 11.x onwards (Jetty from Eclipse.org, implementing Jakarta EE)</li>
+           <li><code>cargo-jetty-10-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 10.x (Jetty from Eclipse.org)</li>
+           <li><code>cargo-jetty-7-to-jetty-9-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 7.x to Jetty 9.x (Jetty from Eclipse.org)</li>
+           <li><code>cargo-jetty-6-and-earlier-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 6.x and earlier (Jetty from Mortbay.org)</li>
+          </ul><p>Please make sure to download and install the correct flavour for your Jetty version.</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -295,13 +301,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="JettyRemoteDeployer-Downloadingtheremotedeployer">Downloading the remote deployer</h3><p>Two versions of the Jetty remote deployer WAR are available on the <a href="Downloads.html">Cargo downloads</a> page (scroll down to the <strong>Tools</strong> section):</p>
-          <ul>
-           <li><code>cargo-jetty-11-onwards-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 11.x onwards (Jetty from Eclipse.org, implementing Jakarta EE)</li>
-           <li><code>cargo-jetty-10-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 10.x (Jetty from Eclipse.org)</li>
-           <li><code>cargo-jetty-7-to-jetty-9-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 7.x to Jetty 9.x (Jetty from Eclipse.org)</li>
-           <li><code>cargo-jetty-6-and-earlier-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 6.x and earlier (Jetty from Mortbay.org)</li>
-          </ul><p>Please make sure to download and install the correct flavour for your Jetty version.</p><h3 id="JettyRemoteDeployer-Security">Security</h3><p>By default, the Cargo Jetty remote deployer comes with no security.</p><p>In order to activate security, follow these steps:</p>
+          </center><h3 id="JettyRemoteDeployer-Security">Security</h3><p>By default, the Cargo Jetty remote deployer comes with no security.</p><p>In order to activate security, follow these steps:</p>
           <ol>
            <li>Open the <code>WEB-INF/web.xml</code> file of the Cargo Jetty remote deployer WAR</li>
            <li>Uncomment the part that says <code>Uncomment in order to activate security</code>. By default, that configuration is as follows:

@@ -256,12 +256,17 @@ public class WebsiteGenerator implements Runnable
             Matcher headerMatcher = headerPattern.matcher(value);
             if (headerMatcher.find())
             {
-                int hIndex = headerMatcher.start();
-                headerMatcher = headerPattern.matcher(value.substring(hIndex + 3));
+                int hIndex = headerMatcher.start() + 3;
+                headerMatcher = headerPattern.matcher(value.substring(hIndex));
                 if (headerMatcher.find())
                 {
-                    hIndex = hIndex + 3 + headerMatcher.start();
-                    value = value.substring(0, hIndex) + googleAds + value.substring(hIndex);
+                    hIndex = hIndex + headerMatcher.start() + 3;
+                    headerMatcher = headerPattern.matcher(value.substring(hIndex));
+                    if (headerMatcher.find())
+                    {
+                        hIndex = hIndex + headerMatcher.start();
+                        value = value.substring(0, hIndex) + googleAds + value.substring(hIndex);
+                    }
                 }
             }
             if (value.indexOf(googleAds) == -1)

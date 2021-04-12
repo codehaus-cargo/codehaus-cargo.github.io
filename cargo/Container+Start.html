@@ -291,7 +291,7 @@
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
-          </div><script type="text/javascript">
+          </div><h3 id="ContainerStart-Explanation">Explanation</h3><p>First you need to create a <a href="Container+Instantiation.html">container instance</a>.</p><p>Once you have this container instance, starting the container is as simple as calling the <code>start()</code> method. Before doing this though you'll need to ensure you have defined the container's <code>home</code> (if you're using a container in <a class="unresolved" href="#">standalone mode</a> - It's not required for containers in <a class="unresolved" href="#">embedded mode</a>).</p><p>Of course it you wish to statically deploy archives, you'll need to add <a href="Deployable.html">deployables</a> to the container.</p><p>It is important to note that the <code>LocalContainer.start()</code> method will wait until the container is <strong>fully started</strong> before returning.</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -301,7 +301,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="ContainerStart-Explanation">Explanation</h3><p>First you need to create a <a href="Container+Instantiation.html">container instance</a>.</p><p>Once you have this container instance, starting the container is as simple as calling the <code>start()</code> method. Before doing this though you'll need to ensure you have defined the container's <code>home</code> (if you're using a container in <a class="unresolved" href="#">standalone mode</a> - It's not required for containers in <a class="unresolved" href="#">embedded mode</a>).</p><p>Of course it you wish to statically deploy archives, you'll need to add <a href="Deployable.html">deployables</a> to the container.</p><p>It is important to note that the <code>LocalContainer.start()</code> method will wait until the container is <strong>fully started</strong> before returning.</p><h3 id="ContainerStart-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Resin 3.x with no deployable:</p>
+          </center><h3 id="ContainerStart-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Resin 3.x with no deployable:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Resin3xInstalledLocalContainer(

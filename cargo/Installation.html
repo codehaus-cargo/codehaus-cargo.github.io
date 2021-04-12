@@ -307,6 +307,10 @@
            <li><a href="https://repo.maven.apache.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar" class="external-link" rel="nofollow">JSON.simple 1.1.1</a> or greater</li>
            <li><a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core//jackson-core-2.10.1.jar" class="external-link" rel="nofollow">Jackson core 2.10.1</a> or greater,&nbsp;<a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.10.1/jackson-dataformat-yaml-2.10.1.jar" class="external-link" rel="nofollow">Jackson YAML dataformat 2.10.1</a> or greater and <a href="https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.24/snakeyaml-1.24.jar" class="external-link" rel="nofollow">SnakeYAML 1.24</a> or greater</li>
            <li>The <a href="Downloads.html#Downloads-licensedDTDs">convenience JAR with DTDs that are used by some Cargo components which have licenses incompatible with the rest of Cargo</a>, in case you want to use the Java API offline with some containers / deployables</li>
+          </ul><h3 id="Installation-ApacheAnt">Apache Ant</h3><p>If you want use the Cargo Ant tasks, add the following JARs to Ant's classpath:</p>
+          <ul>
+           <li>The same jars as for the Java API (i.e., either the API JARs + the container(s) <strong>or</strong> the uberjar)</li>
+           <li>The <code>cargo-ant</code> JAR, containing the <code>&lt;taskdef&gt;</code> definition (see the <a href="Ant+support.html">Ant support</a> page)</li>
           </ul><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
@@ -317,11 +321,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="Installation-ApacheAnt">Apache Ant</h3><p>If you want use the Cargo Ant tasks, add the following JARs to Ant's classpath:</p>
-          <ul>
-           <li>The same jars as for the Java API (i.e., either the API JARs + the container(s) <strong>or</strong> the uberjar)</li>
-           <li>The <code>cargo-ant</code> JAR, containing the <code>&lt;taskdef&gt;</code> definition (see the <a href="Ant+support.html">Ant support</a> page)</li>
-          </ul><h3 id="Installation-ApacheMaven3">Apache Maven 3</h3><p>Maven 3&nbsp;will automatically download all required dependencies: see the <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> page. As a result, no installation is required for Maven 3.</p><p>If you are creating a Java applications which use the Cargo via API, you need to add as dependency either the artifact for your favorite container or the uberjar (which contains all containers). See below</p>
+          </center><h3 id="Installation-ApacheMaven3">Apache Maven 3</h3><p>Maven 3&nbsp;will automatically download all required dependencies: see the <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> page. As a result, no installation is required for Maven 3.</p><p>If you are creating a Java applications which use the Cargo via API, you need to add as dependency either the artifact for your favorite container or the uberjar (which contains all containers). See below</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Example for adding the Codehaus Cargo uberjar as dependency</b>

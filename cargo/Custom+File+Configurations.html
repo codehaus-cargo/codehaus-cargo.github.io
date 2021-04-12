@@ -285,7 +285,13 @@
           </table> </td> 
         </tr> 
         <tr valign="top"> 
-         <td class="rightColumn"> <h3 id="CustomFileConfigurations-CustomFileConfigurations">Custom File Configurations</h3><p>It is sometimes necessary to make changes to files within a Cargo standalone configuration. Normally Cargo will create this configuration and then start the server leaving the user with no chance to replace or modify these files before the server is started.</p><script type="text/javascript">
+         <td class="rightColumn"> <h3 id="CustomFileConfigurations-CustomFileConfigurations">Custom File Configurations</h3><p>It is sometimes necessary to make changes to files within a Cargo standalone configuration. Normally Cargo will create this configuration and then start the server leaving the user with no chance to replace or modify these files before the server is started.</p><h4 id="CustomFileConfigurations-CustomConfigurationFiles">Custom Configuration Files</h4><p>The main reason for file changes is to make changes to configuration files to add, remove or modify configuration settings that are not yet covered by Cargo.</p><p>Cargo uses its own default configuration files (located within the cargo jars) which use token replacements to set the Cargo configuration options. These files can be extracted out of the jar so that modification can be made and Cargo can be instructed to use these new configuration files instead.</p><p>Custom tokens can also be specified in the configuration files and their values set in the cargo properties.</p>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>These type of files have to be marked as a configuration file so that token replacement can be used.</p>
+           </div>
+          </div><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -295,13 +301,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h4 id="CustomFileConfigurations-CustomConfigurationFiles">Custom Configuration Files</h4><p>The main reason for file changes is to make changes to configuration files to add, remove or modify configuration settings that are not yet covered by Cargo.</p><p>Cargo uses its own default configuration files (located within the cargo jars) which use token replacements to set the Cargo configuration options. These files can be extracted out of the jar so that modification can be made and Cargo can be instructed to use these new configuration files instead.</p><p>Custom tokens can also be specified in the configuration files and their values set in the cargo properties.</p>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>These type of files have to be marked as a configuration file so that token replacement can be used.</p>
-           </div>
-          </div><h4 id="CustomFileConfigurations-OtherGenericFilesandDirectories">Other Generic Files and Directories</h4><p>Using the custom file configuration options you can add any files or directories into the standalone configuration home. Although this shouldn't really be necessary in most situations, it is left as an option so that if the need arises if can be used.</p>
+          </center><h4 id="CustomFileConfigurations-OtherGenericFilesandDirectories">Other Generic Files and Directories</h4><p>Using the custom file configuration options you can add any files or directories into the standalone configuration home. Although this shouldn't really be necessary in most situations, it is left as an option so that if the need arises if can be used.</p>
           <div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">

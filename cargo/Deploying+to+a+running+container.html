@@ -347,17 +347,7 @@
 [...]
 </pre> 
            </div>
-          </div><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h3 id="Deployingtoarunningcontainer-Usingaremotedeployer">Using a remote deployer</h3><p>A remote <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Remote+Container.html">Remote Container</a> (i.e. a container that is running and that has been started externally from Cargo). Thus you'll need to use an id for a remote container in <code>&lt;containerId&gt;</code> and a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</p>
+          </div><h3 id="Deployingtoarunningcontainer-Usingaremotedeployer">Using a remote deployer</h3><p>A remote <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Remote+Container.html">Remote Container</a> (i.e. a container that is running and that has been started externally from Cargo). Thus you'll need to use an id for a remote container in <code>&lt;containerId&gt;</code> and a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Not all containers have a remote Deployer implemented</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -416,7 +406,17 @@
 [...]
 </pre> 
            </div>
-          </div><p>Just type <code>mvn cargo:deploy</code>. Notice that we haven't specified a <code>&lt;deployer&gt;</code> element nor a <code>&lt;configuration&gt;</code> one: this is because the plugin is smart enough to create default instances for you.</p><h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3><p>If the deployment, undeployment or redeployment is done without any watchdog,&nbsp;Codehaus Cargo will rely on the error codes return by the container's deployer to detect failures.</p><p>This is sometimes not desired: for example, if one calls&nbsp;<code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p><p>To work around the issue, make sure you define your deployable together with a watchdog. For example:</p>
+          </div><p>Just type <code>mvn cargo:deploy</code>. Notice that we haven't specified a <code>&lt;deployer&gt;</code> element nor a <code>&lt;configuration&gt;</code> one: this is because the plugin is smart enough to create default instances for you.</p><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3><p>If the deployment, undeployment or redeployment is done without any watchdog,&nbsp;Codehaus Cargo will rely on the error codes return by the container's deployer to detect failures.</p><p>This is sometimes not desired: for example, if one calls&nbsp;<code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p><p>To work around the issue, make sure you define your deployable together with a watchdog. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Deployable with a ping URL</b>

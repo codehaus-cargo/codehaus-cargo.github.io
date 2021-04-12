@@ -289,17 +289,7 @@
           <ul>
            <li>Check out or download as a ZIP file the Codehaus Cargo source code from <a href="Source+code.html">Github</a> into a <code>CARGOHOME</code> directory (wherever you want on your machine).</li>
            <li>Install <a href="http://maven.apache.org" class="external-link" rel="nofollow">Maven 3.2.3 or later</a>. Verify your installation works by running the following command in a command prompt / terminal window: <code>mvn --version</code></li>
-          </ul><script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script> 
-          </center><h1 id="Building-Building">Building</h1><p>To build Codehaus Cargo:</p>
+          </ul><h1 id="Building-Building">Building</h1><p>To build Codehaus Cargo:</p>
           <ul>
            <li>Go to <code>CARGOHOME</code> and run <code>mvn install</code><br>This will build the full Cargo project.</li>
            <li>If you wish to clean all build-generated files, <code>cd</code> to <code>CARGOHOME</code> and&nbsp;run <code>mvn clean</code></li>
@@ -309,7 +299,17 @@
            <div class="confluence-information-macro-body">
             <p>The&nbsp;Codehaus Cargo build contains functional tests. Those tests are run on different containers. The first time you build&nbsp;Codehaus Cargo it will download those container distributions which will take some time (the containers are installed into <code>core/samples/java/installs</code>). If you want to tell&nbsp;Codehaus Cargo to run only on some specific container, see below.</p>
            </div>
-          </div><h3 id="Building-Selectingcontainers">Selecting containers</h3><p>The default list of containers to run on depends a property <code>cargo.containers</code> defined in <code>CARGOHOME/core/samples/pom.xml</code>. It can also be supplied at the command line by using profiles (<code>-P&lt;containerId&gt;</code>).</p><p>For example if you only want to run on <a href="Tomcat+8.x.html">Tomcat 8.x</a> you'd run: <code>mvn -Ptomcat8x clean install</code></p><h3 id="Building-Proxysettings">Proxy settings</h3><p>If you need to build&nbsp;Codehaus Cargo from behind a proxy, proceed as follows:</p>
+          </div><script type="text/javascript">
+  // Google Ads code
+  google_ad_client = "ca-pub-7996505557003356";
+  google_ad_slot = "5363897989";
+  google_ad_width = 728;
+  google_ad_height = 90;
+</script>
+          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
+           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+          </center><h3 id="Building-Selectingcontainers">Selecting containers</h3><p>The default list of containers to run on depends a property <code>cargo.containers</code> defined in <code>CARGOHOME/core/samples/pom.xml</code>. It can also be supplied at the command line by using profiles (<code>-P&lt;containerId&gt;</code>).</p><p>For example if you only want to run on <a href="Tomcat+8.x.html">Tomcat 8.x</a> you'd run: <code>mvn -Ptomcat8x clean install</code></p><h3 id="Building-Proxysettings">Proxy settings</h3><p>If you need to build&nbsp;Codehaus Cargo from behind a proxy, proceed as follows:</p>
           <ul>
            <li>Edit the <code>.m2/settings.xml</code> file from your home directory (<code>C:\Documents and Settings\<em>username</em></code> or <code>C:\Users\<em>username</em></code> on Windows),</li>
            <li>Comment out the <code>&lt;proxy&gt;</code> element and fill in the proxy server settings accordingly.</li>
