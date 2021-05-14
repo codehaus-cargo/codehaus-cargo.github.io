@@ -409,6 +409,7 @@ public class WebsiteGenerator implements Runnable
                     {
                         filename = blogpostIdentifiers.get(filename);
                     }
+                    filename = filename.replace("%3A", "").replace("%2C", "");
                     sb.append(filename);
                     sb.append(".html");
                     sb.append(anchor);
