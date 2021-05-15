@@ -398,7 +398,7 @@
 </pre> 
                  </div>
                 </div>
-                <p>In addition to this, properties can also be set using the Maven 3 <code>settings.xml</code> file. See the <a href="#Maven3PluginReferenceGuide-settingsXML">setting configuration options via the Maven settings.xml</a> section for details.</p>
+                <p>In addition to this, properties can also be set using the Maven 3 <code>settings.xml</code> file. See the <a href="#Maven3PluginReferenceGuide-settingsXML" rel="nofollow">setting configuration options via the Maven settings.xml</a> section for details.</p>
                </div></td>
              </tr>
              <tr>
@@ -460,7 +460,7 @@
               <td colspan="1" class="confluenceTd"><p>Container context key, which can be used for two purposes:</p>
                <ol>
                 <li>Start, stop, configure or deploy to the same Cargo container (together with its configuration) from different Maven artifacts.</li>
-                <li>Inject configuration properties via the Maven&nbsp;<code>settings.xml</code> file, as explained in the <a href="#Maven3PluginReferenceGuide-settingsXML">setting configuration options via the Maven 3 settings.xml section</a>.</li>
+                <li>Inject configuration properties via the Maven&nbsp;<code>settings.xml</code> file, as explained in the <a href="#Maven3PluginReferenceGuide-settingsXML" rel="nofollow">setting configuration options via the Maven 3 settings.xml section</a>.</li>
                </ol></td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td colspan="1" class="confluenceTd"><p>No reusable default</p><p>The Cargo Maven 3 plugin will actually generate a unique context key for each container based on the container and configuration's type and home - Which is not meant to be reused by end users.</p></td>
@@ -475,7 +475,7 @@
               <td class="confluenceTd"><p><code>&lt;home&gt;</code></p></td>
               <td class="confluenceTd"><p>Location where the container is installed. If specified in conjunction with the <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> or <code><a href="#Maven3PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element, it will override the home directory defined by the installer.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No defaultf</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven3PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
+              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven3PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;implementation&gt;</code></p></td>
@@ -1026,7 +1026,7 @@
            </table>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven3PluginReferenceGuide-datasource"><span class="confluence-anchor-link" id="datasource"> </span></span></p>
           <div class="table-wrap">
-           <table class="confluenceTable">
+           <table class="wrapped confluenceTable">
             <colgroup>
              <col>
              <col>

@@ -285,7 +285,7 @@
           </table> </td> 
         </tr> 
         <tr valign="top"> 
-         <td class="rightColumn"> <h1 id="Maven3PluginGettingStarted-GettingStarted">Getting Started</h1><h2 id="Maven3PluginGettingStarted-Veryquickstart">Very quick start</h2><p>Codehaus Cargo can be directly run on any existing Maven Java EE project (WAR, EAR or other) by running:</p>
+         <td class="rightColumn"> <h1 id="Maven3PluginGettingStarted-GettingStarted">Getting Started</h1><h2 id="Maven3PluginGettingStarted-Veryquickstart">Very quick start</h2><p>Codehaus Cargo can be directly run on any existing Maven&nbsp;J2EE, Java EE or Jakarta EE project (WAR, EAR or other) by running:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
@@ -299,7 +299,7 @@
     -Dcargo.maven.containerUrl=https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/9.0.45/tomcat-9.0.45.zip
 </pre> 
            </div>
-          </div><p>That command will automatically download Tomcat 9.0.45 from the specified URL (taking into account any proxy server setting you would have in Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3</a><a href="Maven+3+Plugin+Reference+Guide.html"> Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p><p>Now, if you want to run this time on <a href="WildFly+20.x.html">WildFly 20.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
+          </div><p>That command will automatically download Tomcat 9.0.45 from the specified URL (taking into account any proxy server setting you would have in Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p><p>Now, if you want to run this time on <a href="WildFly+20.x.html">WildFly 20.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
@@ -342,10 +342,10 @@
                <ul>
                 <li style="list-style-type: none;">
                  <ul>
-                  <li class="confluence-link">If the plugin configuration requires so, installs the container.</li>
+                  <li class="confluence-link">If the plugin configuration requires so, <a href="Installer.html#Installer-Maven3Installer">installs the container</a>.</li>
                   <li class="confluence-link">If the plugin configuration defines a container with a <a href="Standalone+Local+Configuration.html">standalone local configuration</a>, it will create the configuration.</li>
                   <li class="confluence-link">If the plugin configuration contains one or more <a href="Deployable.html">deployables</a>, it will deploy these to the container automatically.</li>
-                  <li class="confluence-link">If the plugin configuration contains no <a href="Deployable.html">deployables</a> but the project's packaging is Java EE (WAR, EAR, etc.), it will deploy the project's deployable to to the container automatically.</li>
+                  <li class="confluence-link">If the plugin configuration contains no <a href="Deployable.html">deployables</a> but the project's packaging is J2EE, Java EE or Jakarta EE (WAR, EAR, etc.), it will deploy the project's deployable to to the container automatically.</li>
                   <li class="confluence-link">And, of course, start the container.</li>
                  </ul></li>
                </ul><p><strong>Note</strong>: A container that's started with <code>cargo:start</code> will automatically shut down as soon as the parent Maven instance quits (i.e., you see a <code>BUILD SUCCESSFUL</code> or <code>BUILD FAILED</code> message). If you want to start a container and perform manual testing, see our next goal <code>cargo:run</code>.</p></td>
@@ -356,10 +356,10 @@
                <ul>
                 <li style="list-style-type: none;">
                  <ul>
-                  <li class="confluence-link">If the plugin configuration requires so, installs the container.</li>
+                  <li class="confluence-link">If the plugin configuration requires so, <a href="Installer.html#Installer-Maven3Installer">installs the container</a>.</li>
                   <li class="confluence-link">If the plugin configuration defines a container with a <a href="Standalone+Local+Configuration.html">standalone local configuration</a>, it will create the configuration.</li>
                   <li class="confluence-link">If the plugin configuration contains one or more <a href="Deployable.html">deployables</a>, it will deploy these to the container automatically.</li>
-                  <li class="confluence-link">If the plugin configuration contains no <a href="Deployable.html">deployables</a> but the project's packaging is Java EE (WAR, EAR, etc.), it will deploy the project's deployable to to the container automatically.</li>
+                  <li class="confluence-link">If the plugin configuration contains no <a href="Deployable.html">deployables</a> but the project's packaging is&nbsp;J2EE, Java EE or Jakarta EE (WAR, EAR, etc.), it will deploy the project's deployable to to the container automatically.</li>
                   <li class="confluence-link">And, of course, start the container and wait for the user to press <code>CTRL + C</code> to stop.</li>
                  </ul></li>
                </ul></td>
@@ -374,7 +374,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><strong>cargo:configure</strong></code></p></td>
-              <td class="confluenceTd"><p>Create the configuration for a <a href="Local+Container.html">local container</a>, without starting it. Note that the <code>cargo:start</code> and <code>cargo:run</code> goals will also install the container automatically (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-780" class="external-link" rel="nofollow">but will not call <code>cargo:install</code></a>).</p></td>
+              <td class="confluenceTd"><p>Create the configuration for a <a href="Local+Container.html">local container</a>, without starting it.</p><p><strong>Note</strong>: If the plugin configuration requires so, the <code>cargo:start</code> goal automatically <a href="Installer.html#Installer-Maven3Installer">installs the container</a>.</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><strong>cargo:package</strong></code></p></td>
@@ -414,7 +414,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><strong>cargo:install</strong></code></p></td>
-              <td class="confluenceTd"><p>Installs a container distribution on the file system. Note that the <code>cargo:start</code> goal will also install the container automatically (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-780" class="external-link" rel="nofollow">but will not call <code>cargo:install</code></a>).</p></td>
+              <td class="confluenceTd"><p>Installs a container distribution, either <a href="Installer.html#Installer-Maven3Installer">downloaded using a URL or defined as a Maven artifact</a>, on the file system.</p><p><strong>Note</strong>: If the plugin configuration requires so, the <code>cargo:start</code> and <code>cargo:run</code> goals automatically install the container <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-780" class="external-link" rel="nofollow">but will not call <code>cargo:install</code></a>.</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><strong>cargo:help</strong></code></p></td>
