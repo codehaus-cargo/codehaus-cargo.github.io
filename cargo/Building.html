@@ -288,6 +288,7 @@
          <td class="rightColumn"> <h1 id="Building-Prequisites">Prequisites</h1>
           <ul>
            <li>Check out or download as a ZIP file the Codehaus Cargo source code from <a href="Source+code.html">Github</a> into a <code>CARGOHOME</code> directory (wherever you want on your machine).</li>
+           <li>Install the JDK 11. If you really want to build with JDK 8 or with JDK 12 and above, read our chapter on <a href="#Building-nonJdk11">building with older or newer versions of the JDK</a>.</li>
            <li>Install <a href="http://maven.apache.org" class="external-link" rel="nofollow">Maven 3.2.3 or later</a>. Verify your installation works by running the following command in a command prompt / terminal window: <code>mvn --version</code></li>
           </ul><h1 id="Building-Building">Building</h1><p>To build Codehaus Cargo:</p>
           <ul>
@@ -313,7 +314,7 @@
           <ul>
            <li>Edit the <code>.m2/settings.xml</code> file from your home directory (<code>C:\Documents and Settings\<em>username</em></code> or <code>C:\Users\<em>username</em></code> on Windows),</li>
            <li>Comment out the <code>&lt;proxy&gt;</code> element and fill in the proxy server settings accordingly.</li>
-          </ul><h3 id="Building-ArtifactTransferExceptionwithMaven3.8.1onwards">ArtifactTransferException with Maven 3.8.1 onwards</h3><p>With Maven 3.8.1 onwards you might get errors such as: <code>org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.9.4-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [ow2-snapshot (<span class="nolink">http://repository.ow2.org/nexus/content/repositories/snapshots</span>, default, snapshots)]</code></p><p>To work around the issue, create a <code>settings.xml</code> file in your <code>.m2</code> home which overrides the HTTP-based OW2 SNAPSHOTS repository:</p>
+          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Building-ow2override"><span class="confluence-anchor-link" id="ow2override"> </span></span></p><h3 id="Building-ArtifactTransferExceptionwithMaven3.8.1onwards"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</h3><p>With Maven 3.8.1 onwards you might get errors such as: <code>org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.9.4-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [ow2-snapshot (<span class="nolink">http://repository.ow2.org/nexus/content/repositories/snapshots</span>, default, snapshots)]</code></p><p>To work around the issue, create a <code>settings.xml</code> file in your <code>.m2</code> home which overrides the HTTP-based OW2 SNAPSHOTS repository:</p><p><br></p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>settings.xml sample</b>
@@ -333,7 +334,53 @@
   &lt;/mirrors&gt;
 &lt;/settings&gt;</pre> 
            </div>
-          </div> </td> 
+          </div><p class="auto-cursor-target"><span class="confluence-anchor-link conf-macro output-inline" id="Building-nonJdk11"><span class="confluence-anchor-link" id="nonJdk11"> </span></span></p><h3 class="auto-cursor-target" id="Building-BuildingwitholderornewerversionsoftheJDK">Building with older or newer versions of the JDK</h3><p class="auto-cursor-target">Codehaus Cargo has support for very old and very new containers, which implies it has quite a broad Java source and target version support:</p>
+          <ul>
+           <li class="auto-cursor-target">The <a href="Resin+3.x.html">Resin 3.x</a> container requires Java 6</li>
+           <li class="auto-cursor-target">The <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a> for Jetty 6.x as well as for Jetty 7.x to 9.x is built with Java 6, so we can support a broad range of Java versions</li>
+           <li class="auto-cursor-target">At the same time, the <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a> for Jetty 10.x onwards requires the JDK 11</li>
+          </ul><p>The only version of the JDK that can build with all these constraints is JDK 11. We hence have certain modules of the Codehaus Cargo build that do not activate on JDK 8, and some others that don't activate on JDK 12 onwards. On these JDKs, you hence will get exceptions such as:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+            <b>Error when building with JDK 8 or JDK 12 and above</b>
+           </div>
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.1.2:copy (copy-test-ear) on project cargo-core-container-jonas: Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:simple-ear:ear:1.9.5-SNAPSHOT -&gt; [Help 1]</pre> 
+           </div>
+          </div><p>To build on these JDKs, you can either have a "pre-build" in JDK 11, or use the <a href="Maven+3+Plugin+Installation.html#Maven3PluginInstallation-snapshots">snapshots repository</a> by adding the below to your Maven <code>settings.xml</code>:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+            <b>settings.xml sample</b>
+           </div>
+           <div class="codeContent panelContent pdl"> 
+            <pre class="syntaxhighlighter-pre">&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
+  &lt;profiles&gt;
+    &lt;profile&gt;
+      &lt;id&gt;sonatype-snapshots-repository&lt;/id&gt;
+	  &lt;activation&gt;
+	    &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
+	  &lt;/activation&gt;
+      &lt;repositories&gt;
+        &lt;repository&gt;
+          &lt;id&gt;sonatype-snapshots&lt;/id&gt;
+          &lt;name&gt;Sonatype Snapshots&lt;/name&gt;
+          &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots/&lt;/url&gt;
+          &lt;releases&gt;
+            &lt;enabled&gt;false&lt;/enabled&gt;
+          &lt;/releases&gt;
+          &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+          &lt;/snapshots&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+    &lt;/profile&gt;
+  &lt;/profiles&gt;
+&lt;/settings</pre> 
+           </div>
+          </div><p><br></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 

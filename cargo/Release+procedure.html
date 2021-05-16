@@ -285,14 +285,19 @@
           </table> </td> 
         </tr> 
         <tr valign="top"> 
-         <td class="rightColumn"> <p>Releases are performed using Maven 3.2.3 and onwards so you need to have that installed (see the <a href="Building.html">building</a> page). This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
+         <td class="rightColumn"> <p>This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
           <ul>
-           <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html" class="external-link" rel="nofollow">OSSRH guide</a></li>
+           <li>JDK 11. Please note that older or newer versions of the JDK cannot build all of Codehaus Cargo, and hence should not be used to release new versions.</li>
+           <li>Maven 3.2.3 or newer, i.e. versions that ensure access to Maven Central is done via HTTPS.
+            <ul>
+             <li>If you are using Maven 3.8.1 or newer, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="Building.html#Building-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
+            </ul></li>
+           <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html" class="external-link" rel="nofollow">OSSRH guide</a>.</li>
            <li><a href="http://www.gnupg.org/" class="external-link" rel="nofollow">The GNU privacy guard (GPG)</a> installed on your machine and at least one secret key.
             <ul>
              <li>The secret key's public part must have been uploaded to the <a href="http://pgp.mit.edu/" class="external-link" rel="nofollow">MIT PGP Public Key Server</a>.</li>
             </ul></li>
-           <li><p>To provide your&nbsp;Sonatype Nexus credentials using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
+           <li><p>Your&nbsp;Sonatype Nexus credentials provided using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl"> 
               <pre class="syntaxhighlighter-pre">&lt;settings&gt;
@@ -361,7 +366,7 @@
                <li>Make sure the <a href="Project+Structure.html" rel="nofollow">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
               </ul></li>
              <li>Modify the <a href="Home.html" rel="nofollow">Home</a> page to update the available version number, the release notes URL the checkbox is pointing to and the release date</li>
-             <li>Modify the <a href="Maven+3+Plugin+Installation.html" rel="nofollow">Maven 3 Plugin Installation</a> page to update the&nbsp;<code>SNAPSHOT</code> version</li>
+             <li>Modify the&nbsp;<a href="Building.html">Building</a> and <a href="Maven+3+Plugin+Installation.html" rel="nofollow">Maven 3 Plugin Installation</a> pages to update the&nbsp;<code>SNAPSHOT</code> version</li>
              <li>Create a <a href="https://codehaus-cargo.atlassian.net/wiki/pages/createblogpost.action?spaceKey=CARGO" rel="nofollow">blog post</a></li>
              <li><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/exportspacehtml.action?key=CARGO" rel="nofollow">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="Downloads.html" rel="nofollow">Downloads</a> page</li>
              <li>Move the old version to the <a href="Archived+Downloads.html" rel="nofollow">Archived Downloads</a> page<br>
