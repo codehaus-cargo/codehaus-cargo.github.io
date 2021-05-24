@@ -305,7 +305,7 @@
               <ul>
                <li>Cargo has an SPI that you should use and that should make it easy for you. Your container class should extend <code>org.codehaus.cargo.container.spi.Abstract_ContainerType_Container</code> and your configuration class should extend <code>org.codehaus.cargo.container.spi.configuration.Abstract_ConfigurationType_Configuration</code>.</li>
               </ul></li>
-             <li>Finally, implement the <code>FactoryRegistry</code> that will register your container to CARGO and make sure you've defined a link to your container's factory registry in <code>src/main/resources/META-INF/services/org.codehaus.cargo.generic.AbstractFactoryRegistry</code>.</li>
+             <li>Finally, implement the <code>FactoryRegistry</code> that will register your container to&nbsp;Codehaus Cargo and make sure you've defined a link to your container's factory registry in <code>src/main/resources/META-INF/services/org.codehaus.cargo.generic.AbstractFactoryRegistry</code>.</li>
             </ul></li>
            <li>Run the Cargo <a href="Building.html">build</a> to ensure everything is working. You'll probably find that you haven't followed the Cargo project's coding conventions... Fix those and build again until it passes! <img class="emoticon emoticon-wink" src="attachments/wink.png" width="16" height="16" alt="(wink)"> Please note that when you run the build it'll automatically run the samples test suites in your container (provided you've added your container to the generic API as described in the previous step and provided you've defined the right capabilities for your container). See the <a href="Building.html">Building</a> page for more details on the build.</li>
            <li>Once built, add your new container to the <code>uberpom</code> and check that the <code>uberjar</code> is still looking fine.</li>
@@ -315,13 +315,13 @@
             </ul></li>
            <li>Register on <a href="https://codehaus-cargo.atlassian.net/wiki/" rel="nofollow">Codehaus Cargo Confluence</a>. Once this is done we'll add you to the <code>cargo-developers</code> user group so that you have the right to edit yourself the Cargo web site pages</li>
            <li>Document the new container on the <a href="Home.html" rel="nofollow">Home</a> page</li>
-           <li>Create a SVN patch and attach it to the JIRA issue you have created above <u>or</u> create a pull request on github</li>
+           <li>Create a SVN patch and attach it to the JIRA issue you have created above <u>or</u> create a pull request on Github</li>
            <li>Once the patch has been accepted:
             <ul>
              <li>Add the container to the <a href="Containers.html" rel="nofollow">Containers list</a> on the main web site</li>
-             <li>Add the container to the <a href="Navigation.html" rel="nofollow">Navigation page</a> (left side of the CARGO Web site)</li>
+             <li>Add the container to the <a href="Navigation.html" rel="nofollow">Navigation page</a> (left side of the Codehaus Cargo Web site)</li>
              <li>Add the container to the <a href="Downloads.html" rel="nofollow">Downloads page</a></li>
-             <li>Add the container to the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a> so that its integrity can be checked at each build<br><u>Note</u>: For performance reasons, we split the build on the CI system to differentiate the containers running on different JDK versions on two different threads</li>
+             <li>Add the container to the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous Integration</a> so that its integrity can be checked at each build<br><u>Note</u>: For performance reasons, we split the build on the CI system to differentiate the containers running on different JDK versions on 8 different pipelines.</li>
             </ul></li>
           </ul><p>Thanks and happy coding!</p><script type="text/javascript">
   // Google Ads code
