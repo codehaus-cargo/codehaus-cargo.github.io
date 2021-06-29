@@ -232,14 +232,14 @@
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
-       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
-       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
        <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
@@ -252,7 +252,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -289,7 +289,7 @@
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <p class="title">Security issues with older versions of Apache Ant</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>As documented in <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1945" class="external-link" rel="nofollow">CVE-2020-1945</a>, Apache Ant 1.1 to 1.9.14 and 1.10.0 to 1.10.7 uses the default temporary directory identified by the Java system property <code>java.io.tmpdir</code> for several tasks and may thus leak sensitive information. Moreover, the <code>fixcrlf</code> and <code>replaceregexp</code> tasks copy files from the temporary directory back into the build tree allowing an attacker to inject modified source files into the Codehaus Cargo container configuration generation process. We hence strongly recommend only using versions 1.9.15 (for Ant 1.9.x) or versions 1.10.8 and above.</p>
+            <p>As documented in <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1945">CVE-2020-1945</a>, Apache Ant 1.1 to 1.9.14 and 1.10.0 to 1.10.7 uses the default temporary directory identified by the Java system property <code>java.io.tmpdir</code> for several tasks and may thus leak sensitive information. Moreover, the <code>fixcrlf</code> and <code>replaceregexp</code> tasks copy files from the temporary directory back into the build tree allowing an attacker to inject modified source files into the Codehaus Cargo container configuration generation process. We hence strongly recommend only using versions 1.9.15 (for Ant 1.9.x) or versions 1.10.8 and above.</p>
            </div>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
@@ -337,8 +337,8 @@
                 <li style="list-style-type: none;">
                  <ul>
                   <li class="confluence-link">If the task configuration requires so, installs the container.</li>
-                  <li class="confluence-link">If the task configuration defines a container with a <a href="http://docs.codehaus.org/display/CARGO/Standalone+Local+Configuration" class="external-link" rel="nofollow">standalone local configuration</a>, it will create the configuration.</li>
-                  <li class="confluence-link">If the task configuration contains one or more <a href="http://docs.codehaus.org/display/CARGO/Deployable" class="external-link" rel="nofollow">deployables</a>, it will deploy these to the container automatically.</li>
+                  <li class="confluence-link">If the task configuration defines a container with a <a href="http://docs.codehaus.org/display/CARGO/Standalone+Local+Configuration">standalone local configuration</a>, it will create the configuration.</li>
+                  <li class="confluence-link">If the task configuration contains one or more <a href="http://docs.codehaus.org/display/CARGO/Deployable">deployables</a>, it will deploy these to the container automatically.</li>
                   <li class="confluence-link">And, of course, start the container.</li>
                  </ul></li>
                </ul><p><strong>Note</strong>: A container that's started with the <code>start</code> task will automatically shut down as soon as the parent Ant instance quits (i.e., you see a <code>BUILD SUCCESSFUL</code> or <code>BUILD FAILED</code> message). If you want to start a container and perform manual testing, see our next task <code>run</code>.</p></td>
@@ -554,7 +554,7 @@
                </tr>
                <tr>
                 <td colspan="1" class="confluenceTd"><p><code><a href="#Antsupport-deployable">&lt;deployables&gt;</a></code></p></td>
-                <td colspan="1" class="confluenceTd"><p>A list of <a href="Deployable.html" rel="nofollow">deployable</a>s that are going to be deployed in the container when it is started or when <code><span class="external-link">deploy</span></code> / <code><span class="external-link">undeploy</span></code> is called.</p></td>
+                <td colspan="1" class="confluenceTd"><p>A list of <a href="Deployable.html">deployable</a>s that are going to be deployed in the container when it is started or when <code><span>deploy</span></code> / <code><span>undeploy</span></code> is called.</p></td>
                 <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
                 <td colspan="1" class="confluenceTd"><p>No default</p></td>
                </tr>
@@ -814,7 +814,7 @@
                 <td class="confluenceTd"><p><code>&lt;downloadDir&gt;</code></p></td>
                 <td class="confluenceTd"><p>Directory in which the <code>zipUrlInstaller</code> should download the container's ZIP or TAR.GZ file.</p></td>
                 <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
-                <td class="confluenceTd"><p><code>${<a href="http://java.io" class="external-link" rel="nofollow">java.io</a>.tmpdir}/cargo/installs</code></p></td>
+                <td class="confluenceTd"><p><code>${<a href="http://java.io">java.io</a>.tmpdir}/cargo/installs</code></p></td>
                </tr>
                <tr>
                 <td class="confluenceTd"><p><code>&lt;extractDir&gt;</code></p></td>
@@ -1126,7 +1126,7 @@
            </div>
           </div><h4 id="Antsupport-Tomcat5.x">Tomcat 5.x</h4><p>This example gives a walk through of how to get a Cargo Ant build to work with Tomcat 5.x .</p><h5 id="Antsupport-Prerequisites">Prerequisites</h5>
           <ul>
-           <li>It is assumed that <a href="http://tomcat.apache.org" class="external-link" rel="nofollow">Tomcat 5.x</a> is already installed</li>
+           <li>It is assumed that <a href="http://tomcat.apache.org">Tomcat 5.x</a> is already installed</li>
            <li>The cargo-core-uberjar.jar and cargo-ant.jar JARs have been downloaded</li>
            <li>A mimimum knowledge of Ant is required</li>
            <li>User already has a <code>war</code> target that properly generates a working war file</li>

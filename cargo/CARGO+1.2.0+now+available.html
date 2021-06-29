@@ -232,14 +232,14 @@
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
-       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
-       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
        <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
@@ -252,7 +252,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -289,38 +289,38 @@
           <ul>
            <li>CARGO Maven2/Maven3 plugin fixes and improvements:</li>
            <ul>
-            <li><code>ContainerStopMojo</code> now can resolve dependencies with scope <code>&lt;test&gt;</code>, the same way <code>ContainerRunMojo</code> and <code>ContainerStartMojo</code> can (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1069" class="external-link" rel="nofollow">CARGO-1069</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-527" class="external-link" rel="nofollow">CARGO-527</a>).</li>
-            <li>The <code>functional-tests</code> artifact of the <a href="http://cargo.codehaus.org/Maven2+Archetypes#Maven2Archetypes-separate" class="external-link" rel="nofollow">Separate Functional Test Module Archetype</a> now uses <code>packaging=jar</code> and is compatible with m2e (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1065" class="external-link" rel="nofollow">CARGO-1065</a>).</li>
-            <li>The CARGO plugin now resolves the required container JARs automatically (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-975" class="external-link" rel="nofollow">CARGO-975</a>), meaning that if you're for example only using CARGO with the Jetty container than the other containers' JARs will not be downloaded.</li>
+            <li><code>ContainerStopMojo</code> now can resolve dependencies with scope <code>&lt;test&gt;</code>, the same way <code>ContainerRunMojo</code> and <code>ContainerStartMojo</code> can (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1069">CARGO-1069</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-527">CARGO-527</a>).</li>
+            <li>The <code>functional-tests</code> artifact of the <a href="http://cargo.codehaus.org/Maven2+Archetypes#Maven2Archetypes-separate">Separate Functional Test Module Archetype</a> now uses <code>packaging=jar</code> and is compatible with m2e (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1065">CARGO-1065</a>).</li>
+            <li>The CARGO plugin now resolves the required container JARs automatically (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-975">CARGO-975</a>), meaning that if you're for example only using CARGO with the Jetty container than the other containers' JARs will not be downloaded.</li>
            </ul>
-           <li>Fixed a bug where the <a href="http://cargo.codehaus.org/JSR88" class="external-link" rel="nofollow">JSR-88</a> deployers' (used by the GlassFish remote deployer) <code>undeploy</code> method ignored the EAR's name ( <a class="external-link" href="https://codehaus-cargo.atlassian.net/browse/CARGO-1076" rel="nofollow">CARGO-1076</a><span class="description">).</span></li>
-           <li>All CARGO JBoss containers, from the 10-year-old <a href="http://cargo.codehaus.org/JBoss+3.x" class="external-link" rel="nofollow">JBoss 3.x</a> to the brand-new <a href="http://cargo.codehaus.org/JBoss+7.1.x" class="external-link" rel="nofollow">JBoss 7.1.x</a>, now support datasources (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-426" class="external-link" rel="nofollow">CARGO-426</a>). You can therefore now use CARGO to deploy datasources to any JBoss container; the bigger advantage being that the datasource definitions don't need to change between JBoss versions nor between <a href="http://cargo.codehaus.org/DataSource+and+Resource+Support" class="external-link" rel="nofollow">all containers that CARGO can deploy datasources to</a>.</li>
-           <li>The JOnAS remote deployer now works with Windows for XML deployment plans (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1067" class="external-link" rel="nofollow">CARGO-1067</a>).</li>
+           <li>Fixed a bug where the <a href="http://cargo.codehaus.org/JSR88">JSR-88</a> deployers' (used by the GlassFish remote deployer) <code>undeploy</code> method ignored the EAR's name ( <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1076">CARGO-1076</a><span class="description">).</span></li>
+           <li>All CARGO JBoss containers, from the 10-year-old <a href="http://cargo.codehaus.org/JBoss+3.x">JBoss 3.x</a> to the brand-new <a href="http://cargo.codehaus.org/JBoss+7.1.x">JBoss 7.1.x</a>, now support datasources (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-426">CARGO-426</a>). You can therefore now use CARGO to deploy datasources to any JBoss container; the bigger advantage being that the datasource definitions don't need to change between JBoss versions nor between <a href="http://cargo.codehaus.org/DataSource+and+Resource+Support">all containers that CARGO can deploy datasources to</a>.</li>
+           <li>The JOnAS remote deployer now works with Windows for XML deployment plans (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1067">CARGO-1067</a>).</li>
            <li>The Resin container has been improved:</li>
            <ul>
-            <li>The Resin management port can be configured (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-318" class="external-link" rel="nofollow">CARGO-318</a>)</li>
-            <li><a href="http://cargo.codehaus.org/Resin+3.1.x" class="external-link" rel="nofollow">Resin 3.1.x</a> support has been added (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-759" class="external-link" rel="nofollow">CARGO-759</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-494" class="external-link" rel="nofollow">CARGO-494</a>)</li>
+            <li>The Resin management port can be configured (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-318">CARGO-318</a>)</li>
+            <li><a href="http://cargo.codehaus.org/Resin+3.1.x">Resin 3.1.x</a> support has been added (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-759">CARGO-759</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-494">CARGO-494</a>)</li>
            </ul>
-           <li>Last but not least, the new XML replacement API introduced in CARGO 1.1.4, which avoids having CARGO-specific container configuration files in the distribution, is now used more extensively; as the Jetty (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1060" class="external-link" rel="nofollow">CARGO-1060</a>), Resin (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1075" class="external-link" rel="nofollow">CARGO-1075</a>) and Tomcat (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1061" class="external-link" rel="nofollow">CARGO-1061</a>) container also make use of it.</li>
+           <li>Last but not least, the new XML replacement API introduced in CARGO 1.1.4, which avoids having CARGO-specific container configuration files in the distribution, is now used more extensively; as the Jetty (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1060">CARGO-1060</a>), Resin (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1075">CARGO-1075</a>) and Tomcat (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1061">CARGO-1061</a>) container also make use of it.</li>
            <ul>
             <li>This way, not only we won't have to maintain these CARGO-specific files manually anymore, but also new versions will be supported "out of the box" and CARGO will also work with different flavours of containers.</li>
            </ul>
           </ul><p>CARGO 1.2.0 is therefore now ready. Please note that on the API side, this new minor version comes with some behavioural changes and the removal of some elements (which have been deprecated for over 6 months now):</p>
           <ul>
            <li>To achieve automatic resolution of container JARs in the Maven2/Maven3 container, a small change has been done in the <code>ResourceUtils</code>: it now loads resources using a class loader (as opposed to a class, which was the case in the past), hence <code>AbstractLocalConfiguration.RESOURCE_PATH</code> has been changed from <code>"/org/codehaus/cargo/container/internal/resources/"</code> to <code>"org/codehaus/cargo/container/internal/resources/"</code> (without the slash at the beginning). If your code uses the same constant, make sure you update it properly.</li>
-           <li>The <code>Deployable.isExpanded*</code> and <code>AbstractCopyingInstalledLocalDeployer.setShouldDeployExpanded*s</code> methods have been removed (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-905" class="external-link" rel="nofollow">CARGO-905</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-940" class="external-link" rel="nofollow">CARGO-940</a>). As a replacement:</li>
+           <li>The <code>Deployable.isExpanded*</code> and <code>AbstractCopyingInstalledLocalDeployer.setShouldDeployExpanded*s</code> methods have been removed (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-905">CARGO-905</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-940">CARGO-940</a>). As a replacement:</li>
            <ul>
             <li>The <code>Deployable</code> type has a generic <code>isExpanded</code> method.</li>
             <li><code>AbstractCopyingInstalledLocalDeployer</code> has a generic method <code>setShouldDeployExpanded</code> with two arguments.</li>
            </ul>
-           <li>File handling methods that manipulate texts now need to specify the encoding (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-909" class="external-link" rel="nofollow">CARGO-909</a>).</li>
-           <li>In the Maven2/Maven3 plugin, the <code>&lt;zipUrlInstaller&gt;</code> and <code>&lt;artifactInstaller&gt;</code> don't have the <code>&lt;installDir&gt;</code> attribute anymore, replaced by <code>&lt;downloadDir&gt;</code> and <code>&lt;extractDir&gt;</code> attributes (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-916" class="external-link" rel="nofollow">CARGO-916</a>).</li>
-           <li><code>TomcatPropertySet.MANAGER_URL</code> (i.e. <code>cargo.tomcat.manager.url</code>) has been removed (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-965" class="external-link" rel="nofollow">CARGO-965</a>), please use the generic <code>RemotePropertySet.URI</code> (i.e. <code>cargo.remote.uri</code>) instead.</li>
-          </ul><p>You can access the full release notes by visiting <a href="https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730" class="external-link" rel="nofollow">https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730</a></p><p>To use this new version:</p>
+           <li>File handling methods that manipulate texts now need to specify the encoding (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-909">CARGO-909</a>).</li>
+           <li>In the Maven2/Maven3 plugin, the <code>&lt;zipUrlInstaller&gt;</code> and <code>&lt;artifactInstaller&gt;</code> don't have the <code>&lt;installDir&gt;</code> attribute anymore, replaced by <code>&lt;downloadDir&gt;</code> and <code>&lt;extractDir&gt;</code> attributes (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-916">CARGO-916</a>).</li>
+           <li><code>TomcatPropertySet.MANAGER_URL</code> (i.e. <code>cargo.tomcat.manager.url</code>) has been removed (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-965">CARGO-965</a>), please use the generic <code>RemotePropertySet.URI</code> (i.e. <code>cargo.remote.uri</code>) instead.</li>
+          </ul><p>You can access the full release notes by visiting <a href="https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730">https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730</a></p><p>To use this new version:</p>
           <ul>
-           <li>Users of the Java API and/or ANT tasks can download the CARGO uberjar and ANT tasks from the download page: <a class="external-link" href="http://cargo.codehaus.org/Downloads" rel="nofollow">http://cargo.codehaus.org/Downloads</a></li>
+           <li>Users of the Java API and/or ANT tasks can download the CARGO uberjar and ANT tasks from the download page: <a href="http://cargo.codehaus.org/Downloads">http://cargo.codehaus.org/Downloads</a></li>
            <li>Maven2/Maven3 users simply need to change the plugin's <code>&lt;version&gt;</code> to <strong>1.2.0</strong>, and Maven2/Maven3 will download the new version automatically.</li>
-          </ul><p>Please share your good (and bad) findings on the <a class="external-link" href="mailto:user@cargo.codehaus.org" rel="nofollow">user@cargo.codehaus.org</a> mailing list.</p><p>Enjoy!</p><script type="text/javascript">
+          </ul><p>Please share your good (and bad) findings on the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.</p><p>Enjoy!</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";

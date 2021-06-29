@@ -232,14 +232,14 @@
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
-       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
-       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
        <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
@@ -252,7 +252,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -293,17 +293,17 @@
              <li><p>Switching to the better behaving <code>Collection.addAll</code> (instead of manual population of <code>List</code>s / <code>Set</code>s) and <code>String.join</code> (instead of manually created <code>for</code> loops with booleans checking if it the first element).</p></li>
              <li><p>Please note that we didn't go crazy with Lambda expressions: they bring very little benefit in the case of a very procedural process like Codehaus Cargo's (except perhaps for the XML-related parts where we do a lot of filtering), and in case something goes wrong the stack trace is very difficult to read...</p></li>
             </ul></li>
-           <li><p>While we did these updates, we also revised the <a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Codehaus Cargo CI</a> and enabled Java 6-based container tests. That implied further changes under the hood, for example changes in the version compatibility for the Cargo Samples Test Data modules. These obviously do not have much "visible" impact, yet enabled us to catch some long hidden bugs! See below...</p></li>
+           <li><p>While we did these updates, we also revised the <a href="https://semaphoreci.com/codehaus-cargo/cargo">Codehaus Cargo CI</a> and enabled Java 6-based container tests. That implied further changes under the hood, for example changes in the version compatibility for the Cargo Samples Test Data modules. These obviously do not have much "visible" impact, yet enabled us to catch some long hidden bugs! See below...</p></li>
            <li><p>Containers - Resin:</p>
             <ul>
-             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1530" class="external-link" rel="nofollow">CARGO-1530</a>] We fixed the bug where the <a href="https://codehaus-cargo.github.io/cargo/Resin+3.x.html" class="external-link" rel="nofollow">Resin 3.x</a> container didn't work: <code>ResinRun</code> was being compiled to work with Java 7 onwards (since October 2018), yet due to incompatibilities between <code>com.caucho.log.EnvironmentLogger</code> and the behaviour described in <a href="https://bugs.openjdk.java.net/browse/JDK-8015098" class="external-link" rel="nofollow">JDK-8015098</a>, Resin 3.x doesn't run on Java 7 and above! We hence also build the Codehaus Cargo Resin container with Java 6 as the minimum version, while Java 8 remains the standard for all others.</p></li>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1530">CARGO-1530</a>] We fixed the bug where the <a href="https://codehaus-cargo.github.io/cargo/Resin+3.x.html">Resin 3.x</a> container didn't work: <code>ResinRun</code> was being compiled to work with Java 7 onwards (since October 2018), yet due to incompatibilities between <code>com.caucho.log.EnvironmentLogger</code> and the behaviour described in <a href="https://bugs.openjdk.java.net/browse/JDK-8015098">JDK-8015098</a>, Resin 3.x doesn't run on Java 7 and above! We hence also build the Codehaus Cargo Resin container with Java 6 as the minimum version, while Java 8 remains the standard for all others.</p></li>
             </ul></li>
           </ul><p>Lesson learnt from this release? Well, if something is not tested, one should assume it is broken...</p><p>To try out this latest version:</p>
           <ul>
-           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" class="external-link" rel="nofollow">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.8.2</strong></p></li>
-           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html" class="external-link" rel="nofollow">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.2/cargo-core-uberjar-1.8.2.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.2/cargo-core-uberjar-1.8.2.jar</a></p></li>
-           <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html" class="external-link" rel="nofollow">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.2/cargo-ant-1.8.2.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.2/cargo-ant-1.8.2.jar</a></p></li>
-           <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">Cargo Daemon</a> can get it from&nbsp;<a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.2/cargo-daemon-webapp-1.8.2.war" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.2/cargo-daemon-webapp-1.8.2.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
+           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.8.2</strong></p></li>
+           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.2/cargo-core-uberjar-1.8.2.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.2/cargo-core-uberjar-1.8.2.jar</a></p></li>
+           <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.2/cargo-ant-1.8.2.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.2/cargo-ant-1.8.2.jar</a></p></li>
+           <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from&nbsp;<a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.2/cargo-daemon-webapp-1.8.2.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.2/cargo-daemon-webapp-1.8.2.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
           </ul><p>Enjoy!</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";

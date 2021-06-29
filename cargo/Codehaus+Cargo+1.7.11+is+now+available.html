@@ -232,14 +232,14 @@
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
-       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
-       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
        <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
@@ -252,7 +252,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -289,22 +289,22 @@
           <ul>
            <li><p>Containers - JBoss and Wildfly</p>
             <ul>
-             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1506" class="external-link" rel="nofollow">CARGO-1506</a>] - Ability to define <code>management-https.port</code> for Wildfly and JBoss</p></li>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1506">CARGO-1506</a>] - Ability to define <code>management-https.port</code> for Wildfly and JBoss</p></li>
             </ul></li>
            <li><p>Containers - Tomcat</p>
             <ul>
-             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1509" class="external-link" rel="nofollow">CARGO-1509</a>] - Tomcat remote deployment (upload) doesn't work with <code>Digest</code> authentication</p></li>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1509">CARGO-1509</a>] - Tomcat remote deployment (upload) doesn't work with <code>Digest</code> authentication</p></li>
             </ul></li>
            <li><p>Containers - Wildfly</p>
             <ul>
-             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1510" class="external-link" rel="nofollow">CARGO-1510</a>] - Implement <a href="https://codehaus-cargo.github.io/cargo/WildFly+19.x.html" class="external-link" rel="nofollow">WildFly 19.x</a></p></li>
+             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1510">CARGO-1510</a>] - Implement <a href="https://codehaus-cargo.github.io/cargo/WildFly+19.x.html">WildFly 19.x</a></p></li>
             </ul></li>
-          </ul><p>Please be aware that the fix for <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1509" class="external-link" rel="nofollow">CARGO-1509</a> implies some changes in for the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/internal/TomcatManager.html" class="external-link" rel="nofollow">TomcatManager</a> class: the previous methods which used <code>InputStream</code>s as input (for the deployable that needs tobbe uploaded) cannot handle the case where the same input has to be read twice (or more times), as it is the case for a <code>Digest</code> authentication (where two requests are sent: one to obtain the HTTP <code>Digest</code> challenge, the second to send the associated authentication headers). The updated methods hence have a <code>File</code> as parameter instead of <code>InputStream</code>, as a side effect, the new implementation avoids memory leaks <img class="emoticon emoticon-wink" src="attachments/wink.png" width="16" height="16" alt="(wink)"></p><p>To try it out:</p>
+          </ul><p>Please be aware that the fix for <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1509">CARGO-1509</a> implies some changes in for the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/internal/TomcatManager.html">TomcatManager</a> class: the previous methods which used <code>InputStream</code>s as input (for the deployable that needs tobbe uploaded) cannot handle the case where the same input has to be read twice (or more times), as it is the case for a <code>Digest</code> authentication (where two requests are sent: one to obtain the HTTP <code>Digest</code> challenge, the second to send the associated authentication headers). The updated methods hence have a <code>File</code> as parameter instead of <code>InputStream</code>, as a side effect, the new implementation avoids memory leaks <img class="emoticon emoticon-wink" src="attachments/wink.png" width="16" height="16" alt="(wink)"></p><p>To try it out:</p>
           <ul>
-           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" class="external-link" rel="nofollow">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.7.11</strong></p></li>
-           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html" class="external-link" rel="nofollow">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.7.11/cargo-core-uberjar-1.7.11.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.7.11/cargo-core-uberjar-1.7.11.jar</a></p></li>
-           <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html" class="external-link" rel="nofollow">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.7.11/cargo-ant-1.7.11.jar" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.7.11/cargo-ant-1.7.11.jar</a></p></li>
-           <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" class="external-link" rel="nofollow">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.7.11/cargo-daemon-webapp-1.7.11.war" class="external-link" rel="nofollow">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.7.11/cargo-daemon-webapp-1.7.11.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
+           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.7.11</strong></p></li>
+           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.7.11/cargo-core-uberjar-1.7.11.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.7.11/cargo-core-uberjar-1.7.11.jar</a></p></li>
+           <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.7.11/cargo-ant-1.7.11.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.7.11/cargo-ant-1.7.11.jar</a></p></li>
+           <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.7.11/cargo-daemon-webapp-1.7.11.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.7.11/cargo-daemon-webapp-1.7.11.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
           </ul><p>Enjoy!</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";

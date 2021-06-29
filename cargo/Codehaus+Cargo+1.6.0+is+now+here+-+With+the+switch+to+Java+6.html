@@ -232,14 +232,14 @@
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
-       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
-       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
        <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
@@ -252,7 +252,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -290,20 +290,20 @@
            <div class="wiki-content">
             <p>Dear enthusiasts</p>
             <p>A couple days after our last release, please welcome our new version 1.6.0.</p>
-            <p>This new versions marks a major change: <strong>we now switched to Java 6</strong> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1395" class="external-link" rel="nofollow">CARGO-1395</a>) - Which changes (and hopefully simplifies!) a lot of things:</p>
+            <p>This new versions marks a major change: <strong>we now switched to Java 6</strong> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1395">CARGO-1395</a>) - Which changes (and hopefully simplifies!) a lot of things:</p>
             <ul>
              <li>Java 6 or later is now required to build as well as to run Codehaus Cargo<br><strong>Note</strong>: The switch to Java 6 also implies you can build Codehaus Cargo on Java 9</li>
              <li>Maven 3.2.2 or later is now required to build Codehaus Cargo<br><strong>Note</strong>: Even though we didn't block any older Maven 2 / Maven 3 version (APIs <em>should</em> be the ones as old as Maven 2.0), we do not test with any of these older versions</li>
-             <li>Dependencies have been simplified: dom4j, JAXB nor Xalan are not required to run Codehaus Cargo anymore, as we now switched to the standard Java APIs for DOM<br><strong>Note</strong>:<span class="external-link"> Our dependency to jdom remains, as we use it for the creation of specific deployable XML POJOs</span></li>
-             <li><span class="external-link">Our Javadocs now look much better, as the new Java version allows the optimal usage of&nbsp;<code>@Override</code> and other tags<br></span></li>
+             <li>Dependencies have been simplified: dom4j, JAXB nor Xalan are not required to run Codehaus Cargo anymore, as we now switched to the standard Java APIs for DOM<br><strong>Note</strong>:<span> Our dependency to jdom remains, as we use it for the creation of specific deployable XML POJOs</span></li>
+             <li><span>Our Javadocs now look much better, as the new Java version allows the optimal usage of&nbsp;<code>@Override</code> and other tags<br></span></li>
             </ul>
-            <p><span class="external-link">In addition, we added support for <a href="https://codehaus-cargo.github.io/cargo/TomEE+7.x.html" class="external-link" rel="nofollow"> TomEE 7.x</a> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1406" class="external-link" rel="nofollow">CARGO-1406</a>); so you can keep on using the latest &amp; greatest Java containers.</span></p>
+            <p><span>In addition, we added support for <a href="https://codehaus-cargo.github.io/cargo/TomEE+7.x.html"> TomEE 7.x</a> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1406">CARGO-1406</a>); so you can keep on using the latest &amp; greatest Java containers.</span></p>
             <p>Feel like upgrading? Here come the instructions:</p>
             <ul>
-             <li>Users of the <a class="external-link" href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html" rel="nofollow">Maven 2 / Maven 3 plugin</a> simply need to use the&nbsp;Codehaus Cargo plugin version <strong>1.6.0</strong></li>
-             <li>Users of the <a class="external-link" href="https://codehaus-cargo.github.io/cargo/Javadocs.html" rel="nofollow">Java API</a> can download the new Uberjar from <a href="https://repo.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.6.0/cargo-core-uberjar-1.6.0.jar" class="external-link" rel="nofollow">https://repo.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.6.0/cargo-core-uberjar-1.6.0.jar</a></li>
-             <li>Similarly, users of the&nbsp;<a class="external-link" href="https://codehaus-cargo.github.io/cargo/Ant+support.html" rel="nofollow">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.6.0/cargo-ant-1.6.0.jar" class="external-link" rel="nofollow">https://repo.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.6.0/cargo-ant-1.6.0.jar</a></li>
-             <li>Finally, the ones who want to see the&nbsp;<a class="external-link" href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" rel="nofollow">Cargo Daemon</a> can get it from&nbsp;<a href="https://repo.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.6.0/cargo-daemon-webapp-1.6.0.war" class="external-link" rel="nofollow">https://repo.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.6.0/cargo-daemon-webapp-1.6.0.war</a> and can try the instructions on <a class="external-link" href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html" rel="nofollow">https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html</a></li>
+             <li>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a> simply need to use the&nbsp;Codehaus Cargo plugin version <strong>1.6.0</strong></li>
+             <li>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.6.0/cargo-core-uberjar-1.6.0.jar">https://repo.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.6.0/cargo-core-uberjar-1.6.0.jar</a></li>
+             <li>Similarly, users of the&nbsp;<a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.6.0/cargo-ant-1.6.0.jar">https://repo.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.6.0/cargo-ant-1.6.0.jar</a></li>
+             <li>Finally, the ones who want to see the&nbsp;<a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from&nbsp;<a href="https://repo.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.6.0/cargo-daemon-webapp-1.6.0.war">https://repo.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.6.0/cargo-daemon-webapp-1.6.0.war</a> and can try the instructions on <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html</a></li>
             </ul>
             <p>Enjoy!</p>
            </div>

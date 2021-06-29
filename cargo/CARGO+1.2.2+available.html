@@ -232,14 +232,14 @@
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
-       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
-       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
        <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
@@ -252,7 +252,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -289,29 +289,29 @@
           <ul>
            <li style="list-style-type: none;">
             <ul>
-             <li>Jetty containers now support datasources (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1107" class="external-link" rel="nofollow">CARGO-1107</a>)</li>
-             <li>Jetty 7.x standalone local container is now the default container for the CARGO Maven2/Maven3 plugin (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1106" class="external-link" rel="nofollow">CARGO-1106</a>) and downloads its container via the artifactInstaller</li>
-             <li>The usage of an external jetty-env.xml file has finally been documented (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-861" class="external-link" rel="nofollow">CARGO-861</a>)</li>
-             <li>The XML/properties replacement engine can now WARN when a replacement is not possible (instead of failing) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1099" class="external-link" rel="nofollow">CARGO-1099</a>)</li>
-             <li>Deployers (and mostly undeployers) can now intelligently ignore failures when deploy/undeploy fails (for example, if the application is not deployed but one attempts to undeploy it) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1100" class="external-link" rel="nofollow">CARGO-1100</a>)</li>
+             <li>Jetty containers now support datasources (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1107">CARGO-1107</a>)</li>
+             <li>Jetty 7.x standalone local container is now the default container for the CARGO Maven2/Maven3 plugin (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1106">CARGO-1106</a>) and downloads its container via the artifactInstaller</li>
+             <li>The usage of an external jetty-env.xml file has finally been documented (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-861">CARGO-861</a>)</li>
+             <li>The XML/properties replacement engine can now WARN when a replacement is not possible (instead of failing) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1099">CARGO-1099</a>)</li>
+             <li>Deployers (and mostly undeployers) can now intelligently ignore failures when deploy/undeploy fails (for example, if the application is not deployed but one attempts to undeploy it) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1100">CARGO-1100</a>)</li>
             </ul></li>
           </ul><p style="margin-left: 30.0px;"><strong>Bug fixes</strong> (7)</p>
           <ul>
            <li style="list-style-type: none;">
             <ul>
-             <li>Proxies that would be previously set by Maven are not used during deployment anymore (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1042" class="external-link" rel="nofollow">CARGO-1042</a>)</li>
-             <li>Module names in JBoss do not contain any periods anymore -allowing the deployment of datasources via Maven2/Maven3 plugin (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1091" class="external-link" rel="nofollow">CARGO-1091</a>)</li>
-             <li>Logging level is now interpreted properly for containers that output their messages on stderr (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1095" class="external-link" rel="nofollow">CARGO-1095</a>)</li>
-             <li>Jetty can deploy to root (/) context (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1103" class="external-link" rel="nofollow">CARGO-1103</a>)</li>
-             <li>cargo.jboss.invoker.pool.port configuration property works properly for JBoss 5+ (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1104" class="external-link" rel="nofollow">CARGO-1104</a>)</li>
-             <li>Merging of XML files doesn't throw a ConcurrentModificationException anymore (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1105" class="external-link" rel="nofollow">CARGO-1105</a>)</li>
-             <li>JVM properties on Glassfish now work (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1108" class="external-link" rel="nofollow">CARGO-1108</a>)</li>
+             <li>Proxies that would be previously set by Maven are not used during deployment anymore (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1042">CARGO-1042</a>)</li>
+             <li>Module names in JBoss do not contain any periods anymore -allowing the deployment of datasources via Maven2/Maven3 plugin (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1091">CARGO-1091</a>)</li>
+             <li>Logging level is now interpreted properly for containers that output their messages on stderr (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1095">CARGO-1095</a>)</li>
+             <li>Jetty can deploy to root (/) context (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1103">CARGO-1103</a>)</li>
+             <li>cargo.jboss.invoker.pool.port configuration property works properly for JBoss 5+ (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1104">CARGO-1104</a>)</li>
+             <li>Merging of XML files doesn't throw a ConcurrentModificationException anymore (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1105">CARGO-1105</a>)</li>
+             <li>JVM properties on Glassfish now work (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1108">CARGO-1108</a>)</li>
             </ul></li>
-          </ul><p>In addition to these, we have done various changes in the documentation as well as the Maven archetypes. For example, a profile for <a href="http://cargo.codehaus.org/JBoss+7.1.x" class="external-link" rel="nofollow">JBoss 7.1.x</a> has been added to all archetypes and is configured with an artifactInstaller.</p><p>The full release notes can be found on <a class="external-link" href="https://jira.codehaus.org/secure/ReleaseNote.jspa?version=18384&amp;styleName=Html&amp;projectId=10730" rel="nofollow">https://jira.codehaus.org/secure/ReleaseNote.jspa?version=18384&amp;styleName=Html&amp;projectId=10730</a></p><p>To use this new version:</p>
+          </ul><p>In addition to these, we have done various changes in the documentation as well as the Maven archetypes. For example, a profile for <a href="http://cargo.codehaus.org/JBoss+7.1.x">JBoss 7.1.x</a> has been added to all archetypes and is configured with an artifactInstaller.</p><p>The full release notes can be found on <a href="https://jira.codehaus.org/secure/ReleaseNote.jspa?version=18384&amp;styleName=Html&amp;projectId=10730">https://jira.codehaus.org/secure/ReleaseNote.jspa?version=18384&amp;styleName=Html&amp;projectId=10730</a></p><p>To use this new version:</p>
           <ul>
-           <li>Users of the Java API and/or the ANT tasks can download the required components (be it the uberjar, ANT tasks and others) via the <a href="http://cargo.codehaus.org/Downloads" class="external-link" rel="nofollow">CARGO Downloads page</a>.</li>
+           <li>Users of the Java API and/or the ANT tasks can download the required components (be it the uberjar, ANT tasks and others) via the <a href="http://cargo.codehaus.org/Downloads">CARGO Downloads page</a>.</li>
            <li>Users of the Maven2/Maven3 plugin simply need to change their plugin version to 1.2.2.</li>
-          </ul><p>Please provide your feedback to the <a href="mailto:user@cargo.codehaus.org" class="external-link" rel="nofollow">user@cargo.codehaus.org</a> mailing list.<br> <br>Enjoy!</p><script type="text/javascript">
+          </ul><p>Please provide your feedback to the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.<br> <br>Enjoy!</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";

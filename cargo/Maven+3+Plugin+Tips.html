@@ -232,14 +232,14 @@
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
-       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
-       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
        <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
@@ -252,7 +252,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -292,7 +292,7 @@
            <li><a href="#Maven3PluginTips-tip3">How to get Tomcat 5 working with the Java 5 XML Parsers</a></li>
            <li><a href="Installer.html#Installer-installer_with_maven2_dependencies">How to use the ZIP or TAR.GZ distributions provided by servers on a Maven repository</a></li>
            <li><a href="#Maven3PluginTips-tip4">How to run Jetty under a Java Security Manager</a></li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven3PluginTips-tip1"><span class="confluence-anchor-link" id="tip1"> </span></span></p><h2 id="Maven3PluginTips-Startingmultiplecontainersconditionally">Starting multiple containers conditionally</h2><p>Maven 3&nbsp;supports the notion of <a href="http://maven.apache.org/guides/introduction/introduction-to-profiles.html" class="external-link" rel="nofollow">profiles</a> which can be used with Cargo to decide for example when to run tests on a specific container. Here's how you could use the Cargo Maven 3 plugin to that effect:</p>
+          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven3PluginTips-tip1"><span class="confluence-anchor-link" id="tip1"> </span></span></p><h2 id="Maven3PluginTips-Startingmultiplecontainersconditionally">Starting multiple containers conditionally</h2><p>Maven 3&nbsp;supports the notion of <a href="http://maven.apache.org/guides/introduction/introduction-to-profiles.html">profiles</a> which can be used with Cargo to decide for example when to run tests on a specific container. Here's how you could use the Cargo Maven 3 plugin to that effect:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">&lt;project&gt;
@@ -404,7 +404,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h2 id="Maven3PluginTips-StartingTomcatinsecuritymode">Starting Tomcat in security mode</h2><p><span style="color: rgb(255,0,0);">Warning: the proposed solution only works on Linux, see</span>&nbsp;<a href="https://issues.apache.org/jira/browse/MNG-6437" class="external-link" rel="nofollow">MNG-6437</a></p><p>Cargo supports passing system properties <a href="Passing+system+properties.html">Passing system properties</a>. So, to start Tomcat in security mode, you need to specify two system properties:</p>
+          </center><h2 id="Maven3PluginTips-StartingTomcatinsecuritymode">Starting Tomcat in security mode</h2><p><span style="color: rgb(255,0,0);">Warning: the proposed solution only works on Linux, see</span>&nbsp;<a href="https://issues.apache.org/jira/browse/MNG-6437">MNG-6437</a></p><p>Cargo supports passing system properties <a href="Passing+system+properties.html">Passing system properties</a>. So, to start Tomcat in security mode, you need to specify two system properties:</p>
           <ul>
            <li><code>java.security.manager</code></li>
            <li><code>java.security.policy</code></li>

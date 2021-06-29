@@ -232,14 +232,14 @@
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
       </ul><p>Independent extensions:</p>
       <ul class="alternate">
-       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin" class="external-link" rel="nofollow">Gradle</a></li>
-       <li><a href="https://github.com/mulesoft/cargo-mule-container" class="external-link" rel="nofollow">Mule container</a></li>
+       <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
+       <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues" class="external-link" rel="nofollow">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page" class="external-link" rel="nofollow">Change log</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
        <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
@@ -252,7 +252,7 @@
        <li><a href="Cargo+Code+Style.html">Code style</a></li>
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo" class="external-link" rel="nofollow"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
+       <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
       </ul> <h3 class="heading3">RSS Feeds</h3> 
       <table border="0" cellspacing="4px"> 
        <tbody>
@@ -878,7 +878,7 @@
            </ul>
           </div><p></p><p><strong>Notes</strong>:</p>
           <ul>
-           <li>Datasources on the Jetty container use the <a href="http://sourceforge.net/projects/c3p0/" class="external-link" rel="nofollow">c3p0</a> datasource pool.</li>
+           <li>Datasources on the Jetty container use the <a href="http://sourceforge.net/projects/c3p0/">c3p0</a> datasource pool.</li>
            <li>JOnAS handles transactions for datasources using its <code>jtm</code> service.</li>
           </ul><h3 id="DataSourceandResourceSupport-DataSourceproperties">DataSource properties</h3><p>DataSources are added through pipe-delimited configuration properties that starts with <code>cargo.datasource.datasource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
@@ -1218,7 +1218,7 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
            </div>
           </div><h3 id="DataSourceandResourceSupport-Examples">Examples</h3><p>Users of the Java API can take a look at the following classes as example:</p>
           <ul>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/api/container/src/test/java/org/codehaus/cargo/container/configuration/entry/ConfigurationFixtureFactory.java" class="external-link" rel="nofollow"><code>ConfigurationFixtureFactory</code></a>: class with static methods showing examples for creating various&nbsp;DataSource and resource types:
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/api/container/src/test/java/org/codehaus/cargo/container/configuration/entry/ConfigurationFixtureFactory.java"><code>ConfigurationFixtureFactory</code></a>: class with static methods showing examples for creating various&nbsp;DataSource and resource types:
             <ul>
              <li><code>createDataSource</code> and&nbsp;<code>createAnotherDataSource</code>: Creation of a DataSource</li>
              <li><code>createDriverConfiguredDataSourceWithLocalTransactionSupport</code>: Creation of a&nbsp;DataSource with local transaction support</li>
@@ -1230,11 +1230,11 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
              <li><code>createDataSourceWithWindowsPath</code>: Creation of a DataSource with a Windows path</li>
              <li><code>createJmsQueueAsResource</code> and <code>createJmsTopicAsResource</code>: Creation of a JMS queue and topic resource, respectively</li>
             </ul></li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/DataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>DataSourceOnStandaloneConfigurationTest</code></a>:&nbsp;DataSource definition.</li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/TransactionEmulationDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>TransactionEmulationDataSourceOnStandaloneConfigurationTest</code></a>:&nbsp;DataSource definition with transaction emulation.</li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/XATransactionDataSourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>XATransactionDataSourceOnStandaloneConfigurationTest</code></a>: XA&nbsp;DataSource definition.</li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/MailResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>MailResourceOnStandaloneConfigurationTest</code></a>: Resource definition, showing for example <code>mailsession</code>.</li>
-           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/JmsQueueResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>JmsQueueResourceOnStandaloneConfigurationTest</code></a> and <a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/JmsTopicResourceOnStandaloneConfigurationTest.java" class="external-link" rel="nofollow"><code>JmsTopicResourceOnStandaloneConfigurationTest</code></a>: Resource definition, showing for example a JMS queue and topic, respectively.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/DataSourceOnStandaloneConfigurationTest.java"><code>DataSourceOnStandaloneConfigurationTest</code></a>:&nbsp;DataSource definition.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/TransactionEmulationDataSourceOnStandaloneConfigurationTest.java"><code>TransactionEmulationDataSourceOnStandaloneConfigurationTest</code></a>:&nbsp;DataSource definition with transaction emulation.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/XATransactionDataSourceOnStandaloneConfigurationTest.java"><code>XATransactionDataSourceOnStandaloneConfigurationTest</code></a>: XA&nbsp;DataSource definition.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/MailResourceOnStandaloneConfigurationTest.java"><code>MailResourceOnStandaloneConfigurationTest</code></a>: Resource definition, showing for example <code>mailsession</code>.</li>
+           <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/JmsQueueResourceOnStandaloneConfigurationTest.java"><code>JmsQueueResourceOnStandaloneConfigurationTest</code></a> and <a href="https://github.com/codehaus-cargo/cargo/blob/master/core/samples/java/src/test/java/org/codehaus/cargo/sample/java/JmsTopicResourceOnStandaloneConfigurationTest.java"><code>JmsTopicResourceOnStandaloneConfigurationTest</code></a>: Resource definition, showing for example a JMS queue and topic, respectively.</li>
           </ul><p>Users of the <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> can refer to <a href="Maven+3+Archetypes.html#Maven3Archetypes-datasource">the Maven 3 Archetype showing DataSource support</a>.</p> </td> 
         </tr> 
        </tbody>

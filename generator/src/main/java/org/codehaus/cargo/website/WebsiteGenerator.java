@@ -289,7 +289,8 @@ public class WebsiteGenerator implements Runnable
                 URLDecoder.decode(name, "UTF-8")).replace("$breadcrumbs", breadcrumbsSB.toString())
                 .replace("$value", value).replaceAll(
                     "\\s*data-[^=\\s]+=\"[^\"]+\"", "").replaceAll(
-                    "\\s*id=\"refresh-[^\"]+\"", "").replace(
+                    "\\s*id=\"refresh-[^\"]+\"", "").replace(" class=\"external-link\"", "").replace(
+                    " rel=\"nofollow\"", "").replace("<a href=\"http://java.sun.com\">java.sun.com</a>", "").replace(
                     "http://jira.codehaus.org/browse/CARGO-",
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-").replace(
                     "https://jira.codehaus.org/browse/CARGO-",
