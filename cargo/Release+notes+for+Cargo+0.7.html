@@ -295,7 +295,7 @@
            <li>Added a Tomcat Local Deployer and a Tomcat Remote Deployer which uses the Tomcat Manager app for deployment.</li> 
            <li>Added a WebLogic Existing Configuration implementation.</li> 
           </ul> <p>The list of all issues fixed and features implemented is available below.</p> <p>Please note that version 0.7 has broken almost all APIs. This was majoritarly due to the Remote container support refactoring. This is one of the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this. This is probably the last time such a major change happens before the 1.0 release.</p> <h3 id="ReleasenotesforCargo0.7-Implementedissues">Implemented issues</h3> 
-          <div class="jim-error-message jim-error-message-table conf-macro output-block" data-macro-id=""> 
+          <div class="jim-error-message jim-error-message-table conf-macro output-block"> 
            <table class="aui"> 
             <tbody> 
              <tr> 
@@ -326,8 +326,8 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="ReleasenotesforCargo0.7-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link conf-macro output-inline" data-macro-id="" id="ReleasenotesforCargo0.7-clirr"><span class="confluence-anchor-link" id="clirr"> </span></span><br> Changes detected by <a href="http://clirr.sourceforge.net">Clirr</a> between <code>cargo-0.6.jar</code> and <code>cargo-0.7.jar</code>.</p> <p>Changes to the core:</p> 
-          <div class="code panel pdl conf-macro output-block" data-macro-id="" style="border-width: 1px;">
+          </center><h3 id="ReleasenotesforCargo0.7-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.7-clirr"><span class="confluence-anchor-link" id="clirr"> </span></span><br> Changes detected by <a href="http://clirr.sourceforge.net">Clirr</a> between <code>cargo-0.6.jar</code> and <code>cargo-0.7.jar</code>.</p> <p>Changes to the core:</p> 
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">
 ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public org.codehaus.cargo.container.configuration.Configuration getConfiguration()' has been removed
@@ -736,7 +736,7 @@ INFO: 7011: org.codehaus.cargo.util.FileUtils: Method 'public java.io.File creat
 </pre> 
            </div>
           </div> <p>Changes to the Ant API:</p> 
-          <div class="code panel pdl conf-macro output-block" data-macro-id="" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">
 INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.String getHome()' has been added

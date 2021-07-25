@@ -287,7 +287,7 @@
         </tr> 
         <tr valign="top"> 
          <td class="rightColumn"> <p>This example will create a Topic Connection Factory and a Topic, and also includes a spring configuration example.</p> <p>Add the following to your cargo configuration in pom.xml:</p> 
-          <div class="code panel pdl conf-macro output-block" data-macro-id="" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">
 &lt;cargo.resource.resource.jmsConnectionFactory&gt;
@@ -304,7 +304,7 @@
 </pre> 
            </div>
           </div> <p>After you run 'mvn cargo:start', you can verify the config made it into your resin.conf with:<br> $&gt; less target/resin3x/home/conf/resin.conf</p> 
-          <div class="code panel pdl conf-macro output-block" data-macro-id="" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">
 ....
@@ -320,7 +320,7 @@
 </pre> 
            </div>
           </div> <p>In web.xml:</p> 
-          <div class="code panel pdl conf-macro output-block" data-macro-id="" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">
 &lt;resource-ref&gt;
@@ -332,7 +332,7 @@
 </pre> 
            </div>
           </div> <p>You can also add a resource-ref for the Topic, but that is not necessarily required.</p> <p>A spring config might look like this:</p> 
-          <div class="code panel pdl conf-macro output-block" data-macro-id="" style="border-width: 1px;">
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl"> 
             <pre class="syntaxhighlighter-pre">
 &lt;jee:jndi-lookup id="jmsConnectionFactory" jndi-name="jms/ConnectionFactory" proxy-interface="javax.jms.ConnectionFactory" lookup-on-startup="false" resource-ref="true"/&gt;
