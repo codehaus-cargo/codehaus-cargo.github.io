@@ -49,38 +49,70 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
 
+/**
+ * Java application which generates the Codehaus Cargo Web site based on the Confluence wiki.
+ */
 public class WebsiteGenerator implements Runnable
 {
-    private static Set<File> files = Collections.synchronizedSet(new HashSet<File>());
+    /**
+     * Wiki pages (original extracts)
+     */
+    private static Set<File> pages = Collections.synchronizedSet(new HashSet<File>());
 
+    /**
+     * Attachments of pages, including images.
+     */
     private static Set<URL> attachments = Collections.synchronizedSet(new HashSet<URL>());
 
+    /**
+     * Blog post identifiers.
+     */
     private static Map<String, String> blogpostIdentifiers =
         Collections.synchronizedMap(new HashMap<String, String>());
 
+    /**
+     * Any exceptions that happened during the asynchronous downloads.
+     */
     private static Map<URL, Exception> exceptions =
         Collections.synchronizedMap(new HashMap<URL, Exception>());
 
-    private static final boolean downloadAttachments =
+    /**
+     * Whether the download attachments.
+     */
+    private static boolean downloadAttachments =
         Boolean.parseBoolean(System.getProperty("cargo.downloadAttachments", "true"));
 
-    private static final Pattern headerPattern = Pattern.compile("<h[1-4]");
+    /**
+     * Regular expression pattern to recognize HTML headers.
+     */
+    private static final Pattern HEADER_PATTERN = Pattern.compile("<h[1-4]");
 
-    private static final String googleAds =
-        "<script type=\"text/javascript\">\n" +
-        "  // Google Ads code\n" +
-        "  google_ad_client = \"ca-pub-7996505557003356\";\n" +
-        "  google_ad_slot = \"5363897989\";\n" +
-        "  google_ad_width = 728;\n" +
-        "  google_ad_height = 90;\n" +
-        "</script>" +
-        "<center style=\"padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee\">\n" +
-        "  <script type=\"text/javascript\" src=\"https://pagead2.googlesyndication.com/pagead/show_ads.js\">\n" +
-        "  </script>\n" +
-        "</center>";
+    /**
+     * JavaScript for adding Google Ads in the pages.
+     */
+    private static final String GOOGLE_ADS =
+        "<script type=\"text/javascript\">\n"
+        + "  // Google Ads code\n"
+        + "  google_ad_client = \"ca-pub-7996505557003356\";\n"
+        + "  google_ad_slot = \"5363897989\";\n"
+        + "  google_ad_width = 728;\n"
+        + "  google_ad_height = 90;\n"
+        + "</script>"
+        + "<center style=\"padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee\">\n"
+        + "  <script type=\"text/javascript\" src=\"https://pagead2.googlesyndication.com/pagead/show_ads.js\">\n"
+        + "  </script>\n"
+        + "</center>";
 
-    private static final ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(8);
+    /**
+     * Multi-thread executor for parallel downloads.
+     */
+    private static final ScheduledThreadPoolExecutor CONTENT_DOWNLOADERS = new ScheduledThreadPoolExecutor(8);
 
+    /**
+     * Download the content and parse (i.e., generate the "full" HTML content)
+     * @param args Not used.
+     * @throws Exception If anything goes wrong.
+     */
     public static void main(String[] args) throws Exception
     {
         if (Boolean.parseBoolean(System.getProperty("cargo.download", "true")))
@@ -90,15 +122,21 @@ public class WebsiteGenerator implements Runnable
         parse();
     }
 
+    /**
+     * Generate the file name from a page title.
+     * @param title Page title.
+     * @return Filename, i.e. the page title with various characters filtered out.
+     * @throws UnsupportedEncodingException Should not be thrown.
+     */
     private static String toFilename(String title) throws UnsupportedEncodingException
     {
         StringBuilder sb = new StringBuilder();
         for (char character : title.toCharArray())
         {
-            if ((character >= '0' && character <= '9') ||
-                (character >= 'a' && character <= 'z') ||
-                (character >= 'A' && character <= 'Z') ||
-                 character == '.' || character == '-')
+            if (character >= '0' && character <= '9'
+                || character >= 'a' && character <= 'z'
+                || character >= 'A' && character <= 'Z'
+                || character == '.' || character == '-')
             {
                 sb.append(character);
             }
@@ -116,6 +154,10 @@ public class WebsiteGenerator implements Runnable
         return URLEncoder.encode(result, "UTF-8");
     }
 
+    /**
+     * Trigger the asynchronous download of content from the Wiki.
+     * @throws Exception If anything goes wrong.
+     */
     private static void download() throws Exception
     {
         long start = System.currentTimeMillis();
@@ -156,7 +198,7 @@ public class WebsiteGenerator implements Runnable
             WebsiteGenerator runnable = new WebsiteGenerator();
             runnable.url = new URL(links.getString("self") + "?expand=body.view");
             Thread thread = new Thread(runnable);
-            executor.submit(thread);
+            CONTENT_DOWNLOADERS.submit(thread);
         }
 
         JSONArray blogposts = response.getJSONObject("blogpost").getJSONArray("results");
@@ -170,26 +212,26 @@ public class WebsiteGenerator implements Runnable
             WebsiteGenerator runnable = new WebsiteGenerator();
             runnable.url = new URL(links.getString("self") + "?expand=body.view");
             Thread thread = new Thread(runnable);
-            executor.submit(thread);
+            CONTENT_DOWNLOADERS.submit(thread);
         }
         blogpostIdentifiers.put("476119041", "Configuring+HTTP+2+for+Tomcat+8.5+and+above");
 
-        while (executor.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
+        while (CONTENT_DOWNLOADERS.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
         {
             Thread.sleep(5000);
-            System.out.println("  - Completed " + executor.getCompletedTaskCount() + "/"
+            System.out.println("  - Completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount() + "/"
                 + (pages.length() + blogposts.length() + attachments.size()) + " tasks - "
                 +  ((System.currentTimeMillis() - start) / 1000) + " seconds spent so far");
         }
-        if (executor.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
+        if (CONTENT_DOWNLOADERS.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
         {
-            throw new Exception("WARNING: Only completed " + executor.getCompletedTaskCount()
+            throw new Exception("WARNING: Only completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount()
                 + " tasks out of " + (pages.length() + blogposts.length() + attachments.size()));
         }
         System.out.println("All tasks complete");
-        for (File file : files)
+        for (File page : WebsiteGenerator.pages)
         {
-            System.out.println("  - Wrote file " + file.getAbsolutePath());
+            System.out.println("  - Wrote file " + page.getAbsolutePath());
         }
         if (exceptions.size() > 0)
         {
@@ -203,6 +245,10 @@ public class WebsiteGenerator implements Runnable
         System.out.println("Export completed, total time taken " + ((System.currentTimeMillis() - start) / 1000) + " seconds");
     }
 
+    /**
+     * Parse the content and generate the Web site.
+     * @throws Exception If anything goes wrong.
+     */
     private static void parse() throws Exception
     {
         System.out.println("Parsing files and generating Web site");
@@ -253,25 +299,25 @@ public class WebsiteGenerator implements Runnable
             value = value.replaceAll("(?s)<span class=\"refresh-action-group\".*?</span>", "");
             value = value.replaceAll("(?s)<textarea id=\"refresh-wiki-\\d*\".*?</textarea>", "");
             value = value.replaceAll("<input id=\"refresh-page-id-\\d*\"[^>]+>", "");
-            Matcher headerMatcher = headerPattern.matcher(value);
+            Matcher headerMatcher = HEADER_PATTERN.matcher(value);
             if (headerMatcher.find())
             {
                 int hIndex = headerMatcher.start() + 3;
-                headerMatcher = headerPattern.matcher(value.substring(hIndex));
+                headerMatcher = HEADER_PATTERN.matcher(value.substring(hIndex));
                 if (headerMatcher.find())
                 {
                     hIndex = hIndex + headerMatcher.start() + 3;
-                    headerMatcher = headerPattern.matcher(value.substring(hIndex));
+                    headerMatcher = HEADER_PATTERN.matcher(value.substring(hIndex));
                     if (headerMatcher.find())
                     {
                         hIndex = hIndex + headerMatcher.start();
-                        value = value.substring(0, hIndex) + googleAds + value.substring(hIndex);
+                        value = value.substring(0, hIndex) + GOOGLE_ADS + value.substring(hIndex);
                     }
                 }
             }
-            if (value.indexOf(googleAds) == -1)
+            if (value.indexOf(GOOGLE_ADS) == -1)
             {
-                value = value + googleAds;
+                value = value + GOOGLE_ADS;
             }
             StringBuilder breadcrumbsSB = new StringBuilder();
             if (breadcrumbs.containsKey(name))
@@ -296,30 +342,42 @@ public class WebsiteGenerator implements Runnable
                 .replace("https://jira.codehaus.org/browse/CARGO-",
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-")
                 .replace(
-                    "<div class=\"confluence-information-macro confluence-information-macro-note " +
-                    "conf-macro output-block\"><span class=\"aui-icon aui-icon-small " +
-                    "aui-iconfont-warning confluence-information-macro-icon\"> </span><div " +
-                    "class=\"confluence-information-macro-body\"><p>This page / section has been " +
-                    "automatically generated by Cargo's build. Do not edit it directly as it'll " +
-                    "be overwritten next time it's generated again.</p></div></div>", "")
+                    "<div class=\"confluence-information-macro confluence-information-macro-note "
+                    + "conf-macro output-block\"><span class=\"aui-icon aui-icon-small "
+                    + "aui-iconfont-warning confluence-information-macro-icon\"> </span><div "
+                    + "class=\"confluence-information-macro-body\"><p>This page / section has been "
+                    + "automatically generated by Cargo's build. Do not edit it directly as it'll "
+                    + "be overwritten next time it's generated again.</p></div></div>", "")
                 .replace(
-                    "<div class=\"confluence-information-macro confluence-information-macro-note " +
-                    "conf-macro output-block\"><span class=\"aui-icon aui-icon-small " +
-                    "aui-iconfont-warning confluence-information-macro-icon\"> </span><div " +
-                    "class=\"confluence-information-macro-body\"><p>This page has been " +
-                    "automatically generated by Cargo's build. Do not edit it directly as it'll " +
-                    "be overwritten next time it's generated again.</p></div></div>", "")).html());
+                    "<div class=\"confluence-information-macro confluence-information-macro-note "
+                    + "conf-macro output-block\"><span class=\"aui-icon aui-icon-small "
+                    + "aui-iconfont-warning confluence-information-macro-icon\"> </span><div "
+                    + "class=\"confluence-information-macro-body\"><p>This page has been "
+                    + "automatically generated by Cargo's build. Do not edit it directly as it'll "
+                    + "be overwritten next time it's generated again.</p></div></div>", "")).html());
             System.out.println("  - Wrote file " + file.getAbsolutePath());
         }
         System.out.println("Parsing complete");
     }
 
+    /**
+     * Helper function to read a file.
+     * @param f File name.
+     * @return File contents.
+     * @throws IOException If anything goes wrong reading the file.
+     */
     private static String readFile(File f) throws IOException
     {
         byte[] bytes = Files.readAllBytes(f.toPath());
         return new String(bytes, Charset.forName("UTF-8"));
     }
 
+    /**
+     * Helper function to read a file.
+     * @param f File name.
+     * @param value File contents.
+     * @throws IOException If anything goes wrong reading the file.
+     */
     private static void writeFile(File f, String value) throws IOException
     {
         try (PrintWriter writer = new PrintWriter(f, "UTF-8"))
@@ -328,8 +386,15 @@ public class WebsiteGenerator implements Runnable
         }
     }
 
+    /**
+     * URL being downloaded by the asynchronous downloader.
+     */
     private URL url;
 
+    /**
+     * Perform the download action. If anything goes wrong, the associated exception is added to the
+     * {@link WebsiteGenerator#exceptions} map.
+     */
     @Override
     public void run()
     {
@@ -446,7 +511,7 @@ public class WebsiteGenerator implements Runnable
                                 WebsiteGenerator runnable = new WebsiteGenerator();
                                 runnable.url = attachmentUrl;
                                 Thread thread = new Thread(runnable);
-                                executor.submit(thread);
+                                CONTENT_DOWNLOADERS.submit(thread);
                             }
                         }
                     }
@@ -521,7 +586,7 @@ public class WebsiteGenerator implements Runnable
                                     WebsiteGenerator runnable = new WebsiteGenerator();
                                     runnable.url = attachmentUrl;
                                     Thread thread = new Thread(runnable);
-                                    executor.submit(thread);
+                                    CONTENT_DOWNLOADERS.submit(thread);
                                 }
                             }
                         }
@@ -534,13 +599,13 @@ public class WebsiteGenerator implements Runnable
                 sb.append(value.substring(start));
                 value = sb.toString();
 
-                File file = new File("target/source", toFilename(result.getString("title")));
+                File page = new File("target/source", toFilename(result.getString("title")));
                 if (value.contains("https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action"))
                 {
                     throw new IllegalArgumentException("Page " + result.getString("title") + " contains a draft link");
                 }
-                writeFile(file, value);
-                files.add(file);
+                writeFile(page, value);
+                pages.add(page);
             }
         }
         catch (Exception e)
