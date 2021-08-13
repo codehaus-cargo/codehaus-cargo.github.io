@@ -398,7 +398,27 @@ SYNOPSIS Usage: list [--monitor=false] pattern %%%EOL%%%
             <p>The list of versions you can choose from can be found on:</p>
             <ul>
              <li><a href="https://repo.maven.apache.org/maven2/org/glassfish/deployment/deployment-client/">https://repo.maven.apache.org/maven2/org/glassfish/deployment/deployment-client/</a>&nbsp;for GlassFish version 3.1.1,</li>
-             <li><a href="https://repo.maven.apache.org/maven2/org/glassfish/main/deployment/deployment-client/">https://repo.maven.apache.org/maven2/org/glassfish/main/deployment/deployment-client/</a>&nbsp;for GlassFish 3.1.2 onwards and <a href="https://blog.payara.fish/deploying-to-payara-server-using-the-maven-cargo-plugin">Payara</a>.</li>
+             <li><a href="https://repo.maven.apache.org/maven2/org/glassfish/main/deployment/deployment-client/">https://repo.maven.apache.org/maven2/org/glassfish/main/deployment/deployment-client/</a>&nbsp;for GlassFish 3.1.2 onwards and earlier versions of <a href="https://blog.payara.fish/deploying-to-payara-server-using-the-maven-cargo-plugin">Payara</a>,</li>
+             <li><a href="https://repo.maven.apache.org/maven2/fish/payara/extras/payara-embedded-web/">https://repo.maven.apache.org/maven2/fish/payara/extras/payara-embedded-web/</a> (which unfortunately happens to be quite a large JAR file) for later versions of <a href="Payara.html">Payara</a>.</li>
+            </ul>
+           </div>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>When you configure the&nbsp;GlassFish or Payara server to only use modern versions of TLS (and hence block older TLS versions), you might get an error message such as the below:</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl"> 
+              <pre class="syntaxhighlighter-pre">error submitting remote command: org.glassfish.api.admin.CommandException:
+   javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake: SSL peer shut down incorrectly 
+</pre> 
+             </div>
+            </div>
+            <p>That happens because unfortunately even <a href="https://repo.maven.apache.org/maven2/org/glassfish/main/deployment/deployment-client/5.1.0/">the latest version of the&nbsp;GlassFish Deployment Client dependency</a>&nbsp;uses TLS version 1, and offers to ways to change it.</p>
+            <p>Later versions of the Payara deployment client fix this issue by setting the default to a modern TLS version:</p>
+            <ul>
+             <li>You can reference the proper version of the following (unfortunately, very large) artifact: <a href="https://repo.maven.apache.org/maven2/fish/payara/extras/payara-embedded-web/">https://repo.maven.apache.org/maven2/fish/payara/extras/payara-embedded-web/</a></li>
+             <li>These newer versions also support a <code>fish.payara.clientHttpsProtocol</code> system variable you can set on the Java VM, enabling the choice between different TLS versions if needed</li>
             </ul>
            </div>
           </div> </td> 
