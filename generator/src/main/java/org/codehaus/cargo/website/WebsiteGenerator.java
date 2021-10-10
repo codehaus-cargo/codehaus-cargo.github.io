@@ -106,7 +106,7 @@ public class WebsiteGenerator implements Runnable
     /**
      * Multi-thread executor for parallel downloads.
      */
-    private static final ScheduledThreadPoolExecutor CONTENT_DOWNLOADERS = new ScheduledThreadPoolExecutor(8);
+    private static final ScheduledThreadPoolExecutor CONTENT_DOWNLOADERS = new ScheduledThreadPoolExecutor(4);
 
     /**
      * Download the content and parse (i.e., generate the "full" HTML content)
