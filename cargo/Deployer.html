@@ -287,7 +287,7 @@
           </table> </td> 
         </tr> 
         <tr valign="top"> 
-         <td class="rightColumn"> <h3 id="Deployer-Definition">Definition</h3><p><br>Performs a hot deployment of a <a class="conf-macro output-inline" href="Deployable.html">Deployable</a><br></p><h3 id="Deployer-Explanation">Explanation</h3><p>You use a <code>Deployer</code> when you wish to deploy a <a href="Deployable.html">Deployable</a> into a running container (this is known as <a href="Hot+Deployment.html">Hot Deployment</a>). There are 2 types of Deployers:</p>
+         <td class="rightColumn"> <h3 id="Deployer-Definition">Definition</h3><p><br>Performs a hot deployment of a <a href="Deployable.html" class="conf-macro output-inline">Deployable</a><br></p><h3 id="Deployer-Explanation">Explanation</h3><p>You use a <code>Deployer</code> when you wish to deploy a <a href="Deployable.html">Deployable</a> into a running container (this is known as <a href="Hot+Deployment.html">Hot Deployment</a>). There are 2 types of Deployers:</p>
           <ul>
            <li><a href="Local+Deployer.html">Local Deployer</a>: A local deployer deploys in a locally installed container. Usually, local deployers use the file system to perform the deployment by copying the deployable to a container-specific target directory.</li>
            <li><a href="Remote+Deployer.html">Remote Deployer</a>: A remote deployer is used to deploy to a container that can be on the same machine or on some remote machine. Deploying remotely requires passing information such as username and password of the user to use for deploying, etc. These information are passed using a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</li>
