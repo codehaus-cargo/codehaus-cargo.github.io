@@ -319,7 +319,7 @@
           <ul>
            <li>Edit the <code>.m2/settings.xml</code> file from your home directory (<code>C:\Documents and Settings\<em>username</em></code> or <code>C:\Users\<em>username</em></code> on Windows),</li>
            <li>Comment out the <code>&lt;proxy&gt;</code> element and fill in the proxy server settings accordingly.</li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Building-ow2override"><span class="confluence-anchor-link" id="ow2override"> </span></span></p><h3 id="Building-ArtifactTransferExceptionwithMaven3.8.1onwards"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</h3><p>With Maven 3.8.1 onwards you might get errors such as: <code>org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.9.4-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [ow2-snapshot (<span class="nolink">http://repository.ow2.org/nexus/content/repositories/snapshots</span>, default, snapshots)]</code></p><p>To work around the issue, create a <code>settings.xml</code> file in your <code>.m2</code> home which overrides the HTTP-based OW2 SNAPSHOTS repository:</p>
+          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Building-ow2override"><span class="confluence-anchor-link" id="ow2override"> </span></span></p><h3 id="Building-ArtifactTransferExceptionwithMaven3.8.1onwards"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</h3><p>With Maven 3.8.1 onwards you might get errors such as: <code>org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.9.9-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [ow2-snapshot (<span class="nolink">http://repository.ow2.org/nexus/content/repositories/snapshots</span>, default, snapshots)]</code></p><p>To work around the issue, create a <code>settings.xml</code> file in your <code>.m2</code> home which overrides the HTTP-based OW2 SNAPSHOTS repository:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>settings.xml sample</b>
@@ -350,7 +350,7 @@
             <b>Error when building with JDK 8 or JDK 12 and above</b>
            </div>
            <div class="codeContent panelContent pdl"> 
-            <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.1.2:copy (copy-test-ear) on project cargo-core-container-jonas: Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:simple-ear:ear:1.9.8-SNAPSHOT -&gt; [Help 1]</pre> 
+            <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.1.2:copy (copy-test-ear) on project cargo-core-container-jonas: Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:simple-ear:ear:1.9.9-SNAPSHOT -&gt; [Help 1]</pre> 
            </div>
           </div><p>To build on these JDKs, you can either have a "pre-build" in JDK 11, or use the <a href="Maven+3+Plugin+Installation.html#Maven3PluginInstallation-snapshots">snapshots repository</a> by adding the below to your Maven <code>settings.xml</code>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
