@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
   <link rel="shortcut icon" href="attachments/favicon.ico"> 
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - WildFly 18.x</title> 
+  <title>Codehaus Cargo - WildFly 26.x</title> 
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
@@ -277,7 +277,7 @@
           <table style="border-collapse:collapse;width:100%;height:100%"> 
            <tbody>
             <tr valign="middle"> 
-             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Containers.html">Containers</a> &gt; WildFly 18.x</b> </td> 
+             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Containers.html">Containers</a> &gt; WildFly 26.x</b> </td> 
              <td align="right" style="width:350px"> 
               <form method="GET" action="Search.html"> 
                <input type="text" size="30" name="q" id="search_query"> &nbsp; 
@@ -289,23 +289,12 @@
         </tr> 
         <tr valign="top"> 
          <td class="rightColumn"> 
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>With the opening of the JBoss EAP to the public and the split between JBoss and WildFly, the below naming correspondence should be used with JBoss EAP containers:</p>
-            <ul>
-             <li>What Cargo calls <a href="JBoss+6.1.x.html">JBoss 6.1.x</a> is what JBoss refers to as JBoss Application Server version 6.1; i.e. the version released in August 2011</li>
-             <li>What Cargo calls <a href="JBoss+7.2.x.html">JBoss 7.2.x</a> is what JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.1; i.e. the build from JBoss Application Server (AS) version 7.2 released in May 2013</li>
-             <li>What Cargo calls <a href="JBoss+7.3.x.html">JBoss 7.3.x</a> is what JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.2; i.e. the build from JBoss Application Server (AS) version 7.3 released in October 2013</li>
-             <li>What Cargo calls <a href="JBoss+7.4.x.html">JBoss 7.4.x</a> is what JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.3; i.e. the build from JBoss Application Server (AS) version 7.4 released in June 2014</li>
-             <li>What Cargo calls <a href="JBoss+7.5.x.html">JBoss 7.5.x</a> is what JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.4; i.e. the build from JBoss Application Server (AS) version 7.5 released in October 2015</li>
-             <li>The <a href="WildFly+10.x.html">WildFly 10.x</a> container can be used with the JBoss Enterprise Application Platform (EAP) version 7.0; i.e. the version released in May 2016</li>
-             <li>The <a href="WildFly+11.x.html">WildFly 11.x</a> container can be used with the JBoss Enterprise Application Platform (EAP) version 7.1; i.e. the version released in December 2017</li>
-             <li>The <a href="WildFly+13.x.html">WildFly 13.x</a> container can be used with the JBoss Enterprise Application Platform (EAP) version 7.2; i.e. the version released in January 2019</li>
-             <li>The <a href="WildFly+18.x.html">WildFly 18.x</a> container can be used with the JBoss Enterprise Application Platform (EAP) version 7.3; i.e. the version released in March 2020</li>
-            </ul>
+            <p>WildFly 26 comes with two versions: Jakarta EE 8 Full &amp; Web Distribution and the WildFly Preview EE 9 Distribution. Users of the WildFly Preview EE 9 Distribution should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.*</code> to <code>jakarta.*</code>. This will almost certainly require code changes to enable applications to migrate to EE 9 and later.</p>
            </div>
-          </div><h3 id="WildFly18.x-ContainerFeatures">Container Features</h3>
+          </div><h3 id="WildFly26.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -318,9 +307,9 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Container+Instantiation.html">Container Instantiation</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.createContainer("wildfly18x"...)</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId="wildfly18x".../&gt;</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;wildfly18x&lt;/containerId&gt;</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.createContainer("wildfly26x"...)</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId="wildfly26x".../&gt;</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;wildfly26x&lt;/containerId&gt;</code></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
@@ -367,7 +356,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p>&nbsp; <a href="Installed+Container.html">Installed Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly18xInstalledLocalContainer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly26xInstalledLocalContainer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -388,14 +377,14 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Remote+Container.html">Remote Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly18xRemoteContainer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly26xRemoteContainer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="WildFly18.x-ConfigurationFeatures">Configuration Features</h3>
+          </div><h3 id="WildFly26.x-ConfigurationFeatures">Configuration Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -408,7 +397,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly18xStandaloneLocalConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly26xStandaloneLocalConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -422,7 +411,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Existing+Local+Configuration.html">Existing Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly18xExistingLocalConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly26xExistingLocalConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -436,7 +425,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Runtime+Configuration.html">Runtime Configuration</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly18xRuntimeConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly26xRuntimeConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -523,7 +512,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee"> 
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script> 
-          </center><h3 id="WildFly18.x-DeployerFeatures">Deployer Features</h3>
+          </center><h3 id="WildFly26.x-DeployerFeatures">Deployer Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -536,7 +525,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a class="unresolved" href="#">Installed Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly18xInstalledLocalDeployer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly26xInstalledLocalDeployer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -550,14 +539,14 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Remote+Deployer.html">Remote Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly18xRemoteDeployer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly26xRemoteDeployer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="WildFly18.x-OtherFeatures">Other Features</h3>
+          </div><h3 id="WildFly26.x-OtherFeatures">Other Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -577,7 +566,7 @@
              </tr>
             </tbody>
            </table>
-          </div><h3 id="WildFly18.x-SupportedConfigurationproperties">Supported Configuration properties</h3><p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p><h4 id="WildFly18.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4><h5 id="WildFly18.x-Forinstalledcontainero.c.c.c.wildfly.WildFly18xInstalledLocalContainer">For installed container o.c.c.c.wildfly.WildFly18xInstalledLocalContainer</h5>
+          </div><h3 id="WildFly26.x-SupportedConfigurationproperties">Supported Configuration properties</h3><p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p><h4 id="WildFly26.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4><h5 id="WildFly26.x-Forinstalledcontainero.c.c.c.wildfly.WildFly26xInstalledLocalContainer">For installed container o.c.c.c.wildfly.WildFly26xInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -744,7 +733,7 @@
             <p>In addition to the forementioned properties, this container configuration can also set up datasources and/or resources.</p>
             <p>For more details, please read: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</p>
            </div>
-          </div><h4 id="WildFly18.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4><h5 id="WildFly18.x-Forinstalledcontainero.c.c.c.wildfly.WildFly18xInstalledLocalContainer.1">For installed container o.c.c.c.wildfly.WildFly18xInstalledLocalContainer</h5>
+          </div><h4 id="WildFly26.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4><h5 id="WildFly26.x-Forinstalledcontainero.c.c.c.wildfly.WildFly26xInstalledLocalContainer.1">For installed container o.c.c.c.wildfly.WildFly26xInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -855,13 +844,13 @@
              </tr>
             </tbody>
            </table>
-          </div><h4 id="WildFly18.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4>
+          </div><h4 id="WildFly26.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Before using the WildFly remote deployer, please read: <a href="JBoss+Remote+Deployer.html">JBoss Remote Deployer</a></p>
            </div>
-          </div><h5 id="WildFly18.x-Forremotecontainero.c.c.c.wildfly.WildFly18xRemoteContainer">For remote container o.c.c.c.wildfly.WildFly18xRemoteContainer</h5>
+          </div><h5 id="WildFly26.x-Forremotecontainero.c.c.c.wildfly.WildFly26xRemoteContainer">For remote container o.c.c.c.wildfly.WildFly26xRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -937,7 +926,7 @@
              </tr>
             </tbody>
            </table>
-          </div><h3 id="WildFly18.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a href="https://download.jboss.org/wildfly/18.0.1.Final/wildfly-18.0.1.Final.zip">https://download.jboss.org/wildfly/18.0.1.Final/wildfly-18.0.1.Final.zip</a></p> </td> 
+          </div><h3 id="WildFly26.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a href="https://github.com/wildfly/wildfly/releases/download/26.0.0.Final/wildfly-26.0.0.Final.zip">https://github.com/wildfly/wildfly/releases/download/26.0.0.Final/wildfly-26.0.0.Final.zip</a></p> </td> 
         </tr> 
        </tbody>
       </table> </td> 
