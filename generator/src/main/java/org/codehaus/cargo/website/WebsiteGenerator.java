@@ -178,7 +178,8 @@ public class WebsiteGenerator implements Runnable
             tempDirectory.mkdirs();
         }
 
-        URL url = new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/space/CARGO/content?limit=2048&expand=ancestors");
+        URL url =
+            new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/space/CARGO/content?limit=2048&expand=ancestors");
         URLConnection connection = url.openConnection();
         StringBuilder sb = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream())))
@@ -215,6 +216,32 @@ public class WebsiteGenerator implements Runnable
             CONTENT_DOWNLOADERS.submit(thread);
         }
         blogpostIdentifiers.put("476119041", "Configuring+HTTP+2+for+Tomcat+8.5+and+above");
+
+        if (downloadAttachments)
+        {
+            String[] banners = new String[]
+            {
+                "cargo-banner-left.png",
+                "cargo-banner-center.png",
+                "cargo-banner-right.png"
+            };
+            for (String banner : banners)
+            {
+                URL attachmentUrl =
+                    new URL("https://codehaus-cargo.atlassian.net/wiki/download/attachments/491540/" + banner);
+                synchronized (attachments)
+                {
+                    if (!attachments.contains(attachmentUrl))
+                    {
+                        attachments.add(attachmentUrl);
+                        WebsiteGenerator runnable = new WebsiteGenerator();
+                        runnable.url = attachmentUrl;
+                        Thread thread = new Thread(runnable);
+                        CONTENT_DOWNLOADERS.submit(thread);
+                    }
+                }
+            }
+        }
 
         while (CONTENT_DOWNLOADERS.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
         {
