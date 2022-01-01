@@ -29,7 +29,7 @@
   </script> 
  </head> 
  <body> 
-  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%"> 
+  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%" border="none"> 
    <tbody>
     <tr style="height:83px"> 
      <td colspan="2" style="padding:0px"> 
@@ -317,7 +317,7 @@
                  <li><span style="color: red;"><strong>datasource-cmt-local-war/</strong></span>: Cargo test data for samples - Local Transaction DataSource WAR</li>
                  <li><span style="color: red;"><strong>datasource-war/</strong></span>: Cargo test data for samples - DataSource WAR</li>
                  <li><span style="color: red;"><strong>empty-ear/</strong></span>: Cargo test data for samples - Empty EAR</li>
-                 <li><span style="color: red;"><strong>empty-jar/</strong></span>: Cargo test data for samples - Empty JAR</li>
+                 <li><span style="color: red;"><strong>empty-jar/</strong></span>: Cargo test data for samples - Empty JAR.<br>We need this empty jar because an EAR's application.xml requires at least one &lt;module&gt; element so we've chosen to define an empty jar.</li>
                  <li><span style="color: red;"><strong>expanded-war/</strong></span>: Cargo test data for samples - Expanded WAR</li>
                  <li><span style="color: red;"><strong>jms-queue-war/</strong></span>: Cargo test data for samples - JMS Queue WAR</li>
                  <li><span style="color: red;"><strong>jms-topic-war/</strong></span>: Cargo test data for samples - JMS Topic WAR</li>
@@ -327,7 +327,7 @@
                  <li><span style="color: red;"><strong>simple-ear/</strong></span>: Cargo test data for samples - Simple EAR</li>
                  <li><span style="color: red;"><strong>simple-ejb/</strong></span>: Cargo test data for samples - Simple EJB</li>
                  <li><span style="color: red;"><strong>simple-har/</strong></span>: Cargo test data for samples - Simple HAR</li>
-                 <li><span style="color: red;"><strong>simple-jar/</strong></span>: Cargo test data for samples - Simple JAR</li>
+                 <li><span style="color: red;"><strong>simple-jar/</strong></span>: Cargo test data for samples - Simple JAR.<br>Used in tests to determine that specific classes are added to the classpath.</li>
                  <li><span style="color: red;"><strong>simple-war/</strong></span>: Cargo test data for samples - Simple WAR</li>
                  <li><span style="color: red;"><strong>systemproperty-war/</strong></span>: Cargo test data for samples - System Property test WAR data for samples</li>
                  <li><span style="color: red;"><strong>tomcat-context/</strong></span>: Cargo test data for samples - Tomcat context WAR</li>
