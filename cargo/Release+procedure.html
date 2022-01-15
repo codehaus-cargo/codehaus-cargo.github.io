@@ -291,10 +291,7 @@
          <td class="rightColumn"> <p>This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
           <ul>
            <li>JDK 11. Please note that older or newer versions of the JDK cannot build all of Codehaus Cargo, and hence should not be used to release new versions.</li>
-           <li>Maven 3.2.5 or newer, i.e. versions that ensure access to Maven Central is done via HTTPS.
-            <ul>
-             <li>If you are using Maven 3.8.1 or newer, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="Building.html#Building-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
-            </ul></li>
+           <li>Maven 3.2.5 or newer, though it is for sure a good idea to use the latest Maven version available.<br>With Maven 3.8.1 onwards, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="#Releaseprocedure-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
            <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html">OSSRH guide</a>.</li>
            <li><a href="http://www.gnupg.org/">The GNU privacy guard (GPG)</a> installed on your machine and at least one secret key.
             <ul>
