@@ -77,6 +77,11 @@ public class WebsiteGenerator implements Runnable
         Collections.synchronizedMap(new HashMap<URL, Exception>());
 
     /**
+     * Downloaded amount in bytes, to calculate speed.
+     */
+    private static int speed = 0;
+
+    /**
      * Whether the download attachments.
      */
     private static boolean downloadAttachments =
@@ -248,7 +253,9 @@ public class WebsiteGenerator implements Runnable
             Thread.sleep(5000);
             System.out.println("  - Completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount() + "/"
                 + (pages.length() + blogposts.length() + attachments.size()) + " tasks - "
-                +  ((System.currentTimeMillis() - start) / 1000) + " seconds spent so far");
+                +  ((System.currentTimeMillis() - start) / 1000) + " seconds spent so far, approximate "
+                + "download speed since last message has been " + (WebsiteGenerator.speed / 1024 / 5) + " KB/s");
+            WebsiteGenerator.speed = 0;
         }
         if (CONTENT_DOWNLOADERS.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
         {
@@ -453,6 +460,7 @@ public class WebsiteGenerator implements Runnable
                         while ((bytesRead = is.read(buffer)) != -1)
                         {
                             fos.write(buffer, 0, bytesRead);
+                            WebsiteGenerator.speed += bytesRead;
                         }
                     }
                     if (url.getPath().contains("/wiki/rest/api/content/"))
