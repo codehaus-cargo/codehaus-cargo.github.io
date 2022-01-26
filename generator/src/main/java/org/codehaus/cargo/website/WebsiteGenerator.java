@@ -370,6 +370,7 @@ public class WebsiteGenerator implements Runnable
                 .replace("$value", value).replaceAll("\\s*data-[^=\\s]+=\"[^\"]+\"", "")
                 .replaceAll("\\s*id=\"refresh-[^\"]+\"", "").replace(" data-macro-id=\"\"", "")
                 .replace(" class=\"external-link\"", "").replace(" rel=\"nofollow\"", "")
+                .replace(" class=\"conf-macro output-inline\"", "")
                 .replace("<a href=\"http://java.sun.com\">java.sun.com</a>", "java.sun.com")
                 .replace("http://jira.codehaus.org/browse/CARGO-",
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-")
