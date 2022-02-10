@@ -289,6 +289,24 @@
         </tr> 
         <tr valign="top"> 
          <td class="rightColumn"> 
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>With the opening of the JBoss EAP to the public and the split between JBoss and WildFly, the below naming correspondence should be used with JBoss EAP containers:</p>
+            <ul>
+             <li>What Cargo calls <a href="JBoss+6.1.x.html">JBoss 6.1.x</a> is what JBoss refers to as JBoss Application Server version 6.1; i.e. the version released in August 2011</li>
+             <li>What Cargo calls <a href="JBoss+7.2.x.html">JBoss 7.2.x</a> is what JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.1; i.e. the build from JBoss Application Server (AS) version 7.2 released in May 2013</li>
+             <li>What Cargo calls <a href="JBoss+7.3.x.html">JBoss 7.3.x</a> is what JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.2; i.e. the build from JBoss Application Server (AS) version 7.3 released in October 2013</li>
+             <li>What Cargo calls <a href="JBoss+7.4.x.html">JBoss 7.4.x</a> is what JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.3; i.e. the build from JBoss Application Server (AS) version 7.4 released in June 2014</li>
+             <li>What Cargo calls <a href="JBoss+7.5.x.html">JBoss 7.5.x</a> is what JBoss refers to as JBoss Enterprise Application Platform (EAP) version 6.4; i.e. the build from JBoss Application Server (AS) version 7.5 released in October 2015</li>
+             <li>The <a href="WildFly+10.x.html">WildFly 10.x</a> container can be used with the JBoss Enterprise Application Platform (EAP) version 7.0; i.e. the version released in May 2016</li>
+             <li>The <a href="WildFly+11.x.html">WildFly 11.x</a> container can be used with the JBoss Enterprise Application Platform (EAP) version 7.1; i.e. the version released in December 2017</li>
+             <li>The <a href="WildFly+13.x.html">WildFly 13.x</a> container can be used with the JBoss Enterprise Application Platform (EAP) version 7.2; i.e. the version released in January 2019</li>
+             <li>The <a href="WildFly+18.x.html">WildFly 18.x</a> container can be used with the JBoss Enterprise Application Platform (EAP) version 7.3; i.e. the version released in March 2020</li>
+             <li>The <a href="WildFly+22.x.html">WildFly 22.x</a> container can be used with the JBoss Enterprise Application Platform (EAP) version 7.4; i.e. the version released in July 2021</li>
+            </ul>
+           </div>
+          </div>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -606,6 +624,13 @@
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jboss/JBossPropertySet.html#CONFIGURATION"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jboss.deployer.keepOriginalWarFilename</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">JBossPropertySet.DEPLOYER_KEEP_ORIGINAL_WAR_FILENAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>false</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jboss/JBossPropertySet.html#DEPLOYER_KEEP_ORIGINAL_WAR_FILENAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jboss.deployment.dir</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">JBossPropertySet.ALTERNATIVE_DEPLOYMENT_DIR</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
@@ -766,6 +791,13 @@
               <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jboss/JBossPropertySet.html#CONFIGURATION"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jboss.deployer.keepOriginalWarFilename</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">JBossPropertySet.DEPLOYER_KEEP_ORIGINAL_WAR_FILENAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>false</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jboss/JBossPropertySet.html#DEPLOYER_KEEP_ORIGINAL_WAR_FILENAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jboss.management-http.port</a></p></td>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">JBossPropertySet.JBOSS_MANAGEMENT_HTTP_PORT</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
@@ -853,6 +885,13 @@
           </div><h5 id="WildFly22.x-Forremotecontainero.c.c.c.wildfly.WildFly22xRemoteContainer">For remote container o.c.c.c.wildfly.WildFly22xRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+             <col>
+             <col>
+             <col>
+            </colgroup>
             <tbody>
              <tr>
               <th class="confluenceTh"><p>Property name</p></th>
@@ -881,6 +920,13 @@
               <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
               <td class="confluenceTd"><p>N/A</p></td>
               <td class="confluenceTd"><p><br></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jboss.deployer.keepOriginalWarFilename</a></p></td>
+              <td class="confluenceTd"><p><a href="Configuration+properties.html">JBossPropertySet.DEPLOYER_KEEP_ORIGINAL_WAR_FILENAME</a></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd"><p><code>false</code></p></td>
+              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jboss/JBossPropertySet.html#DEPLOYER_KEEP_ORIGINAL_WAR_FILENAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jboss.management-http.port</a></p></td>
