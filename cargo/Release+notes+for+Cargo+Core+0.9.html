@@ -1,50 +1,51 @@
-<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
- <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
-  <meta charset="UTF-8"> 
-  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
-  <link rel="shortcut icon" href="attachments/favicon.ico"> 
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - Release notes for Cargo Core 0.9</title> 
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=Edge">
+  <link rel="stylesheet" href="attachments/site.css" type="text/css">
+  <link rel="shortcut icon" href="attachments/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
+  <title>Codehaus Cargo - Release notes for Cargo Core 0.9</title>
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> <!-- Global site tag (gtag.js) - Google Analytics --> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script> 
+  </script> <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-MYCEY8S1MG');
-  </script> <!-- Google Ads --> 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  </script> <!-- Google Ads -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-7996505557003356",
       enable_page_level_ads: true
     });
-  </script> 
- </head> 
- <body> 
-  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%" border="none"> 
+  </script>
+ </head>
+ <body>
+  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%" border="none">
    <tbody>
-    <tr style="height:83px"> 
-     <td colspan="2" style="padding:0px"> 
-      <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
-       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')"> 
+    <tr style="height:83px">
+     <td colspan="2" style="padding:0px">
+      <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2">
+       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')">
         <tbody>
-         <tr> 
-          <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
-          <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
-         </tr> 
+         <tr>
+          <td align="left" valign="middle" style="padding:0px"><img src="attachments/cargo-banner-left.png"></td>
+          <td align="right" valign="middle" style="padding:0px"><img src="attachments/cargo-banner-right.png"></td>
+         </tr>
         </tbody>
-       </table> 
-      </div> </td> 
-    </tr> 
-    <tr valign="top"> 
-     <td class="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+       </table>
+      </div></td>
+    </tr>
+    <tr valign="top">
+     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -255,39 +256,37 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul> <h3 class="heading3">RSS Feeds</h3> 
-      <table border="0" cellspacing="4px"> 
+      </ul> <h3 class="heading3">RSS Feeds</h3>
+      <table border="0" cellspacing="4px">
        <tbody>
-        <tr> 
-         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts"><img src="attachments/rss.gif" border="0"></a><br> </td> 
-         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts">Pages and Blog posts</a> </td> 
-        </tr> 
-        <tr> 
-         <td align="right"> <a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml"><img src="attachments/rss.gif" border="0"></a> </td> 
-         <td align="left"> <a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml">Mailing list</a> </td> 
-        </tr> 
+        <tr>
+         <td align="right"><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts"><img src="attachments/rss.gif" border="0"></a><br></td>
+         <td align="left"><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts">Pages and Blog posts</a></td>
+        </tr>
+        <tr>
+         <td align="right"><a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml"><img src="attachments/rss.gif" border="0"></a></td>
+         <td align="left"><a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml">Mailing list</a></td>
+        </tr>
        </tbody>
-      </table> </td> 
-     <td style="padding:0px"> 
-      <table style="border-collapse:collapse;width:100%;height:100%"> 
+      </table></td>
+     <td style="padding:0px">
+      <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
-        <tr style="height:38px"> 
-         <td class="breadcrumbs"> 
-          <table style="border-collapse:collapse;width:100%;height:100%"> 
+        <tr style="height:38px">
+         <td class="breadcrumbs">
+          <table style="border-collapse:collapse;width:100%;height:100%">
            <tbody>
-            <tr valign="middle"> 
-             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Downloads.html">Downloads</a> &gt; Release notes for Cargo Core 0.9</b> </td> 
-             <td align="right" style="width:350px"> 
-              <form method="GET" action="Search.html"> 
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
-               <input type="submit" value="Search"> 
-              </form> </td> 
-            </tr> 
+            <tr valign="middle">
+             <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Downloads.html">Downloads</a> &gt; Release notes for Cargo Core 0.9</b></td>
+             <td align="right" style="width:350px">
+              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              </form></td>
+            </tr>
            </tbody>
-          </table> </td> 
-        </tr> 
-        <tr valign="top"> 
-         <td class="rightColumn"> <p>Release note content:</p>
+          </table></td>
+        </tr>
+        <tr valign="top">
+         <td class="rightColumn"><p>Release note content:</p>
           <ul>
            <li><a href="#ReleasenotesforCargoCore0.9-main">Main changes</a></li>
            <li><a href="#ReleasenotesforCargoCore0.9-issues">Changelog</a></li>
@@ -298,31 +297,30 @@
            <li>Added new Packager interface and a first implementation for Tomcat.</li>
            <li>Added DataSource configuration support to Standalone configurations for containers: XXXX</li>
            <li>TODO</li>
-          </ul><p>The full list of all issues fixed and features implemented is available below.</p><p>Please note that version 0.9 has broken some APIs as explained below in the migration guide. This is the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-issues"><span class="confluence-anchor-link" id="issues"> </span></span></p><h3 id="ReleasenotesforCargoCore0.9-Changelog">Changelog</h3><p> </p>
-          <div class="confluence-jim-macro refresh-module-id jira-table placeholder conf-macro output-block"> 
-           <p> </p> 
-           <div style="width: 100%;  overflow: auto;" class="jira-issues"> 
-            <table class="aui"> 
-             <tbody> 
-              <tr> 
-              </tr> 
-              <tr> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">type</th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">key</th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">resolution</th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">summary</th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">assignee</th> 
-               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">reporter</th> 
-              </tr> 
-             </tbody> 
-            </table> 
-           </div> 
-           <div class="refresh-issues-bottom"> 
-           </div> <a class="icon icon-refresh refresh-action refresh-issues-button"> </a> <a class="refresh-action refresh-issues-link">Refresh</a> 
-           <input type="hidden" class="refresh-wiki">  
-          </div> <p> </p> 
-          <div class="jim-sortable-dark-layout"> 
-          </div>  <p></p><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-migration"><span class="confluence-anchor-link" id="migration"> </span></span></p><script type="text/javascript">
+          </ul><p>The full list of all issues fixed and features implemented is available below.</p><p>Please note that version 0.9 has broken some APIs as explained below in the migration guide. This is the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-issues"><span class="confluence-anchor-link" id="issues"> </span></span></p><h3 id="ReleasenotesforCargoCore0.9-Changelog">Changelog</h3><p></p>
+          <div class="confluence-jim-macro refresh-module-id jira-table placeholder conf-macro output-block">
+           <p></p>
+           <div style="width: 100%;  overflow: auto;" class="jira-issues">
+            <table class="aui">
+             <tbody>
+              <tr>
+              </tr>
+              <tr>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">type</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">key</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">resolution</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">summary</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">assignee</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">reporter</th>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+           <div class="refresh-issues-bottom">
+           </div> <a class="icon icon-refresh refresh-action refresh-issues-button"> </a> <a class="refresh-action refresh-issues-link">Refresh</a> <input type="hidden" class="refresh-wiki">
+          </div> <p></p>
+          <div class="jim-sortable-dark-layout">
+          </div> <p></p><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-migration"><span class="confluence-anchor-link" id="migration"> </span></span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -359,7 +357,7 @@
            <li><a href="#ReleasenotesforCargoCore0.9-weblogic">WebLogic API</a></li>
           </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-container"><span class="confluence-anchor-link" id="container"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-CoreContainerAPI">Core Container API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">ERROR: 7006: org.codehaus.cargo.container.InstalledLocalContainer: Return type of method 'public java.io.File getHome()' has been changed to java.lang.String
 ERROR: 7005: org.codehaus.cargo.container.InstalledLocalContainer: Parameter 1 of 'public void setHome(java.io.File)' has changed its type to java.lang.String
 ERROR: 7006: org.codehaus.cargo.container.configuration.LocalConfiguration: Return type of method 'public java.io.File getHome()' has been changed to java.lang.String
@@ -394,11 +392,11 @@ INFO: 8000: org.codehaus.cargo.container.packager.Packager: Class org.codehaus.c
 INFO: 8000: org.codehaus.cargo.container.packager.PackagerType: Class org.codehaus.cargo.container.packager.PackagerType added
 INFO: 8000: org.codehaus.cargo.container.property.DataSource: Class org.codehaus.cargo.container.property.DataSource added
 INFO: 8000: org.codehaus.cargo.container.property.DatasourcePropertySet: Class org.codehaus.cargo.container.property.DatasourcePropertySet added
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-generic"><span class="confluence-anchor-link" id="generic"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-CoreGenericAPI">Core Generic API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">ERROR: 7012: org.codehaus.cargo.generic.ContainerFactory: Method 'public java.util.Map getContainerIds()' has been added to an interface
 INFO: 7011: org.codehaus.cargo.generic.DefaultContainerFactory: Method 'public java.util.Map getContainerIds()' has been added
 ERROR: 7005: org.codehaus.cargo.generic.DefaultContainerFactory: Parameter 2 of 'public void registerContainer(java.lang.String, java.lang.String, org.codehaus.cargo.container.ContainerType)' has changed its type to org.codehaus.cargo.container.ContainerType
@@ -429,11 +427,11 @@ ERROR: 7005: org.codehaus.cargo.generic.deployer.DefaultDeployerFactory: Paramet
 ERROR: 7012: org.codehaus.cargo.generic.deployer.DeployerFactory: Method 'public org.codehaus.cargo.container.deployer.Deployer createDeployer(org.codehaus.cargo.container.Container)' has been added to an interface
 INFO: 8000: org.codehaus.cargo.generic.packager.DefaultPackagerFactory: Class org.codehaus.cargo.generic.packager.DefaultPackagerFactory added
 INFO: 8000: org.codehaus.cargo.generic.packager.PackagerFactory: Class org.codehaus.cargo.generic.packager.PackagerFactory added
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-module"><span class="confluence-anchor-link" id="module"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-CoreModuleAPI">Core Module API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">INFO: 4000: org.codehaus.cargo.module.AbstractDescriptor: Added org.codehaus.cargo.module.Descriptor to the set of implemented interfaces
 ERROR: 7005: org.codehaus.cargo.module.AbstractDescriptor: Parameter 1 of 'protected org.w3c.dom.Element addElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element, org.w3c.dom.Element)' has changed its type to org.codehaus.cargo.module.DescriptorTag
 INFO: 7015: org.codehaus.cargo.module.AbstractDescriptor: Method 'protected org.w3c.dom.Element addElement(org.codehaus.cargo.module.AbstractDescriptorTag, org.w3c.dom.Element, org.w3c.dom.Element)' is no longer final
@@ -515,11 +513,11 @@ INFO: 4000: org.codehaus.cargo.module.webapp.weblogic.WeblogicXml: Added org.cod
 ERROR: 5001: org.codehaus.cargo.module.webapp.weblogic.WeblogicXmlTag: Removed org.codehaus.cargo.module.AbstractDescriptorTag from the list of superclasses
 INFO: 5000: org.codehaus.cargo.module.webapp.weblogic.WeblogicXmlTag: Added org.codehaus.cargo.module.DescriptorTag to the list of superclasses
 INFO: 4000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmi: Added org.codehaus.cargo.module.VendorDescriptor to the set of implemented interfaces
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-util"><span class="confluence-anchor-link" id="util"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-CoreUtilAPI">Core Util API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">INFO: 8000: org.codehaus.cargo.util.AntTaskFactory: Class org.codehaus.cargo.util.AntTaskFactory added
 INFO: 8000: org.codehaus.cargo.util.AntUtils: Class org.codehaus.cargo.util.AntUtils added
 INFO: 8000: org.codehaus.cargo.util.DefaultAntTaskFactory: Class org.codehaus.cargo.util.DefaultAntTaskFactory added
@@ -548,11 +546,11 @@ INFO: 7003: org.codehaus.cargo.util.log.SimpleLogger: Method 'public void debug(
 INFO: 7011: org.codehaus.cargo.util.log.SimpleLogger: Method 'protected void doLog(org.codehaus.cargo.util.log.LogLevel, java.lang.String, java.lang.String)' has been added
 INFO: 7003: org.codehaus.cargo.util.log.SimpleLogger: Method 'public void info(java.lang.String, java.lang.String)' has been removed, but an inherited definition exists.
 INFO: 7003: org.codehaus.cargo.util.log.SimpleLogger: Method 'public void warn(java.lang.String, java.lang.String)' has been removed, but an inherited definition exists.
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-jboss"><span class="confluence-anchor-link" id="jboss"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-JBossAPI">JBoss API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">INFO: 4000: org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer: Added org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer to the set of implemented interfaces
 INFO: 4000: org.codehaus.cargo.container.jboss.JBoss4xInstalledLocalContainer: Added org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer to the set of implemented interfaces
 ERROR: 8001: org.codehaus.cargo.container.jboss.JBossDeployer: Class org.codehaus.cargo.container.jboss.JBossDeployer removed
@@ -567,66 +565,66 @@ ERROR: 7005: org.codehaus.cargo.container.jboss.JBossStandaloneLocalConfiguratio
 INFO: 7011: org.codehaus.cargo.container.jboss.JBossStandaloneLocalConfiguration: Method 'public org.codehaus.cargo.container.jboss.internal.JBossInstalledLocalContainer getJbossContainer()' has been added
 INFO: 7011: org.codehaus.cargo.container.jboss.JBossStandaloneLocalConfiguration: Method 'public void verify()' has been added
 INFO: 5000: org.codehaus.cargo.container.jboss.JBossWAR: Added org.codehaus.cargo.container.spi.deployable.AbstractDeployable to the list of superclasses
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-jetty"><span class="confluence-anchor-link" id="jetty"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-JettyAPI">Jetty API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">TODO
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-jo"><span class="confluence-anchor-link" id="jo"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-JoAPI">Jo API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">TODO
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-orion"><span class="confluence-anchor-link" id="orion"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-OrionAPI">Orion API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">TODO
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-resin"><span class="confluence-anchor-link" id="resin"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-ResinAPI">Resin API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">TODO
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-tomcat"><span class="confluence-anchor-link" id="tomcat"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-TomcatAPI">Tomcat API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">TODO
-</pre> 
+</pre>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargoCore0.9-weblogic"><span class="confluence-anchor-link" id="weblogic"> </span></span></p><h4 id="ReleasenotesforCargoCore0.9-WebLogicAPI">WebLogic API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">TODO
-</pre> 
+</pre>
            </div>
           </div><p>&nbsp;</p>
           <div class="firebugResetStyles firebugBlockBackgroundColor firebugLayoutBox firebugLayoutBoxOffset" style="left: 10.0px;top: 217.0px;">
            <div class="firebugResetStyles firebugLayoutBox" style="padding: 0.0px 2.0px;background-color: rgb(237,255,100);"></div>
-          </div> </td> 
-        </tr> 
+          </div></td>
+        </tr>
        </tbody>
-      </table> </td> 
-    </tr> 
-    <tr height="23"> 
-     <td colspan="2" style="padding:0px"> 
-      <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
-       <table style="width:100%"> 
+      </table></td>
+    </tr>
+    <tr height="23">
+     <td colspan="2" style="padding:0px">
+      <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF">
+       <table style="width:100%">
         <tbody>
-         <tr valign="top"> 
-          <td align="left"> Copyright 2004-2022. All rights reserved unless otherwise noted.<br> </td> 
-          <td align="right"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
-         </tr> 
+         <tr valign="top">
+          <td align="left">Copyright 2004-2022. All rights reserved unless otherwise noted.<br></td>
+          <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
+         </tr>
         </tbody>
-       </table> 
-      </div> </td> 
-    </tr> 
+       </table>
+      </div></td>
+    </tr>
    </tbody>
-  </table>  
+  </table>
  </body>
 </html>

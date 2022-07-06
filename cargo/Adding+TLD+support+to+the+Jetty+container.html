@@ -1,50 +1,51 @@
-<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
- <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
-  <meta charset="UTF-8"> 
-  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
-  <link rel="shortcut icon" href="attachments/favicon.ico"> 
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - Adding TLD support to the Jetty container</title> 
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=Edge">
+  <link rel="stylesheet" href="attachments/site.css" type="text/css">
+  <link rel="shortcut icon" href="attachments/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
+  <title>Codehaus Cargo - Adding TLD support to the Jetty container</title>
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> <!-- Global site tag (gtag.js) - Google Analytics --> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script> 
+  </script> <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-MYCEY8S1MG');
-  </script> <!-- Google Ads --> 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  </script> <!-- Google Ads -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-7996505557003356",
       enable_page_level_ads: true
     });
-  </script> 
- </head> 
- <body> 
-  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%" border="none"> 
+  </script>
+ </head>
+ <body>
+  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%" border="none">
    <tbody>
-    <tr style="height:83px"> 
-     <td colspan="2" style="padding:0px"> 
-      <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
-       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')"> 
+    <tr style="height:83px">
+     <td colspan="2" style="padding:0px">
+      <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2">
+       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')">
         <tbody>
-         <tr> 
-          <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
-          <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
-         </tr> 
+         <tr>
+          <td align="left" valign="middle" style="padding:0px"><img src="attachments/cargo-banner-left.png"></td>
+          <td align="right" valign="middle" style="padding:0px"><img src="attachments/cargo-banner-right.png"></td>
+         </tr>
         </tbody>
-       </table> 
-      </div> </td> 
-    </tr> 
-    <tr valign="top"> 
-     <td class="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+       </table>
+      </div></td>
+    </tr>
+    <tr valign="top">
+     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -255,41 +256,39 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul> <h3 class="heading3">RSS Feeds</h3> 
-      <table border="0" cellspacing="4px"> 
+      </ul> <h3 class="heading3">RSS Feeds</h3>
+      <table border="0" cellspacing="4px">
        <tbody>
-        <tr> 
-         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts"><img src="attachments/rss.gif" border="0"></a><br> </td> 
-         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts">Pages and Blog posts</a> </td> 
-        </tr> 
-        <tr> 
-         <td align="right"> <a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml"><img src="attachments/rss.gif" border="0"></a> </td> 
-         <td align="left"> <a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml">Mailing list</a> </td> 
-        </tr> 
+        <tr>
+         <td align="right"><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts"><img src="attachments/rss.gif" border="0"></a><br></td>
+         <td align="left"><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts">Pages and Blog posts</a></td>
+        </tr>
+        <tr>
+         <td align="right"><a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml"><img src="attachments/rss.gif" border="0"></a></td>
+         <td align="left"><a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml">Mailing list</a></td>
+        </tr>
        </tbody>
-      </table> </td> 
-     <td style="padding:0px"> 
-      <table style="border-collapse:collapse;width:100%;height:100%"> 
+      </table></td>
+     <td style="padding:0px">
+      <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
-        <tr style="height:38px"> 
-         <td class="breadcrumbs"> 
-          <table style="border-collapse:collapse;width:100%;height:100%"> 
+        <tr style="height:38px">
+         <td class="breadcrumbs">
+          <table style="border-collapse:collapse;width:100%;height:100%">
            <tbody>
-            <tr valign="middle"> 
-             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Articles.html">Articles</a> &gt; Adding TLD support to the Jetty container</b> </td> 
-             <td align="right" style="width:350px"> 
-              <form method="GET" action="Search.html"> 
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
-               <input type="submit" value="Search"> 
-              </form> </td> 
-            </tr> 
+            <tr valign="middle">
+             <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Articles.html">Articles</a> &gt; Adding TLD support to the Jetty container</b></td>
+             <td align="right" style="width:350px">
+              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              </form></td>
+            </tr>
            </tbody>
-          </table> </td> 
-        </tr> 
-        <tr valign="top"> 
-         <td class="rightColumn"> <h1 id="AddingTLDsupporttotheJettycontainer-Symptoms">Symptoms</h1><p>The embedded jetty container starting up for integration tests in a separate module fails to successfully run web apps which use tag libraries. The app server starts successfully however when the test case attempts to hit a jsp which imports the tag libraries the server fails with the following exception. This behaviour is not seen when deploying the webapp to an installed tomcat instance or whe using the jetty maven plugin to start the container.</p>
+          </table></td>
+        </tr>
+        <tr valign="top">
+         <td class="rightColumn"><h1 id="AddingTLDsupporttotheJettycontainer-Symptoms">Symptoms</h1><p>The embedded jetty container starting up for integration tests in a separate module fails to successfully run web apps which use tag libraries. The app server starts successfully however when the test case attempts to hit a jsp which imports the tag libraries the server fails with the following exception. This behaviour is not seen when deploying the webapp to an installed tomcat instance or whe using the jetty maven plugin to start the container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">org.apache.jasper.JasperException: Unable to initialize
 TldLocationsCache: null
 	at
@@ -319,7 +318,7 @@ org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:303)
 org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:314)
 	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:264)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
-</pre> 
+</pre>
            </div>
           </div><h1 id="AddingTLDsupporttotheJettycontainer-Reason">Reason</h1><p>For whatever reason, Jetty's thread's context class loader is set to something other than the webapp classloader when the TldLocationsCache is first initialized. The code will try to scan the context classloader for all jars in WEB-INF/lib, but if the context classloader is set to something else, the jars won't be found.</p><script type="text/javascript">
   // Google Ads code
@@ -331,25 +330,25 @@ org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:314)
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h1 id="AddingTLDsupporttotheJettycontainer-Workaround">Workaround</h1><p>The workaround is to place the tld files anywhere in WEB-INF. The secondary scan, after the above one, will look for any tld files in WEB-INF and automatically register them.</p><h1 id="AddingTLDsupporttotheJettycontainer-Formoredetails...">For more details...</h1><p>See: <span class="confluence-jim-macro jira-issue conf-macro output-block"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-651" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>CARGO-651</a> - <span class="summary">Getting issue details...</span> <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span> </span> </p> </td> 
-        </tr> 
+          </center><h1 id="AddingTLDsupporttotheJettycontainer-Workaround">Workaround</h1><p>The workaround is to place the tld files anywhere in WEB-INF. The secondary scan, after the above one, will look for any tld files in WEB-INF and automatically register them.</p><h1 id="AddingTLDsupporttotheJettycontainer-Formoredetails...">For more details...</h1><p>See: <span class="confluence-jim-macro jira-issue conf-macro output-block"> <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-651" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>CARGO-651</a> - <span class="summary">Getting issue details...</span> <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span> </span></p></td>
+        </tr>
        </tbody>
-      </table> </td> 
-    </tr> 
-    <tr height="23"> 
-     <td colspan="2" style="padding:0px"> 
-      <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
-       <table style="width:100%"> 
+      </table></td>
+    </tr>
+    <tr height="23">
+     <td colspan="2" style="padding:0px">
+      <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF">
+       <table style="width:100%">
         <tbody>
-         <tr valign="top"> 
-          <td align="left"> Copyright 2004-2022. All rights reserved unless otherwise noted.<br> </td> 
-          <td align="right"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
-         </tr> 
+         <tr valign="top">
+          <td align="left">Copyright 2004-2022. All rights reserved unless otherwise noted.<br></td>
+          <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
+         </tr>
         </tbody>
-       </table> 
-      </div> </td> 
-    </tr> 
+       </table>
+      </div></td>
+    </tr>
    </tbody>
-  </table>  
+  </table>
  </body>
 </html>

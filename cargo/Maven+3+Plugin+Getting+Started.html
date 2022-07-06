@@ -1,50 +1,51 @@
-<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
- <head profile="http://www.w3.org/2000/08/w3c-synd/#"> 
-  <meta charset="UTF-8"> 
-  <meta http-equiv="x-ua-compatible" content="IE=Edge"> 
-  <link rel="stylesheet" href="attachments/site.css" type="text/css"> 
-  <link rel="shortcut icon" href="attachments/favicon.ico"> 
-  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico"> 
-  <title>Codehaus Cargo - Maven 3 Plugin Getting Started</title> 
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+ <head profile="http://www.w3.org/2000/08/w3c-synd/#">
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=Edge">
+  <link rel="stylesheet" href="attachments/site.css" type="text/css">
+  <link rel="shortcut icon" href="attachments/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
+  <title>Codehaus Cargo - Maven 3 Plugin Getting Started</title>
   <script type="text/javascript">
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> <!-- Global site tag (gtag.js) - Google Analytics --> 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script> 
+  </script> <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-MYCEY8S1MG');
-  </script> <!-- Google Ads --> 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+  </script> <!-- Google Ads -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-7996505557003356",
       enable_page_level_ads: true
     });
-  </script> 
- </head> 
- <body> 
-  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%" border="none"> 
+  </script>
+ </head>
+ <body>
+  <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%" border="none">
    <tbody>
-    <tr style="height:83px"> 
-     <td colspan="2" style="padding:0px"> 
-      <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2"> 
-       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')"> 
+    <tr style="height:83px">
+     <td colspan="2" style="padding:0px">
+      <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2">
+       <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')">
         <tbody>
-         <tr> 
-          <td align="left" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-left.png"> </td> 
-          <td align="right" valign="middle" style="padding:0px"> <img src="attachments/cargo-banner-right.png"> </td> 
-         </tr> 
+         <tr>
+          <td align="left" valign="middle" style="padding:0px"><img src="attachments/cargo-banner-left.png"></td>
+          <td align="right" valign="middle" style="padding:0px"><img src="attachments/cargo-banner-right.png"></td>
+         </tr>
         </tbody>
-       </table> 
-      </div> </td> 
-    </tr> 
-    <tr valign="top"> 
-     <td class="leftColumn" valign="top" style="padding-top:0px"> <h3 id="Navigation-QuickLinks">Quick Links</h3>
+       </table>
+      </div></td>
+    </tr>
+    <tr valign="top">
+     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -255,60 +256,58 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul> <h3 class="heading3">RSS Feeds</h3> 
-      <table border="0" cellspacing="4px"> 
+      </ul> <h3 class="heading3">RSS Feeds</h3>
+      <table border="0" cellspacing="4px">
        <tbody>
-        <tr> 
-         <td align="right"> <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts"><img src="attachments/rss.gif" border="0"></a><br> </td> 
-         <td align="left"> <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts">Pages and Blog posts</a> </td> 
-        </tr> 
-        <tr> 
-         <td align="right"> <a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml"><img src="attachments/rss.gif" border="0"></a> </td> 
-         <td align="left"> <a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml">Mailing list</a> </td> 
-        </tr> 
+        <tr>
+         <td align="right"><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts"><img src="attachments/rss.gif" border="0"></a><br></td>
+         <td align="left"><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=page,blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Documentation+and+Blog+posts">Pages and Blog posts</a></td>
+        </tr>
+        <tr>
+         <td align="right"><a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml"><img src="attachments/rss.gif" border="0"></a></td>
+         <td align="left"><a href="https://groups.google.com/forum/feed/codehaus-cargo/msgs/rss.xml">Mailing list</a></td>
+        </tr>
        </tbody>
-      </table> </td> 
-     <td style="padding:0px"> 
-      <table style="border-collapse:collapse;width:100%;height:100%"> 
+      </table></td>
+     <td style="padding:0px">
+      <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
-        <tr style="height:38px"> 
-         <td class="breadcrumbs"> 
-          <table style="border-collapse:collapse;width:100%;height:100%"> 
+        <tr style="height:38px">
+         <td class="breadcrumbs">
+          <table style="border-collapse:collapse;width:100%;height:100%">
            <tbody>
-            <tr valign="middle"> 
-             <td align="left"> <b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> &gt; Maven 3 Plugin Getting Started</b> </td> 
-             <td align="right" style="width:350px"> 
-              <form method="GET" action="Search.html"> 
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; 
-               <input type="submit" value="Search"> 
-              </form> </td> 
-            </tr> 
+            <tr valign="middle">
+             <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> &gt; Maven 3 Plugin Getting Started</b></td>
+             <td align="right" style="width:350px">
+              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              </form></td>
+            </tr>
            </tbody>
-          </table> </td> 
-        </tr> 
-        <tr valign="top"> 
-         <td class="rightColumn"> <h1 id="Maven3PluginGettingStarted-GettingStarted">Getting Started</h1><h2 id="Maven3PluginGettingStarted-Veryquickstart">Very quick start</h2><p>Codehaus Cargo can be directly run on any existing Maven&nbsp;J2EE, Java EE or Jakarta EE project (WAR, EAR or other) by running:</p>
+          </table></td>
+        </tr>
+        <tr valign="top">
+         <td class="rightColumn"><h1 id="Maven3PluginGettingStarted-GettingStarted">Getting Started</h1><h2 id="Maven3PluginGettingStarted-Veryquickstart">Very quick start</h2><p>Codehaus Cargo can be directly run on any existing Maven&nbsp;J2EE, Java EE or Jakarta EE project (WAR, EAR or other) by running:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
-</pre> 
+</pre>
            </div>
           </div><p>This will create a default <a href="Jetty+9.x.html">Jetty 9.x</a> <a href="Installed+Container.html">installed local container</a> and start it using the Cargo&nbsp;Maven 3 plugin with your&nbsp;Maven 3 project's deployable (a WAR, for example) deployed to it; so you can run manual tests (as a first introduction).</p><p>What is magic is that if you now want to run the same tests with <a href="Tomcat+9.x.html">Tomcat 9.x</a> you simply need to run (in one line):</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
     -Dcargo.maven.containerId=tomcat9x
     -Dcargo.maven.containerUrl=https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/9.0.45/tomcat-9.0.45.zip
-</pre> 
+</pre>
            </div>
           </div><p>That command will automatically download Tomcat 9.0.45 from the specified URL (taking into account any proxy server setting you would have in Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p><p>Now, if you want to run this time on <a href="WildFly+20.x.html">WildFly 20.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl"> 
+           <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
     -Dcargo.maven.containerId=wildfly20x
     -Dcargo.maven.containerUrl=https://download.jboss.org/wildfly/20.0.1.Final/wildfly-20.0.1.Final.zip
     -Dcargo.servlet.port=9000
-</pre> 
+</pre>
            </div>
           </div><p>Codehaus Cargo's main advantage is that the commands and configuration remains the same for any version of any supported container - be it Tomcat, Jetty, JBoss, JOnAS, GlassFish, WebLogic, WildFly, etc.</p><p>Like it? Well, keep on reading, then!</p><script type="text/javascript">
   // Google Ads code
@@ -424,25 +423,25 @@
              </tr>
             </tbody>
            </table>
-          </div><p><br class="atl-forced-newline">The configuration elements are described in the <a href="Maven+3+Plugin+Reference+Guide.html">Reference Guide</a> section.</p> </td> 
-        </tr> 
+          </div><p><br class="atl-forced-newline">The configuration elements are described in the <a href="Maven+3+Plugin+Reference+Guide.html">Reference Guide</a> section.</p></td>
+        </tr>
        </tbody>
-      </table> </td> 
-    </tr> 
-    <tr height="23"> 
-     <td colspan="2" style="padding:0px"> 
-      <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF"> 
-       <table style="width:100%"> 
+      </table></td>
+    </tr>
+    <tr height="23">
+     <td colspan="2" style="padding:0px">
+      <div style="position:fixed;width:100%;height:23px;bottom:0;border-top:1px solid #39434F;z-index:2;background-color:#FFFFFF">
+       <table style="width:100%">
         <tbody>
-         <tr valign="top"> 
-          <td align="left"> Copyright 2004-2022. All rights reserved unless otherwise noted.<br> </td> 
-          <td align="right"> <a href="Cookies.html">Click here to read our privacy and cookie policy</a> </td> 
-         </tr> 
+         <tr valign="top">
+          <td align="left">Copyright 2004-2022. All rights reserved unless otherwise noted.<br></td>
+          <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
+         </tr>
         </tbody>
-       </table> 
-      </div> </td> 
-    </tr> 
+       </table>
+      </div></td>
+    </tr>
    </tbody>
-  </table>  
+  </table>
  </body>
 </html>
