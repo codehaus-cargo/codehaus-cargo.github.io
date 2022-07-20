@@ -340,13 +340,13 @@
               <td colspan="1" class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code> nor <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><p><code><a href="Container+Timeout.html">&lt;timeout&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p><code><a href="Container+Timeout.<wbr>html">&lt;timeout&gt;</a></code></p></td>
               <td colspan="1" class="confluenceTd"><p>The timeout after which Cargo reports an error if the container is not started or stopped</p></td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
               <td colspan="1" class="confluenceTd"><p><code>120000</code> ms (2 minutes)</p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><p><code><a href="Passing+system+properties.html">&lt;systemProperties&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p><code><a href="Passing+system+properties.<wbr>html">&lt;systemProperties&gt;</a></code></p></td>
               <td colspan="1" class="confluenceTd"><p>List of <code>&lt;key&gt;value&lt;/key&gt;</code> pairs to be passed as System properties to the container when it is started.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;systemPropertiesFile&gt;</code> element to load system properties from a file.</p></td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
               <td colspan="1" class="confluenceTd"><p>No default</p></td>
@@ -424,7 +424,7 @@
               <td colspan="1" class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+properties.html">&lt;properties&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+properties.<wbr>html">&lt;properties&gt;</a></code></p></td>
               <td colspan="1" class="confluenceTd"><p>Values to use for various <a href="Configuration+properties.html">Configuration properties</a>.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;propertiesFile&gt;</code> element to load configuration properties from a file.</p></td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
               <td colspan="1" class="confluenceTd">
@@ -450,7 +450,7 @@
               <td colspan="1" class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+files+option.html">&lt;files&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+files+option.<wbr>html">&lt;files&gt;</a></code></p></td>
               <td colspan="1" class="confluenceTd"><p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#AntTasksReferenceGuide-file">&lt;file&gt;</a></code> element.</p></td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
               <td colspan="1" class="confluenceTd"><p>No default</p></td>
@@ -666,7 +666,7 @@
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">About WAR contexts</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>Many containers have their specific files for redefining context roots (Tomcat has <code>context.xml</code>, JBoss has <code>jboss-web.xml</code>, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
+            <p>Many containers have their specific files for redefining context roots (Tomcat has <code>context.<wbr>xml</code>, JBoss has <code>jboss-web.<wbr>xml</code>, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
            </div>
           </div><p><span class="confluence-anchor-link conf-macro output-inline" id="AntTasksReferenceGuide-zipUrlInstaller"><span class="confluence-anchor-link" id="zipUrlInstaller"> </span></span></p>
           <div class="table-wrap">
@@ -694,13 +694,13 @@
               <td class="confluenceTd"><p><code>&lt;downloadDir&gt;</code></p></td>
               <td class="confluenceTd"><p>Directory in which the <code>zipUrlInstaller</code> should download the container's ZIP or TAR.GZ file.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
-              <td class="confluenceTd"><p><code>${<a href="http://java.io">java.io</a>.tmpdir}/cargo/installs</code></p></td>
+              <td class="confluenceTd"><p><code>${<a href="http://java.<wbr>io">java.<wbr>io</a>.<wbr>tmpdir}/cargo/installs</code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;extractDir&gt;</code></p></td>
               <td class="confluenceTd"><p>Directory in which the <code>zipUrlInstaller</code> should extract the container's ZIP or TAR.GZ file.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
-              <td class="confluenceTd"><p><code>${project.build.directory}/cargo/installs</code></p></td>
+              <td class="confluenceTd"><p><code>${project.<wbr>build.<wbr>directory}/cargo/installs</code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><a href="#AntTasksReferenceGuide-proxy">&lt;proxy&gt;</a></code></p></td>
@@ -938,31 +938,31 @@
               <th class="confluenceTh"><p>Default value</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;cargo.daemon.url&gt;</code></p></td>
+              <td class="confluenceTd"><p><code>&lt;cargo.<wbr>daemon.<wbr>url&gt;</code></p></td>
               <td class="confluenceTd"><p>URL to connect with the daemon.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" title="(thumbs up)" src="attachments/thumbs_up.png" alt="(thumbs up)" border="0"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;cargo.daemon.handleid&gt;</code></p></td>
+              <td class="confluenceTd"><p><code>&lt;cargo.<wbr>daemon.<wbr>handleid&gt;</code></p></td>
               <td class="confluenceTd"><p>The handle id to register this container with.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" title="(thumbs up)" src="attachments/thumbs_up.png" alt="(thumbs up)" border="0"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code>&lt;cargo.daemon.autostart&gt;</code></p></td>
+              <td class="confluenceTd"><p><code>&lt;cargo.<wbr>daemon.<wbr>autostart&gt;</code></p></td>
               <td class="confluenceTd"><p>When set to&nbsp;<code>true</code>, the dameon will automatically restart the container if the daemon notices it is stopped.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
               <td class="confluenceTd"><p><code>false</code></p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><code>&lt;cargo.daemon.username&gt;</code></td>
+              <td colspan="1" class="confluenceTd"><code>&lt;cargo.<wbr>daemon.<wbr>username&gt;</code></td>
               <td colspan="1" class="confluenceTd">Username used when authenticating against the daemon host</td>
               <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></td>
               <td colspan="1" class="confluenceTd"><code>admin</code></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><code>&lt;cargo.daemon.password&gt;</code></td>
+              <td colspan="1" class="confluenceTd"><code>&lt;cargo.<wbr>daemon.<wbr>password&gt;</code></td>
               <td colspan="1" class="confluenceTd">Password used when authenticating against the daemon host</td>
               <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></td>
               <td colspan="1" class="confluenceTd"><code>""</code> (empty String)</td>

@@ -297,7 +297,7 @@
             <ul>
              <li>The secret key's public part must have been uploaded to the <a href="http://pgp.mit.edu/">MIT PGP Public Key Server</a>.</li>
             </ul></li>
-           <li><p>Your&nbsp;Sonatype Nexus credentials provided using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
+           <li><p>Your&nbsp;Sonatype Nexus credentials provided using your <code>settings.<wbr>xml</code> file (in the <code>${user.<wbr>home}/.<wbr>m2/</code> directory). Here's an example <code>settings.<wbr>xml</code>:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">&lt;settings&gt;
@@ -320,7 +320,7 @@
             <ol>
              <li>Open the CI page and click on the latest build</li>
              <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all CI jobs for the last build, as we split the container tests into multiple parallel jobs to reduce the total time required for integration testing). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" loading="lazy" src="attachments/Semaphore%20container%20log.png"></span><br><br></li>
+             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.<wbr>log</code> in it (on all CI jobs for the last build, as we split the container tests into multiple parallel jobs to reduce the total time required for integration testing). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" loading="lazy" src="attachments/Semaphore%20container%20log.png"></span><br><br></li>
             </ol></li>
            <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
             <ul>
@@ -341,13 +341,13 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><p>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p><p>The typical Maven release procedure is to execute these commands:</p>
+          </center><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><p>Start by erasing your local Maven repository (<code>${user.<wbr>home}/.<wbr>m2/repository/</code>, unless you've reconfigured this in your <code>settings.<wbr>xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p><p>The typical Maven release procedure is to execute these commands:</p>
           <ol>
            <li>A dry-run before doing the actual release to ensure there aren't any problems:<br><code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
            <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process</li>
            <li><code><strong>mvn release:perform</strong></code>: deploys the tagged artifacts on the Sonatype Nexus staging repository
             <ul>
-             <li>If you get a message saying: <code>Error deploying artifact: Failed to transfer file. Return code is: 401 Unauthorized</code>, please make sure your credentials in the <code>settings.xml</code> file are correct.</li>
+             <li>If you get a message saying: <code>Error deploying artifact: Failed to transfer file.<wbr> Return code is: 401 Unauthorized</code>, please make sure your credentials in the <code>settings.<wbr>xml</code> file are correct.</li>
             </ul></li>
           </ol><h3 id="Releaseprocedure-Promotingthestagedversion">Promoting the staged version</h3><p>Once the new Codehaus Cargo version is in the&nbsp;Sonatype Nexus staging repository, follow the below steps for promoting the staged version:</p>
           <ol>
@@ -361,9 +361,9 @@
               <ul>
                <li>Make sure the <a href="Containers.html">Containers list</a> is complete.</li>
                <li>Make sure the <a href="Navigation.html">Navigation page</a> is complete.</li>
-               <li>Make sure the documentation for each container is up to date.<br><u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code>core/documentation/target/<em>[container's name]</em>.log</code></li>
-               <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code></li>
-               <li>Make sure the <a href="Project+Structure.html">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
+               <li>Make sure the documentation for each container is up to date.<br><u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code>core/documentation/target/<em>[container's name]</em>.<wbr>log</code></li>
+               <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.<wbr>log</code></li>
+               <li>Make sure the <a href="Project+Structure.html">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.<wbr>log</code></li>
               </ul></li>
              <li>Modify the <a href="Home.html">Home</a> page to update the available version number, the release notes URL the checkbox is pointing to and the release date</li>
              <li>Modify the&nbsp;<a href="Building.html">Building</a> and <a href="Maven+3+Plugin+Installation.html">Maven 3 Plugin Installation</a> pages to update the&nbsp;<code>SNAPSHOT</code> version</li>
@@ -379,7 +379,7 @@
             <ol>
              <li>Go to the&nbsp;<code>generator</code> subdirectory of the <a href="https://github.com/codehaus-cargo/codehaus-cargo.github.io">codehaus-cargo.github.io repository</a> and run a&nbsp;<code>mvn verify</code> command to generate the Web site</li>
              <li>Download the source code of the tagged version in a temporary location and run a&nbsp;<code>mvn javadoc:aggregate</code> command to generate the API documentation</li>
-             <li>Move the&nbsp;<code>target/site/apidocs</code> folder to the root of the <code>codehaus-cargo.github.io</code> repository</li>
+             <li>Move the&nbsp;<code>target/site/apidocs</code> folder to the root of the <code>codehaus-cargo.<wbr>github.<wbr>io</code> repository</li>
              <li>Check in and push all changes, this will automatically update the Codehaus Cargo Web site</li>
             </ol></li>
            <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>

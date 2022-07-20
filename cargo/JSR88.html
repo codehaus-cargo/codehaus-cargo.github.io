@@ -288,7 +288,7 @@
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><h3 id="JSR88-Definition">Definition</h3><p>JSR88-compliant containers support</p><h3 id="JSR88-Explanation">Explanation</h3><p>Cargo supports <a href="http://www.jcp.org/en/jsr/detail?id=88">JSR 88: J2EE Application Deployment</a> API, allowing it to be used with any JSR88-compliant container.</p><p>The core functionality is implemented by the <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/spi/deployer/AbstractJsr88Deployer.html">o.c.c.container.spi.deployer.AbstractJsr88Deployer</a></code> class (a <a href="Deployer.html">Deployer</a> implementation), which acts as a proxy to the JSR88 <code>DeploymentManager</code>.</p><script type="text/javascript">
+         <td class="rightColumn"><h3 id="JSR88-Definition">Definition</h3><p>JSR88-compliant containers support</p><h3 id="JSR88-Explanation">Explanation</h3><p>Cargo supports <a href="http://www.jcp.org/en/jsr/detail?id=88">JSR 88: J2EE Application Deployment</a> API, allowing it to be used with any JSR88-compliant container.</p><p>The core functionality is implemented by the <code><a href="https://codehaus-cargo.<wbr>github.<wbr>io/apidocs/org/codehaus/cargo/container/spi/deployer/AbstractJsr88Deployer.<wbr>html">o.<wbr>c.<wbr>c.<wbr>container.<wbr>spi.<wbr>deployer.<wbr>AbstractJsr88Deployer</a></code> class (a <a href="Deployer.html">Deployer</a> implementation), which acts as a proxy to the JSR88 <code>DeploymentManager</code>.</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -374,7 +374,7 @@ Thread.currentThread().setContextClassLoader(classLoader);
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>When adding the <code>org.glassfish.deployment:deployment-client</code> dependency, please make sure that the version matches <strong>exactly</strong> the targeted GlassFish server's version (beware the updates that you install on GlassFish, these indeed change the version of your server); else you might run into unexpected surprises like:</p>
+            <p>When adding the <code>org.<wbr>glassfish.<wbr>deployment:deployment-client</code> dependency, please make sure that the version matches <strong>exactly</strong> the targeted GlassFish server's version (beware the updates that you install on GlassFish, these indeed change the version of your server); else you might run into unexpected surprises like:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">error submitting remote command: com.sun.enterprise.admin.cli.CommandException:
@@ -420,7 +420,7 @@ SYNOPSIS Usage: list [--monitor=false] pattern %%%EOL%%%
             <p>Later versions of the Payara deployment client fix this issue by setting the default to a modern TLS version:</p>
             <ul>
              <li>You can reference the proper version of the following (unfortunately, very large) artifact: <a href="https://repo.maven.apache.org/maven2/fish/payara/extras/payara-embedded-web/">https://repo.maven.apache.org/maven2/fish/payara/extras/payara-embedded-web/</a></li>
-             <li>These newer versions also support a <code>fish.payara.clientHttpsProtocol</code> system variable you can set on the Java VM, enabling the choice between different TLS versions if needed</li>
+             <li>These newer versions also support a <code>fish.<wbr>payara.<wbr>clientHttpsProtocol</code> system variable you can set on the Java VM, enabling the choice between different TLS versions if needed</li>
             </ul>
            </div>
           </div></td>

@@ -310,9 +310,9 @@
              </tr>
             </tbody>
            </table>
-          </div> <h3 id="ReleasenotesforCargo0.5-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.5-clirr"><span class="confluence-anchor-link" id="clirr"> </span></span><br> Changes detected by <a href="http://clirr.sourceforge.net">Clirr</a> between <code>cargo-0.4.jar</code> and <code>cargo-0.5.jar</code>:</p>
+          </div> <h3 id="ReleasenotesforCargo0.5-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.5-clirr"><span class="confluence-anchor-link" id="clirr"> </span></span><br> Changes detected by <a href="http://clirr.sourceforge.net">Clirr</a> between <code>cargo-0.<wbr>4.<wbr>jar</code> and <code>cargo-0.<wbr>5.<wbr>jar</code>:</p>
           <ul>
-           <li>[Core] <code>org.codehaus.cargo.deployment.*</code> package moved to <code>org.codehaus.cargo.module</code>
+           <li>[Core] <code>org.<wbr>codehaus.<wbr>cargo.<wbr>deployment.<wbr>*</code> package moved to <code>org.<wbr>codehaus.<wbr>cargo.<wbr>module</code>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -463,9 +463,9 @@ INFO: 8000: org.codehaus.cargo.container.spi.AbstractCopyingDeployer: Class org.
 </pre>
              </div>
             </div></li>
-           <li>[Core] Moved Configuration objects to package <code>org.codehaus.cargo.container.configuration</code> (they were previously in <code>org.codehaus.cargo.container</code>)</li>
-           <li>[Core] Moved <code>org.codehaus.cargo.container.configuration.ConfigurationFactory</code> to an interface and added a <code>org.codehaus.cargo.container.configuration.DefaultConfigurationFactory</code></li>
-           <li>[Core] Added new <code>org.codehaus.cargo.container.configuration.ConfigurationCapability</code> class 
+           <li>[Core] Moved Configuration objects to package <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>configuration</code> (they were previously in <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container</code>)</li>
+           <li>[Core] Moved <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>configuration.<wbr>ConfigurationFactory</code> to an interface and added a <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>configuration.<wbr>DefaultConfigurationFactory</code></li>
+           <li>[Core] Added new <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>configuration.<wbr>ConfigurationCapability</code> class 
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -528,7 +528,7 @@ INFO: 8000: org.codehaus.cargo.container.jo.JoPropertySet: Class org.codehaus.ca
 </pre>
              </div>
             </div></li>
-           <li>[Core] Renamed <code>org.codehaus.cargo.container.Capability</code> to <code>org.codehaus.cargo.container.ContainerCapability</code>
+           <li>[Core] Renamed <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>Capability</code> to <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>ContainerCapability</code>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -544,7 +544,7 @@ ERROR: 7002: org.codehaus.cargo.container.spi.AbstractContainer: Method 'public 
 </pre>
              </div>
             </div></li>
-           <li>[Core] Moved all Monitor-related classes from <code>org.codehaus.cargo.util</code> to <code>org.codehaus.cargo.util.monitor</code>
+           <li>[Core] Moved all Monitor-related classes from <code>org.<wbr>codehaus.<wbr>cargo.<wbr>util</code> to <code>org.<wbr>codehaus.<wbr>cargo.<wbr>util.<wbr>monitor</code>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -697,7 +697,7 @@ INFO: 8000: org.codehaus.cargo.util.monitor.SimpleMonitor: Class org.codehaus.ca
 </pre>
              </div>
             </div></li>
-           <li>[Core] Added new <code>org.codehaus.cargo.util.monitor.AntMonitor</code> class 
+           <li>[Core] Added new <code>org.<wbr>codehaus.<wbr>cargo.<wbr>util.<wbr>monitor.<wbr>AntMonitor</code> class 
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -705,7 +705,7 @@ INFO: 8000: org.codehaus.cargo.util.monitor.AntMonitor: Class org.codehaus.cargo
 </pre>
              </div>
             </div></li>
-           <li>[Core] Promoted <code>org.codehaus.cargo.container.internal.util.FileUtils</code> class to a public <code>org.codehaus.cargo.util.FileUtils</code> class as it is now used in the <code>org.codehaus.cargo.module</code> package (and we do want to have any dependency from <code>org.codehaus.cargo.module</code> to <code>org.codehaus.cargo.container</code> - only in the other direction) 
+           <li>[Core] Promoted <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>internal.<wbr>util.<wbr>FileUtils</code> class to a public <code>org.<wbr>codehaus.<wbr>cargo.<wbr>util.<wbr>FileUtils</code> class as it is now used in the <code>org.<wbr>codehaus.<wbr>cargo.<wbr>module</code> package (and we do want to have any dependency from <code>org.<wbr>codehaus.<wbr>cargo.<wbr>module</code> to <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container</code> - only in the other direction) 
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -716,7 +716,7 @@ ERROR: 7006: org.codehaus.cargo.container.spi.AbstractContainer: Return type of 
 </pre>
              </div>
             </div></li>
-           <li>[Core] Added new <code>org.codehaus.cargo.util.CargoException</code> which is the base of all Cargo exceptions. 
+           <li>[Core] Added new <code>org.<wbr>codehaus.<wbr>cargo.<wbr>util.<wbr>CargoException</code> which is the base of all Cargo exceptions. 
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -729,7 +729,7 @@ INFO: 7003: org.codehaus.cargo.container.ContainerException: Method 'public void
 </pre>
              </div>
             </div></li>
-           <li>[Core] Added public APIs <code>org.codehaus.cargo.container.Container.getOutput()</code> and <code>org.codehaus.cargo.container.Container.isAppend()</code>
+           <li>[Core] Added public APIs <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>Container.<wbr>getOutput()</code> and <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>Container.<wbr>isAppend()</code>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -783,7 +783,7 @@ INFO: 7011: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfigurat
 </pre>
              </div>
             </div></li>
-           <li>[Core] Added <code>org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer.getServer()</code> API to allow users to further configure a Jetty server 
+           <li>[Core] Added <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>jetty.<wbr>Jetty4xEmbeddedContainer.<wbr>getServer()</code> API to allow users to further configure a Jetty server 
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -791,7 +791,7 @@ INFO: 7011: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedContainer: Method 
 </pre>
              </div>
             </div></li>
-           <li>[Core] Added possibility to pass JVM arguments to Configurations by introducing a new <code>cargo.jvmargs</code> property 
+           <li>[Core] Added possibility to pass JVM arguments to Configurations by introducing a new <code>cargo.<wbr>jvmargs</code> property 
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">

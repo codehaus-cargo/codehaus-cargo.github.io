@@ -330,7 +330,7 @@
 </pre>
              </div>
             </div>
-            <p>Cargo will then start the container and show the following message: <code>Press Ctrl-C to stop the container...</code>.</p>
+            <p>Cargo will then start the container and show the following message: <code>Press Ctrl-C to stop the container.<wbr>.<wbr>.<wbr></code>.</p>
            </div>
           </div><p><strong>Example of a lightweight configuration</strong>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
@@ -353,7 +353,7 @@
 [...]
 </pre>
            </div>
-          </div><p>This minimal configuration allows you to configure a default Tomcat 5.x <a href="Standalone+Local+Configuration.html">standalone configuration</a> (when the configuration type is not defined as above, the plugin will use a standalone configuration by default) in <code>${project.basedir}/target/resin</code>.</p><p><strong>Example of a full-fledged Maven 3 configuration</strong>:</p>
+          </div><p>This minimal configuration allows you to configure a default Tomcat 5.x <a href="Standalone+Local+Configuration.html">standalone configuration</a> (when the configuration type is not defined as above, the plugin will use a standalone configuration by default) in <code>${project.<wbr>basedir}/target/resin</code>.</p><p><strong>Example of a full-fledged Maven 3 configuration</strong>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[...]
@@ -456,7 +456,7 @@
 [...]
 </pre>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-autodeploy"><span class="confluence-anchor-link" id="autodeploy"> </span></span></p><h3 id="Startingandstoppingacontainer-Automaticdeploymentofproject'sartifact(forJ2EE,JavaEEorJakartaEEprojects)">Automatic deployment of project's artifact (for&nbsp;J2EE, Java EE or Jakarta EE projects)</h3><p>If your project is a J2EE, Java EE or Jakarta EE project (i.e. of type <code>&lt;packaging&gt;war&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ear&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ejb&lt;/packaging&gt;</code> or <code>&lt;packaging&gt;uberwar&lt;/packaging&gt;</code>) and you use the <a href="Maven+3+Plugin.html">Cargo Maven 3 plugin</a> on that project then the generated artifact will be automatically added to the list of deployables to deploy. You can control the location of the artifact by using the <code>&lt;location&gt;</code> element (it defaults to <code>${project.build.directory}/${project.build.finalName}.${project.packaging</code>}). In addition if you want to wait for the deployment to be finished you can specify a <code>&lt;pingURL&gt;</code> (none is used by default). Here's an example:</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-autodeploy"><span class="confluence-anchor-link" id="autodeploy"> </span></span></p><h3 id="Startingandstoppingacontainer-Automaticdeploymentofproject'sartifact(forJ2EE,JavaEEorJakartaEEprojects)">Automatic deployment of project's artifact (for&nbsp;J2EE, Java EE or Jakarta EE projects)</h3><p>If your project is a J2EE, Java EE or Jakarta EE project (i.e. of type <code>&lt;packaging&gt;war&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ear&lt;/packaging&gt;</code>, <code>&lt;packaging&gt;ejb&lt;/packaging&gt;</code> or <code>&lt;packaging&gt;uberwar&lt;/packaging&gt;</code>) and you use the <a href="Maven+3+Plugin.html">Cargo Maven 3 plugin</a> on that project then the generated artifact will be automatically added to the list of deployables to deploy. You can control the location of the artifact by using the <code>&lt;location&gt;</code> element (it defaults to <code>${project.<wbr>build.<wbr>directory}/${project.<wbr>build.<wbr>finalName}.<wbr>${project.<wbr>packaging</code>}). In addition if you want to wait for the deployment to be finished you can specify a <code>&lt;pingURL&gt;</code> (none is used by default). Here's an example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
@@ -531,11 +531,11 @@
 &lt;/plugin&gt;
 </pre>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-datasources"><span class="confluence-anchor-link" id="datasources"> </span></span></p><h3 id="Startingandstoppingacontainer-AddingJDBCDataSourcestothecontainer'sJNDItree">Adding JDBC DataSources to the container's JNDI tree</h3><p>Cargo supports configuration of one or more&nbsp;<code>javax.sql.DataSource</code> (DataSource) objects or arbitrary (Resource) objects into the JNDI tree of your container. Not all containers support this. <a href="DataSource+and+Resource+Support.html">Here are the ones that do</a>.</p><p>DataSource configuration is the preferred means to configure a&nbsp;<code>javax.sql.DataSource</code> even if when you can technically do the same with a Resource. There are two major reasons for this:</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-datasources"><span class="confluence-anchor-link" id="datasources"> </span></span></p><h3 id="Startingandstoppingacontainer-AddingJDBCDataSourcestothecontainer'sJNDItree">Adding JDBC DataSources to the container's JNDI tree</h3><p>Cargo supports configuration of one or more&nbsp;<code>javax.<wbr>sql.<wbr>DataSource</code> (DataSource) objects or arbitrary (Resource) objects into the JNDI tree of your container. Not all containers support this. <a href="DataSource+and+Resource+Support.html">Here are the ones that do</a>.</p><p>DataSource configuration is the preferred means to configure a&nbsp;<code>javax.<wbr>sql.<wbr>DataSource</code> even if when you can technically do the same with a Resource. There are two major reasons for this:</p>
           <ol>
            <li>Every configuration that supports Resources also support DataSources, but not visa versa. In other words, you will not be as portable, if you hard-code to a container's Resource implementation.</li>
            <li>Resources are tricky and vary between vendors. Why add more work for yourself?</li>
-          </ol><p>The next part of this topic will show how to configure DataSources in a portable way.</p><h4 id="Startingandstoppingacontainer-DataSourceConfigurationExamples">DataSource Configuration Examples</h4><h5 id="Startingandstoppingacontainer-OneDataSource:">One DataSource:</h5><p>Just add a property that starts with <code>cargo.datasource.datasource</code>. Note that you will probably need to add a classpath dependency for the driver.</p>
+          </ol><p>The next part of this topic will show how to configure DataSources in a portable way.</p><h4 id="Startingandstoppingacontainer-DataSourceConfigurationExamples">DataSource Configuration Examples</h4><h5 id="Startingandstoppingacontainer-OneDataSource:">One DataSource:</h5><p>Just add a property that starts with <code>cargo.<wbr>datasource.<wbr>datasource</code>. Note that you will probably need to add a classpath dependency for the driver.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[...]
@@ -567,7 +567,7 @@
 &lt;/plugin&gt;
 </pre>
            </div>
-          </div><h5 id="Startingandstoppingacontainer-MultipleDataSources">Multiple DataSources</h5><p>To have multiple DataSources bound to JNDI, simply add more properties that start with <code>cargo.datasource.datasource</code>.</p>
+          </div><h5 id="Startingandstoppingacontainer-MultipleDataSources">Multiple DataSources</h5><p>To have multiple DataSources bound to JNDI, simply add more properties that start with <code>cargo.<wbr>datasource.<wbr>datasource</code>.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[...]
@@ -597,7 +597,7 @@
 &lt;/plugin&gt;
 </pre>
            </div>
-          </div><h5 id="Startingandstoppingacontainer-TransactionalDataSource">Transactional DataSource</h5><p>If you are not using an XADataSource, some containers still support transactions (ex. oc4j, weblogic). To do this, add the property <code>cargo.datasource.transactionsupport</code>.</p>
+          </div><h5 id="Startingandstoppingacontainer-TransactionalDataSource">Transactional DataSource</h5><p>If you are not using an XADataSource, some containers still support transactions (ex. oc4j, weblogic). To do this, add the property <code>cargo.<wbr>datasource.<wbr>transactionsupport</code>.</p>
           <ul>
            <li>Note that if you specify this on a container that does not support transactions, you will get a&nbsp;<code>CargoException</code> during the configuration phase.</li>
            <li><p>valid values are&nbsp;<code>LOCAL_TRANSACTION</code> or <code>XA_TRANSACTION</code>. Note that&nbsp;<code>XA_TRANSACTION</code> is emulated in this case.</p>
@@ -627,9 +627,9 @@
             </div></li>
           </ul><h5 id="Startingandstoppingacontainer-XATransactionalDataSource">XA Transactional DataSource</h5><p>If you want to use real XA transactions, do the following:</p>
           <ol>
-           <li>set&nbsp;<code>cargo.datasource.type</code> to <code>javax.sql.XADataSource</code></li>
-           <li>set&nbsp;<code>cargo.datasource.driver</code> to valid implementation of&nbsp;<code>javax.sql.XADataSource</code></li>
-           <li>set&nbsp;<code>cargo.datasource.properties</code> to semi-colon delimited list of properties for that class</li>
+           <li>set&nbsp;<code>cargo.<wbr>datasource.<wbr>type</code> to <code>javax.<wbr>sql.<wbr>XADataSource</code></li>
+           <li>set&nbsp;<code>cargo.<wbr>datasource.<wbr>driver</code> to valid implementation of&nbsp;<code>javax.<wbr>sql.<wbr>XADataSource</code></li>
+           <li>set&nbsp;<code>cargo.<wbr>datasource.<wbr>properties</code> to semi-colon delimited list of properties for that class</li>
           </ol>
           <ul>
            <li><p>Note that if you specify this on a container that does not support XADataSource configuration, you will get a CargoException during the configuration phase.</p>
@@ -657,7 +657,7 @@
 </pre>
              </div>
             </div></li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-resources"><span class="confluence-anchor-link" id="resources"> </span></span></p><h3 id="Startingandstoppingacontainer-AddingPOJOResourcestothecontainer'sJNDItree">Adding POJO Resources to the container's JNDI tree</h3><p>Cargo supports configuration of arbitrary (Resource) objects into the JNDI tree of your container. Not all containers support this. <a href="DataSource+and+Resource+Support.html">Here are the ones that do</a>. Resources are configured when you add properties that start with <code>cargo.resource.resource</code>. Note that you will probably need to add a classpath dependency for the class and its interface.</p><h4 id="Startingandstoppingacontainer-ResourceConfigurationExamples">Resource Configuration Examples</h4><h5 id="Startingandstoppingacontainer-JavaMailSession:">JavaMail Session:</h5>
+          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Startingandstoppingacontainer-resources"><span class="confluence-anchor-link" id="resources"> </span></span></p><h3 id="Startingandstoppingacontainer-AddingPOJOResourcestothecontainer'sJNDItree">Adding POJO Resources to the container's JNDI tree</h3><p>Cargo supports configuration of arbitrary (Resource) objects into the JNDI tree of your container. Not all containers support this. <a href="DataSource+and+Resource+Support.html">Here are the ones that do</a>. Resources are configured when you add properties that start with <code>cargo.<wbr>resource.<wbr>resource</code>. Note that you will probably need to add a classpath dependency for the class and its interface.</p><h4 id="Startingandstoppingacontainer-ResourceConfigurationExamples">Resource Configuration Examples</h4><h5 id="Startingandstoppingacontainer-JavaMailSession:">JavaMail Session:</h5>
           <ul>
            <li>Resin and Tomcat require you supply the mail and activation jars externally due to Sun license requirements. The below example shows this.</li>
           </ul>

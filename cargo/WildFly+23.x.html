@@ -292,7 +292,7 @@
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>WildFly 23 comes with two versions: Jakarta EE 8 Full &amp; Web Distribution and the WildFly Preview EE 9 Distribution. Users of the WildFly Preview EE 9 Distribution should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.*</code> to <code>jakarta.*</code>. This will almost certainly require code changes to enable applications to migrate to EE 9 and later.</p>
+            <p>WildFly 23 comes with two versions: Jakarta EE 8 Full &amp; Web Distribution and the WildFly Preview EE 9 Distribution. Users of the WildFly Preview EE 9 Distribution should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.<wbr>*</code> to <code>jakarta.<wbr>*</code>. This will almost certainly require code changes to enable applications to migrate to EE 9 and later.</p>
            </div>
           </div><h3 id="WildFly23.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
@@ -307,8 +307,8 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Container+Instantiation.html">Container Instantiation</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.createContainer("wildfly23x"...)</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId="wildfly23x".../&gt;</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.<wbr>createContainer("wildfly23x".<wbr>.<wbr>.<wbr>)</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId="wildfly23x".<wbr>.<wbr>.<wbr>/&gt;</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;wildfly23x&lt;/containerId&gt;</code></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
@@ -356,7 +356,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p>&nbsp; <a href="Installed+Container.html">Installed Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly23xInstalledLocalContainer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>wildfly.<wbr>WildFly23xInstalledLocalContainer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -377,7 +377,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Remote+Container.html">Remote Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly23xRemoteContainer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>wildfly.<wbr>WildFly23xRemoteContainer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -397,7 +397,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly23xStandaloneLocalConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>wildfly.<wbr>WildFly23xStandaloneLocalConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -411,7 +411,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Existing+Local+Configuration.html">Existing Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly23xExistingLocalConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>wildfly.<wbr>WildFly23xExistingLocalConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -425,7 +425,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Runtime+Configuration.html">Runtime Configuration</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly23xRuntimeConfiguration</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>wildfly.<wbr>WildFly23xRuntimeConfiguration</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -525,7 +525,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a class="unresolved" href="#">Installed Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly23xInstalledLocalDeployer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>wildfly.<wbr>WildFly23xInstalledLocalDeployer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>
@@ -539,7 +539,7 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Remote+Deployer.html">Remote Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.c.c.c.wildfly.WildFly23xRemoteDeployer</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>wildfly.<wbr>WildFly23xRemoteDeployer</code></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd"><p><br></p></td>

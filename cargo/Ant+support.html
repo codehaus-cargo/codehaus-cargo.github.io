@@ -292,7 +292,7 @@
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <p class="title">Security issues with older versions of Apache Ant</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>As documented in <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1945">CVE-2020-1945</a>, Apache Ant versions 1.1 to 1.9.14 and 1.10.0 to 1.10.7 use the default temporary directory identified by the Java system property <code>java.io.tmpdir</code> for several tasks and may thus leak sensitive information. Moreover, the <code>fixcrlf</code> and <code>replaceregexp</code> tasks copy files from the temporary directory back into the build tree allowing an attacker to inject modified source files into the Codehaus Cargo container configuration generation process, a security issue still existing in Apache Ant 1.9.15 and 1.10.8. Last but not least, Apache Ant versions up to 1.9.15 / 1.10.10 suffer from an issue where a specially crafted ZIP or TAR file can make the associated libraries allocate very large amounts of memory (and cause a JVM crash, as explained in <a href="https://ant.apache.org/security.html">CVE-2021-36373</a> and <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36374">CVE-2021-36374</a>).</p>
+            <p>As documented in <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-1945">CVE-2020-1945</a>, Apache Ant versions 1.1 to 1.9.14 and 1.10.0 to 1.10.7 use the default temporary directory identified by the Java system property <code>java.<wbr>io.<wbr>tmpdir</code> for several tasks and may thus leak sensitive information. Moreover, the <code>fixcrlf</code> and <code>replaceregexp</code> tasks copy files from the temporary directory back into the build tree allowing an attacker to inject modified source files into the Codehaus Cargo container configuration generation process, a security issue still existing in Apache Ant 1.9.15 and 1.10.8. Last but not least, Apache Ant versions up to 1.9.15 / 1.10.10 suffer from an issue where a specially crafted ZIP or TAR file can make the associated libraries allocate very large amounts of memory (and cause a JVM crash, as explained in <a href="https://ant.apache.org/security.html">CVE-2021-36373</a> and <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36374">CVE-2021-36374</a>).</p>
             <p>We hence strongly recommend only using Apache Ant version&nbsp;1.9.16 and above (if you need to stick to the Apache Ant 1.9.x branch), or Apache Ant version 1.10.11 and above in general.</p>
            </div>
           </div>
@@ -458,13 +458,13 @@
                 <td colspan="1" class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code> nor <code><a href="#Antsupport-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
                </tr>
                <tr>
-                <td colspan="1" class="confluenceTd"><p><code><a href="Container+Timeout.html">&lt;timeout&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p><code><a href="Container+Timeout.<wbr>html">&lt;timeout&gt;</a></code></p></td>
                 <td colspan="1" class="confluenceTd"><p>The timeout after which Cargo reports an error if the container is not started or stopped</p></td>
                 <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
                 <td colspan="1" class="confluenceTd"><p><code>120000</code> ms (2 minutes)</p></td>
                </tr>
                <tr>
-                <td colspan="1" class="confluenceTd"><p><code><a href="Passing+system+properties.html">&lt;systemProperties&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p><code><a href="Passing+system+properties.<wbr>html">&lt;systemProperties&gt;</a></code></p></td>
                 <td colspan="1" class="confluenceTd"><p>List of <code>&lt;key&gt;value&lt;/key&gt;</code> pairs to be passed as System properties to the container when it is started.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;systemPropertiesFile&gt;</code> element to load system properties from a file.</p></td>
                 <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
                 <td colspan="1" class="confluenceTd"><p>No default</p></td>
@@ -543,7 +543,7 @@
                 <td colspan="1" class="confluenceTd"><p>No default</p></td>
                </tr>
                <tr>
-                <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+properties.html">&lt;properties&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+properties.<wbr>html">&lt;properties&gt;</a></code></p></td>
                 <td colspan="1" class="confluenceTd"><p>Values to use for various <a href="Configuration+properties.html">Configuration properties</a>.</p><p>&nbsp;</p><p>You can also use the&nbsp;<code>&lt;propertiesFile&gt;</code> element to load configuration properties from a file.</p></td>
                 <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
                 <td colspan="1" class="confluenceTd">
@@ -569,7 +569,7 @@
                 <td colspan="1" class="confluenceTd"><p>No default</p></td>
                </tr>
                <tr>
-                <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+files+option.html">&lt;files&gt;</a></code></p></td>
+                <td colspan="1" class="confluenceTd"><p><code><a href="Configuration+files+option.<wbr>html">&lt;files&gt;</a></code></p></td>
                 <td colspan="1" class="confluenceTd"><p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#Antsupport-file">&lt;file&gt;</a></code> element.</p></td>
                 <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
                 <td colspan="1" class="confluenceTd"><p>No default</p></td>
@@ -789,7 +789,7 @@
             <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
              <p class="title">About WAR contexts</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
              <div class="confluence-information-macro-body">
-              <p>Many containers have their specific files for redefining context roots (Tomcat has <code>context.xml</code>, JBoss has <code>jboss-web.xml</code>, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
+              <p>Many containers have their specific files for redefining context roots (Tomcat has <code>context.<wbr>xml</code>, JBoss has <code>jboss-web.<wbr>xml</code>, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
              </div>
             </div>
             <p><span class="confluence-anchor-link conf-macro output-inline" id="Antsupport-zipUrlInstaller"><span class="confluence-anchor-link" id="zipUrlInstaller"> </span></span></p>
@@ -818,13 +818,13 @@
                 <td class="confluenceTd"><p><code>&lt;downloadDir&gt;</code></p></td>
                 <td class="confluenceTd"><p>Directory in which the <code>zipUrlInstaller</code> should download the container's ZIP or TAR.GZ file.</p></td>
                 <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
-                <td class="confluenceTd"><p><code>${<a href="http://java.io">java.io</a>.tmpdir}/cargo/installs</code></p></td>
+                <td class="confluenceTd"><p><code>${<a href="http://java.<wbr>io">java.<wbr>io</a>.<wbr>tmpdir}/cargo/installs</code></p></td>
                </tr>
                <tr>
                 <td class="confluenceTd"><p><code>&lt;extractDir&gt;</code></p></td>
                 <td class="confluenceTd"><p>Directory in which the <code>zipUrlInstaller</code> should extract the container's ZIP or TAR.GZ file.</p></td>
                 <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
-                <td class="confluenceTd"><p><code>${project.build.directory}/cargo/installs</code></p></td>
+                <td class="confluenceTd"><p><code>${project.<wbr>build.<wbr>directory}/cargo/installs</code></p></td>
                </tr>
                <tr>
                 <td class="confluenceTd"><p><code><a href="#Antsupport-proxy">&lt;proxy&gt;</a></code></p></td>
@@ -1068,31 +1068,31 @@
                 <th class="confluenceTh"><p>Default value</p></th>
                </tr>
                <tr>
-                <td class="confluenceTd"><p><code>&lt;cargo.daemon.url&gt;</code></p></td>
+                <td class="confluenceTd"><p><code>&lt;cargo.<wbr>daemon.<wbr>url&gt;</code></p></td>
                 <td class="confluenceTd"><p>URL to connect with the daemon.</p></td>
                 <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" title="(thumbs up)" src="attachments/thumbs_up.png" alt="(thumbs up)" border="0"></p></td>
                 <td class="confluenceTd"><p>No default</p></td>
                </tr>
                <tr>
-                <td class="confluenceTd"><p><code>&lt;cargo.daemon.handleid&gt;</code></p></td>
+                <td class="confluenceTd"><p><code>&lt;cargo.<wbr>daemon.<wbr>handleid&gt;</code></p></td>
                 <td class="confluenceTd"><p>The handle id to register this container with.</p></td>
                 <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-up" title="(thumbs up)" src="attachments/thumbs_up.png" alt="(thumbs up)" border="0"></p></td>
                 <td class="confluenceTd"><p>No default</p></td>
                </tr>
                <tr>
-                <td class="confluenceTd"><p><code>&lt;cargo.daemon.autostart&gt;</code></p></td>
+                <td class="confluenceTd"><p><code>&lt;cargo.<wbr>daemon.<wbr>autostart&gt;</code></p></td>
                 <td class="confluenceTd"><p>When set to&nbsp;<code>true</code>, the dameon will automatically restart the container if the daemon notices it is stopped.</p></td>
                 <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></p></td>
                 <td class="confluenceTd"><p><code>false</code></p></td>
                </tr>
                <tr>
-                <td colspan="1" class="confluenceTd"><code>&lt;cargo.daemon.username&gt;</code></td>
+                <td colspan="1" class="confluenceTd"><code>&lt;cargo.<wbr>daemon.<wbr>username&gt;</code></td>
                 <td colspan="1" class="confluenceTd">Username used when authenticating against the daemon host</td>
                 <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></td>
                 <td colspan="1" class="confluenceTd"><code>admin</code></td>
                </tr>
                <tr>
-                <td colspan="1" class="confluenceTd"><code>&lt;cargo.daemon.password&gt;</code></td>
+                <td colspan="1" class="confluenceTd"><code>&lt;cargo.<wbr>daemon.<wbr>password&gt;</code></td>
                 <td colspan="1" class="confluenceTd">Password used when authenticating against the daemon host</td>
                 <td colspan="1" class="confluenceTd"><img class="emoticon emoticon-thumbs-down" title="(thumbs down)" src="attachments/thumbs_down.png" alt="(thumbs down)" border="0"></td>
                 <td colspan="1" class="confluenceTd"><code>""</code> (empty String)</td>
@@ -1134,7 +1134,7 @@
            <li>The cargo-core-uberjar.jar and cargo-ant.jar JARs have been downloaded</li>
            <li>A mimimum knowledge of Ant is required</li>
            <li>User already has a <code>war</code> target that properly generates a working war file</li>
-          </ul><h5 id="Antsupport-Steps">Steps</h5><p>Follow the following steps to configure your <code>build.xml</code> :</p>
+          </ul><h5 id="Antsupport-Steps">Steps</h5><p>Follow the following steps to configure your <code>build.<wbr>xml</code> :</p>
           <ul>
            <li>Create a folder under your basedir called cargolib that will hold cargo-core-uberjar.jar and cargo-ant.jar</li>
           </ul>

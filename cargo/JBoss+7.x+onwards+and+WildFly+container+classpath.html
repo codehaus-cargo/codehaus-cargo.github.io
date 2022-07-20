@@ -291,12 +291,12 @@
          <td class="rightColumn"><p>The way the <a href="Container+Classpath.html">container classpath</a> is managed in all JBoss containers version 7 and onwards as well as all WildFly containers is slightly different from most others.</p><h3 id="JBoss7.xonwardsandWildFlycontainerclasspath-HowthecontainerclasspathisaddedtotheJBoss/WildFlycontainer">How the container classpath is added to the JBoss / WildFly container</h3><p>In order to add the <a href="Container+Classpath.html">container classpath</a> to the JBoss / WildFly container, Codehaus Cargo takes the below steps:</p>
           <ol>
            <li>The JAR files which are in the <a href="Container+Classpath.html">container classpath</a> are copied in the&nbsp;<code>modules/org/codehaus/cargo/classpath</code> subdirectory of the container home<br><strong>Attention</strong>: The JAR files are copied in the container home, and not into the configuration home. Hence, the JBoss / WildFly container's binaries are actually modified ad vidam eternam (until you manually clean it up).</li>
-           <li>For each JAR file, a <code>module.xml</code> file is created with the below rule for dependencies:
+           <li>For each JAR file, a <code>module.<wbr>xml</code> file is created with the below rule for dependencies:
             <ol>
-             <li>The first JAR file has dependencies <code>javax.api</code> and <code>javax.transaction.api</code></li>
-             <li>The second JAR has dependencies <code>javax.api</code>, <code>javax.transaction.api</code> and the first JAR<br>... and so on</li>
+             <li>The first JAR file has dependencies <code>javax.<wbr>api</code> and <code>javax.<wbr>transaction.<wbr>api</code></li>
+             <li>The second JAR has dependencies <code>javax.<wbr>api</code>, <code>javax.<wbr>transaction.<wbr>api</code> and the first JAR<br>... and so on</li>
             </ol></li>
-          </ol><h3 id="JBoss7.xonwardsandWildFlycontainerclasspath-Modificationintheapplications">Modification in the applications</h3><p>During deployment,&nbsp;Codehaus Cargo will edit your deployables'&nbsp;<code>META-INF/MANIFEST.MF</code> file in order to add the property&nbsp;<code>Dependencies</code> with all the JARs in the container classpath.</p><p>As per the logic followed to add these into the JBoss / WildFly container's classpath, these dependencies all start with the prefix&nbsp;<code>org.codehaus.cargo.classpath.</code></p><script type="text/javascript">
+          </ol><h3 id="JBoss7.xonwardsandWildFlycontainerclasspath-Modificationintheapplications">Modification in the applications</h3><p>During deployment,&nbsp;Codehaus Cargo will edit your deployables'&nbsp;<code>META-INF/MANIFEST.<wbr>MF</code> file in order to add the property&nbsp;<code>Dependencies</code> with all the JARs in the container classpath.</p><p>As per the logic followed to add these into the JBoss / WildFly container's classpath, these dependencies all start with the prefix&nbsp;<code>org.<wbr>codehaus.<wbr>cargo.<wbr>classpath.<wbr></code></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";

@@ -297,18 +297,18 @@
              <li>This way, all containers can use the default directories of the <code>ZipUrlInstaller</code> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-895">CARGO-895</a>, <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-959">CARGO-959</a> and others).</li>
             </ul></li>
            <li>The CARGO ANT tasks can now do remote deployment (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-962">CARGO-962</a>)</li>
-           <li><code>Deployable.pingUrl</code> now supports authentication (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-813">CARGO-813</a>)</li>
+           <li><code>Deployable.<wbr>pingUrl</code> now supports authentication (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-813">CARGO-813</a>)</li>
            <li>All deployment methods now accept a <code>DeployableMonitor</code> parameter (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-414">CARGO-414</a>)</li>
            <li>The steps to follow in order to remotely debug a container is now documented (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-447">CARGO-447</a>); you can check <a href="http://cargo.codehaus.org/Debugging">http://cargo.codehaus.org/Debugging</a> for details</li>
           </ul> <p>As for some of the improvements:</p>
           <ul>
            <li>Remote deployment on Jetty is now much faster (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-884">CARGO-884</a>)</li>
            <li>Remote deployers can now change the WAR context (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-331">CARGO-331</a>)</li>
-           <li>The <code>Container.stop</code> method now waits for the whole server to stop (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-918">CARGO-918</a>), which results in more stable tests if containers are started and stopped one after the other.</li>
+           <li>The <code>Container.<wbr>stop</code> method now waits for the whole server to stop (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-918">CARGO-918</a>), which results in more stable tests if containers are started and stopped one after the other.</li>
            <li>Different timeouts can be defined when starting and stopping a container (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-713">CARGO-713</a>)</li>
            <li>The JBoss remote deployer can now deploy to clusters (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-899">CARGO-899</a>)</li>
            <li>Tomcat contexts' <code>reloadable</code> parameter can now be configured (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-461">CARGO-461</a>)</li>
-           <li><code>TomcatLocalInstalledLocalDeployer.shouldCopyWars()</code> has been made configurable (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-963">CARGO-963</a>)</li>
+           <li><code>TomcatLocalInstalledLocalDeployer.<wbr>shouldCopyWars()</code> has been made configurable (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-963">CARGO-963</a>)</li>
            <li>Container pages now include a link to the downloadable container used for tests (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-313">CARGO-313</a>) as well as a link to the CI</li>
            <li>The Maven archetypes now use the failsafe plugin (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-883">CARGO-883</a>)</li>
           </ul> <p>And some fixes:</p>
@@ -333,11 +333,11 @@
              <li>This change in fact renders the creation of automated integration tests easier.</li>
             </ul></li>
            <li><code>ZipUrlInstaller</code> now has different download and extraction directories (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-907">CARGO-907</a>), which makes the <code>installDir</code> property obsolete: it is replaced by <code>downloadDir</code> and <code>extractDir</code>, the old property set them both but will probably removed in CARGO 1.2.0.</li>
-           <li><code>TomcatPropertySet.MANAGER_URL</code> has been deprecated in favor of <code>RemotePropertySet.URI</code> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-964">CARGO-964</a>).</li>
-           <li><code>TomcatLocalInstalledLocalDeployer.shouldCopyWars()</code> is set to <code>true</code> by default (used to be <code>false</code>) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-963">CARGO-963</a>)</li>
-           <li><code>Deployable.isExpanded()</code> and <code>Deployable.isExpanded*()</code> have been consolidated, obsoleting the <code>Deployable.isExpanded*()</code> methods (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-902">CARGO-902</a>).</li>
+           <li><code>TomcatPropertySet.<wbr>MANAGER_URL</code> has been deprecated in favor of <code>RemotePropertySet.<wbr>URI</code> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-964">CARGO-964</a>).</li>
+           <li><code>TomcatLocalInstalledLocalDeployer.<wbr>shouldCopyWars()</code> is set to <code>true</code> by default (used to be <code>false</code>) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-963">CARGO-963</a>)</li>
+           <li><code>Deployable.<wbr>isExpanded()</code> and <code>Deployable.<wbr>isExpanded*()</code> have been consolidated, obsoleting the <code>Deployable.<wbr>isExpanded*()</code> methods (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-902">CARGO-902</a>).</li>
            <li>All API methods for copying configuration and resource files that specify no encoding are deprecated (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-900">CARGO-900</a>, <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-903">CARGO-903</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-945">CARGO-945</a>)</li>
-           <li><code>AbstractCopyingInstalledLocalDeployer.setShouldDeployExpanded*s()</code> and <code>AbstractCopyingInstalledLocalDeployer.setShouldDeployExpanded()</code> have been consolidated, obsoleting the <code>AbstractCopyingInstalledLocalDeployer.setShouldDeployExpanded*()</code> methods.</li>
+           <li><code>AbstractCopyingInstalledLocalDeployer.<wbr>setShouldDeployExpanded*s()</code> and <code>AbstractCopyingInstalledLocalDeployer.<wbr>setShouldDeployExpanded()</code> have been consolidated, obsoleting the <code>AbstractCopyingInstalledLocalDeployer.<wbr>setShouldDeployExpanded*()</code> methods.</li>
           </ul> <p>For a full list, you can always check the release notes: <a href="http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10730&amp;version=16436">http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10730&amp;version=16436</a> -we have more than 80 changes!</p> <p>To use this new version:</p>
           <ul>
            <li>Users of the Java API and/or ANT tasks can download the CARGO uberjar and ANT tasks from the download page: <a href="http://cargo.codehaus.org/Downloads">http://cargo.codehaus.org/Downloads</a></li>
