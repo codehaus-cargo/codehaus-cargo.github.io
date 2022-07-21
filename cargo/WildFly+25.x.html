@@ -292,7 +292,7 @@
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>WildFly 25 comes with two versions: Jakarta EE 8 Full &amp; Web Distribution and the WildFly Preview EE 9 Distribution. Users of the WildFly Preview EE 9 Distribution should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.<wbr>*</code> to <code>jakarta.<wbr>*</code>. This will almost certainly require code changes to enable applications to migrate to EE 9 and later.</p>
+            <p>WildFly 25 comes with two versions: Jakarta EE 8 Full &amp; Web Distribution and the WildFly Preview EE 9 Distribution. Users of the WildFly Preview EE 9 Distribution should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.</code> to <code>jakarta.</code>. This will almost certainly require code changes to enable applications to migrate to EE 9 and later.</p>
            </div>
           </div><h3 id="WildFly25.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
@@ -307,9 +307,9 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Container+Instantiation.html">Container Instantiation</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.<wbr>createContainer("wildfly25x".<wbr>.<wbr>.<wbr>)</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId="wildfly25x".<wbr>.<wbr>.<wbr>/&gt;</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;wildfly25x&lt;/containerId&gt;</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.<wbr>createContainer<wbr>("wildfly25x"...)</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId=<wbr>"wildfly25x".../&gt;<wbr></code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;<wbr>wildfly25x<wbr>&lt;/containerId&gt;<wbr></code></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>

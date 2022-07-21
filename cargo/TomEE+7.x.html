@@ -301,9 +301,9 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><a href="Container+Instantiation.html">Container Instantiation</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.<wbr>createContainer("tomee7x".<wbr>.<wbr>.<wbr>)</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId="tomee7x".<wbr>.<wbr>.<wbr>/&gt;</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;tomee7x&lt;/containerId&gt;</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.<wbr>createContainer<wbr>("tomee7x"...)</code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId=<wbr>"tomee7x".../&gt;<wbr></code></p></td>
+              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;<wbr>tomee7x<wbr>&lt;/containerId&gt;<wbr></code></p></td>
               <td class="confluenceTd"><p><br></p></td>
              </tr>
              <tr>
@@ -962,7 +962,7 @@
            <div class="confluence-information-macro-body">
             <p>With TomEE, the Tomcat manager has multiple aspects to be careful about:</p>
             <ul>
-             <li>Your browser by default accesses the HTML-based manager whereas Codehaus Cargo needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.<wbr>URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a href="http://production27:8080/manager/text">http://production27:8080/manager/text</a></code></li>
+             <li>Your browser by default accesses the HTML-based manager whereas Codehaus Cargo needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.<wbr>URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a href="<wbr">"http://production27:8080/manager/text"&gt;http://production27:8080/manager/text</a></code></li>
              <li>The text-based manager requires to be accessed by a user with the <code>manager-script</code> role; and by default no user has that role. As a result, please make sure you modify your <code>tomcat-users.<wbr>xml</code> file to give that role to a user.<br>You can read more in the Tomcat documentation: <a href="http://tomcat.apache.org/tomcat-8.0-doc/manager-howto.html">http://tomcat.apache.org/tomcat-8.0-doc/manager-howto.html</a></li>
             </ul>
            </div>

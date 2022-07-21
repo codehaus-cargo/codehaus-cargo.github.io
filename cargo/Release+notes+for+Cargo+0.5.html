@@ -312,7 +312,7 @@
            </table>
           </div> <h3 id="ReleasenotesforCargo0.5-Sourcecodechanges">Source code changes</h3> <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.5-clirr"><span class="confluence-anchor-link" id="clirr"> </span></span><br> Changes detected by <a href="http://clirr.sourceforge.net">Clirr</a> between <code>cargo-0.<wbr>4.<wbr>jar</code> and <code>cargo-0.<wbr>5.<wbr>jar</code>:</p>
           <ul>
-           <li>[Core] <code>org.<wbr>codehaus.<wbr>cargo.<wbr>deployment.<wbr>*</code> package moved to <code>org.<wbr>codehaus.<wbr>cargo.<wbr>module</code>
+           <li>[Core] <code>org.<wbr>codehaus.<wbr>cargo.<wbr>deployment.</code> package moved to <code>org.<wbr>codehaus.<wbr>cargo.<wbr>module</code>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -412,8 +412,8 @@ INFO: 8000: org.codehaus.cargo.module.webapp.websphere.IbmWebBndXmiIo: Class org
              </div>
             </div></li>
            <li>[Core] Removed ability to add deployables to a Container. They must now either be added to a Configuration for static deployment or using a Deployer for dynamic deployments</li>
-           <li>[Core] Added a <code>StandaloneConfiguration</code> interface which defines ths <code>addDeployable()</code> method.</li>
-           <li>[Ant] Moved <code>&lt;war&gt;</code> and <code>&lt;ear&gt;</code> elements inside the <code>&lt;configuration&gt;</code> element 
+           <li>[Core] Added a <code>StandaloneConfiguration</code> interface which defines ths <code>addDeployable<wbr>()</code> method.</li>
+           <li>[Ant] Moved <code>&lt;war&gt;<wbr></code> and <code>&lt;ear&gt;<wbr></code> elements inside the <code>&lt;configuration&gt;<wbr></code> element 
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -729,7 +729,7 @@ INFO: 7003: org.codehaus.cargo.container.ContainerException: Method 'public void
 </pre>
              </div>
             </div></li>
-           <li>[Core] Added public APIs <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>Container.<wbr>getOutput()</code> and <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>Container.<wbr>isAppend()</code>
+           <li>[Core] Added public APIs <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>Container.<wbr>getOutput<wbr>()</code> and <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>Container.<wbr>isAppend<wbr>()</code>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">
@@ -783,7 +783,7 @@ INFO: 7011: org.codehaus.cargo.container.resin.AbstractResinStandaloneConfigurat
 </pre>
              </div>
             </div></li>
-           <li>[Core] Added <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>jetty.<wbr>Jetty4xEmbeddedContainer.<wbr>getServer()</code> API to allow users to further configure a Jetty server 
+           <li>[Core] Added <code>org.<wbr>codehaus.<wbr>cargo.<wbr>container.<wbr>jetty.<wbr>Jetty4xEmbeddedContainer.<wbr>getServer<wbr>()</code> API to allow users to further configure a Jetty server 
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">

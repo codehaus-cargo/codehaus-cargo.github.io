@@ -343,7 +343,7 @@
   </script>
           </center><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><p>Start by erasing your local Maven repository (<code>${user.<wbr>home}/.<wbr>m2/repository/</code>, unless you've reconfigured this in your <code>settings.<wbr>xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p><p>The typical Maven release procedure is to execute these commands:</p>
           <ol>
-           <li>A dry-run before doing the actual release to ensure there aren't any problems:<br><code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
+           <li>A dry-run before doing the actual release to ensure there aren't any problems:<br><code><strong>mvn clean release:prepare -DdryRun=<wbr>true</strong></code></li>
            <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process</li>
            <li><code><strong>mvn release:perform</strong></code>: deploys the tagged artifacts on the Sonatype Nexus staging repository
             <ul>

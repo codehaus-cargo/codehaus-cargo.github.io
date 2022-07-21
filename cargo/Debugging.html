@@ -356,13 +356,13 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="Debugging-Redirectingcontaineroutputtoafile">Redirecting container output to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI">Example using the Java API</h4><p>The <code>Container.<wbr>setOutput(File)</code> API allows you to redirect the container console (<code>stdout</code>) to a file. This is the first file you should check in case of problem.</p><p>Cargo is able to configure containers to generate various levels logs. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/LoggingLevel.html"><code>o.<wbr>c.<wbr>c.<wbr>container.<wbr>property.<wbr>LoggingLevel</code></a>: <code>LoggingLevel.<wbr>LOW</code>, <code>LoggingLevel.<wbr>MEDIUM</code> and <code>LoggingLevel.<wbr>HIGH</code> (<code>LoggingLevel.<wbr>MEDIUM</code> is the default value). They represent the quantity of information you wish to have in the generated log file. You can tune container logging by using the following API:</p>
+          </center><h3 id="Debugging-Redirectingcontaineroutputtoafile">Redirecting container output to a file</h3><h4 id="Debugging-ExampleusingtheJavaAPI">Example using the Java API</h4><p>The <code>Container.<wbr>setOutput<wbr>(File)</code> API allows you to redirect the container console (<code>stdout</code>) to a file. This is the first file you should check in case of problem.</p><p>Cargo is able to configure containers to generate various levels logs. There are 3 levels defined in <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/LoggingLevel.html"><code>o.<wbr>c.<wbr>c.<wbr>container.<wbr>property.<wbr>LoggingLevel</code></a>: <code>LoggingLevel.<wbr>LOW</code>, <code>LoggingLevel.<wbr>MEDIUM</code> and <code>LoggingLevel.<wbr>HIGH</code> (<code>LoggingLevel.<wbr>MEDIUM</code> is the default value). They represent the quantity of information you wish to have in the generated log file. You can tune container logging by using the following API:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">configuration.setProperty(GeneralPropertySet.LOGGING, LoggingLevel.HIGH.getLevel());
 </pre>
            </div>
-          </div><p>The generated log files will then be found in the working directory you have specified on the container (through the <code>container.<wbr>setWorkingDir()</code> call).</p><p>Starting Tomcat 4.x specifying an output console log file:</p>
+          </div><p>The generated log files will then be found in the working directory you have specified on the container (through the <code>container.<wbr>setWorkingDir<wbr>()</code> call).</p><p>Starting Tomcat 4.x specifying an output console log file:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">LocalContainer container = new Tomcat4xLocalContainer(
@@ -374,7 +374,7 @@ container.setOutput("target/output.log");
 container.start();
 </pre>
            </div>
-          </div><p>Use the <code>container.<wbr>setAppend(true|false)</code> method to decide whether the log file is recreated or whether it is appended to, keeping the previous execution logs (by default, the file is recreated at every container start or stop).</p><h4 id="Debugging-ExampleusingtheAntAPI">Example using the Ant API</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
+          </div><p>Use the <code>container.<wbr>setAppend<wbr>(true|false)</code> method to decide whether the log file is recreated or whether it is appended to, keeping the previous execution logs (by default, the file is recreated at every container start or stop).</p><h4 id="Debugging-ExampleusingtheAntAPI">Example using the Ant API</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat4x" home="c:/apps/jakarta-tomcat-4.1.30" 
@@ -386,7 +386,7 @@ container.start();
   &lt;/configuration&gt;
 &lt;/cargo&gt;</pre>
            </div>
-          </div><p>Use the <code>append="true|false"</code> attribute for controlling the log file creation behavior.</p><h4 id="Debugging-ExampleusingtheMaven3plugin">Example using the Maven 3 plugin</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
+          </div><p>Use the <code>append=<wbr>"true|false"</code> attribute for controlling the log file creation behavior.</p><h4 id="Debugging-ExampleusingtheMaven3plugin">Example using the Maven 3 plugin</h4><p>Starting Tomcat 4.x specifying an output console log file with the highest possible level of logs:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;container&gt;
@@ -401,7 +401,7 @@ container.start();
   &lt;/properties&gt;
 &lt;/configuration&gt;&nbsp;</pre>
            </div>
-          </div><p>Use the <code>append="true|false"</code> attribute for controlling the log file creation behavior.</p><h3 id="Debugging-DebuggingCodehausCargoitself">Debugging Codehaus Cargo itself</h3><p>To enable the Java debugger on ANT, export the&nbsp;<code>ANT_OPTS</code> system property using the parameters specified above. For example:</p>
+          </div><p>Use the <code>append=<wbr>"true|false"</code> attribute for controlling the log file creation behavior.</p><h3 id="Debugging-DebuggingCodehausCargoitself">Debugging Codehaus Cargo itself</h3><p>To enable the Java debugger on ANT, export the&nbsp;<code>ANT_OPTS</code> system property using the parameters specified above. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">export ANT_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000"</pre>

@@ -306,7 +306,7 @@
           <ul class="childpages-macro conf-macro output-block">
            <li><a href="Local+Deployer.html">Local Deployer</a> — <span class="smalltext">Performs a hot deployment of a Deployable on a locally installed container</span></li>
            <li><a href="Remote+Deployer.html">Remote Deployer</a> — <span class="smalltext">Performs a hot deployment of a Deployable on a container running on a remote machine</span></li>
-          </ul><p></p><h3 id="Deployer-ExampleusingtheJavaAPI">Example using the Java API</h3><p>To instantiate a <code>Deployer</code> you need to know its class name. A <code>Deployer</code> is specific to a container (you can find the class names on the <a href="Containers.html">container</a> page listing all containers).</p><p>The deployment is done using one of the <code>Deployer.<wbr>deploy(.<wbr>.<wbr>.<wbr>)</code> APIs. Some <code>deploy(.<wbr>.<wbr>.<wbr>)</code> signatures accept a <code>DeployableMonitor</code> which is used to wait till the container has not finished deploying. Cargo currently offers a <code>URLDeployableMonitor</code> which waits by polling a provided URL (see below in the example). Whent the URL becomes available the monitor considers that the <code>Deployable</code> is fully deployed. In the future, Cargo will provide other <code>DeployableMonitor</code> such as a <code>Jsr88DeployableMonitor</code>.</p><h4 id="Deployer-ExamplewithoutusingaDeployableMonitor">Example without using a DeployableMonitor</h4><p>Hot-deploying a WAR on Resin 3.0.9 without waiting for the deployment to finish:</p>
+          </ul><p></p><h3 id="Deployer-ExampleusingtheJavaAPI">Example using the Java API</h3><p>To instantiate a <code>Deployer</code> you need to know its class name. A <code>Deployer</code> is specific to a container (you can find the class names on the <a href="Containers.html">container</a> page listing all containers).</p><p>The deployment is done using one of the <code>Deployer.<wbr>deploy<wbr>(...)</code> APIs. Some <code>deploy<wbr>(...)</code> signatures accept a <code>DeployableMonitor</code> which is used to wait till the container has not finished deploying. Cargo currently offers a <code>URLDeployableMonitor</code> which waits by polling a provided URL (see below in the example). Whent the URL becomes available the monitor considers that the <code>Deployable</code> is fully deployed. In the future, Cargo will provide other <code>DeployableMonitor</code> such as a <code>Jsr88DeployableMonitor</code>.</p><h4 id="Deployer-ExamplewithoutusingaDeployableMonitor">Example without using a DeployableMonitor</h4><p>Hot-deploying a WAR on Resin 3.0.9 without waiting for the deployment to finish:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
@@ -323,7 +323,7 @@ Deployer deployer = new ResinDeployer(container);
 deployer.deploy(war);
 </pre>
            </div>
-          </div><p>Please note that the <code>Deployer.<wbr>deploy()</code> method call does not wait for the <code>Deployable</code> to be fully deployed before returning.</p><h4 id="Deployer-ExampleusingaURLDeployableMonitor">Example using a URLDeployableMonitor</h4><p>Hot-deploying an WAR on Resin 3.0.9 and waiting for the deployment to finish:</p>
+          </div><p>Please note that the <code>Deployer.<wbr>deploy<wbr>()</code> method call does not wait for the <code>Deployable</code> to be fully deployed before returning.</p><h4 id="Deployer-ExampleusingaURLDeployableMonitor">Example using a URLDeployableMonitor</h4><p>Hot-deploying an WAR on Resin 3.0.9 and waiting for the deployment to finish:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
@@ -340,7 +340,7 @@ Deployer deployer = new ResinDeployer(container);
 deployer.deploy(war, new URLDeployableMonitor("http://server:port/some/url"));
 </pre>
            </div>
-          </div><p>The <code><a href="http://serverport">http://server:port/some/url</a></code> must point to a resource that is serviced by the <code>Deployable</code> being deployed.</p><h3 id="Deployer-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Starting from CARGO version 1.1.0, the CARGO ANT tasks gained support for remote deployers. Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p>
+          </div><p>The <code><a href="<wbr">"http://serverport"&gt;http://server:port/some/url</a></code> must point to a resource that is serviced by the <code>Deployable</code> being deployed.</p><h3 id="Deployer-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Starting from CARGO version 1.1.0, the CARGO ANT tasks gained support for remote deployers. Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;taskdef resource="cargo.tasks"&gt;
@@ -363,7 +363,7 @@ deployer.deploy(war, new URLDeployableMonitor("http://server:port/some/url"));
 &lt;/cargo&gt;
 </pre>
            </div>
-          </div><p>For more details, please check the example in the <a href="Remote+Container.html">Remote Container</a> section for the ANT tasks The. ANT tasks support the deployer actions <code>deploy</code>, <code>undeploy</code> and <code>redeploy</code>.</p><h3 id="Deployer-Maven3plugin">Maven 3 plugin</h3><p>Please see the <a href="Deploying+to+a+running+container.html">Deploying to a running container</a> for a concrete example and the <a href="Maven+3+Plugin+Reference+Guide.html#Maven3PluginReferenceGuide-deployer">Maven 3 Plugin Reference Guide's <code>&lt;deployer&gt;</code> section</a> for full documentation.</p></td>
+          </div><p>For more details, please check the example in the <a href="Remote+Container.html">Remote Container</a> section for the ANT tasks The. ANT tasks support the deployer actions <code>deploy</code>, <code>undeploy</code> and <code>redeploy</code>.</p><h3 id="Deployer-Maven3plugin">Maven 3 plugin</h3><p>Please see the <a href="Deploying+to+a+running+container.html">Deploying to a running container</a> for a concrete example and the <a href="Maven+3+Plugin+Reference+Guide.html#Maven3PluginReferenceGuide-deployer">Maven 3 Plugin Reference Guide's <code>&lt;deployer&gt;<wbr></code> section</a> for full documentation.</p></td>
         </tr>
        </tbody>
       </table></td>
