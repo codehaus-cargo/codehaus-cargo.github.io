@@ -344,7 +344,7 @@ container.setHome(installer.getHome());
   &lt;/plugin&gt;
 </pre>
            </div>
-          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Installer-installer_with_maven2_dependencies"><span class="confluence-anchor-link" id="installer_with_maven2_dependencies"> </span></span></p><h3 id="Installer-UsingMaven-baseddistributions">Using Maven-based distributions</h3><p>New versions of most application servers have their distribution packages built by Maven 2 or Maven 3, hence distribute these as ZIP or TAR.GZ files on a Maven repository. It is also rather easy to upload servers' packages to an internal (for example, enterprise) Maven repository. In this case, CARGO lets you directly use such artifacts using an <code>ArtifactInstaller</code>. Here is the example for Jetty 7:</p>
+          </div><p><span class="confluence-anchor-link conf-macro output-inline" id="Installer-installer_with_maven2_dependencies"><span class="confluence-anchor-link" id="installer_with_maven2_dependencies"> </span></span></p><h3 id="Installer-UsingMaven-baseddistributions">Using Maven-based distributions</h3><p>New versions of most application servers have their distribution packages built using Maven, hence distribute these as ZIP or TAR.GZ files on a Maven repository. It is also rather easy to upload servers' packages to an internal (for example, enterprise) Maven repository. In this case, CARGO lets you directly use such artifacts using an <code>ArtifactInstaller</code>. Here is the example for Jetty 7:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">  &lt;properties&gt;
