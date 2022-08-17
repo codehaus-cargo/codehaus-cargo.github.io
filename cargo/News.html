@@ -291,18 +291,19 @@
          <td class="rightColumn"><h2 id="News-RSS">RSS</h2><p><br class="atl-forced-newline">An <a href="https://codehaus-cargo.atlassian.net/wiki/spaces/createrssfeed.action?types=blogpost&amp;spaces=CARGO&amp;maxResults=50&amp;timeSpan=300&amp;title=Codehaus+Cargo+-+Blog+posts">RSS</a> feed is available.</p><h2 id="News-News">News</h2><p><br></p><p></p>
           <div class="conf-macro output-block">
            <div class="blog-post-listing">
-            <div class="logo-heading-block"><span class="blogHeading"> <a class="blogHeading" href="Codehaus+Cargo+1.10.0+is+here+featuring+API+and+dependency+modernisations.html">Codehaus Cargo 1.10.0 is here, featuring API and dependency modernisations</a>
+            <div class="logo-heading-block"><span class="blogHeading"> <a class="blogHeading" href="Codehaus+Cargo+1.10.1+is+here+featuring+API+and+dependency+modernisations.html">Codehaus Cargo 1.10.1 is here, featuring API and dependency modernisations</a>
               <div class="page-metadata not-personal"><a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Aug 16, 2022
               </div> </span>
             </div>
             <div class="wiki-content">
              <p>Dear Codehaus Cargo enthusiasts</p>
-             <p>We are glad to announce the immediate availability of Codehaus Cargo 1.10.0!</p>
-             <p>The change to a 1.10.x branch indeed comes with some updates, namely the removal of Apache Ant as a core dependency. This has multiple implications:</p>
+             <p>We are glad to announce the immediate availability of Codehaus Cargo 1.10.1!</p>
+             <p>The change to a 1.10.x branch indeed comes with some updates, namely the removal of Apache Ant as a core dependency, and upgrade to JDOM 2.x (as JDOM 1.x is now 10 years old!). This has multiple implications:</p>
              <ul>
+              <li><p>Our <a href="https://codehaus-cargo.github.io/cargo/Installer.html">Installer</a>s now support newer formats, such as 7Z, while the JVM controller gets new features under the hood (such as forcibly killing stalled JVMs).</p></li>
               <li><p>The feature allowing SSH-based remote Java container executions is now gone, any users would need to switch to <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> instead.</p></li>
               <li><p>For the ones using Codehaus Cargo’s containers and other capabilities via its <a href="https://codehaus-cargo.github.io/cargo/Maven+3+Plugin.html">Maven 3 plugin</a>, there are no changes - All changes under the hood, as well as the dependency updates, are handled by Maven itself.</p></li>
-              <li><p>For the ones using Codehaus Cargo’s containers and other capabilities, in particular for the ones either making use of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a>s directly or the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">Ant tasks</a>: the Apache Ant libraries are not a dependency anymore, and Codehaus Cargo 1.10.x onwards will rely on <a href="https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar">commons compress 1.21</a> or greater.</p></li>
+              <li><p>For the ones using Codehaus Cargo’s containers and other capabilities, in particular for the ones either making use of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a>s directly or the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">Ant tasks</a>: the Apache Ant libraries are not a dependency anymore, and Codehaus Cargo 1.10.x onwards will rely on <a href="https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar">commons compress 1.21</a> or greater as well as <a href="https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar">JDOM 2.0.6.1</a> or greater.</p></li>
               <li><p>For the ones who developers containers on top of Codehaus Cargo, there are API changes as the Ant file filters are not used anymore, and we instead have replacement maps. You hence will have to perform small adaptations to your own code.</p></li>
              </ul>
              <p>We also gave some new features, namely support for new containers (though both are in milestone and alpha stages, respectively):</p>
@@ -312,10 +313,10 @@
              </ul>
              <p>To upgrade to this latest version:</p>
              <ul>
-              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven+3+Plugin.html">Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.10.0</strong></p></li>
-              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.0/cargo-core-uberjar-1.10.0.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.0/cargo-core-uberjar-1.10.0.jar</a></p></li>
-              <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">Ant tasks</a> can download the new Ant tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.0/cargo-ant-1.10.0.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.0/cargo-ant-1.10.0.jar</a></p></li>
-              <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.0/cargo-daemon-webapp-1.10.0.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.0/cargo-daemon-webapp-1.10.0.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
+              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven+3+Plugin.html">Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.10.1</strong></p></li>
+              <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.1/cargo-core-uberjar-1.10.1.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.1/cargo-core-uberjar-1.10.1.jar</a></p></li>
+              <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">Ant tasks</a> can download the new Ant tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.1/cargo-ant-1.10.1.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.1/cargo-ant-1.10.1.jar</a></p></li>
+              <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.1/cargo-daemon-webapp-1.10.1.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.1/cargo-daemon-webapp-1.10.1.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
              </ul>
              <p>Enjoy!</p>
             </div>
