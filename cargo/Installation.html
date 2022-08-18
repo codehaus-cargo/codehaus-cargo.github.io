@@ -291,21 +291,70 @@
          <td class="rightColumn"><h3 id="Installation-JavaAPI">Java API</h3><p>Cargo offers primarily a Java API. It is meant to be embedded in your application. You'll need Java SE version 8 or greater.</p><p>You have two choices to pick from the <a href="Downloads.html">Downloads</a> page:</p>
           <ul>
            <li>the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars)</li>
-           <li><strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars</li>
-          </ul><p>Cargo's base dependencies are as follows:</p>
+           <li><strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars and their core dependencies (such as the various J2EE, Java EE and Jakarta EE specifications, JNI, etc.)</li>
+          </ul><p>Cargo's base dependencies (not packed in the uberjar) are as follows:</p>
           <ul>
-           <li><a href="https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar">Commons compress 1.21</a> or greater</li>
            <li><a href="https://repo.maven.apache.org/maven2/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar">Commons discovery 0.5</a> or greater</li>
            <li><a href="https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar">Commons logging 1.2</a> or greater</li>
-          </ul><p>In addition, some specific containers (for example, JRun or WildFly / WildFly Swarm), some deployables (for example, Tomcat WARs) and some <a href="Installer.html">installers</a> require the following:</p>
-          <ul>
-           <li><a href="https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar">JDOM 2.0.6.1</a> or greater</li>
-           <li><a href="https://repo.maven.apache.org/maven2/jaxen/jaxen/1.2.0/jaxen-1.1.6.jar">jaxen 1.2.0</a> or greater</li>
-           <li><a href="https://repo.maven.apache.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar">JSON.simple 1.1.1</a> or greater</li>
-           <li><a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.3/jackson-core-2.13.3.jar">Jackson core 2.13.3</a> or greater,&nbsp;<a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.13.3/jackson-dataformat-yaml-2.13.3.jar">Jackson YAML dataformat 2.13.3</a> or greater and <a href="https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.30/snakeyaml-1.30.jar">SnakeYAML 1.30</a> or greater</li>
-           <li><a href="https://repo.maven.apache.org/maven2/org/tukaani/xz/1.9/xz-1.9.jar">Tukaani XZ 1.9</a> or greater (for 7Z support)</li>
-           <li>The <a href="Downloads.html#Downloads-licensedDTDs">convenience JAR with DTDs that are used by some Cargo components which have licenses incompatible with the rest of Cargo</a>, in case you want to use the Java API offline with some containers / deployables</li>
-          </ul><h3 id="Installation-ApacheAnt">Apache Ant</h3><p>If you want use the Cargo Ant tasks, add the following JARs to Ant's classpath:</p>
+          </ul><p>In addition, some specific containers and features require the following:</p>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <colgroup>
+             <col>
+             <col>
+            </colgroup>
+            <tbody>
+             <tr>
+              <th class="confluenceTh">Container or feature</th>
+              <th class="confluenceTh">Additional dependencies</th>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">Avoiding XML parser issues</td>
+              <td colspan="1" class="confluenceTd"><p><a href="Downloads.html#Downloads-licensedDTDs">Convenience JAR with DTDs that are used by some Cargo components which have licenses incompatible with the rest of Cargo</a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd"><a href="Installer.html">Installer</a>s</td>
+              <td class="confluenceTd">
+               <ul>
+                <li><a href="https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar">Commons compress 1.21</a> or greater</li>
+                <li><a href="https://repo.maven.apache.org/maven2/org/tukaani/xz/1.9/xz-1.9.jar">Tukaani XZ 1.9</a> or greater (for 7Z support)</li>
+               </ul></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">JOnAS standalone containers</td>
+              <td colspan="1" class="confluenceTd"><a href="https://ant.apache.org/bindownload.cgi">Apache Ant</a> (including the Ant Launcher), the version <em>seems</em> not to matter too much</td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <ul>
+                <li>Parsing of container-specific deployables (JBoss, Orion, Tomcat, etc.)</li>
+                <li><a href="Merging+WAR+files.html">Merging WAR files</a></li>
+               </ul></td>
+              <td class="confluenceTd">
+               <ul>
+                <li><a href="https://repo.maven.apache.org/maven2/jaxen/jaxen/1.2.0/jaxen-1.1.6.jar">jaxen 1.2.0</a> or greater</li>
+                <li><a href="https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar">JDOM 2.0.6.1</a> or greater</li>
+               </ul></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">WildFly remote deployer, <a href="Cargo+Daemon.html">Cargo Daemon</a> Java client</td>
+              <td class="confluenceTd">
+               <ul>
+                <li><a href="https://repo.maven.apache.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar">JSON.simple 1.1.1</a> or greater</li>
+               </ul></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">WildFly Swarm</td>
+              <td colspan="1" class="confluenceTd">
+               <ul>
+                <li><a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.3/jackson-core-2.13.3.jar">Jackson core 2.13.3</a> or greater</li>
+                <li><a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.13.3/jackson-dataformat-yaml-2.13.3.jar">Jackson YAML dataformat 2.13.3</a> or greater</li>
+                <li><a href="https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.30/snakeyaml-1.30.jar">SnakeYAML 1.30</a> or greater</li>
+               </ul></td>
+             </tr>
+            </tbody>
+           </table>
+          </div><h3 id="Installation-ApacheAnt">Apache Ant</h3><p>If you want use the Cargo Ant tasks, add the following JARs to Ant's classpath:</p>
           <ul>
            <li>The same jars as for the Java API (i.e., either the API JARs + the container(s) <strong>or</strong> the uberjar)</li>
            <li>The <code>cargo-ant</code> JAR, containing the <code>&lt;taskdef&gt;<wbr></code> definition (see the <a href="Ant+support.html">Ant support</a> page)</li>
