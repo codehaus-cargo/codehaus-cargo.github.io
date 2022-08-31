@@ -79,9 +79,14 @@ public class WebsiteGenerator implements Runnable
         Collections.synchronizedMap(new HashMap<URL, Exception>());
 
     /**
-     * Downloaded amount in bytes, to calculate speed.
+     * Downloaded amount in bytes (regularly reset), to calculate speed.
      */
-    private static int speed = 0;
+    private static long speed = 0;
+
+    /**
+     * Downloaded amount in bytes.
+     */
+    private static long size = 0;
 
     /**
      * Whether the download attachments.
@@ -264,7 +269,7 @@ public class WebsiteGenerator implements Runnable
             throw new Exception("WARNING: Only completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount()
                 + " tasks out of " + (pages.length() + blogposts.length() + attachments.size()));
         }
-        System.out.println("All tasks complete");
+        System.out.println("All tasks complete, total downloaded: " + (WebsiteGenerator.size / 1024 / 1024) + " MB");
         for (File page : WebsiteGenerator.pages)
         {
             System.out.println("  - Wrote file " + page.getAbsolutePath());
@@ -478,6 +483,7 @@ public class WebsiteGenerator implements Runnable
                         {
                             fos.write(buffer, 0, bytesRead);
                             WebsiteGenerator.speed += bytesRead;
+                            WebsiteGenerator.size += bytesRead;
                         }
                     }
                     if (url.getPath().contains("/wiki/rest/api/content/"))
