@@ -410,45 +410,37 @@
     &lt;merge&gt;
       &lt;type&gt;web.xml&lt;/type&gt;
       &lt;parameters&gt;
-        &lt;default&gt;
-          &lt;tag name="display-name"&gt;
-            &lt;strategy name="Overwrite"/&gt;
-          &lt;/tag&gt;
-          &lt;tag name="welcome-file-list"&gt;
-            &lt;strategy name="NodeMerge"&gt;
-              &lt;welcome-file-list&gt;
-                &lt;welcome-file&gt;$left:welcome-file&lt;/welcome-file&gt;
-                &lt;welcome-file&gt;$right:welcome-file&lt;/welcome-file&gt;
-              &lt;/welcome-file-list&gt;
-            &lt;/strategy&gt;
-          &lt;/tag&gt;
-          &lt;tag name="context-param"&gt;
-            &lt;strategy name="ChooseByName"&gt;
-              &lt;default&gt;
-                &lt;strategy name="Preserve"/&gt;
-              &lt;/default&gt;
-              &lt;choice name="contextConfigLocation"&gt;
-                &lt;strategy name="NodeMerge"&gt;
-                  &lt;context-param&gt;
-                    &lt;param-name&gt;$left:param-name&lt;/param-name&gt;
-                    &lt;param-value&gt;$left:param-value,$right:param-value&lt;/param-value&gt;
-                  &lt;/context-param&gt;
-                &lt;/strategy&gt;
-              &lt;/choice&gt;
-            &lt;/strategy&gt;
-          &lt;/tag&gt;
-        &lt;/default&gt;
+        &lt;tag name="display-name"&gt;
+          &lt;strategy name="Overwrite"/&gt;
+        &lt;/tag&gt;
+        &lt;tag name="welcome-file-list"&gt;
+          &lt;strategy name="NodeMerge"&gt;
+            &lt;welcome-file-list&gt;
+              &lt;welcome-file&gt;$left:welcome-file&lt;/welcome-file&gt;
+              &lt;welcome-file&gt;$right:welcome-file&lt;/welcome-file&gt;
+            &lt;/welcome-file-list&gt;
+          &lt;/strategy&gt;
+        &lt;/tag&gt;
+        &lt;tag name="context-param"&gt;
+          &lt;strategy name="ChooseByName"&gt;
+            &lt;default&gt;
+              &lt;strategy name="Preserve"/&gt;
+            &lt;/default&gt;
+            &lt;choice name="contextConfigLocation"&gt;
+              &lt;strategy name="NodeMerge"&gt;
+                &lt;context-param&gt;
+                  &lt;param-name&gt;$left:param-name&lt;/param-name&gt;
+                  &lt;param-value&gt;$left:param-value,$right:param-value&lt;/param-value&gt;
+                &lt;/context-param&gt;
+              &lt;/strategy&gt;
+            &lt;/choice&gt;
+          &lt;/strategy&gt;
+        &lt;/tag&gt;
       &lt;/parameters&gt;
     &lt;/merge&gt;
   &lt;/merges&gt;
 &lt;/uberwar&gt;
 </pre>
-           </div>
-          </div>
-          <div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block">
-           <span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>Note the <code>&lt;default&gt;<wbr></code> element that contains merge strategies by tag and is the only child of <code>&lt;parameters&gt;<wbr></code> element.</p>
            </div>
           </div><p>For each tag in the <code>web.<wbr>xml</code>, the descriptor is defining how you want the merge to happen (the 'strategy'). There are 4 out-of-the-box strategies, and you can provide your own by passing the name of a class that implements <code>org.<wbr>codehaus.<wbr>cargo.<wbr>module.<wbr>merge.<wbr>strategy.<wbr>MergeStrategy</code>. These strategies define what should happen if an entry is just in one file, or what to do if there is a conflict. When merging, each successive file is merged in sequence - so if there are 3 merges to do, the first two files will be merged together, then the result will be merged with the last file. In each merge operation, the first of the two files is the 'left hand side', and the second of the two files is the 'right hand side' (think of source code merge utilities).</p><p>The defaults strategies are:</p><h5 id="MergingWARfiles-Preserve">Preserve</h5><p>Preserve means "if there is a conflict, then preserve the original".</p><h5 id="MergingWARfiles-Overwrite">Overwrite</h5><p>Overwrite means "if there is a conflict, then use the values in the right-hand side". This is the <span style="text-decoration: underline;">default</span> strategy if nothing else is specified.</p><h5 id="MergingWARfiles-NodeMerge">NodeMerge</h5><p>NodeMerge means "I want to do some merge resolution". The configuration of this strategy is the XML that the conflicting node will be replaced with. Anything starting with <code>$left:</code> will be translated as an XPath expression, executed against the left-hand descriptor. The effect of <code>$right:</code> is the same for the right-hand side.</p><h5 id="MergingWARfiles-ChooseByName">ChooseByName</h5><p>ChooseByName means "most of the time, I want to use one strategy, but for a particular named item, I want to do something else". The configuration of this strategy must contain single <code>&lt;default&gt;<wbr></code> sub-element (specifying default merge strategy) and multiple <code>&lt;choice&gt;<wbr></code> sub-elements (specifying merge strategy for specific tag instances).</p><p>In the example above:</p>
           <ul>
