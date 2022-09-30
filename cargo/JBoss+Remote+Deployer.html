@@ -296,10 +296,10 @@
           </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss4x"><span class="confluence-anchor-link" id="jboss4x"> </span></span></p><h3 id="JBossRemoteDeployer-JBoss4.0.xand4.2.x">JBoss 4.0.x and 4.2.x</h3><p>In JBoss 4.x, the JMX-based remote deployer can accept URLs that point to another machine. For example:</p>
           <blockquote>
            <p><code><a href="http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war">http://10.156.216.147:8080/jmx-console/HtmlAdaptor?action=invokeOpByName&amp;name=jboss.system:service%3DMainDeployer&amp;methodName=deploy&amp;argType=java.net.URL&amp;arg0=http%3A%2F%2F10.156.220.90%3A18080%2Fparuemas-1.0-SNAPSHOT.war</a></code></p>
-          </blockquote><p>In this case, our JBoss server on <code>10.<wbr>156.<wbr>216.<wbr>127</code> will connect to <code>10.<wbr>156.<wbr>220.<wbr>90</code> via HTTP and download the <code>paruemas-1.<wbr>0-SNAPSHOT.<wbr>war</code> file. Once the file is downloaded, JBoss will automatically deploy it.</p><p>The Codehaus Cargo JBoss container uses this principle to expose your Java EE application to JBoss using an HTTP server that is started on the machine where&nbsp;Codehaus Cargo is currently running. That HTTP server is controlled using two parameters:</p>
+          </blockquote><p>In this case, our JBoss server on <code>10.156.216.127</code> will connect to <code>10.156.220.90</code> via HTTP and download the <code>paruemas-1.0-SNAPSHOT.war</code> file. Once the file is downloaded, JBoss will automatically deploy it.</p><p>The Codehaus Cargo JBoss container uses this principle to expose your Java EE application to JBoss using an HTTP server that is started on the machine where&nbsp;Codehaus Cargo is currently running. That HTTP server is controlled using two parameters:</p>
           <ul>
-           <li><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jboss/JBossPropertySet.html#REMOTEDEPLOY_HOSTNAME"><code><strong>JBossPropertySet.REMOTEDEPLOY_HOSTNAME</strong></code></a>&nbsp;(i.e., <code>cargo.<wbr>jboss.<wbr>remotedeploy.<wbr>hostname</code>): sets the hostname that the JBoss server will attempt to connect to. By default, the&nbsp;Codehaus Cargo JBoss container will automatically resolve the current machine's network name or IP address and fill this accordingly.</li>
-           <li><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jboss/JBossPropertySet.html#REMOTEDEPLOY_PORT"><code><strong>JBossPropertySet.REMOTEDEPLOY_PORT</strong></code></a> (i.e., <code>cargo.<wbr>jboss.<wbr>remotedeploy.<wbr>port</code>): sets the port number on which the HTTP server will be started on the machine running Codehaus Cargo. By default, that one is set to <em>1 + the HTTP port for JBoss</em>. For example, if JBoss is running on HTTP port <code>8080</code>, then the default for <code>JBossPropertySet.<wbr>REMOTEDEPLOY_PORT</code> will be <code>18080</code>.</li>
+           <li><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jboss/JBossPropertySet.html#REMOTEDEPLOY_HOSTNAME"><code><strong>JBossPropertySet.REMOTEDEPLOY_HOSTNAME</strong></code></a>&nbsp;(i.e., <code>cargo.jboss.remotedeploy.hostname</code>): sets the hostname that the JBoss server will attempt to connect to. By default, the&nbsp;Codehaus Cargo JBoss container will automatically resolve the current machine's network name or IP address and fill this accordingly.</li>
+           <li><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jboss/JBossPropertySet.html#REMOTEDEPLOY_PORT"><code><strong>JBossPropertySet.REMOTEDEPLOY_PORT</strong></code></a> (i.e., <code>cargo.jboss.remotedeploy.port</code>): sets the port number on which the HTTP server will be started on the machine running Codehaus Cargo. By default, that one is set to <em>1 + the HTTP port for JBoss</em>. For example, if JBoss is running on HTTP port <code>8080</code>, then the default for <code>JBossPropertySet.REMOTEDEPLOY_PORT</code> will be <code>18080</code>.</li>
           </ul><p>The obvious limitation you should be aware of is that JBoss needs to have direct access to the machine running Codehaus Cargo.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="JBossRemoteDeployer-jboss5x6x"><span class="confluence-anchor-link" id="jboss5x6x"> </span></span></p><h3 id="JBossRemoteDeployer-JBoss5.0.x,5.1.x,6.0.xand6.1.x">JBoss 5.0.x, 5.1.x, 6.0.x and 6.1.x</h3><p>Starting from JBoss 5.x, JBoss has a Deployment Manager that can be used for deploying things on the JBoss server. If you really want to know how it works under the hood, you can read about this feature on the <a href="http://community.jboss.org/wiki/ProfileServiceDeploymentManagerin5x">JBoss Website</a>. If you only want to remotely deploy applications using&nbsp;Codehaus Cargo to your JBoss server, you can of course ignore that document.</p><p>To connect to the JBoss Deployment Manager,&nbsp;Codehaus Cargo uses JBoss' JMX RMI port; and that's what makes things get a bit complicated. For the connection to succeed, the following JARs need to be in the container classpath or in the current Java Thread's context classloader:</p>
           <ul>
            <li>JBoss deployment manager JARs</li>
@@ -429,8 +429,8 @@ Thread.currentThread().setContextClassLoader(classLoader);
            </div>
           </div><p>You can also use the&nbsp;Codehaus Cargo JBoss remote deployer to remotely deploy to JBoss farms versions 5.x and newer. To do so, use these two properties:</p>
           <ul>
-           <li><code>cargo.<wbr>jboss.<wbr>clustered</code>: if <code>true</code>, deployment is done in the <code>farm</code> directory</li>
-           <li><code>cargo.<wbr>jboss.<wbr>configuration</code>: JBoss profile name, default name is <code>default</code></li>
+           <li><code>cargo.jboss.clustered</code>: if <code>true</code>, deployment is done in the <code>farm</code> directory</li>
+           <li><code>cargo.jboss.configuration</code>: JBoss profile name, default name is <code>default</code></li>
           </ul>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <p class="title">JBoss socket connection bug - java.lang.IllegalArgumentException: port out of range:-1</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
@@ -466,7 +466,7 @@ Caused by: java.lang.IllegalArgumentException: port out of range:-1
              </div>
             </div>
             <p>That is a known bug, documented in <a href="http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS">http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS</a> and the solution presented on that document is to use a cron job as the root user to fix the file when it gets broken.</p>
-            <p>First, create the correct version of <code>/etc/hosts</code> and save it somewhere, such as <code>/etc/hosts.<wbr>fixed</code>, and populate it with the following contents (replace <code>myhost</code> with the hostname of your computer, as reported by the <code>hostname</code> command, and the correct IP assignment, as reported by <code>ipconfig</code>):</p>
+            <p>First, create the correct version of <code>/etc/hosts</code> and save it somewhere, such as <code>/etc/hosts.fixed</code>, and populate it with the following contents (replace <code>myhost</code> with the hostname of your computer, as reported by the <code>hostname</code> command, and the correct IP assignment, as reported by <code>ipconfig</code>):</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
               <b>/etc/hosts.fixed</b>
@@ -489,7 +489,7 @@ ff02::3 ip6-allhosts
              </div>
             </div>
             <p><strong>Important</strong>: If possible, enter your hostname with both the "basic" hostname and the fully-qualified domain name.</p>
-            <p>Next, create a script named <code>/etc/restore-etc-hosts.<wbr>sh</code> to replace the <code>/etc/hosts</code> file if Network Manager breaks it:</p>
+            <p>Next, create a script named <code>/etc/restore-etc-hosts.sh</code> to replace the <code>/etc/hosts</code> file if Network Manager breaks it:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
               <b>/etc/restore-etc-hosts.sh</b>
@@ -525,8 +525,8 @@ fi
           </center><h3 id="JBossRemoteDeployer-JBoss7.0.xonwards/WildFly8.xonwards">JBoss 7.0.x onwards / WildFly 8.x onwards</h3><p>The same instructions for JBoss 5.x, 5.1.x and 6.x also apply for JBoss 7.0.x onwards as well as WildFly 8.x onwards, with some differences:</p>
           <ul>
            <li>The JAR files to include are different</li>
-           <li>JBoss (Application Server) as well as JBoss Enterprise Application Platform (EAP) 6.x use the <code>cargo.<wbr>jboss.<wbr>management-native.<wbr>port</code> port</li>
-           <li>All WildFly versions as well as&nbsp;JBoss Enterprise Application Platform (EAP) 7.x use the <code>cargo.<wbr>jboss.<wbr>management-http.<wbr>port</code> port</li>
+           <li>JBoss (Application Server) as well as JBoss Enterprise Application Platform (EAP) 6.x use the <code>cargo.jboss.management-native.port</code> port</li>
+           <li>All WildFly versions as well as&nbsp;JBoss Enterprise Application Platform (EAP) 7.x use the <code>cargo.jboss.management-http.port</code> port</li>
           </ul><p>The following examples detail these differences.</p><p>Here is an example code for the users of the Java API:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">

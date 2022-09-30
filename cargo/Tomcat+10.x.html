@@ -292,7 +292,7 @@
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>Users of Tomcat 10.x onwards should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.</code> to <code>jakarta.</code>. This will almost certainly require code changes to enable applications to migrate to Tomcat 10.x and later.</p>
+            <p>Users of Tomcat 10.x onwards should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.*</code> to <code>jakarta.*</code>. This will almost certainly require code changes to enable applications to migrate to Tomcat 10.x and later.</p>
            </div>
           </div><h3 id="Tomcat10.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
@@ -1337,8 +1337,8 @@
            <div class="confluence-information-macro-body">
             <p>With Tomcat 10, the Tomcat manager has multiple aspects to be careful about:</p>
             <ul>
-             <li>Your browser by default accesses the HTML-based manager whereas Codehaus Cargo needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.<wbr>URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a href="http://production27:8080/manager/text">http://production27:8080/manager/text</a></code></li>
-             <li>The text-based manager requires to be accessed by a user with the <code>manager-script</code> role; and by default no user has that role. As a result, please make sure you modify your <code>tomcat-users.<wbr>xml</code> file to give that role to a user.<br>You can read more in the Tomcat documentation: <a href="http://tomcat.apache.org/tomcat-10.0-doc/manager-howto.html">http://tomcat.apache.org/tomcat-10.0-doc/manager-howto.html</a></li>
+             <li>Your browser by default accesses the HTML-based manager whereas Codehaus Cargo needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a href="http://production27:8080/manager/text">http://production27:8080/manager/text</a></code></li>
+             <li>The text-based manager requires to be accessed by a user with the <code>manager-script</code> role; and by default no user has that role. As a result, please make sure you modify your <code>tomcat-users.xml</code> file to give that role to a user.<br>You can read more in the Tomcat documentation: <a href="http://tomcat.apache.org/tomcat-10.0-doc/manager-howto.html">http://tomcat.apache.org/tomcat-10.0-doc/manager-howto.html</a></li>
             </ul>
            </div>
           </div><h3 id="Tomcat10.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous Integration system</a> every time there is a code change.<br>The server used for tests is downloaded from: <a href="https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/10.1.0/tomcat-10.1.0.zip">https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/10.1.0/tomcat-10.1.0.zip</a></p></td>

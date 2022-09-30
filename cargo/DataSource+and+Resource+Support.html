@@ -923,7 +923,7 @@
           <ul>
            <li>Datasources on the Jetty container use the <a href="http://sourceforge.net/projects/c3p0/">c3p0</a> datasource pool.</li>
            <li>JOnAS handles transactions for datasources using its <code>jtm</code> service.</li>
-          </ul><h3 id="DataSourceandResourceSupport-DataSourceproperties">DataSource properties</h3><p>DataSources are added through pipe-delimited configuration properties that starts with <code>cargo.<wbr>datasource.<wbr>datasource</code>. Example:</p>
+          </ul><h3 id="DataSourceandResourceSupport-DataSourceproperties">DataSource properties</h3><p>DataSources are added through pipe-delimited configuration properties that starts with <code>cargo.datasource.datasource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">cargo.datasource.datasource1=cargo.datasource.url=jdbc:mydriver:userdb\|cargo.datasource.driver=org.database.Driver\|...
@@ -932,7 +932,7 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
            </div>
           </div><p>Here are the properties that are valid for this:</p>
           <ul>
-           <li>Note that&nbsp;<code>c.<wbr>d</code> means&nbsp;<code>cargo.<wbr>datasource</code></li>
+           <li>Note that <code>c.d</code> means <code>cargo.datasource</code></li>
            <li>Note that if you specify a property marked <strong>do not set</strong> you will get a <code>CargoException</code>.</li>
           </ul>
           <div class="table-wrap">
@@ -957,7 +957,7 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
              <tr>
               <td class="confluenceTd"><p><code>c.<wbr>d.<wbr>jndi</code></p></td>
               <td class="confluenceTd"><p>The path to this DataSource in JNDI</p></td>
-              <td class="confluenceTd"><p>Any jndi path, like&nbsp;<code>jdbc/userds</code></p></td>
+              <td class="confluenceTd"><p>Any jndi path, like <code>jdbc/userds</code></p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
@@ -965,10 +965,10 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
              <tr>
               <td class="confluenceTd"><p><code>c.<wbr>d.<wbr>driver</code></p></td>
               <td class="confluenceTd"><p>The implementation class</p></td>
-              <td class="confluenceTd"><p>ex.&nbsp;<code>my.<wbr>Driver</code></p></td>
-              <td class="confluenceTd"><p>mandatory: must implement&nbsp;<code>java.<wbr>sql.<wbr>Driver</code></p></td>
-              <td class="confluenceTd"><p>mandatory: must implement&nbsp;<code>java.<wbr>sql.<wbr>Driver</code></p></td>
-              <td class="confluenceTd"><p>mandatory: must implement&nbsp;<code>javax.<wbr>sql.<wbr>XADataSource</code></p></td>
+              <td class="confluenceTd"><p>ex. <code>my.<wbr>Driver</code></p></td>
+              <td class="confluenceTd"><p>mandatory: must implement <code>java.<wbr>sql.<wbr>Driver</code></p></td>
+              <td class="confluenceTd"><p>mandatory: must implement <code>java.<wbr>sql.<wbr>Driver</code></p></td>
+              <td class="confluenceTd"><p>mandatory: must implement <code>javax.<wbr>sql.<wbr>XADataSource</code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>c.<wbr>d.<wbr>properties</code></p></td>
@@ -980,8 +980,8 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>c.<wbr>d.<wbr>url</code></p></td>
-              <td class="confluenceTd"><p>URL for the&nbsp;<code>java.<wbr>sql.<wbr>Driver</code></p></td>
-              <td class="confluenceTd"><p>ex.&nbsp;<code>jdbc:host:port/mydb</code></p></td>
+              <td class="confluenceTd"><p>URL for the <code>java.<wbr>sql.<wbr>Driver</code></p></td>
+              <td class="confluenceTd"><p>ex. <code>jdbc:host:port/mydb</code></p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
               <td class="confluenceTd"><p>optional</p></td>
@@ -989,7 +989,7 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
              <tr>
               <td class="confluenceTd"><p><code>c.<wbr>d.<wbr>type</code></p></td>
               <td class="confluenceTd"><p>Determines the type of the driver</p></td>
-              <td class="confluenceTd"><p>Defaults to&nbsp;<code>java.<wbr>sql.<wbr>Driver</code>, only set if you want to use a&nbsp;<code>javax.<wbr>sql.<wbr>XADataSource</code></p></td>
+              <td class="confluenceTd"><p>Defaults to <code>java.<wbr>sql.<wbr>Driver</code>, only set if you want to use a <code>javax.<wbr>sql.<wbr>XADataSource</code></p></td>
               <td class="confluenceTd"><p><strong>do not set</strong></p></td>
               <td class="confluenceTd"><p><strong>do not set</strong></p></td>
               <td class="confluenceTd"><p><code>javax.<wbr>sql.<wbr>XADataSource</code></p></td>
@@ -997,10 +997,10 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
              <tr>
               <td class="confluenceTd"><p><code>c.<wbr>d.<wbr>transactionsupport</code></p></td>
               <td class="confluenceTd"><p>Determines transaction support type</p></td>
-              <td class="confluenceTd"><p><code>LOCAL_TRANSACTION</code> or&nbsp;<code>XA_TRANSACTION</code></p></td>
+              <td class="confluenceTd"><p><code>LOCAL_TRANSACTION</code> or <code>XA_TRANSACTION</code></p></td>
               <td class="confluenceTd"><p><strong>do not set</strong></p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
-              <td class="confluenceTd"><p>unset defaults to only valid option:&nbsp;<code>XA_TRANSACTION</code></p></td>
+              <td class="confluenceTd"><p>unset defaults to only valid option: <code>XA_TRANSACTION</code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>c.<wbr>d.<wbr>id</code></p></td>
@@ -1038,7 +1038,7 @@ cargo.datasource.datasource2=cargo.datasource.url=jdbc:mydriver:referencedb\|car
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="DataSourceandResourceSupport-JMSresourceproperties">JMS resource properties</h3><p>JMS resources (such as connection factories, queues or topics) are added through pipe-delimited configuration properties that starts with <code>cargo.<wbr>resource.<wbr>resource</code>. Example:</p>
+          </center><h3 id="DataSourceandResourceSupport-JMSresourceproperties">JMS resource properties</h3><p>JMS resources (such as connection factories, queues or topics) are added through pipe-delimited configuration properties that starts with <code>cargo.resource.resource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">cargo.resource.resource.jms.cf=cargo.resource.name=jms/cf/MyCf\|cargo.resource.type=javax.jms.ConnectionFactory\|cargo.resource.id=MyCf
@@ -1047,7 +1047,7 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
            </div>
           </div><p>Here are the properties that are valid for this:</p>
           <ul>
-           <li>Note that&nbsp;<code>c.<wbr>r</code> means&nbsp;<code>cargo.<wbr>resource</code></li>
+           <li>Note that <code>c.r</code> means <code>cargo.resource</code></li>
           </ul>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
@@ -1067,13 +1067,13 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
              <tr>
               <td colspan="1" class="confluenceTd"><p><code>c.<wbr>r.<wbr>id</code></p></td>
               <td colspan="1" class="confluenceTd"><p>The ID for the JNDI entry of this JMS resource</p></td>
-              <td colspan="1" class="confluenceTd">ID used in configuration files, if not specified an identifier is created using the&nbsp;<code>name</code></td>
+              <td colspan="1" class="confluenceTd">ID used in configuration files, if not specified an identifier is created using the <code>name</code></td>
               <td colspan="1" class="confluenceTd">optional</td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>c.<wbr>r.<wbr>name</code></p></td>
               <td class="confluenceTd"><p>The path to this&nbsp;JMS resource in JNDI</p></td>
-              <td class="confluenceTd"><p>Any JNDI path, like&nbsp;<code>jms/cf/MyCf</code> or <code>jms/cf/MyQueue</code></p></td>
+              <td class="confluenceTd"><p>Any JNDI path, like <code>jms/cf/MyCf</code> or <code>jms/cf/MyQueue</code></p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
              </tr>
              <tr>
@@ -1081,7 +1081,7 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
               <td class="confluenceTd"><p>Interface of the object</p></td>
               <td class="confluenceTd"><p>Any JNDI path, like:</p>
                <ul>
-                <li>On J2EE / Java EE containers: <code>javax.<wbr>jms.<wbr>ConnectionFactory</code> or&nbsp;<code>javax.<wbr>jms.<wbr>Queue</code></li>
+                <li>On J2EE / Java EE containers: <code>javax.<wbr>jms.<wbr>ConnectionFactory</code> or <code>javax.<wbr>jms.<wbr>Queue</code></li>
                 <li>On Jakarta EE containers: <code>jakarta.<wbr>jms.<wbr>ConnectionFactory</code> or <code>jakarta.<wbr>jms.<wbr>Queue</code></li>
                </ul></td>
               <td class="confluenceTd"><p>mandatory</p></td>
@@ -1098,10 +1098,10 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Java EE vs. Jakarta EE</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>Even when you use Codehaus Cargo with a Jakarta EE container, you can keep on using <code>javax.<wbr>jms.</code> definitions, which Codehaus Cargo will automatically translate to <code>jakarta.<wbr>jms.</code> for your specific container if need be. This ensures you can easily test on Java EE and Jakarta EE without having to create very complex Codehaus Cargo property sets.</p>
-            <p>Please note that this doesn't work the other way round:&nbsp;<code>jakarta.<wbr>jms.</code> definitions will not be "mapped back" to <code>javax.<wbr>jms.</code> definitions on non Jakarta EE containers.</p>
+            <p>Even when you use Codehaus Cargo with a Jakarta EE container, you can keep on using <code>javax.jms.</code> definitions, which Codehaus Cargo will automatically translate to <code>jakarta.jms.</code> for your specific container if need be. This ensures you can easily test on Java EE and Jakarta EE without having to create very complex Codehaus Cargo property sets.</p>
+            <p>Please note that this doesn't work the other way round: <code>jakarta.jms.</code> definitions will not be "mapped back" to <code>javax.jms.</code> definitions on non Jakarta EE containers.</p>
            </div>
-          </div><h3 id="DataSourceandResourceSupport-Otherresourceproperties">Other resource properties</h3><p>All other resources are added through pipe-delimited configuration properties that starts with <code>cargo.<wbr>resource.<wbr>resource</code>. Example:</p>
+          </div><h3 id="DataSourceandResourceSupport-Otherresourceproperties">Other resource properties</h3><p>All other resources are added through pipe-delimited configuration properties that starts with <code>cargo.resource.resource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">cargo.resource.resource1=cargo.resource.name=resource/apple\|cargo.resource.class=org.mycompany.Apple\|...
@@ -1110,7 +1110,7 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
            </div>
           </div><p>Here are the properties that are valid for this:</p>
           <ul>
-           <li>Note that&nbsp;<code>c.<wbr>r</code> means&nbsp;<code>cargo.<wbr>resource</code></li>
+           <li>Note that <code>c.r</code> means <code>cargo.resource</code></li>
           </ul>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
@@ -1130,13 +1130,13 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
              <tr>
               <td colspan="1" class="confluenceTd"><p><code>c.<wbr>r.<wbr>id</code></p></td>
               <td colspan="1" class="confluenceTd"><p>The ID for this JNDI entry</p></td>
-              <td colspan="1" class="confluenceTd">ID used in configuration files, if not specified an identifier is created using the&nbsp;<code>name</code></td>
+              <td colspan="1" class="confluenceTd">ID used in configuration files, if not specified an identifier is created using the <code>name</code></td>
               <td colspan="1" class="confluenceTd">optional</td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>c.<wbr>r.<wbr>name</code></p></td>
               <td class="confluenceTd"><p>The path to this resource in JNDI</p></td>
-              <td class="confluenceTd"><p>Any JNDI path, like&nbsp;<code>resource/apple</code></p></td>
+              <td class="confluenceTd"><p>Any JNDI path, like <code>resource/apple</code></p></td>
               <td class="confluenceTd"><p>mandatory</p></td>
              </tr>
              <tr>
@@ -1263,7 +1263,7 @@ cargo.resource.resource2=cargo.resource.name=resource/pear\|cargo.resource.drive
           <ul>
            <li><a href="https://github.com/codehaus-cargo/cargo/blob/master/core/api/container/src/test/java/org/codehaus/cargo/container/configuration/entry/ConfigurationFixtureFactory.java"><code>ConfigurationFixtureFactory</code></a>: class with static methods showing examples for creating various&nbsp;DataSource and resource types:
             <ul>
-             <li><code>createDataSource</code> and&nbsp;<code>createAnotherDataSource</code>: Creation of a DataSource</li>
+             <li><code>createDataSource</code> and <code>createAnotherDataSource</code>: Creation of a DataSource</li>
              <li><code>createDriverConfiguredDataSourceWithLocalTransactionSupport</code>: Creation of a&nbsp;DataSource with local transaction support</li>
              <li><code>createDriverConfiguredDataSourceWithXaTransactionSupport</code>: Creation of a&nbsp;DataSource with XA transaction support</li>
              <li><code>createXADataSourceConfiguredDataSource</code>: Creation of an XA DataSource as DataSource</li>

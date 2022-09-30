@@ -288,7 +288,7 @@
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><p>updating samples test cases.</p><p>1. find the test case you wish to copy.</p><p>copy recursively&nbsp;<code>resources/testdata/<wbr>&lt;you_want_to_copy&gt;<wbr>-war</code> to a new folder (ex.&nbsp;<code>resources/testdata/NEW-war</code>)<br> edit&nbsp;<code>resources/testdata/new-war/pom.<wbr>xml</code> (change&nbsp;<code>artifact-id</code> to <code>NEW-war</code>, and name to something descriptive )<br> edit&nbsp;<code>resources/testdata/pom.<wbr>xml</code> and add module <code>NEW-war</code></p><p>edit <code>core/samples/pom.<wbr>xml</code><br> under Test data artifacts, add</p>
+         <td class="rightColumn"><p>updating samples test cases.</p><p>1. find the test case you wish to copy.</p><p>copy recursively <code>resources/testdata/&lt;you_want_to_copy&gt;-war</code> to a new folder (ex. <code>resources/testdata/NEW-war</code>)<br> edit <code>resources/testdata/new-war/pom.xml</code> (change <code>artifact-id</code> to <code>NEW-war</code>, and name to something descriptive )<br> edit <code>resources/testdata/pom.xml</code> and add module <code>NEW-war</code></p><p>edit <code>core/samples/pom.xml</code><br> under Test data artifacts, add</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">  &lt;dependency&gt;
@@ -308,7 +308,7 @@
   &lt;/property&gt;
 </pre>
            </div>
-          </div><p>this will create a property that an implementation of&nbsp;<code>AbstractDataSourceWarCapabilityContainerTestCase</code> can understand</p><p>add a new test class that does what you want, extending&nbsp;<code>AbstractDataSourceWarCapabilityContainerTestCase</code> or a subclass of it. Make sure you use an appropriate&nbsp;<code>Validator</code> for the configuration type you are concerned with. Otherwise you may end up testing invalid containers.</p><p>finally, execute&nbsp;<code>mvn -P<wbr>&lt;container_to_test&gt;<wbr> install</code> from the root of Cargo.</p><script type="text/javascript">
+          </div><p>this will create a property that an implementation of <code>AbstractDataSourceWarCapabilityContainerTestCase</code> can understand</p><p>add a new test class that does what you want, extending <code>AbstractDataSourceWarCapabilityContainerTestCase</code> or a subclass of it. Make sure you use an appropriate <code>Validator</code> for the configuration type you are concerned with. Otherwise you may end up testing invalid containers.</p><p>finally, execute <code>mvn -P&lt;container_to_test&gt; install</code> from the root of Cargo.</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";

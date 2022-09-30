@@ -306,7 +306,7 @@
   </script>
           </center><h3 id="JettyRemoteDeployer-Security">Security</h3><p>By default, the Cargo Jetty remote deployer comes with no security.</p><p>In order to activate security, follow these steps:</p>
           <ol>
-           <li>Open the <code>WEB-INF/web.<wbr>xml</code> file of the Cargo Jetty remote deployer WAR</li>
+           <li>Open the <code>WEB-INF/web.xml</code> file of the Cargo Jetty remote deployer WAR</li>
            <li>Uncomment the part that says <code>Uncomment in order to activate security</code>. By default, that configuration is as follows:
             <ul>
              <li>Authentication is done using standard HTTP headers: <code>login-config</code> set to <code>BASIC</code>.</li>
@@ -314,7 +314,7 @@
             </ul></li>
            <li>Create a user with the Jetty role <code>manager</code>:
             <ol>
-             <li>Open the Jetty <code>realm.<wbr>properties</code> file</li>
+             <li>Open the Jetty <code>realm.properties</code> file</li>
              <li><p>Add, for example, the following definition</p>
               <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
                <div class="codeContent panelContent pdl">
@@ -323,7 +323,7 @@
                </div>
               </div></li>
             </ol></li>
-           <li><p>Define a security realm, which can be per-webapp (i.e., by adding a&nbsp;<code>jetty-web.<wbr>xml</code> file to the WAR) or global (i.e., for all applications deployed on that Jetty server). You can learn more about both methods on the Jetty documentation: <a href="http://www.eclipse.org/jetty/documentation/current/configuring-security-authentication.html#d0e5513">http://www.eclipse.org/jetty/documentation/current/configuring-security-authentication.html#d0e5513</a></p></li>
+           <li><p>Define a security realm, which can be per-webapp (i.e., by adding a <code>jetty-web.xml</code> file to the WAR) or global (i.e., for all applications deployed on that Jetty server). You can learn more about both methods on the Jetty documentation: <a href="http://www.eclipse.org/jetty/documentation/current/configuring-security-authentication.html#d0e5513">http://www.eclipse.org/jetty/documentation/current/configuring-security-authentication.html#d0e5513</a></p></li>
           </ol><p>To try the security settings, you can try to visit the <code>/cargo-jetty-deployer</code> context on your server, for example <a href="http://production27:8080/cargo-jetty-deployer">http://production27:8080/cargo-jetty-deployer</a>, using any Web browser. If security is configured well, it should:</p>
           <ul>
            <li>Ask for a login and password</li>
@@ -406,7 +406,7 @@ mvn cargo:deploy
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <p class="title">Unexpected end of file from server and maxIdleTime parameter</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>By default, Jetty sets the&nbsp;<code>maxIdleTime</code> parameter in the&nbsp;<code>etc/jetty.<wbr>xml</code> file 30 seconds. This means that if the actual deployment takes more than 30 seconds, you might get error messages like:</p>
+            <p>By default, Jetty sets the <code>maxIdleTime</code> parameter in the <code>etc/jetty.xml</code> file 30 seconds. This means that if the actual deployment takes more than 30 seconds, you might get error messages like:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.codehaus.cargo:cargo-maven3-plugin:1.9.0:deploy (default-cli)
@@ -428,7 +428,7 @@ Caused by: java.net.SocketException: Unexpected end of file from server
     ... 25 more</pre>
              </div>
             </div>
-            <p>In this case, open the target Jetty container's <code>etc/jetty.<wbr>xml</code> file and set the <code>maxIdleTime</code> parameter to longer. For example:</p>
+            <p>In this case, open the target Jetty container's <code>etc/jetty.xml</code> file and set the <code>maxIdleTime</code> parameter to longer. For example:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">&lt;?xml version="1.0"?&gt;

@@ -294,7 +294,7 @@
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Standalone+Local+Configuration.html">standalone local containers</a>, and does work with the <a href="Cargo+Daemon.html">Cargo Daemon</a> since version 1.4.12.</p>
            </div>
-          </div><h3 id="XMLreplacements-Explanation">Explanation</h3><p>In some cases, it is necessary to modify XML files of your container. This can be done using Cargo's <code>xmlReplacements</code> option, accessible via the Cargo APIs.</p><p>You might for example want to modify the&nbsp;<code>defaultHost</code> for your Tomcat instance.</p><script type="text/javascript">
+          </div><h3 id="XMLreplacements-Explanation">Explanation</h3><p>In some cases, it is necessary to modify XML files of your container. This can be done using Cargo's <code>xmlReplacements</code> option, accessible via the Cargo APIs.</p><p>You might for example want to modify the <code>defaultHost</code> for your Tomcat instance.</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -320,9 +320,9 @@ configuration.addXmlReplacement(defaultHost);
            </div>
           </div><p>Some notes:</p>
           <ul>
-           <li>The&nbsp;<code>attributeName</code> parameter is optional -if you don't specify it, then Cargo will replace directly the value of the node</li>
-           <li>If the&nbsp;<code>value</code> corresponds to an existing <a href="Configuration+properties.html">configuration property</a> (such as&nbsp;<code>cargo.<wbr>hostname</code> for example) then Cargo will reuse it from the configuration</li>
-           <li>Finally, there is another parameter&nbsp;<code>ignoreIfNonExisting</code> which, when set to&nbsp;<code>TRUE</code>, will make the XML replacement tool ignore if that specific XPath doesn't exist in the XML file</li>
+           <li>The <code>attributeName</code> parameter is optional -if you don't specify it, then Cargo will replace directly the value of the node</li>
+           <li>If the <code>value</code> corresponds to an existing <a href="Configuration+properties.html">configuration property</a> (such as <code>cargo.hostname</code> for example) then Cargo will reuse it from the configuration</li>
+           <li>Finally, there is another parameter <code>ignoreIfNonExisting</code> which, when set to <code>TRUE</code>, will make the XML replacement tool ignore if that specific XPath doesn't exist in the XML file</li>
           </ul><h3 id="XMLreplacements-ExampleusingtheANTtasks">Example using the ANT tasks</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">

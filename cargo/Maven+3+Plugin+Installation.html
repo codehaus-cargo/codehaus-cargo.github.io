@@ -288,7 +288,7 @@
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><h1 id="Maven3PluginInstallation-Installation">Installation</h1><p>The Cargo Maven Plugin is found at (<code>groupId:artifactId</code>) <code>org.<wbr>codehaus.<wbr>cargo:cargo-maven3-plugin</code>.</p><p>This plugin has been built exclusively for Maven 3.x, and our <a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous Integration system</a> tests it on Maven version 3.2.5.</p><h3 id="Maven3PluginInstallation-Releases">Releases</h3><p>The Codehaus Cargo&nbsp;Maven 3 Plugin (and all other Cargo artifacts) are hosted at <a href="https://repo.maven.org/maven2/org/codehaus/cargo/">Maven central</a>. As Maven is configured for Maven central by default, no additional installation or repository configuration is necessary to use the plugin.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven3PluginInstallation-snapshots"><span class="confluence-anchor-link" id="snapshots"> </span></span></p><script type="text/javascript">
+         <td class="rightColumn"><h1 id="Maven3PluginInstallation-Installation">Installation</h1><p>The Cargo Maven Plugin is found at (<code>groupId:artifactId</code>) <code>org.codehaus.cargo:cargo-maven3-plugin</code>.</p><p>This plugin has been built exclusively for Maven 3.x, and our <a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous Integration system</a> tests it on Maven version 3.2.5.</p><h3 id="Maven3PluginInstallation-Releases">Releases</h3><p>The Codehaus Cargo&nbsp;Maven 3 Plugin (and all other Cargo artifacts) are hosted at <a href="https://repo.maven.org/maven2/org/codehaus/cargo/">Maven central</a>. As Maven is configured for Maven central by default, no additional installation or repository configuration is necessary to use the plugin.</p><p><span class="confluence-anchor-link conf-macro output-inline" id="Maven3PluginInstallation-snapshots"><span class="confluence-anchor-link" id="snapshots"> </span></span></p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -340,13 +340,13 @@
             <p>When you do not do that properly, you will be getting errors such as:</p>
             <pre>Cannot create configuration. There's no registered configuration for the parameters (container [id = [tomcat9x], type = [installed]], configuration type [standalone]). Actually there are no valid types registered for this configuration. Maybe you've made a mistake spelling it?</pre>
             <p>In case the errors persist even after adding the <code>SNAPSHOT</code> repositories, you can install the associated container artifact. Example (with the Codehaus Cargo Tomcat container):</p>
-            <pre>mvn dependency:get -Dartifact=org.codehaus.cargo:cargo-core-container-tomcat:1.<code>10.<wbr>3</code>-SNAPSHOT -DremoteRepositories=https://oss.sonatype.org/content/repositories/snapshots/</pre>
+            <pre>mvn dependency:get -Dartifact=org.codehaus.cargo:cargo-core-container-tomcat:1.<code>10.3</code>-SNAPSHOT -DremoteRepositories=https://oss.sonatype.org/content/repositories/snapshots/</pre>
            </div>
-          </div><p>Then, you should decide which&nbsp;<code>SNAPSHOT</code> version to use:</p>
+          </div><p>Then, you should decide which <code>SNAPSHOT</code> version to use:</p>
           <ul>
-           <li>To find out what the latest&nbsp;<code>SNAPSHOT</code> version is, you can simply look at <a href="https://github.com/codehaus-cargo/cargo/blob/master/pom.xml">the root POM file for Codehaus Cargo</a>.</li>
+           <li>To find out what the latest <code>SNAPSHOT</code> version is, you can simply look at <a href="https://github.com/codehaus-cargo/cargo/blob/master/pom.xml">the root POM file for Codehaus Cargo</a>.</li>
            <li>Configure the Cargo Maven Plugin by specifying the <code>SNAPSHOT</code> version you want.</li>
-          </ul><p>For example, to use version <code>1.<code>10.<wbr>3</code>-SNAPSHOT</code> you would declare something similar to the following in your POM:</p>
+          </ul><p>For example, to use version <code>1.<code>10.3</code>-SNAPSHOT</code> you would declare something similar to the following in your POM:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[...]

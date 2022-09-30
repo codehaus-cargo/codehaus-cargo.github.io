@@ -396,7 +396,7 @@
 [...]
 </pre>
            </div>
-          </div><p>As you can see the information to connect and do the deployment to the remote container is specified in the runtime configuration (<code>cargo.<wbr>remote.<wbr>username</code> and <code>cargo.<wbr>remote.<wbr>password</code>). The properties to define are deployer-dependent.</p><p>Here's an another example, this time deploying the current project's artifact to a running JBoss 4.2.x container using a default 8080 port and default authorizations:</p>
+          </div><p>As you can see the information to connect and do the deployment to the remote container is specified in the runtime configuration (<code>cargo.remote.username</code> and <code>cargo.remote.password</code>). The properties to define are deployer-dependent.</p><p>Here's an another example, this time deploying the current project's artifact to a running JBoss 4.2.x container using a default 8080 port and default authorizations:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[...]
@@ -419,7 +419,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3><p>If the deployment, undeployment or redeployment is done without any watchdog,&nbsp;Codehaus Cargo will rely on the error codes return by the container's deployer to detect failures.</p><p>This is sometimes not desired: for example, if one calls&nbsp;<code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p><p>To work around the issue, make sure you define your deployable together with a watchdog. For example:</p>
+          </center><h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3><p>If the deployment, undeployment or redeployment is done without any watchdog,&nbsp;Codehaus Cargo will rely on the error codes return by the container's deployer to detect failures.</p><p>This is sometimes not desired: for example, if one calls <code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p><p>To work around the issue, make sure you define your deployable together with a watchdog. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Deployable with a ping URL</b>
@@ -434,19 +434,19 @@
            </div>
           </div><p>In that case:</p>
           <ul>
-           <li>When you will call&nbsp;<code>cargo:deploy</code>:
+           <li>When you will call <code>cargo:deploy</code>:
             <ul>
-             <li>If the deployer returns a failure,&nbsp;Codehaus Cargo will log a message&nbsp;<code>The deployment has failed</code>, with the error returned by the deployer and a severity&nbsp;<code>INFO</code>.</li>
+             <li>If the deployer returns a failure,&nbsp;Codehaus Cargo will log a message <code>The deployment has failed</code>, with the error returned by the deployer and a severity <code>INFO</code>.</li>
              <li>It will then start the watchdog, to check if the deployable is deployed.</li>
-             <li>If the watchdog detects that the deployable is indeed deployed, the overall result is a&nbsp;<code>BUILD SUCCESSFUL</code></li>
-             <li>If the watchdog detects that the deployable is not deployed, you then get a&nbsp;<code>BUILD FAILURE</code></li>
+             <li>If the watchdog detects that the deployable is indeed deployed, the overall result is a <code>BUILD SUCCESSFUL</code></li>
+             <li>If the watchdog detects that the deployable is not deployed, you then get a <code>BUILD FAILURE</code></li>
             </ul></li>
-           <li>When you will call&nbsp;<code>cargo:undeploy</code>:
+           <li>When you will call <code>cargo:undeploy</code>:
             <ul>
-             <li>If the deployer returns a failure,&nbsp;Codehaus Cargo will log a message&nbsp;<code>The undeployment has failed</code>, with the error returned by the deployer and a severity&nbsp;<code>INFO</code>.</li>
+             <li>If the deployer returns a failure,&nbsp;Codehaus Cargo will log a message <code>The undeployment has failed</code>, with the error returned by the deployer and a severity <code>INFO</code>.</li>
              <li>It will then start the watchdog, to check if the deployable is not deployed.</li>
-             <li>If the watchdog detects that the deployable is indeed not deployed, the overall result is a&nbsp;<code>BUILD SUCCESSFUL</code></li>
-             <li>If the watchdog detects that the deployable is still deployed, you then get a&nbsp;<code>BUILD FAILURE</code></li>
+             <li>If the watchdog detects that the deployable is indeed not deployed, the overall result is a <code>BUILD SUCCESSFUL</code></li>
+             <li>If the watchdog detects that the deployable is still deployed, you then get a <code>BUILD FAILURE</code></li>
             </ul></li>
           </ul><p>This functionality is available in the <a href="Javadocs.html">Java API</a>, <a href="Ant+support.html">Ant tasks</a> and <a href="Maven+3+Plugin.html">Maven 3 plugin</a>.</p></td>
         </tr>

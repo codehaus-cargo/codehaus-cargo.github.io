@@ -292,20 +292,20 @@
           <ul>
            <li>Core API:
             <ul>
-             <li>When starting containers on Java 8, the warning <code>ignoring option PermSize=<wbr>48m; support was removed in 8.<wbr>0</code> doesn't appear anymore&nbsp;[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1294">CARGO-1294</a>]</li>
-             <li><code>AbstractDeployer.<wbr>stop<wbr>(Deployable, DeployableMonitor)</code> now calls&nbsp;<code>stop<wbr>(Deployable)</code> as it should&nbsp;[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1296">CARGO-1296</a>]</li>
+             <li>When starting containers on Java 8, the warning <code>ignoring option PermSize=48m; support was removed in 8.0</code> doesn't appear anymore&nbsp;[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1294">CARGO-1294</a>]</li>
+             <li><code>AbstractDeployer.stop(Deployable, DeployableMonitor)</code> now calls <code>stop(Deployable)</code> as it should&nbsp;[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1296">CARGO-1296</a>]</li>
              <li>A bug where starting a stopped module over <a href="http://cargo.codehaus.org/JSR88">JSR88</a> has been fixed [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1295">CARGO-1295</a>]</li>
-             <li>The timeout of the&nbsp;<code>AbstractJsr88Deployer</code> is now configurable [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1299">CARGO-1299</a>]</li>
+             <li>The timeout of the <code>AbstractJsr88Deployer</code> is now configurable [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1299">CARGO-1299</a>]</li>
             </ul></li>
            <li>Containers:
             <ul>
              <li>The access denied message when re- and undeploying on Tomcat 7 and 8 has been fixed [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1298">CARGO-1298</a>]</li>
-             <li>The GlassFish <a href="http://cargo.codehaus.org/Remote+Deployer">remote deployer</a> now supports the&nbsp;<code>target</code> parameter [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1291">CARGO-1291</a>]</li>
-             <li>The <a href="http://cargo.codehaus.org/WebSphere+8.5.x">WebSphere</a> admin commands now use&nbsp;<code>-conntype NONE</code>, which means the <a href="http://cargo.codehaus.org/WebSphere+8.5.x">WebSphere</a> deployers do not require the container to be started anymore [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1297">CARGO-1297</a>]</li>
+             <li>The GlassFish <a href="http://cargo.codehaus.org/Remote+Deployer">remote deployer</a> now supports the <code>target</code> parameter [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1291">CARGO-1291</a>]</li>
+             <li>The <a href="http://cargo.codehaus.org/WebSphere+8.5.x">WebSphere</a> admin commands now use <code>-conntype NONE</code>, which means the <a href="http://cargo.codehaus.org/WebSphere+8.5.x">WebSphere</a> deployers do not require the container to be started anymore [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1297">CARGO-1297</a>]</li>
             </ul></li>
            <li>Extensions:
             <ul>
-             <li>The <a href="http://cargo.codehaus.org/Ant+support">Cargo ANT tasks</a>'&nbsp;<code>start</code> /&nbsp;<code>run</code> /&nbsp;<code>stop</code> commands now take into account ping URLs [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1293">CARGO-1293</a>]</li>
+             <li>The <a href="http://cargo.codehaus.org/Ant+support">Cargo ANT tasks</a>' <code>start</code> / <code>run</code> / <code>stop</code> commands now take into account ping URLs [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1293">CARGO-1293</a>]</li>
              <li>The <a href="http://cargo.codehaus.org/Cargo+Daemon">CARGO Daemon</a> now support for XML replacements [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1289">CARGO-1289</a>]</li>
             </ul></li>
           </ul><p>To try it out:</p>

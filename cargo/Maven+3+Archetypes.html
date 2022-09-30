@@ -296,7 +296,7 @@
                         -DarchetypeVersion=&lt;version&gt;
 </pre>
            </div>
-          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the&nbsp;Codehaus Cargo version to use.</p><p>The&nbsp;Maven 3 archetype plugin will then ask you what&nbsp;<code>groupId</code>, <code>artifactId</code>, <code>version</code>, and&nbsp;<code>package</code> you would like to use for generation. Once your&nbsp;Maven 3 project is generated, simply run:</p>
+          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the&nbsp;Codehaus Cargo version to use.</p><p>The&nbsp;Maven 3 archetype plugin will then ask you what <code>groupId</code>, <code>artifactId</code>, <code>version</code>, and <code>package</code> you would like to use for generation. Once your&nbsp;Maven 3 project is generated, simply run:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre"> mvn clean verify
@@ -394,7 +394,7 @@
              <li>We've used classic JUnit tests, but you can use whatever you like, really</li>
             </ul></li>
            <li>Undeploy your application</li>
-          </ul><p>This archetype supports the following properties that can be changed by passing <code>-DpropertyName=<wbr>propertyValue</code> arguments to the <code>mvn</code> command:</p>
+          </ul><p>This archetype supports the following properties that can be changed by passing <code>-DpropertyName=propertyValue</code> arguments to the <code>mvn</code> command:</p>
           <ul>
            <li><strong>servlet.port</strong> changes the target servlet port, the archetype sets it to <code>8080</code></li>
            <li><strong>hostname</strong> changes the target servlet's hostname, the archetype sets it to <code>localhost</code></li>
@@ -415,7 +415,7 @@
                         -DarchetypeVersion=&lt;version&gt;
 </pre>
            </div>
-          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the&nbsp;Codehaus Cargo version to use.</p><p>The&nbsp;Maven 3 archetype plugin will then ask you what <code>groupId</code>, <code>artifactId</code>, <code>version</code>, and&nbsp;<code>package</code> you would like to use for generation. Once your&nbsp;Maven 3 project is generated, you need to first start the <a href="Cargo+Daemon.html">Cargo Daemon</a>. Then, simply run:</p>
+          </div><p>where <strong>&lt;version&gt;</strong> is the version of the Cargo Archetype, as a result the&nbsp;Codehaus Cargo version to use.</p><p>The&nbsp;Maven 3 archetype plugin will then ask you what <code>groupId</code>, <code>artifactId</code>, <code>version</code>, and <code>package</code> you would like to use for generation. Once your&nbsp;Maven 3 project is generated, you need to first start the <a href="Cargo+Daemon.html">Cargo Daemon</a>. Then, simply run:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre"> mvn clean verify -Dhostname=&lt;daemon.hostname&gt; -Ddaemon.port=&lt;daemon.port&gt;

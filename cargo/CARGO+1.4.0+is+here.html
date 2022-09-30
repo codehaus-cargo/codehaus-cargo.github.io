@@ -302,8 +302,8 @@
             </ul>
             <li>Containers - Glassfish:</li>
             <ul>
-             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1189">CARGO-1189</a>] - Glassfish&nbsp;<code>jvm-options</code> should not be quoted</li>
-             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1190">CARGO-1190</a>] - Glassfish&nbsp;<code>&lt;systemProperties&gt;</code> should be XML-encoded when added to domain.xml</li>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1189">CARGO-1189</a>] - Glassfish <code>jvm-options</code> should not be quoted</li>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1190">CARGO-1190</a>] - Glassfish <code>&lt;systemProperties&gt;</code> should be XML-encoded when added to domain.xml</li>
              <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1191">CARGO-1191</a>] - Add support for <a href="http://cargo.codehaus.org/Glassfish+4.x">Glassfish 4.x</a></li>
             </ul>
             <li>Containers - Resin:<br>
@@ -312,7 +312,7 @@
              </ul></li>
             <li>Daemon:</li>
             <ul>
-             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1188">CARGO-1188</a>] - Add&nbsp;<code>-nologging</code> option to disable logging for standalone daemon war</li>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1188">CARGO-1188</a>] - Add <code>-nologging</code> option to disable logging for standalone daemon war</li>
              <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1180">CARGO-1180</a>] - Add support for continuously viewing logs</li>
              <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1181">CARGO-1181</a>] - Add support for restarting offline containers</li>
              <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1182">CARGO-1182</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1184">CARGO-1184</a>] - Change the Daemon properties in the Maven2/Maven3 plugin configuration to have a proper configuration</li>
@@ -324,13 +324,13 @@
             </ul>
             <li>Extensions - ANT tasks:</li>
             <ul>
-             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-991">CARGO-991</a>] - Remove the&nbsp;<code>start</code> task's&nbsp;<code>wait</code> argument</li>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-991">CARGO-991</a>] - Remove the <code>start</code> task's <code>wait</code> argument</li>
             </ul>
             <li>Extensions - Maven2/Maven3 plugin:</li>
             <ul>
-             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1116">CARGO-1116</a>] - Remove the deprecated&nbsp;<code>&lt;deployable&gt;</code> elements under&nbsp;<code>&lt;deployer&gt;</code> and&nbsp;<code>&lt;configuration&gt;</code></li>
-             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-967">CARGO-967</a>] - Use the tested container downloadable as the default for the&nbsp;<code>ZipUrlInstaller</code></li>
-             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-986">CARGO-986</a>] - Remove <code>cargo:start</code>'s&nbsp;<code>wait</code> argument</li>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1116">CARGO-1116</a>] - Remove the deprecated <code>&lt;deployable&gt;</code> elements under <code>&lt;deployer&gt;</code> and <code>&lt;configuration&gt;</code></li>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-967">CARGO-967</a>] - Use the tested container downloadable as the default for the <code>ZipUrlInstaller</code></li>
+             <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-986">CARGO-986</a>] - Remove <code>cargo:start</code>'s <code>wait</code> argument</li>
             </ul>
            </ul>
            <p>To upgrade to this new version:</p>
@@ -342,10 +342,10 @@
            </ul>
           </div>
           <div class="moz-text-html" lang="tr">
-           <strong>IMPORTANT</strong>: Users of the ANT tasks and Maven2/Maven3 plugin should consider <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-991">CARGO-991</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-986">CARGO-986</a>, i.e. the removal of the long-deprecated <code>wait</code> argument. If you want the container to start and keep on running, please use <code>run</code> instead of&nbsp;<code>start</code>.
+           <strong>IMPORTANT</strong>: Users of the ANT tasks and Maven2/Maven3 plugin should consider <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-991">CARGO-991</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-986">CARGO-986</a>, i.e. the removal of the long-deprecated <code>wait</code> argument. If you want the container to start and keep on running, please use <code>run</code> instead of <code>start</code>.
           </div>
           <div class="moz-text-html" lang="tr">
-           <strong>IMPORTANT</strong>: Users of the Maven2/Maven3 plugin should consider <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1116">CARGO-1116</a> when upgrading, i.e. the removal of the deprecated&nbsp;<code>&lt;deployable&gt;</code> elements under&nbsp;<code>&lt;deployer&gt;</code> and <code>&lt;configuration&gt;</code>. All&nbsp;<code>&lt;deployable&gt;</code> elements are now under the main&nbsp;<code>&lt;configuration&gt;</code> element.
+           <strong>IMPORTANT</strong>: Users of the Maven2/Maven3 plugin should consider <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1116">CARGO-1116</a> when upgrading, i.e. the removal of the deprecated <code>&lt;deployable&gt;</code> elements under <code>&lt;deployer&gt;</code> and <code>&lt;configuration&gt;</code>. All <code>&lt;deployable&gt;</code> elements are now under the main <code>&lt;configuration&gt;</code> element.
           </div>
           <div class="moz-text-html" lang="tr">
            <br>Enjoy!
