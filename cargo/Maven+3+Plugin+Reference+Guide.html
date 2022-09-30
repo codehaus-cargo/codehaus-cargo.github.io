@@ -305,31 +305,31 @@
               <th class="confluenceTh"><p>Default value</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-configuration"&gt;&lt;configuration&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-configuration"&gt;&lt;configuration&gt;</a></code></p></td>
               <td class="confluenceTd"><p>Definition of a <a href="Configuration.html">Configuration</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Defaults to a <a href="Standalone+Local+Configuration.html">standalone configuration</a> if the container is of type local and a <a href="Runtime+Configuration.html">runtime</a> one if it's of type remote</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-container"&gt;&lt;container&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-container"&gt;&lt;container&gt;</a></code></p></td>
               <td class="confluenceTd"><p>Definition of a <a href="Container.html">Container</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Defaults to a <a href="Jetty+9.x.html">Jetty 9.x</a> <a href="Installed+Container.html">installed local container</a> if not specified</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-deployer"&gt;&lt;deployer&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-deployer"&gt;&lt;deployer&gt;</a></code></p></td>
               <td class="confluenceTd"><p>Definition of a <a href="Deployer.html">Deployer</a></p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>Defaults to a <a href="Deployer.html">deployer</a> matching the container's type if none is specified (installed local deployer for an installed container, remote deployer for a remote container and embedded local deployer for an embedded container)</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-deployable"&gt;&lt;deployables&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-deployable"&gt;&lt;deployables&gt;</a></code></p></td>
               <td class="confluenceTd"><p>A list of <a href="Deployable.html">deployable</a>s that are going to be deployed in the container when it is started or when&nbsp;<code>cargo:deploy</code> /&nbsp;<code>cargo:undeploy</code> is called.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>If the project's packaging is&nbsp;<code>war</code>,&nbsp;<code>ear</code> or&nbsp;<code>ejb</code>, the generated artifact is added automatically to the list of deployables to deploy. If you wish the generated artifact not to be added to the deployables list, just add an empty&nbsp;<code><a href="<wbr">"#Maven3PluginReferenceGuide-deployer"&gt;&lt;deployer/&gt;</a></code> element.</p></td>
+              <td class="confluenceTd"><p>If the project's packaging is&nbsp;<code>war</code>,&nbsp;<code>ear</code> or&nbsp;<code>ejb</code>, the generated artifact is added automatically to the list of deployables to deploy. If you wish the generated artifact not to be added to the deployables list, just add an empty&nbsp;<code><a href="#Maven3PluginReferenceGuide-deployer"&gt;&lt;deployer/&gt;</a></code> element.</p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-daemon"&gt;&lt;daemon&gt;</a></code></p></td>
+              <td colspan="1" class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-daemon"&gt;&lt;daemon&gt;</a></code></p></td>
               <td colspan="1" class="confluenceTd"><p>Additional configuration that is used when deploying with the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td colspan="1" class="confluenceTd"><p>For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td>
@@ -366,13 +366,13 @@
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><a href="<wbr">"Configuration+files+option.<wbr>html"&gt;&lt;configfiles&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="<wbr">"#Maven3PluginReferenceGuide-configfile"&gt;&lt;configfile&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p></td>
+              <td class="confluenceTd"><p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#Maven3PluginReferenceGuide-configfile"&gt;&lt;configfile&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code><a href="<wbr">"Configuration+files+option.<wbr>html"&gt;&lt;files&gt;</a></code></p></td>
-              <td class="confluenceTd"><p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="<wbr">"#Maven3PluginReferenceGuide-file"&gt;&lt;file&gt;</a></code> element.</p></td>
+              <td class="confluenceTd"><p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#Maven3PluginReferenceGuide-file"&gt;&lt;file&gt;</a></code> element.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
@@ -417,7 +417,7 @@
               <td class="confluenceTd"><p><code>standalone</code></p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><code><a href="<wbr">"#Maven3PluginReferenceGuide-user"&gt;&lt;users&gt;</a></code></td>
+              <td colspan="1" class="confluenceTd"><code><a href="#Maven3PluginReferenceGuide-user"&gt;&lt;users&gt;</a></code></td>
               <td colspan="1" class="confluenceTd">List of users to be created in container configuration.</td>
               <td colspan="1" class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td colspan="1" class="confluenceTd"><p>No default</p></td>
@@ -469,16 +469,16 @@
               <td colspan="1" class="confluenceTd"><p>No reusable default</p><p>The Cargo Maven 3 plugin will actually generate a unique context key for each container based on the container and configuration's type and home - Which is not meant to be reused by end users.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-dependency"&gt;&lt;dependencies&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-dependency"&gt;&lt;dependencies&gt;</a></code></p></td>
               <td class="confluenceTd"><p>List of <a href="Container+Classpath.html">extra dependencies</a> or <a href="Application+Classpath.html">shared dependencies</a> that will be added to the container or applications execution classpath.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;home&gt;<wbr></code></p></td>
-              <td class="confluenceTd"><p>Location where the container is installed. If specified in conjunction with the <code><a href="<wbr">"#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code> or <code><a href="<wbr">"#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code> element, it will override the home directory defined by the installer.</p></td>
+              <td class="confluenceTd"><p>Location where the container is installed. If specified in conjunction with the <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code> or <code><a href="#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code> element, it will override the home directory defined by the installer.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="<wbr">"#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="<wbr">"#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
+              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>&lt;implementation&gt;<wbr></code></p></td>
@@ -517,16 +517,16 @@
               <td class="confluenceTd"><p>Default value is <code>installed</code> unless the <code>&lt;containerId&gt;<wbr></code> has not been specified, in which case the default is to use the <a href="Jetty+9.x.html">Jetty 9.x</a> <a href="Installed+Container.html">installed local container</a>.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code></p></td>
               <td class="confluenceTd"><p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a>.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="<wbr">"#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="<wbr">"#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
+              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code></p></td>
               <td class="confluenceTd"><p>Defines the location of a container Maven 3 artifact that will be <a href="Installer.html">downloaded and installed</a>.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
-              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="<wbr">"#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="<wbr">"#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
+              <td class="confluenceTd"><p>No default</p><p>If the user has not defined any&nbsp;<code>home</code>, <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller"&gt;&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven3PluginReferenceGuide-artifactInstaller"&gt;&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
              </tr>
             </tbody>
            </table>
@@ -703,7 +703,7 @@
               <td class="confluenceTd"><p><code>20000</code> (i.e.,&nbsp;<code>20</code> seconds)</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-prop2"&gt;&lt;properties&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-prop2"&gt;&lt;properties&gt;</a></code></p></td>
               <td class="confluenceTd"><p>User-defined properties of a deployable.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>
@@ -871,7 +871,7 @@
               <td class="confluenceTd"><p><code>${project.<wbr>build.<wbr>directory}/cargo/installs</code></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><a href="<wbr">"#Maven3PluginReferenceGuide-proxy"&gt;&lt;proxy&gt;</a></code></p></td>
+              <td class="confluenceTd"><p><code><a href="#Maven3PluginReferenceGuide-proxy"&gt;&lt;proxy&gt;</a></code></p></td>
               <td class="confluenceTd"><p>Proxy server settings, if required.</p></td>
               <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
               <td class="confluenceTd"><p>No default</p></td>

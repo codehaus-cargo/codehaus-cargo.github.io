@@ -408,11 +408,12 @@ public class WebsiteGenerator implements Runnable
                     .replace("(", "<wbr>(")
                     .replace("=", "=<wbr>")
                     .replace("&gt;", "&gt;<wbr>")
-                    .replace("&lt;/", "<wbr>&lt;/")
-                    .replace("href=\"<wbr\">\"#", "href=\"#")
-                    .replace("<wbr></a>", "</a>"));
+                    .replace("&lt;/", "<wbr>&lt;/"));
             }
-            writeFile(file, document.html().replace("<p>&nbsp; <a", "<p><a"));
+            writeFile(file, document.html()
+                .replace("<p>&nbsp; <a", "<p><a")
+                .replace("href=\"<wbr\">\"#", "href=\"#")
+                .replace("<wbr></a>", "</a>"));
             System.out.println("  - Wrote file " + file.getAbsolutePath());
         }
         System.out.println("Parsing complete");
