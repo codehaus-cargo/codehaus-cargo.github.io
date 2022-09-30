@@ -408,7 +408,9 @@ public class WebsiteGenerator implements Runnable
                     .replace("(", "<wbr>(")
                     .replace("=", "=<wbr>")
                     .replace("&gt;", "&gt;<wbr>")
-                    .replace("&lt;/", "<wbr>&lt;/"));
+                    .replace("&lt;/", "<wbr>&lt;/")
+                    .replace("href=\"<wbr\">\"#", "href=\"#")
+                    .replace("<wbr></a>", "</a>"));
             }
             writeFile(file, document.html().replace("<p>&nbsp; <a", "<p><a"));
             System.out.println("  - Wrote file " + file.getAbsolutePath());
