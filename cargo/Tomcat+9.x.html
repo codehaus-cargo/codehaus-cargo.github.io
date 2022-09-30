@@ -1324,7 +1324,7 @@
            <div class="confluence-information-macro-body">
             <p>With Tomcat 9, the Tomcat manager has multiple aspects to be careful about:</p>
             <ul>
-             <li>Your browser by default accesses the HTML-based manager whereas Codehaus Cargo needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.<wbr>URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a href="<wbr">"http://production27:8080/manager/text"&gt;http://production27:8080/manager/text</a></code></li>
+             <li>Your browser by default accesses the HTML-based manager whereas Codehaus Cargo needs to use the text-based manager. As a result, if you want to set the <code>RemotePropertySet.<wbr>URI</code> manually, please make sure you set the URL for the text-based manager, for example <code><a href="http://production27:8080/manager/text"&gt;http://production27:8080/manager/text</a></code></li>
              <li>The text-based manager requires to be accessed by a user with the <code>manager-script</code> role; and by default no user has that role. As a result, please make sure you modify your <code>tomcat-users.<wbr>xml</code> file to give that role to a user.<br>You can read more in the Tomcat documentation: <a href="http://tomcat.apache.org/tomcat-9.0-doc/manager-howto.html">http://tomcat.apache.org/tomcat-9.0-doc/manager-howto.html</a></li>
             </ul>
            </div>

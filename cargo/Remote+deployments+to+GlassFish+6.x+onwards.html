@@ -307,7 +307,9 @@ container.getConfiguration.setProperty(GeneralPropertySet.HOSTNAME, "10.0.2.15")
 DeployableFactory factory = new DefaultDeployableFactory();
 WAR war = factory.createDeployable(container.getId(), "path/to/my.war",
     DeployableType.WAR);
- 
+
+// Create dummy local configuration and deploy remotely
+container.getConfiguration().configure(container);
 Deployer deployer = new GlassFish6xInstalledLocalDeployer(container);
 deployer.deploy(war);
 </pre>
@@ -334,11 +336,19 @@ deployer.deploy(war);
         &lt;cargo.hostname&gt;10.0.2.15&lt;/cargo.hostname&gt;
         &lt;cargo.servlet.port&gt;8080&lt;/cargo.servlet.port&gt;
         &lt;cargo.glassfish.admin.port&gt;4848&lt;/cargo.glassfish.admin.port&gt;
+        &lt;cargo.remote.username&gt;admin&lt;/cargo.remote.username&gt;
+        &lt;cargo.remote.password&gt;changeme&lt;/cargo.remote.password&gt;
+        &lt;cargo.glassfish.deploy.arg.1&gt;--upload=true&lt;/cargo.glassfish.deploy.arg.1&gt;
       &lt;/properties&gt;
     &lt;/configuration&gt;
   &lt;/configuration&gt;
 &lt;/plugin&gt;
 </pre>
+           </div>
+          </div><p class="auto-cursor-target">Please note that the above deployer requires its "dummy" local configuration to exist. You hence need to run it with:</p>
+          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+           <div class="codeContent panelContent pdl">
+            <pre class="syntaxhighlighter-pre">mvn cargo:configure cargo:deploy</pre>
            </div>
           </div><script type="text/javascript">
   // Google Ads code

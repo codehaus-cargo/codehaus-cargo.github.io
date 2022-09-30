@@ -412,7 +412,8 @@ public class WebsiteGenerator implements Runnable
             }
             writeFile(file, document.html()
                 .replace("<p>&nbsp; <a", "<p><a")
-                .replace("href=\"<wbr\">\"#", "href=\"#")
+                .replace("href=\"<wbr\">\"", "href=\"")
+                .replace(".<wbr>html\"&gt;", ".html\">")
                 .replace("<wbr></a>", "</a>"));
             System.out.println("  - Wrote file " + file.getAbsolutePath());
         }

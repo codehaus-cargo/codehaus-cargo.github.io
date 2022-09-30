@@ -340,7 +340,7 @@ Deployer deployer = new ResinDeployer(container);
 deployer.deploy(war, new URLDeployableMonitor("http://server:port/some/url"));
 </pre>
            </div>
-          </div><p>The <code><a href="<wbr">"http://serverport"&gt;http://server:port/some/url</a></code> must point to a resource that is serviced by the <code>Deployable</code> being deployed.</p><h3 id="Deployer-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Starting from CARGO version 1.1.0, the CARGO ANT tasks gained support for remote deployers. Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p>
+          </div><p>The <code><a href="http://serverport"&gt;http://server:port/some/url</a></code> must point to a resource that is serviced by the <code>Deployable</code> being deployed.</p><h3 id="Deployer-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Starting from CARGO version 1.1.0, the CARGO ANT tasks gained support for remote deployers. Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;taskdef resource="cargo.tasks"&gt;
