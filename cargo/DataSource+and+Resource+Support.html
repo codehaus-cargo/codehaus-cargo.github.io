@@ -1098,8 +1098,8 @@ cargo.resource.resource.jms.queue=cargo.resource.name=jms/MyQueue\|cargo.resourc
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Java EE vs. Jakarta EE</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>Even when you use Codehaus Cargo with a Jakarta EE container, you can keep on using <code>javax.<wbr>jms.<wbr></code> definitions, which Codehaus Cargo will automatically translate to <code>jakarta.<wbr>jms.<wbr></code> for your specific container if need be. This ensures you can easily test on Java EE and Jakarta EE without having to create very complex Codehaus Cargo property sets.</p>
-            <p>Please note that this doesn't work the other way round:&nbsp;<code>jakarta.<wbr>jms.<wbr></code> definitions will not be "mapped back" to <code>javax.<wbr>jms.<wbr></code> definitions on non Jakarta EE containers.</p>
+            <p>Even when you use Codehaus Cargo with a Jakarta EE container, you can keep on using <code>javax.<wbr>jms.</code> definitions, which Codehaus Cargo will automatically translate to <code>jakarta.<wbr>jms.</code> for your specific container if need be. This ensures you can easily test on Java EE and Jakarta EE without having to create very complex Codehaus Cargo property sets.</p>
+            <p>Please note that this doesn't work the other way round:&nbsp;<code>jakarta.<wbr>jms.</code> definitions will not be "mapped back" to <code>javax.<wbr>jms.</code> definitions on non Jakarta EE containers.</p>
            </div>
           </div><h3 id="DataSourceandResourceSupport-Otherresourceproperties">Other resource properties</h3><p>All other resources are added through pipe-delimited configuration properties that starts with <code>cargo.<wbr>resource.<wbr>resource</code>. Example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">

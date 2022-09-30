@@ -340,7 +340,7 @@ Deployer deployer = new ResinDeployer(container);
 deployer.deploy(war, new URLDeployableMonitor("http://server:port/some/url"));
 </pre>
            </div>
-          </div><p>The <code><a href="http://serverport"&gt;http://server:port/some/url</a></code> must point to a resource that is serviced by the <code>Deployable</code> being deployed.</p><h3 id="Deployer-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Starting from CARGO version 1.1.0, the CARGO ANT tasks gained support for remote deployers. Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p>
+          </div><p>The <code><a href="http://serverport">http://server:port/some/url</a></code> must point to a resource that is serviced by the <code>Deployable</code> being deployed.</p><h3 id="Deployer-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Starting from CARGO version 1.1.0, the CARGO ANT tasks gained support for remote deployers. Here's a full example showing how to deploy a WAR to a remote Tomcat 6.x container.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;taskdef resource="cargo.tasks"&gt;
@@ -363,7 +363,7 @@ deployer.deploy(war, new URLDeployableMonitor("http://server:port/some/url"));
 &lt;/cargo&gt;
 </pre>
            </div>
-          </div><p>For more details, please check the example in the <a href="Remote+Container.html">Remote Container</a> section for the ANT tasks The. ANT tasks support the deployer actions <code>deploy</code>, <code>undeploy</code> and <code>redeploy</code>.</p><h3 id="Deployer-Maven3plugin">Maven 3 plugin</h3><p>Please see the <a href="Deploying+to+a+running+container.html">Deploying to a running container</a> for a concrete example and the <a href="Maven+3+Plugin+Reference+Guide.html#Maven3PluginReferenceGuide-deployer">Maven 3 Plugin Reference Guide's <code>&lt;deployer&gt;<wbr></code> section</a> for full documentation.</p></td>
+          </div><p>For more details, please check the example in the <a href="Remote+Container.html">Remote Container</a> section for the ANT tasks The. ANT tasks support the deployer actions <code>deploy</code>, <code>undeploy</code> and <code>redeploy</code>.</p><h3 id="Deployer-Maven3plugin">Maven 3 plugin</h3><p>Please see the <a href="Deploying+to+a+running+container.html">Deploying to a running container</a> for a concrete example and the <a href="Maven+3+Plugin+Reference+Guide.html#Maven3PluginReferenceGuide-deployer">Maven 3 Plugin Reference Guide's <code>&lt;deployer&gt;</code> section</a> for full documentation.</p></td>
         </tr>
        </tbody>
       </table></td>

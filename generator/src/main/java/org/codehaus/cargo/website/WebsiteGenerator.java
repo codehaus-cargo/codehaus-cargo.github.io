@@ -401,20 +401,23 @@ public class WebsiteGenerator implements Runnable
             {
                 // Allow certain characters (dots, equal signs, etc.) act as whitespace in <code> elements,
                 // so page widths remain "reasonable"
-                code.html(code.html()
-                    .replace(".", ".<wbr>")
-                    .replace(".<wbr>*", ".")
-                    .replace(".<wbr>.<wbr>.<wbr>", "...")
-                    .replace("(", "<wbr>(")
-                    .replace("=", "=<wbr>")
-                    .replace("&gt;", "&gt;<wbr>")
-                    .replace("&lt;/", "<wbr>&lt;/"));
+                String codeHtml = code.html();
+                if (!codeHtml.contains("<"))
+                {
+                    code.html(codeHtml
+                        .replace(".", ".<wbr>")
+                        .replace(".<wbr>*", ".")
+                        .replace(".<wbr>.<wbr>.<wbr>", "...")
+                        .replace("(", "<wbr>(")
+                        .replace("=", "=<wbr>")
+                        .replace("&gt;", "&gt;<wbr>")
+                        .replace("&lt;", "<wbr>&lt;"));
+                }
             }
             writeFile(file, document.html()
                 .replace("<p>&nbsp; <a", "<p><a")
-                .replace("href=\"<wbr\">\"", "href=\"")
-                .replace(".<wbr>html\"&gt;", ".html\">")
-                .replace("<wbr></a>", "</a>"));
+                .replace("<code><wbr>", "<code>")
+                .replace("<wbr></code>", "</code>"));
             System.out.println("  - Wrote file " + file.getAbsolutePath());
         }
         System.out.println("Parsing complete");

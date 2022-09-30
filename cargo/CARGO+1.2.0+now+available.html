@@ -292,7 +292,7 @@
           <ul>
            <li>CARGO Maven2/Maven3 plugin fixes and improvements:</li>
            <ul>
-            <li><code>ContainerStopMojo</code> now can resolve dependencies with scope <code>&lt;test&gt;<wbr></code>, the same way <code>ContainerRunMojo</code> and <code>ContainerStartMojo</code> can (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1069">CARGO-1069</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-527">CARGO-527</a>).</li>
+            <li><code>ContainerStopMojo</code> now can resolve dependencies with scope <code>&lt;test&gt;</code>, the same way <code>ContainerRunMojo</code> and <code>ContainerStartMojo</code> can (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1069">CARGO-1069</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-527">CARGO-527</a>).</li>
             <li>The <code>functional-tests</code> artifact of the <a href="http://cargo.codehaus.org/Maven2+Archetypes#Maven2Archetypes-separate">Separate Functional Test Module Archetype</a> now uses <code>packaging=<wbr>jar</code> and is compatible with m2e (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1065">CARGO-1065</a>).</li>
             <li>The CARGO plugin now resolves the required container JARs automatically (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-975">CARGO-975</a>), meaning that if you're for example only using CARGO with the Jetty container than the other containers' JARs will not be downloaded.</li>
            </ul>
@@ -317,12 +317,12 @@
             <li><code>AbstractCopyingInstalledLocalDeployer</code> has a generic method <code>setShouldDeployExpanded</code> with two arguments.</li>
            </ul>
            <li>File handling methods that manipulate texts now need to specify the encoding (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-909">CARGO-909</a>).</li>
-           <li>In the Maven2/Maven3 plugin, the <code>&lt;zipUrlInstaller&gt;<wbr></code> and <code>&lt;artifactInstaller&gt;<wbr></code> don't have the <code>&lt;installDir&gt;<wbr></code> attribute anymore, replaced by <code>&lt;downloadDir&gt;<wbr></code> and <code>&lt;extractDir&gt;<wbr></code> attributes (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-916">CARGO-916</a>).</li>
+           <li>In the Maven2/Maven3 plugin, the <code>&lt;zipUrlInstaller&gt;</code> and <code>&lt;artifactInstaller&gt;</code> don't have the <code>&lt;installDir&gt;</code> attribute anymore, replaced by <code>&lt;downloadDir&gt;</code> and <code>&lt;extractDir&gt;</code> attributes (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-916">CARGO-916</a>).</li>
            <li><code>TomcatPropertySet.<wbr>MANAGER_URL</code> (i.e. <code>cargo.<wbr>tomcat.<wbr>manager.<wbr>url</code>) has been removed (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-965">CARGO-965</a>), please use the generic <code>RemotePropertySet.<wbr>URI</code> (i.e. <code>cargo.<wbr>remote.<wbr>uri</code>) instead.</li>
           </ul><p>You can access the full release notes by visiting <a href="https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730">https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730</a></p><p>To use this new version:</p>
           <ul>
            <li>Users of the Java API and/or ANT tasks can download the CARGO uberjar and ANT tasks from the download page: <a href="http://cargo.codehaus.org/Downloads">http://cargo.codehaus.org/Downloads</a></li>
-           <li>Maven2/Maven3 users simply need to change the plugin's <code>&lt;version&gt;<wbr></code> to <strong>1.2.0</strong>, and Maven2/Maven3 will download the new version automatically.</li>
+           <li>Maven2/Maven3 users simply need to change the plugin's <code>&lt;version&gt;</code> to <strong>1.2.0</strong>, and Maven2/Maven3 will download the new version automatically.</li>
           </ul><p>Please share your good (and bad) findings on the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.</p><p>Enjoy!</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
