@@ -304,6 +304,10 @@ container.setHome(installer.getHome());
 // for the GlassFish6xInstalledLocalDeployer to perform a remote deployment
 container.getConfiguration.setProperty(GeneralPropertySet.HOSTNAME, "10.0.2.15");
 
+// Instruct the GlassFish asadmin to upload the file to the remote server
+container.getConfiguration.setProperty(
+    GlassFishPropertySet.DEPLOY_ARG_PREFIX + "remoteUpload", "--upload=true");
+
 DeployableFactory factory = new DefaultDeployableFactory();
 WAR war = factory.createDeployable(container.getId(), "path/to/my.war",
     DeployableType.WAR);
@@ -338,7 +342,7 @@ deployer.deploy(war);
         &lt;cargo.glassfish.admin.port&gt;4848&lt;/cargo.glassfish.admin.port&gt;
         &lt;cargo.remote.username&gt;admin&lt;/cargo.remote.username&gt;
         &lt;cargo.remote.password&gt;changeme&lt;/cargo.remote.password&gt;
-        &lt;cargo.glassfish.deploy.arg.1&gt;--upload=true&lt;/cargo.glassfish.deploy.arg.1&gt;
+        &lt;cargo.glassfish.deploy.arg.remoteUpload&gt;--upload=true&lt;/cargo.glassfish.deploy.arg.remoteUpload&gt;
       &lt;/properties&gt;
     &lt;/configuration&gt;
   &lt;/configuration&gt;
