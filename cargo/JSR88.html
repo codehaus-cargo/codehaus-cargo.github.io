@@ -305,6 +305,18 @@
             <p>The <a href="GlassFish+6.x.html">GlassFish 6.x</a> container doesn't have any remote deployers yet, as GlassFish 6.0 lacks JSR-88 support and it is unclear whether this will be included in a future release.</p>
             <p>Until then, please follow the <a href="Remote+deployments+to+GlassFish+6.x+onwards+and+to+recent+Payara+versions.html">remote deployment instructions for GlassFish 6.x</a>.</p>
            </div>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <p class="title">Remote deployment to recent Payara versions</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Recent versions of Payara might have <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1588">issues getting deployables uploaded via JSR-88</a>, resulting in errors such as:</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl">
+              <pre class="syntaxhighlighter-pre">Distributing failed: Action failed Deploying application to target server failed; File not found</pre>
+             </div>
+            </div>
+            <p>If you encounter such errors, please follow the <a href="Remote+deployments+to+GlassFish+6.x+onwards+and+to+recent+Payara+versions.html">remote deployment instructions for recent Payara versions</a>.</p>
+           </div>
           </div><p>The <a href="GlassFish+3.x.html">GlassFish 3.x</a>, <a href="GlassFish+4.x.html">GlassFish 4.x</a>,&nbsp;<a href="GlassFish+5.x.html">GlassFish 5.x</a> and&nbsp;<a href="Payara.html">Payara</a> remote containers use the JSR-88 API. For the connection to succeed, the following JARs need to be in the container classpath or in the current Java Thread's context classloader:</p>
           <ul>
            <li>deployment-client.jar and its dependencies - for <a href="GlassFish+3.x.html">GlassFish 3.x</a>, these seem to be:
