@@ -523,6 +523,20 @@ public class WebsiteGenerator implements Runnable
                 Matcher matcher = pattern.matcher(value);
                 value = matcher.replaceAll("");
 
+                // Since a release of Confluence in December 2022, some icons stopped rendering correctly
+                value = value.replace(
+                    ":green_star:",
+                    "<img class=\"emoticon emoticon-green-star\" src=\"/wiki/s/969367588/6452/059a976a67c00bf4a018f733fa54bff7d354d446/_/images/icons/emoticons/star_green.png\" width=\"16\" height=\"16\" alt=\"(green star)\">");
+                value = value.replace(
+                    ":cross_mark:",
+                    "<img class=\"emoticon emoticon-cross\" src=\"/wiki/s/969367588/6452/059a976a67c00bf4a018f733fa54bff7d354d446/_/images/icons/emoticons/error.png\" width=\"16\" height=\"16\" alt=\"(cross)\">");
+                value = value.replace(
+                    ":check_mark:",
+                    "<img class=\"emoticon emoticon-tick\" src=\"/wiki/s/969367588/6452/059a976a67c00bf4a018f733fa54bff7d354d446/_/images/icons/emoticons/check.png\" width=\"16\" height=\"16\" alt=\"(tick)\">");
+                value = value.replace(
+                    ":question_mark:",
+                    "<img class=\"emoticon emoticon-question\" src=\"/wiki/s/969367588/6452/059a976a67c00bf4a018f733fa54bff7d354d446/_/images/icons/emoticons/help_16.png\" width=\"16\" height=\"16\" alt=\"(question mark)\">");
+
                 pattern = Pattern.compile("href=\"[^\"]*/wiki/[^\"]+/CARGO/[^\"]+\"|href='[^\']*/wiki/[^\']+/CARGO/[^']+'");
                 matcher = pattern.matcher(value);
                 int start = 0;

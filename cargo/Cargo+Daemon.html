@@ -340,13 +340,13 @@
              <tr>
               <td class="confluenceTd"><p><code>daemon.<wbr>home</code></p></td>
               <td class="confluenceTd"><p>Directory in which the standaone daemon server stores its files. These include the temporary files (such as its own WAR and server temporary files) as well as the server log files (<code>AWS-xxxxxxxxxxxxx.<wbr>log</code>, where <code>xxxxxxxxxxxxx</code> is the timestamp at which the deamon was started).</p><p>This property is not used and completely ignored if the daemon WAR file is deployed on an existing container.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
+              <td class="confluenceTd"><p>👎</p></td>
               <td class="confluenceTd"><p><code>${user.<wbr>home}/.<wbr>cargo</code></p></td>
              </tr>
              <tr>
               <td class="confluenceTd"><p><code>cargo.<wbr>home</code></p></td>
               <td class="confluenceTd"><p>Directory in which the daemon (be it standalone or deployed on an existing container) stores the list of containers, downloaded container archives, container logs, etc.</p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-thumbs-down" src="attachments/thumbs_down.png" width="16" height="16" alt="(thumbs down)"></p></td>
+              <td class="confluenceTd"><p>👎</p></td>
               <td class="confluenceTd"><p><code>${user.<wbr>home}/.<wbr>cargo</code></p><p>Note that the standalone daemon by default sets this to <code>${daemon.<wbr>home}</code></p></td>
              </tr>
             </tbody>
