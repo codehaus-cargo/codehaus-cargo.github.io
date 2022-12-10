@@ -381,6 +381,7 @@ public class WebsiteGenerator implements Runnable
                 .replace(" class=\"external-link\"", "").replace(" rel=\"nofollow\"", "")
                 .replace(" class=\"conf-macro output-inline\"", "")
                 .replace("<a href=\"http://java.sun.com\">java.sun.com</a>", "java.sun.com")
+                .replace("<a href=\"http://java.io\">java.io</a>", "java.io")
                 .replace("http://jira.codehaus.org/browse/CARGO-",
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-")
                 .replace("https://jira.codehaus.org/browse/CARGO-",
@@ -523,19 +524,12 @@ public class WebsiteGenerator implements Runnable
                 Matcher matcher = pattern.matcher(value);
                 value = matcher.replaceAll("");
 
-                // Since a release of Confluence in December 2022, some icons stopped rendering correctly
-                value = value.replace(
-                    ":green_star:",
-                    "<img class=\"emoticon emoticon-green-star\" src=\"/wiki/s/969367588/6452/059a976a67c00bf4a018f733fa54bff7d354d446/_/images/icons/emoticons/star_green.png\" width=\"16\" height=\"16\" alt=\"(green star)\">");
-                value = value.replace(
-                    ":cross_mark:",
-                    "<img class=\"emoticon emoticon-cross\" src=\"/wiki/s/969367588/6452/059a976a67c00bf4a018f733fa54bff7d354d446/_/images/icons/emoticons/error.png\" width=\"16\" height=\"16\" alt=\"(cross)\">");
-                value = value.replace(
-                    ":check_mark:",
-                    "<img class=\"emoticon emoticon-tick\" src=\"/wiki/s/969367588/6452/059a976a67c00bf4a018f733fa54bff7d354d446/_/images/icons/emoticons/check.png\" width=\"16\" height=\"16\" alt=\"(tick)\">");
-                value = value.replace(
-                    ":question_mark:",
-                    "<img class=\"emoticon emoticon-question\" src=\"/wiki/s/969367588/6452/059a976a67c00bf4a018f733fa54bff7d354d446/_/images/icons/emoticons/help_16.png\" width=\"16\" height=\"16\" alt=\"(question mark)\">");
+                // Atlassian replaced most emojis with UTF-8 in December 2022, but forgot some
+                value = value.replace(":cross_mark:", "\u274C");
+                value = value.replace(":check_mark:", "\u2705");
+                value = value.replace(":green_star:", "\u2B50");
+                value = value.replaceAll("<img [^>]+alt=\"\\(thumbs up\\)\"[^>]+>", "\uD83D\uDC4D");
+                value = value.replaceAll("<img [^>]+alt=\"\\(thumbs down\\)\"[^>]+>", "\uD83D\uDC4E");
 
                 pattern = Pattern.compile("href=\"[^\"]*/wiki/[^\"]+/CARGO/[^\"]+\"|href='[^\']*/wiki/[^\']+/CARGO/[^']+'");
                 matcher = pattern.matcher(value);
