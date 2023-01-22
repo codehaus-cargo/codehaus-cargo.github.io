@@ -294,6 +294,12 @@
            <div class="confluence-information-macro-body">
             <p>The Codehaus Cargo WebSphere Liberty container is also compatible with Open Liberty.</p>
            </div>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>WebSphere Liberty 22.x onwards comes with multiple versions, some tagged as Java EE and others as Jakarta EE. Users of the Jakarta EE 9 versions should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.*</code> to <code>jakarta.*</code>. This will almost certainly require code changes to enable applications to migrate to EE 9 and later.</p>
+           </div>
           </div><h3 id="WebSphereLiberty-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
