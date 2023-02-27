@@ -12,14 +12,14 @@
     if (location.href.indexOf("http://") === 0) {
       location.replace("https://" + location.href.substring(7));
     }
-  </script> <!-- Global site tag (gtag.js) - Google Analytics -->
+  </script><!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-MYCEY8S1MG');
-  </script> <!-- Google Ads -->
+  </script><!-- Google Ads -->
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -173,6 +173,7 @@
          <li><a href="Tomcat+8.x.html">Tomcat 8.x</a></li>
          <li><a href="Tomcat+9.x.html">Tomcat 9.x</a></li>
          <li><a href="Tomcat+10.x.html">Tomcat 10.x</a></li>
+         <li><a href="Tomcat+11.x.html">Tomcat 11.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -258,7 +259,7 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul> <h3 class="heading3">RSS Feeds</h3>
+      </ul><h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -288,7 +289,7 @@
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><p>Hi CARGO enthusiasts;</p> <p>It has been more than usual since we did not come up with any new versions, and it is for a good reason: we have been working on CARGO's version 1.1.0. As usual, we have many bug fixes; but most notably we have very interesting new features.</p> <p>Some of the interesting new features would perhaps be the following:</p>
+         <td class="rightColumn"><p>Hi CARGO enthusiasts;</p><p>It has been more than usual since we did not come up with any new versions, and it is for a good reason: we have been working on CARGO's version 1.1.0. As usual, we have many bug fixes; but most notably we have very interesting new features.</p><p>Some of the interesting new features would perhaps be the following:</p>
           <ul>
            <li>The Maven2/Maven3 <code>ZipUrlInstaller</code> now reuses the proxy settings from Maven (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-517">CARGO-517</a>)</li>
            <li>Container distributions can now be directory installed from a Maven2/Maven3 artifact definition (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-449">CARGO-449</a>)</li>
@@ -300,7 +301,7 @@
            <li><code>Deployable.pingUrl</code> now supports authentication (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-813">CARGO-813</a>)</li>
            <li>All deployment methods now accept a <code>DeployableMonitor</code> parameter (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-414">CARGO-414</a>)</li>
            <li>The steps to follow in order to remotely debug a container is now documented (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-447">CARGO-447</a>); you can check <a href="http://cargo.codehaus.org/Debugging">http://cargo.codehaus.org/Debugging</a> for details</li>
-          </ul> <p>As for some of the improvements:</p>
+          </ul><p>As for some of the improvements:</p>
           <ul>
            <li>Remote deployment on Jetty is now much faster (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-884">CARGO-884</a>)</li>
            <li>Remote deployers can now change the WAR context (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-331">CARGO-331</a>)</li>
@@ -311,7 +312,7 @@
            <li><code>TomcatLocalInstalledLocalDeployer.shouldCopyWars()</code> has been made configurable (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-963">CARGO-963</a>)</li>
            <li>Container pages now include a link to the downloadable container used for tests (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-313">CARGO-313</a>) as well as a link to the CI</li>
            <li>The Maven archetypes now use the failsafe plugin (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-883">CARGO-883</a>)</li>
-          </ul> <p>And some fixes:</p>
+          </ul><p>And some fixes:</p>
           <ul>
            <li>CARGO now takes into account the encoding of your configuration and resource files (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-900">CARGO-900</a>, <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-903">CARGO-903</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-945">CARGO-945</a>)</li>
            <li>The GlassFish container's <code>asadmin</code> wrapper now correctly reports back errors (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-914">CARGO-914</a>)</li>
@@ -320,12 +321,12 @@
            <li><code>cargo:start</code> does not fail with some versions of JBoss deployables when there's no internet connection (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-956">CARGO-956</a>)</li>
            <li>The shared and extra classpath functionalities have been fixed (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-928">CARGO-928</a>)</li>
            <li>Various fixes around Windows-configurations: <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-934">CARGO-934</a>, <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-893">CARGO-893</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-939">CARGO-939</a></li>
-          </ul> <p>And, finally, some major changes that you probably won't notice (but which are one of the reasons why we changed the version number to 1.1.0):</p>
+          </ul><p>And, finally, some major changes that you probably won't notice (but which are one of the reasons why we changed the version number to 1.1.0):</p>
           <ul>
            <li>CARGO can now be built with Maven3 (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-789">CARGO-789</a>), which this also results in the removal of the Maven1 support (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-793">CARGO-793</a>).</li>
            <li>All the code now uses Java 5 APIs and style (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-656">CARGO-656</a>), moreover we have enforced the use of generics. We have also added checkstyle to all the code, including tests (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-891">CARGO-891</a>).</li>
            <li>Java API users can now change the JVM launching method they like (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-898">CARGO-898</a>), for example Eclipse instead of the default ANT.</li>
-          </ul> <p>... as well as some major changes you should take a note of:</p>
+          </ul><p>... as well as some major changes you should take a note of:</p>
           <ul>
            <li>The default value for the <code>wait</code> parameter on the ANT and Maven2/Maven3 plugins is now <code>false</code> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-896">CARGO-896</a>) 
             <ul>
@@ -338,11 +339,11 @@
            <li><code>Deployable.isExpanded()</code> and <code>Deployable.isExpanded*()</code> have been consolidated, obsoleting the <code>Deployable.isExpanded*()</code> methods (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-902">CARGO-902</a>).</li>
            <li>All API methods for copying configuration and resource files that specify no encoding are deprecated (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-900">CARGO-900</a>, <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-903">CARGO-903</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-945">CARGO-945</a>)</li>
            <li><code>AbstractCopyingInstalledLocalDeployer.setShouldDeployExpanded*s()</code> and <code>AbstractCopyingInstalledLocalDeployer.setShouldDeployExpanded()</code> have been consolidated, obsoleting the <code>AbstractCopyingInstalledLocalDeployer.setShouldDeployExpanded*()</code> methods.</li>
-          </ul> <p>For a full list, you can always check the release notes: <a href="http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10730&amp;version=16436">http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10730&amp;version=16436</a> -we have more than 80 changes!</p> <p>To use this new version:</p>
+          </ul><p>For a full list, you can always check the release notes: <a href="http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10730&amp;version=16436">http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10730&amp;version=16436</a> -we have more than 80 changes!</p><p>To use this new version:</p>
           <ul>
            <li>Users of the Java API and/or ANT tasks can download the CARGO uberjar and ANT tasks from the download page: <a href="http://cargo.codehaus.org/Downloads">http://cargo.codehaus.org/Downloads</a></li>
            <li>Maven2/Maven3 users simply need to change the plugin's <code>&lt;version&gt;</code> to <strong>1.1.0</strong>, and Maven2/Maven3 will download the new version automatically.</li>
-          </ul> <p>Please share your good (and bad) findings on the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.</p> <p>Enjoy!</p><script type="text/javascript">
+          </ul><p>Please share your good (and bad) findings on the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.</p><p>Enjoy!</p><script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
