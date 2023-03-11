@@ -425,7 +425,7 @@
               <td colspan="1" class="confluenceTd"><p>No default</p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="#Maven3PluginReferenceGuide-datasource">&lt;datasources&gt;</a></td>
+              <td colspan="1" class="confluenceTd"><code><a href="#Maven3PluginReferenceGuide-datasource">&lt;datasources&gt;</a></code></td>
               <td colspan="1" class="confluenceTd">List of&nbsp;datasources to be created in container configuration.</td>
               <td colspan="1" class="confluenceTd"><p>👎</p></td>
               <td colspan="1" class="confluenceTd">No default</td>
@@ -694,7 +694,7 @@
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;pingUrlPath&gt;</code></td>
-              <td colspan="1" class="confluenceTd"><p>URL path used to ping the deployed or undeployed application. It has similar functionality as <code>&lt;pingURL&gt;</code>, but in this case there is omitted protocol, server and port informations - they are retrieved from container configuration. For example for URL <a href="http://localhost:8080/cargo">http://localhost:8080/cargo</a>&nbsp; its URL path is just <code>/cargo</code>.</p></td>
+              <td colspan="1" class="confluenceTd"><p>URL path used to ping the deployed or undeployed application. It has similar functionality as <code>&lt;pingURL&gt;</code>, but in this case there is omitted protocol, server and port informations - they are retrieved from container configuration. For example for the URL <code><span class="nolink">http://localhost:8080/cargo</span></code> its URL path is just <code>/cargo</code>.</p></td>
               <td colspan="1" class="confluenceTd"><p>👎</p></td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
@@ -884,7 +884,7 @@
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Automatic proxy settings</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>Note that CARGO will by default reuse existing Maven 3 proxy configuration, so you won't need to type the proxy settings for the <code>zipUrlInstaller</code> element.</p>
+            <p>Note that Codehaus Cargo will by default reuse existing Maven 3 proxy configuration, so you won't need to type the proxy settings for the <code>zipUrlInstaller</code> element.</p>
            </div>
           </div>
           <div class="table-wrap">
@@ -1282,12 +1282,13 @@
            <div class="confluence-information-macro-body">
             <p>Priority for property values are as follows:</p>
             <ol>
-             <li>First and highest priority: Properties set using environment variables</li>
-             <li>Second priority: Properties loaded from a file</li>
-             <li>Third priority: Properties set in the POM</li>
-             <li>Fourth priority: Properties that should be loaded using the <code>cargo.server.settings</code> option</li>
-             <li>Fifth priority: Properties that should be loaded using <code>&lt;contextKey&gt;</code> option</li>
-             <li>Sixth and lowest priority: Default properties set by the container itself</li>
+             <li>First and highest priority (i.e., will always override all below): Properties set using environment variables</li>
+             <li>Second priority: Properties set in the <a href="#Maven3PluginReferenceGuide-configuration"><code>&lt;configuration&gt;</code></a> of the Maven 3 plugin (following <a href="https://maven.apache.org/guides/mini/guide-configuring-plugins.html#Configuring_Build_Plugins">Maven's own override rules for configurations set across parents, executions, etc.</a>)</li>
+             <li>Third&nbsp;priority: Properties loaded from a file</li>
+             <li>Fourth&nbsp;priority: Properties set in the POM</li>
+             <li>Fifth&nbsp;priority: Properties that should be loaded using the <code>cargo.server.settings</code> option</li>
+             <li>Sixth&nbsp;priority: Properties that should be loaded using <code>&lt;contextKey&gt;</code> option</li>
+             <li>Seventh and lowest priority: Default properties set by the container itself</li>
             </ol>
            </div>
           </div></td>
