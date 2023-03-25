@@ -451,7 +451,11 @@ Thread.currentThread().setContextClassLoader(classLoader);
     at org.codehaus.cargo.tools.jboss.JBossDeployer.getDeploymentManager(JBossDeployer.java:193)
     at org.codehaus.cargo.tools.jboss.JBossDeployer.deploy(JBossDeployer.java:70)
     [...]
-Caused by: org.jboss.remoting.CannotConnectException: Can not get connection to server. Problem establishing socket connection for InvokerLocator [socket://LXC_trusty_1509-a5724cdf/?dataType=invocation&amp;enableTcpNoDelay=true&amp;marshaller=org.jboss.invocation.unified.marshall.InvocationMarshaller&amp;unmarshaller=org.jboss.invocation.unified.marshall.InvocationUnMarshaller]
+Caused by: org.jboss.remoting.CannotConnectException: Can not get connection to server.
+    Problem establishing socket connection for InvokerLocator
+        [socket://LXC_trusty_1509-a5724cdf/?dataType=invocation&amp;enableTcpNoDelay=true
+         &amp;marshaller=org.jboss.invocation.unified.marshall.InvocationMarshaller
+         &amp;unmarshaller=org.jboss.invocation.unified.marshall.InvocationUnMarshaller]
     at org.jboss.remoting.transport.socket.MicroSocketClientInvoker.transport(MicroSocketClientInvoker.java:831)
     [...]
 Caused by: java.lang.IllegalArgumentException: port out of range:-1
