@@ -351,10 +351,14 @@
            <div class="confluence-information-macro-body">
             <p>The <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS">JVM start arguments configuration property</a> only exists since <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1353">Codehaus Cargo 1.4.18</a>.</p>
             <p>With older versions, you'll have to use <a href="Configuration+properties.html"><code>cargo.jvmargs</code></a> and make sure you set the execution property only on the <code>start</code> goal - Else you will get error messages such as:</p>
-            <pre>[INFO] [talledLocalContainer] FATAL ERROR in native method: JDWP No transports initialized, jvmtiError=AGENT_ERROR_TRANSPORT_INIT(197)</pre>
-            <pre>[WARNING] [talledLocalContainer] ERROR: transport error 202: bind failed: Address already in use</pre>
-            <pre>[WARNING] [talledLocalContainer] ERROR: JDWP Transport dt_socket failed to initialize, TRANSPORT_INIT(510)</pre>
-            <pre>[WARNING] [talledLocalContainer] JDWP exit error AGENT_ERROR_TRANSPORT_INIT(197): No transports initialized [../../../src/share/back/debugInit.c:741]</pre>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl">
+              <pre class="syntaxhighlighter-pre">[INFO] [talledLocalContainer] FATAL ERROR in native method: JDWP No transports initialized, jvmtiError=AGENT_ERROR_TRANSPORT_INIT(197)
+[WARNING] [talledLocalContainer] ERROR: transport error 202: bind failed: Address already in use
+[WARNING] [talledLocalContainer] ERROR: JDWP Transport dt_socket failed to initialize, TRANSPORT_INIT(510)
+[WARNING] [talledLocalContainer] JDWP exit error AGENT_ERROR_TRANSPORT_INIT(197): No transports initialized [../../../src/share/back/debugInit.c:741]</pre>
+             </div>
+            </div>
            </div>
           </div><script type="text/javascript">
   // Google Ads code
