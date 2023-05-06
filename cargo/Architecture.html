@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,14 +286,17 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; Architecture</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><h2 id="Architecture-Architecture">Architecture</h2><p></p>
+         <td class="rightColumn">
+          <h2 id="Architecture-Architecture">Architecture</h2>
+          <p></p>
           <div class="gallery conf-macro output-block">
            <table>
             <tbody>
@@ -303,7 +314,9 @@
              </tr>
             </tbody>
            </table>
-          </div><p></p><p><br class="atl-forced-newline">
+          </div>
+          <p></p>
+          <p><br class="atl-forced-newline">
            Cargo offers differents ways of using it at different levels:</p>
           <ul>
            <li><strong>Module Java API</strong>: A Java API to parse/create/merge J2EE Modules (WAR, EAR, etc)</li>
@@ -314,13 +327,15 @@
              <li><a href="Ant+support.html">Ant tasks</a>: A set of Ant tasks that wrap the Generic Java API</li>
              <li><a href="Maven+3+Plugin.html">Maven 3</a>: A Maven 3 plugin</li>
             </ul></li>
-          </ul><p>The main Container API objects are:</p>
+          </ul>
+          <p>The main Container API objects are:</p>
           <ul>
            <li>The <a href="Container.html">Container</a> is the top level interface wrapping a real physical container. Cargo supports <a href="Container.html">local</a> and <a href="Container.html">remote</a> containers. A Container is composed of a <a href="Configuration.html">Configuration</a>.</li>
            <li>A <a href="Configuration.html">Configuration</a> tells Cargo how the container is to be configured (whether it should create a <a href="Standalone+Local+Configuration.html">standalone</a> setup, whether it should be based on an <a href="Existing+Local+Configuration.html">existing</a> configuration, etc). A Configuration can be configured to install <a href="Deployable.html">Deployable</a>s before the Container is started.</li>
            <li>You can use a <a href="Deployer.html">Deployer</a> to hot-deploy <a href="Deployable.html">Deployable</a>s (i.e. after the Container is started).</li>
            <li><a href="Deployable.html">Deployable</a>s are archives to be deployed in the Container. They are WAR, EAR, EJBs, etc.</li>
-          </ul><script type="text/javascript">
+          </ul>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";

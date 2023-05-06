@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,14 +286,18 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Developers.html">Developers</a> &gt; Release procedure</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><p>This page describes how the release process is handled.</p><h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3><p>In order to release, you will need:</p>
+         <td class="rightColumn">
+          <p>This page describes how the release process is handled.</p>
+          <h3 id="Releaseprocedure-Prerequisites">Prerequisites</h3>
+          <p>In order to release, you will need:</p>
           <ul>
            <li>JDK 11. Please note that older or newer versions of the JDK cannot build all of Codehaus Cargo, and hence should not be used to release new versions.</li>
            <li>Maven 3.2.5 or newer, though it is for sure a good idea to use the latest Maven version available.<br>
@@ -295,7 +307,8 @@
             <ul>
              <li>The secret key's public part must have been uploaded to the <a href="http://pgp.mit.edu/">MIT PGP Public Key Server</a>.</li>
             </ul></li>
-           <li><p>Your&nbsp;Sonatype Nexus credentials provided using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
+           <li>
+            <p>Your&nbsp;Sonatype Nexus credentials provided using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">&lt;settings&gt;
@@ -312,7 +325,9 @@
 </pre>
              </div>
             </div></li>
-          </ul><h3 id="Releaseprocedure-Beforeyoustart">Before you start</h3><p>Before releasing, make sure what is going to be released is fully functional; in particular check that all containers pass all tests.</p>
+          </ul>
+          <h3 id="Releaseprocedure-Beforeyoustart">Before you start</h3>
+          <p>Before releasing, make sure what is going to be released is fully functional; in particular check that all containers pass all tests.</p>
           <ul>
            <li>All containers with a public download link are automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous Integration system</a> every time there is a code change:
             <ol>
@@ -329,7 +344,8 @@
              <li>All versions of WebLogic</li>
              <li>All versions of WebSphere</li>
             </ul></li>
-          </ul><script type="text/javascript">
+          </ul>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -339,7 +355,10 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3><p>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p><p>The typical Maven release procedure is to execute these commands:</p>
+          </center>
+          <h3 id="Releaseprocedure-Tagginganddeployingontothestagingarea">Tagging and deploying on to the staging area</h3>
+          <p>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p>
+          <p>The typical Maven release procedure is to execute these commands:</p>
           <ol>
            <li>A dry-run before doing the actual release to ensure there aren't any problems:<br><code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
            <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process</li>
@@ -347,7 +366,9 @@
             <ul>
              <li>If you get a message saying: <code>Error deploying artifact: Failed to transfer file. Return code is: 401 Unauthorized</code>, please make sure your credentials in the <code>settings.xml</code> file are correct.</li>
             </ul></li>
-          </ol><h3 id="Releaseprocedure-Promotingthestagedversion">Promoting the staged version</h3><p>Once the new Codehaus Cargo version is in the&nbsp;Sonatype Nexus staging repository, follow the below steps for promoting the staged version:</p>
+          </ol>
+          <h3 id="Releaseprocedure-Promotingthestagedversion">Promoting the staged version</h3>
+          <p>Once the new Codehaus Cargo version is in the&nbsp;Sonatype Nexus staging repository, follow the below steps for promoting the staged version:</p>
           <ol>
            <li>Follow the <a href="http://central.sonatype.org/pages/releasing-the-deployment.html">Releasing the Deployment</a> guide in order to <strong>close</strong> the staging repository</li>
            <li>Send an e-mail to the&nbsp;Codehaus Cargo list so users can try out the new version. We typically leave the vote open for 72 hours.</li>
@@ -381,7 +402,8 @@
              <li>Check in and push all changes, this will automatically update the Codehaus Cargo Web site</li>
             </ol></li>
            <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>
-          </ol><p><br></p>
+          </ol>
+          <p><br></p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">How to insert using the Wiki Markup</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">

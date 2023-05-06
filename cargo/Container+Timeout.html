@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,20 +286,25 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Container.html">Container</a> &gt; <a href="Local+Container.html">Local Container</a> &gt; Container Timeout</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><h3 id="ContainerTimeout-Definition">Definition</h3>Timeout after which the container start/stop is deemed failed
+         <td class="rightColumn">
+          <h3 id="ContainerTimeout-Definition">Definition</h3>Timeout after which the container start/stop is deemed failed
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
-          </div><h3 id="ContainerTimeout-Explanation">Explanation</h3><p>Cargo has a timeout for container start and stop operations. If the time taken to start/stop a container exceeds the timeout period the operations is considered failed and the container is then set in the unknown state.</p><p>The default timeout value is 2 minutes (120000 milliseconds). This value can be modified as shown below.</p>
+          </div>
+          <h3 id="ContainerTimeout-Explanation">Explanation</h3>
+          <p>Cargo has a timeout for container start and stop operations. If the time taken to start/stop a container exceeds the timeout period the operations is considered failed and the container is then set in the unknown state.</p>
+          <p>The default timeout value is 2 minutes (120000 milliseconds). This value can be modified as shown below.</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -309,7 +322,8 @@ within the timeout period [5000]. The Deployable state is thus unknown.
              </div>
             </div>
            </div>
-          </div><script type="text/javascript">
+          </div>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -319,7 +333,8 @@ within the timeout period [5000]. The Deployable state is thus unknown.
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="ContainerTimeout-ExampleusingtheJavaAPI">Example using the Java API</h3>
+          </center>
+          <h3 id="ContainerTimeout-ExampleusingtheJavaAPI">Example using the Java API</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">LocalContainer container = ...;
@@ -327,7 +342,8 @@ container.setTimeout(180000L);
 System.out.println("Timeout = " + container.getTimeout());
 </pre>
            </div>
-          </div><h3 id="ContainerTimeout-ExampleusingtheMaven3plugin">Example using the Maven 3 plugin</h3>
+          </div>
+          <h3 id="ContainerTimeout-ExampleusingtheMaven3plugin">Example using the Maven 3 plugin</h3>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;container&gt;
@@ -337,7 +353,12 @@ System.out.println("Timeout = " + container.getTimeout());
 &lt;/container&gt;
 </pre>
            </div>
-          </div><h3 id="ContainerTimeout-Disablingtimeout">Disabling timeout</h3><p>If you set the timeout to <code>0</code>, CARGO will not wait for the container to start or stop.</p><h3 id="ContainerTimeout-Usingdifferenttimeoutswhenstartingandstoppingthecontainer">Using different timeouts when starting and stopping the container</h3><p>Shutdown usually takes much much shorther than startup, it therefore often makes sense to use a shorter timeout for stopping the container than for starting it. With the Cargo Maven plugin, this is easy to do: indeed, in each <code>&lt;execution&gt;</code> block of the Maven plugin, you can have different <code>&lt;configuration&gt;</code> blocks. When done so, the plugin will use an inheritance scheme; i.e. for each execution the outermost configuration elements will be overriden by innermost elements each time these are defined.</p><p>Here is an example that uses different timeouts when starting and stopping the container:</p>
+          </div>
+          <h3 id="ContainerTimeout-Disablingtimeout">Disabling timeout</h3>
+          <p>If you set the timeout to <code>0</code>, CARGO will not wait for the container to start or stop.</p>
+          <h3 id="ContainerTimeout-Usingdifferenttimeoutswhenstartingandstoppingthecontainer">Using different timeouts when starting and stopping the container</h3>
+          <p>Shutdown usually takes much much shorther than startup, it therefore often makes sense to use a shorter timeout for stopping the container than for starting it. With the Cargo Maven plugin, this is easy to do: indeed, in each <code>&lt;execution&gt;</code> block of the Maven plugin, you can have different <code>&lt;configuration&gt;</code> blocks. When done so, the plugin will use an inheritance scheme; i.e. for each execution the outermost configuration elements will be overriden by innermost elements each time these are defined.</p>
+          <p>Here is an example that uses different timeouts when starting and stopping the container:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;

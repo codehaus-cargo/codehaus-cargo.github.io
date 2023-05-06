@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,44 +286,52 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; CARGO 1.3.0 is now available</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><p>Dear CARGO enthusiasts<br><br>
+         <td class="rightColumn">
+          <p>Dear CARGO enthusiasts<br><br>
             Our next big release of CARGO, version <strong>1.3.0</strong>, is now available! It comes with a lot of very attractive new features:</p>
           <ul>
            <li>The newest and latest Jetty 9.x is supported [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1147">CARGO-1147</a>]</li>
            <li>IBM WebSphere 8.5.x container has been added -making another very old CARGO ticket get solved! [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-147">CARGO-147</a>]</li>
            <li>We have introduced a new feature, the Cargo Daemon: this is a Web-based application that uses the Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. It can be accessed using a browser-based UI, via Java API or Maven2 plugin. [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1148">CARGO-1148</a>]</li>
            <li>Local and embedded deployer support has been added to the ANT plugin [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1144">CARGO-1144</a>]</li>
-          </ul><p>The Apache Geronimo container has been improved a lot as well:</p>
+          </ul>
+          <p>The Apache Geronimo container has been improved a lot as well:</p>
           <ul>
            <li>Bundle support has been added to Geronimo 3.x [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1143">CARGO-1143</a>]</li>
            <li>Extra classpath can now be set on Geronimo 2.x and 3.x [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1145">CARGO-1145</a>]</li>
            <li>It is now possible to define datasources on Geronimo 2.x and 3.x [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1146">CARGO-1146</a>]</li>
-          </ul><p>We have also fixed some JBoss issues (all of them on JBoss 7.x and 7.1.x):</p>
+          </ul>
+          <p>We have also fixed some JBoss issues (all of them on JBoss 7.x and 7.1.x):</p>
           <ul>
            <li>Non-default deployment directory is now supported [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1141">CARGO-1141</a>]</li>
            <li><code>GeneralPropertySet.RUNTIME_ARGS</code> is now set at the correct place [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1139">CARGO-1139</a>]</li>
            <li>Extra and shared classpath is now fully supported [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1149">CARGO-1149</a>]</li>
-          </ul><p>As for the other fixes and improvements:</p>
+          </ul>
+          <p>As for the other fixes and improvements:</p>
           <ul>
            <li>Direct configuration of SSL/TLS connector options for Tomcat 5.x, 6.x, and 7.x stand alone local configurations is allowed [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1135">CARGO-1135</a>]</li>
            <li>OC4J's MIME types now has text/css [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-281">CARGO-281</a>]</li>
            <li>Property injection from Maven <code>settings.xml</code> has been fixed [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1136">CARGO-1136</a>]</li>
            <li>Non 200 HTTP status codes are accepted by the deployment's ping component [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1118">CARGO-1118</a>]</li>
            <li>Shared classpath for WARs are now supported on Jetty [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-948">CARGO-948</a>]</li>
-          </ul><p>To try this new version:</p>
+          </ul>
+          <p>To try this new version:</p>
           <ul>
            <li>Users of the <a href="Maven+3+Plugin.html">Maven2/Maven3 plugin</a> simply need to use the CARGO plugin version <strong>1.3.0</strong>.</li>
            <li>Users of the <a href="Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.3.0/cargo-core-uberjar-1.3.0.jar">https://repo.maven.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.3.0/cargo-core-uberjar-1.3.0.jar</a></li>
            <li>Similarly, users of the <a href="Ant+support.html">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.3.0/cargo-ant-1.3.0.jar">https://repo.maven.org/maven2/org/codehaus/cargo/cargo-ant/1.3.0/cargo-ant-1.3.0.jar</a></li>
            <li>Finally, the ones who want to use the <a href="Cargo+Daemon.html">Cargo Daemon</a> can download the webapp from <a href="https://repo.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.3.0/cargo-daemon-webapp-1.3.0.war">https://repo.maven.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.3.0/cargo-daemon-webapp-1.3.0.war</a></li>
-          </ul><p>Enjoy!</p><script type="text/javascript">
+          </ul>
+          <p>Enjoy!</p>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";

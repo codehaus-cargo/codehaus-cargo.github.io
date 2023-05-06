@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,14 +286,16 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Developers.html">Developers</a> &gt; Building</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><h1 id="Building-Prequisites">Prequisites</h1>
+         <td class="rightColumn">
+          <h1 id="Building-Prequisites">Prequisites</h1>
           <ul>
            <li>Check out or download as a ZIP file the Codehaus Cargo source code from <a href="Source+code.html">Github</a> into a <code>CARGOHOME</code> directory (wherever you want on your machine).</li>
            <li>Install the JDK 11. If you really want to build with JDK 8 or with JDK 12 and above, read our chapter on <a href="#Building-nonJdk11">building with older or newer versions of the JDK</a>.</li>
@@ -293,7 +303,10 @@
             <ul>
              <li>If you are using Maven 3.8.1 or newer, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="#Building-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
             </ul></li>
-          </ul><p>Verify your installation works by running the following command in a command prompt / terminal window: <code>mvn -version</code></p><h1 id="Building-Building">Building</h1><p>To build Codehaus Cargo:</p>
+          </ul>
+          <p>Verify your installation works by running the following command in a command prompt / terminal window: <code>mvn -version</code></p>
+          <h1 id="Building-Building">Building</h1>
+          <p>To build Codehaus Cargo:</p>
           <ul>
            <li>Go to <code>CARGOHOME</code> and run <code>mvn install</code><br>
             This will build the full Cargo project.</li>
@@ -304,7 +317,8 @@
            <div class="confluence-information-macro-body">
             <p>The&nbsp;Codehaus Cargo build contains functional tests. Those tests are run on different containers. The first time you build&nbsp;Codehaus Cargo it will download those container distributions which will take some time (the containers are installed into <code>core/samples/java/installs</code>). If you want to tell&nbsp;Codehaus Cargo to run only on some specific container, see below.</p>
            </div>
-          </div><script type="text/javascript">
+          </div>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -314,11 +328,19 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="Building-Selectingcontainers">Selecting containers</h3><p>The default list of containers to run on depends a property <code>cargo.containers</code> defined in <code>CARGOHOME/core/samples/pom.xml</code>. It can also be supplied at the command line by using profiles (<code>-P&lt;containerId&gt;</code>).</p><p>For example if you only want to run on <a href="Tomcat+8.x.html">Tomcat 8.x</a> you'd run: <code>mvn -Ptomcat8x clean install</code></p><h3 id="Building-Proxysettings">Proxy settings</h3><p>If you need to build&nbsp;Codehaus Cargo from behind a proxy, proceed as follows:</p>
+          </center>
+          <h3 id="Building-Selectingcontainers">Selecting containers</h3>
+          <p>The default list of containers to run on depends a property <code>cargo.containers</code> defined in <code>CARGOHOME/core/samples/pom.xml</code>. It can also be supplied at the command line by using profiles (<code>-P&lt;containerId&gt;</code>).</p>
+          <p>For example if you only want to run on <a href="Tomcat+8.x.html">Tomcat 8.x</a> you'd run: <code>mvn -Ptomcat8x clean install</code></p>
+          <h3 id="Building-Proxysettings">Proxy settings</h3>
+          <p>If you need to build&nbsp;Codehaus Cargo from behind a proxy, proceed as follows:</p>
           <ul>
            <li>Edit the <code>.m2/settings.xml</code> file from your home directory (<code>C:\Documents and Settings\<em>username</em></code> or <code>C:\Users\<em>username</em></code> on Windows),</li>
            <li>Comment out the <code>&lt;proxy&gt;</code> element and fill in the proxy server settings accordingly.</li>
-          </ul><p><span class="confluence-anchor-link conf-macro output-inline" id="Building-ow2override"><span class="confluence-anchor-link" id="ow2override"> </span></span></p><h3 id="Building-ArtifactTransferExceptionwithMaven3.8.1onwards"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</h3><p>With Maven 3.8.1 onwards you might get errors such as:</p>
+          </ul>
+          <p><span class="confluence-anchor-link conf-macro output-inline" id="Building-ow2override"><span class="confluence-anchor-link" id="ow2override"> </span></span></p>
+          <h3 id="Building-ArtifactTransferExceptionwithMaven3.8.1onwards"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</h3>
+          <p>With Maven 3.8.1 onwards you might get errors such as:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Error when building with Maven 3.8.1 onwards</b>
@@ -328,7 +350,8 @@
 Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.10.7-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/):
 Blocked mirror for repositories: [ow2-snapshot (http://repository.ow2.org/nexus/content/repositories/snapshots, default, snapshots)]</pre>
            </div>
-          </div><p>To work around the issue, create a <code>settings.xml</code> file in your <code>.m2</code> home which overrides the HTTP-based OW2 SNAPSHOTS repository:</p>
+          </div>
+          <p>To work around the issue, create a <code>settings.xml</code> file in your <code>.m2</code> home which overrides the HTTP-based OW2 SNAPSHOTS repository:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>settings.xml sample</b>
@@ -348,13 +371,17 @@ Blocked mirror for repositories: [ow2-snapshot (http://repository.ow2.org/nexus/
   &lt;/mirrors&gt;
 &lt;/settings&gt;</pre>
            </div>
-          </div><p class="auto-cursor-target"><span class="confluence-anchor-link conf-macro output-inline" id="Building-nonJdk11"><span class="confluence-anchor-link" id="nonJdk11"> </span></span></p><h3 class="auto-cursor-target" id="Building-BuildingwitholderornewerversionsoftheJDK">Building with older or newer versions of the JDK</h3><p class="auto-cursor-target">Codehaus Cargo has support for very old and very new containers, which implies it has quite a broad combination of Java source and target version requirements:</p>
+          </div>
+          <p class="auto-cursor-target"><span class="confluence-anchor-link conf-macro output-inline" id="Building-nonJdk11"><span class="confluence-anchor-link" id="nonJdk11"> </span></span></p>
+          <h3 class="auto-cursor-target" id="Building-BuildingwitholderornewerversionsoftheJDK">Building with older or newer versions of the JDK</h3>
+          <p class="auto-cursor-target">Codehaus Cargo has support for very old and very new containers, which implies it has quite a broad combination of Java source and target version requirements:</p>
           <ul>
            <li class="auto-cursor-target"><a href="Resin+3.x.html">Resin 3.x</a> requires Java 6 (it cannot run with newer versions of Java), and since it is executed using a <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/resin/internal/ResinRun.html"><code>ResinRun</code></a> class the whole Resin container must be compiled with Java 6</li>
            <li class="auto-cursor-target">In addition, as other containers such as <a href="JOnAS+5.x.html">JOnAS 5.x</a> also require Java 6, all test samples need to be built using Java 6</li>
            <li class="auto-cursor-target">The <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a> for Jetty 6.x as well as for Jetty 7.x to 9.x are built with Java 6, so we can support a broad range of Java versions on these Jetty containers</li>
            <li class="auto-cursor-target">At the same time, the <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a> for Jetty 10.x onwards requires the JDK 11 (because Jetty 10.x requires JDK 11 or above)</li>
-          </ul><p>The only version of the JDK that can build with all these constraints is the JDK 11. We hence have certain modules of the Codehaus Cargo build that do not activate on JDK 8, and some others that don't activate on JDK 12 onwards. On these JDKs, you hence will get exceptions such as:</p>
+          </ul>
+          <p>The only version of the JDK that can build with all these constraints is the JDK 11. We hence have certain modules of the Codehaus Cargo build that do not activate on JDK 8, and some others that don't activate on JDK 12 onwards. On these JDKs, you hence will get exceptions such as:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Error when building with JDK 8 or JDK 12 and above</b>
@@ -363,7 +390,8 @@ Blocked mirror for repositories: [ow2-snapshot (http://repository.ow2.org/nexus/
             <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.5.0:copy (copy-test-ear) on project cargo-core-container-jonas:
 Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:simple-ear:ear:1.10.7-SNAPSHOT -&gt; [Help 1]</pre>
            </div>
-          </div><p>To build on these JDKs, you can either have a "pre-build" in JDK 11, or use the <a href="Maven+3+Plugin+Installation.html#Maven3PluginInstallation-snapshots">snapshots repository</a> by adding the below to your Maven <code>settings.xml</code>:</p>
+          </div>
+          <p>To build on these JDKs, you can either have a "pre-build" in JDK 11, or use the <a href="Maven+3+Plugin+Installation.html#Maven3PluginInstallation-snapshots">snapshots repository</a> by adding the below to your Maven <code>settings.xml</code>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>settings.xml sample</b>

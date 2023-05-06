@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,20 +286,28 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Container.html">Container</a> &gt; <a href="Local+Container.html">Local Container</a> &gt; Container Start</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><h3 id="ContainerStart-Definition">Definition</h3>Start a container that is not already running
+         <td class="rightColumn">
+          <h3 id="ContainerStart-Definition">Definition</h3>Start a container that is not already running
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>This feature is only available for <a href="Local+Container.html">local containers</a></p>
            </div>
-          </div><h3 id="ContainerStart-Explanation">Explanation</h3><p>First you need to create a <a href="Container+Instantiation.html">container instance</a>.</p><p>Once you have this container instance, starting the container is as simple as calling the <code>start()</code> method. Before doing this though you'll need to ensure you have defined the container's <code>home</code> (if you're using a container in <a class="unresolved" href="#">standalone mode</a> - It's not required for containers in <a class="unresolved" href="#">embedded mode</a>).</p><p>Of course it you wish to statically deploy archives, you'll need to add <a href="Deployable.html">deployables</a> to the container.</p><p>It is important to note that the <code>LocalContainer.start()</code> method will wait until the container is <strong>fully started</strong> before returning.</p><script type="text/javascript">
+          </div>
+          <h3 id="ContainerStart-Explanation">Explanation</h3>
+          <p>First you need to create a <a href="Container+Instantiation.html">container instance</a>.</p>
+          <p>Once you have this container instance, starting the container is as simple as calling the <code>start()</code> method. Before doing this though you'll need to ensure you have defined the container's <code>home</code> (if you're using a container in <a class="unresolved" href="#">standalone mode</a> - It's not required for containers in <a class="unresolved" href="#">embedded mode</a>).</p>
+          <p>Of course it you wish to statically deploy archives, you'll need to add <a href="Deployable.html">deployables</a> to the container.</p>
+          <p>It is important to note that the <code>LocalContainer.start()</code> method will wait until the container is <strong>fully started</strong> before returning.</p>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -301,7 +317,9 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="ContainerStart-ExampleusingtheJavaAPI">Example using the Java API</h3><p>Starting Resin 3.x with no deployable:</p>
+          </center>
+          <h3 id="ContainerStart-ExampleusingtheJavaAPI">Example using the Java API</h3>
+          <p>Starting Resin 3.x with no deployable:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
@@ -311,13 +329,23 @@ container.setHome("c:/apps/resin-3.0.15");
 container.start();
 </pre>
            </div>
-          </div><h3 id="ContainerStart-ExampleusingtheAnttasks">Example using the Ant tasks</h3><p>Before being able to use the Cargo Ant tasks you need to register them against Ant. This is done by using the Ant <code>&lt;taskdef&gt;</code> element. See the <a href="Ant+support.html">Ant support page</a>. The action to start the container is specified using the <code>action="start"</code> attribute as shown below.</p><p>Starting Resin 3.x with no deployable:</p>
+          </div>
+          <h3 id="ContainerStart-ExampleusingtheAnttasks">Example using the Ant tasks</h3>
+          <p>Before being able to use the Cargo Ant tasks you need to register them against Ant. This is done by using the Ant <code>&lt;taskdef&gt;</code> element. See the <a href="Ant+support.html">Ant support page</a>. The action to start the container is specified using the <code>action="start"</code> attribute as shown below.</p>
+          <p>Starting Resin 3.x with no deployable:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;cargo containerId="resin3x" home="c:/apps/resin-3.0.15" action="start"/&gt;
 </pre>
            </div>
-          </div><h3 id="ContainerStart-ExampleusingtheMaven3plugin">Example using the Maven3 plugin</h3><p>For the Maven 3 plugin, please read: <a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a>.</p><h3 id="ContainerStart-Othertips">Other tips</h3><h5 id="ContainerStart-LettingthestartedcontaineroutliveCodehausCargo'sprocess">Letting the started container outlive Codehaus Cargo's process</h5><p>By default, the container started by&nbsp;Codehaus Cargo is linked to Codehaus Cargo's process; which means that once the Java process that has started the container is finished (be it via Java API, ANT or the Maven 3 plugin) the started container will also be killed.</p><p>In some cases, mostly if you want to use&nbsp;Codehaus Cargo as a "launcher script", you need the started container to "outlive" Codehaus Cargo's process, i.e. that the started container keeps running even after&nbsp;Codehaus Cargo itself has terminated. This can be achieved by simply setting the property <code>GeneralPropertySet.SPAWN_PROCESS</code> (or, in the Ant tasks or Maven 3 plugin, the <code>cargo.process.spawn</code> property) to <code>true</code>.</p><p>Note that this feature is only available for standalone containers (i.e., not for embeded containers).</p></td>
+          </div>
+          <h3 id="ContainerStart-ExampleusingtheMaven3plugin">Example using the Maven3 plugin</h3>
+          <p>For the Maven 3 plugin, please read: <a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a>.</p>
+          <h3 id="ContainerStart-Othertips">Other tips</h3>
+          <h5 id="ContainerStart-LettingthestartedcontaineroutliveCodehausCargo'sprocess">Letting the started container outlive Codehaus Cargo's process</h5>
+          <p>By default, the container started by&nbsp;Codehaus Cargo is linked to Codehaus Cargo's process; which means that once the Java process that has started the container is finished (be it via Java API, ANT or the Maven 3 plugin) the started container will also be killed.</p>
+          <p>In some cases, mostly if you want to use&nbsp;Codehaus Cargo as a "launcher script", you need the started container to "outlive" Codehaus Cargo's process, i.e. that the started container keeps running even after&nbsp;Codehaus Cargo itself has terminated. This can be achieved by simply setting the property <code>GeneralPropertySet.SPAWN_PROCESS</code> (or, in the Ant tasks or Maven 3 plugin, the <code>cargo.process.spawn</code> property) to <code>true</code>.</p>
+          <p>Note that this feature is only available for standalone containers (i.e., not for embeded containers).</p></td>
         </tr>
        </tbody>
       </table></td>

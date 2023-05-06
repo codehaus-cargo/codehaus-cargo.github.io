@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,14 +286,16 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> &gt; <a href="Maven+3+Plugin+Getting+Started.html">Maven 3 Plugin Getting Started</a> &gt; Deploying to a running container</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><p>Cargo supports <a href="Deployer.html">deploying</a> to an already running container. This feature is called <a href="Hot+Deployment.html">Hot Deployment</a>). You call it by using the (<code><strong>cargo:deploy</strong></code>) goal (e.g. <code>mvn cargo:deploy</code>).</p>
+         <td class="rightColumn">
+          <p>Cargo supports <a href="Deployer.html">deploying</a> to an already running container. This feature is called <a href="Hot+Deployment.html">Hot Deployment</a>). You call it by using the (<code><strong>cargo:deploy</strong></code>) goal (e.g. <code>mvn cargo:deploy</code>).</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <p class="title">No need to deploy if you are using Cargo to start your container</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -297,7 +307,10 @@
            <div class="confluence-information-macro-body">
             <p>Many containers have their specific files for redefining context roots (Tomcat has context.xml, JBoss has jboss-web.xml, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the&nbsp;Codehaus Cargo deployer.</p>
            </div>
-          </div><h3 id="Deployingtoarunningcontainer-Usingalocaldeployer">Using a local deployer</h3><p>A local <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Local+Container.html">Local Container</a> (i.e. a container installed on the same machine where the deployer is executing). Thus you'll need to use a local container id in <code>&lt;containerId&gt;</code>. You can check that by reviewing the supported <a href="Containers.html">container list</a> and selecting the container you wish to use.</p><p><strong>Example of doing a local deploy to an existing configuration</strong>:</p>
+          </div>
+          <h3 id="Deployingtoarunningcontainer-Usingalocaldeployer">Using a local deployer</h3>
+          <p>A local <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Local+Container.html">Local Container</a> (i.e. a container installed on the same machine where the deployer is executing). Thus you'll need to use a local container id in <code>&lt;containerId&gt;</code>. You can check that by reviewing the supported <a href="Containers.html">container list</a> and selecting the container you wish to use.</p>
+          <p><strong>Example of doing a local deploy to an existing configuration</strong>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[...]
@@ -347,13 +360,16 @@
 [...]
 </pre>
            </div>
-          </div><h3 id="Deployingtoarunningcontainer-Usingaremotedeployer">Using a remote deployer</h3><p>A remote <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Remote+Container.html">Remote Container</a> (i.e. a container that is running and that has been started externally from Cargo). Thus you'll need to use an id for a remote container in <code>&lt;containerId&gt;</code> and a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</p>
+          </div>
+          <h3 id="Deployingtoarunningcontainer-Usingaremotedeployer">Using a remote deployer</h3>
+          <p>A remote <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Remote+Container.html">Remote Container</a> (i.e. a container that is running and that has been started externally from Cargo). Thus you'll need to use an id for a remote container in <code>&lt;containerId&gt;</code> and a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <p class="title">Not all containers have a remote Deployer implemented</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>We haven't finished implementing remote Deployers for all containers yet. Please <a href="Containers.html">check</a> if your favorite container has it implemented. If not you'll need to deploy your deployables by defining them in a standalone local configuration as shown in the <a href="Starting+and+stopping+a+container.html">starting and stopping a container</a> use case or the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
            </div>
-          </div><p><strong>Example of doing a remote deploy using a runtime configuration</strong>:</p>
+          </div>
+          <p><strong>Example of doing a remote deploy using a runtime configuration</strong>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[...]
@@ -393,7 +409,9 @@
 [...]
 </pre>
            </div>
-          </div><p>As you can see the information to connect and do the deployment to the remote container is specified in the runtime configuration (<code>cargo.remote.username</code> and <code>cargo.remote.password</code>). The properties to define are deployer-dependent.</p><p>Here's an another example, this time deploying the current project's artifact to a running JBoss 4.2.x container using a default 8080 port and default authorizations:</p>
+          </div>
+          <p>As you can see the information to connect and do the deployment to the remote container is specified in the runtime configuration (<code>cargo.remote.username</code> and <code>cargo.remote.password</code>). The properties to define are deployer-dependent.</p>
+          <p>Here's an another example, this time deploying the current project's artifact to a running JBoss 4.2.x container using a default 8080 port and default authorizations:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[...]
@@ -406,7 +424,9 @@
 [...]
 </pre>
            </div>
-          </div><p>Just type <code>mvn cargo:deploy</code>. Notice that we haven't specified a <code>&lt;deployer&gt;</code> element nor a <code>&lt;configuration&gt;</code> one: this is because the plugin is smart enough to create default instances for you.</p><script type="text/javascript">
+          </div>
+          <p>Just type <code>mvn cargo:deploy</code>. Notice that we haven't specified a <code>&lt;deployer&gt;</code> element nor a <code>&lt;configuration&gt;</code> one: this is because the plugin is smart enough to create default instances for you.</p>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -416,7 +436,11 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3><p>If the deployment, undeployment or redeployment is done without any watchdog,&nbsp;Codehaus Cargo will rely on the error codes return by the container's deployer to detect failures.</p><p>This is sometimes not desired: for example, if one calls <code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p><p>To work around the issue, make sure you define your deployable together with a watchdog. For example:</p>
+          </center>
+          <h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3>
+          <p>If the deployment, undeployment or redeployment is done without any watchdog,&nbsp;Codehaus Cargo will rely on the error codes return by the container's deployer to detect failures.</p>
+          <p>This is sometimes not desired: for example, if one calls <code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p>
+          <p>To work around the issue, make sure you define your deployable together with a watchdog. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>Deployable with a ping URL</b>
@@ -429,7 +453,8 @@
   &lt;/deployable&gt;
 &lt;/deployables&gt;</pre>
            </div>
-          </div><p>In that case:</p>
+          </div>
+          <p>In that case:</p>
           <ul>
            <li>When you will call <code>cargo:deploy</code>:
             <ul>
@@ -445,7 +470,8 @@
              <li>If the watchdog detects that the deployable is indeed not deployed, the overall result is a <code>BUILD SUCCESSFUL</code></li>
              <li>If the watchdog detects that the deployable is still deployed, you then get a <code>BUILD FAILURE</code></li>
             </ul></li>
-          </ul><p>This functionality is available in the <a href="Javadocs.html">Java API</a>, <a href="Ant+support.html">Ant tasks</a> and <a href="Maven+3+Plugin.html">Maven 3 plugin</a>.</p></td>
+          </ul>
+          <p>This functionality is available in the <a href="Javadocs.html">Java API</a>, <a href="Ant+support.html">Ant tasks</a> and <a href="Maven+3+Plugin.html">Maven 3 plugin</a>.</p></td>
         </tr>
        </tbody>
       </table></td>

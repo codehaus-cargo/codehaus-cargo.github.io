@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,36 +286,54 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; Hello 2021 and hello Jakarta EE support with Codehaus Cargo 1.8.4</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><p>Dear Codehaus Cargo enthusiasts</p><p>We are hoping you had a nice start to 2021!</p><p>On this second day of 2021 we are happy to announce Codehaus Cargo version 1.8.4. This new version comes with a bug fix, and a full support for Jakarta EE:</p>
+         <td class="rightColumn">
+          <p>Dear Codehaus Cargo enthusiasts</p>
+          <p>We are hoping you had a nice start to 2021!</p>
+          <p>On this second day of 2021 we are happy to announce Codehaus Cargo version 1.8.4. This new version comes with a bug fix, and a full support for Jakarta EE:</p>
           <ul>
-           <li><p>General</p>
+           <li>
+            <p>General</p>
             <ul>
-             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1514">CARGO-1514</a>] - Add the Jakarta EE converter to samples of affected containers<br>
+             <li>
+              <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1514">CARGO-1514</a>] - Add the Jakarta EE converter to samples of affected containers<br>
                To achieve this, we actually integrated the <a href="https://github.com/apache/tomcat-jakartaee-migration">Jakarta EE migrator</a> into our build (more precisely, per-container testing) process and it is quite a promising piece of software! We hence also adapted, for the supporting containers, the deployment of <code>javax.jms</code> and <code>javax.mail</code> to support their Jakarta EE counterparts and to <a href="https://codehaus-cargo.github.io/cargo/DataSource+and+Resource+Support.html">intelligently mirror these when needed</a>. For those of you who don’t yet have a goal for 2021, Jakarta EE migration can definitely be a good one <img class="emoticon emoticon-wink" src="attachments/wink.png" width="16" height="16" alt="(wink)"></p></li>
             </ul></li>
-           <li><p>Containers - GlassFish</p>
+           <li>
+            <p>Containers - GlassFish</p>
             <ul>
-             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1541">CARGO-1541</a>] - Properly implement <code>javax.</code> to <code>jakarta.</code> changes for JMS support on <a href="https://codehaus-cargo.github.io/cargo/GlassFish+6.x.html">GlassFish 6.x</a>.</p></li>
+             <li>
+              <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1541">CARGO-1541</a>] - Properly implement <code>javax.</code> to <code>jakarta.</code> changes for JMS support on <a href="https://codehaus-cargo.github.io/cargo/GlassFish+6.x.html">GlassFish 6.x</a>.</p></li>
             </ul></li>
-           <li><p>Containers - Tomcat and TomEE</p>
+           <li>
+            <p>Containers - Tomcat and TomEE</p>
             <ul>
-             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1539">CARGO-1539</a>] - Add <code>websocket</code> support for the embedded <a href="https://codehaus-cargo.github.io/cargo/Tomcat+8.x.html">Tomcat 8.x</a>, <a href="https://codehaus-cargo.github.io/cargo/Tomcat+9.x.html">9.x</a> and <a href="https://codehaus-cargo.github.io/cargo/Tomcat+10.x.html">10.x</a> containers when run via the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></p></li>
-             <li><p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1540">CARGO-1540</a>] - Properly implement <code>javax.</code> to <code>jakarta.</code> changes for <a href="https://codehaus-cargo.github.io/cargo/Tomcat+10.x.html">Tomcat 10.x</a> and <a href="https://codehaus-cargo.github.io/cargo/TomEE+9.x.html">TomEE 9.x</a></p></li>
+             <li>
+              <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1539">CARGO-1539</a>] - Add <code>websocket</code> support for the embedded <a href="https://codehaus-cargo.github.io/cargo/Tomcat+8.x.html">Tomcat 8.x</a>, <a href="https://codehaus-cargo.github.io/cargo/Tomcat+9.x.html">9.x</a> and <a href="https://codehaus-cargo.github.io/cargo/Tomcat+10.x.html">10.x</a> containers when run via the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></p></li>
+             <li>
+              <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1540">CARGO-1540</a>] - Properly implement <code>javax.</code> to <code>jakarta.</code> changes for <a href="https://codehaus-cargo.github.io/cargo/Tomcat+10.x.html">Tomcat 10.x</a> and <a href="https://codehaus-cargo.github.io/cargo/TomEE+9.x.html">TomEE 9.x</a></p></li>
             </ul></li>
-          </ul><p>To try out this latest version:</p>
+          </ul>
+          <p>To try out this latest version:</p>
           <ul>
-           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.8.4</strong></p></li>
-           <li><p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.4/cargo-core-uberjar-1.8.4.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.4/cargo-core-uberjar-1.8.4.jar</a></p></li>
-           <li><p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.4/cargo-ant-1.8.4.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.4/cargo-ant-1.8.4.jar</a></p></li>
-           <li><p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from&nbsp;<a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.4/cargo-daemon-webapp-1.8.4.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.4/cargo-daemon-webapp-1.8.4.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
-          </ul><p>Enjoy!</p><script type="text/javascript">
+           <li>
+            <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.8.4</strong></p></li>
+           <li>
+            <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.4/cargo-core-uberjar-1.8.4.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.4/cargo-core-uberjar-1.8.4.jar</a></p></li>
+           <li>
+            <p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.4/cargo-ant-1.8.4.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.4/cargo-ant-1.8.4.jar</a></p></li>
+           <li>
+            <p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from&nbsp;<a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.4/cargo-daemon-webapp-1.8.4.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.4/cargo-daemon-webapp-1.8.4.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
+          </ul>
+          <p>Enjoy!</p>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";

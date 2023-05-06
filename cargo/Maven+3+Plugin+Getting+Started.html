@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,20 +286,26 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> &gt; Maven 3 Plugin Getting Started</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><h1 id="Maven3PluginGettingStarted-GettingStarted">Getting Started</h1><h2 id="Maven3PluginGettingStarted-Veryquickstart">Very quick start</h2><p>Codehaus Cargo can be directly run on any existing Maven&nbsp;J2EE, Java EE or Jakarta EE project (WAR, EAR or other) by running:</p>
+         <td class="rightColumn">
+          <h1 id="Maven3PluginGettingStarted-GettingStarted">Getting Started</h1>
+          <h2 id="Maven3PluginGettingStarted-Veryquickstart">Very quick start</h2>
+          <p>Codehaus Cargo can be directly run on any existing Maven&nbsp;J2EE, Java EE or Jakarta EE project (WAR, EAR or other) by running:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
 </pre>
            </div>
-          </div><p>This will create a default <a href="Jetty+9.x.html">Jetty 9.x</a> <a href="Installed+Container.html">installed local container</a> and start it using the Cargo&nbsp;Maven 3 plugin with your&nbsp;Maven 3 project's deployable (a WAR, for example) deployed to it; so you can run manual tests (as a first introduction).</p><p>What is magic is that if you now want to run the same tests with <a href="Tomcat+9.x.html">Tomcat 9.x</a> you simply need to run (in one line):</p>
+          </div>
+          <p>This will create a default <a href="Jetty+9.x.html">Jetty 9.x</a> <a href="Installed+Container.html">installed local container</a> and start it using the Cargo&nbsp;Maven 3 plugin with your&nbsp;Maven 3 project's deployable (a WAR, for example) deployed to it; so you can run manual tests (as a first introduction).</p>
+          <p>What is magic is that if you now want to run the same tests with <a href="Tomcat+9.x.html">Tomcat 9.x</a> you simply need to run (in one line):</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
@@ -299,7 +313,9 @@
     -Dcargo.maven.containerUrl=https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/9.0.45/tomcat-9.0.45.zip
 </pre>
            </div>
-          </div><p>That command will automatically download Tomcat 9.0.45 from the specified URL (taking into account any proxy server setting you would have in Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p><p>Now, if you want to run this time on <a href="WildFly+20.x.html">WildFly 20.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
+          </div>
+          <p>That command will automatically download Tomcat 9.0.45 from the specified URL (taking into account any proxy server setting you would have in Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p>
+          <p>Now, if you want to run this time on <a href="WildFly+20.x.html">WildFly 20.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
@@ -308,7 +324,10 @@
     -Dcargo.servlet.port=9000
 </pre>
            </div>
-          </div><p>Codehaus Cargo's main advantage is that the commands and configuration remains the same for any version of any supported container - be it Tomcat, Jetty, JBoss, JOnAS, GlassFish, WebLogic, WildFly, etc.</p><p>Like it? Well, keep on reading, then!</p><script type="text/javascript">
+          </div>
+          <p>Codehaus Cargo's main advantage is that the commands and configuration remains the same for any version of any supported container - be it Tomcat, Jetty, JBoss, JOnAS, GlassFish, WebLogic, WildFly, etc.</p>
+          <p>Like it? Well, keep on reading, then!</p>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -318,13 +337,21 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h2 id="Maven3PluginGettingStarted-Moreexamples">More examples</h2><p>As usual the best way to learn to use a tool is through examples.</p><p>We have several <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a> that contain sample&nbsp;Maven 3 projects with different use cases for the Codehaus Cargo Maven 3 plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a>.</p><p>In addition here are the typical uses cases covered by the plugin:</p><p></p>
+          </center>
+          <h2 id="Maven3PluginGettingStarted-Moreexamples">More examples</h2>
+          <p>As usual the best way to learn to use a tool is through examples.</p>
+          <p>We have several <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a> that contain sample&nbsp;Maven 3 projects with different use cases for the Codehaus Cargo Maven 3 plugin, we would really recommend that you check them out. For more details, read here: <a href="Maven+3+Archetypes.html">Maven 3 Archetypes</a>.</p>
+          <p>In addition here are the typical uses cases covered by the plugin:</p>
+          <p></p>
           <ul class="childpages-macro conf-macro output-block">
            <li><a href="Deploying+to+a+running+container.html">Deploying to a running container</a></li>
            <li><a href="Generating+a+container+configuration+deployment+structure.html">Generating a container configuration deployment structure</a></li>
            <li><a href="Merging+WAR+files.html">Merging WAR files</a></li>
            <li><a href="Starting+and+stopping+a+container.html">Starting and stopping a container</a></li>
-          </ul><p></p><h2 id="Maven3PluginGettingStarted-TheCargoMavenpluginindetail">The Cargo Maven plugin in detail</h2><p>Here are the different goals available to call on this plugin:</p>
+          </ul>
+          <p></p>
+          <h2 id="Maven3PluginGettingStarted-TheCargoMavenpluginindetail">The Cargo Maven plugin in detail</h2>
+          <p>Here are the different goals available to call on this plugin:</p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -333,12 +360,16 @@
             </colgroup>
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Goals</p></th>
-              <th class="confluenceTh"><p>Description</p></th>
+              <th class="confluenceTh">
+               <p>Goals</p></th>
+              <th class="confluenceTh">
+               <p>Description</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:start</strong></code></p></td>
-              <td class="confluenceTd"><p>Start a container. That goal will:</p>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:start</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Start a container. That goal will:</p>
                <ul>
                 <li style="list-style-type: none;">
                  <ul>
@@ -348,11 +379,14 @@
                   <li class="confluence-link">If the plugin configuration contains no <a href="Deployable.html">deployables</a> but the project's packaging is J2EE, Java EE or Jakarta EE (WAR, EAR, etc.), it will deploy the project's deployable to to the container automatically.</li>
                   <li class="confluence-link">And, of course, start the container.</li>
                  </ul></li>
-               </ul><p><strong>Note</strong>: A container that's started with <code>cargo:start</code> will automatically shut down as soon as the parent Maven instance quits (i.e., you see a <code>BUILD SUCCESSFUL</code> or <code>BUILD FAILED</code> message). If you want to start a container and perform manual testing, see our next goal <code>cargo:run</code>.</p></td>
+               </ul>
+               <p><strong>Note</strong>: A container that's started with <code>cargo:start</code> will automatically shut down as soon as the parent Maven instance quits (i.e., you see a <code>BUILD SUCCESSFUL</code> or <code>BUILD FAILED</code> message). If you want to start a container and perform manual testing, see our next goal <code>cargo:run</code>.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:run</strong></code></p></td>
-              <td class="confluenceTd"><p>Start a container and wait for the user to press <code>CTRL + C</code> to stop. That goal will:</p>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:run</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Start a container and wait for the user to press <code>CTRL + C</code> to stop. That goal will:</p>
                <ul>
                 <li style="list-style-type: none;">
                  <ul>
@@ -365,64 +399,93 @@
                </ul></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:stop</strong></code></p></td>
-              <td class="confluenceTd"><p>Stop a container.</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:stop</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Stop a container.</p></td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><p><code><strong>cargo:restart</strong></code></p></td>
+              <td colspan="1" class="confluenceTd">
+               <p><code><strong>cargo:restart</strong></code></p></td>
               <td colspan="1" class="confluenceTd">Stop and start again a container. If the container was not running before calling <code>cargo:restart</code>, it will simply be started.</td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:configure</strong></code></p></td>
-              <td class="confluenceTd"><p>Create the configuration for a <a href="Local+Container.html">local container</a>, without starting it.</p><p><strong>Note</strong>: If the plugin configuration requires so, the <code>cargo:start</code> goal automatically <a href="Installer.html#Installer-Maven3Installer">installs the container</a>.</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:configure</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Create the configuration for a <a href="Local+Container.html">local container</a>, without starting it.</p>
+               <p><strong>Note</strong>: If the plugin configuration requires so, the <code>cargo:start</code> goal automatically <a href="Installer.html#Installer-Maven3Installer">installs the container</a>.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:package</strong></code></p></td>
-              <td class="confluenceTd"><p>Package the <a href="Local+Container.html">local container</a>.</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:package</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Package the <a href="Local+Container.html">local container</a>.</p></td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><strong><code>cargo:daemon-start</code></strong></td>
-              <td colspan="1" class="confluenceTd"><p>Start a container via the daemon. Read more on: <a href="Cargo+Daemon.html">Cargo Daemon</a></p><p><strong>Note</strong>: The <code>daemon:start</code> goal is actually equivalent to a <strong>restart</strong> in Codehaus Cargo's terms; in the case a container with the same <code>cargo.<wbr>daemon.<wbr>handleid</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.</p></td>
+              <td colspan="1" class="confluenceTd">
+               <p>Start a container via the daemon. Read more on: <a href="Cargo+Daemon.html">Cargo Daemon</a></p>
+               <p><strong>Note</strong>: The <code>daemon:start</code> goal is actually equivalent to a <strong>restart</strong> in Codehaus Cargo's terms; in the case a container with the same <code>cargo.<wbr>daemon.<wbr>handleid</code> already exists then it will be stopped first before your container is started. This also implies that in the case the new container fails to start, the old one will <u>not</u> be restarted.</p></td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><strong><code>cargo:daemon-stop</code></strong></td>
               <td colspan="1" class="confluenceTd">Stop a container via the daemon. Read more on: <a href="Cargo+Daemon.html">Cargo Daemon</a></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:deployer-deploy</strong></code> (aliased to <code><strong>cargo:deploy</strong></code>)</p></td>
-              <td class="confluenceTd"><p>Deploy a deployable to a running container.</p><p><strong>Note</strong>: The <code>cargo:start</code> and <code>cargo:run</code> do already deploy the deployables specified in the configuration to the container; as a result calling <code>cargo:deploy</code> for a container which has been started by&nbsp;Codehaus Cargo in the same Maven project will most likely cause a second deployment of the same deployables (and might even fail).</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:deployer-deploy</strong></code> (aliased to <code><strong>cargo:deploy</strong></code>)</p></td>
+              <td class="confluenceTd">
+               <p>Deploy a deployable to a running container.</p>
+               <p><strong>Note</strong>: The <code>cargo:start</code> and <code>cargo:run</code> do already deploy the deployables specified in the configuration to the container; as a result calling <code>cargo:deploy</code> for a container which has been started by&nbsp;Codehaus Cargo in the same Maven project will most likely cause a second deployment of the same deployables (and might even fail).</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:deployer-undeploy</strong></code> (aliased to <code><strong>cargo:undeploy</strong></code>)</p></td>
-              <td class="confluenceTd"><p>Undeploy a deployable from a running container.</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:deployer-undeploy</strong></code> (aliased to <code><strong>cargo:undeploy</strong></code>)</p></td>
+              <td class="confluenceTd">
+               <p>Undeploy a deployable from a running container.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:deployer-start</strong></code></p></td>
-              <td class="confluenceTd"><p>Start a deployable already installed in a running container.</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:deployer-start</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Start a deployable already installed in a running container.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:deployer-stop</strong></code></p></td>
-              <td class="confluenceTd"><p>Stop a deployed deployable without undeploying it.</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:deployer-stop</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Stop a deployed deployable without undeploying it.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:deployer-redeploy</strong></code> (aliased to <code><strong>cargo:redeploy</strong></code>)</p></td>
-              <td class="confluenceTd"><p>Undeploy and deploy again a deployable. If the deployable was not deployed before calling <code>cargo:deployer-redeploy</code> (or its alias <code>cargo:redeploy</code>) it will simply be deployed.</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:deployer-redeploy</strong></code> (aliased to <code><strong>cargo:redeploy</strong></code>)</p></td>
+              <td class="confluenceTd">
+               <p>Undeploy and deploy again a deployable. If the deployable was not deployed before calling <code>cargo:deployer-redeploy</code> (or its alias <code>cargo:redeploy</code>) it will simply be deployed.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:uberwar</strong></code></p></td>
-              <td class="confluenceTd"><p>Merge several WAR files into one.</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:uberwar</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Merge several WAR files into one.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:install</strong></code></p></td>
-              <td class="confluenceTd"><p>Installs a container distribution, either <a href="Installer.html#Installer-Maven3Installer">downloaded using a URL or defined as a Maven artifact</a>, on the file system.</p><p><strong>Note</strong>: If the plugin configuration requires so, the <code>cargo:start</code> and <code>cargo:run</code> goals automatically install the container <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-780">but will not call <code>cargo:install</code></a>.</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:install</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Installs a container distribution, either <a href="Installer.html#Installer-Maven3Installer">downloaded using a URL or defined as a Maven artifact</a>, on the file system.</p>
+               <p><strong>Note</strong>: If the plugin configuration requires so, the <code>cargo:start</code> and <code>cargo:run</code> goals automatically install the container <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-780">but will not call <code>cargo:install</code></a>.</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><code><strong>cargo:help</strong></code></p></td>
-              <td class="confluenceTd"><p>Get help (list of available goals, available options, etc.).</p></td>
+              <td class="confluenceTd">
+               <p><code><strong>cargo:help</strong></code></p></td>
+              <td class="confluenceTd">
+               <p>Get help (list of available goals, available options, etc.).</p></td>
              </tr>
             </tbody>
            </table>
-          </div><p><br class="atl-forced-newline">
+          </div>
+          <p><br class="atl-forced-newline">
            The configuration elements are described in the <a href="Maven+3+Plugin+Reference+Guide.html">Reference Guide</a> section.</p></td>
         </tr>
        </tbody>

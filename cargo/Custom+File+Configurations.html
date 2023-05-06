@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,20 +286,28 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Configuration.html">Configuration</a> &gt; <a href="Local+Configuration.html">Local Configuration</a> &gt; Custom File Configurations</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><h3 id="CustomFileConfigurations-CustomFileConfigurations">Custom File Configurations</h3><p>It is sometimes necessary to make changes to files within a Cargo standalone configuration. Normally Cargo will create this configuration and then start the server leaving the user with no chance to replace or modify these files before the server is started.</p><h4 id="CustomFileConfigurations-CustomConfigurationFiles">Custom Configuration Files</h4><p>The main reason for file changes is to make changes to configuration files to add, remove or modify configuration settings that are not yet covered by Cargo.</p><p>Cargo uses its own default configuration files (located within the cargo jars) which use token replacements to set the Cargo configuration options. These files can be extracted out of the jar so that modification can be made and Cargo can be instructed to use these new configuration files instead.</p><p>Custom tokens can also be specified in the configuration files and their values set in the cargo properties.</p>
+         <td class="rightColumn">
+          <h3 id="CustomFileConfigurations-CustomFileConfigurations">Custom File Configurations</h3>
+          <p>It is sometimes necessary to make changes to files within a Cargo standalone configuration. Normally Cargo will create this configuration and then start the server leaving the user with no chance to replace or modify these files before the server is started.</p>
+          <h4 id="CustomFileConfigurations-CustomConfigurationFiles">Custom Configuration Files</h4>
+          <p>The main reason for file changes is to make changes to configuration files to add, remove or modify configuration settings that are not yet covered by Cargo.</p>
+          <p>Cargo uses its own default configuration files (located within the cargo jars) which use token replacements to set the Cargo configuration options. These files can be extracted out of the jar so that modification can be made and Cargo can be instructed to use these new configuration files instead.</p>
+          <p>Custom tokens can also be specified in the configuration files and their values set in the cargo properties.</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>These type of files have to be marked as a configuration file so that token replacement can be used.</p>
            </div>
-          </div><script type="text/javascript">
+          </div>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -301,7 +317,9 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h4 id="CustomFileConfigurations-OtherGenericFilesandDirectories">Other Generic Files and Directories</h4><p>Using the custom file configuration options you can add any files or directories into the standalone configuration home. Although this shouldn't really be necessary in most situations, it is left as an option so that if the need arises if can be used.</p>
+          </center>
+          <h4 id="CustomFileConfigurations-OtherGenericFilesandDirectories">Other Generic Files and Directories</h4>
+          <p>Using the custom file configuration options you can add any files or directories into the standalone configuration home. Although this shouldn't really be necessary in most situations, it is left as an option so that if the need arises if can be used.</p>
           <div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -313,88 +331,136 @@
            <div class="confluence-information-macro-body">
             <p>This is not meant to be used to add extra jars to a server's classpath, for that you should be using the extraClasspath or sharedClasspath options in Cargo.</p>
            </div>
-          </div><h3 id="CustomFileConfigurations-Options">Options</h3>
+          </div>
+          <h3 id="CustomFileConfigurations-Options">Options</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Option Name</p></th>
-              <th class="confluenceTh"><p>Notes</p></th>
-              <th class="confluenceTh"><p>Optional</p></th>
-              <th class="confluenceTh"><p>Default Value</p></th>
+              <th class="confluenceTh">
+               <p>Option Name</p></th>
+              <th class="confluenceTh">
+               <p>Notes</p></th>
+              <th class="confluenceTh">
+               <p>Optional</p></th>
+              <th class="confluenceTh">
+               <p>Default Value</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>file</p></td>
-              <td class="confluenceTd"><p>This specifies the path to the file that should be used. Can also specify a directory path if a whole directory needs to be copied over.</p></td>
-              <td class="confluenceTd"><p>no</p></td>
-              <td class="confluenceTd"><p>n/a</p></td>
+              <td class="confluenceTd">
+               <p>file</p></td>
+              <td class="confluenceTd">
+               <p>This specifies the path to the file that should be used. Can also specify a directory path if a whole directory needs to be copied over.</p></td>
+              <td class="confluenceTd">
+               <p>no</p></td>
+              <td class="confluenceTd">
+               <p>n/a</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>todir</p></td>
-              <td class="confluenceTd"><p>This specified the name the directory that the file should be copied to relative to the configurations home. <br class="atl-forced-newline">
+              <td class="confluenceTd">
+               <p>todir</p></td>
+              <td class="confluenceTd">
+               <p>This specified the name the directory that the file should be copied to relative to the configurations home. <br class="atl-forced-newline">
                 If this is not specified, its value will be determined based on the tofile setting and if that is not specified, it will default to the configuration's home directory</p></td>
-              <td class="confluenceTd"><p>yes</p></td>
-              <td class="confluenceTd"><p>The configuration home root</p></td>
+              <td class="confluenceTd">
+               <p>yes</p></td>
+              <td class="confluenceTd">
+               <p>The configuration home root</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>tofile</p></td>
-              <td class="confluenceTd"><p>This specified the name the file to where it should be copied relative to the configurations home. This path variable can also be used to specify both the directory and file name. <br class="atl-forced-newline">
+              <td class="confluenceTd">
+               <p>tofile</p></td>
+              <td class="confluenceTd">
+               <p>This specified the name the file to where it should be copied relative to the configurations home. This path variable can also be used to specify both the directory and file name. <br class="atl-forced-newline">
                 If this is not specified, its value will be determined based on the file name of the original file</p></td>
-              <td class="confluenceTd"><p>yes</p></td>
-              <td class="confluenceTd"><p>The file name of the original file</p></td>
+              <td class="confluenceTd">
+               <p>yes</p></td>
+              <td class="confluenceTd">
+               <p>The file name of the original file</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>configfile</p></td>
-              <td class="confluenceTd"><p>This specifies if the file being copied is a configuration file or not. This determines whether token replacement should be applied to the file. <br class="atl-forced-newline">
+              <td class="confluenceTd">
+               <p>configfile</p></td>
+              <td class="confluenceTd">
+               <p>This specifies if the file being copied is a configuration file or not. This determines whether token replacement should be applied to the file. <br class="atl-forced-newline">
                 Do not use this option when passing a file that is not an ascii file as it will corrupt the copied file.</p></td>
-              <td class="confluenceTd"><p>yes</p></td>
-              <td class="confluenceTd"><p>false</p></td>
+              <td class="confluenceTd">
+               <p>yes</p></td>
+              <td class="confluenceTd">
+               <p>false</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>overwrite</p></td>
-              <td class="confluenceTd"><p>This specifies if the file should overwrite a file if it already exists</p></td>
-              <td class="confluenceTd"><p>yes</p></td>
-              <td class="confluenceTd"><p>true</p></td>
+              <td class="confluenceTd">
+               <p>overwrite</p></td>
+              <td class="confluenceTd">
+               <p>This specifies if the file should overwrite a file if it already exists</p></td>
+              <td class="confluenceTd">
+               <p>yes</p></td>
+              <td class="confluenceTd">
+               <p>true</p></td>
              </tr>
             </tbody>
            </table>
-          </div><p>Example:</p>
+          </div>
+          <p>Example:</p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>file</p></th>
-              <th class="confluenceTh"><p>todir</p></th>
-              <th class="confluenceTh"><p>tofile</p></th>
-              <th class="confluenceTh"><p>destination file (relative to standalone configuration root)</p></th>
+              <th class="confluenceTh">
+               <p>file</p></th>
+              <th class="confluenceTh">
+               <p>todir</p></th>
+              <th class="confluenceTh">
+               <p>tofile</p></th>
+              <th class="confluenceTh">
+               <p>destination file (relative to standalone configuration root)</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>/tmp/server.xml</p></td>
-              <td class="confluenceTd"><p>conf</p></td>
-              <td class="confluenceTd"><p><br></p></td>
-              <td class="confluenceTd"><p>conf/server.xml</p></td>
+              <td class="confluenceTd">
+               <p>/tmp/server.xml</p></td>
+              <td class="confluenceTd">
+               <p>conf</p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
+              <td class="confluenceTd">
+               <p>conf/server.xml</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>/tmp/server.xml</p></td>
-              <td class="confluenceTd"><p><br></p></td>
-              <td class="confluenceTd"><p>conf/server.xml</p></td>
-              <td class="confluenceTd"><p>conf/server.xml</p></td>
+              <td class="confluenceTd">
+               <p>/tmp/server.xml</p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
+              <td class="confluenceTd">
+               <p>conf/server.xml</p></td>
+              <td class="confluenceTd">
+               <p>conf/server.xml</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>/tmp/server.xml</p></td>
-              <td class="confluenceTd"><p>conf</p></td>
-              <td class="confluenceTd"><p>server-2.xml</p></td>
-              <td class="confluenceTd"><p>conf/server-2.xml</p></td>
+              <td class="confluenceTd">
+               <p>/tmp/server.xml</p></td>
+              <td class="confluenceTd">
+               <p>conf</p></td>
+              <td class="confluenceTd">
+               <p>server-2.xml</p></td>
+              <td class="confluenceTd">
+               <p>conf/server-2.xml</p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>/tmp/server.xml</p></td>
-              <td class="confluenceTd"><p><br></p></td>
-              <td class="confluenceTd"><p><br></p></td>
-              <td class="confluenceTd"><p>server.xml</p></td>
+              <td class="confluenceTd">
+               <p>/tmp/server.xml</p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
+              <td class="confluenceTd">
+               <p>server.xml</p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="CustomFileConfigurations-Usage">Usage</h3><p>Example pom.xml fragment of how to use custom file configuration.s<br>
+          </div>
+          <h3 id="CustomFileConfigurations-Usage">Usage</h3>
+          <p>Example pom.xml fragment of how to use custom file configuration.s<br>
            Note in this example if &nbsp;(customMessage) is set in any of the files with configfile=true it will be replaced with "Hello World" when it gets copied to the standalone server's directory.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">

@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,14 +286,21 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Deployment.html">Deployment</a> &gt; Remote deployments to GlassFish 6.x onwards and to recent Payara versions</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><h3 id="RemotedeploymentstoGlassFish6.xonwardsandtorecentPayaraversions-Definition">Definition</h3><p><span>How to perform deployments to a remote <a href="GlassFish+6.x.html">GlassFish 6.x</a> and later containers, as well as to recent versions of <a href="Payara.html">Payara</a></span></p><h3 id="RemotedeploymentstoGlassFish6.xonwardsandtorecentPayaraversions-Explanation">Explanation</h3><p>All Cargo GlassFish and Payara deployers use the GlassFish / Payara <code>asadmin</code> behind the scenes, and all of them set the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><code>cargo.hostname</code></a> as the target host.</p><p>As a result, all GlassFish and payara Installed Local Deployers can <em>actually</em> be used to perform remote deployments, the main "downside" being that this requires the GlassFish / Payara container ZIP file to be downloaded (which can be done transparently using an <a href="Installer.html">installer</a>).</p><p>Here is an example code for the users of the Java API:</p>
+         <td class="rightColumn">
+          <h3 id="RemotedeploymentstoGlassFish6.xonwardsandtorecentPayaraversions-Definition">Definition</h3>
+          <p><span>How to perform deployments to a remote <a href="GlassFish+6.x.html">GlassFish 6.x</a> and later containers, as well as to recent versions of <a href="Payara.html">Payara</a></span></p>
+          <h3 id="RemotedeploymentstoGlassFish6.xonwardsandtorecentPayaraversions-Explanation">Explanation</h3>
+          <p>All Cargo GlassFish and Payara deployers use the GlassFish / Payara <code>asadmin</code> behind the scenes, and all of them set the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><code>cargo.hostname</code></a> as the target host.</p>
+          <p>As a result, all GlassFish and payara Installed Local Deployers can <em>actually</em> be used to perform remote deployments, the main "downside" being that this requires the GlassFish / Payara container ZIP file to be downloaded (which can be done transparently using an <a href="Installer.html">installer</a>).</p>
+          <p>Here is an example code for the users of the Java API:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">Installer installer = new ZipURLInstaller(
@@ -315,7 +330,8 @@ Deployer deployer = new GlassFish6xInstalledLocalDeployer(container);
 deployer.deploy(war);
 </pre>
            </div>
-          </div><p>Here is an example <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 plugin configuration</a>, where one can use the <a href="Installer.html#Installer-installer_with_maven2_dependencies">Maven Artifact Installer</a>:</p>
+          </div>
+          <p>Here is an example <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 plugin configuration</a>, where one can use the <a href="Installer.html#Installer-installer_with_maven2_dependencies">Maven Artifact Installer</a>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;plugin&gt;
@@ -346,12 +362,14 @@ deployer.deploy(war);
 &lt;/plugin&gt;
 </pre>
            </div>
-          </div><p class="auto-cursor-target">Please note that the above deployer requires its "dummy" local configuration to exist. You hence need to run it with:</p>
+          </div>
+          <p class="auto-cursor-target">Please note that the above deployer requires its "dummy" local configuration to exist. You hence need to run it with:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">mvn cargo:configure cargo:deploy</pre>
            </div>
-          </div><script type="text/javascript">
+          </div>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";

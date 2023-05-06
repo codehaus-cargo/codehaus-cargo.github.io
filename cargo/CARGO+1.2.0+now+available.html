@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,15 +286,18 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; CARGO 1.2.0 now available</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
           </table></td>
         </tr>
         <tr valign="top">
-         <td class="rightColumn"><p>Dear CARGO enthusiasts<br><br>
-            First of all, happy New Year!</p><p>Since the last release of CARGO a bit more than one month and a half ago, we have had the opportunity of fixing some bugs and adding the functionalities:</p>
+         <td class="rightColumn">
+          <p>Dear CARGO enthusiasts<br><br>
+            First of all, happy New Year!</p>
+          <p>Since the last release of CARGO a bit more than one month and a half ago, we have had the opportunity of fixing some bugs and adding the functionalities:</p>
           <ul>
            <li>CARGO Maven2/Maven3 plugin fixes and improvements:</li>
            <ul>
@@ -306,7 +317,8 @@
            <ul>
             <li>This way, not only we won't have to maintain these CARGO-specific files manually anymore, but also new versions will be supported "out of the box" and CARGO will also work with different flavours of containers.</li>
            </ul>
-          </ul><p>CARGO 1.2.0 is therefore now ready. Please note that on the API side, this new minor version comes with some behavioural changes and the removal of some elements (which have been deprecated for over 6 months now):</p>
+          </ul>
+          <p>CARGO 1.2.0 is therefore now ready. Please note that on the API side, this new minor version comes with some behavioural changes and the removal of some elements (which have been deprecated for over 6 months now):</p>
           <ul>
            <li>To achieve automatic resolution of container JARs in the Maven2/Maven3 container, a small change has been done in the <code>ResourceUtils</code>: it now loads resources using a class loader (as opposed to a class, which was the case in the past), hence <code>AbstractLocalConfiguration.RESOURCE_PATH</code> has been changed from <code>"/org/codehaus/cargo/container/internal/resources/"</code> to <code>"org/codehaus/cargo/container/internal/resources/"</code> (without the slash at the beginning). If your code uses the same constant, make sure you update it properly.</li>
            <li>The <code>Deployable.isExpanded*</code> and <code>AbstractCopyingInstalledLocalDeployer.setShouldDeployExpanded*s</code> methods have been removed (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-905">CARGO-905</a> and <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-940">CARGO-940</a>). As a replacement:</li>
@@ -317,11 +329,16 @@
            <li>File handling methods that manipulate texts now need to specify the encoding (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-909">CARGO-909</a>).</li>
            <li>In the Maven2/Maven3 plugin, the <code>&lt;zipUrlInstaller&gt;</code> and <code>&lt;artifactInstaller&gt;</code> don't have the <code>&lt;installDir&gt;</code> attribute anymore, replaced by <code>&lt;downloadDir&gt;</code> and <code>&lt;extractDir&gt;</code> attributes (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-916">CARGO-916</a>).</li>
            <li><code>TomcatPropertySet.MANAGER_URL</code> (i.e. <code>cargo.tomcat.manager.url</code>) has been removed (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-965">CARGO-965</a>), please use the generic <code>RemotePropertySet.URI</code> (i.e. <code>cargo.remote.uri</code>) instead.</li>
-          </ul><p>You can access the full release notes by visiting <a href="https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730">https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730</a></p><p>To use this new version:</p>
+          </ul>
+          <p>You can access the full release notes by visiting <a href="https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730">https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17088&amp;styleName=Html&amp;projectId=10730</a></p>
+          <p>To use this new version:</p>
           <ul>
            <li>Users of the Java API and/or ANT tasks can download the CARGO uberjar and ANT tasks from the download page: <a href="http://cargo.codehaus.org/Downloads">http://cargo.codehaus.org/Downloads</a></li>
            <li>Maven2/Maven3 users simply need to change the plugin's <code>&lt;version&gt;</code> to <strong>1.2.0</strong>, and Maven2/Maven3 will download the new version automatically.</li>
-          </ul><p>Please share your good (and bad) findings on the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.</p><p>Enjoy!</p><script type="text/javascript">
+          </ul>
+          <p>Please share your good (and bad) findings on the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.</p>
+          <p>Enjoy!</p>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";

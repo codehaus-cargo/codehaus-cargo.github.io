@@ -40,7 +40,8 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px"><h3 id="Navigation-QuickLinks">Quick Links</h3>
+     <td class="leftColumn" valign="top" style="padding-top:0px">
+      <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a></li>
        <li><a href="Downloads.html">Downloads</a></li>
@@ -49,7 +50,8 @@
         <ul class="alternate">
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-      </ul><h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
+      </ul>
+      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
       <ul class="alternate">
        <li>Overview<br>
         <ul class="alternate">
@@ -68,7 +70,8 @@
        <li><a href="Articles.html">Articles</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Containers">Containers</h3>
+      </ul>
+      <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
        <li>Geronimo
         <ul class="alternate">
@@ -227,16 +230,19 @@
          <li><a href="WildFly+28.x.html">WildFly 28.x</a></li>
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
-      </ul><h3 id="Navigation-Extensions">Extensions</h3>
+      </ul>
+      <h3 id="Navigation-Extensions">Extensions</h3>
       <ul class="alternate">
        <li><a href="Ant+support.html">Ant tasks</a></li>
        <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
        <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul><p>Independent extensions:</p>
+      </ul>
+      <p>Independent extensions:</p>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
-      </ul><h3 id="Navigation-ProjectInfo">Project Info</h3>
+      </ul>
+      <h3 id="Navigation-ProjectInfo">Project Info</h3>
       <ul class="alternate">
        <li><a href="Roadmap.html">Roadmap</a></li>
        <li><a href="News.html">News</a></li>
@@ -246,7 +252,8 @@
        <li><a href="Mailing+Lists.html">Mailing lists</a></li>
        <li><a href="License.html">License</a></li>
        <li><a href="Credits.html">Credits</a></li>
-      </ul><h3 id="Navigation-Development">Development</h3>
+      </ul>
+      <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
@@ -255,7 +262,8 @@
        <li><a href="Contributing.html">Contributing</a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
        <li><a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous integration</a><br><a href="https://semaphoreci.com/codehaus-cargo/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://semaphoreci.com/api/v1/projects/f1caf210-ca6e-44f7-b54c-16ad92065416/393658/shields_badge.svg" loading="lazy"></span></a></li>
-      </ul><h3 class="heading3">RSS Feeds</h3>
+      </ul>
+      <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
        <tbody>
         <tr>
@@ -278,7 +286,8 @@
             <tr valign="middle">
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Containers.html">Containers</a> &gt; JOnAS 5.x</b></td>
              <td align="right" style="width:350px">
-              <form method="GET" action="Search.html"><input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
+              <form method="GET" action="Search.html">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form></td>
             </tr>
            </tbody>
@@ -292,194 +301,322 @@
             <p>Due to <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1489">license conflicts</a>, Codehaus Cargo versions 1.7.6 onwards do not contain the JOnAS Configurator in the Uberjar. If you plan to use the Codehaus Cargo JOnAS containers via <a href="Javadocs.html">Java API</a> or <a href="Ant+support.html">ANT tasks</a>, please <a href="https://repo.maven.apache.org/maven2/org/ow2/jonas/tools/configurator/">download the JOnAS Configurator JARs</a> separately and put them in your classpath.</p>
             <p>This does not affect the <a href="Maven+3+Plugin.html">Maven 3 Plugin</a>, as it will download the required dependencies automatically (and, since Maven downloads and stores the JOnAS Configurator JARs separately from Codehaus Cargo you won't run into license issues).</p>
            </div>
-          </div><h3 id="JOnAS5.x-ContainerFeatures">Container Features</h3>
+          </div>
+          <h3 id="JOnAS5.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Feature name</p></th>
-              <th class="confluenceTh"><p>Java API</p></th>
-              <th class="confluenceTh"><p>Ant tasks</p></th>
-              <th class="confluenceTh"><p>Maven 3 plugin</p></th>
-              <th class="confluenceTh"><p>Comment</p></th>
+              <th class="confluenceTh">
+               <p>Feature name</p></th>
+              <th class="confluenceTh">
+               <p>Java API</p></th>
+              <th class="confluenceTh">
+               <p>Ant tasks</p></th>
+              <th class="confluenceTh">
+               <p>Maven 3 plugin</p></th>
+              <th class="confluenceTh">
+               <p>Comment</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Container+Instantiation.html">Container Instantiation</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.<wbr>createContainer<wbr>("jonas5x"...)</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId=<wbr>"jonas5x".../&gt;</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;<wbr>jonas5x<wbr>&lt;/containerId&gt;</code></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Container+Instantiation.html">Container Instantiation</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.<wbr>createContainer<wbr>("jonas5x"...)</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId=<wbr>"jonas5x".../&gt;</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;<wbr>jonas5x<wbr>&lt;/containerId&gt;</code></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Local+Container.html">Local Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Local+Container.html">Local Container</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Container+Classpath.html">Container Classpath</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Container+Classpath.html">Container Classpath</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Container+Start.html">Container Start</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Container+Start.html">Container Start</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Container+Stop.html">Container Stop</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Container+Stop.html">Container Stop</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Container+Timeout.html">Container Timeout</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Container+Timeout.html">Container Timeout</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Embedded+Container.html">Embedded Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Embedded+Container.html">Embedded Container</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Installed+Container.html">Installed Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xInstalledLocalContainer</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Installed+Container.html">Installed Container</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xInstalledLocalContainer</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>&nbsp;&nbsp; <a href="Passing+system+properties.html">Passing system properties</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p>&nbsp;&nbsp; <a href="Passing+system+properties.html">Passing system properties</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p>&nbsp;&nbsp; <a href="Installer.html">Installer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p>&nbsp;&nbsp; <a href="Installer.html">Installer</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Remote+Container.html">Remote Container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xRemoteContainer</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Remote+Container.html">Remote Container</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xRemoteContainer</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="JOnAS5.x-ConfigurationFeatures">Configuration Features</h3>
+          </div>
+          <h3 id="JOnAS5.x-ConfigurationFeatures">Configuration Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Feature name</p></th>
-              <th class="confluenceTh"><p>Java API</p></th>
-              <th class="confluenceTh"><p>Ant tasks</p></th>
-              <th class="confluenceTh"><p>Maven 3 plugin</p></th>
-              <th class="confluenceTh"><p>Comment</p></th>
+              <th class="confluenceTh">
+               <p>Feature name</p></th>
+              <th class="confluenceTh">
+               <p>Java API</p></th>
+              <th class="confluenceTh">
+               <p>Ant tasks</p></th>
+              <th class="confluenceTh">
+               <p>Maven 3 plugin</p></th>
+              <th class="confluenceTh">
+               <p>Comment</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xStandaloneLocalConfiguration</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for installed container</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xStandaloneLocalConfiguration</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for embedded container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for embedded container</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Existing+Local+Configuration.html">Existing Local Configuration for installed container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xExistingLocalConfiguration</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Existing+Local+Configuration.html">Existing Local Configuration for installed container</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xExistingLocalConfiguration</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Existing+Local+Configuration.html">Existing Local Configuration for embedded container</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Existing+Local+Configuration.html">Existing Local Configuration for embedded container</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Runtime+Configuration.html">Runtime Configuration</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xRuntimeConfiguration</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Runtime+Configuration.html">Runtime Configuration</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xRuntimeConfiguration</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Static+deployment+of+WAR.html">Static deployment of WAR</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Static+deployment+of+WAR.html">Static deployment of WAR</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Static+deployment+of+expanded+WAR.html">Static deployment of expanded WAR</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Static+deployment+of+expanded+WAR.html">Static deployment of expanded WAR</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Static+deployment+of+EJB.html">Static deployment of EJB</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Static+deployment+of+EJB.html">Static deployment of EJB</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Static+deployment+of+EAR.html">Static deployment of EAR</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Static+deployment+of+EAR.html">Static deployment of EAR</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Static+deployment+of+RAR.html">Static deployment of RAR</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Static+deployment+of+RAR.html">Static deployment of RAR</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a class="unresolved" href="#">Static deployment of files</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a class="unresolved" href="#">Static deployment of files</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Static+deployment+of+OSGi+Bundles.html">Static deployment of OSGi Bundles</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Static+deployment+of+OSGi+Bundles.html">Static deployment of OSGi Bundles</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><script type="text/javascript">
+          </div>
+          <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
   google_ad_slot = "5363897989";
@@ -489,7 +626,8 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center><h3 id="JOnAS5.x-DeployerFeatures">Deployer Features</h3>
+          </center>
+          <h3 id="JOnAS5.x-DeployerFeatures">Deployer Features</h3>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -502,191 +640,321 @@
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Feature name</p></th>
-              <th class="confluenceTh"><p>Java API</p></th>
-              <th class="confluenceTh"><p>Ant tasks</p></th>
-              <th class="confluenceTh"><p>Maven 3 plugin</p></th>
-              <th class="confluenceTh"><p>Comment</p></th>
+              <th class="confluenceTh">
+               <p>Feature name</p></th>
+              <th class="confluenceTh">
+               <p>Java API</p></th>
+              <th class="confluenceTh">
+               <p>Ant tasks</p></th>
+              <th class="confluenceTh">
+               <p>Maven 3 plugin</p></th>
+              <th class="confluenceTh">
+               <p>Comment</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a class="unresolved" href="#">Installed Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xInstalledLocalDeployer</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a class="unresolved" href="#">Installed Deployer</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xInstalledLocalDeployer</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a class="unresolved" href="#">Embedded Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a class="unresolved" href="#">Embedded Deployer</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Remote+Deployer.html">Remote Deployer</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xJsr160RemoteDeployer</code></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Remote+Deployer.html">Remote Deployer</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jonas.<wbr>Jonas5xJsr160RemoteDeployer</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="JOnAS5.x-OtherFeatures">Other Features</h3>
+          </div>
+          <h3 id="JOnAS5.x-OtherFeatures">Other Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Feature name</p></th>
-              <th class="confluenceTh"><p>Java API</p></th>
-              <th class="confluenceTh"><p>Ant tasks</p></th>
-              <th class="confluenceTh"><p>Maven 3 plugin</p></th>
-              <th class="confluenceTh"><p>Comment</p></th>
+              <th class="confluenceTh">
+               <p>Feature name</p></th>
+              <th class="confluenceTh">
+               <p>Java API</p></th>
+              <th class="confluenceTh">
+               <p>Ant tasks</p></th>
+              <th class="confluenceTh">
+               <p>Maven 3 plugin</p></th>
+              <th class="confluenceTh">
+               <p>Comment</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Debugging.html">Debugging</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Debugging.html">Debugging</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="JOnAS5.x-SupportedConfigurationproperties">Supported Configuration properties</h3><p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p><h4 id="JOnAS5.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4><h5 id="JOnAS5.x-Forinstalledcontainero.c.c.c.jonas.Jonas5xInstalledLocalContainer">For installed container o.c.c.c.jonas.Jonas5xInstalledLocalContainer</h5>
+          </div>
+          <h3 id="JOnAS5.x-SupportedConfigurationproperties">Supported Configuration properties</h3>
+          <p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p>
+          <h4 id="JOnAS5.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4>
+          <h5 id="JOnAS5.x-Forinstalledcontainero.c.c.c.jonas.Jonas5xInstalledLocalContainer">For installed container o.c.c.c.jonas.Jonas5xInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Property name</p></th>
-              <th class="confluenceTh"><p>Java Property</p></th>
-              <th class="confluenceTh"><p>Supported?</p></th>
-              <th class="confluenceTh"><p>Default value</p></th>
-              <th class="confluenceTh"><p>Javadoc</p></th>
+              <th class="confluenceTh">
+               <p>Property name</p></th>
+              <th class="confluenceTh">
+               <p>Java Property</p></th>
+              <th class="confluenceTh">
+               <p>Supported?</p></th>
+              <th class="confluenceTh">
+               <p>Default value</p></th>
+              <th class="confluenceTh">
+               <p>Javadoc</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>localhost</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>localhost</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 5 (JOnAS 5.0.x, 5.1.x and 5.2.x) or 6 (JOnAS 5.3.x) or newer</em><br><em>Due to a bug parsing the Java version in the OW2 utilities, JOnAS 5.x doesn't run on Java 8 and above</em></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><em>JAVA_HOME version 5 (JOnAS 5.0.x, 5.1.x and 5.2.x) or 6 (JOnAS 5.3.x) or newer</em><br><em>Due to a bug parsing the Java version in the OW2 utilities, JOnAS 5.x doesn't run on Java 8 and above</em></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.domain.name</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_DOMAIN_NAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>jonas</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_DOMAIN_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.domain.name</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_DOMAIN_NAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>jonas</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_DOMAIN_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.jms.port</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_JMS_PORT</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>16010</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_JMS_PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.jms.port</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_JMS_PORT</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>16010</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_JMS_PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.server.name</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_SERVER_NAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>jonas</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_SERVER_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.server.name</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_SERVER_NAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>jonas</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_SERVER_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.services.list</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_SERVICES_LIST</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>Will be loaded from the</em> <code>conf/jonas.<wbr>properties</code> <em>file in the container home directory</em></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_SERVICES_LIST"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.services.list</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_SERVICES_LIST</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><em>Will be loaded from the</em> <code>conf/jonas.<wbr>properties</code> <em>file in the container home directory</em></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_SERVICES_LIST"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jvmargs</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JVMARGS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jvmargs</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JVMARGS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.logging</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.LOGGING</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>medium</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#LOGGING"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.logging</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.LOGGING</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>medium</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#LOGGING"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.port.offset</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.PORT_OFFSET</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>0</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.port.offset</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.PORT_OFFSET</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>0</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.process.spawn</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.SPAWN_PROCESS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>false</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.process.spawn</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.SPAWN_PROCESS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>false</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.rmi.port</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RMI_PORT</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>1099</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RMI_PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.rmi.port</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.RMI_PORT</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>1099</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RMI_PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RUNTIME_ARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RUNTIME_ARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>9000</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>9000</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.users</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.USERS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><br></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.servlet.users</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">ServletPropertySet.USERS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><br></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.standalone.ignoreNonExistingProperties</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.IGNORE_NON_EXISTING_PROPERTIES</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#IGNORE_NON_EXISTING_PROPERTIES"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.standalone.ignoreNonExistingProperties</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.IGNORE_NON_EXISTING_PROPERTIES</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#IGNORE_NON_EXISTING_PROPERTIES"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.start.jvmargs</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.START_JVMARGS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.start.jvmargs</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.START_JVMARGS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
             </tbody>
            </table>
@@ -703,222 +971,373 @@
            <div class="confluence-information-macro-body">
             <p>In addition to the forementioned properties, you can set any JOnAS configuration property that's configurable via the JOnAS configurator using the <code>cargo.jonas.configurator</code> prefix. For example, to set the Tomcat AJP port, use the the property <code>cargo.jonas.configurator.ajpPort</code> and give the value you like.</p>
            </div>
-          </div><h4 id="JOnAS5.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4><h5 id="JOnAS5.x-Forinstalledcontainero.c.c.c.jonas.Jonas5xInstalledLocalContainer.1">For installed container o.c.c.c.jonas.Jonas5xInstalledLocalContainer</h5>
+          </div>
+          <h4 id="JOnAS5.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4>
+          <h5 id="JOnAS5.x-Forinstalledcontainero.c.c.c.jonas.Jonas5xInstalledLocalContainer.1">For installed container o.c.c.c.jonas.Jonas5xInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Property name</p></th>
-              <th class="confluenceTh"><p>Java Property</p></th>
-              <th class="confluenceTh"><p>Supported?</p></th>
-              <th class="confluenceTh"><p>Default value</p></th>
-              <th class="confluenceTh"><p>Javadoc</p></th>
+              <th class="confluenceTh">
+               <p>Property name</p></th>
+              <th class="confluenceTh">
+               <p>Java Property</p></th>
+              <th class="confluenceTh">
+               <p>Supported?</p></th>
+              <th class="confluenceTh">
+               <p>Default value</p></th>
+              <th class="confluenceTh">
+               <p>Javadoc</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>localhost</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>localhost</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><em>JAVA_HOME version 5 (JOnAS 5.0.x, 5.1.x and 5.2.x) or 6 (JOnAS 5.3.x) or newer</em><br><em>Due to a bug parsing the Java version in the OW2 utilities, JOnAS 5.x doesn't run on Java 8 and above</em></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><em>JAVA_HOME version 5 (JOnAS 5.0.x, 5.1.x and 5.2.x) or 6 (JOnAS 5.3.x) or newer</em><br><em>Due to a bug parsing the Java version in the OW2 utilities, JOnAS 5.x doesn't run on Java 8 and above</em></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.domain.name</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_DOMAIN_NAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>jonas</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_DOMAIN_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.domain.name</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_DOMAIN_NAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>jonas</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_DOMAIN_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.server.name</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_SERVER_NAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>jonas</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_SERVER_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.server.name</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_SERVER_NAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>jonas</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_SERVER_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jvmargs</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.JVMARGS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jvmargs</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JVMARGS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.port.offset</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.PORT_OFFSET</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>0</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.port.offset</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.PORT_OFFSET</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>0</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.process.spawn</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.SPAWN_PROCESS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>false</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.process.spawn</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.SPAWN_PROCESS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>false</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.rmi.port</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RMI_PORT</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>1099</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RMI_PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.rmi.port</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.RMI_PORT</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>1099</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RMI_PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RUNTIME_ARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RUNTIME_ARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>9000</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>9000</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.start.jvmargs</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.START_JVMARGS</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.start.jvmargs</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.START_JVMARGS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h4 id="JOnAS5.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4><h5 id="JOnAS5.x-Forremotecontainero.c.c.c.jonas.Jonas5xRemoteContainer">For remote container o.c.c.c.jonas.Jonas5xRemoteContainer</h5>
+          </div>
+          <h4 id="JOnAS5.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4>
+          <h5 id="JOnAS5.x-Forremotecontainero.c.c.c.jonas.Jonas5xRemoteContainer">For remote container o.c.c.c.jonas.Jonas5xRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh"><p>Property name</p></th>
-              <th class="confluenceTh"><p>Java Property</p></th>
-              <th class="confluenceTh"><p>Supported?</p></th>
-              <th class="confluenceTh"><p>Default value</p></th>
-              <th class="confluenceTh"><p>Javadoc</p></th>
+              <th class="confluenceTh">
+               <p>Property name</p></th>
+              <th class="confluenceTh">
+               <p>Java Property</p></th>
+              <th class="confluenceTh">
+               <p>Supported?</p></th>
+              <th class="confluenceTh">
+               <p>Default value</p></th>
+              <th class="confluenceTh">
+               <p>Javadoc</p></th>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>localhost</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>localhost</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.cluster.name</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_CLUSTER_NAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_CLUSTER_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.cluster.name</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_CLUSTER_NAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_CLUSTER_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.deployable.identifier</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_DEPLOYABLE_IDENTIFIER</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_DEPLOYABLE_IDENTIFIER"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.deployable.identifier</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_DEPLOYABLE_IDENTIFIER</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_DEPLOYABLE_IDENTIFIER"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.domain.name</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_DOMAIN_NAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>jonas</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_DOMAIN_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.domain.name</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_DOMAIN_NAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>jonas</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_DOMAIN_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.jndi.initial.context.factory</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_MEJB_JNDI_INIT_CTX_FACT</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_MEJB_JNDI_INIT_CTX_FACT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.jndi.initial.context.factory</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_MEJB_JNDI_INIT_CTX_FACT</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_MEJB_JNDI_INIT_CTX_FACT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.jndi.mejb.path</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_MEJB_JNDI_PATH</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_MEJB_JNDI_PATH"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.jndi.mejb.path</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_MEJB_JNDI_PATH</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_MEJB_JNDI_PATH"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.mejb.jaas.entry</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_MEJB_JAAS_ENTRY</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_MEJB_JAAS_ENTRY"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.mejb.jaas.entry</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_MEJB_JAAS_ENTRY</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_MEJB_JAAS_ENTRY"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.mejb.jaas.file</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_MEJB_JAAS_FILE</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_MEJB_JAAS_FILE"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.mejb.jaas.file</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_MEJB_JAAS_FILE</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_MEJB_JAAS_FILE"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.server.name</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_SERVER_NAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>jonas</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_SERVER_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.server.name</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_SERVER_NAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>jonas</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_SERVER_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.jonas.undeploy.ignoreVersion</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">JonasPropertySet.JONAS_UNDEPLOY_IGNORE_VERSION</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>false</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_UNDEPLOY_IGNORE_VERSION"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jonas.undeploy.ignoreVersion</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JonasPropertySet.JONAS_UNDEPLOY_IGNORE_VERSION</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>false</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jonas/JonasPropertySet.html#JONAS_UNDEPLOY_IGNORE_VERSION"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.remote.password</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.uri</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.URI</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#URI"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.remote.uri</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">RemotePropertySet.URI</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#URI"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p>N/A</p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.remote.username</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">cargo.rmi.port</a></p></td>
-              <td class="confluenceTd"><p><a href="Configuration+properties.html">GeneralPropertySet.RMI_PORT</a></p></td>
-              <td class="confluenceTd"><p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
-              <td class="confluenceTd"><p><code>1099</code></p></td>
-              <td class="confluenceTd"><p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RMI_PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.rmi.port</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.RMI_PORT</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>1099</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RMI_PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
             </tbody>
            </table>
-          </div><h3 id="JOnAS5.x-TestedOn">Tested On</h3><p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous Integration system</a> every time there is a code change.<br>
+          </div>
+          <h3 id="JOnAS5.x-TestedOn">Tested On</h3>
+          <p>This container is automatically tested by the <a href="https://semaphoreci.com/codehaus-cargo/cargo">Continous Integration system</a> every time there is a code change.<br>
            The server used for tests is downloaded from: <a href="https://repo.maven.apache.org/maven2/org/ow2/jonas/assemblies/profiles/legacy/jonas-full/5.3.0/jonas-full-5.3.0-bin.tar.gz">https://repo.maven.apache.org/maven2/org/ow2/jonas/assemblies/profiles/legacy/jonas-full/5.3.0/jonas-full-5.3.0-bin.tar.gz</a></p></td>
         </tr>
        </tbody>
