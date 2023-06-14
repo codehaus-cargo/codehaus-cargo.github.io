@@ -633,7 +633,7 @@ public class WebsiteGenerator implements Runnable
                     sb.append(value.substring(start, matcher.start()));
                     sb.append("src=\"");
                     String attachment = value.substring(matcher.start() + 5, matcher.end() - 1);
-                    if (!attachment.startsWith("https://semaphoreci.com/"))
+                    if (!attachment.startsWith("https://codehaus-cargo.semaphoreci.com"))
                     {
                         sb.append("attachments/");
                         attachment = attachment.replace("&amp;", "&");
