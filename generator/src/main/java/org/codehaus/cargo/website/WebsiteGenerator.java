@@ -386,6 +386,8 @@ public class WebsiteGenerator implements Runnable
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-")
                 .replace("https://jira.codehaus.org/browse/CARGO-",
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-")
+                .replace("https://codehaus-cargo.semaphoreci.com/branches/aa05be41-7fb9-426d-bc0c-57f72f531386",
+                    "https://codehaus-cargo.semaphoreci.com/projects/cargo")
                 .replace("<div class=\"confluence-information-macro confluence-information-macro-note "
                     + "conf-macro output-block\"><span class=\"aui-icon aui-icon-small "
                     + "aui-iconfont-warning confluence-information-macro-icon\"> </span><div "
