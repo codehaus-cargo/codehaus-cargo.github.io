@@ -311,7 +311,7 @@
               <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1584">CARGO-1584</a>] - The Jetty standalone / embedded standalone container as well as some JBoss standalone containers don't work with Java 17.0.3 as well as Java 11.0.15 due to an XPath issue</p></li>
             </ul></li>
           </ul>
-          <p>That last item is actually caused by an <a href="https://bugs.openjdk.org/browse/JDK-8284920">XPath bug in the JRE that got recently introduced in Java 11.0.15, Java 17.0.3 and potentially other versions</a>. As a result, if you “all of a sudden” (or, more precisely, after upgrading your Java version) start getting messages such as <code>org.codehaus.cargo.util.CargoException: Node [...] not found in file [...].xml</code>, then you should upgrade to this latest version of Codehaus Cargo. To date, no Java release has a fix for that recently introduced XPath bug.</p>
+          <p>That last item is actually caused by an <a href="https://bugs.openjdk.org/browse/JDK-8284920">XPath bug in the JRE that got recently introduced in Java 11.0.15, Java 17.0.3 and potentially other versions</a>. As a result, if you "all of a sudden" (or, more precisely, after upgrading your Java version) start getting messages such as <code>org.codehaus.cargo.util.CargoException: Node [...] not found in file [...].xml</code>, then you should upgrade to this latest version of Codehaus Cargo. To date, no Java release has a fix for that recently introduced XPath bug.</p>
           <p>To upgrade to this latest version:</p>
           <ul>
            <li>

@@ -296,7 +296,7 @@
         <tr valign="top">
          <td class="rightColumn">
           <p>Dear Codehaus Cargo enthusiasts</p>
-          <p>A couple weeks after our last release, please give a warm welcome to Codehaus Cargo 1.8.5! This new version has many “under the hood” changes (in particular, around the dependency versions we use) and features the below improvements:</p>
+          <p>A couple weeks after our last release, please give a warm welcome to Codehaus Cargo 1.8.5! This new version has many "under the hood" changes (in particular, around the dependency versions we use) and features the below improvements:</p>
           <ul>
            <li>
             <p>Extensions - <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a></p>
@@ -304,7 +304,7 @@
              <li>
               <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1543">CARGO-1543</a>] - Added <code>tomcat-dbcp</code> to the embedded Tomcat container classpath</p></li>
              <li>
-              <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1501">CARGO-1501</a>] - Mojos that are thread safe should be marked with the appropriate annotation so that maven can run parallel builds<br><strong>Note</strong>: Though Codehaus Cargo itself is thread safe, we would recommend to use this feature with great care: you are <em>most likely</em> using Codehaus Cargo to perform integration tests on containers, you might run into port number clashes when executing the containers in parallel if you’re not careful.</p></li>
+              <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1501">CARGO-1501</a>] - Mojos that are thread safe should be marked with the appropriate annotation so that maven can run parallel builds<br><strong>Note</strong>: Though Codehaus Cargo itself is thread safe, we would recommend to use this feature with great care: you are <em>most likely</em> using Codehaus Cargo to perform integration tests on containers, you might run into port number clashes when executing the containers in parallel if you're not careful.</p></li>
             </ul></li>
           </ul>
           <p>This will also be our last <code>1.8.x</code> version, the reason being that the current <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a> (which behind the scenes is a Maven 2 plugin which Maven 3 can also use) will be removed and become a Maven 3 only plugin. This is quite nicely in line with <a href="https://maven.apache.org/maven-2.x-eol.html">the Maven 2.x end of life from November 2009</a>.</p>

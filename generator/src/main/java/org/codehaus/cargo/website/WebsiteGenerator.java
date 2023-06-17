@@ -386,8 +386,6 @@ public class WebsiteGenerator implements Runnable
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-")
                 .replace("https://jira.codehaus.org/browse/CARGO-",
                     "https://codehaus-cargo.atlassian.net/browse/CARGO-")
-                .replace("https://codehaus-cargo.semaphoreci.com/branches/aa05be41-7fb9-426d-bc0c-57f72f531386",
-                    "https://codehaus-cargo.semaphoreci.com/projects/cargo")
                 .replace("<div class=\"confluence-information-macro confluence-information-macro-note "
                     + "conf-macro output-block\"><span class=\"aui-icon aui-icon-small "
                     + "aui-iconfont-warning confluence-information-macro-icon\"> </span><div "
@@ -426,7 +424,10 @@ public class WebsiteGenerator implements Runnable
                 .replace("<p>&nbsp; <a", "<p><a")
                 .replace("&nbsp;<code>", " <code>")
                 .replace("<code><wbr>", "<code>")
-                .replace("<wbr></code>", "</code>"));
+                .replace("<wbr></code>", "</code>")
+                .replace("\u201C", "\"")
+                .replace("\u201D", "\"")
+                .replace("\u2019", "'"));
             System.out.println("  - Wrote file " + file.getAbsolutePath());
         }
         System.out.println("Parsing complete");
