@@ -346,12 +346,27 @@
             <div class="codeContent panelContent pdl">
              <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
     -Dcargo.maven.containerId=tomcat9x
+</pre>
+            </div>
+           </div>
+           <p>That command will automatically:</p>
+           <ul>
+            <li>Download the Maven artifact for the version of <a href="Tomcat+9.x.html">Tomcat 9.x</a> that our <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous Integration</a> has validated as working fine</li>
+            <li>Instantiate the container</li>
+            <li>Create a local configuration with your application</li>
+            <li>... and, run it</li>
+           </ul>
+           <p>To use a specific version of <a href="Tomcat+9.x.html">Tomcat 9.x</a>, you simply need to run (in one line):</p>
+           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+            <div class="codeContent panelContent pdl">
+             <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
+    -Dcargo.maven.containerId=tomcat9x
     -Dcargo.maven.containerUrl=https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/9.0.45/tomcat-9.0.45.zip
 </pre>
             </div>
            </div>
-           <p>That command will automatically download Tomcat 9.0.45 from the specified URL (taking into account any proxy server setting you would have in Maven 3), instantiate the container, create a local configuration with your application and run it. It will also save the downloaded container in the default directory (see the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p>
-           <p>Now, if you want to run this time on <a href="WildFly+20.x.html">WildFly 20.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
+           <p>This time, the command will automatically download Tomcat 9.0.45 from the specified URL instead, taking into account any proxy server setting you would have in Maven 3, and will it in the default directory (see the <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 Plugin Reference Guide</a> for details), so it won't get downloaded when you run the same command twice.</p>
+           <p>If you now want to run this time on <a href="WildFly+20.x.html">WildFly 20.x</a> with with the HTTP port set to <code>9000</code>, run:</p>
            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
             <div class="codeContent panelContent pdl">
              <pre class="syntaxhighlighter-pre">mvn clean verify org.codehaus.cargo:cargo-maven3-plugin:run
@@ -361,7 +376,7 @@
 </pre>
             </div>
            </div>
-           <p>Codehaus Cargo's main advantage is that the commands and configuration remains the same for any version of any supported container - be it Tomcat, Jetty, JBoss, JOnAS, GlassFish, WebLogic, WildFly, etc.</p>
+           <p>As you can see, Codehaus Cargo's main advantage is that the commands and configuration remains the same for any version of any supported container - be it Tomcat, Jetty, JBoss, JOnAS, GlassFish, WebLogic, WildFly, etc.</p>
            <p>Like it? Well, keep on reading, then!</p>
            <h2 id="Maven3Plugin-Moreexamples">More examples</h2>
            <p>As usual the best way to learn to use a tool is through examples.</p>
