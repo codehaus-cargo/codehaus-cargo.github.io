@@ -965,6 +965,22 @@
             <p>In addition to the forementioned properties, you can set any JOnAS configuration property that's configurable via the JOnAS configurator using the <code>cargo.jonas.configurator</code> prefix. For example, to set the Tomcat AJP port, use the the property <code>cargo.jonas.configurator.ajpPort</code> and give the value you like.</p>
            </div>
           </div>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>As the JOnAS base ANT tasks, used by the configurator, make explicit use of the <code>java.endorsed.dirs</code> property which got removed with Java 9, it is no more possible to create any JOnAS configurations with newer versions of Java. You will get errors similar to the below:</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl">
+              <pre class="syntaxhighlighter-pre">[JmsRa] Cannot make a resource adaptor on RAConfig:
+    [...]
+Caused by: Java returned: 1
+    at org.apache.tools.ant.taskdefs.Java.execute(Java.java:113)
+    at org.ow2.jonas.antmodular.jonasbase.jms.JmsRa.execute(JmsRa.java:222)
+</pre>
+             </div>
+            </div>
+           </div>
+          </div>
           <h4 id="JOnAS4.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4>
           <h5 id="JOnAS4.x-Forinstalledcontainero.c.c.c.jonas.Jonas4xInstalledLocalContainer.1">For installed container o.c.c.c.jonas.Jonas4xInstalledLocalContainer</h5>
           <div class="table-wrap">
