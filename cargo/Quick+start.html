@@ -43,33 +43,33 @@
      <td class="leftColumn" valign="top" style="padding-top:0px">
       <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
-       <li><a href="Home.html">Home</a></li>
-       <li><a href="Downloads.html">Downloads</a></li>
-       <li><a href="Quick+start.html">Quick start</a></li>
-       <li><a href="Contributing.html">How to contribute?</a>
-        <ul class="alternate">
-         <li><a href="Adding+a+container.html">Adding a container</a></li>
-        </ul></li>
-      </ul>
-      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
-      <ul class="alternate">
-       <li>Overview<br>
-        <ul class="alternate">
+       <li><a href="Home.html">Home</a>
+        <ul>
          <li><a href="Architecture.html">Architecture</a></li>
          <li><a href="Features.html">Features</a></li>
+         <li><a href="License.html">License</a></li>
+         <li><a href="Credits.html">Credits</a></li>
         </ul></li>
-       <li><a href="Installation.html">Installation</a></li>
-       <li>Usage<br>
-        <ul class="alternate">
+       <li>Installation
+        <ul>
+         <li><a href="Downloads.html">Downloads</a></li>
+         <li><a href="Installation.html">Installation</a></li>
+        </ul></li>
+       <li>Usage
+        <ul>
+         <li><a href="Quick+start.html">Quick start</a></li>
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
          <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
-       <li><a href="Articles.html">Articles</a></li>
-       <li><a href="License.html">License</a></li>
-       <li><a href="Credits.html">Credits</a></li>
+       <li>Getting help
+        <ul>
+         <li><a href="Articles.html">Articles</a></li>
+         <li><a href="Mailing+Lists.html">Mailing lists</a></li>
+         <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+        </ul></li>
       </ul>
       <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
@@ -233,37 +233,25 @@
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
       </ul>
-      <h3 id="Navigation-Extensions">Extensions</h3>
-      <ul class="alternate">
-       <li><a href="Ant+support.html">Ant tasks</a></li>
-       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul>
-      <p>Independent extensions:</p>
+      <h3 id="Navigation-Independentextensions">Independent extensions</h3>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul>
-      <h3 id="Navigation-ProjectInfo">Project Info</h3>
-      <ul class="alternate">
-       <li><a href="Roadmap.html">Roadmap</a></li>
-       <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
-       <li><a href="Source+code.html">Source code</a></li>
-       <li><a href="Mailing+Lists.html">Mailing lists</a></li>
-       <li><a href="License.html">License</a></li>
-       <li><a href="Credits.html">Credits</a></li>
-      </ul>
       <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
        <li><a href="Building.html">Building</a></li>
-       <li><a href="Cargo+Code+Style.html">Code style</a></li>
-       <li><a href="Contributing.html">Contributing</a></li>
-       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="Contributing.html">Contributing</a>
+        <ul>
+         <li><a href="Cargo+Code+Style.html">Code style</a></li>
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
        <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
       </ul>
       <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
@@ -325,7 +313,8 @@
             </ul>
            </div>
           </div>
-          <p>The following examples demonstrate how to configure Resin 3.0.15 to start in <code>target/resin3x</code> and deploy a WAR located in <code>path/to/simple.war</code> using the Java API. The default port is 8080. Please note that the <code>container.start()</code> and <code>container.stop()</code> methods wait until the container is fully started and fully stopped before continuing. Thus, for any action you are executing after, you are assured the container is completely operational.</p>
+          <p>The following examples demonstrate how to configure Tomcat 9.0.78 to start with a standalone local configuration in <code>target/tomcat9x</code> and deploy a WAR located in <code>path/to/simple.war</code> using the Java API. The default port is <code>8080</code>.</p>
+          <p>Please note that the <code>container.start()</code> and <code>container.stop()</code> methods wait until the container is fully started and fully stopped before continuing. Thus, for any action you are executing after, you are assured the container is completely operational.</p>
           <h3 id="Quickstart-Staticdeployment">Static deployment</h3>
           <p>Static deployment means that the <a href="Deployable.html">Deployable</a> is deployed before the container is started. Here's an example using the strongly typed Java API:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
@@ -333,12 +322,12 @@
             <pre class="syntaxhighlighter-pre">Deployable war = new WAR("path/to/simple.war");
 
 LocalConfiguration configuration =
-    new Resin3xStandaloneLocalConfiguration("target/myresin3x");
+    new Tomcat9xStandaloneLocalConfiguration("target/tomcat9x");
 configuration.addDeployable(war);
 
 InstalledLocalContainer container =
-    new Resin3xInstalledLocalContainer(configuration);
-container.setHome("c:/apps/resin-3.0.18");
+    new Tomcat9xInstalledLocalContainer(configuration);
+container.setHome("c:/apps/tomcat-9.0.78");
 
 container.start();
 // Here you are assured the container is started.
@@ -351,19 +340,20 @@ container.stop();
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">Deployable war = new DefaultDeployableFactory().createDeployable(
-    "resin3x", "path/to/simple.war", DeployableType.WAR);
+    "tomcat9x", "path/to/simple.war", DeployableType.WAR);
 
 ConfigurationFactory configurationFactory =
     new DefaultConfigurationFactory();
 LocalConfiguration configuration =
     (LocalConfiguration) configurationFactory.createConfiguration(
-"resin3x", ContainerType.INSTALLED, ConfigurationType.STANDALONE);
+        "tomcat9x", ContainerType.INSTALLED,
+            ConfigurationType.STANDALONE, "target/tomcat9x");
 configuration.addDeployable(war);
 
 InstalledLocalContainer container =
     (InstalledLocalContainer) new DefaultContainerFactory().createContainer(
-"resin3x", ContainerType.INSTALLED, configuration);
-container.setHome("c:/apps/resin-3.0.18");
+        "tomcat9x", ContainerType.INSTALLED, configuration);
+container.setHome("c:/apps/tomcat-9.0.78");
 
 container.start();
 // Here you are assured the container is started.
@@ -377,23 +367,22 @@ container.stop();
           <p><a href="Hot+Deployment.html">Hot deployment</a> means that the Deployable is deployed after the container is started.</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Resin3xInstalledLocalContainer(
-    new Resin3xStandaloneLocalConfiguration("target/myresin3x"));
-container.setHome("c:/apps/resin-3.0.18");
+            <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Tomcat9xInstalledLocalContainer(
+    new Tomcat9StandaloneLocalConfiguration("target/tomcat9x"));
+container.setHome("c:/apps/tomcat-9.0.78");
 
 container.start();
 // Here you are assured the container is started.
 
 Deployable war = new WAR("path/to/simple.war");
-Deployer deployer = new ResinInstalledLocalDeployer(container);
-deployer.deploy(war);
+Deployer deployer = new TomcatCopyingInstalledLocalDeployer(container);
 
-// Here you are NOT sure the WAR has finished deploying. To be sure you
-// need to use a DeployableMonitor to monitor the deployment. For example
-// the following code deploys the WAR and wait until it is available to
-// serve requests (the URL should point to a resource inside your WAR):
+// To be sure that the deployable is deployed, we can use a DeployableMonitor
+// to monitor the deployment. The following code deploys the WAR and waits until
+// it is available to serve requests (i.e., the URL specified returns an HTTP
+// code 2xx or 3xx and, in our example, the text connection-ok in the body)
 deployer.deploy(war, new URLDeployableMonitor(
-    new URL("http://server:port/some/url")));
+    new URL("http://localhost:8080/simple/jsp-status"), "connection-ok"));
 
 container.stop();
 // Here you are assured the container is stopped.</pre>

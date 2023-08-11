@@ -43,33 +43,33 @@
      <td class="leftColumn" valign="top" style="padding-top:0px">
       <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
-       <li><a href="Home.html">Home</a></li>
-       <li><a href="Downloads.html">Downloads</a></li>
-       <li><a href="Quick+start.html">Quick start</a></li>
-       <li><a href="Contributing.html">How to contribute?</a>
-        <ul class="alternate">
-         <li><a href="Adding+a+container.html">Adding a container</a></li>
-        </ul></li>
-      </ul>
-      <h3 class="confluence-link" id="Navigation-Documentation">Documentation</h3>
-      <ul class="alternate">
-       <li>Overview<br>
-        <ul class="alternate">
+       <li><a href="Home.html">Home</a>
+        <ul>
          <li><a href="Architecture.html">Architecture</a></li>
          <li><a href="Features.html">Features</a></li>
+         <li><a href="License.html">License</a></li>
+         <li><a href="Credits.html">Credits</a></li>
         </ul></li>
-       <li><a href="Installation.html">Installation</a></li>
-       <li>Usage<br>
-        <ul class="alternate">
+       <li>Installation
+        <ul>
+         <li><a href="Downloads.html">Downloads</a></li>
+         <li><a href="Installation.html">Installation</a></li>
+        </ul></li>
+       <li>Usage
+        <ul>
+         <li><a href="Quick+start.html">Quick start</a></li>
          <li><a href="Javadocs.html">Java API</a></li>
          <li><a href="Functional+testing.html">Functional testing with JUnit</a></li>
          <li><a href="Ant+support.html">Ant tasks</a></li>
          <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
          <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
         </ul></li>
-       <li><a href="Articles.html">Articles</a></li>
-       <li><a href="License.html">License</a></li>
-       <li><a href="Credits.html">Credits</a></li>
+       <li>Getting help
+        <ul>
+         <li><a href="Articles.html">Articles</a></li>
+         <li><a href="Mailing+Lists.html">Mailing lists</a></li>
+         <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
+        </ul></li>
       </ul>
       <h3 id="Navigation-Containers">Containers</h3>
       <ul class="alternate">
@@ -233,37 +233,25 @@
          <li><a href="WildFly+Swarm.html">WildFly Swarm</a></li>
         </ul></li>
       </ul>
-      <h3 id="Navigation-Extensions">Extensions</h3>
-      <ul class="alternate">
-       <li><a href="Ant+support.html">Ant tasks</a></li>
-       <li><a href="Cargo+Daemon.html">Cargo Daemon</a></li>
-       <li><a href="Maven+3+Plugin.html">Maven 3 plugin</a></li>
-      </ul>
-      <p>Independent extensions:</p>
+      <h3 id="Navigation-Independentextensions">Independent extensions</h3>
       <ul class="alternate">
        <li><a href="https://github.com/bmuschko/gradle-cargo-plugin">Gradle</a></li>
        <li><a href="https://github.com/mulesoft/cargo-mule-container">Mule container</a></li>
       </ul>
-      <h3 id="Navigation-ProjectInfo">Project Info</h3>
-      <ul class="alternate">
-       <li><a href="Roadmap.html">Roadmap</a></li>
-       <li><a href="News.html">News</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO/issues">Issues</a></li>
-       <li><a href="https://codehaus-cargo.atlassian.net/projects/CARGO?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page">Change log</a></li>
-       <li><a href="Source+code.html">Source code</a></li>
-       <li><a href="Mailing+Lists.html">Mailing lists</a></li>
-       <li><a href="License.html">License</a></li>
-       <li><a href="Credits.html">Credits</a></li>
-      </ul>
       <h3 id="Navigation-Development">Development</h3>
       <ul class="alternate">
        <li><a href="Project+Structure.html">Project structure</a></li>
+       <li><a href="Roadmap.html">Roadmap</a></li>
+       <li><a href="Source+code.html">Source code</a></li>
        <li><a href="Importing+sources.html">Importing sources</a></li>
        <li><a href="Building.html">Building</a></li>
-       <li><a href="Cargo+Code+Style.html">Code style</a></li>
-       <li><a href="Contributing.html">Contributing</a></li>
-       <li><a href="Release+procedure.html">Release procedure</a></li>
+       <li><a href="Contributing.html">Contributing</a>
+        <ul>
+         <li><a href="Cargo+Code+Style.html">Code style</a></li>
+         <li><a href="Adding+a+container.html">Adding a container</a></li>
+        </ul></li>
        <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
+       <li><a href="Release+procedure.html">Release procedure</a></li>
       </ul>
       <h3 class="heading3">RSS Feeds</h3>
       <table border="0" cellspacing="4px">
@@ -335,7 +323,7 @@
             <ol>
              <li>Open the CI page and click on the latest build</li>
              <li>First, check if the overall status is <strong><span style="color: rgb(51,153,102);">PASSED</span></strong></li>
-             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all CI jobs for the last build, as we split the container tests into multiple parallel jobs to reduce the total time required for integration testing). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" loading="lazy" src="attachments/Semaphore%20container%20log.png"></span><br><br></li>
+             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all CI jobs for the last build, as we split the container tests into multiple parallel jobs to reduce the total time required for integration testing). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/Semaphore%20container%20log.png" srcset="https://codehaus-cargo.atlassian.net/wiki/download/thumbnails/491632/Semaphore%20container%20log.png?version=2&amp;modificationDate=1691490611846&amp;cacheVersion=1&amp;api=v2&amp;width=486&amp;height=500 2x, https://codehaus-cargo.atlassian.net/wiki/download/thumbnails/491632/Semaphore%20container%20log.png?version=2&amp;modificationDate=1691490611846&amp;cacheVersion=1&amp;api=v2&amp;width=243&amp;height=250 1x"></span><br><br></li>
             </ol></li>
            <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
             <ul>
