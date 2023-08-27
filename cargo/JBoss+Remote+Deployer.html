@@ -487,7 +487,7 @@ Caused by: java.lang.IllegalArgumentException: port out of range:-1
 </pre>
              </div>
             </div>
-            <p>That is a known bug, documented in <a href="http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS">http://community.jboss.org/wiki/WhydoIgetasocketconnectionerrorwhenusingremoteJBossAS</a> and the solution presented on that document is to use a cron job as the root user to fix the file when it gets broken.</p>
+            <p>That is a known bug, documented in <span class="nolink"><a href="https://developer.jboss.org/docs/DOC-16380">https://developer.jboss.org/docs/DOC-16380</a>,</span> and the solution presented on that document is to use a cron job as the root user to fix the file when it gets broken.</p>
             <p>First, create the correct version of <code>/etc/hosts</code> and save it somewhere, such as <code>/etc/hosts.fixed</code>, and populate it with the following contents (replace <code>myhost</code> with the hostname of your computer, as reported by the <code>hostname</code> command, and the correct IP assignment, as reported by <code>ipconfig</code>):</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
