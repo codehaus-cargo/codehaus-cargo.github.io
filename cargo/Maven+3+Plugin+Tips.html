@@ -414,7 +414,7 @@
   </script>
           </center>
           <h2 id="Maven3PluginTips-StartingTomcatinsecuritymode">Starting Tomcat in security mode</h2>
-          <p><span style="color: rgb(255,0,0);">Warning: the proposed solution only works on Linux, see</span>&nbsp;<a href="https://issues.apache.org/jira/browse/MNG-6437">MNG-6437</a></p>
+          <p><span class="legacy-color-text-red2">Warning: the proposed solution only works on Linux, see</span>&nbsp;<a href="https://issues.apache.org/jira/browse/MNG-6437">MNG-6437</a></p>
           <p>Cargo supports passing system properties <a href="Passing+system+properties.html">Passing system properties</a>. So, to start Tomcat in security mode, you need to specify two system properties:</p>
           <ul>
            <li><code>java.security.manager</code></li>
@@ -490,7 +490,7 @@
           <p><span class="confluence-anchor-link conf-macro output-inline" id="Maven3PluginTips-tip4"><span class="confluence-anchor-link" id="tip4"> </span></span></p>
           <h2 id="Maven3PluginTips-HowtorunaJettywebappunderaJavaSecurityManager">How to run a Jetty webapp under a Java Security Manager</h2>
           <p><strong>Tip submitted by Claude Brisson</strong></p>
-          <p><span style="color: rgb(255,0,0);"><strong>UPDATE: This solution doesn't work on Windows for now: <code>@cargo.repository@</code>, <code>@cargo.container@</code> and <code><span style="color: rgb(255,0,0);"><strong>@cargo.webapp@</strong></span></code>&nbsp;should be URIs and not paths</strong></span></p>
+          <p><span class="legacy-color-text-red2"><strong>UPDATE: This solution doesn't work on Windows for now: <code>@cargo.repository@</code>, <code>@cargo.container@</code> and <code><span class="legacy-color-text-red2"><strong>@cargo.webapp@</strong></span></code>&nbsp;should be URIs and not paths</strong></span></p>
           <p><a href="Jetty+8.x.html">Jetty 8.x</a> has its own security manager, which can be enabled by enabling the <code>jetty-policy.xml</code>&nbsp;module, but it will search for its policies files under a <code>lib/policy</code>&nbsp;directory located in the same location as <code>start.jar</code>, inaccessible to Cargo's custom configuration folders.</p>
           <p>So we'll stick to the&nbsp;<a href="Jetty+9.x.html">Jetty 9.x</a> container. In&nbsp;<a href="Jetty+9.x.html">Jetty 9.x</a> there is no internal security manager, so we'll directly run&nbsp;<a href="Jetty+9.x.html">Jetty 9.x</a> under the standard <code>java.lang.SecurityManager</code>.</p>
           <p>We'll first need a <code>mywebapp.policy</code>&nbsp;policy file. It gives rights to Jetty itself:</p>
