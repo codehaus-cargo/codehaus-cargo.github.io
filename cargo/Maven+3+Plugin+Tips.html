@@ -288,7 +288,7 @@
          <td class="rightColumn">
           <h1 id="Maven3PluginTips-Tips">Tips</h1>
           <ul>
-           <li><a href="#Maven3PluginTips-tip1">Starting mutiple containers conditionally</a></li>
+           <li><a href="#Maven3PluginTips-tip1">Starting multiple containers conditionally</a></li>
            <li><a href="#Maven3PluginTips-tip2">Starting Tomcat in security mode</a></li>
            <li><a href="#Maven3PluginTips-tip3">How to get Tomcat 5 working with the Java 5 XML Parsers</a></li>
            <li><a href="Installer.html#Installer-installer_with_maven2_dependencies">How to use the ZIP or TAR.GZ distributions provided by servers on a Maven repository</a></li>
@@ -414,8 +414,13 @@
   </script>
           </center>
           <h2 id="Maven3PluginTips-StartingTomcatinsecuritymode">Starting Tomcat in security mode</h2>
-          <p><span class="legacy-color-text-red2">Warning: the proposed solution only works on Linux, see</span>&nbsp;<a href="https://issues.apache.org/jira/browse/MNG-6437">MNG-6437</a></p>
-          <p>Cargo supports passing system properties <a href="Passing+system+properties.html">Passing system properties</a>. So, to start Tomcat in security mode, you need to specify two system properties:</p>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Warning: the proposed solution only works on Linux, see <a href="https://issues.apache.org/jira/browse/MNG-6437">MNG-6437</a>.</p>
+           </div>
+          </div>
+          <p>Cargo supports <a href="Passing+system+properties.html">passing system properties</a>. So, to start Tomcat in security mode, you need to specify two system properties:</p>
           <ul>
            <li><code>java.security.manager</code></li>
            <li><code>java.security.policy</code></li>
@@ -490,7 +495,13 @@
           <p><span class="confluence-anchor-link conf-macro output-inline" id="Maven3PluginTips-tip4"><span class="confluence-anchor-link" id="tip4"> </span></span></p>
           <h2 id="Maven3PluginTips-HowtorunaJettywebappunderaJavaSecurityManager">How to run a Jetty webapp under a Java Security Manager</h2>
           <p><strong>Tip submitted by Claude Brisson</strong></p>
-          <p><span class="legacy-color-text-red2"><strong>UPDATE: This solution doesn't work on Windows for now: <code>@cargo.repository@</code>, <code>@cargo.container@</code> and <code><span class="legacy-color-text-red2"><strong>@cargo.webapp@</strong></span></code>&nbsp;should be URIs and not paths</strong></span></p>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>This solution doesn't work on Windows for now: <code>@cargo.repository@</code>, <code>@cargo.container@</code> and <code>@cargo.webapp@</code> should be URIs and not paths.</p>
+           </div>
+          </div>
+          <p><br></p>
           <p><a href="Jetty+8.x.html">Jetty 8.x</a> has its own security manager, which can be enabled by enabling the <code>jetty-policy.xml</code>&nbsp;module, but it will search for its policies files under a <code>lib/policy</code>&nbsp;directory located in the same location as <code>start.jar</code>, inaccessible to Cargo's custom configuration folders.</p>
           <p>So we'll stick to the&nbsp;<a href="Jetty+9.x.html">Jetty 9.x</a> container. In&nbsp;<a href="Jetty+9.x.html">Jetty 9.x</a> there is no internal security manager, so we'll directly run&nbsp;<a href="Jetty+9.x.html">Jetty 9.x</a> under the standard <code>java.lang.SecurityManager</code>.</p>
           <p>We'll first need a <code>mywebapp.policy</code>&nbsp;policy file. It gives rights to Jetty itself:</p>
