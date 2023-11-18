@@ -363,7 +363,7 @@
               <td class="confluenceTd">
                <p><code>daemon.<wbr>home</code></p></td>
               <td class="confluenceTd">
-               <p>Directory in which the standaone daemon server stores its files. These include the temporary files (such as its own WAR and server temporary files) as well as the server log files (<code>AWS-xxxxxxxxxxxxx.<wbr>log</code>, where <code>xxxxxxxxxxxxx</code> is the timestamp at which the deamon was started).</p>
+               <p>Directory in which the standalone daemon server stores its files. These include the temporary files (such as its own WAR and server temporary files) as well as the server log files (<code>AWS-xxxxxxxxxxxxx.<wbr>log</code>, where <code>xxxxxxxxxxxxx</code> is the timestamp at which the deamon was started).</p>
                <p>This property is not used and completely ignored if the daemon WAR file is deployed on an existing container.</p></td>
               <td class="confluenceTd">
                <p>👎</p></td>
@@ -381,6 +381,39 @@
                <p><code>${user.<wbr>home}/.<wbr>cargo</code></p>
                <p>Note that the standalone daemon by default sets this to <code>${daemon.<wbr>home}</code></p></td>
              </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><code>cargo.<wbr>daemon.<wbr>passwordFile</code></td>
+              <td colspan="1" class="confluenceTd">
+               <div class="content-wrapper">
+                <p>Property file with username and passwords which would be allowed to access the Cargo Daemon:</p>
+                <ul>
+                 <li>Passwords can either be put in plaintext, or prefixed with <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest">the hashing algorithm to use</a> and the associated hash.</li>
+                 <li>Only <code>Basic</code> authentication is supported.</li>
+                </ul>
+                <p>Some examples:</p>
+                <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+                 <div class="codeContent panelContent pdl">
+                  <pre class="syntaxhighlighter-pre"># Example 1: User without any password
+cargo-daemon-user_=
+
+# Example 2: User with a password written as plain text
+cargo-daemon-user1=cargo-password
+
+# Example 2, second variant: User with a password written as plain text, containing a curly bracket
+cargo-daemon-user0={cargo-password
+
+# Example 3: User with a password hashed in md5. The password is: cargo-password
+cargo-daemon-user2={MD5}9addb63b65b01292700094b0ef056036
+
+# Example 4: User with a password hashed in sha1. The password is: cargo-password
+cargo-daemon-user3={SHA-1}2681c738294805939045be2a4af53b687c25bf4d</pre>
+                 </div>
+                </div>
+                <p><strong>Note</strong>: This functionality is <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1618">new with Cargo Daemon version 1.10.11</a>.</p>
+               </div></td>
+              <td colspan="1" class="confluenceTd">👎</td>
+              <td colspan="1" class="confluenceTd">N/A</td>
+             </tr>
             </tbody>
            </table>
           </div>
@@ -395,12 +428,12 @@
            <li>Containers can also be submitted with the <code>autostart</code> property, this will automatically restart the container if the daemon notices it is stopped.</li>
           </ul>
           <h1 id="CargoDaemon-gettingStarted.1"><span class="confluence-anchor-link conf-macro output-inline" id="CargoDaemon-gettingStarted"><span class="confluence-anchor-link" id="gettingStarted"> </span></span></h1>
-          <h1 id="CargoDaemon-GettingstartedwiththeJavaAPI/ANTtasks/Maven3plugin">Getting started with the Java API / ANT tasks / Maven 3 plugin</h1>
+          <h1 id="CargoDaemon-GettingstartedwiththeJavaAPI/Anttasks/Maven3plugin">Getting started with the Java API /&nbsp;Ant tasks / Maven 3 plugin</h1>
           <p>As stated before, the Cargo Daemon is also available programmatically:</p>
           <ul>
            <li>The details of the Java API can be seen on the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/tools/daemon/DaemonClient.html">Javadoc for o.c.c.tools.daemon.DaemonClient</a></li>
            <li>
-            <p>To use the Daemon via ANT tasks, simply add the <code><a href="Ant+Tasks+Reference+Guide.html#AntTasksReferenceGuide-daemon">&lt;daemon&gt;</a></code> tag in the task and use the <strong>daemon-start</strong> or <strong>daemon-stop</strong> tasks:<br><br></p>
+            <p>To use the Daemon via Ant tasks, simply add the <code><a href="Ant+Tasks+Reference+Guide.html#AntTasksReferenceGuide-daemon">&lt;daemon&gt;</a></code> tag in the task and use the <strong>daemon-start</strong> or <strong>daemon-stop</strong> tasks:<br><br></p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat7x" action="daemon-start"&gt;
