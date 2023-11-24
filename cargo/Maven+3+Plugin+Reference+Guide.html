@@ -361,7 +361,7 @@
               <td class="confluenceTd">
                <p><code>&lt;skip&gt;</code></p></td>
               <td class="confluenceTd">
-               <p>Set this to <code>true</code> to bypass cargo execution</p></td>
+               <p>Set this to <code>true</code> to bypass the executions of the Codehaus Cargo Maven 3 plugin.</p></td>
               <td class="confluenceTd">
                <p>👎</p></td>
               <td class="confluenceTd">
@@ -370,10 +370,18 @@
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;ignoreFailures&gt;</code></td>
               <td colspan="1" class="confluenceTd">
-               <p>Set this to <code>true</code> to make the mojo ignore failures, so that Maven 3 can still progress through on integration tests with more than one container domain started</p></td>
+               <p>Set this to <code>true</code> to make the mojo ignore failures, so that Maven 3 can still progress through on integration tests with more than one container domain started.</p></td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p></td>
               <td colspan="1" class="confluenceTd">Defaults to <code>false</code>, you can also steer it using the system property <code>cargo.<wbr>ignore.<wbr>failures</code></td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd"><code>&lt;useLogCategoryPrefix&gt;</code></td>
+              <td colspan="1" class="confluenceTd">
+               <p>Set this to <code><span class="legacy-color-text-default">true</span></code> to not display the log message category prefixes, hence make the plugin's log messages shorter.</p>
+               <p><strong>Since Codehaus Cargo Maven 3 Plugin version 1.10.11 onwards.</strong></p></td>
+              <td colspan="1" class="confluenceTd">👎</td>
+              <td colspan="1" class="confluenceTd">Defaults to <code>false</code>, you can also steer it using the system property <code>cargo.<wbr>maven.<wbr>useLogCategoryPrefix</code></td>
              </tr>
             </tbody>
            </table>
@@ -383,8 +391,14 @@
            <table class="wrapped confluenceTable">
             <colgroup>
              <col style="width: 180.0px;">
+            </colgroup>
+            <colgroup>
              <col style="width: 546.0px;">
+            </colgroup>
+            <colgroup>
              <col style="width: 104.0px;">
+            </colgroup>
+            <colgroup>
              <col style="width: 529.0px;">
             </colgroup>
             <tbody>
@@ -1424,42 +1438,42 @@
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd">&lt;driverClass&gt;</td>
+              <td colspan="1" class="confluenceTd"><code>&lt;driverClass&gt;</code></td>
               <td colspan="1" class="confluenceTd">The class name of the Driver, for example "org.hsqldb.jdbcDriver"</td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p></td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd">&lt;url&gt;</td>
+              <td colspan="1" class="confluenceTd"><code>&lt;url&gt;</code></td>
               <td colspan="1" class="confluenceTd">DataSource connection URL.</td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p></td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd">&lt;username&gt;</td>
+              <td colspan="1" class="confluenceTd"><code>&lt;username&gt;</code></td>
               <td colspan="1" class="confluenceTd">DataSource username.</td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p></td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd">&lt;password&gt;</td>
+              <td colspan="1" class="confluenceTd"><code>&lt;password&gt;</code></td>
               <td colspan="1" class="confluenceTd">DataSource password.</td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p></td>
               <td colspan="1" class="confluenceTd">Empty string</td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd">&lt;id&gt;</td>
+              <td colspan="1" class="confluenceTd"><code>&lt;id&gt;</code></td>
               <td colspan="1" class="confluenceTd">Id used in configuration files.</td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p></td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd">&lt;connectionProperties&gt;</td>
+              <td colspan="1" class="confluenceTd"><code>&lt;connectionProperties&gt;</code></td>
               <td colspan="1" class="confluenceTd">Extra properties passed to the DataSource.</td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p></td>
