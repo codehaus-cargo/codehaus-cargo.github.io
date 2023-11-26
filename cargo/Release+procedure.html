@@ -251,7 +251,7 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
       </ul>
       <h3 class="heading3">RSS Feeds</h3>
@@ -322,9 +322,9 @@
           <ul>
            <li>All containers with a public download link are automatically tested by the <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous Integration system</a> every time there is a code change:
             <ol>
-             <li>Open the CI page and click on the latest build</li>
-             <li>First, check if the overall status is <span class="legacy-color-text-default legacy-color-text-green4"><strong>PASSED</strong></span></li>
-             <li>Then, click on the build and check for the command with <code>cat core/samples/java/containers.log</code> in it (on all CI jobs for the last build, as we split the container tests into multiple parallel jobs to reduce the total time required for integration testing). It should indicate status <code>0</code> for all containers:<br><br><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/Semaphore%20container%20log.png" srcset="https://codehaus-cargo.atlassian.net/wiki/download/thumbnails/491632/Semaphore%20container%20log.png?version=2&amp;modificationDate=1691490611846&amp;cacheVersion=1&amp;api=v2&amp;width=486&amp;height=500 2x, https://codehaus-cargo.atlassian.net/wiki/download/thumbnails/491632/Semaphore%20container%20log.png?version=2&amp;modificationDate=1691490611846&amp;cacheVersion=1&amp;api=v2&amp;width=243&amp;height=250 1x"></span><br><br></li>
+             <li>Open the <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous Integration system</a></li>
+             <li>Click on the latest build</li>
+             <li>Check if the overall status is <span class="legacy-color-text-default legacy-color-text-green4"><strong>PASSED</strong></span>. In case the overall status is <span class="legacy-color-text-red2"><strong>FAILED</strong></span>, look in the workflow to see which build(s) or container(s) cause the failure, and fix.</li>
             </ol></li>
            <li>For non-publicly-downloadable containers,&nbsp;tests need to be done on your computer. These include:
             <ul>
@@ -426,5 +426,15 @@
     </tr>
    </tbody>
   </table>
+  <script>
+  var ciStatusImage = document.getElementById("ci-status-image");
+  if (ciStatusImage) {
+    if (ciStatusImage.src.indexOf("?") > 0) {
+      ciStatusImage.src = ciStatusImage.src + "&time=" + new Date().getTime();
+    } else {
+      ciStatusImage.src = ciStatusImage.src + "?time=" + new Date().getTime();
+    }
+  }
+</script>
  </body>
 </html>

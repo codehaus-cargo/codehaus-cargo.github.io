@@ -251,7 +251,7 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
       </ul>
       <h3 class="heading3">RSS Feeds</h3>
@@ -292,10 +292,10 @@
           <ul>
            <li>A <a href="Container.html">Java API to start/stop/configure</a> any of the supported <a href="Containers.html">containers</a>.</li>
            <li>A <a href="Deployer.html">Java API to (remotely or locally) deploy modules</a> into these containers, be it a server alone, a farm or a cluster.</li>
-           <li>A <a href="Merging+WAR+files.html">Java API to parse/create/merge&nbsp;J2EE, Java EE or Jakarta EE modules</a>.</li>
+           <li>A <a href="Merging+WAR+files.html">Java API to parse/create/merge J2EE, Java EE or Jakarta EE modules</a>.</li>
            <li><a href="Ant+support.html">Ant tasks</a> wrapping the Java API for configuring, starting, stopping and deploying applications to all supported containers.</li>
            <li>A <a href="Cargo+Daemon.html">Web interface</a> that wraps the Java API that can be used to configure, start and stop all containers supported by Cargo remotely and at any time.</li>
-           <li>A <a href="Maven+3+Plugin.html">Maven 3 Plugin</a><a href="Maven+3+Plugin.html">&nbsp;</a>wrapping the Java API for configuring, starting, stopping and deploying applications to all supported containers and the Cargo Daemon as well as parsing, creating and merging&nbsp;J2EE, Java EE or Jakarta EE modules.</li>
+           <li>A <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> wrapping the Java API for configuring, starting, stopping and deploying applications to all supported containers and the Cargo Daemon as well as parsing, creating and merging&nbsp;J2EE, Java EE or Jakarta EE modules.</li>
           </ul>
           <p>These tools and APIs can be used in a standalone fashion or via various IDEs.</p>
           <h2 id="Home-Usage">Usage</h2>
@@ -1209,5 +1209,15 @@
     </tr>
    </tbody>
   </table>
+  <script>
+  var ciStatusImage = document.getElementById("ci-status-image");
+  if (ciStatusImage) {
+    if (ciStatusImage.src.indexOf("?") > 0) {
+      ciStatusImage.src = ciStatusImage.src + "&time=" + new Date().getTime();
+    } else {
+      ciStatusImage.src = ciStatusImage.src + "?time=" + new Date().getTime();
+    }
+  }
+</script>
  </body>
 </html>

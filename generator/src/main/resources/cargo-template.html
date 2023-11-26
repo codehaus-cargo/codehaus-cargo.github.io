@@ -116,4 +116,14 @@
     </tr>
   </table>
 </body>
+<script>
+  var ciStatusImage = document.getElementById("ci-status-image");
+  if (ciStatusImage) {
+    if (ciStatusImage.src.indexOf("?") > 0) {
+      ciStatusImage.src = ciStatusImage.src + "&time=" + new Date().getTime();
+    } else {
+      ciStatusImage.src = ciStatusImage.src + "?time=" + new Date().getTime();
+    }
+  }
+</script>
 </html>

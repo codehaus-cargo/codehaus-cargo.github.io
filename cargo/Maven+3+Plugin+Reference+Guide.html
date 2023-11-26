@@ -251,7 +251,7 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
       </ul>
       <h3 class="heading3">RSS Feeds</h3>
@@ -378,7 +378,7 @@
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;useLogCategoryPrefix&gt;</code></td>
               <td colspan="1" class="confluenceTd">
-               <p>Set this to <code><span class="legacy-color-text-default">true</span></code> to not display the log message category prefixes, hence make the plugin's log messages shorter.</p>
+               <p>Set this to <code><span class="legacy-color-text-default">true</span></code> to display the log message category prefixes, which could help diagnosing issues.</p>
                <p><strong>Since Codehaus Cargo Maven 3 Plugin version 1.10.11 onwards.</strong></p></td>
               <td colspan="1" class="confluenceTd">👎</td>
               <td colspan="1" class="confluenceTd">Defaults to <code>false</code>, you can also steer it using the system property <code>cargo.<wbr>maven.<wbr>useLogCategoryPrefix</code></td>
@@ -1727,5 +1727,15 @@
     </tr>
    </tbody>
   </table>
+  <script>
+  var ciStatusImage = document.getElementById("ci-status-image");
+  if (ciStatusImage) {
+    if (ciStatusImage.src.indexOf("?") > 0) {
+      ciStatusImage.src = ciStatusImage.src + "&time=" + new Date().getTime();
+    } else {
+      ciStatusImage.src = ciStatusImage.src + "?time=" + new Date().getTime();
+    }
+  }
+</script>
  </body>
 </html>

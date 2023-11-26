@@ -251,7 +251,7 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields&amp;key=484e5796-4095-4461-a2d6-f75968daf739" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
       </ul>
       <h3 class="heading3">RSS Feeds</h3>
@@ -1338,7 +1338,7 @@
           </div>
           <h3 id="Payara-TestedOn">Tested On</h3>
           <p>This container is automatically tested by the <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous Integration system</a> every time there is a code change.<br>
-           The server used for tests is downloaded from: <a href="https://repo.maven.apache.org/maven2/fish/payara/distributions/payara/6.2023.10/payara-6.2023.10.zip">https://repo.maven.apache.org/maven2/fish/payara/distributions/payara/6.2023.10/payara-6.2023.10.zip</a></p></td>
+           The server used for tests is downloaded from: <a href="https://repo.maven.apache.org/maven2/fish/payara/distributions/payara/6.2023.11/payara-6.2023.11.zip">https://repo.maven.apache.org/maven2/fish/payara/distributions/payara/6.2023.11/payara-6.2023.11.zip</a></p></td>
         </tr>
        </tbody>
       </table></td>
@@ -1358,5 +1358,15 @@
     </tr>
    </tbody>
   </table>
+  <script>
+  var ciStatusImage = document.getElementById("ci-status-image");
+  if (ciStatusImage) {
+    if (ciStatusImage.src.indexOf("?") > 0) {
+      ciStatusImage.src = ciStatusImage.src + "&time=" + new Date().getTime();
+    } else {
+      ciStatusImage.src = ciStatusImage.src + "?time=" + new Date().getTime();
+    }
+  }
+</script>
  </body>
 </html>
