@@ -290,10 +290,8 @@
           <ul>
            <li>Check out or download as a ZIP file the Codehaus Cargo source code from <a href="Source+code.html">Github</a> into a <code>CARGOHOME</code> directory (wherever you want on your machine).</li>
            <li>Install the JDK 11. If you really want to build with JDK 8 or with JDK 12 and above, read our chapter on <a href="#Building-nonJdk11">building with older or newer versions of the JDK</a>.</li>
-           <li>Install <a href="http://maven.apache.org">Maven&nbsp;3.5.4 or later</a>.
-            <ul>
-             <li>If you are using Maven 3.8.1 or newer, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="#Building-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
-            </ul></li>
+           <li>Install <a href="http://maven.apache.org">Maven 3.6.3 or later</a>.<br>
+            If you are using Maven 3.8.1 or newer, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="#Building-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
           </ul>
           <p>Verify your installation works by running the following command in a command prompt / terminal window: <code>mvn -version</code></p>
           <h1 id="Building-Building">Building</h1>
