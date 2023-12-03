@@ -293,11 +293,7 @@
            <li>the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars)</li>
            <li><strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars and their core dependencies (such as the various J2EE, Java EE and Jakarta EE specifications, JNI, etc.)</li>
           </ul>
-          <p>Cargo's base dependencies (not packed in the uberjar) are as follows:</p>
-          <ul>
-           <li><a href="https://repo.maven.apache.org/maven2/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar">Commons discovery 0.5</a> or greater</li>
-           <li><a href="https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar">Commons logging 1.2</a> or greater</li>
-          </ul>
+          <p>Cargo's only base dependency not packed in the uberjar is <a href="https://repo.maven.apache.org/maven2/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar">commons discovery 0.5</a>, which itself depends on <a href="https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar">commons logging 1.1.1</a> (though our builds always use the latest version).</p>
           <p>In addition, some specific containers and features require the following:</p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
