@@ -34,6 +34,7 @@ a, a:link {
   color: #6A1E1E;
   font-weight: normal;
   text-decoration: none;
+  border-bottom: 1px dotted #76849A;
 }
 
 a:active, a:hover {
@@ -44,12 +45,6 @@ a:active, a:hover {
 
 a.plain:active, a.plain:hover {
   text-decoration: none;
-}
-
-a:link.selfref, a:visited.selfref {
-}
-
-a:link, a:visited {
 }
 
 h3 {
@@ -119,62 +114,9 @@ pre {
   margin: 0;
 }
 
-.navLink a {
-  font-weight: normal;
-}
-
-.navLink {
-  margin-left: 5px;
-}
-
-.navLink:first-line {
-  margin-left: -5px;
-}
-
-.sectionTitle a {
-  text-decoration: underline;
-}
-
-.subsectionTitle a {
-  text-decoration: underline;
-}
-
 span.highlight {
   font-weight: normal;
   color: #990000;
-}
-
-.navSection {
-  background-color: #C0C9D8;
-  border: 1px solid #39434F;
-  border-top: none;
-  padding: 0px;
-  margin-bottom: 8px;
-}
-
-.navSection a {
-  font-weight: normal;
-}
-
-.navSectionHead {
-  border-top: 1px solid #39434F;
-  border-bottom: 1px solid #39434F;
-  color: #555555;
-  background-color: #C0C9D8;
-  padding: 4px;
-  margin-left: 0px;
-  margin-right: 0px;
-  font-weight: normal;
-}
-
-.navLink {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 14px;
-}
-
-.section {
-  padding-bottom: 16px;
 }
 
 * + h1 {
@@ -187,62 +129,6 @@ span.highlight {
 
 body:first-child {
   padding-top: 0px;
-}
-
-.sectionTitle, h1 {
-  border: 1px solid #C0C9D8;
-  background-color: #C0C9D8;
-  color: #76849A;
-  padding: 4px;
-  font-size: 13px; /* small */
-  font-weight: normal;
-  margin-bottom: .5em;
-}
-
-.subsection {
-  padding-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.subsectionTitle, h2 {
-  border-bottom: 2px solid #39434F;
-  border-left: 2px solid #39434F;
-  color: #76849A;
-  padding-left: .2em;
-  margin-bottom: .5em;
-  background-color: white;
-  font-weight: normal;
-  font-size: 18px; /* large */
-}
-
-.sectionTitle a {
-  font-weight: normal;
-}
-
-.subsectionTitle a {
-  font-weight: normal;
-}
-
-.subsubsection {
-  padding-left: 30px;
-}
-
-.subsubsectionTitle, h3, .blogheading {
-  border-bottom: 1px solid #39434F;
-  color: #76849A;
-  font-weight: normal;
-  padding: .1em;
-  margin-bottom: .5em;
-}
-
-ins.inserted {
-  text-decoration: none;
-  font-weight: normal;
-}
-
-.nobr {
-  white-space: nowrap;
 }
 
 .source, .code {
@@ -258,23 +144,6 @@ ins.inserted {
 .codeContent {
   padding: 6px !important;
   margin: 0 !important;
-}
-
-.java-keyword {
-  color: #39434F;
-}
-
-.java-object {
-  color: #000099;
-}
-
-.java-quote {
-  color: #990000;
-}
-
-.source, .code pre {
-  margin: 0px;
-  padding: 0px;
 }
 
 input[type="text"] {
@@ -313,166 +182,9 @@ label.required {
   color: #76849A;
 }
 
-.linecomment {
-  color: #C0C9D8;
-}
-
-.blockcomment {
-  color: #C0C9D8;
-}
-
-.prepro {
-  color: #0000BB;
-}
-
-.quote {
-  color: #770000;
-}
-
-.category1 {
-  color: #76849A;
-}
-
-.category2 {
-  color: #0000BB;
-}
-
-.category3 {
-  color: #0000BB;
-}
-
-.greenbar {
-  background-color: #00FF00;
-}
-
-.redbar {
-  background-color: #FF0000;
-}
-
-tr.testpassed td {
-  padding: 0px;
-  padding-left: 1px;
-  padding-right: 1px;
-  margin: 0px;
-}
-
-tr td.noformatting {
-  border: none;
-  padding: 0px;
-  padding-left: 4px;
-  padding-right: 4px;
-  margin: 0px;
-}
-
-.greybox {
-  font-style: italic;
-  font-weight: normal;
-  margin-top: .5em;
-  margin-bottom: .5em;
-  background-color: #dddddd;
-  border: 1px solid #bbbbbb;
-  padding: .3em;
-}
-
 .panelContent {
   padding: 1em;
   margin: 1em;
-}
-
-.header_name {
-  padding: 2px;
-  padding-right: 1ex;
-  border-right: 1px solid #555555;
-  background-color: #cccccc;
-}
-
-.header_value {
-  background-color: #76849A;
-  padding: 2px;
-}
-
-.header_fields {
-  width: 100%;
-  border: 1px solid #39434F;
-  background-color: #FFFFFF;
-}
-
-.email_body {
-  margin: 2ex;
-  padding: 1ex;
-  padding-left: 2ex;
-  padding-right: 2ex;
-  border: 1px solid #39434F;
-}
-
-.email_body pre {
-  padding: 0px;
-  margin: 0px;
-}
-
-.email_body blockquote {
-  padding: 0px;
-  margin: 0px;
-  border: 1px solid #cccccc;
-}
-
-.msg_navblock {
-  margin-bottom: 2ex;
-  border: 1px solid #39434F;
-  background-color: #FFFFFF;
-}
-
-.msg_navblock th {
-  border: 1px solid #cccccc;
-}
-
-.msg_navblock td {
-  border: 1px solid #cccccc;
-}
-
-.single_entry {
-  border: 1px solid #AAAAAA;
-  border-left: 1px solid #39434F;
-  background-color: #C0C9D8;
-  padding: .5ex;
-  padding-left: 1ex;
-  margin: 2px;
-}
-
-.root_entry {
-  border: 1px solid #AAAAAA;
-  border-left: 1px solid #39434F;
-  background-color: #C0C9D8;
-  padding: .5ex;
-  padding-left: 1ex;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.root_entry .sub_entry {
-  padding: .5ex;
-  padding-left: 1ex;
-  margin: 2px;
-  margin-left: 1ex;
-  border-left: 1px solid #39434F;
-}
-
-.list_entry {
-  border: 1px solid #AAAAAA;
-  padding: 1ex;
-  margin-top: 1ex;
-  margin-bottom: 1ex;
-}
-
-.list_entry td {
-  border: 1px solid #39434F;
-}
-
-.project_entry {
-  border: 1px solid #AAAAAA;
-  padding: 1ex;
-  margin-top: 1ex;
-  margin-bottom: 1ex;
 }
 
 /* information macros */
@@ -577,66 +289,6 @@ table.confluenceTable th {
 table.confluenceTable p {
   text-align: left;
 }
-
-table.bodyTable td {
-  padding: 4px;
-}
-
-table.bodyTable, table.wikitable {
-  background-color: #C0C9D8;
-  margin: 10px;
-  border-collapse: collapse;
-  border-spacing: 0pt;
-}
-
-table.grid {
-  border: 1px solid #C0C9D8;
-}
-
-table.grid {
-  padding: 0px;
-  border-collapse: collapse;
-  border-spacing: 0pt;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-table.grid th {
-  background-color: #C0C9D8;
-  border: 1px solid #C0C9D8;
-  padding: 4px;
-}
-
-table.grid td {
-  border: 1px solid #C0C9D8;
-  padding: 3px;
-}
-
-table.bodyTable th, table.bodyTable td, table.wikitable th, table.wikitable td {
-  border: 1px solid #39434F;
-  padding: 4px;
-}
-
-table.bodyTable th, table.wikitable th {
-  background-color: #76849A;
-  border: 2px solid #39434F;
-  text-align: left;
-  padding: 4px;
-}
-
-/*
-table.bodyTable th, table.wikitable th {
-  border-bottom: 2px solid #999999;
-}
-
-table.bodyTable tr.a {
-  background-color: #dedede;
-}
-
-table.bodyTable tr.b {
-  background-color: #efefef;
-}
-*/
 
 .banner {
   padding: 8px;
