@@ -125,7 +125,7 @@
       <ul class="alternate">
        <li>Jo!
         <ul class="alternate">
-         <li><a href="jo+1.x.html">jo 1.x</a></li>
+         <li><a href="jo%21+1.x.html">jo! 1.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -144,8 +144,8 @@
       <ul class="alternate">
        <li>Orion/OC4J
         <ul class="alternate">
-         <li><a href="Oc4J+9.x.html">Oc4J 9.x</a></li>
-         <li><a href="Oc4j+10.x.html">Oc4j 10.x</a></li>
+         <li><a href="OC4J+9.x.html">OC4J 9.x</a></li>
+         <li><a href="OC4J+10.x.html">OC4J 10.x</a></li>
         </ul></li>
       </ul>
       <ul class="alternate">
@@ -371,8 +371,10 @@
               <ul>
                <li>Make sure the <a href="Containers.html">Containers list</a> is complete.</li>
                <li>Make sure the <a href="Navigation.html">Navigation page</a> is complete.</li>
-               <li>Make sure the documentation for each container is up to date.<br><u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code>core/documentation/target/<em>[container's name]</em>.log</code></li>
-               <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/datasource.log</code></li>
+               <li>Make sure the documentation for each container is up to date.<br><u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code><span class="legacy-color-text-default">core/documentation/target/[container's name].log</span></code><br>
+                As an alternative to manual processing, you can also set the Java property <code>cargo.confluenceCredentialsPath</code> to let the build update the Confluence content for each and every container.</li>
+               <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code><code>core/documentation/target/datasource.</code></code><code><span class="legacy-color-text-default">log</span></code><br>
+                As an alternative to manual processing, you can also set the Java property <code>cargo.confluenceCredentialsPath</code> to let the build update the Confluence content for the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> page.</li>
                <li>Make sure the <a href="Project+Structure.html">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
               </ul></li>
              <li>Modify the <a href="Home.html">Home</a> page to update the available version number, the release notes URL the checkbox is pointing to and the release date</li>
