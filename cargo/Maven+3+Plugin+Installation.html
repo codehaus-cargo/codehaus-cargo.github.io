@@ -349,7 +349,7 @@
             <p>When you do not do that properly, you will be getting errors such as:</p>
             <pre>Cannot create configuration. There's no registered configuration for the parameters (container [id = [tomcat9x], type = [installed]], configuration type [standalone]). Actually there are no valid types registered for this configuration. Maybe you've made a mistake spelling it?</pre>
             <p>In case the errors persist even after adding the <code>SNAPSHOT</code> repositories, you can install the associated container artifact. Example (with the Codehaus Cargo Tomcat container):</p>
-            <pre>mvn dependency:get -Dartifact=org.codehaus.cargo:cargo-core-container-tomcat:1.10.12-SNAPSHOT -DremoteRepositories=https://oss.sonatype.org/content/repositories/snapshots/</pre>
+            <pre>mvn dependency:get -Dartifact=org.codehaus.cargo:cargo-core-container-tomcat:1.10.13-SNAPSHOT -DremoteRepositories=https://oss.sonatype.org/content/repositories/snapshots/</pre>
            </div>
           </div>
           <p>Then, you should decide which <code>SNAPSHOT</code> version to use:</p>
@@ -366,7 +366,7 @@
       &lt;plugin&gt;
         &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
         &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.10.12-SNAPSHOT&lt;/version&gt;
+        &lt;version&gt;1.10.13-SNAPSHOT&lt;/version&gt;
 [...]
       &lt;/plugin&gt;
 [...]
