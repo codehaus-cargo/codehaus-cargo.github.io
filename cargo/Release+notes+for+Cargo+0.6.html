@@ -289,36 +289,44 @@
         <tr valign="top">
          <td class="rightColumn">
           <h3 id="ReleasenotesforCargo0.6-Implementedissues">Implemented issues</h3>
-          <div class="jim-error-message jim-error-message-table conf-macro output-block">
-           <table class="aui">
-            <tbody>
-             <tr>
-             </tr>
-             <tr>
-              <th>type</th>
-              <th>key</th>
-              <th>resolution</th>
-              <th>summary</th>
-              <th>assignee</th>
-              <th>reporter</th>
-             </tr>
-             <tr>
-              <td colspan="6">
-               <div class="aui-message aui-message-warning">
-                <p class="message"><span class="icon-in-pdf"> </span> Unable to locate Jira server for this macro. It may be due to Application Link configuration.</p>
-               </div></td>
-             </tr>
-            </tbody>
-           </table>
+          <p></p>
+          <div class="confluence-jim-macro refresh-module-id jira-table placeholder conf-macro output-block">
+           <p></p>
+           <div style="width: 100%;  overflow: auto;" class="jira-issues">
+            <table class="aui">
+             <tbody>
+              <tr>
+              </tr>
+              <tr>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">key</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">summary</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">type</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">created</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">updated</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">due</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">assignee</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">reporter</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">priority</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">status</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">resolution</th>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+           <div class="refresh-issues-bottom">
+           </div><a class="icon icon-refresh refresh-action refresh-issues-button"> </a> <a class="refresh-action refresh-issues-link">Refresh</a> <input type="hidden" class="refresh-wiki">
           </div>
+          <p></p>
+          <div class="jim-sortable-dark-layout">
+          </div>
+          <p></p>
           <h3 id="ReleasenotesforCargo0.6-Sourcecodechanges">Source code changes</h3>
           <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.6-clirr"><span class="confluence-anchor-link" id="clirr"> </span></span><br>
-            Changes detected by <a href="http://clirr.sourceforge.net">Clirr</a> between <code>cargo-0.5.jar</code> and <code>cargo-0.6.jar</code>.</p>
+           Changes detected by <a href="http://clirr.sourceforge.net">Clirr</a> between <code>cargo-0.5.jar</code> and <code>cargo-0.6.jar</code>.</p>
           <p>Binary compatibility breaks:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-ERROR: org.codehaus.cargo.ant.CargoTask: In method 'protected void executeActions(org.codehaus.cargo.container.Container)' the number of arguments has changed
+            <pre class="syntaxhighlighter-pre">ERROR: org.codehaus.cargo.ant.CargoTask: In method 'protected void executeActions(org.codehaus.cargo.container.Container)' the number of arguments has changed
 ERROR: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.String getContainerKey()' has been removed
 ERROR: org.codehaus.cargo.ant.CargoTask: Method 'public void setContainerKey(java.lang.String)' has been removed
 ERROR: org.codehaus.cargo.ant.CargoTask: Method 'protected void setupConfiguration(org.codehaus.cargo.container.Container)' has been removed
@@ -428,8 +436,7 @@ ERROR: org.codehaus.cargo.module.Dtd$XmlEntityResolver: Class org.codehaus.cargo
           <p>Changes not affecting compatibility:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Method 'public java.lang.String toString()' has been added
+            <pre class="syntaxhighlighter-pre">INFO: org.codehaus.cargo.container.jetty.JettyStandaloneConfiguration: Method 'public java.lang.String toString()' has been added
 INFO: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.Class getContainerClass()' has been added
 INFO: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.String getContainerId()' has been added
 INFO: org.codehaus.cargo.ant.CargoTask: Method 'protected org.codehaus.cargo.util.monitor.Monitor getMonitor()' has been added

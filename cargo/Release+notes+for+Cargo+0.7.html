@@ -301,28 +301,37 @@
           <p>The list of all issues fixed and features implemented is available below.</p>
           <p>Please note that version 0.7 has broken almost all APIs. This was majoritarly due to the Remote container support refactoring. This is one of the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this. This is probably the last time such a major change happens before the 1.0 release.</p>
           <h3 id="ReleasenotesforCargo0.7-Implementedissues">Implemented issues</h3>
-          <div class="jim-error-message jim-error-message-table conf-macro output-block">
-           <table class="aui">
-            <tbody>
-             <tr>
-             </tr>
-             <tr>
-              <th>type</th>
-              <th>key</th>
-              <th>resolution</th>
-              <th>summary</th>
-              <th>assignee</th>
-              <th>reporter</th>
-             </tr>
-             <tr>
-              <td colspan="6">
-               <div class="aui-message aui-message-warning">
-                <p class="message"><span class="icon-in-pdf"> </span> Unable to locate Jira server for this macro. It may be due to Application Link configuration.</p>
-               </div></td>
-             </tr>
-            </tbody>
-           </table>
+          <p></p>
+          <div class="confluence-jim-macro refresh-module-id jira-table placeholder conf-macro output-block">
+           <p></p>
+           <div style="width: 100%;  overflow: auto;" class="jira-issues">
+            <table class="aui">
+             <tbody>
+              <tr>
+              </tr>
+              <tr>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">key</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">summary</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">type</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">created</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">updated</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">due</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">assignee</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">reporter</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">priority</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">status</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">resolution</th>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+           <div class="refresh-issues-bottom">
+           </div><a class="icon icon-refresh refresh-action refresh-issues-button"> </a> <a class="refresh-action refresh-issues-link">Refresh</a> <input type="hidden" class="refresh-wiki">
           </div>
+          <p></p>
+          <div class="jim-sortable-dark-layout">
+          </div>
+          <p></p>
           <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
@@ -336,12 +345,11 @@
           </center>
           <h3 id="ReleasenotesforCargo0.7-Sourcecodechanges">Source code changes</h3>
           <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.7-clirr"><span class="confluence-anchor-link" id="clirr"> </span></span><br>
-            Changes detected by <a href="http://clirr.sourceforge.net">Clirr</a> between <code>cargo-0.6.jar</code> and <code>cargo-0.7.jar</code>.</p>
+           Changes detected by <a href="http://clirr.sourceforge.net">Clirr</a> between <code>cargo-0.6.jar</code> and <code>cargo-0.7.jar</code>.</p>
           <p>Changes to the core:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public org.codehaus.cargo.container.configuration.Configuration getConfiguration()' has been removed
+            <pre class="syntaxhighlighter-pre">ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public org.codehaus.cargo.container.configuration.Configuration getConfiguration()' has been removed
 ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public java.lang.String[] getExtraClasspath()' has been removed
 ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public java.io.File getHomeDir()' has been removed
 ERROR: 7002: org.codehaus.cargo.container.Container: Method 'public java.io.File getOutput()' has been removed
@@ -750,8 +758,7 @@ INFO: 7011: org.codehaus.cargo.util.FileUtils: Method 'public java.io.File creat
           <p>Changes to the Ant API:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.String getHome()' has been added
+            <pre class="syntaxhighlighter-pre">INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'protected java.lang.String getHome()' has been added
 ERROR: 7002: org.codehaus.cargo.ant.CargoTask: Method 'protected java.io.File getHomeDir()' has been removed
 INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'public void setHint(java.lang.String)' has been added
 INFO: 7011: org.codehaus.cargo.ant.CargoTask: Method 'public void setHome(java.lang.String)' has been added

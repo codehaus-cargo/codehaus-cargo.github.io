@@ -309,28 +309,37 @@
           <p>Please note that version 0.8 has broken several APIs as explained below in the migration guide. This is one of the last 0.X version before the 1.0 release and we took the opportunity to fix the API now rather than to go through a lengthy and difficult deprecation strategy (which we'll use once 1.0 is out). We apologize to all our early users for this.</p>
           <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-issues"><span class="confluence-anchor-link" id="issues"> </span></span></p>
           <h3 id="ReleasenotesforCargo0.8-Changelog">Changelog</h3>
-          <div class="jim-error-message jim-error-message-table conf-macro output-block">
-           <table class="aui">
-            <tbody>
-             <tr>
-             </tr>
-             <tr>
-              <th>type</th>
-              <th>key</th>
-              <th>resolution</th>
-              <th>summary</th>
-              <th>assignee</th>
-              <th>reporter</th>
-             </tr>
-             <tr>
-              <td colspan="6">
-               <div class="aui-message aui-message-warning">
-                <p class="message"><span class="icon-in-pdf"> </span> Unable to locate Jira server for this macro. It may be due to Application Link configuration.</p>
-               </div></td>
-             </tr>
-            </tbody>
-           </table>
+          <p></p>
+          <div class="confluence-jim-macro refresh-module-id jira-table placeholder conf-macro output-block">
+           <p></p>
+           <div style="width: 100%;  overflow: auto;" class="jira-issues">
+            <table class="aui">
+             <tbody>
+              <tr>
+              </tr>
+              <tr>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">key</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">summary</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">type</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">created</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">updated</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">due</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">assignee</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">reporter</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">priority</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">status</th>
+               <th style="text-align: left; text-transform: capitalize;" class="jira-macro-table-underline-pdfexport">resolution</th>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+           <div class="refresh-issues-bottom">
+           </div><a class="icon icon-refresh refresh-action refresh-issues-button"> </a> <a class="refresh-action refresh-issues-link">Refresh</a> <input type="hidden" class="refresh-wiki">
           </div>
+          <p></p>
+          <div class="jim-sortable-dark-layout">
+          </div>
+          <p></p>
           <p><span class="confluence-anchor-link conf-macro output-inline" id="ReleasenotesforCargo0.8-migration"><span class="confluence-anchor-link" id="migration"> </span></span></p>
           <script type="text/javascript">
   // Google Ads code
@@ -352,14 +361,13 @@
           <p>For example if you were before using the m2 plugin with:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-&lt;container&gt;
+            <pre class="syntaxhighlighter-pre">&lt;container&gt;
   &lt;type&gt;local&lt;/type&gt;
 &lt;/container&gt;
 </pre>
            </div>
           </div>
-          <p>You'll now have to use a type of <code>installed</code> for <a href="Installed+Container.html">Installed Container</a> and a type of <code>embedded</code> for <a href="Embedded+Container.html">Embedded Container</a>. The same applies for the Ant and Maven1 extensions. If no type is specified it defaults to an Installed Container.</p>
+          <p>You'll now have to use a type of <code>installed</code> for&nbsp;<a href="Installed+Container.html">Installed Container</a> and a type of <code>embedded</code> for <a href="Embedded+Container.html">Embedded Container</a>. The same applies for the Ant and Maven1 extensions. If no type is specified it defaults to an Installed Container.</p>
           <ul>
            <li>Replaced <code>dir</code> attribute (for the Ant task), <code><a class="unresolved" href="#">...</a>.config.dir</code> property (for the Maven 1 plugin) <code>dir</code> element (for the Maven 2 plugin) by <code>home</code> to be aligned with the Java API.</li>
           </ul>
@@ -407,8 +415,7 @@
           <h4 id="ReleasenotesforCargo0.8-CoreContainerAPI">Core Container API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 4000: org.codehaus.cargo.container.Container: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
+            <pre class="syntaxhighlighter-pre">INFO: 4000: org.codehaus.cargo.container.Container: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
 ERROR: 4001: org.codehaus.cargo.container.Container: Removed org.codehaus.cargo.util.monitor.Monitorable from the set of implemented interfaces
 INFO: 6000: org.codehaus.cargo.container.ContainerType: Added public field EMBEDDED
 INFO: 6000: org.codehaus.cargo.container.ContainerType: Added public field INSTALLED
@@ -479,8 +486,7 @@ INFO: 6000: org.codehaus.cargo.container.property.RemotePropertySet: Added publi
           <h4 id="ReleasenotesforCargo0.8-CoreGenericAPI">Core Generic API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 8000: org.codehaus.cargo.generic.ContainerCapabilityFactory: Class org.codehaus.cargo.generic.ContainerCapabilityFactory added
+            <pre class="syntaxhighlighter-pre">INFO: 8000: org.codehaus.cargo.generic.ContainerCapabilityFactory: Class org.codehaus.cargo.generic.ContainerCapabilityFactory added
 ERROR: 7002: org.codehaus.cargo.generic.ContainerFactory: Method 'public org.codehaus.cargo.container.Container createContainer(java.lang.String, org.codehaus.cargo.container.configuration.Configuration)' has been removed
 ERROR: 7012: org.codehaus.cargo.generic.ContainerFactory: Method 'public java.lang.Class getContainerClass(java.lang.String, org.codehaus.cargo.container.ContainerType)' has been added to an interface
 INFO: 8000: org.codehaus.cargo.generic.DefaultContainerCapabilityFactory: Class org.codehaus.cargo.generic.DefaultContainerCapabilityFactory added
@@ -515,8 +521,7 @@ ERROR: 7012: org.codehaus.cargo.generic.deployer.DeployerFactory: Method 'public
           <h4 id="ReleasenotesforCargo0.8-CoreModuleAPI">Core Module API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 7011: org.codehaus.cargo.module.DefaultJarArchive: Method 'public void expandToPath(java.lang.String)' has been added
+            <pre class="syntaxhighlighter-pre">INFO: 7011: org.codehaus.cargo.module.DefaultJarArchive: Method 'public void expandToPath(java.lang.String)' has been added
 INFO: 7011: org.codehaus.cargo.module.DefaultJarArchive: Method 'protected byte[] streamToByteArray(java.io.InputStream)' has been added
 ERROR: 7012: org.codehaus.cargo.module.JarArchive: Method 'public void expandToPath(java.lang.String)' has been added to an interface
 ERROR: 7005: org.codehaus.cargo.module.merge.AbstractMergeSet: Parameter 1 of 'public int merge(org.codehaus.cargo.module.merge.MergeStrategy)' has changed its type to org.codehaus.cargo.module.merge.strategy.MergeStrategy
@@ -561,8 +566,7 @@ INFO: 8000: org.codehaus.cargo.module.webapp.resin.SystemProperty: Class org.cod
           <h4 id="ReleasenotesforCargo0.8-CoreUtilAPI">Core Util API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-ERROR: 7002: org.codehaus.cargo.util.FileUtils: Method 'public java.io.File createTmpDir()' has been removed
+            <pre class="syntaxhighlighter-pre">ERROR: 7002: org.codehaus.cargo.util.FileUtils: Method 'public java.io.File createTmpDir()' has been removed
 INFO: 7011: org.codehaus.cargo.util.FileUtils: Method 'public java.io.File createTmpDirectory(java.lang.String)' has been added
 INFO: 7011: org.codehaus.cargo.util.FileUtils: Method 'public java.io.File createUniqueTmpDirectory()' has been added
 INFO: 7011: org.codehaus.cargo.util.FileUtils: Method 'public void delete(java.io.File)' has been added
@@ -588,8 +592,7 @@ ERROR: 8001: org.codehaus.cargo.util.monitor.SimpleMonitor: Class org.codehaus.c
           <h4 id="ReleasenotesforCargo0.8-JBossAPI">JBoss API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 8000: org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer: Class org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer added
+            <pre class="syntaxhighlighter-pre">INFO: 8000: org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer: Class org.codehaus.cargo.container.jboss.JBoss3xInstalledLocalContainer added
 ERROR: 8001: org.codehaus.cargo.container.jboss.JBoss3xLocalContainer: Class org.codehaus.cargo.container.jboss.JBoss3xLocalContainer removed
 INFO: 8000: org.codehaus.cargo.container.jboss.JBoss4xInstalledLocalContainer: Class org.codehaus.cargo.container.jboss.JBoss4xInstalledLocalContainer added
 ERROR: 8001: org.codehaus.cargo.container.jboss.JBoss4xLocalContainer: Class org.codehaus.cargo.container.jboss.JBoss4xLocalContainer removed
@@ -621,8 +624,7 @@ ERROR: 5001: org.codehaus.cargo.container.jboss.JBossWAR: Removed org.codehaus.c
           <h4 id="ReleasenotesforCargo0.8-JettyAPI">Jetty API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 8000: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedDeployer: Class org.codehaus.cargo.container.jetty.Jetty4xEmbeddedDeployer added
+            <pre class="syntaxhighlighter-pre">INFO: 8000: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedDeployer: Class org.codehaus.cargo.container.jetty.Jetty4xEmbeddedDeployer added
 INFO: 4000: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedLocalContainer: Added org.codehaus.cargo.container.EmbeddedLocalContainer to the set of implemented interfaces
 INFO: 4000: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedLocalContainer: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
 ERROR: 4001: org.codehaus.cargo.container.jetty.Jetty4xEmbeddedLocalContainer: Removed org.codehaus.cargo.util.monitor.Monitorable from the set of implemented interfaces
@@ -653,8 +655,7 @@ ERROR: 8001: org.codehaus.cargo.container.jetty.JettyStandaloneLocalConfiguratio
           <h4 id="ReleasenotesforCargo0.8-JoAPI">Jo API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 4000: org.codehaus.cargo.container.jo.Jo1xDeployer: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
+            <pre class="syntaxhighlighter-pre">INFO: 4000: org.codehaus.cargo.container.jo.Jo1xDeployer: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
 ERROR: 4001: org.codehaus.cargo.container.jo.Jo1xDeployer: Removed org.codehaus.cargo.util.monitor.Monitorable from the set of implemented interfaces
 INFO: 5000: org.codehaus.cargo.container.jo.Jo1xDeployer: Added org.codehaus.cargo.util.log.LoggedObject to the list of superclasses
 ERROR: 5001: org.codehaus.cargo.container.jo.Jo1xDeployer: Removed org.codehaus.cargo.util.monitor.MonitoredObject from the list of superclasses
@@ -673,8 +674,7 @@ ERROR: 8001: org.codehaus.cargo.container.jo.JoPropertySet: Class org.codehaus.c
           <h4 id="ReleasenotesforCargo0.8-OrionAPI">Orion API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 8000: org.codehaus.cargo.container.orion.Oc4j9xInstalledLocalContainer: Class org.codehaus.cargo.container.orion.Oc4j9xInstalledLocalContainer added
+            <pre class="syntaxhighlighter-pre">INFO: 8000: org.codehaus.cargo.container.orion.Oc4j9xInstalledLocalContainer: Class org.codehaus.cargo.container.orion.Oc4j9xInstalledLocalContainer added
 ERROR: 8001: org.codehaus.cargo.container.orion.Oc4j9xLocalContainer: Class org.codehaus.cargo.container.orion.Oc4j9xLocalContainer removed
 INFO: 8000: org.codehaus.cargo.container.orion.Oc4j9xStandaloneLocalConfiguration: Class org.codehaus.cargo.container.orion.Oc4j9xStandaloneLocalConfiguration added
 INFO: 8000: org.codehaus.cargo.container.orion.Orion1xInstalledLocalContainer: Class org.codehaus.cargo.container.orion.Orion1xInstalledLocalContainer added
@@ -699,8 +699,7 @@ INFO: 7000: org.codehaus.cargo.container.orion.OrionStandaloneLocalConfiguration
           <h4 id="ReleasenotesforCargo0.8-ResinAPI">Resin API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 8000: org.codehaus.cargo.container.resin.Resin2xInstalledLocalContainer: Class org.codehaus.cargo.container.resin.Resin2xInstalledLocalContainer added
+            <pre class="syntaxhighlighter-pre">INFO: 8000: org.codehaus.cargo.container.resin.Resin2xInstalledLocalContainer: Class org.codehaus.cargo.container.resin.Resin2xInstalledLocalContainer added
 ERROR: 8001: org.codehaus.cargo.container.resin.Resin2xLocalContainer: Class org.codehaus.cargo.container.resin.Resin2xLocalContainer removed
 INFO: 4000: org.codehaus.cargo.container.resin.Resin2xStandaloneLocalConfiguration: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
 ERROR: 4001: org.codehaus.cargo.container.resin.Resin2xStandaloneLocalConfiguration: Removed org.codehaus.cargo.util.monitor.Monitorable from the set of implemented interfaces
@@ -728,8 +727,7 @@ ERROR: 5001: org.codehaus.cargo.container.resin.ResinExistingLocalConfiguration:
           <h4 id="ReleasenotesforCargo0.8-TomcatAPI">Tomcat API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-ERROR: 8001: org.codehaus.cargo.container.tomcat.AbstractTomcatRemoteContainer: Class org.codehaus.cargo.container.tomcat.AbstractTomcatRemoteContainer removed
+            <pre class="syntaxhighlighter-pre">ERROR: 8001: org.codehaus.cargo.container.tomcat.AbstractTomcatRemoteContainer: Class org.codehaus.cargo.container.tomcat.AbstractTomcatRemoteContainer removed
 INFO: 8000: org.codehaus.cargo.container.tomcat.Tomcat3xInstalledLocalContainer: Class org.codehaus.cargo.container.tomcat.Tomcat3xInstalledLocalContainer added
 ERROR: 8001: org.codehaus.cargo.container.tomcat.Tomcat3xLocalContainer: Class org.codehaus.cargo.container.tomcat.Tomcat3xLocalContainer removed
 INFO: 4000: org.codehaus.cargo.container.tomcat.Tomcat3xStandaloneLocalConfiguration: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
@@ -799,8 +797,7 @@ ERROR: 5001: org.codehaus.cargo.container.tomcat.TomcatWAR: Removed org.codehaus
           <h4 id="ReleasenotesforCargo0.8-WebLogicAPI">WebLogic API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-INFO: 8000: org.codehaus.cargo.container.weblogic.WebLogic8xInstalledLocalContainer: Class org.codehaus.cargo.container.weblogic.WebLogic8xInstalledLocalContainer added
+            <pre class="syntaxhighlighter-pre">INFO: 8000: org.codehaus.cargo.container.weblogic.WebLogic8xInstalledLocalContainer: Class org.codehaus.cargo.container.weblogic.WebLogic8xInstalledLocalContainer added
 ERROR: 8001: org.codehaus.cargo.container.weblogic.WebLogic8xLocalContainer: Class org.codehaus.cargo.container.weblogic.WebLogic8xLocalContainer removed
 INFO: 4000: org.codehaus.cargo.container.weblogic.WebLogicExistingLocalConfiguration: Added org.codehaus.cargo.util.log.Loggable to the set of implemented interfaces
 ERROR: 4001: org.codehaus.cargo.container.weblogic.WebLogicExistingLocalConfiguration: Removed org.codehaus.cargo.util.monitor.Monitorable from the set of implemented interfaces
@@ -817,8 +814,7 @@ ERROR: 5001: org.codehaus.cargo.container.weblogic.WebLogicStandaloneLocalConfig
           <h4 id="ReleasenotesforCargo0.8-AntAPI">Ant API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-TODO
+            <pre class="syntaxhighlighter-pre">TODO
 </pre>
            </div>
           </div>
@@ -826,8 +822,7 @@ TODO
           <h4 id="ReleasenotesforCargo0.8-Maven2API">Maven2 API</h4>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-TODO
+            <pre class="syntaxhighlighter-pre">TODO
 </pre>
            </div>
           </div></td>
