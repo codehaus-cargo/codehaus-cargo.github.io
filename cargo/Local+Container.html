@@ -22,6 +22,26 @@
       enable_page_level_ads: true
     });
   </script>
+  <script>
+    window.setInterval(function() {
+      var ins = document.getElementsByTagName("ins");
+      for (i of ins) {
+        if (i.className && i.className.indexOf("adsbygoogle") != -1 && i.style && i.style.bottom) {
+          var bottom = parseInt(i.style.bottom)
+          if (!isNaN(b)) {
+            // The way Google handles the element is that the height (with the ad) is fixed,
+            // appearing and disappearing is handled by making the bottom style negative
+            var space = i.offsetHeight + bottom;
+            if (space < 0) {
+              space = 0;
+            }
+            document.getElementById("cargo-navigation").style.paddingBottom = space;
+            document.getElementById("cargo-content").style.paddingBottom = space;
+          }
+        }
+      }
+    }, 100);
+  </script>
  </head>
  <body>
   <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%" border="none">
@@ -40,7 +60,7 @@
       </div></td>
     </tr>
     <tr valign="top">
-     <td class="leftColumn" valign="top" style="padding-top:0px">
+     <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
       <h3 id="Navigation-QuickLinks">Quick Links</h3>
       <ul class="alternate">
        <li><a href="Home.html">Home</a>
@@ -269,7 +289,7 @@
         </tr>
        </tbody>
       </table></td>
-     <td style="padding:0px">
+     <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
         <tr style="height:38px">
