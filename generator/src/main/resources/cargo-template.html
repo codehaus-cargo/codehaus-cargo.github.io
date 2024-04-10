@@ -33,7 +33,7 @@
       for (i of ins) {
         if (i.className && i.className.indexOf("adsbygoogle") != -1 && i.style && i.style.bottom) {
           var bottom = parseInt(i.style.bottom)
-          if (!isNaN(b)) {
+          if (!isNaN(bottom)) {
             // The way Google handles the element is that the height (with the ad) is fixed,
             // appearing and disappearing is handled by making the bottom style negative
             var space = i.offsetHeight + bottom;
