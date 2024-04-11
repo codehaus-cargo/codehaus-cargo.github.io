@@ -313,8 +313,6 @@ public class WebsiteGenerator implements Runnable
             new File(attachments, "blank.gif").toPath(), StandardCopyOption.REPLACE_EXISTING);
         Files.copy(new File(classes, "favicon.ico").toPath(),
             new File(attachments, "favicon.ico").toPath(), StandardCopyOption.REPLACE_EXISTING);
-        Files.copy(new File(classes, "rss.gif").toPath(),
-            new File(attachments, "rss.gif").toPath(), StandardCopyOption.REPLACE_EXISTING);
         writeFile(new File(attachments, "site.css"), readFile(new File(classes, "site.css")));
         File sourceDirectory = new File(target, "source");
         Files.copy(new File(classes, "search.html").toPath(),
