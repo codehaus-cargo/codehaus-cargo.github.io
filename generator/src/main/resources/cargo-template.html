@@ -29,22 +29,30 @@
   </script>
   <script>
     window.setInterval(function() {
+      var headerPosition = "fixed";
       var ins = document.getElementsByTagName("ins");
       for (i of ins) {
-        if (i.className && i.className.indexOf("adsbygoogle") != -1 && i.style && i.style.bottom) {
-          var bottom = parseInt(i.style.bottom)
-          if (!isNaN(bottom)) {
-            // The way Google handles the element is that the height (with the ad) is fixed,
-            // appearing and disappearing is handled by making the bottom style negative
-            var space = i.offsetHeight + bottom;
-            if (space < 0) {
-              space = 0;
+        if (i.className && i.className.indexOf("adsbygoogle") != -1 && i.style) {
+          if (i.style.bottom) {
+            var bottom = parseInt(i.style.bottom)
+            if (!isNaN(bottom)) {
+              // The way Google handles the element is that the height (with the ad) is fixed,
+              // appearing and disappearing is handled by making the bottom style negative
+              var space = i.offsetHeight + bottom;
+              if (space < 0) {
+                space = 0;
+              }
+              document.getElementById("cargo-navigation").style.paddingBottom = space + "px";
+              document.getElementById("cargo-content").style.paddingBottom = space + "px";
             }
-            document.getElementById("cargo-navigation").style.paddingBottom = space + "px";
-            document.getElementById("cargo-content").style.paddingBottom = space + "px";
+          } else if (i.style.top) {
+            if (parseInt(i.style.top) === 0) {
+              headerPosition = "static";
+            }
           }
         }
       }
+      document.getElementById("cargo-header").style.position = headerPosition;
     }, 100);
   </script>
 </head>
@@ -53,7 +61,7 @@
   <table class="layout" style="border-collapse:collapse;position:absolute;width:100%;height:100%" border="none">
     <tr style="height:83px">
       <td colspan="2" style="padding:0px">
-        <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2">
+        <div id="cargo-header" style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2">
           <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')">
             <tr>
               <td align="left" valign="middle" style="padding:0px">

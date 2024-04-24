@@ -24,22 +24,30 @@
   </script>
   <script>
     window.setInterval(function() {
+      var headerPosition = "fixed";
       var ins = document.getElementsByTagName("ins");
       for (i of ins) {
-        if (i.className && i.className.indexOf("adsbygoogle") != -1 && i.style && i.style.bottom) {
-          var bottom = parseInt(i.style.bottom)
-          if (!isNaN(bottom)) {
-            // The way Google handles the element is that the height (with the ad) is fixed,
-            // appearing and disappearing is handled by making the bottom style negative
-            var space = i.offsetHeight + bottom;
-            if (space < 0) {
-              space = 0;
+        if (i.className && i.className.indexOf("adsbygoogle") != -1 && i.style) {
+          if (i.style.bottom) {
+            var bottom = parseInt(i.style.bottom)
+            if (!isNaN(bottom)) {
+              // The way Google handles the element is that the height (with the ad) is fixed,
+              // appearing and disappearing is handled by making the bottom style negative
+              var space = i.offsetHeight + bottom;
+              if (space < 0) {
+                space = 0;
+              }
+              document.getElementById("cargo-navigation").style.paddingBottom = space + "px";
+              document.getElementById("cargo-content").style.paddingBottom = space + "px";
             }
-            document.getElementById("cargo-navigation").style.paddingBottom = space + "px";
-            document.getElementById("cargo-content").style.paddingBottom = space + "px";
+          } else if (i.style.top) {
+            if (parseInt(i.style.top) === 0) {
+              headerPosition = "static";
+            }
           }
         }
       }
+      document.getElementById("cargo-header").style.position = headerPosition;
     }, 100);
   </script>
  </head>
@@ -48,7 +56,7 @@
    <tbody>
     <tr style="height:83px">
      <td colspan="2" style="padding:0px">
-      <div style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2">
+      <div id="cargo-header" style="position:fixed;width:100%;top:0;border-bottom:1px solid #39434F;z-index:2">
        <table class="banner" style="padding:0px;width:100%;background-image:url('attachments/cargo-banner-center.png')">
         <tbody>
          <tr>
@@ -2073,7 +2081,7 @@
           </div>
           <h3 id="Tomcat10.x-TestedOn">Tested On</h3>
           <p>This container is automatically tested by the <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous Integration system</a> every time there is a code change.<br>
-            The server used for tests is downloaded from: <a href="https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/10.1.20/tomcat-10.1.20.zip">https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/10.1.20/tomcat-10.1.20.zip</a></p></td>
+            The server used for tests is downloaded from: <a href="https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/10.1.23/tomcat-10.1.23.zip">https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat/10.1.23/tomcat-10.1.23.zip</a></p></td>
         </tr>
        </tbody>
       </table></td>
