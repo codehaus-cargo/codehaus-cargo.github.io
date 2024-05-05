@@ -304,9 +304,9 @@
         </tr>
         <tr valign="top">
          <td class="rightColumn">
-          <h3 id="DeployinglegacyWARstoTomcat10.xonwards-Definition">Definition</h3>Deploying J2EE / Java EE WARs on Tomcat 10.x onwards (which is Jakarta EE)
-          <p><a href="Tomcat+10.x.html">Tomcat 10.x</a> onwards uses Jakarta EE, which is not backwards compatible with J1EE / Java EE.</p>
-          <p>To ease migration, a Jakarta EE migration tool is part of Tomcat, and through <a href="https://tomcat.apache.org/tomcat-10.0-doc/config/host.html#Common_Attributes">the <code class="attributeName">legacyAppBase</code> configuration property</a> allows automatic conversion of legacy WARs to Jakarta EE WARs.</p>
+          <h3 id="DeployinglegacyWARstoTomcat10.xonwards-Definition">Definition</h3><span><a href="Tomcat+10.x.html">Tomcat 10.x</a> onwards uses Jakarta EE, which is not backwards compatible with J2EE / Java EE.
+           <p></p>
+           <p>To ease migration, a Jakarta EE migration tool is part of Tomcat, and through <a href="https://tomcat.apache.org/tomcat-10.0-doc/config/host.html#Common_Attributes">the <code class="attributeName">legacyAppBase</code> configuration property</a> allows automatic conversion of legacy WARs to Jakarta EE WARs.</p></span>
           <p>Codehaus Cargo 1.10.14 <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1628">introduced a functionality to benefit for the same</a>, by providing a property called <code>version</code> on <a href="Deployable.html">Deployable</a> objects, to specify whether it is <code>j2ee</code>, <code>javaee</code> or <code>jakartaee</code> and enable the Tomcat deployer to handle it accordingly:</p>
           <ul>
            <li><code>j2ee</code> and <code>javaee</code> WARs are deployed into the <code>legacyAppBase</code> folder, steered through the property value for <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/tomcat/TomcatPropertySet.html#WEBAPPS_LEGACY_DIRECTORY">TomcatPropertySet.WEBAPPS_LEGACY_DIRECTORY</a></code></li>
@@ -344,7 +344,7 @@ container.start();
             <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat10x" home="c:/tomcat/tomcat-10.1.23" action="start"&gt;
   &lt;configuration&gt;
     &lt;deployable type="war" file="path/to/some-war.war"&gt;
-      &lt;property name="versiob" value="javaee"/&gt;
+      &lt;property name="version" value="javaee"/&gt;
     &lt;/deployable&gt;
   &lt;/configuration&gt;
 &lt;/cargo&gt;
@@ -392,8 +392,7 @@ container.start();
 &lt;/plugins&gt;
 </pre>
            </div>
-          </div>
-          <p><br></p></td>
+          </div></td>
         </tr>
        </tbody>
       </table></td>
