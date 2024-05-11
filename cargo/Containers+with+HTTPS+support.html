@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Custom File Configurations</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Containers with HTTPS support</title><!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -294,7 +294,7 @@
           <table style="border-collapse:collapse;width:100%;height:100%">
            <tbody>
             <tr valign="middle">
-             <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Configuration.html">Configuration</a> &gt; <a href="Local+Configuration.html">Local Configuration</a> &gt; Custom File Configurations</b></td>
+             <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Articles.html">Articles</a> &gt; Containers with HTTPS support</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
                <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
@@ -305,18 +305,33 @@
         </tr>
         <tr valign="top">
          <td class="rightColumn">
-          <h3 id="CustomFileConfigurations-CustomFileConfigurations">Custom File Configurations</h3>
-          <p>It is sometimes necessary to make changes to files within a Cargo standalone configuration. Normally Cargo will create this configuration and then start the server leaving the user with no chance to replace or modify these files before the server is started.</p>
-          <h4 id="CustomFileConfigurations-CustomConfigurationFiles">Custom Configuration Files</h4>
-          <p>The main reason for file changes is to make changes to configuration files to add, remove or modify configuration settings that are not yet covered by Cargo.</p>
-          <p>Cargo uses its own default configuration files (located within the cargo jars) which use token replacements to set the Cargo configuration options. These files can be extracted out of the jar so that modification can be made and Cargo can be instructed to use these new configuration files instead.</p>
-          <p>Custom tokens can also be specified in the configuration files and their values set in the cargo properties.</p>
-          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>These type of files have to be marked as a configuration file so that token replacement can be used.</p>
-           </div>
+          <p>Though some containers support HTTPS, the way it is configured is not yet uniform across them.</p>
+          <p></p>
+          <div class="toc-macro client-side-toc-macro  conf-macro output-block">
           </div>
+          <p></p>
+          <h2 id="ContainerswithHTTPSsupport-Jetty10.xonwards">Jetty 10.x onwards</h2>
+          <p>The Jetty container supports HTTPS, both as a complement to the HTTP connector or as an HTTPS-only connector.</p>
+          <p>To add HTTPS support, in addition to the HTTP support:</p>
+          <ol>
+           <li>Set the property <a href="Configuration+properties.html"><code>JettyPropertySet.MODULES</code></a> to include the <code>https</code> module (in addition to the <code>http</code> module)</li>
+           <li>Set the properties <a href="Configuration+properties.html"><code>JettyPropertySet.CONNECTOR_KEY_STORE_FILE</code></a> and <a href="Configuration+properties.html"><code>JettyPropertySet.CONNECTOR_KEY_STORE_PASSWORD</code></a> with the relevant details</li>
+           <li>Optionally, <a href="Configuration+properties.html"><code>JettyPropertySet.CONNECTOR_HTTPS_PORT</code></a> allows you to change the HTTPS port (default is <code>9443</code>)</li>
+          </ol>
+          <p>To only have HTTPS (and no HTTP) configured:</p>
+          <ol>
+           <li>Set the property <a href="Configuration+properties.html"><code>JettyPropertySet.MODULES</code></a> to have the <code>https</code> module instead of the <code>http</code> module</li>
+           <li>Set the property <a href="Configuration+properties.html"><code>GeneralPropertySet.PROTOCOL</code></a> to <code>https</code></li>
+           <li>Set the properties <a href="Configuration+properties.html"><code>JettyPropertySet.CONNECTOR_KEY_STORE_FILE</code></a> and <a href="Configuration+properties.html"><code>JettyPropertySet.CONNECTOR_KEY_STORE_PASSWORD</code></a> with the relevant details</li>
+           <li>Make sure you set both <a href="Configuration+properties.html"><code>ServletPropertySet.PORT</code></a> and <a href="Configuration+properties.html"><code>JettyPropertySet.CONNECTOR_HTTPS_PORT</code></a> to the same port number</li>
+          </ol>
+          <h2 id="ContainerswithHTTPSsupport-Tomcat6.xonwardsandTomEE">Tomcat 6.x onwards and TomEE</h2>
+          <p>The Tomcat 6.x onwards and TomEE containers either use HTTP or HTTPS (not both). To switch to HTTPS:</p>
+          <ol>
+           <li>Set the property <a href="Configuration+properties.html"><code>GeneralPropertySet.PROTOCOL</code></a> to <code>https</code></li>
+           <li>Set the properties <a href="Configuration+properties.html"><code>TomcatPropertySet.CONNECTOR_KEY_STORE_FILE</code></a> and <a href="Configuration+properties.html"><code>TomcatPropertySet.CONNECTOR_KEY_STORE_PASSWORD</code></a> with the relevant details</li>
+          </ol>
+          <p>The property <a href="Configuration+properties.html"><code>ServletPropertySet.PORT</code></a> is then used for HTTPS.</p>
           <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
@@ -327,194 +342,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center>
-          <h4 id="CustomFileConfigurations-OtherGenericFilesandDirectories">Other Generic Files and Directories</h4>
-          <p>Using the custom file configuration options you can add any files or directories into the standalone configuration home. Although this shouldn't really be necessary in most situations, it is left as an option so that if the need arises if can be used.</p>
-          <div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block">
-           <span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>This is not meant to be used to deploy artifacts like a war to the server, for that you should be using a Cargo <a href="Deployer.html">Deployer</a>.</p>
-           </div>
-          </div>
-          <div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block">
-           <span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>This is not meant to be used to add extra jars to a server's classpath, for that you should be <a href="Container+Classpath.html">using the <code>extraClasspath</code> or<code> sharedClasspath</code> options</a> in Cargo.</p>
-           </div>
-          </div>
-          <h3 id="CustomFileConfigurations-Options">Options</h3>
-          <div class="table-wrap">
-           <table class="confluenceTable">
-            <colgroup>
-             <col>
-             <col>
-             <col>
-             <col>
-            </colgroup>
-            <tbody>
-             <tr>
-              <th class="confluenceTh">
-               <p>Option Name</p></th>
-              <th class="confluenceTh">
-               <p>Notes</p></th>
-              <th class="confluenceTh">
-               <p>Optional</p></th>
-              <th class="confluenceTh">
-               <p>Default Value</p></th>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
-               <p>file</p></td>
-              <td class="confluenceTd">
-               <p>This specifies the path to the file that should be used. Can also specify a directory path if a whole directory needs to be copied over.</p></td>
-              <td class="confluenceTd">
-               <p>no</p></td>
-              <td class="confluenceTd">
-               <p>n/a</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
-               <p>todir</p></td>
-              <td class="confluenceTd">
-               <p>This specified the name the directory that the file should be copied to relative to the configurations home. <br class="atl-forced-newline">
-                If this is not specified, its value will be determined based on the tofile setting and if that is not specified, it will default to the configuration's home directory</p></td>
-              <td class="confluenceTd">
-               <p>yes</p></td>
-              <td class="confluenceTd">
-               <p>The configuration home root</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
-               <p>tofile</p></td>
-              <td class="confluenceTd">
-               <p>This specified the name the file to where it should be copied relative to the configurations home. This path variable can also be used to specify both the directory and file name. <br class="atl-forced-newline">
-                If this is not specified, its value will be determined based on the file name of the original file</p></td>
-              <td class="confluenceTd">
-               <p>yes</p></td>
-              <td class="confluenceTd">
-               <p>The file name of the original file</p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
-               <p>configfile</p></td>
-              <td class="confluenceTd">
-               <p>This specifies if the file being copied is a configuration file or not. This determines whether token replacement should be applied to the file. <br class="atl-forced-newline">
-                Do not use this option when passing a file that is not an ascii file as it will corrupt the copied file.</p></td>
-              <td class="confluenceTd">
-               <p>yes</p></td>
-              <td class="confluenceTd">
-               <p><code>false</code></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
-               <p>overwrite</p></td>
-              <td class="confluenceTd">
-               <p>This specifies if the file should overwrite a file if it already exists</p></td>
-              <td class="confluenceTd">
-               <p>yes</p></td>
-              <td class="confluenceTd">
-               <p><code>true</code></p></td>
-             </tr>
-            </tbody>
-           </table>
-          </div>
-          <p>Example:</p>
-          <div class="table-wrap">
-           <table class="confluenceTable">
-            <colgroup>
-             <col>
-             <col>
-             <col>
-             <col>
-            </colgroup>
-            <tbody>
-             <tr>
-              <th class="confluenceTh">
-               <p>file</p></th>
-              <th class="confluenceTh">
-               <p>todir</p></th>
-              <th class="confluenceTh">
-               <p>tofile</p></th>
-              <th class="confluenceTh">
-               <p>destination file (relative to standalone configuration root)</p></th>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
-               <p><code>/tmp/server.<wbr>xml</code></p></td>
-              <td class="confluenceTd">
-               <p><code>conf</code></p></td>
-              <td class="confluenceTd">
-               <p><br></p></td>
-              <td class="confluenceTd">
-               <p><code>conf/server.<wbr>xml</code></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
-               <p><code>/tmp/server.<wbr>xml</code></p></td>
-              <td class="confluenceTd">
-               <p><br></p></td>
-              <td class="confluenceTd">
-               <p><code>conf/server.<wbr>xml</code></p></td>
-              <td class="confluenceTd">
-               <p><code>conf/server.<wbr>xml</code></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
-               <p><code>/tmp/server.<wbr>xml</code></p></td>
-              <td class="confluenceTd">
-               <p><code>conf</code></p></td>
-              <td class="confluenceTd">
-               <p><code>server-2.<wbr>xml</code></p></td>
-              <td class="confluenceTd">
-               <p><code>conf/server-2.<wbr>xml</code></p></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
-               <p><code>/tmp/server.<wbr>xml</code></p></td>
-              <td class="confluenceTd">
-               <p><br></p></td>
-              <td class="confluenceTd">
-               <p><br></p></td>
-              <td class="confluenceTd">
-               <p><code>server.<wbr>xml</code></p></td>
-             </tr>
-            </tbody>
-           </table>
-          </div>
-          <h3 id="CustomFileConfigurations-Usage">Usage</h3>
-          <p>Example pom.xml fragment of how to use custom file configuration.s<br>
-           Note in this example if &nbsp;(customMessage) is set in any of the files with configfile=true it will be replaced with "Hello World" when it gets copied to the standalone server's directory.</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">&lt;build&gt;
-  &lt;plugins&gt;
-    &lt;plugin&gt;
-      &lt;groupId&gt;org.codehaus.cargo.maven3&lt;/groupId&gt;
-      &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
-      &lt;configuration&gt;
-        &lt;container&gt;
-          &lt;containerId&gt;tomcat5x&lt;/containerId&gt;
-        &lt;/container&gt;
-        &lt;configuration&gt;
-          &lt;files&gt;
-            &lt;copy&gt;
-              &lt;file&gt;/tmp/server.xml&lt;/file&gt;
-              &lt;tofile&gt;conf/server.xml&lt;/tofile&gt;
-              &lt;configfile&gt;true&lt;/configfile&gt;
-              &lt;overwrite&gt;true&lt;/overwrite&gt;
-            &lt;/copy&gt;
-          &lt;/files&gt;
-          &lt;properties&gt;
-            &lt;customMessage&gt;Hello World&lt;/customMessage&gt;
-          &lt;/properties&gt;
-        &lt;/configuration&gt;
-      &lt;/configuration&gt;
-    &lt;/plugin&gt;
-  &lt;/plugins&gt;
-&lt;/build&gt;
-</pre>
-           </div>
-          </div></td>
+          </center></td>
         </tr>
        </tbody>
       </table></td>
