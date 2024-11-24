@@ -33,31 +33,34 @@
       var ins = document.getElementsByTagName("ins");
       for (i of ins) {
         if (i.className && i.className.indexOf("adsbygoogle") != -1 && i.style) {
+          var paddingBottom = 0;
+          var paddingTop = 0;
           if (i.style.bottom) {
             var bottom = parseInt(i.style.bottom)
             if (!isNaN(bottom)) {
-              // The way Google handles the element is that the height (with the ad) is fixed,
-              // appearing and disappearing is handled by making the bottom style negative
               var space = i.offsetHeight + bottom;
               if (space < 0) {
                 space = 0;
               }
-              document.getElementById("cargo-navigation").style.paddingBottom = space + "px";
-              document.getElementById("cargo-content").style.paddingBottom = space + "px";
+              paddingBottom = space;
             }
           } else if (i.style.top) {
             var top = parseInt(i.style.top)
             if (!isNaN(top)) {
-              // The way Google handles the element is that the height (with the ad) is fixed,
-              // appearing and disappearing is handled by making the top style negative
               var space = i.offsetHeight + top;
               if (space < 0) {
                 space = 0;
               }
-              document.getElementById("cargo-header").style.paddingTop = space + "px";
-              document.getElementById("cargo-header-spacing").style.height = (83 + space) + "px";
+              paddingTop = space;
             }
           }
+
+          // The way Google handles the element is that the height (with the ad) is fixed,
+          // appearing and disappearing is handled by making the bottom or top style negative
+          document.getElementById("cargo-navigation").style.paddingBottom = paddingBottom + "px";
+          document.getElementById("cargo-content").style.paddingBottom = paddingBottom + "px";
+          document.getElementById("cargo-header").style.paddingTop = paddingTop + "px";
+          document.getElementById("cargo-header-spacing").style.height = (83 + paddingTop) + "px";
         }
       }
       document.getElementById("cargo-header").style.position = headerPosition;
