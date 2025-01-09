@@ -21,6 +21,18 @@
       google_ad_client: "ca-pub-7996505557003356",
       enable_page_level_ads: true
     });
+
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Set default consent to 'denied'
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
   </script>
   <script>
     window.setInterval(function() {
