@@ -40,13 +40,17 @@
       });
   </script>
   <script>
+    // The way Google handles the element is that the height (with the ad) is fixed,
+    // appearing and disappearing is handled by making the bottom or top style negative
     window.setInterval(function() {
+      var paddingBottom = 0;
+      var paddingTop = 0;
       var headerPosition = "fixed";
       var ins = document.getElementsByTagName("ins");
       for (i of ins) {
-        if (i.className && i.className.indexOf("adsbygoogle") != -1 && i.style) {
-          var paddingBottom = 0;
-          var paddingTop = 0;
+        if (
+            i.className && i.className.indexOf("adsbygoogle") != -1 &&
+            i.style && i.style.display == "block") {
           if (i.style.bottom) {
             var bottom = parseInt(i.style.bottom)
             if (!isNaN(bottom)) {
@@ -66,15 +70,13 @@
               paddingTop = space;
             }
           }
-
-          // The way Google handles the element is that the height (with the ad) is fixed,
-          // appearing and disappearing is handled by making the bottom or top style negative
-          document.getElementById("cargo-navigation").style.paddingBottom = paddingBottom + "px";
-          document.getElementById("cargo-content").style.paddingBottom = paddingBottom + "px";
-          document.getElementById("cargo-header").style.paddingTop = paddingTop + "px";
-          document.getElementById("cargo-header-spacing").style.height = (83 + paddingTop) + "px";
         }
       }
+
+      document.getElementById("cargo-navigation").style.paddingBottom = paddingBottom + "px";
+      document.getElementById("cargo-content").style.paddingBottom = paddingBottom + "px";
+      document.getElementById("cargo-header").style.paddingTop = paddingTop + "px";
+      document.getElementById("cargo-header-spacing").style.height = (83 + paddingTop) + "px";
       document.getElementById("cargo-header").style.position = headerPosition;
     }, 100);
   </script>
