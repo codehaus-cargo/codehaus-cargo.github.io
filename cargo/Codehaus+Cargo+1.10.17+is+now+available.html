@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Maven 3 Plugin Installation</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Codehaus Cargo 1.10.17 is now available</title><!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -322,7 +322,7 @@
           <table style="border-collapse:collapse;width:100%;height:100%">
            <tbody>
             <tr valign="middle">
-             <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> &gt; Maven 3 Plugin Installation</b></td>
+             <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; Codehaus Cargo 1.10.17 is now available</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
                <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
@@ -333,12 +333,21 @@
         </tr>
         <tr valign="top">
          <td class="rightColumn">
-          <h1 id="Maven3PluginInstallation-Installation">Installation</h1>
-          <p>The Cargo Maven Plugin is found at (<code>groupId:artifactId</code>) <code>org.codehaus.cargo:cargo-maven3-plugin</code>.</p>
-          <p>This plugin has been built exclusively for Maven 3.x, and our <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous Integration system</a> tests it on Maven version 3.5.4.</p>
-          <h3 id="Maven3PluginInstallation-Releases">Releases</h3>
-          <p>The Codehaus Cargo&nbsp;Maven 3 Plugin (and all other Cargo artifacts) are hosted at <a href="https://repo.maven.org/maven2/org/codehaus/cargo/">Maven central</a>. As Maven is configured for Maven central by default, no additional installation or repository configuration is necessary to use the plugin.</p>
-          <p><span class="confluence-anchor-link conf-macro output-inline" id="Maven3PluginInstallation-snapshots"><span class="confluence-anchor-link" id="snapshots"> </span></span></p>
+          <p>Dear Codehaus Cargo enthusiasts</p>
+          <p>We are hoping you're having a great start to the year 2025, and of course hope the Year of the Snake brings you intelligence, resilience and love.</p>
+          <p>For Codehaus Cargo, this year starts with a new version 1.10.17, which features a big back end improvement to move to JUnit 5 [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1634">CARGO-1634</a>], and some background work done using AWS free tier T3 micro servers in Stockholm, to increase the container test coverage - Making our <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">continous integration system on SemaphoreCI</a> reach a whopping 2'820 tests per build! Having said that, there are no other new features or changes that you would observe as a user.</p>
+          <p>To upgrade to this latest version:</p>
+          <ul>
+           <li>
+            <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven+3+Plugin.html">Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.10.17</strong></p></li>
+           <li>
+            <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.17/cargo-core-uberjar-1.10.17.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.17/cargo-core-uberjar-1.10.17.jar</a></p></li>
+           <li>
+            <p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">Ant tasks</a> can download the new Ant tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.17/cargo-ant-1.10.17.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.17/cargo-ant-1.10.17.jar</a></p></li>
+           <li>
+            <p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.17/cargo-daemon-webapp-1.10.17.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.17/cargo-daemon-webapp-1.10.17.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
+          </ul>
+          <p>Enjoy!</p>
           <script type="text/javascript">
   // Google Ads code
   google_ad_client = "ca-pub-7996505557003356";
@@ -349,78 +358,7 @@
           <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
            <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
   </script>
-          </center>
-          <h3 id="Maven3PluginInstallation-Snapshots">Snapshots</h3>
-          <p>There are also snapshot releases of the Codehaus Cargo&nbsp;Maven 3 plugin (and all other Cargo artifacts) available through the <a href="https://oss.sonatype.org/content/repositories/snapshots/">Sonatype snapshot repository</a>. Snapshot releases are deployed automatically by the <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous Integration system</a>.</p>
-          <p>If you want use snapshot versions of the Cargo Maven Plugin, you'll need to add this repository to your POM, settings file, or repository manager:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">[...]
-&lt;pluginRepositories&gt;
-  &lt;pluginRepository&gt;
-    &lt;id&gt;sonatype-snapshots&lt;/id&gt;
-    &lt;name&gt;Sonatype Snapshots&lt;/name&gt;
-    &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots/&lt;/url&gt;
-    &lt;releases&gt;
-      &lt;enabled&gt;false&lt;/enabled&gt;
-    &lt;/releases&gt;
-    &lt;snapshots&gt;
-      &lt;enabled&gt;true&lt;/enabled&gt;
-    &lt;/snapshots&gt;
-  &lt;/pluginRepository&gt;
-&lt;/pluginRepositories&gt;
-
-&lt;repositories&gt;
-  &lt;repository&gt;
-    &lt;id&gt;sonatype-snapshots&lt;/id&gt;
-    &lt;name&gt;Sonatype Snapshots&lt;/name&gt;
-    &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots/&lt;/url&gt;
-    &lt;releases&gt;
-      &lt;enabled&gt;false&lt;/enabled&gt;
-    &lt;/releases&gt;
-    &lt;snapshots&gt;
-      &lt;enabled&gt;true&lt;/enabled&gt;
-    &lt;/snapshots&gt;
-  &lt;/repository&gt;
-&lt;/repositories&gt;
-[...]
-</pre>
-           </div>
-          </div>
-          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">&lt;pluginRepository&gt; and &lt;repository&gt; declarations</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
-           <div class="confluence-information-macro-body">
-            <p>Note that you need to declare both the <code>pluginRepository</code> and <code>repository</code>, due to the way how the Codehaus Cargo Maven 3 plugin's container artifact loading mechanism works.</p>
-            <p>When you do not do that properly, you will be getting errors such as:</p>
-            <pre>Cannot create configuration. There's no registered configuration for the parameters (container [id = [tomcat9x], type = [installed]], configuration type [standalone]). Actually there are no valid types registered for this configuration. Maybe you've made a mistake spelling it?</pre>
-            <p>In case the errors persist even after adding the <code>SNAPSHOT</code> repositories, you can install the associated container artifact. Example (with the Codehaus Cargo Tomcat container):</p>
-            <pre>mvn dependency:get -Dartifact=org.codehaus.cargo:cargo-core-container-tomcat:1.10.18-SNAPSHOT -DremoteRepositories=https://oss.sonatype.org/content/repositories/snapshots/</pre>
-           </div>
-          </div>
-          <p>Then, you should decide which <code>SNAPSHOT</code> version to use:</p>
-          <ul>
-           <li>To find out what the latest <code>SNAPSHOT</code> version is, you can simply look at <a href="https://github.com/codehaus-cargo/cargo/blob/master/pom.xml">the root POM file for Codehaus Cargo</a>.</li>
-           <li>Configure the Cargo Maven Plugin by specifying the <code>SNAPSHOT</code> version you want.</li>
-          </ul>
-          <p>For example, to use version <code>1.10.18-SNAPSHOT</code> you would declare something similar to the following in your POM:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">[...]
-  &lt;build&gt;
-    &lt;plugins&gt;
-      &lt;plugin&gt;
-        &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
-        &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.10.18-SNAPSHOT&lt;/version&gt;
-[...]
-      &lt;/plugin&gt;
-[...]
-    &lt;/plugins&gt;
-  &lt;/build&gt;
-[...]
-</pre>
-           </div>
-          </div></td>
+          </center></td>
         </tr>
        </tbody>
       </table></td>
