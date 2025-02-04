@@ -337,7 +337,7 @@
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>If you are using the WebLogic 12 Developer's Edition, after you have downloaded the distribution, please remember to also configure WebLogic.<br>
-              You can read <a href="http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/wls_12c_netbeans_install/wls_12c_netbeans_install.html">http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/wls_12c_netbeans_install/wls_12c_netbeans_install.html</a> for details.</p>
+              You can read <a href="https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/wls_12c_netbeans_install/wls_12c_netbeans_install.html">https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/wls_12c_netbeans_install/wls_12c_netbeans_install.html</a> for details.</p>
            </div>
           </div>
           <h3 id="WebLogic12.1.x-ContainerFeatures">Container Features</h3>
@@ -1325,6 +1325,12 @@
            </table>
           </div>
           <h4 id="WebLogic12.1.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>The WebLogic remote deployer uses tye WebLogic Scripting Tool (WLST), as a result the <code>WebLogicPropertySet.LOCAL_WEBLOGIC_HOME|https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#LOCAL_WEBLOGIC_HOME</code> property must be set to a local WebLogic installation, matching the remote WebLogic server version.</p>
+           </div>
+          </div>
           <h5 id="WebLogic12.1.x-Forremotecontainero.c.c.c.weblogic.WebLogic121xRemoteContainer">For remote container o.c.c.c.weblogic.WebLogic121xRemoteContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
@@ -1352,6 +1358,18 @@
                <p><code>localhost</code></p></td>
               <td class="confluenceTd">
                <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><em>JAVA_HOME version 6 for earlier versions, WebLogic 12.1.3 onwards require Java 7 or newer</em></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
              </tr>
              <tr>
               <td class="confluenceTd">
