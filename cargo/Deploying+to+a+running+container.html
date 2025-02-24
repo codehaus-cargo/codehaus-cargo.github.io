@@ -404,17 +404,6 @@
            </div>
           </div>
           <p>Just type <code>mvn cargo:deploy</code>. Notice that we haven't specified a <code>&lt;deployer&gt;</code> element nor a <code>&lt;configuration&gt;</code> one: this is because the plugin is smart enough to create default instances for you.</p>
-          <script type="text/javascript">
-  // Google Ads code
-  google_ad_client = "ca-pub-7996505557003356";
-  google_ad_slot = "5363897989";
-  google_ad_width = 728;
-  google_ad_height = 90;
-</script>
-          <center style="padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee">
-           <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-  </script>
-          </center>
           <h3 id="Deployingtoarunningcontainer-Handlingofdeploymentorundeploymentfailures">Handling of deployment or undeployment failures</h3>
           <p>If the deployment, undeployment or redeployment is done without any watchdog,&nbsp;Codehaus Cargo will rely on the error codes return by the container's deployer to detect failures.</p>
           <p>This is sometimes not desired: for example, if one calls <code>cargo:undeploy</code> but the target deployable (be it a web application, EAR, etc.) is actually not deployed, then the call to <code>cargo:undeploy</code> will return a failure indicating that the deployble to undeploy is not deployed.</p>

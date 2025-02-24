@@ -95,27 +95,6 @@ public class WebsiteGenerator implements Runnable
         Boolean.parseBoolean(System.getProperty("cargo.downloadAttachments", "true"));
 
     /**
-     * Regular expression pattern to recognize HTML headers.
-     */
-    private static final Pattern HEADER_PATTERN = Pattern.compile("<h[1-4]");
-
-    /**
-     * JavaScript for adding Google Ads in the pages.
-     */
-    private static final String GOOGLE_ADS =
-        "<script type=\"text/javascript\">\n"
-        + "  // Google Ads code\n"
-        + "  google_ad_client = \"ca-pub-7996505557003356\";\n"
-        + "  google_ad_slot = \"5363897989\";\n"
-        + "  google_ad_width = 728;\n"
-        + "  google_ad_height = 90;\n"
-        + "</script>"
-        + "<center style=\"padding-bottom: 1mm; margin-bottom: 2mm; border: 1px solid #eee\">\n"
-        + "  <script type=\"text/javascript\" src=\"https://pagead2.googlesyndication.com/pagead/show_ads.js\">\n"
-        + "  </script>\n"
-        + "</center>";
-
-    /**
      * Multi-thread executor for parallel downloads.
      */
     private static final ScheduledThreadPoolExecutor CONTENT_DOWNLOADERS = new ScheduledThreadPoolExecutor(4);
@@ -338,26 +317,6 @@ public class WebsiteGenerator implements Runnable
             value = value.replaceAll("(?s)<span class=\"refresh-action-group\".*?</span>", "");
             value = value.replaceAll("(?s)<textarea id=\"refresh-wiki-\\d*\".*?</textarea>", "");
             value = value.replaceAll("<input id=\"refresh-page-id-\\d*\"[^>]+>", "");
-            Matcher headerMatcher = HEADER_PATTERN.matcher(value);
-            if (headerMatcher.find())
-            {
-                int hIndex = headerMatcher.start() + 3;
-                headerMatcher = HEADER_PATTERN.matcher(value.substring(hIndex));
-                if (headerMatcher.find())
-                {
-                    hIndex = hIndex + headerMatcher.start() + 3;
-                    headerMatcher = HEADER_PATTERN.matcher(value.substring(hIndex));
-                    if (headerMatcher.find())
-                    {
-                        hIndex = hIndex + headerMatcher.start();
-                        value = value.substring(0, hIndex) + GOOGLE_ADS + value.substring(hIndex);
-                    }
-                }
-            }
-            if (value.indexOf(GOOGLE_ADS) == -1)
-            {
-                value = value + GOOGLE_ADS;
-            }
             StringBuilder breadcrumbsSB = new StringBuilder();
             if (breadcrumbs.containsKey(name))
             {
