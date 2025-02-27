@@ -372,13 +372,13 @@
               <td class="confluenceTd">
                <p><a href="Embedded+Container.html">Embedded Container</a></p></td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jetty.<wbr>Jetty12xEmbeddedLocalContainer</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd">
                <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd">
-               <p>&nbsp;</p></td>
+               <p>Jetty 12.x Embedded only supports EE10 profile</p></td>
              </tr>
              <tr>
               <td class="confluenceTd">
@@ -463,13 +463,13 @@
               <td class="confluenceTd">
                <p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for embedded container</a></p></td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jetty.<wbr>Jetty12xEmbeddedStandaloneLocalConfiguration</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd">
                <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd">
-               <p>&nbsp;</p></td>
+               <p>Jetty 12.x Embedded only supports EE10 profile</p></td>
              </tr>
              <tr>
               <td class="confluenceTd">
@@ -626,13 +626,13 @@
               <td class="confluenceTd">
                <p><a class="unresolved" href="#">Embedded Deployer</a></p></td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jetty.<wbr>Jetty12xEmbeddedLocalDeployer</code></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd">
                <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
-              <td class="confluenceTd">
-               <p>&nbsp;</p></td>
+               <p>Jetty 12.x Embedded only supports EE10 profile</p></td>
              </tr>
              <tr>
               <td class="confluenceTd">
@@ -991,6 +991,205 @@
             <p>Jetty 9.x and above can be configured to run under a Java Security Manager.</p>
             <p>For further information on how to achieve this, please refer to the <a href="Maven+3+Plugin+Tips.html#Maven3PluginTips-tip4">associated tip in the Maven 3 Plugin Tips page</a>.</p>
            </div>
+          </div>
+          <h5 id="Jetty12.x-Forembeddedcontainero.c.c.c.jetty.Jetty12xEmbeddedLocalContainer">For embedded container o.c.c.c.jetty.Jetty12xEmbeddedLocalContainer</h5>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh">
+               <p>Property name</p></th>
+              <th class="confluenceTh">
+               <p>Java Property</p></th>
+              <th class="confluenceTh">
+               <p>Supported?</p></th>
+              <th class="confluenceTh">
+               <p>Default value</p></th>
+              <th class="confluenceTh">
+               <p>Javadoc</p></th>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.hostname</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><code>localhost</code></p></td>
+              <td class="confluenceTd">
+               <p>&nbsp;</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.java.home</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><em>JAVA_HOME version 17 or newer</em></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jetty.deployer.createContextXml</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JettyPropertySet.DEPLOYER_CREATE_CONTEXT_XML</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>true</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jetty/JettyPropertySet.html#DEPLOYER_CREATE_CONTEXT_XML"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jetty.realm.name</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JettyPropertySet.REALM_NAME</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>Cargo Test Realm</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jetty/JettyPropertySet.html#REALM_NAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jetty.servlet.default.useFileMappedBuffer</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JettyPropertySet.USE_FILE_MAPPED_BUFFER</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>true</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jetty/JettyPropertySet.html#USE_FILE_MAPPED_BUFFER"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jetty.session.path</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JettyPropertySet.SESSION_PATH</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jetty/JettyPropertySet.html#SESSION_PATH"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jvmargs</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JVMARGS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.logging</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.LOGGING</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><code>medium</code></p></td>
+              <td class="confluenceTd">
+               <p>&nbsp;</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.port.offset</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.PORT_OFFSET</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>0</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.protocol</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.PROTOCOL</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p></td>
+              <td class="confluenceTd">
+               <p><code>http</code></p></td>
+              <td class="confluenceTd">
+               <p>&nbsp;</p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.runtime.args</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RUNTIME_ARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.servlet.port</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>8080</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.servlet.users</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">ServletPropertySet.USERS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#USERS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.standalone.ignoreNonExistingProperties</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.IGNORE_NON_EXISTING_PROPERTIES</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#IGNORE_NON_EXISTING_PROPERTIES"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.start.jvmargs</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.START_JVMARGS</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p>N/A</p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+            </tbody>
+           </table>
           </div>
           <h4 id="Jetty12.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4>
           <h5 id="Jetty12.x-Forinstalledcontainero.c.c.c.jetty.Jetty12xInstalledLocalContainer.1">For installed container o.c.c.c.jetty.Jetty12xInstalledLocalContainer</h5>
