@@ -378,7 +378,7 @@
               <td class="confluenceTd">
                <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd">
-               <p>Jetty 12.x Embedded only supports the <code>ee10</code> profile</p></td>
+               <p>&nbsp;</p></td>
              </tr>
              <tr>
               <td class="confluenceTd">
@@ -469,7 +469,7 @@
               <td class="confluenceTd">
                <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd">
-               <p>Jetty 12.x Embedded only supports the <code>ee10</code> profile</p></td>
+               <p>&nbsp;</p></td>
              </tr>
              <tr>
               <td class="confluenceTd">
@@ -632,7 +632,7 @@
               <td class="confluenceTd">
                <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
               <td class="confluenceTd">
-               <p>Jetty 12.x Embedded only supports the <code>ee10</code> profile</p></td>
+               <p>&nbsp;</p></td>
              </tr>
              <tr>
               <td class="confluenceTd">
@@ -1046,6 +1046,18 @@
              </tr>
              <tr>
               <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jetty.deployer.ee.version</a></p></td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">JettyPropertySet.DEPLOYER_EE_VERSION</a></p></td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p></td>
+              <td class="confluenceTd">
+               <p><code>ee10</code></p></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jetty/JettyPropertySet.html#DEPLOYER_EE_VERSION"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p></td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
                <p><a href="Configuration+properties.html">cargo.jetty.realm.name</a></p></td>
               <td class="confluenceTd">
                <p><a href="Configuration+properties.html">JettyPropertySet.REALM_NAME</a></p></td>
@@ -1190,6 +1202,13 @@
              </tr>
             </tbody>
            </table>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <p class="title">Jetty 12.x Embedded container and EE versions</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Jetty 12.x supports multiple Java / Jakarta EE versions, for the Embedded container this is steered through the <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/jetty/JettyPropertySet.html#DEPLOYER_EE_VERSION">JettyPropertySet.DEPLOYER_EE_VERSION</a></code> property.</p>
+            <p>When using this feature through the <a href="Javadocs.html">Java API</a> or <a href="Ant+support.html">Ant tasks</a>, you will have to set the classpath accordingly. Because of the pre-programmed dependency management logic, the <a href="Maven+3+Plugin.html">Maven 3 plugin</a> for Jetty 12.x Embedded only supports <code>ee10</code>.</p>
+           </div>
           </div>
           <h4 id="Jetty12.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4>
           <h5 id="Jetty12.x-Forinstalledcontainero.c.c.c.jetty.Jetty12xInstalledLocalContainer.1">For installed container o.c.c.c.jetty.Jetty12xInstalledLocalContainer</h5>
