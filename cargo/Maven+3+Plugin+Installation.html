@@ -323,7 +323,7 @@
             <p>When you do not do that properly, you will be getting errors such as:</p>
             <pre>Cannot create configuration. There's no registered configuration for the parameters (container [id = [tomcat9x], type = [installed]], configuration type [standalone]). Actually there are no valid types registered for this configuration. Maybe you've made a mistake spelling it?</pre>
             <p>In case the errors persist even after adding the <code>SNAPSHOT</code> repositories, you can install the associated container artifact. Example (with the Codehaus Cargo Tomcat container):</p>
-            <pre>mvn dependency:get -Dartifact=org.codehaus.cargo:cargo-core-container-tomcat:1.10.18-SNAPSHOT -DremoteRepositories=https://oss.sonatype.org/content/repositories/snapshots/</pre>
+            <pre>mvn dependency:get -Dartifact=org.codehaus.cargo:cargo-core-container-tomcat:1.10.19-SNAPSHOT -DremoteRepositories=https://oss.sonatype.org/content/repositories/snapshots/</pre>
            </div>
           </div>
           <p>Then, you should decide which <code>SNAPSHOT</code> version to use:</p>
@@ -331,7 +331,7 @@
            <li>To find out what the latest <code>SNAPSHOT</code> version is, you can simply look at <a href="https://github.com/codehaus-cargo/cargo/blob/master/pom.xml">the root POM file for Codehaus Cargo</a>.</li>
            <li>Configure the Cargo Maven Plugin by specifying the <code>SNAPSHOT</code> version you want.</li>
           </ul>
-          <p>For example, to use version <code>1.10.18-SNAPSHOT</code> you would declare something similar to the following in your POM:</p>
+          <p>For example, to use version <code>1.10.19-SNAPSHOT</code> you would declare something similar to the following in your POM:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[...]
@@ -340,7 +340,7 @@
       &lt;plugin&gt;
         &lt;groupId&gt;org.codehaus.cargo&lt;/groupId&gt;
         &lt;artifactId&gt;cargo-maven3-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.10.18-SNAPSHOT&lt;/version&gt;
+        &lt;version&gt;1.10.19-SNAPSHOT&lt;/version&gt;
 [...]
       &lt;/plugin&gt;
 [...]
