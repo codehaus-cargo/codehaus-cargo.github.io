@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - CARGO 1.1.3 now available</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - CARGO 1.1.3 now available</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; CARGO 1.1.3 now available</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -279,26 +289,26 @@
           <ul>
            <li>The <code>pingURL</code> is no more ignored when using <code>redeploy</code> [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1036">CARGO-1036</a>]</li>
            <li>All deployers now support the <code>redeploy</code> method (with and without monitor) [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1038">CARGO-1038</a>]</li>
-           <li>The JBoss container has gained in functionality and stability: 
+           <li>The JBoss container has gained in functionality and stability:
             <ul>
              <li>JBoss 6.1.x support has been added [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1043">CARGO-1043</a>]</li>
              <li>Corrected the capabilities of the JBoss 7.x remote container [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1044">CARGO-1044</a>]</li>
              <li>Shared classpath does not cause <code>java.net.MalformedURLException</code> on Windows anymore [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1024">CARGO-1024</a>]</li>
              <li>JBoss standalone local configuration creation now works even with deployables with certain names [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1037">CARGO-1037</a>]</li>
             </ul></li>
-           <li>Jetty-specific fixes and improvements: 
+           <li>Jetty-specific fixes and improvements:
             <ul>
              <li>The latest version of Jetty, version 8, is now supported. [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1028">CARGO-1028</a>]</li>
              <li>You can now provide your own Jetty context XML file [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1027">CARGO-1027</a>] on Jetty 6.x, 7.x and 8.x</li>
             </ul></li>
-           <li>The GlassFish container has been improved: 
+           <li>The GlassFish container has been improved:
             <ul>
              <li>Extra classpath support has been added [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1034">CARGO-1034</a>]</li>
              <li>In addition, GlassFish containers now also support Datasources [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1035">CARGO-1035</a>]</li>
              <li>That's not all: you can now use Existing Local Configuration for an installed GlassFish container [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1039">CARGO-1039</a>]</li>
              <li>Finally, the GlassFish deployer has been improved to recognize failures correctly [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1032">CARGO-1032</a>]</li>
             </ul></li>
-           <li>The Tomcat container has two bugs corrected: 
+           <li>The Tomcat container has two bugs corrected:
             <ul>
              <li>A bug making the Tomcat container throw a <code>ClassNotFoundException</code> with default logging properties has been fixed [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1031">CARGO-1031</a>]</li>
              <li>Deployment of a WAR with a subcontext works back again [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1041">CARGO-1041</a>]</li>
@@ -306,10 +316,12 @@
            <li>In the containers' documentation's "properties" part, the "comments" column has been replaced with a link to Javadoc [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1029">CARGO-1029</a>]</li>
           </ul>
           <p>The full release notes can be found on: <a href="https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17504&amp;styleName=Html&amp;projectId=10730">https://jira.codehaus.org/secure/ReleaseNote.jspa?version=17504&amp;styleName=Html&amp;projectId=10730</a></p>
-          <p>Enjoy!</p></td>
+          <p>Enjoy!</p>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -317,12 +329,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

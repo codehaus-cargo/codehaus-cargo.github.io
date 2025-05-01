@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Release procedure</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Release procedure</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Developers.html">Developers</a> &gt; Release procedure</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -279,7 +289,8 @@
           <p>In order to release, you will need:</p>
           <ul>
            <li>JDK 11. Please note that older or newer versions of the JDK cannot build all of Codehaus Cargo, and hence should not be used to release new versions.</li>
-           <li>Maven 3.6.3 or newer, though it is for sure a good idea to use the latest Maven version available.<br>
+           <li>Maven 3.6.3 or newer, though it is for sure a good idea to use the latest Maven version available.
+            <br>
             With Maven 3.8.1 onwards, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="Building.html#Building-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
            <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html">OSSRH guide</a>.</li>
            <li><a href="http://www.gnupg.org/">The GNU privacy guard (GPG)</a> installed on your machine and at least one secret key.
@@ -303,7 +314,8 @@
 &lt;/settings&gt;
 </pre>
              </div>
-            </div></li>
+            </div>
+           </li>
           </ul>
           <h3 id="Releaseprocedure-Beforeyoustart">Before you start</h3>
           <p>Before releasing, make sure what is going to be released is fully functional; in particular check that all containers pass all tests.</p>
@@ -328,7 +340,9 @@
           <p>Start by erasing your local Maven repository (<code>${user.home}/.m2/repository/</code>, unless you've reconfigured this in your <code>settings.xml</code>). This will ensure that you don't have any artifacts cached locally that can't be found in public repositories.</p>
           <p>The typical Maven release procedure is to execute these commands:</p>
           <ol>
-           <li>A dry-run before doing the actual release to ensure there aren't any problems:<br><code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
+           <li>A dry-run before doing the actual release to ensure there aren't any problems:
+            <br>
+            <code><strong>mvn clean release:prepare -DdryRun=true</strong></code></li>
            <li><code><strong>mvn release:prepare</strong></code>: the actual release preparation, with the actual tagging process</li>
            <li><code><strong>mvn release:perform</strong></code>: deploys the tagged artifacts on the Sonatype Nexus staging repository
             <ul>
@@ -340,25 +354,38 @@
           <ol>
            <li>Follow the <a href="http://central.sonatype.org/pages/releasing-the-deployment.html">Releasing the Deployment</a> guide in order to <strong>close</strong> the staging repository</li>
            <li>Send an e-mail to the&nbsp;Codehaus Cargo list so users can try out the new version. We typically leave the vote open for 72 hours.</li>
-           <li>Once the developers/users also validate the version as being stable, follow the <a href="http://central.sonatype.org/pages/releasing-the-deployment.html">Releasing the Deployment</a> guide in order to <strong>release</strong> the staging repository<br><u>Note</u>: If the version was not stable, that same guide also explains how to <strong>drop</strong> it</li>
+           <li>Once the developers/users also validate the version as being stable, follow the <a href="http://central.sonatype.org/pages/releasing-the-deployment.html">Releasing the Deployment</a> guide in order to <strong>release</strong> the staging repository
+            <br>
+            <u>Note</u>: If the version was not stable, that same guide also explains how to <strong>drop</strong> it</li>
            <li>Log onto&nbsp;Codehaus Cargo JIRA, <a href="https://codehaus-cargo.atlassian.net/plugins/servlet/project-config/CARGO/versions">release the current version and add the next version</a>.</li>
-           <li>Check that the&nbsp;Codehaus Cargo wiki is up to date. Specifically, perform the following updates:<br>
+           <li>Check that the&nbsp;Codehaus Cargo wiki is up to date. Specifically, perform the following updates:
+            <br>
             <ol>
-             <li>Modify the status on the home page about the delivery:<br>
+             <li>Modify the status on the home page about the delivery:
+              <br>
               <ul>
                <li>Make sure the <a href="Containers.html">Containers list</a> is complete.</li>
                <li>Make sure the <a href="Navigation.html">Navigation page</a> is complete.</li>
-               <li>Make sure the documentation for each container is up to date.<br><u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code><span class="legacy-color-text-default">core/documentation/target/[container's name].log</span></code><br>
+               <li>Make sure the documentation for each container is up to date.
+                <br>
+                <u>Note</u>: The source files (that you need to import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option in each container's page manually) are generated in <code><span class="legacy-color-text-default">core/documentation/target/[container's name].log</span></code>
+                <br>
                 As an alternative to manual processing, you can also set the Java property <code>cargo.confluenceCredentialsPath</code> to let the build update the Confluence content for each and every container.</li>
-               <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code><code>core/documentation/target/datasource.</code></code><code><span class="legacy-color-text-default">log</span></code><br>
+               <li>Make sure the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> is up to date.
+                <br>
+                <u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code><code>core/documentation/target/datasource.</code></code><code><span class="legacy-color-text-default">log</span></code>
+                <br>
                 As an alternative to manual processing, you can also set the Java property <code>cargo.confluenceCredentialsPath</code> to let the build update the Confluence content for the <a href="Containers+with+DataSource+and+Resource+support.html">Containers with DataSource and Resource support</a> page.</li>
-               <li>Make sure the <a href="Project+Structure.html">Project Structure</a> is up to date.<br><u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
+               <li>Make sure the <a href="Project+Structure.html">Project Structure</a> is up to date.
+                <br>
+                <u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
               </ul></li>
              <li>Modify the <a href="Home.html">Home</a> page to update the available version number, the release notes URL the checkbox is pointing to and the release date</li>
              <li>Modify the&nbsp;<a href="Building.html">Building</a> and <a href="Maven+3+Plugin+Installation.html">Maven 3 Plugin Installation</a> pages to update the <code>SNAPSHOT</code> version</li>
              <li>Create a <a href="https://codehaus-cargo.atlassian.net/wiki/pages/createblogpost.action?spaceKey=CARGO">blog post</a></li>
              <li><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/exportspacehtml.action?key=CARGO">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="Downloads.html">Downloads</a> page</li>
-             <li>Move the old version to the <a href="Archived+Downloads.html">Archived Downloads</a> page<br>
+             <li>Move the old version to the <a href="Archived+Downloads.html">Archived Downloads</a> page
+              <br>
               <ul>
                <li>Remember to move the old documentation archive from the <a href="Downloads.html">Downloads</a> page to that page as well</li>
               </ul></li>
@@ -373,22 +400,29 @@
             </ol></li>
            <li>Send an announcement email to <a href="Mailing+Lists.html">Cargo mailing lists</a> ... and to other relevant sites you know about. Mailing lists of some servers can also be interesting.</li>
           </ol>
-          <p><br></p>
+          <p>
+           <br>
+          </p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">How to insert using the Wiki Markup</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">How to insert using the Wiki Markup</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>To insert content using <strong>Wiki Markup</strong>:</p>
             <ol>
              <li>Edit the document in the Codehaus Confluence</li>
              <li>Clear the existing content by selecting all content and pressing delete on your keyboard</li>
-             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" loading="lazy" src="attachments/Insert%20wiki%20markup.png" title="Insert wiki markup.png"></span></li>
+             <li>On the toolbar, click <strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong>:
+              <br>
+              <span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" loading="lazy" src="attachments/Insert%20wiki%20markup.png" title="Insert wiki markup.png"></span></li>
              <li>Paste the wiki markup content</li>
             </ol>
            </div>
-          </div></td>
+          </div>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -396,12 +430,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

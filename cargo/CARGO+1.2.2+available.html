@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - CARGO 1.2.2 available</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - CARGO 1.2.2 available</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,16 +274,20 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; CARGO 1.2.2 available</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
-          <p>Dear CARGO enthusiasts<br><br>
-            After about 7 weeks after the last release, I decided we have enough changes and fixed bugs in order to go ahead with CARGO 1.2.2. As for what's new, the list is this time small (12 entries):</p>
+          <p>Dear CARGO enthusiasts
+           <br>
+           <br>
+           After about 7 weeks after the last release, I decided we have enough changes and fixed bugs in order to go ahead with CARGO 1.2.2. As for what's new, the list is this time small (12 entries):</p>
           <p style="margin-left: 30.0px;"><strong>Improvements and new features</strong> (5)</p>
           <ul>
            <li style="list-style-type: none;">
@@ -285,7 +297,8 @@
              <li>The usage of an external jetty-env.xml file has finally been documented (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-861">CARGO-861</a>)</li>
              <li>The XML/properties replacement engine can now WARN when a replacement is not possible (instead of failing) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1099">CARGO-1099</a>)</li>
              <li>Deployers (and mostly undeployers) can now intelligently ignore failures when deploy/undeploy fails (for example, if the application is not deployed but one attempts to undeploy it) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1100">CARGO-1100</a>)</li>
-            </ul></li>
+            </ul>
+           </li>
           </ul>
           <p style="margin-left: 30.0px;"><strong>Bug fixes</strong> (7)</p>
           <ul>
@@ -298,7 +311,8 @@
              <li>cargo.jboss.invoker.pool.port configuration property works properly for JBoss 5+ (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1104">CARGO-1104</a>)</li>
              <li>Merging of XML files doesn't throw a ConcurrentModificationException anymore (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1105">CARGO-1105</a>)</li>
              <li>JVM properties on Glassfish now work (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1108">CARGO-1108</a>)</li>
-            </ul></li>
+            </ul>
+           </li>
           </ul>
           <p>In addition to these, we have done various changes in the documentation as well as the Maven archetypes. For example, a profile for <a href="http://cargo.codehaus.org/JBoss+7.1.x">JBoss 7.1.x</a> has been added to all archetypes and is configured with an artifactInstaller.</p>
           <p>The full release notes can be found on <a href="https://jira.codehaus.org/secure/ReleaseNote.jspa?version=18384&amp;styleName=Html&amp;projectId=10730">https://jira.codehaus.org/secure/ReleaseNote.jspa?version=18384&amp;styleName=Html&amp;projectId=10730</a></p>
@@ -307,11 +321,15 @@
            <li>Users of the Java API and/or the ANT tasks can download the required components (be it the uberjar, ANT tasks and others) via the <a href="http://cargo.codehaus.org/Downloads">CARGO Downloads page</a>.</li>
            <li>Users of the Maven2/Maven3 plugin simply need to change their plugin version to 1.2.2.</li>
           </ul>
-          <p>Please provide your feedback to the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.<br><br>
-           Enjoy!</p></td>
+          <p>Please provide your feedback to the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.
+           <br>
+           <br>
+           Enjoy!</p>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -319,12 +337,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

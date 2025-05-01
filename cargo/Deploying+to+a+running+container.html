@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Deploying to a running container</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Deploying to a running container</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,23 +274,27 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> &gt; <a href="Maven+3+Plugin+Getting+Started.html">Maven 3 Plugin Getting Started</a> &gt; Deploying to a running container</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
           <p>Cargo supports <a href="Deployer.html">deploying</a> to an already running container. This feature is called <a href="Hot+Deployment.html">Hot Deployment</a>). You call it by using the (<code><strong>cargo:deploy</strong></code>) goal (e.g. <code>mvn cargo:deploy</code>).</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <p class="title">No need to deploy if you are using Cargo to start your container</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <p class="title">No need to deploy if you are using Cargo to start your container</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>If you are using Cargo for <a href="Starting+and+stopping+a+container.html">starting your container</a>, Cargo will actually be doing a <a href="Static+Deployment.html">static deployment</a> of all your <code>&lt;deployables&gt;</code> automatically. So, no need to deploy anything manually in that case!</p>
            </div>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">About WAR contexts</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">About WAR contexts</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Many containers have their specific files for redefining context roots (Tomcat has context.xml, JBoss has jboss-web.xml, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the&nbsp;Codehaus Cargo deployer.</p>
            </div>
@@ -343,7 +355,8 @@
           <h3 id="Deployingtoarunningcontainer-Usingaremotedeployer">Using a remote deployer</h3>
           <p>A remote <a href="Deployer.html">deployer</a> is a deployer that deploys deployables on a <a href="Remote+Container.html">Remote Container</a> (i.e. a container that is running and that has been started externally from Cargo). Thus you'll need to use an id for a remote container in <code>&lt;containerId&gt;</code> and a <a href="Runtime+Configuration.html">Runtime Configuration</a>.</p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">Not all containers have a remote Deployer implemented</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">Not all containers have a remote Deployer implemented</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>We haven't finished implementing remote Deployers for all containers yet. Please <a href="Containers.html">check</a> if your favorite container has it implemented. If not you'll need to deploy your deployables by defining them in a standalone local configuration as shown in the <a href="Starting+and+stopping+a+container.html">starting and stopping a container</a> use case or the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
            </div>
@@ -439,10 +452,12 @@
              <li>If the watchdog detects that the deployable is still deployed, you then get a <code>BUILD FAILURE</code></li>
             </ul></li>
           </ul>
-          <p>This functionality is available in the <a href="Javadocs.html">Java API</a>, <a href="Ant+support.html">Ant tasks</a> and <a href="Maven+3+Plugin.html">Maven 3 plugin</a>.</p></td>
+          <p>This functionality is available in the <a href="Javadocs.html">Java API</a>, <a href="Ant+support.html">Ant tasks</a> and <a href="Maven+3+Plugin.html">Maven 3 plugin</a>.</p>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -450,12 +465,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

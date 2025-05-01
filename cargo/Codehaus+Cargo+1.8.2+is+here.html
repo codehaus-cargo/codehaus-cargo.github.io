@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Codehaus Cargo 1.8.2 is here</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Codehaus Cargo 1.8.2 is here</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; Codehaus Cargo 1.8.2 is here</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -281,37 +291,50 @@
             <p>We updated our code standards to Java 8 (actually, some were long due since Java 7), including:</p>
             <ul>
              <li>
-              <p>Conversion to the easier to read constructs such as <code>switch</code> over <code>String</code>s, the beautiful <code>try-with-resources</code>, the simplified <code>for-each</code> loops and compact multi-<code>catch</code> statements.</p></li>
+              <p>Conversion to the easier to read constructs such as <code>switch</code> over <code>String</code>s, the beautiful <code>try-with-resources</code>, the simplified <code>for-each</code> loops and compact multi-<code>catch</code> statements.</p>
+             </li>
              <li>
-              <p>Switching to the better behaving <code>Collection.addAll</code> (instead of manual population of <code>List</code>s / <code>Set</code>s) and <code>String.join</code> (instead of manually created <code>for</code> loops with booleans checking if it the first element).</p></li>
+              <p>Switching to the better behaving <code>Collection.addAll</code> (instead of manual population of <code>List</code>s / <code>Set</code>s) and <code>String.join</code> (instead of manually created <code>for</code> loops with booleans checking if it the first element).</p>
+             </li>
              <li>
-              <p>Please note that we didn't go crazy with Lambda expressions: they bring very little benefit in the case of a very procedural process like Codehaus Cargo's (except perhaps for the XML-related parts where we do a lot of filtering), and in case something goes wrong the stack trace is very difficult to read...</p></li>
-            </ul></li>
+              <p>Please note that we didn't go crazy with Lambda expressions: they bring very little benefit in the case of a very procedural process like Codehaus Cargo's (except perhaps for the XML-related parts where we do a lot of filtering), and in case something goes wrong the stack trace is very difficult to read...</p>
+             </li>
+            </ul>
+           </li>
            <li>
-            <p>While we did these updates, we also revised the <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Codehaus Cargo CI</a> and enabled Java 6-based container tests. That implied further changes under the hood, for example changes in the version compatibility for the Cargo Samples Test Data modules. These obviously do not have much "visible" impact, yet enabled us to catch some long hidden bugs! See below...</p></li>
+            <p>While we did these updates, we also revised the <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Codehaus Cargo CI</a> and enabled Java 6-based container tests. That implied further changes under the hood, for example changes in the version compatibility for the Cargo Samples Test Data modules. These obviously do not have much "visible" impact, yet enabled us to catch some long hidden bugs! See below...</p>
+           </li>
            <li>
             <p>Containers - Resin:</p>
             <ul>
              <li>
-              <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1530">CARGO-1530</a>] We fixed the bug where the <a href="https://codehaus-cargo.github.io/cargo/Resin+3.x.html">Resin 3.x</a> container didn't work: <code>ResinRun</code> was being compiled to work with Java 7 onwards (since October 2018), yet due to incompatibilities between <code>com.caucho.log.EnvironmentLogger</code> and the behaviour described in <a href="https://bugs.openjdk.java.net/browse/JDK-8015098">JDK-8015098</a>, Resin 3.x doesn't run on Java 7 and above! We hence also build the Codehaus Cargo Resin container with Java 6 as the minimum version, while Java 8 remains the standard for all others.</p></li>
-            </ul></li>
+              <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1530">CARGO-1530</a>] We fixed the bug where the <a href="https://codehaus-cargo.github.io/cargo/Resin+3.x.html">Resin 3.x</a> container didn't work: <code>ResinRun</code> was being compiled to work with Java 7 onwards (since October 2018), yet due to incompatibilities between <code>com.caucho.log.EnvironmentLogger</code> and the behaviour described in <a href="https://bugs.openjdk.java.net/browse/JDK-8015098">JDK-8015098</a>, Resin 3.x doesn't run on Java 7 and above! We hence also build the Codehaus Cargo Resin container with Java 6 as the minimum version, while Java 8 remains the standard for all others.</p>
+             </li>
+            </ul>
+           </li>
           </ul>
           <p>Lesson learnt from this release? Well, if something is not tested, one should assume it is broken...</p>
           <p>To try out this latest version:</p>
           <ul>
            <li>
-            <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.8.2</strong></p></li>
+            <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven2+plugin.html">Maven 2 / Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.8.2</strong></p>
+           </li>
            <li>
-            <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.2/cargo-core-uberjar-1.8.2.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.2/cargo-core-uberjar-1.8.2.jar</a></p></li>
+            <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.2/cargo-core-uberjar-1.8.2.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.8.2/cargo-core-uberjar-1.8.2.jar</a></p>
+           </li>
            <li>
-            <p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.2/cargo-ant-1.8.2.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.2/cargo-ant-1.8.2.jar</a></p></li>
+            <p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">ANT tasks</a> can download the new ANT tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.2/cargo-ant-1.8.2.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.8.2/cargo-ant-1.8.2.jar</a></p>
+           </li>
            <li>
-            <p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from&nbsp;<a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.2/cargo-daemon-webapp-1.8.2.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.2/cargo-daemon-webapp-1.8.2.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p></li>
+            <p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from&nbsp;<a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.2/cargo-daemon-webapp-1.8.2.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.8.2/cargo-daemon-webapp-1.8.2.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p>
+           </li>
           </ul>
-          <p>Enjoy!</p></td>
+          <p>Enjoy!</p>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -319,12 +342,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

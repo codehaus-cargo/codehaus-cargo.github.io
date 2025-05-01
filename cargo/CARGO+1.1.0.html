@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - CARGO 1.1.0</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - CARGO 1.1.0</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; CARGO 1.1.0</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -280,7 +290,7 @@
           <ul>
            <li>The Maven2/Maven3 <code>ZipUrlInstaller</code> now reuses the proxy settings from Maven (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-517">CARGO-517</a>)</li>
            <li>Container distributions can now be directory installed from a Maven2/Maven3 artifact definition (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-449">CARGO-449</a>)</li>
-           <li><code>ZipUrlInstaller</code> now has different download and extraction directories (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-907">CARGO-907</a>), and the default extraction directory for the Maven2/Maven3 plugin is the project's build directory (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-908">CARGO-908</a>). 
+           <li><code>ZipUrlInstaller</code> now has different download and extraction directories (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-907">CARGO-907</a>), and the default extraction directory for the Maven2/Maven3 plugin is the project's build directory (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-908">CARGO-908</a>).
             <ul>
              <li>This way, all containers can use the default directories of the <code>ZipUrlInstaller</code> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-895">CARGO-895</a>, <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-959">CARGO-959</a> and others).</li>
             </ul></li>
@@ -319,7 +329,7 @@
           </ul>
           <p>... as well as some major changes you should take a note of:</p>
           <ul>
-           <li>The default value for the <code>wait</code> parameter on the ANT and Maven2/Maven3 plugins is now <code>false</code> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-896">CARGO-896</a>) 
+           <li>The default value for the <code>wait</code> parameter on the ANT and Maven2/Maven3 plugins is now <code>false</code> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-896">CARGO-896</a>)
             <ul>
              <li>This means you will need to run <code>mvn cargo:start -Dwait=true</code> when you want to run manual tests.</li>
              <li>This change in fact renders the creation of automated integration tests easier.</li>
@@ -338,10 +348,12 @@
            <li>Maven2/Maven3 users simply need to change the plugin's <code>&lt;version&gt;</code> to <strong>1.1.0</strong>, and Maven2/Maven3 will download the new version automatically.</li>
           </ul>
           <p>Please share your good (and bad) findings on the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.</p>
-          <p>Enjoy!</p></td>
+          <p>Enjoy!</p>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -349,12 +361,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

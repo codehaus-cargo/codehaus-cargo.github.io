@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - CARGO 1.1.1 is here</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - CARGO 1.1.1 is here</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; CARGO 1.1.1 is here</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -278,7 +288,7 @@
           <p>CARGO 1.1.0 has been out for just over a month now, and we have had important bug fixes and improvements since. We therefore are very happy to announce CARGO 1.1.1.</p>
           <p>Wonder what has changed? Here is a short list:</p>
           <ul>
-           <li>A certain number of user inquiries made us realize that there has been a confusion around the <code>wait</code> parameter of the start ANT task and Maven goal of CARGO. Indeed, most other similar tools have a clearer separation: 
+           <li>A certain number of user inquiries made us realize that there has been a confusion around the <code>wait</code> parameter of the start ANT task and Maven goal of CARGO. Indeed, most other similar tools have a clearer separation:
             <ul>
              <li>A "run" task/goal, which starts the container and waits until the user decides to stop it.</li>
              <li>A "start" task/goal, which starts the container and hands over to the next task/goal (run integration tests, for example).</li>
@@ -286,11 +296,11 @@
              <li>Of course the <code>wait</code> parameter remains available AND will remain so until CARGO version 1.3.0 at least.</li>
             </ul></li>
            <li>The various installers (introduced with CARGO 1.1.0) now have homogeneous parameters and default values.</li>
-           <li>Fixes and improvements on various containers: 
+           <li>Fixes and improvements on various containers:
             <ul>
              <li>The JBoss remote deployer now supports a wider range of configurations.</li>
              <li>Jetty 7.x and Tomcat 7.x remote deployers are now better documented to avoid some mistakes.</li>
-             <li>Various improvements on the JOnAS containers: 
+             <li>Various improvements on the JOnAS containers:
               <ul>
                <li>Added datasource support on JOnAS 4.x and 5.x.</li>
                <li>Added extra classpath support on JOnAS 5.x.</li>
@@ -323,10 +333,12 @@
            <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-987">CARGO-987</a>] - Deprecate cargo:start's -Dwait argument</li>
            <li>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-990">CARGO-990</a>] - Deprecate the ANT start task's wait argumen</li>
           </ul>
-          <p>Enjoy!</p></td>
+          <p>Enjoy!</p>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -334,12 +346,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

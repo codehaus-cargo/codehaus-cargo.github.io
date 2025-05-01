@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - CARGO 1.1.4 now available</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - CARGO 1.1.4 now available</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,51 +274,53 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; CARGO 1.1.4 now available</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
           <p>Dear CARGO enthusiasts</p>
           <p>About 8 weeks have passed since the last CARGO release. During these weeks, some fixes and improvements have been implemented in CARGO and the new version <strong>1.1.4</strong> is now ready. These changes include:</p>
           <ul>
-           <li>General: 
+           <li>General:
             <ul>
              <li>Harmonized the behaviour when copying configuration files, now both <code>&lt;file&gt;</code> and <code>&lt;configfiles&gt;</code> can copy directories [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1045">CARGO-1045</a>]</li>
-             <li>Improved the module hierarchy and dependencies [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1011">CARGO-1011</a>] 
+             <li>Improved the module hierarchy and dependencies [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1011">CARGO-1011</a>]
               <ul>
                <li>This way, the CARGO Maven2 plugin doesn't use the uberjar anymore but rather the individual artifacts</li>
               </ul></li>
              <li>Cleaned notes about old CARGO versions from documentation [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-997">CARGO-997</a>]</li>
              <li>Corrected Javadoc for <code>MergeStrategy.inRight()</code> [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1046">CARGO-1046</a>]</li>
             </ul></li>
-           <li>JBoss: 
+           <li>JBoss:
             <ul>
              <li>JBoss 7.1.0 beta 1 is now supported [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1063">CARGO-1063</a>]</li>
              <li>The JBoss 5.x and 6.x remote deployers now take into account username and password [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1058">CARGO-1058</a>]</li>
              <li>JBoss 5.x, 5.1.x, 6.x, 6.1.x and 7.x local containers don't have cargo-specific XML files anymore [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-839">CARGO-839</a>]</li>
             </ul></li>
-           <li>Jetty: 
+           <li>Jetty:
             <ul>
              <li>Fixed compatibility issues between the remote Jetty deployer and jetty-hightide (Jetty@Codehaus) [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-983">CARGO-983</a>]</li>
              <li>Remote Jetty deployer now works with Jetty 8.x with the default OPTIONS [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1049">CARGO-1049</a>]</li>
              <li>Fixed the default CARGO OPTIONS for the Jetty 8.x container [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1050">CARGO-1050</a>]</li>
             </ul></li>
-           <li>JOnAS: 
+           <li>JOnAS:
             <ul>
              <li>Remote deployer can now undeploy deployment plans on JOnAS 5.x [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1047">CARGO-1047</a>]</li>
              <li>The standalone JOnAS container can now set any JOnAS configurator property [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1054">CARGO-1054</a>]</li>
              <li>The modular ANT tasks are used when configuring the latest JOnAS 5.3 milestones [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1057">CARGO-1057</a>]</li>
              <li>The JOnAS remote deployer has a new "ignore version" option [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1048">CARGO-1048</a>]</li>
             </ul></li>
-           <li>GlassFish: 
+           <li>GlassFish:
             <ul>
              <li><code>GlassFish2xAsAdmin</code> now takes into account the timeout set in the container [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1055">CARGO-1055</a>]</li>
             </ul></li>
-           <li>Maven2/Maven3 plugin: 
+           <li>Maven2/Maven3 plugin:
             <ul>
              <li>Different executions can now have different configuration options [<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1053">CARGO-1053</a>]</li>
             </ul></li>
@@ -322,10 +332,12 @@
            <li>Maven2/Maven3 users simply need to change the plugin's <code>&lt;version&gt;</code> to <strong>1.1.4</strong>, and Maven2/Maven3 will download the new version automatically.</li>
           </ul>
           <p>Please share your good (and bad) findings on the <a href="mailto:user@cargo.codehaus.org">user@cargo.codehaus.org</a> mailing list.</p>
-          <p>Enjoy!</p></td>
+          <p>Enjoy!</p>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -333,12 +345,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

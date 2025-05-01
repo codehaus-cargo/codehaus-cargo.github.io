@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Embedded Container</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Embedded Container</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,22 +274,28 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Container.html">Container</a> &gt; <a href="Local+Container.html">Local Container</a> &gt; Embedded Container</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
           <h3 id="EmbeddedContainer-Definition">Definition</h3>
-          <p><br>
-           A container executing in the same JVM where Cargo is running<br></p>
+          <p>
+           <br>
+           A container executing in the same JVM where Cargo is running
+           <br>
+          </p>
           <h3 id="EmbeddedContainer-Explanation">Explanation</h3>
           <p>An embedded container means that Cargo is using directly the container's Java API to control it and starts the container in the same JVM as where it is running. This implies you can do many advanced things programmatically - such as playing with the class loader, adding proxy classes, etc.</p>
           <p>Please note that if you're using one of the embedded implementation you'll need to ensure that you have the container's JARs in your classpath.</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <p class="title">Be very careful when using embedded containers</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <p class="title">Be very careful when using embedded containers</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Embedded containers, since they run in an existing JVM, will come with a large number of limitations:</p>
             <ul>
@@ -298,17 +312,22 @@
               <p>Some containers contain classes that have <code>final</code> attributes defined on certain other classes, that remain set to their updated values even if you reset the class loader - The only way to revert this is to restart the JVM. This implies that:</p>
               <ul>
                <li>
-                <p>It might not possible to execute different versions of these containers in the same JVM</p></li>
+                <p>It might not possible to execute different versions of these containers in the same JVM</p>
+               </li>
                <li>
-                <p>It might also not be possible to run two embedded container instances one after the other within the same JVM but different classpaths</p></li>
-              </ul></li>
+                <p>It might also not be possible to run two embedded container instances one after the other within the same JVM but different classpaths</p>
+               </li>
+              </ul>
+             </li>
             </ul>
             <p>As a result, except in cases where you have a compelling reason to use an embedded container, please use an <a href="Installed+Container.html">Installed Container</a> instead.</p>
            </div>
-          </div></td>
+          </div>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -316,12 +335,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

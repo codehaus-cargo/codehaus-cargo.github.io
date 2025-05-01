@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - CARGO 1.1.2 now available</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - CARGO 1.1.2 now available</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; CARGO 1.1.2 now available</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -279,17 +289,17 @@
           <p>On the new features and improvements side:</p>
           <ul>
            <li>CARGO now supports JBoss 7! (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1014">CARGO-1014</a>)</li>
-           <li>We have added new Maven2/Maven3 archetypes: 
+           <li>We have added new Maven2/Maven3 archetypes:
             <ul>
              <li>Datasource example (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-998">CARGO-998</a>, <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-999">CARGO-999</a>)</li>
              <li>Remote deployment (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1000">CARGO-1000</a>,&nbsp;<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1001">CARGO-1001</a>)</li>
             </ul></li>
-           <li>Many CARGO components are now much easier to use: 
+           <li>Many CARGO components are now much easier to use:
             <ul>
              <li>Configuration properties can now be set using Java system properties (-Dxxx=yyy) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1007">CARGO-1007</a>, <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1009">CARGO-1009</a>)</li>
              <li>The CARGO JBoss remote deployers are not needed to be in the classpath anymore, they're part of the JBoss container and are loaded dynamically (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1015">CARGO-1015</a>)</li>
             </ul></li>
-           <li>The <code>cargo:run</code> mojo is now much easier to use, and in many cases requires no plugin configuration at all: 
+           <li>The <code>cargo:run</code> mojo is now much easier to use, and in many cases requires no plugin configuration at all:
             <ul>
              <li>Configuration properties can now be set using Java system properties (-Dxxx=yyy) (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1007">CARGO-1007</a>, <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1009">CARGO-1009</a>)</li>
              <li>New attributes: <code>containerId</code> and <code>containerUrl</code> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-970">CARGO-970</a>)</li>
@@ -302,7 +312,7 @@
            <li>Adding a configuration file to a non-existing target directory does not result in <code>FileNotFoundException</code> anymore (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1004">CARGO-1004</a>)</li>
            <li>The Maven2/Maven3 mojos now enable the logger in debug mode (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1010">CARGO-1010</a>)</li>
            <li>The remote deployers now get their logger from the configuration (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1012">CARGO-1012</a>)</li>
-           <li>Some UberWar fixes: 
+           <li>Some UberWar fixes:
             <ul>
              <li>Dollar sign in value no more breaks NodeMerge strategy (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1016">CARGO-1016</a>)</li>
              <li>Comma can now serve as a pattern end mark (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1017">CARGO-1017</a>)</li>
@@ -311,10 +321,12 @@
            <li>cargo:deploy on JBoss now works even when internet is unavailable (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1019">CARGO-1019</a>)</li>
            <li>The JOnAS installed local deployer does not show an incorrect warning anymore (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1021">CARGO-1021</a>)</li>
           </ul>
-          <p>Enjoy!</p></td>
+          <p>Enjoy!</p>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -322,12 +334,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

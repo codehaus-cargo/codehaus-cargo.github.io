@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Codehaus Cargo 1.6.0 is now here - With the switch to Java 6</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Codehaus Cargo 1.6.0 is now here - With the switch to Java 6</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; Codehaus Cargo 1.6.0 is now here - With the switch to Java 6</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -280,10 +290,17 @@
             <p>A couple days after our last release, please welcome our new version 1.6.0.</p>
             <p>This new versions marks a major change: <strong>we now switched to Java 6</strong> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1395">CARGO-1395</a>) - Which changes (and hopefully simplifies!) a lot of things:</p>
             <ul>
-             <li>Java 6 or later is now required to build as well as to run Codehaus Cargo<br><strong>Note</strong>: The switch to Java 6 also implies you can build Codehaus Cargo on Java 9</li>
-             <li>Maven 3.2.2 or later is now required to build Codehaus Cargo<br><strong>Note</strong>: Even though we didn't block any older Maven 2 / Maven 3 version (APIs <em>should</em> be the ones as old as Maven 2.0), we do not test with any of these older versions</li>
-             <li>Dependencies have been simplified: dom4j, JAXB nor Xalan are not required to run Codehaus Cargo anymore, as we now switched to the standard Java APIs for DOM<br><strong>Note</strong>:<span> Our dependency to jdom remains, as we use it for the creation of specific deployable XML POJOs</span></li>
-             <li><span>Our Javadocs now look much better, as the new Java version allows the optimal usage of <code>@Override</code> and other tags<br></span></li>
+             <li>Java 6 or later is now required to build as well as to run Codehaus Cargo
+              <br>
+              <strong>Note</strong>: The switch to Java 6 also implies you can build Codehaus Cargo on Java 9</li>
+             <li>Maven 3.2.2 or later is now required to build Codehaus Cargo
+              <br>
+              <strong>Note</strong>: Even though we didn't block any older Maven 2 / Maven 3 version (APIs <em>should</em> be the ones as old as Maven 2.0), we do not test with any of these older versions</li>
+             <li>Dependencies have been simplified: dom4j, JAXB nor Xalan are not required to run Codehaus Cargo anymore, as we now switched to the standard Java APIs for DOM
+              <br>
+              <strong>Note</strong>:<span> Our dependency to jdom remains, as we use it for the creation of specific deployable XML POJOs</span></li>
+             <li><span>Our Javadocs now look much better, as the new Java version allows the optimal usage of <code>@Override</code> and other tags
+               <br></span></li>
             </ul>
             <p><span>In addition, we added support for <a href="https://codehaus-cargo.github.io/cargo/TomEE+7.x.html"> TomEE 7.x</a> (<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1406">CARGO-1406</a>); so you can keep on using the latest &amp; greatest Java containers.</span></p>
             <p>Feel like upgrading? Here come the instructions:</p>
@@ -295,10 +312,12 @@
             </ul>
             <p>Enjoy!</p>
            </div>
-          </div></td>
+          </div>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -306,12 +325,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

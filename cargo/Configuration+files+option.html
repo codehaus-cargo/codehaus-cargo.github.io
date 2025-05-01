@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Configuration files option</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Configuration files option</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,15 +274,18 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Configuration.html">Configuration</a> &gt; <a href="Local+Configuration.html">Local Configuration</a> &gt; <a href="Standalone+Local+Configuration.html">Standalone Local Configuration</a> &gt; Configuration files option</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
-          <h3 id="Configurationfilesoption-Definition">Definition</h3>The <strong>configuration files</strong> are the files to add to your container's configuration. It is internally used by some containers and is accessible for you can to add extra files.
+          <h3 id="Configurationfilesoption-Definition">Definition</h3>
+          The <strong>configuration files</strong> are the files to add to your container's configuration. It is internally used by some containers and is accessible for you can to add extra files.
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
@@ -285,7 +296,8 @@
           <p>In some cases, it is necessary to enrich your container configuration with extra files. This can be done using Cargo's <code>configFiles</code> option, accessible via the Cargo APIs.</p>
           <p>The advantage of using this option is that it can replace <a href="Configuration+properties.html">configuration properties</a> in your files: simply use, for example, <code>@cargo.servlet.port@</code> to have it replaced with the port on which the Servlet/JSP container is listening to.</p>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <p class="title">Careful with binary files!</p><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <p class="title">Careful with binary files!</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>If you want to inject binary configuration files (JAR files, for example), you should use <code>setFileProperty</code> (instead of <code>setConfigFileProperty</code>) with the Java API and <code>&lt;files&gt;</code> and <code>&lt;file&gt;</code> (instead of <code>&lt;configfiles&gt;</code> and <code>&lt;configfile&gt;</code>) with the Maven 3 plugin.</p>
            </div>
@@ -370,11 +382,14 @@ configuration.setConfigFileProperty(sampleUsersProperties);
           <p>To define a central <code>jetty-env.xml</code> file and reuse it later from your WARs, you can proceed as follows:</p>
           <ol>
            <li>
-            <p>As explained on the top of this page, use a&nbsp;<a href="Standalone+Local+Configuration.html">standalone local container</a> (i.e., <u>not</u> an embedded configuration)</p></li>
+            <p>As explained on the top of this page, use a&nbsp;<a href="Standalone+Local+Configuration.html">standalone local container</a> (i.e., <u>not</u> an embedded configuration)</p>
+           </li>
            <li>
-            <p>Make sure the property <code>JettyPropertySet.CREATE_CONTEXT_XML</code> (i.e. <code>cargo.jetty.createContextXml</code>) is set to <code>false</code>; so that CARGO doesn't create a <code>context.xml</code> file for your WAR's deployable but rather copies it from the source to the configuration home folder.</p></li>
+            <p>Make sure the property <code>JettyPropertySet.CREATE_CONTEXT_XML</code> (i.e. <code>cargo.jetty.createContextXml</code>) is set to <code>false</code>; so that CARGO doesn't create a <code>context.xml</code> file for your WAR's deployable but rather copies it from the source to the configuration home folder.</p>
+           </li>
            <li>
-            <p>For each deployable, make sure the deployable is defined as an expanded WAR; as explained on the&nbsp;<a href="Static+deployment+of+expanded+WAR.html">Static deployment of expanded WAR</a> page.</p></li>
+            <p>For each deployable, make sure the deployable is defined as an expanded WAR; as explained on the&nbsp;<a href="Static+deployment+of+expanded+WAR.html">Static deployment of expanded WAR</a> page.</p>
+           </li>
            <li>
             <p>Finally, for each deployable, add the following to your local container's configuration:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
@@ -387,7 +402,8 @@ configuration.setConfigFileProperty(sampleUsersProperties);
 &lt;/configfiles&gt;</pre>
              </div>
             </div>
-            <p>... where <code>webapp-context</code> is the Web application's context</p></li>
+            <p>... where <code>webapp-context</code> is the Web application's context</p>
+           </li>
           </ol>
           <p>This way:</p>
           <ul>
@@ -428,10 +444,12 @@ configuration.setConfigFileProperty(sampleUsersProperties);
   &lt;/deployables&gt;
 &lt;/configuration&gt;</pre>
            </div>
-          </div></td>
+          </div>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -439,12 +457,14 @@ configuration.setConfigFileProperty(sampleUsersProperties);
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

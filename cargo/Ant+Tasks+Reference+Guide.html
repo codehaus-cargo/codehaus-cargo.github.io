@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Ant Tasks Reference Guide</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Ant Tasks Reference Guide</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Ant+support.html">Ant support</a> &gt; Ant Tasks Reference Guide</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -286,161 +296,222 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><strong>Top level configuration elements</strong></p></th>
+               <p><strong>Top level configuration elements</strong></p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code>&lt;action&gt;</code></p></td>
+               <p><code>&lt;action&gt;</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
                <p>Action to execute. These can be:</p>
                <ul>
                 <li>Container actions: <code>configure</code>, <code>start</code>, <code>restart</code>, <code>run</code> or <code>stop</code></li>
                 <li>Deployer actions: <code>deploy</code>, <code>undeploy</code> or <code>redeploy</code></li>
                 <li><a href="Cargo+Daemon.html">Cargo Daemon</a> actions: <code>daemon-start</code> or <code>daemon-stop</code></li>
-               </ul></td>
+               </ul>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;containerId&gt;</code></td>
               <td colspan="1" class="confluenceTd">
-               <p>Id of the container to use. Valid values can be found in the <a href="Containers.html">description page for each container</a></p></td>
+               <p>Id of the container to use. Valid values can be found in the <a href="Containers.html">description page for each container</a></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👍</p></td>
-              <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd">
-               <p><code>&lt;containerType&gt;</code></p></td>
-              <td colspan="1" class="confluenceTd">
-               <p>The <a href="Container.html">container's type</a>. Valid values are <code>installed</code>, <code>embedded</code> and <code>remote</code></p></td>
-              <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
-              <td colspan="1" class="confluenceTd">
-               <p>Default value is <code>installed</code></p></td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd">
-               <p><code>&lt;home&gt;</code></p></td>
-              <td colspan="1" class="confluenceTd">
-               <p>Location where the container is installed. If specified in conjunction with the <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element, it will override the home directory defined by the installer</p></td>
-              <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👍</p>
+              </td>
               <td colspan="1" class="confluenceTd">
                <p>No default</p>
-               <p>If the user has not defined any <code>home</code> nor <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p></td>
+               <p><code>&lt;containerType&gt;</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a></p></td>
+               <p>The <a href="Container.html">container's type</a>. Valid values are <code>installed</code>, <code>embedded</code> and <code>remote</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
+              <td colspan="1" class="confluenceTd">
+               <p>Default value is <code>installed</code></p>
+              </td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">
+               <p><code>&lt;home&gt;</code></p>
+              </td>
+              <td colspan="1" class="confluenceTd">
+               <p>Location where the container is installed. If specified in conjunction with the <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element, it will override the home directory defined by the installer</p>
+              </td>
+              <td colspan="1" class="confluenceTd">
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
                <p>No default</p>
-               <p>If the user has not defined any <code>home</code> nor <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p></td>
+               <p>If the user has not defined any <code>home</code> nor <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="Container+Timeout.html">&lt;timeout&gt;</a></code></p></td>
+               <p><code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>The timeout after which Cargo reports an error if the container is not started or stopped</p></td>
+               <p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p><code>120000</code> ms (2 minutes)</p></td>
+               <p>No default</p>
+               <p>If the user has not defined any <code>home</code> nor <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="Passing+system+properties.html">&lt;systemProperties&gt;</a></code></p></td>
+               <p><code><a href="Container+Timeout.html">&lt;timeout&gt;</a></code></p>
+              </td>
+              <td colspan="1" class="confluenceTd">
+               <p>The timeout after which Cargo reports an error if the container is not started or stopped</p>
+              </td>
+              <td colspan="1" class="confluenceTd">
+               <p>👎</p>
+              </td>
+              <td colspan="1" class="confluenceTd">
+               <p><code>120000</code> ms (2 minutes)</p>
+              </td>
+             </tr>
+             <tr>
+              <td colspan="1" class="confluenceTd">
+               <p><code><a href="Passing+system+properties.html">&lt;systemProperties&gt;</a></code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
                <p>List of <code>&lt;key&gt;<wbr>value<wbr>&lt;/key&gt;</code> pairs to be passed as System properties to the container when it is started.</p>
-               <p><br></p>
-               <p>You can also use the <code>&lt;systemPropertiesFile&gt;</code> element to load system properties from a file.</p></td>
+               <p>
+                <br>
+               </p>
+               <p>You can also use the <code>&lt;systemPropertiesFile&gt;</code> element to load system properties from a file.</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code>&lt;extraClasspath&gt;</code></p></td>
+               <p><code>&lt;extraClasspath&gt;</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Additional classpath entries for the classpath that will be used to start the containers.</p></td>
+               <p>Additional classpath entries for the classpath that will be used to start the containers.</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code>&lt;sharedClasspath&gt;</code></p></td>
+               <p><code>&lt;sharedClasspath&gt;</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Classpath entries for the classpath that will be shared the applications deployed in a container. Shared application classpath deployment is only available for local containers which support shared <a href="Application+Classpath.html">Application Classpaths</a>.</p></td>
+               <p>Classpath entries for the classpath that will be shared the applications deployed in a container. Shared application classpath deployment is only available for local containers which support shared <a href="Application+Classpath.html">Application Classpaths</a>.</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code>&lt;log&gt;</code></p></td>
+               <p><code>&lt;log&gt;</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Path to a file where Cargo logs are saved</p></td>
+               <p>Path to a file where Cargo logs are saved</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Logs to the Ant console if no log file is specified</p></td>
+               <p>Logs to the Ant console if no log file is specified</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code>&lt;output&gt;</code></p></td>
+               <p><code>&lt;output&gt;</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Path to a file where container logs are saved</p></td>
+               <p>Path to a file where container logs are saved</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Logs to the file specified by the <code>&lt;log&gt;</code> element or to the&nbsp;Ant console if no such file has been specified</p></td>
+               <p>Logs to the file specified by the <code>&lt;log&gt;</code> element or to the&nbsp;Ant console if no such file has been specified</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code>&lt;append&gt;</code></p></td>
+               <p><code>&lt;append&gt;</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>If <code>true</code>, then the file specified by <code>&lt;output&gt;</code> will not be erased across different runs</p></td>
+               <p>If <code>true</code>, then the file specified by <code>&lt;output&gt;</code> will not be erased across different runs</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p><code>false</code></p></td>
+               <p><code>false</code></p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-configuration">&lt;configuration&gt;</a></code></p></td>
+               <p><code><a href="#AntTasksReferenceGuide-configuration">&lt;configuration&gt;</a></code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Definition of a <a href="Configuration.html">Configuration</a></p></td>
+               <p>Definition of a <a href="Configuration.html">Configuration</a></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Defaults to a <a href="Standalone+Local+Configuration.html">standalone configuration</a> if the container is of type local and a <a href="Runtime+Configuration.html">runtime</a> one if it's of type remote</p></td>
+               <p>Defaults to a <a href="Standalone+Local+Configuration.html">standalone configuration</a> if the container is of type local and a <a href="Runtime+Configuration.html">runtime</a> one if it's of type remote</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-daemon">&lt;daemon&gt;</a></code></p></td>
+               <p><code><a href="#AntTasksReferenceGuide-daemon">&lt;daemon&gt;</a></code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>Additional configuration that is used when deploying with the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td>
+               <p>Additional configuration that is used when deploying with the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p></td>
+               <p>For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
+              </td>
              </tr>
             </tbody>
            </table>
@@ -457,106 +528,144 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><code><strong>&lt;configuration&gt;</strong></code> <strong>elements</strong></p></th>
+               <p><code><strong>&lt;configuration&gt;</strong></code> <strong>elements</strong></p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code>&lt;type&gt;</code></p></td>
+               <p><code>&lt;type&gt;</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p><a href="Configuration.html">Configuration's type</a>. Valid values are <code>standalone</code>, <code>existing</code> and <code>runtime</code></p></td>
+               <p><a href="Configuration.html">Configuration's type</a>. Valid values are <code>standalone</code>, <code>existing</code> and <code>runtime</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p><code>standalone</code></p></td>
+               <p><code>standalone</code></p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code>&lt;home&gt;</code></p></td>
+               <p><code>&lt;home&gt;</code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>For standalone configuration this is the location where Cargo will create the configuration and for existing configuration this is where it is located</p></td>
+               <p>For standalone configuration this is the location where Cargo will create the configuration and for existing configuration this is where it is located</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="Configuration+properties.html">&lt;properties&gt;</a></code></p></td>
+               <p><code><a href="Configuration+properties.html">&lt;properties&gt;</a></code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
                <p>Values to use for various <a href="Configuration+properties.html">Configuration properties</a>.</p>
-               <p><br></p>
-               <p>You can also use the <code>&lt;propertiesFile&gt;</code> element to load configuration properties from a file.</p></td>
+               <p>
+                <br>
+               </p>
+               <p>You can also use the <code>&lt;propertiesFile&gt;</code> element to load configuration properties from a file.</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
                <div class="content-wrapper">
-                <p><a href="Configuration+properties.html">Default configuration properties</a> <br class="atl-forced-newline"><br class="atl-forced-newline">
+                <p><a href="Configuration+properties.html">Default configuration properties</a>
+                 <br class="atl-forced-newline">
+                 <br class="atl-forced-newline">
                  Note that these configuration properties can also be overriden using Java properties; for example:</p>
                 <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
                  <div class="codeContent panelContent pdl">
                   <pre class="syntaxhighlighter-pre">ant -Dcargo.servlet.port=8082</pre>
                  </div>
                 </div>
-               </div></td>
+               </div>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-deployable">&lt;deployables&gt;</a></code></p></td>
+               <p><code><a href="#AntTasksReferenceGuide-deployable">&lt;deployables&gt;</a></code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>A list of <a href="Deployable.html">deployable</a>s that are going to be deployed in the container when it is started or when <code><span>deploy</span></code> / <code><span>undeploy</span></code> is called.</p></td>
+               <p>A list of <a href="Deployable.html">deployable</a>s that are going to be deployed in the container when it is started or when <code><span>deploy</span></code> / <code><span>undeploy</span></code> is called.</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-fileconfig">&lt;fileConfigs&gt;</a></code></p></td>
+               <p><code><a href="#AntTasksReferenceGuide-fileconfig">&lt;fileConfigs&gt;</a></code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#AntTasksReferenceGuide-fileconfig">&lt;fileConfig&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p></td>
+               <p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#AntTasksReferenceGuide-fileconfig">&lt;fileConfig&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="Configuration+files+option.html">&lt;files&gt;</a></code></p></td>
+               <p><code><a href="Configuration+files+option.html">&lt;files&gt;</a></code></p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#AntTasksReferenceGuide-file">&lt;file&gt;</a></code> element.</p></td>
+               <p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#AntTasksReferenceGuide-file">&lt;file&gt;</a></code> element.</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><a href="XML+replacements.html"><code>&lt;xmlReplacements&gt;</code></a></td>
               <td colspan="1" class="confluenceTd">
-               <p>Values to use for various <a href="XML+replacements.html">XML replacements</a>.</p></td>
+               <p>Values to use for various <a href="XML+replacements.html">XML replacements</a>.</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd"><code><a href="#AntTasksReferenceGuide-user">&lt;users&gt;</a></code></td>
               <td class="confluenceTd">List of users to be created in container configuration.</td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><a href="#AntTasksReferenceGuide-datasource">&lt;datasources&gt;</a></td>
               <td colspan="1" class="confluenceTd">List of&nbsp;datasources to be created in container configuration.</td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
             </tbody>
@@ -574,43 +683,59 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><code><strong>&lt;fileConfigs&gt;</strong></code> <strong>elements</strong></p></th>
+               <p><code><strong>&lt;fileConfigs&gt;</strong></code> <strong>elements</strong></p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;file&gt;</code></p></td>
+               <p><code>&lt;file&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>The configuration file or directory containing configuration files.</p></td>
+               <p>The configuration file or directory containing configuration files.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;todir&gt;</code></p></td>
+               <p><code>&lt;todir&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>The target directory, relative to configuration home, where the file should be copied</p></td>
+               <p>The target directory, relative to configuration home, where the file should be copied</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>If not specified, the file will be copied to the configuration's home directory</p></td>
+               <p>If not specified, the file will be copied to the configuration's home directory</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;tofile&gt;</code></p></td>
+               <p><code>&lt;tofile&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>The target file name to use</p></td>
+               <p>The target file name to use</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>The original file name</p></td>
+               <p>The original file name</p>
+              </td>
              </tr>
             </tbody>
            </table>
@@ -627,63 +752,87 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><code><strong>&lt;file&gt;</strong></code> <strong>elements</strong></p></th>
+               <p><code><strong>&lt;file&gt;</strong></code> <strong>elements</strong></p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;file&gt;</code></p></td>
+               <p><code>&lt;file&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>The file, or directory, to add</p></td>
+               <p>The file, or directory, to add</p>
+              </td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;todir&gt;</code></p></td>
+               <p><code>&lt;todir&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>The target directory, relative to configuration home, where the file should be copied</p></td>
+               <p>The target directory, relative to configuration home, where the file should be copied</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>If not specified, the file will be copied to the configuration's home directory</p></td>
+               <p>If not specified, the file will be copied to the configuration's home directory</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;tofile&gt;</code></p></td>
+               <p><code>&lt;tofile&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>The target file name to use</p></td>
+               <p>The target file name to use</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>The original file name</p></td>
+               <p>The original file name</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;configfile&gt;</code></p></td>
+               <p><code>&lt;configfile&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>Indicates if Cargo token replacement should be applied (<code>true</code>) when copying. Do not use this option on a non-ascii file as it will corrupt it!</p></td>
+               <p>Indicates if Cargo token replacement should be applied (<code>true</code>) when copying. Do not use this option on a non-ascii file as it will corrupt it!</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p><code>false</code></p></td>
+               <p><code>false</code></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;overwrite&gt;</code></p></td>
+               <p><code>&lt;overwrite&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>If any existing file should be overwritten or not</p></td>
+               <p>If any existing file should be overwritten or not</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p><code>true</code></p></td>
+               <p><code>true</code></p>
+              </td>
              </tr>
             </tbody>
            </table>
@@ -700,63 +849,87 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><code><strong>&lt;deployable&gt;</strong></code> <strong>elements</strong></p></th>
+               <p><code><strong>&lt;deployable&gt;</strong></code> <strong>elements</strong></p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;type&gt;</code></p></td>
+               <p><code>&lt;type&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>Deployable type, i.e. <code>war</code>, <code>ear</code>, <code>ejb</code>, etc.</p></td>
+               <p>Deployable type, i.e. <code>war</code>, <code>ear</code>, <code>ejb</code>, etc.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;file&gt;</code></p></td>
+               <p><code>&lt;file&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>The deployable file.</p></td>
+               <p>The deployable file.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;pingURL&gt;</code></p></td>
+               <p><code>&lt;pingURL&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>URL on which to ping the deployed or undeployed application (to check if deployment or undeployment is successful), that should return an HTTP OK response only after the deployment is complete. If not set, the deployed or undeployed application will not be pinged, hence the deployment considered as complete as soon as the target server's method returns successfully.</p></td>
+               <p>URL on which to ping the deployed or undeployed application (to check if deployment or undeployment is successful), that should return an HTTP OK response only after the deployment is complete. If not set, the deployed or undeployed application will not be pinged, hence the deployment considered as complete as soon as the target server's method returns successfully.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;pingTimeout&gt;</code></p></td>
+               <p><code>&lt;pingTimeout&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>If <code>&lt;pingURL&gt;</code> is set, the number of milliseconds after which the ping fails the build if still not successful.</p></td>
+               <p>If <code>&lt;pingURL&gt;</code> is set, the number of milliseconds after which the ping fails the build if still not successful.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p><code>20000</code> (i.e., <code>20</code> seconds)</p></td>
+               <p><code>20000</code> (i.e., <code>20</code> seconds)</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-prop2">&lt;properties&gt;</a></code></p></td>
+               <p><code><a href="#AntTasksReferenceGuide-prop2">&lt;properties&gt;</a></code></p>
+              </td>
               <td class="confluenceTd">
-               <p>User-defined properties of a deployable.</p></td>
+               <p>User-defined properties of a deployable.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
             </tbody>
            </table>
@@ -774,81 +947,122 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><code><strong>&lt;properties&gt;</strong></code> <strong>elements</strong></p></th>
+               <p><code><strong>&lt;properties&gt;</strong></code> <strong>elements</strong></p>
+              </th>
               <th class="confluenceTh">
-               <p>&nbsp;Deployable Type</p></th>
+               <p>&nbsp;Deployable Type</p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;context&gt;</code></p></td>
+               <p><code>&lt;context&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>WAR</p></td>
+               <p>WAR</p>
+              </td>
               <td class="confluenceTd">
-               <p>The context name to use when deploying the web application.</p></td>
+               <p>The context name to use when deploying the web application.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>Default's to the file name without the extension<code><br></code></p></td>
+               <p>Default's to the file name without the extension<code>
+                 <br>
+                </code></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;war&gt;</code></p></td>
+               <p><code>&lt;war&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>WAR</p></td>
+               <p>WAR</p>
+              </td>
               <td class="confluenceTd">
-               <p>The path of the WAR being deployed.</p></td>
+               <p>The path of the WAR being deployed.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>Default's to the file name without the extension<code><br></code></p></td>
+               <p>Default's to the file name without the extension<code>
+                 <br>
+                </code></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;ear&gt;</code></p></td>
+               <p><code>&lt;ear&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>EAR</p></td>
+               <p>EAR</p>
+              </td>
               <td class="confluenceTd">
-               <p>The path of the EAR being deployed.</p></td>
+               <p>The path of the EAR being deployed.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>Default's to the file name without the extension<code><br></code></p></td>
+               <p>Default's to the file name without the extension<code>
+                 <br>
+                </code></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;name&gt;</code></p></td>
+               <p><code>&lt;name&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>EAR</p></td>
+               <p>EAR</p>
+              </td>
               <td class="confluenceTd">
-               <p>The name of EAR deployable (it can be anything, there's no special rule).</p></td>
+               <p>The name of EAR deployable (it can be anything, there's no special rule).</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>Default's to the file name without the extension<code><br></code></p></td>
+               <p>Default's to the file name without the extension<code>
+                 <br>
+                </code></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;ejb&gt;</code></p></td>
+               <p><code>&lt;ejb&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>EJB</p></td>
+               <p>EJB</p>
+              </td>
               <td class="confluenceTd">
-               <p>The path of the EJB being deployed.</p></td>
+               <p>The path of the EJB being deployed.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>Default's to the file name without the extension<code><br></code></p></td>
+               <p>Default's to the file name without the extension<code>
+                 <br>
+                </code></p>
+              </td>
              </tr>
             </tbody>
            </table>
           </div>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">About WAR contexts</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">About WAR contexts</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>Many containers have their specific files for redefining context roots (Tomcat has <code>context.xml</code>, JBoss has <code>jboss-web.xml</code>, etc.). If your WAR has such a file, the server will most probably use the context root defined in that file instead of the one you specify using the CARGO deployer.</p>
            </div>
@@ -865,53 +1079,73 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><code><strong>&lt;zipUrlInstaller&gt;</strong></code> <strong>elements</strong></p></th>
+               <p><code><strong>&lt;zipUrlInstaller&gt;</strong></code> <strong>elements</strong></p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;url&gt;</code></p></td>
+               <p><code>&lt;url&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>URL from which to download the container's ZIP or TAR.GZ file.</p></td>
+               <p>URL from which to download the container's ZIP or TAR.GZ file.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;downloadDir&gt;</code></p></td>
+               <p><code>&lt;downloadDir&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>Directory in which the <code>zipUrlInstaller</code> should download the container's ZIP or TAR.GZ file.</p></td>
+               <p>Directory in which the <code>zipUrlInstaller</code> should download the container's ZIP or TAR.GZ file.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p><code>${java.<wbr>io.<wbr>tmpdir}/cargo/installs</code></p></td>
+               <p><code>${java.<wbr>io.<wbr>tmpdir}/cargo/installs</code></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;extractDir&gt;</code></p></td>
+               <p><code>&lt;extractDir&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>Directory in which the <code>zipUrlInstaller</code> should extract the container's ZIP or TAR.GZ file.</p></td>
+               <p>Directory in which the <code>zipUrlInstaller</code> should extract the container's ZIP or TAR.GZ file.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p><code>${project.<wbr>build.<wbr>directory}/cargo/installs</code></p></td>
+               <p><code>${project.<wbr>build.<wbr>directory}/cargo/installs</code></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-proxy">&lt;proxy&gt;</a></code></p></td>
+               <p><code><a href="#AntTasksReferenceGuide-proxy">&lt;proxy&gt;</a></code></p>
+              </td>
               <td class="confluenceTd">
-               <p>Proxy server settings, if required.</p></td>
+               <p>Proxy server settings, if required.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
             </tbody>
            </table>
@@ -928,53 +1162,73 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><code><strong>&lt;proxy&gt;</strong></code> <strong>elements</strong> (under the <code>zipUrlInstaller</code> element)</p></th>
+               <p><code><strong>&lt;proxy&gt;</strong></code> <strong>elements</strong> (under the <code>zipUrlInstaller</code> element)</p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;host&gt;</code></p></td>
+               <p><code>&lt;host&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>Proxy host name or IP address.</p></td>
+               <p>Proxy host name or IP address.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;port&gt;</code></p></td>
+               <p><code>&lt;port&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>Proxy port.</p></td>
+               <p>Proxy port.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>Very probably <code>80</code></p></td>
+               <p>Very probably <code>80</code></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;user&gt;</code></p></td>
+               <p><code>&lt;user&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>User name to connect to the proxy server.</p></td>
+               <p>User name to connect to the proxy server.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;password&gt;</code></p></td>
+               <p><code>&lt;password&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>Password to connect to the proxy server.</p></td>
+               <p>Password to connect to the proxy server.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
             </tbody>
            </table>
@@ -999,14 +1253,16 @@
               <td class="confluenceTd"><code>&lt;name&gt;</code></td>
               <td class="confluenceTd">User name.</td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">No default</td>
              </tr>
              <tr>
               <td class="confluenceTd"><code>&lt;password&gt;</code></td>
               <td class="confluenceTd">User password.</td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">No default</td>
              </tr>
              <tr>
@@ -1022,9 +1278,11 @@
 &lt;/roles&gt;</pre>
                  </div>
                 </div>
-               </div></td>
+               </div>
+              </td>
               <td colspan="1" class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
             </tbody>
@@ -1050,63 +1308,72 @@
               <td class="confluenceTd"><code>&lt;jndiName&gt;</code></td>
               <td class="confluenceTd">JNDI name where to find this DataSource.</td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">No default</td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;connectionType&gt;</code></td>
               <td colspan="1" class="confluenceTd">Type of this DataSource, for example: <code>javax.<wbr>sql.<wbr>XADataSource</code></td>
               <td colspan="1" class="confluenceTd">
-               <p><span class="confluence-embedded-file-wrapper">👎</span></p></td>
+               <p><span class="confluence-embedded-file-wrapper">👎</span></p>
+              </td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;transactionSupport&gt;</code></td>
               <td colspan="1" class="confluenceTd">Transaction support of the DataSource, for example: <code>XA_TRANSACTION</code></td>
               <td colspan="1" class="confluenceTd">
-               <p><span class="confluence-embedded-file-wrapper">👎</span></p></td>
+               <p><span class="confluence-embedded-file-wrapper">👎</span></p>
+              </td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;driverClass&gt;</code></td>
               <td colspan="1" class="confluenceTd">The class name of the driver, for example: <code>org.<wbr>hsqldb.<wbr>jdbcDriver</code></td>
               <td colspan="1" class="confluenceTd">
-               <p><span class="confluence-embedded-file-wrapper">👎</span></p></td>
+               <p><span class="confluence-embedded-file-wrapper">👎</span></p>
+              </td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;url&gt;</code></td>
               <td colspan="1" class="confluenceTd">DataSource connection URL.</td>
               <td colspan="1" class="confluenceTd">
-               <p><span class="confluence-embedded-file-wrapper">👎</span></p></td>
+               <p><span class="confluence-embedded-file-wrapper">👎</span></p>
+              </td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;username&gt;</code></td>
               <td colspan="1" class="confluenceTd">DataSource username.</td>
               <td colspan="1" class="confluenceTd">
-               <p><span class="confluence-embedded-file-wrapper">👎</span></p></td>
+               <p><span class="confluence-embedded-file-wrapper">👎</span></p>
+              </td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;password&gt;</code></td>
               <td colspan="1" class="confluenceTd">DataSource password.</td>
               <td colspan="1" class="confluenceTd">
-               <p><span class="confluence-embedded-file-wrapper">👎</span></p></td>
+               <p><span class="confluence-embedded-file-wrapper">👎</span></p>
+              </td>
               <td colspan="1" class="confluenceTd"><em>Empty string</em></td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;id&gt;</code></td>
               <td colspan="1" class="confluenceTd">Identifier used in configuration files.</td>
               <td colspan="1" class="confluenceTd">
-               <p><span class="confluence-embedded-file-wrapper">👎</span></p></td>
+               <p><span class="confluence-embedded-file-wrapper">👎</span></p>
+              </td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;connectionProperties&gt;</code></td>
               <td colspan="1" class="confluenceTd">Extra properties passed to the DataSource.</td>
               <td colspan="1" class="confluenceTd">
-               <p><span class="confluence-embedded-file-wrapper">👎</span></p></td>
+               <p><span class="confluence-embedded-file-wrapper">👎</span></p>
+              </td>
               <td colspan="1" class="confluenceTd">No default</td>
              </tr>
             </tbody>
@@ -1116,7 +1383,8 @@
           <h1 id="AntTasksReferenceGuide-Daemonconfiguration">Daemon configuration</h1>
           <p>The Cargo Daemon is a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine. The daemon is meant to be listening 24/7, to allow users to deploy new containers and web applications at their command. For more information, please read: <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">Container configuration for the Daemon</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <p class="title">Container configuration for the Daemon</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
             <p>For the Ant tasks, the "daemonized server" is actually a <a href="Local+Container.html">local container</a> with a <a href="Configuration+properties.html">hostname</a> that points to a remote machine. This implies that:</p>
             <ul>
@@ -1125,14 +1393,16 @@
             </ul>
             <p>When you call <code>daemon-start</code>, the Ant tasks will do the following:</p>
             <ul>
-             <li>If an <a href="Installer.html">installer</a> is defined:<br>
+             <li>If an <a href="Installer.html">installer</a> is defined:
+              <br>
               <ul>
                <li>Download the archive locally</li>
                <li>Send the archive over to the machine running the Daemon</li>
                <li>Instruct the Daemon to extract the archive</li>
               </ul></li>
              <li>If a <a href="Standalone+Local+Configuration.html">standalone local configuration</a> is defined, instruct the Daemon to create it</li>
-             <li>In all cases:<br>
+             <li>In all cases:
+              <br>
               <ul>
                <li>Send the <a href="Configuration+files+option.html">configuration files</a> and <a href="Deployable.html">deployables</a> to the machine running the Daemon</li>
                <li>Instruct the Daemon to deploy them</li>
@@ -1146,33 +1416,45 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><code>&lt;daemon&gt;</code> <strong>elements</strong></p></th>
+               <p><code>&lt;daemon&gt;</code> <strong>elements</strong></p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;classpaths&gt;</code></p></td>
+               <p><code>&lt;classpaths&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>A list of <code>&lt;classpath&gt;<wbr>myclasspath<wbr>&lt;/classpath&gt;</code> items, that will be added by the JVM launcher when starting a container.</p></td>
+               <p>A list of <code>&lt;classpath&gt;<wbr>myclasspath<wbr>&lt;/classpath&gt;</code> items, that will be added by the JVM launcher when starting a container.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;properties&gt;</code></p></td>
+               <p><code>&lt;properties&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>A list of properties used to configure the <a href="Cargo+Daemon.html">Cargo Daemon</a><span>.</span></p></td>
+               <p>A list of properties used to configure the <a href="Cargo+Daemon.html">Cargo Daemon</a><span>.</span></p>
+              </td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
             </tbody>
            </table>
@@ -1188,43 +1470,59 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p><code>&lt;properties&gt;</code> <strong>elements</strong></p></th>
+               <p><code>&lt;properties&gt;</code> <strong>elements</strong></p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;cargo.<wbr>daemon.<wbr>url&gt;</code></p></td>
+               <p><code>&lt;cargo.<wbr>daemon.<wbr>url&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>URL to connect with the daemon.</p></td>
+               <p>URL to connect with the daemon.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;cargo.<wbr>daemon.<wbr>handleid&gt;</code></p></td>
+               <p><code>&lt;cargo.<wbr>daemon.<wbr>handleid&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>The handle id to register this container with.</p></td>
+               <p>The handle id to register this container with.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👍</p></td>
+               <p>👍</p>
+              </td>
               <td class="confluenceTd">
-               <p>No default</p></td>
+               <p>No default</p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>&lt;cargo.<wbr>daemon.<wbr>autostart&gt;</code></p></td>
+               <p><code>&lt;cargo.<wbr>daemon.<wbr>autostart&gt;</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>When set to <code>true</code>, the dameon will automatically restart the container if the daemon notices it is stopped.</p></td>
+               <p>When set to <code>true</code>, the dameon will automatically restart the container if the daemon notices it is stopped.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p><code>false</code></p></td>
+               <p><code>false</code></p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>&lt;cargo.<wbr>daemon.<wbr>username&gt;</code></td>
@@ -1240,10 +1538,12 @@
              </tr>
             </tbody>
            </table>
-          </div></td>
+          </div>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -1251,12 +1551,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

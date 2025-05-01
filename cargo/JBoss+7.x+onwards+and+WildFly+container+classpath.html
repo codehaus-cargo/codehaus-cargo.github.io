@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - JBoss 7.x onwards and WildFly container classpath</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - JBoss 7.x onwards and WildFly container classpath</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Container.html">Container</a> &gt; <a href="Local+Container.html">Local Container</a> &gt; <a href="Container+Classpath.html">Container Classpath</a> &gt; JBoss 7.x onwards and WildFly container classpath</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -278,20 +288,25 @@
           <h3 id="JBoss7.xonwardsandWildFlycontainerclasspath-HowthecontainerclasspathisaddedtotheJBoss/WildFlycontainer">How the container classpath is added to the JBoss / WildFly container</h3>
           <p>In order to add the <a href="Container+Classpath.html">container classpath</a> to the JBoss / WildFly container, Codehaus Cargo takes the below steps:</p>
           <ol>
-           <li>The JAR files which are in the <a href="Container+Classpath.html">container classpath</a> are copied in the <code>modules/org/codehaus/cargo/classpath</code> subdirectory of the container home<br><strong>Attention</strong>: The JAR files are copied in the container home, and not into the configuration home. Hence, the JBoss / WildFly container's binaries are actually modified ad vidam eternam (until you manually clean it up).</li>
+           <li>The JAR files which are in the <a href="Container+Classpath.html">container classpath</a> are copied in the <code>modules/org/codehaus/cargo/classpath</code> subdirectory of the container home
+            <br>
+            <strong>Attention</strong>: The JAR files are copied in the container home, and not into the configuration home. Hence, the JBoss / WildFly container's binaries are actually modified ad vidam eternam (until you manually clean it up).</li>
            <li>For each JAR file, a <code>module.xml</code> file is created with the below rule for dependencies:
             <ol>
              <li>The first JAR file has dependencies <code>javax.api</code> and <code>javax.transaction.api</code></li>
-             <li>The second JAR has dependencies <code>javax.api</code>, <code>javax.transaction.api</code> and the first JAR<br>
+             <li>The second JAR has dependencies <code>javax.api</code>, <code>javax.transaction.api</code> and the first JAR
+              <br>
               ... and so on</li>
             </ol></li>
           </ol>
           <h3 id="JBoss7.xonwardsandWildFlycontainerclasspath-Modificationintheapplications">Modification in the applications</h3>
           <p>During deployment,&nbsp;Codehaus Cargo will edit your deployables' <code>META-INF/MANIFEST.MF</code> file in order to add the property <code>Dependencies</code> with all the JARs in the container classpath.</p>
-          <p>As per the logic followed to add these into the JBoss / WildFly container's classpath, these dependencies all start with the prefix <code>org.codehaus.cargo.classpath.</code></p></td>
+          <p>As per the logic followed to add these into the JBoss / WildFly container's classpath, these dependencies all start with the prefix <code>org.codehaus.cargo.classpath.</code></p>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -299,12 +314,14 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>

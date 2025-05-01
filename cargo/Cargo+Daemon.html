@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - Cargo Daemon</title><!-- Global site tag (gtag.js) - Google Analytics -->
+  <title>Codehaus Cargo - Cargo Daemon</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,7 +31,8 @@
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
     <tr valign="top">
      <td id="cargo-navigation" class="leftColumn" valign="top" style="padding-top:0px">
@@ -180,7 +182,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebLogic<br>
+       <li>WebLogic
+        <br>
         <ul class="alternate">
          <li><a href="WebLogic+8.x.html">WebLogic 8.x</a></li>
          <li><a href="WebLogic+9.x.html">WebLogic 9.x</a></li>
@@ -193,7 +196,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WebSphere<br>
+       <li>WebSphere
+        <br>
         <ul class="alternate">
          <li><a href="WebSphere+8.5.x.html">WebSphere 8.5.x</a></li>
          <li><a href="WebSphere+9.x.html">WebSphere 9.x</a></li>
@@ -201,7 +205,8 @@
         </ul></li>
       </ul>
       <ul class="alternate">
-       <li>WildFly<br>
+       <li>WildFly
+        <br>
         <ul class="alternate">
          <li><a href="WildFly+8.x.html">WildFly 8.x</a></li>
          <li><a href="WildFly+9.x.html">WildFly 9.x</a></li>
@@ -252,9 +257,12 @@
          <li><a href="Cargo+Code+Style.html">Code style</a></li>
          <li><a href="Adding+a+container.html">Adding a container</a></li>
         </ul></li>
-       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a><br><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
+       <li><a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous integration</a>
+        <br>
+        <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo"><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" id="ci-status-image" src="https://codehaus-cargo.semaphoreci.com/badges/cargo/branches/master.svg?style=shields" loading="lazy"></span></a></li>
        <li><a href="Release+procedure.html">Release procedure</a></li>
-      </ul></td>
+      </ul>
+     </td>
      <td id="cargo-content" style="padding:0px">
       <table style="border-collapse:collapse;width:100%;height:100%">
        <tbody>
@@ -266,11 +274,13 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; Cargo Daemon</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
-              </form></td>
+               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+              </form>
+             </td>
             </tr>
            </tbody>
-          </table></td>
+          </table>
+         </td>
         </tr>
         <tr valign="top">
          <td class="rightColumn">
@@ -281,9 +291,12 @@
           <h1 id="CargoDaemon-WhyusetheCargoDaemon?">Why use the Cargo Daemon?</h1>
           <p>Most web containers (e.g. Tomcat, Jetty) provide built-in remote deployment facilities already, also many of them already have daemon integrations; so why use the Cargo Daemon?</p>
           <ul>
-           <li><strong>During intense redeployment</strong> (i.e., testing and even sometimes QA or production hot deployments): All of the remote deployment facilities that keep the JVM alive will eventually suffer from the dreaded <code>java.lang.OutOfMemoryError: PermGen space</code> exception if something in the web application is leaking memory.<br>
-            Most web containers try their best to track down these 'dead' objects and forcefully remove them, but it does not always succeed to reclaim the memory. With a leaking web application, the available memory starts to shrink after each redeploy, and eventually the memory is exhausted.<br>
-            The only solution to this is to kill the JVM, and restart it. And that is exactly what the Cargo Daemon tries to manage. It will try to shutdown the web application cleanly, but if that fails it will forcefully kill the JVM.<br>
+           <li><strong>During intense redeployment</strong> (i.e., testing and even sometimes QA or production hot deployments): All of the remote deployment facilities that keep the JVM alive will eventually suffer from the dreaded <code>java.lang.OutOfMemoryError: PermGen space</code> exception if something in the web application is leaking memory.
+            <br>
+            Most web containers try their best to track down these 'dead' objects and forcefully remove them, but it does not always succeed to reclaim the memory. With a leaking web application, the available memory starts to shrink after each redeploy, and eventually the memory is exhausted.
+            <br>
+            The only solution to this is to kill the JVM, and restart it. And that is exactly what the Cargo Daemon tries to manage. It will try to shutdown the web application cleanly, but if that fails it will forcefully kill the JVM.
+            <br>
             It is the only way to guarantee that a new version of your web application always starts when you want it to.</li>
            <li><strong>In heterogeneous environments</strong>: With Cargo, the way you configure the container is independent from the underlying server: you can set the different <a href="Configuration+properties.html">configuration properties</a>, define <a href="DataSource+and+Resource+Support.html">datasources</a>, add <a href="Deployer.html">deployables</a>, etc. transparently. You can therefore use the Cargo Daemon as a container-independent daemon, with support for the generation of the proper configuration on all supported containers.</li>
            <li><strong>During upgrades and/or application server product evaluations</strong>: As Cargo is not dependent on the application server nor on its version, you can easily reuse an existing Cargo Daemon setup to use it for another version of a container, or another container altogether; without having to worry about understanding how to configure it.</li>
@@ -315,7 +328,9 @@
           </div>
           <p>Additionally, Cargo Daemon will save log files in the cargo home directory unless&nbsp;the <code>-nologging</code>&nbsp;option is used.</p>
           <p><span style="font-size: 10.0pt;line-height: 13.0pt;">Note that the Cargo Daemon is a WAR file; you can actually also deploy it as a WAR on any existing container. This can be useful if you want to, for example, reuse a certain security configuration.</span></p>
-          <p><br></p>
+          <p>
+           <br>
+          </p>
           <p>The daemon also accepts other parameters, in the form of system properties:</p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
@@ -328,35 +343,47 @@
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p>Property name</p></th>
+               <p>Property name</p>
+              </th>
               <th class="confluenceTh">
-               <p>Description</p></th>
+               <p>Description</p>
+              </th>
               <th class="confluenceTh">
-               <p>Mandatory?</p></th>
+               <p>Mandatory?</p>
+              </th>
               <th class="confluenceTh">
-               <p>Default value</p></th>
+               <p>Default value</p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>daemon.<wbr>home</code></p></td>
+               <p><code>daemon.<wbr>home</code></p>
+              </td>
               <td class="confluenceTd">
                <p>Directory in which the standalone daemon server stores its files. These include the temporary files (such as its own WAR and server temporary files) as well as the server log files (<code>AWS-xxxxxxxxxxxxx.<wbr>log</code>, where <code>xxxxxxxxxxxxx</code> is the timestamp at which the deamon was started).</p>
-               <p>This property is not used and completely ignored if the daemon WAR file is deployed on an existing container.</p></td>
+               <p>This property is not used and completely ignored if the daemon WAR file is deployed on an existing container.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
-               <p><code>${user.<wbr>home}/.<wbr>cargo</code></p></td>
+               <p><code>${user.<wbr>home}/.<wbr>cargo</code></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code>cargo.<wbr>home</code></p></td>
+               <p><code>cargo.<wbr>home</code></p>
+              </td>
               <td class="confluenceTd">
-               <p>Directory in which the daemon (be it standalone or deployed on an existing container) stores the list of containers, downloaded container archives, container logs, etc.</p></td>
+               <p>Directory in which the daemon (be it standalone or deployed on an existing container) stores the list of containers, downloaded container archives, container logs, etc.</p>
+              </td>
               <td class="confluenceTd">
-               <p>👎</p></td>
+               <p>👎</p>
+              </td>
               <td class="confluenceTd">
                <p><code>${user.<wbr>home}/.<wbr>cargo</code></p>
-               <p>Note that the standalone daemon by default sets this to <code>${daemon.<wbr>home}</code></p></td>
+               <p>Note that the standalone daemon by default sets this to <code>${daemon.<wbr>home}</code></p>
+              </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd"><code>cargo.<wbr>daemon.<wbr>passwordFile</code></td>
@@ -387,7 +414,8 @@ cargo-daemon-user3={SHA-1}2681c738294805939045be2a4af53b687c25bf4d</pre>
                  </div>
                 </div>
                 <p><strong>Note</strong>: This functionality is <a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1618">new with Cargo Daemon version 1.10.11</a>.</p>
-               </div></td>
+               </div>
+              </td>
               <td colspan="1" class="confluenceTd">👎</td>
               <td colspan="1" class="confluenceTd">N/A</td>
              </tr>
@@ -398,8 +426,18 @@ cargo-daemon-user3={SHA-1}2681c738294805939045be2a4af53b687c25bf4d</pre>
           <h1 id="CargoDaemon-GettingstartedusingthebrowserUI">Getting started using the browser UI</h1>
           <p>To use the Cargo Daemon via the browser UI, simply open <code>http://&lt;machine&gt;:&lt;port&gt;/</code> -where <code>&lt;machine&gt;</code> is the machine host name or IP address and <code>&lt;port&gt;</code> is the port number used (default is <code>18000</code>):</p>
           <ul>
-           <li>To start a container, fill in the form and press <strong>Start</strong>:<br><br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" loading="lazy" src="attachments/Container%20options.png"></span><br><br><strong>Note</strong>: The <strong>start</strong> button is actually equivalent to a <strong>restart</strong> in Cargo's terms, i.e. in the case a container with the same <code>handle id</code> already exists then it will be stopped first before your container is started. This also implies that in case the new container fails to start, the old one will <u>not</u> be restarted.<br><br></li>
-           <li>To <strong>stop</strong>, <strong>restart</strong>, <strong>delete</strong> or <strong>view logs</strong> of a container, use the actions on the containers list:<br><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" loading="lazy" src="attachments/Container%20actions.png"></span></li>
+           <li>To start a container, fill in the form and press <strong>Start</strong>:
+            <br>
+            <br>
+            <span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" loading="lazy" src="attachments/Container%20options.png"></span>
+            <br>
+            <br>
+            <strong>Note</strong>: The <strong>start</strong> button is actually equivalent to a <strong>restart</strong> in Cargo's terms, i.e. in the case a container with the same <code>handle id</code> already exists then it will be stopped first before your container is started. This also implies that in case the new container fails to start, the old one will <u>not</u> be restarted.
+            <br>
+            <br></li>
+           <li>To <strong>stop</strong>, <strong>restart</strong>, <strong>delete</strong> or <strong>view logs</strong> of a container, use the actions on the containers list:
+            <br>
+            <span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" confluence-query-params="effects=drop-shadow" loading="lazy" src="attachments/Container%20actions.png"></span></li>
            <li>The Cargo Daemon keeps a persistent record on disk of all the containers that have been submitted. Containers that have been submitted will stay in the list, even when they are stopped. This allows you to manually restart them, or view the logs even after the container is stopped.</li>
            <li>If you want the container to be removed from the list, simply press the <strong>delete</strong> button.</li>
            <li>Containers can also be submitted with the <code>autostart</code> property, this will automatically restart the container if the daemon notices it is stopped.</li>
@@ -410,7 +448,9 @@ cargo-daemon-user3={SHA-1}2681c738294805939045be2a4af53b687c25bf4d</pre>
           <ul>
            <li>The details of the Java API can be seen on the <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/tools/daemon/DaemonClient.html">Javadoc for o.c.c.tools.daemon.DaemonClient</a></li>
            <li>
-            <p>To use the Daemon via Ant tasks, simply add the <code><a href="Ant+Tasks+Reference+Guide.html#AntTasksReferenceGuide-daemon">&lt;daemon&gt;</a></code> tag in the task and use the <strong>daemon-start</strong> or <strong>daemon-stop</strong> tasks:<br><br></p>
+            <p>To use the Daemon via Ant tasks, simply add the <code><a href="Ant+Tasks+Reference+Guide.html#AntTasksReferenceGuide-daemon">&lt;daemon&gt;</a></code> tag in the task and use the <strong>daemon-start</strong> or <strong>daemon-stop</strong> tasks:
+             <br>
+             <br></p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">&lt;cargo containerId="tomcat7x" action="daemon-start"&gt;
@@ -431,12 +471,17 @@ cargo-daemon-user3={SHA-1}2681c738294805939045be2a4af53b687c25bf4d</pre>
 &lt;/cargo&gt;
 </pre>
              </div>
-            </div></li>
-           <li class="confluence-link">The details of the configuration for the Maven 3 plugin is documented in the <span class="confluence-link"><br></span><a href="Maven+3+Plugin+Reference+Guide.html#Maven3PluginReferenceGuide-daemon"><span class="confluence-link">Daemon configuration section of the Maven 3 plugin reference guide</span></a> and the example can be seen via the <a href="Maven+3+Archetypes.html#Maven3Archetypes-daemon"><span class="confluence-link"><span class="confluence-link"><span class="confluence-link">Daemon archetype</span></span></span></a>.</li>
-          </ul></td>
+            </div>
+           </li>
+           <li class="confluence-link">The details of the configuration for the Maven 3 plugin is documented in the <span class="confluence-link">
+             <br>
+            </span><a href="Maven+3+Plugin+Reference+Guide.html#Maven3PluginReferenceGuide-daemon"><span class="confluence-link">Daemon configuration section of the Maven 3 plugin reference guide</span></a> and the example can be seen via the <a href="Maven+3+Archetypes.html#Maven3Archetypes-daemon"><span class="confluence-link"><span class="confluence-link"><span class="confluence-link">Daemon archetype</span></span></span></a>.</li>
+          </ul>
+         </td>
         </tr>
        </tbody>
-      </table></td>
+      </table>
+     </td>
     </tr>
     <tr height="23">
      <td colspan="2" style="padding:0px">
@@ -444,12 +489,14 @@ cargo-daemon-user3={SHA-1}2681c738294805939045be2a4af53b687c25bf4d</pre>
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.<br></td>
+          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+           <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
         </tbody>
        </table>
-      </div></td>
+      </div>
+     </td>
     </tr>
    </tbody>
   </table>
