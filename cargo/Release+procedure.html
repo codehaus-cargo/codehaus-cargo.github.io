@@ -289,20 +289,20 @@
            <li>Maven 3.6.3 or newer, though it is for sure a good idea to use the latest Maven version available.
             <br>
             With Maven 3.8.1 onwards, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="Building.html#Building-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
-           <li>An access to the Sonatype Nexus instance as a manager for the Codehaus Cargo project. Read more about it on the&nbsp;<strong>Initial Setup</strong> section of the <a href="http://central.sonatype.org/pages/ossrh-guide.html">OSSRH guide</a>.</li>
+           <li>An access to the Sonatype Maven Central as a manager for the Codehaus Cargo project.</li>
            <li><a href="http://www.gnupg.org/">The GNU privacy guard (GPG)</a> installed on your machine and at least one secret key.
             <ul>
              <li>The secret key's public part must have been uploaded to the <a href="http://pgp.mit.edu/">MIT PGP Public Key Server</a>.</li>
             </ul></li>
            <li>
-            <p>Your&nbsp;Sonatype Nexus credentials provided using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
+            <p>Your Sonatype Maven Central token provided using your <code>settings.xml</code> file (in the <code>${user.home}/.m2/</code> directory). Here's an example <code>settings.xml</code>:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
               <pre class="syntaxhighlighter-pre">&lt;settings&gt;
   [...]
   &lt;servers&gt;
     &lt;server&gt;
-      &lt;id&gt;ossrh&lt;/id&gt;
+      &lt;id&gt;central&lt;/id&gt;
       &lt;username&gt;USERNAME&lt;/username&gt;
       &lt;password&gt;PASSWORD&lt;/password&gt;
     &lt;/server&gt;
@@ -378,7 +378,7 @@
                 <u>Note</u>: The source file (that you need to&nbsp;import using the&nbsp;<strong>Insert</strong> -&gt;&nbsp;<strong>Wiki markup</strong> option manually) is generated in <code>core/documentation/target/project-structure.log</code></li>
               </ul></li>
              <li>Modify the <a href="Home.html">Home</a> page to update the available version number, the release notes URL the checkbox is pointing to and the release date</li>
-             <li>Modify the&nbsp;<a href="Building.html">Building</a> and <a href="Maven+3+Plugin+Installation.html">Maven 3 Plugin Installation</a> pages to update the <code>SNAPSHOT</code> version</li>
+             <li>Modify the&nbsp;<a href="Building.html">Building</a> page to update the <code>SNAPSHOT</code> version</li>
              <li>Create a <a href="https://codehaus-cargo.atlassian.net/wiki/pages/createblogpost.action?spaceKey=CARGO">blog post</a></li>
              <li><a href="https://codehaus-cargo.atlassian.net/wiki/spaces/exportspacehtml.action?key=CARGO">Export the wiki to a zipped HTML file</a> (select all pages except for the <em>Downloads</em> (including all subsections) page) and add it the <a href="Downloads.html">Downloads</a> page</li>
              <li>Move the old version to the <a href="Archived+Downloads.html">Archived Downloads</a> page
