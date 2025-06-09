@@ -91,13 +91,19 @@ public class WebsiteGenerator implements Runnable
     /**
      * Whether the download attachments.
      */
-    private static boolean downloadAttachments =
+    private static final boolean downloadAttachments =
         Boolean.parseBoolean(System.getProperty("cargo.downloadAttachments", "true"));
 
     /**
      * Multi-thread executor for parallel downloads.
      */
-    private static final ScheduledThreadPoolExecutor CONTENT_DOWNLOADERS = new ScheduledThreadPoolExecutor(4);
+    private static final ScheduledThreadPoolExecutor CONTENT_DOWNLOADERS =
+        new ScheduledThreadPoolExecutor(4);
+
+    /**
+     * Number of retries to Atlassian Confluence APIs.
+     */
+    private static final int NUMBER_RETRIES = 20;
 
     /**
      * Download the content and parse (i.e., generate the "full" HTML content)
@@ -173,7 +179,8 @@ public class WebsiteGenerator implements Runnable
             new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/space/CARGO/content?limit=2048&expand=ancestors");
         URLConnection connection = url.openConnection();
         StringBuilder sb = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream())))
+        try (BufferedReader reader =
+            new BufferedReader(new InputStreamReader(connection.getInputStream())))
         {
             for (String line = reader.readLine(); line != null; line = reader.readLine())
             {
@@ -234,7 +241,8 @@ public class WebsiteGenerator implements Runnable
             }
         }
 
-        while (CONTENT_DOWNLOADERS.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
+        while (CONTENT_DOWNLOADERS.getCompletedTaskCount() <
+            pages.length() + blogposts.length() + attachments.size())
         {
             Thread.sleep(5000);
             System.out.println("  - Completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount() + "/"
@@ -243,12 +251,14 @@ public class WebsiteGenerator implements Runnable
                 + "download speed since last message has been " + (WebsiteGenerator.speed / 1024 / 5) + " KB/s");
             WebsiteGenerator.speed = 0;
         }
-        if (CONTENT_DOWNLOADERS.getCompletedTaskCount() < pages.length() + blogposts.length() + attachments.size())
+        if (CONTENT_DOWNLOADERS.getCompletedTaskCount() <
+            pages.length() + blogposts.length() + attachments.size())
         {
             throw new Exception("WARNING: Only completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount()
                 + " tasks out of " + (pages.length() + blogposts.length() + attachments.size()));
         }
-        System.out.println("All tasks complete, total downloaded: " + (WebsiteGenerator.size / 1024 / 1024) + " MB");
+        System.out.println(
+            "All tasks complete, total downloaded: " + (WebsiteGenerator.size / 1024 / 1024) + " MB");
         for (File page : WebsiteGenerator.pages)
         {
             System.out.println("  - Wrote file " + page.getAbsolutePath());
@@ -262,7 +272,8 @@ public class WebsiteGenerator implements Runnable
             throw new Exception("Some files have failed download");
         }
         writeFile(new File(tempDirectory, "pages.json"), pages.toString(4));
-        System.out.println("Export completed, total time taken " + ((System.currentTimeMillis() - start) / 1000) + " seconds");
+        System.out.println(
+            "Export completed, total time taken " + ((System.currentTimeMillis() - start) / 1000) + " seconds");
     }
 
     /**
@@ -434,7 +445,7 @@ public class WebsiteGenerator implements Runnable
         try
         {
             String value = "";
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < WebsiteGenerator.NUMBER_RETRIES; i++)
             {
                 URLConnection connection = url.openConnection();
                 try (InputStream is = connection.getInputStream())
@@ -470,7 +481,7 @@ public class WebsiteGenerator implements Runnable
                 }
                 catch (IOException e)
                 {
-                    if (i == 9)
+                    if (i == WebsiteGenerator.NUMBER_RETRIES - 1)
                     {
                         throw e;
                     }
