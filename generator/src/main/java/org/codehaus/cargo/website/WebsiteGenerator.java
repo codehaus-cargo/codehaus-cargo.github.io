@@ -91,7 +91,7 @@ public class WebsiteGenerator implements Runnable
     /**
      * Whether the download attachments.
      */
-    private static final boolean downloadAttachments =
+    private static final boolean DOWNLOAD_ATTACHMENTS =
         Boolean.parseBoolean(System.getProperty("cargo.downloadAttachments", "true"));
 
     /**
@@ -215,7 +215,7 @@ public class WebsiteGenerator implements Runnable
         }
         blogpostIdentifiers.put("476119041", "Configuring+HTTP+2+for+Tomcat+8.5+and+above");
 
-        if (downloadAttachments)
+        if (DOWNLOAD_ATTACHMENTS)
         {
             String[] banners = new String[]
             {
@@ -241,8 +241,8 @@ public class WebsiteGenerator implements Runnable
             }
         }
 
-        while (CONTENT_DOWNLOADERS.getCompletedTaskCount() <
-            pages.length() + blogposts.length() + attachments.size())
+        while (CONTENT_DOWNLOADERS.getCompletedTaskCount()
+            < pages.length() + blogposts.length() + attachments.size())
         {
             Thread.sleep(5000);
             System.out.println("  - Completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount() + "/"
@@ -251,8 +251,8 @@ public class WebsiteGenerator implements Runnable
                 + "download speed since last message has been " + (WebsiteGenerator.speed / 1024 / 5) + " KB/s");
             WebsiteGenerator.speed = 0;
         }
-        if (CONTENT_DOWNLOADERS.getCompletedTaskCount() <
-            pages.length() + blogposts.length() + attachments.size())
+        if (CONTENT_DOWNLOADERS.getCompletedTaskCount()
+            < pages.length() + blogposts.length() + attachments.size())
         {
             throw new Exception("WARNING: Only completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount()
                 + " tasks out of " + (pages.length() + blogposts.length() + attachments.size()));
@@ -553,7 +553,7 @@ public class WebsiteGenerator implements Runnable
                     {
                         attachment = "https://codehaus-cargo.atlassian.net" + attachment;
                     }
-                    if (downloadAttachments)
+                    if (DOWNLOAD_ATTACHMENTS)
                     {
                         URL attachmentUrl = new URL(attachment);
                         synchronized (attachments)
