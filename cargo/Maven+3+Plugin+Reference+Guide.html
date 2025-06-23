@@ -308,7 +308,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-configuration">&lt;configuration&gt;</a></code></p>
+               <p><code><a href="#configuration">&lt;configuration&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>Definition of a <a href="Configuration.html">Configuration</a></p>
@@ -322,7 +322,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-container">&lt;container&gt;</a></code></p>
+               <p><code><a href="#container">&lt;container&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>Definition of a <a href="Container.html">Container</a></p>
@@ -336,7 +336,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-deployer">&lt;deployer&gt;</a></code></p>
+               <p><code><a href="#deployer">&lt;deployer&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>Definition of a <a href="Deployer.html">Deployer</a></p>
@@ -350,7 +350,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-deployable">&lt;deployables&gt;</a></code></p>
+               <p><code><a href="#deployable">&lt;deployables&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>A list of <a href="Deployable.html">deployable</a>s that are going to be deployed in the container when it is started or when <code>cargo:deploy</code> / <code>cargo:undeploy</code> is called.</p>
@@ -359,12 +359,12 @@
                <p>👎</p>
               </td>
               <td class="confluenceTd">
-               <p>If the project's packaging is <code>war</code>, <code>ear</code> or <code>ejb</code>, the generated artifact is added automatically to the list of deployables to deploy. If you wish the generated artifact not to be added to the deployables list, just add an empty <code><a href="#Maven3PluginReferenceGuide-deployer">&lt;deployer/&gt;</a></code> element.</p>
+               <p>If the project's packaging is <code>war</code>, <code>ear</code> or <code>ejb</code>, the generated artifact is added automatically to the list of deployables to deploy. If you wish the generated artifact not to be added to the deployables list, just add an empty <code><a href="#deployer">&lt;deployer/&gt;</a></code> element.</p>
               </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-daemon">&lt;daemon&gt;</a></code></p>
+               <p><code><a href="#daemon">&lt;daemon&gt;</a></code></p>
               </td>
               <td colspan="1" class="confluenceTd">
                <p>Additional configuration that is used when deploying with the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
@@ -448,7 +448,7 @@
                <p><code><a href="Configuration+files+option.html">&lt;configfiles&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
-               <p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#Maven3PluginReferenceGuide-configfile">&lt;configfile&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p>
+               <p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#configfile">&lt;configfile&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p>
               </td>
               <td class="confluenceTd">
                <p>👎</p>
@@ -462,7 +462,7 @@
                <p><code><a href="Configuration+files+option.html">&lt;files&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
-               <p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#Maven3PluginReferenceGuide-file">&lt;file&gt;</a></code> element.</p>
+               <p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#file">&lt;file&gt;</a></code> element.</p>
               </td>
               <td class="confluenceTd">
                <p>👎</p>
@@ -525,7 +525,7 @@
 </pre>
                  </div>
                 </div>
-                <p>In addition to this, properties can also be set using the Maven 3 <code>settings.<wbr>xml</code> file. See the <a href="#Maven3PluginReferenceGuide-settingsXML">setting configuration options via the Maven settings.xml</a> section for details.</p>
+                <p>In addition to this, properties can also be set using the Maven 3 <code>settings.<wbr>xml</code> file. See the <a href="#settingsXML">setting configuration options via the Maven settings.xml</a> section for details.</p>
                </div>
               </td>
              </tr>
@@ -556,7 +556,7 @@
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><code><a href="#Maven3PluginReferenceGuide-user">&lt;users&gt;</a></code></td>
+              <td colspan="1" class="confluenceTd"><code><a href="#user">&lt;users&gt;</a></code></td>
               <td colspan="1" class="confluenceTd">List of users to be created in container configuration.</td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p>
@@ -566,7 +566,7 @@
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><code><a href="#Maven3PluginReferenceGuide-datasource">&lt;datasources&gt;</a></code></td>
+              <td colspan="1" class="confluenceTd"><code><a href="#datasource">&lt;datasources&gt;</a></code></td>
               <td colspan="1" class="confluenceTd">List of&nbsp;datasources to be created in container configuration.</td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p>
@@ -636,7 +636,7 @@
                <p>Container context key, which can be used for two purposes:</p>
                <ol>
                 <li>Start, stop, configure or deploy to the same Cargo container (together with its configuration) from different Maven artifacts.</li>
-                <li>Inject configuration properties via the Maven <code>settings.<wbr>xml</code> file, as explained in the <a href="#Maven3PluginReferenceGuide-settingsXML">setting configuration options via the Maven 3 settings.xml section</a>.</li>
+                <li>Inject configuration properties via the Maven <code>settings.<wbr>xml</code> file, as explained in the <a href="#settingsXML">setting configuration options via the Maven 3 settings.xml section</a>.</li>
                </ol>
               </td>
               <td colspan="1" class="confluenceTd">
@@ -649,7 +649,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-dependency">&lt;dependencies&gt;</a></code></p>
+               <p><code><a href="#dependency">&lt;dependencies&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>List of <a href="Container+Classpath.html">extra dependencies</a> or <a href="Application+Classpath.html">shared dependencies</a> that will be added to the container or applications execution classpath.</p>
@@ -666,14 +666,14 @@
                <p><code>&lt;home&gt;</code></p>
               </td>
               <td class="confluenceTd">
-               <p>Location where the container is installed. If specified in conjunction with the <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> or <code><a href="#Maven3PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element, it will override the home directory defined by the installer.</p>
+               <p>Location where the container is installed. If specified in conjunction with the <code><a href="#zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> or <code><a href="#artifactInstaller">&lt;artifactInstaller&gt;</a></code> element, it will override the home directory defined by the installer.</p>
               </td>
               <td class="confluenceTd">
                <p>👎</p>
               </td>
               <td class="confluenceTd">
                <p>No default</p>
-               <p>If the user has not defined any <code>home</code>, <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven3PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
+               <p>If the user has not defined any <code>home</code>, <code><a href="#zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
               </td>
              </tr>
              <tr>
@@ -766,7 +766,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p>
+               <p><code><a href="#zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a>.</p>
@@ -776,12 +776,12 @@
               </td>
               <td class="confluenceTd">
                <p>No default</p>
-               <p>If the user has not defined any <code>home</code>, <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven3PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
+               <p>If the user has not defined any <code>home</code>, <code><a href="#zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
               </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code></p>
+               <p><code><a href="#artifactInstaller">&lt;artifactInstaller&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>Defines the location of a container Maven 3 artifact that will be <a href="Installer.html">downloaded and installed</a>.</p>
@@ -791,7 +791,7 @@
               </td>
               <td class="confluenceTd">
                <p>No default</p>
-               <p>If the user has not defined any <code>home</code>, <code><a href="#Maven3PluginReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#Maven3PluginReferenceGuide-artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
+               <p>If the user has not defined any <code>home</code>, <code><a href="#zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> nor <code><a href="#artifactInstaller">&lt;artifactInstaller&gt;</a></code> element then the plugin will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
               </td>
              </tr>
             </tbody>
@@ -1141,7 +1141,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-prop2">&lt;properties&gt;</a></code></p>
+               <p><code><a href="#prop2">&lt;properties&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>User-defined properties of a deployable.</p>
@@ -1471,7 +1471,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#Maven3PluginReferenceGuide-proxy">&lt;proxy&gt;</a></code></p>
+               <p><code><a href="#proxy">&lt;proxy&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>Proxy server settings, if required.</p>
@@ -2079,7 +2079,7 @@
             <p>Priority for property values are as follows:</p>
             <ol>
              <li>First and highest priority (i.e., will always override all below): Properties set using environment variables</li>
-             <li>Second priority: Properties set in the <a href="#Maven3PluginReferenceGuide-configuration"><code>&lt;configuration&gt;</code></a> of the Maven 3 plugin (following <a href="https://maven.apache.org/guides/mini/guide-configuring-plugins.html#Configuring_Build_Plugins">Maven's own override rules for configurations set across parents, executions, etc.</a>)</li>
+             <li>Second priority: Properties set in the <a href="#configuration"><code>&lt;configuration&gt;</code></a> of the Maven 3 plugin (following <a href="https://maven.apache.org/guides/mini/guide-configuring-plugins.html#Configuring_Build_Plugins">Maven's own override rules for configurations set across parents, executions, etc.</a>)</li>
              <li>Third&nbsp;priority: Properties loaded from a file</li>
              <li>Fourth&nbsp;priority: Properties set in the POM</li>
              <li>Fifth&nbsp;priority: Properties that should be loaded using the <code>cargo.server.settings</code> option</li>

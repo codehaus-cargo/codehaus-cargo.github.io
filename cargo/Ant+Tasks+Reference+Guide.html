@@ -281,7 +281,7 @@
         </tr>
         <tr valign="top">
          <td class="rightColumn">
-          <p>These are the various XML configuration elements that you can use to configure the Cargo Ant tasks. Make sure you also check the <a href="Ant+support.html#Antsupport-Examples">examples</a> which show how to use them.</p>
+          <p>These are the various XML configuration elements that you can use to configure the Cargo Ant tasks. Make sure you also check the <a href="Ant+support.html#Examples">examples</a> which show how to use them.</p>
           <div class="table-wrap">
            <table class="wrapped confluenceTable">
             <colgroup>
@@ -355,19 +355,19 @@
                <p><code>&lt;home&gt;</code></p>
               </td>
               <td colspan="1" class="confluenceTd">
-               <p>Location where the container is installed. If specified in conjunction with the <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element, it will override the home directory defined by the installer</p>
+               <p>Location where the container is installed. If specified in conjunction with the <code><a href="#zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element, it will override the home directory defined by the installer</p>
               </td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p>
               </td>
               <td colspan="1" class="confluenceTd">
                <p>No default</p>
-               <p>If the user has not defined any <code>home</code> nor <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
+               <p>If the user has not defined any <code>home</code> nor <code><a href="#zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
               </td>
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p>
+               <p><code><a href="#zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code></p>
               </td>
               <td colspan="1" class="confluenceTd">
                <p>Defines the location of a container distribution zip that will be <a href="Installer.html">downloaded and installed</a></p>
@@ -377,7 +377,7 @@
               </td>
               <td colspan="1" class="confluenceTd">
                <p>No default</p>
-               <p>If the user has not defined any <code>home</code> nor <code><a href="#AntTasksReferenceGuide-zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
+               <p>If the user has not defined any <code>home</code> nor <code><a href="#zipUrlInstaller">&lt;zipUrlInstaller&gt;</a></code> element then the Ant task will automatically attempt to download the container using the URL used by its tests (see the <strong>Tested On</strong> section of <a href="Containers.html">each container</a>).</p>
               </td>
              </tr>
              <tr>
@@ -484,7 +484,7 @@
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-configuration">&lt;configuration&gt;</a></code></p>
+               <p><code><a href="#configuration">&lt;configuration&gt;</a></code></p>
               </td>
               <td colspan="1" class="confluenceTd">
                <p>Definition of a <a href="Configuration.html">Configuration</a></p>
@@ -498,7 +498,7 @@
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-daemon">&lt;daemon&gt;</a></code></p>
+               <p><code><a href="#daemon">&lt;daemon&gt;</a></code></p>
               </td>
               <td colspan="1" class="confluenceTd">
                <p>Additional configuration that is used when deploying with the <a href="Cargo+Daemon.html">Cargo Daemon</a>.</p>
@@ -595,7 +595,7 @@
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-deployable">&lt;deployables&gt;</a></code></p>
+               <p><code><a href="#deployable">&lt;deployables&gt;</a></code></p>
               </td>
               <td colspan="1" class="confluenceTd">
                <p>A list of <a href="Deployable.html">deployable</a>s that are going to be deployed in the container when it is started or when <code><span>deploy</span></code> / <code><span>undeploy</span></code> is called.</p>
@@ -609,10 +609,10 @@
              </tr>
              <tr>
               <td colspan="1" class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-fileconfig">&lt;fileConfigs&gt;</a></code></p>
+               <p><code><a href="#fileconfig">&lt;fileConfigs&gt;</a></code></p>
               </td>
               <td colspan="1" class="confluenceTd">
-               <p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#AntTasksReferenceGuide-fileconfig">&lt;fileConfig&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p>
+               <p>List of <a href="Configuration+files+option.html">Configuration files</a> that are to be added to a local container's configuration. Each file is specified using a <code><a href="#fileconfig">&lt;fileConfig&gt;</a></code> element. Cargo token replacement is applied to the files and any existing file is overwritten.</p>
               </td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p>
@@ -626,7 +626,7 @@
                <p><code><a href="Configuration+files+option.html">&lt;files&gt;</a></code></p>
               </td>
               <td colspan="1" class="confluenceTd">
-               <p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#AntTasksReferenceGuide-file">&lt;file&gt;</a></code> element.</p>
+               <p>List of files that are to be added to a local container's configuration. Each file is specified using a <code><a href="#file">&lt;file&gt;</a></code> element.</p>
               </td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p>
@@ -648,7 +648,7 @@
               </td>
              </tr>
              <tr>
-              <td class="confluenceTd"><code><a href="#AntTasksReferenceGuide-user">&lt;users&gt;</a></code></td>
+              <td class="confluenceTd"><code><a href="#user">&lt;users&gt;</a></code></td>
               <td class="confluenceTd">List of users to be created in container configuration.</td>
               <td class="confluenceTd">
                <p>👎</p>
@@ -658,7 +658,7 @@
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="#AntTasksReferenceGuide-datasource">&lt;datasources&gt;</a></td>
+              <td colspan="1" class="confluenceTd"><a href="#datasource">&lt;datasources&gt;</a></td>
               <td colspan="1" class="confluenceTd">List of&nbsp;datasources to be created in container configuration.</td>
               <td colspan="1" class="confluenceTd">
                <p>👎</p>
@@ -916,7 +916,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-prop2">&lt;properties&gt;</a></code></p>
+               <p><code><a href="#prop2">&lt;properties&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>User-defined properties of a deployable.</p>
@@ -1132,7 +1132,7 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><code><a href="#AntTasksReferenceGuide-proxy">&lt;proxy&gt;</a></code></p>
+               <p><code><a href="#proxy">&lt;proxy&gt;</a></code></p>
               </td>
               <td class="confluenceTd">
                <p>Proxy server settings, if required.</p>
