@@ -271,7 +271,7 @@
              <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Features.html">Features</a> &gt; <a href="Extensions.html">Extensions</a> &gt; <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> &gt; <a href="Maven+3+Plugin+Getting+Started.html">Maven 3 Plugin Getting Started</a> &gt; Merging WAR files</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
-               <input type="text" size="30" name="q" id="search_query">&nbsp; <input type="submit" value="Search">
+               <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
               </form>
              </td>
             </tr>
@@ -377,9 +377,9 @@
           </div>
           <h4 id="MergingWARfiles-Mergedescriptorcontent">Merge descriptor content</h4>
           <p>The following merge descriptor elements are supported:</p>
-          <h5 id="MergingWARfiles-<wars>">&lt;wars&gt;</h5>
+          <h5 id="MergingWARfiles-&lt;wars&gt;">&lt;wars&gt;</h5>
           <p>In order to know which war files to merge, and in which order (this is significant - for example, when you choose overwrite strategy), specify them in the <code>&lt;wars&gt;</code> element. Each <code>&lt;war&gt;</code> sub-element should be of form <code>&lt;groupId&gt;:&lt;artifactId&gt;</code> to be properly resolved.</p>
-          <h5 id="MergingWARfiles-<merges>">&lt;merges&gt;</h5>
+          <h5 id="MergingWARfiles-&lt;merges&gt;">&lt;merges&gt;</h5>
           <p>If you have files that need to be merged together by some kind of processor, then specify it here. The classname can be <code>org.codehaus.cargo.module.webapp.DocumentMerger</code>, which is a simple class that will merge by copying all xml nodes from the descriptor files. Alternatively, you can provide any class that is available on the classpath, provided it implements <code>org.codehaus.cargo.module.merge.MergeProcessor</code>. The <code>&lt;merges&gt;</code> element is optional. You can have as many <code>&lt;merge&gt;</code> sub-elements as you need.</p>
           <p>For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
