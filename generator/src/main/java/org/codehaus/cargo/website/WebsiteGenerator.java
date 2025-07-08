@@ -42,6 +42,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -75,8 +76,8 @@ public class WebsiteGenerator implements Runnable
     /**
      * Any exceptions that happened during the asynchronous downloads.
      */
-    private static Map<URL, Exception> exceptions =
-        Collections.synchronizedMap(new HashMap<URL, Exception>());
+    private static Map<URL, Throwable> exceptions =
+        Collections.synchronizedMap(new HashMap<URL, Throwable>());
 
     /**
      * Downloaded amount in bytes (regularly reset), to calculate speed.
@@ -265,7 +266,7 @@ public class WebsiteGenerator implements Runnable
         }
         if (exceptions.size() > 0)
         {
-            for (HashMap.Entry<URL, Exception> exception : exceptions.entrySet())
+            for (HashMap.Entry<URL, Throwable> exception : exceptions.entrySet())
             {
                 System.out.println("  - Pending exception for URL " + exception.getKey() + ": " + exception);
             }
@@ -483,77 +484,155 @@ public class WebsiteGenerator implements Runnable
                 {
                     if (i == WebsiteGenerator.NUMBER_RETRIES - 1)
                     {
-                        throw e;
+                        throw new IllegalStateException("Failed after " + i + " retries", e);
                     }
-                    Thread.sleep(1000);
+                    Thread.sleep(ThreadLocalRandom.current().nextInt(5000, 15000));
                 }
             }
 
-            if (!value.isEmpty())
+            if (value.isEmpty())
             {
-                JSONObject result = new JSONObject(value);
-                value = result.getJSONObject("body").getJSONObject("view").getString("value");
+                throw new IllegalArgumentException("Empty value for URL: " + url);
+            }
 
-                Pattern pattern = Pattern.compile("<span class=\"logoBlock\"[^>]*>(.*?)<\\/span>", Pattern.DOTALL);
-                Matcher matcher = pattern.matcher(value);
-                value = matcher.replaceAll("");
+            JSONObject result = new JSONObject(value);
+            value = result.getJSONObject("body").getJSONObject("view").getString("value");
 
-                // Atlassian replaced most emojis with UTF-8 in December 2022, but forgot some
-                value = value.replace(":cross_mark:", "\u274C");
-                value = value.replace(":check_mark:", "\u2705");
-                value = value.replace(":green_star:", "\u2B50");
-                value = value.replaceAll("<img [^>]+alt=\"\\(thumbs up\\)\"[^>]+>", "\uD83D\uDC4D");
-                value = value.replaceAll("<img [^>]+alt=\"\\(thumbs down\\)\"[^>]+>", "\uD83D\uDC4E");
+            Pattern pattern = Pattern.compile("<span class=\"logoBlock\"[^>]*>(.*?)<\\/span>", Pattern.DOTALL);
+            Matcher matcher = pattern.matcher(value);
+            value = matcher.replaceAll("");
 
-                pattern = Pattern.compile("href=\"[^\"]*/wiki/[^\"]+/CARGO/[^\"]+\"|href='[^\']*/wiki/[^\']+/CARGO/[^']+'");
-                matcher = pattern.matcher(value);
-                int start = 0;
-                StringBuilder sb = new StringBuilder();
-                while (matcher.find())
+            // Atlassian replaced most emojis with UTF-8 on December 2022, but forgot some
+            value = value.replace(":cross_mark:", "\u274C");
+            value = value.replace(":check_mark:", "\u2705");
+            value = value.replace(":green_star:", "\u2B50");
+            value = value.replaceAll("<img [^>]+alt=\"\\(thumbs up\\)\"[^>]+>", "\uD83D\uDC4D");
+            value = value.replaceAll("<img [^>]+alt=\"\\(thumbs down\\)\"[^>]+>", "\uD83D\uDC4E");
+
+            pattern = Pattern.compile("href=\"[^\"]*/wiki/[^\"]+/CARGO/[^\"]+\"|href='[^\']*/wiki/[^\']+/CARGO/[^']+'");
+            matcher = pattern.matcher(value);
+            int start = 0;
+            StringBuilder sb = new StringBuilder();
+            while (matcher.find())
+            {
+                sb.append(value.substring(start, matcher.start()));
+                sb.append("href=\"");
+                String filename = value.substring(matcher.start() + 6, matcher.end() - 1);
+                filename = filename.substring(filename.lastIndexOf('/') + 1);
+                int hash = filename.indexOf('#');
+                String anchor = "";
+                if (hash != -1)
                 {
-                    sb.append(value.substring(start, matcher.start()));
-                    sb.append("href=\"");
-                    String filename = value.substring(matcher.start() + 6, matcher.end() - 1);
-                    filename = filename.substring(filename.lastIndexOf('/') + 1);
-                    int hash = filename.indexOf('#');
-                    String anchor = "";
-                    if (hash != -1)
-                    {
-                        anchor = filename.substring(hash);
-                        filename = filename.substring(0, hash);
-                    }
-                    if ("overview".equals(filename))
-                    {
-                        filename = "Home";
-                    }
-                    if (blogpostIdentifiers.containsKey(filename))
-                    {
-                        filename = blogpostIdentifiers.get(filename);
-                    }
-                    filename = filename.replace("%21", "").replace("%2C", "").replace("%3A", "");
-                    sb.append(filename);
-                    sb.append(".html");
-                    sb.append(anchor);
-                    sb.append("\"");
-                    start = matcher.end();
+                    anchor = filename.substring(hash);
+                    filename = filename.substring(0, hash);
                 }
-                sb.append(value.substring(start));
-                value = sb.toString();
-
-                pattern = Pattern.compile("href=\"/wiki/download/attachments/[^\"]+\"|href='/wiki/download/attachments/[^']+'");
-                matcher = pattern.matcher(value);
-                start = 0;
-                sb = new StringBuilder();
-                while (matcher.find())
+                if ("overview".equals(filename))
                 {
-                    sb.append(value.substring(start, matcher.start()));
-                    sb.append("href=\"attachments");
-                    String attachment = value.substring(matcher.start() + 6, matcher.end() - 1);
-                    if (attachment.startsWith("/"))
+                    filename = "Home";
+                }
+                if (blogpostIdentifiers.containsKey(filename))
+                {
+                    filename = blogpostIdentifiers.get(filename);
+                }
+                filename = filename.replace("%21", "").replace("%2C", "").replace("%3A", "");
+                sb.append(filename);
+                sb.append(".html");
+                sb.append(anchor);
+                sb.append("\"");
+                start = matcher.end();
+            }
+            sb.append(value.substring(start));
+            value = sb.toString();
+
+            pattern = Pattern.compile("href=\"/wiki/download/attachments/[^\"]+\"|href='/wiki/download/attachments/[^']+'");
+            matcher = pattern.matcher(value);
+            start = 0;
+            sb = new StringBuilder();
+            while (matcher.find())
+            {
+                sb.append(value.substring(start, matcher.start()));
+                sb.append("href=\"attachments");
+                String attachment = value.substring(matcher.start() + 6, matcher.end() - 1);
+                if (attachment.startsWith("/"))
+                {
+                    attachment = "https://codehaus-cargo.atlassian.net" + attachment;
+                }
+                if (DOWNLOAD_ATTACHMENTS)
+                {
+                    URL attachmentUrl = new URL(attachment);
+                    synchronized (attachments)
+                    {
+                        if (!attachments.contains(attachmentUrl))
+                        {
+                            attachments.add(attachmentUrl);
+                            WebsiteGenerator runnable = new WebsiteGenerator();
+                            runnable.url = attachmentUrl;
+                            Thread thread = new Thread(runnable);
+                            CONTENT_DOWNLOADERS.submit(thread);
+                        }
+                    }
+                }
+                int questionMark = attachment.lastIndexOf('?');
+                if (questionMark != -1)
+                {
+                    sb.append(attachment.substring(attachment.lastIndexOf('/'), questionMark));
+                }
+                else
+                {
+                    sb.append(attachment.substring(attachment.lastIndexOf('/')));
+                }
+                sb.append("\"");
+                start = matcher.end();
+            }
+            sb.append(value.substring(start));
+            value = sb.toString();
+
+            pattern = Pattern.compile("href=\"\\s*/wiki/[^\"]+\"|href='\\s*/wiki/[^']+'");
+            matcher = pattern.matcher(value);
+            start = 0;
+            sb = new StringBuilder();
+            while (matcher.find())
+            {
+                sb.append(value.substring(start, matcher.start()));
+                sb.append("href=\"https://codehaus-cargo.atlassian.net");
+                sb.append(value.substring(matcher.start() + 6, matcher.end() - 1).trim());
+                sb.append("\"");
+                start = matcher.end();
+            }
+            sb.append(value.substring(start));
+            value = sb.toString();
+
+            pattern = Pattern.compile("src=\"[^\"]+\"|src='[^']+'");
+            matcher = pattern.matcher(value);
+            start = 0;
+            sb = new StringBuilder();
+            while (matcher.find())
+            {
+                sb.append(value.substring(start, matcher.start()));
+                sb.append("src=\"");
+                String attachment = value.substring(matcher.start() + 5, matcher.end() - 1);
+                if (!attachment.startsWith("https://codehaus-cargo.semaphoreci.com"))
+                {
+                    sb.append("attachments/");
+                    attachment = attachment.replace("&amp;", "&");
+                    if ("http://www.codehaus.org/newtest.gif".equals(attachment))
+                    {
+                        attachment = "blank.gif";
+                    }
+                    else if (attachment.startsWith("/"))
                     {
                         attachment = "https://codehaus-cargo.atlassian.net" + attachment;
                     }
-                    if (DOWNLOAD_ATTACHMENTS)
+                    int questionMark = attachment.indexOf('?');
+                    if (questionMark != -1)
+                    {
+                        attachment = attachment.substring(0, questionMark);
+                    }
+                    if (attachment.endsWith("default.png"))
+                    {
+                        attachment = "blank.gif";
+                    }
+                    if (!attachment.endsWith("blank.gif"))
                     {
                         URL attachmentUrl = new URL(attachment);
                         synchronized (attachments)
@@ -568,102 +647,26 @@ public class WebsiteGenerator implements Runnable
                             }
                         }
                     }
-                    int questionMark = attachment.lastIndexOf('?');
-                    if (questionMark != -1)
-                    {
-                        sb.append(attachment.substring(attachment.lastIndexOf('/'), questionMark));
-                    }
-                    else
-                    {
-                        sb.append(attachment.substring(attachment.lastIndexOf('/')));
-                    }
-                    sb.append("\"");
-                    start = matcher.end();
+                    attachment = attachment.substring(attachment.lastIndexOf('/') + 1);
                 }
-                sb.append(value.substring(start));
-                value = sb.toString();
-
-                pattern = Pattern.compile("href=\"\\s*/wiki/[^\"]+\"|href='\\s*/wiki/[^']+'");
-                matcher = pattern.matcher(value);
-                start = 0;
-                sb = new StringBuilder();
-                while (matcher.find())
-                {
-                    sb.append(value.substring(start, matcher.start()));
-                    sb.append("href=\"https://codehaus-cargo.atlassian.net");
-                    sb.append(value.substring(matcher.start() + 6, matcher.end() - 1).trim());
-                    sb.append("\"");
-                    start = matcher.end();
-                }
-                sb.append(value.substring(start));
-                value = sb.toString();
-
-                pattern = Pattern.compile("src=\"[^\"]+\"|src='[^']+'");
-                matcher = pattern.matcher(value);
-                start = 0;
-                sb = new StringBuilder();
-                while (matcher.find())
-                {
-                    sb.append(value.substring(start, matcher.start()));
-                    sb.append("src=\"");
-                    String attachment = value.substring(matcher.start() + 5, matcher.end() - 1);
-                    if (!attachment.startsWith("https://codehaus-cargo.semaphoreci.com"))
-                    {
-                        sb.append("attachments/");
-                        attachment = attachment.replace("&amp;", "&");
-                        if ("http://www.codehaus.org/newtest.gif".equals(attachment))
-                        {
-                            attachment = "blank.gif";
-                        }
-                        else if (attachment.startsWith("/"))
-                        {
-                            attachment = "https://codehaus-cargo.atlassian.net" + attachment;
-                        }
-                        int questionMark = attachment.indexOf('?');
-                        if (questionMark != -1)
-                        {
-                            attachment = attachment.substring(0, questionMark);
-                        }
-                        if (attachment.endsWith("default.png"))
-                        {
-                            attachment = "blank.gif";
-                        }
-                        if (!attachment.endsWith("blank.gif"))
-                        {
-                            URL attachmentUrl = new URL(attachment);
-                            synchronized (attachments)
-                            {
-                                if (!attachments.contains(attachmentUrl))
-                                {
-                                    attachments.add(attachmentUrl);
-                                    WebsiteGenerator runnable = new WebsiteGenerator();
-                                    runnable.url = attachmentUrl;
-                                    Thread thread = new Thread(runnable);
-                                    CONTENT_DOWNLOADERS.submit(thread);
-                                }
-                            }
-                        }
-                        attachment = attachment.substring(attachment.lastIndexOf('/') + 1);
-                    }
-                    sb.append(attachment);
-                    sb.append("\"");
-                    start = matcher.end();
-                }
-                sb.append(value.substring(start));
-                value = sb.toString();
-
-                File page = new File("target/source", toFilename(result.getString("title")));
-                if (value.contains("https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action"))
-                {
-                    throw new IllegalArgumentException("Page " + result.getString("title") + " contains a draft link");
-                }
-                writeFile(page, value);
-                pages.add(page);
+                sb.append(attachment);
+                sb.append("\"");
+                start = matcher.end();
             }
+            sb.append(value.substring(start));
+            value = sb.toString();
+
+            File page = new File("target/source", toFilename(result.getString("title")));
+            if (value.contains("https://codehaus-cargo.atlassian.net/wiki/pages/resumedraft.action"))
+            {
+                throw new IllegalArgumentException("Page " + result.getString("title") + " contains a draft link");
+            }
+            writeFile(page, value);
+            pages.add(page);
         }
-        catch (Exception e)
+        catch (Throwable t)
         {
-            exceptions.put(url, e);
+            exceptions.put(url, t);
         }
     }
 }
