@@ -285,10 +285,10 @@
           <h1 id="Building-Prequisites">Prequisites</h1>
           <ul>
            <li>Check out or download as a ZIP file the Codehaus Cargo source code from <a href="Source+code.html">Github</a> into a <code>CARGOHOME</code> directory (wherever you want on your machine).</li>
-           <li>Install the JDK 11. If you really want to build with JDK 8 or with JDK 12 and above, read our chapter on <a href="#nonJdk11">building with older or newer versions of the JDK</a>.</li>
+           <li>Install the JDK 11. If you really want to build with JDK 8 or with JDK 12 and above, read our chapter on <a href="#Building-nonJdk11">building with older or newer versions of the JDK</a>.</li>
            <li>Install <a href="http://maven.apache.org">Maven 3.6.3 or later</a>.
             <br>
-            If you are using Maven 3.8.1 or newer, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="#ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
+            If you are using Maven 3.8.1 or newer, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="#Building-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
           </ul>
           <p>Verify your installation works by running the following command in a command prompt / terminal window: <code>mvn -version</code></p>
           <h1 id="Building-Building">Building</h1>
@@ -368,7 +368,7 @@ Blocked mirror for repositories: [ow2-snapshot (http://repository.ow2.org/nexus/
 Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:simple-ear:ear:1.10.21-SNAPSHOT -&gt; [Help 1]</pre>
            </div>
           </div>
-          <p>To build on these JDKs, you can either have a "pre-build" in JDK 11, or use the <a href="Maven+3+Plugin+Installation.html#snapshots">snapshots repository</a> by adding the below to your Maven <code>settings.xml</code>:</p>
+          <p>To build on these JDKs, you can either have a "pre-build" in JDK 11, or use the <a href="Maven+3+Plugin+Installation.html#Maven3PluginInstallation-snapshots">snapshots repository</a> by adding the below to your Maven <code>settings.xml</code>:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
             <b>settings.xml sample</b>
