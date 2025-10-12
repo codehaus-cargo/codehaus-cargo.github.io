@@ -193,6 +193,7 @@ public class WebsiteGenerator implements Runnable
         JSONArray pages = response.getJSONObject("page").getJSONArray("results");
         System.out.println("Found " + pages.length() + " pages to handle");
         boolean wildfly37x = false;
+        boolean wildfly38x = false;
         for (int i = 0; i < pages.length(); i++)
         {
             JSONObject links = pages.getJSONObject(i).getJSONObject("_links");
@@ -204,6 +205,10 @@ public class WebsiteGenerator implements Runnable
             {
                 wildfly37x = true;
             }
+            else if ("WildFly 38.x".equals(pages.getJSONObject(i).getString("title")))
+            {
+                wildfly38x = true;
+            }
         }
         if (!wildfly37x)
         {
@@ -212,6 +217,16 @@ public class WebsiteGenerator implements Runnable
             WebsiteGenerator runnable = new WebsiteGenerator();
             runnable.url = new URL(
                 "https://codehaus-cargo.atlassian.net/wiki/rest/api/content/3213066241?expand=body.view");
+            Thread thread = new Thread(runnable);
+            CONTENT_DOWNLOADERS.submit(thread);
+        }
+        if (!wildfly38x)
+        {
+            // FIXME: Temporary hack as the REST API v1 doesn't return all pages.
+            //        Moving to v2 is the only option proposed by Atlassian.
+            WebsiteGenerator runnable = new WebsiteGenerator();
+            runnable.url = new URL(
+                "https://codehaus-cargo.atlassian.net/wiki/rest/api/content/3326476289?expand=body.view");
             Thread thread = new Thread(runnable);
             CONTENT_DOWNLOADERS.submit(thread);
         }
