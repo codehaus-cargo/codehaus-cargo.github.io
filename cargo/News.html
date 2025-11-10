@@ -296,6 +296,53 @@
           <div class="conf-macro output-block">
            <div class="blog-post-listing">
             <div class="logo-heading-block">
+             <span class="blogHeading"> <a class="blogHeading" href="Give+a+warm+welcome+to+Codehaus+Cargo+1.10.25.html">Give a warm welcome to Codehaus Cargo 1.10.25!</a> 
+              <div class="page-metadata not-personal">
+               <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Nov 10, 2025
+              </div> </span>
+            </div>
+            <div class="wiki-content">
+             <p>Dear Codehaus Cargo enthusiasts</p>
+             <p>A month passed by since our last release, and we are happy to announce Codehaus Cargo 1.10.25, which features the below improvements:</p>
+             <ul>
+              <li>
+               <p>Containers - <a href="https://codehaus-cargo.github.io/cargo/Jetty+12.x.html">Jetty 12.x</a> (<em>and onwards, the day it comes</em>)</p>
+               <ul>
+                <li>
+                 <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1651">CARGO-1651</a>] Set EE version of default modules in <code>JettyPropertySet.MODULES</code> based on <code>JettyPropertySet.DEPLOYER_EE_VERSION</code></p>
+                </li>
+               </ul>
+              </li>
+              <li>
+               <p>Containers - Tomcat</p>
+               <ul>
+                <li>
+                 <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1652">CARGO-1652</a>] <a href="https://codehaus-cargo.github.io/cargo/Tomcat+9.x.html">Tomcat 9.x</a> onwards installed local container <code>maxPartCount</code> support</p>
+                </li>
+               </ul>
+              </li>
+             </ul>
+             <p>There also have been some behind-the-scenes changes, particularly around <a href="https://github.com/codehaus-cargo/cargo/commit/1578669472a40298a6ae76d9d26a2bb7b3ec0380">making configuration properties immutable and avoiding exposing the entire Map</a>, which is expected to bring a small tad of extra stability to the modules by avoiding any accidental configuration property override.</p>
+             <p>To upgrade to this latest version:</p>
+             <ul>
+              <li>
+               <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven+3+Plugin.html">Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.10.25</strong></p>
+              </li>
+              <li>
+               <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.25/cargo-core-uberjar-1.10.25.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.25/cargo-core-uberjar-1.10.25.jar</a></p>
+              </li>
+              <li>
+               <p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">Ant tasks</a> can download the new Ant tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.25/cargo-ant-1.10.25.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.25/cargo-ant-1.10.25.jar</a></p>
+              </li>
+              <li>
+               <p>Finally, the ones who want to experience the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.25/cargo-daemon-webapp-1.10.25.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.25/cargo-daemon-webapp-1.10.25.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p>
+              </li>
+             </ul>
+             <p>Enjoy!</p>
+            </div>
+           </div>
+           <div class="blog-post-listing">
+            <div class="logo-heading-block">
              <span class="blogHeading"> <a class="blogHeading" href="Codehaus+Cargo+1.10.24+is+here.html">Codehaus Cargo 1.10.24 is here!</a> 
               <div class="page-metadata not-personal">
                <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Oct 15, 2025
@@ -481,52 +528,6 @@
               </li>
               <li>
                <p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.20/cargo-daemon-webapp-1.10.20.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.20/cargo-daemon-webapp-1.10.20.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p>
-              </li>
-             </ul>
-             <p>Enjoy!</p>
-            </div>
-           </div>
-           <div class="blog-post-listing">
-            <div class="logo-heading-block">
-             <span class="blogHeading"> <a class="blogHeading" href="Codehaus+Cargo+1.10.19+is+now+available.html">Codehaus Cargo 1.10.19 is now available!</a> 
-              <div class="page-metadata not-personal">
-               <a href="https://codehaus-cargo.atlassian.net/wiki/people/557058:4802d18f-1bdd-4264-bed4-ac0010d101b6" class="url fn confluence-userlink">S. Ali Tokmen</a> posted on Apr 10, 2025
-              </div> </span>
-            </div>
-            <div class="wiki-content">
-             <p>Dear Codehaus Cargo enthusiasts</p>
-             <p>We are happy to announce the immediate availability of Codehaus Cargo 1.10.19, with the below new features and improvements:</p>
-             <ul>
-              <li>
-               <p>Containers - Jetty:</p>
-               <ul>
-                <li>
-                 <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1639">CARGO-1639</a>] Add support for EE8 and EE9 profiles to the <a href="https://codehaus-cargo.github.io/cargo/Jetty+12.x.html">Jetty 12.x</a> embedded container</p>
-                </li>
-               </ul>
-              </li>
-              <li>
-               <p>Containers - WildFly:</p>
-               <ul>
-                <li>
-                 <p>[<a href="https://codehaus-cargo.atlassian.net/browse/CARGO-1640">CARGO-1640</a>] Add support for <a href="https://codehaus-cargo.github.io/cargo/WildFly+36.x.html">WildFly 36.x</a></p>
-                </li>
-               </ul>
-              </li>
-             </ul>
-             <p>To upgrade to this latest version:</p>
-             <ul>
-              <li>
-               <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Maven+3+Plugin.html">Maven 3 plugin</a> simply need to use the Codehaus Cargo plugin version <strong>1.10.19</strong></p>
-              </li>
-              <li>
-               <p>Users of the <a href="https://codehaus-cargo.github.io/cargo/Javadocs.html">Java API</a> can download the new Uberjar from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.19/cargo-core-uberjar-1.10.19.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.19/cargo-core-uberjar-1.10.19.jar</a></p>
-              </li>
-              <li>
-               <p>Similarly, users of the <a href="https://codehaus-cargo.github.io/cargo/Ant+support.html">Ant tasks</a> can download the new Ant tasks from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.19/cargo-ant-1.10.19.jar">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.19/cargo-ant-1.10.19.jar</a></p>
-              </li>
-              <li>
-               <p>Finally, the ones who want to see the <a href="https://codehaus-cargo.github.io/cargo/Cargo+Daemon.html">Cargo Daemon</a> can get it from <a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.19/cargo-daemon-webapp-1.10.19.war">https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.19/cargo-daemon-webapp-1.10.19.war</a> and either use the WAR directly as an executable JAR or as a WAR file deployed on another Web container</p>
               </li>
              </ul>
              <p>Enjoy!</p>
