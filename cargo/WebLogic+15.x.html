@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="attachments/site.css" type="text/css">
   <link rel="shortcut icon" href="attachments/favicon.ico">
   <link rel="icon" type="image/x-icon" href="attachments/favicon.ico">
-  <title>Codehaus Cargo - jo 1.x</title>
+  <title>Codehaus Cargo - WebLogic 15.x</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYCEY8S1MG"></script>
   <script>
@@ -271,7 +271,7 @@
           <table style="border-collapse:collapse;width:100%;height:100%">
            <tbody>
             <tr valign="middle">
-             <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; <a href="Containers.html">Containers</a> &gt; jo 1.x</b></td>
+             <td align="left"><b><a href="Home.html">Codehaus Cargo</a> &gt; WebLogic 15.x</b></td>
              <td align="right" style="width:350px">
               <form method="GET" action="Search.html">
                <input type="text" size="30" name="q" id="search_query"> &nbsp; <input type="submit" value="Search">
@@ -284,7 +284,13 @@
         </tr>
         <tr valign="top">
          <td class="rightColumn">
-          <h3 id="jo!1.x-ContainerFeatures">Container Features</h3>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Users of WebLogic 15.x onwards should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from <code>javax.*</code> to <code>jakarta.*</code>. This will almost certainly require code changes to enable applications to migrate to WebLogic 15.x and later.</p>
+           </div>
+          </div>
+          <h3 id="WebLogic15.x-ContainerFeatures">Container Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -310,13 +316,13 @@
                <p><a href="Container+Instantiation.html">Container Instantiation</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.<wbr>createContainer<wbr>("jo1x"...)</code></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>ContainerFactory.<wbr>createContainer<wbr>("weblogic15x"...)</code></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId=<wbr>"jo1x".../&gt;</code></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;cargo containerId=<wbr>"weblogic15x".../&gt;</code></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;<wbr>jo1x<wbr>&lt;/containerId&gt;</code></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>&lt;containerId&gt;<wbr>weblogic15x<wbr>&lt;/containerId&gt;</code></p>
               </td>
               <td class="confluenceTd">
                <p>&nbsp;</p>
@@ -429,7 +435,7 @@
                <p><a href="Installed+Container.html">Installed Container</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jo.<wbr>Jo1xInstalledLocalContainer</code></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>weblogic.<wbr>WebLogic15xInstalledLocalContainer</code></p>
               </td>
               <td class="confluenceTd">
                <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
@@ -480,13 +486,13 @@
                <p><a href="Remote+Container.html">Remote Container</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>weblogic.<wbr>WebLogic15xRemoteContainer</code></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
                <p>&nbsp;</p>
@@ -495,7 +501,7 @@
             </tbody>
            </table>
           </div>
-          <h3 id="jo!1.x-ConfigurationFeatures">Configuration Features</h3>
+          <h3 id="WebLogic15.x-ConfigurationFeatures">Configuration Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -521,7 +527,7 @@
                <p><a href="Standalone+Local+Configuration.html">Standalone Local Configuration for installed container</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jo.<wbr>Jo1xStandaloneLocalConfiguration</code></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>weblogic.<wbr>WebLogic15xStandaloneLocalConfiguration</code></p>
               </td>
               <td class="confluenceTd">
                <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
@@ -555,13 +561,13 @@
                <p><a href="Existing+Local+Configuration.html">Existing Local Configuration for installed container</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>weblogic.<wbr>WebLogic15xExistingLocalConfiguration</code></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
                <p>&nbsp;</p>
@@ -589,13 +595,13 @@
                <p><a href="Runtime+Configuration.html">Runtime Configuration</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>weblogic.<wbr>WebLogic122xRuntimeConfiguration</code></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
                <p>&nbsp;</p>
@@ -657,13 +663,13 @@
                <p><a href="Static+deployment+of+EAR.html">Static deployment of EAR</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
                <p>&nbsp;</p>
@@ -691,13 +697,13 @@
                <p><a class="unresolved" href="#">Static deployment of files</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
                <p>&nbsp;</p>
@@ -723,7 +729,7 @@
             </tbody>
            </table>
           </div>
-          <h3 id="jo!1.x-DeployerFeatures">Deployer Features</h3>
+          <h3 id="WebLogic15.x-DeployerFeatures">Deployer Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -749,7 +755,7 @@
                <p><a class="unresolved" href="#">Installed Deployer</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>jo.<wbr>Jo1xInstalledLocalDeployer</code></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>weblogic.<wbr>WebLogic9x10x12x14x15xCopyingInstalledLocalDeployer</code></p>
               </td>
               <td class="confluenceTd">
                <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
@@ -783,13 +789,13 @@
                <p><a href="Remote+Deployer.html">Remote Deployer</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"> <code>o.<wbr>c.<wbr>c.<wbr>c.<wbr>weblogic.<wbr>WebLogicWlstRemoteDeployer</code></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
                <p>&nbsp;</p>
@@ -798,7 +804,7 @@
             </tbody>
            </table>
           </div>
-          <h3 id="jo!1.x-OtherFeatures">Other Features</h3>
+          <h3 id="WebLogic15.x-OtherFeatures">Other Features</h3>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -839,10 +845,10 @@
             </tbody>
            </table>
           </div>
-          <h3 id="jo!1.x-SupportedConfigurationproperties">Supported Configuration properties</h3>
+          <h3 id="WebLogic15.x-SupportedConfigurationproperties">Supported Configuration properties</h3>
           <p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p>
-          <h4 id="jo!1.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4>
-          <h5 id="jo!1.x-Forinstalledcontainero.c.c.c.jo.Jo1xInstalledLocalContainer">For installed container o.c.c.c.jo.Jo1xInstalledLocalContainer</h5>
+          <h4 id="WebLogic15.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4>
+          <h5 id="WebLogic15.x-Forinstalledcontainero.c.c.c.weblogic.WebLogic15xInstalledLocalContainer">For installed container o.c.c.c.weblogic.WebLogic15xInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
@@ -891,7 +897,7 @@
                <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><em>JAVA_HOME version 4 or newer</em></p>
+               <p><em>JAVA_HOME version 17 or newer</em></p>
               </td>
               <td class="confluenceTd">
                <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
@@ -984,23 +990,6 @@
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p><a href="Configuration+properties.html">cargo.rmi.port</a></p>
-              </td>
-              <td class="confluenceTd">
-               <p><a href="Configuration+properties.html">GeneralPropertySet.RMI_PORT</a></p>
-              </td>
-              <td class="confluenceTd">
-               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
-              </td>
-              <td class="confluenceTd">
-               <p><code>9090</code></p>
-              </td>
-              <td class="confluenceTd">
-               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RMI_PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
-              </td>
-             </tr>
-             <tr>
-              <td class="confluenceTd">
                <p><a href="Configuration+properties.html">cargo.runtime.args</a></p>
               </td>
               <td class="confluenceTd">
@@ -1027,7 +1016,7 @@
                <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
-               <p><code>8080</code></p>
+               <p><code>7001</code></p>
               </td>
               <td class="confluenceTd">
                <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
@@ -1041,13 +1030,13 @@
                <p><a href="Configuration+properties.html">ServletPropertySet.USERS</a></p>
               </td>
               <td class="confluenceTd">
-               <p><img class="emoticon emoticon-cross" src="attachments/error.png" width="16" height="16" alt="(error)"></p>
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
               </td>
               <td class="confluenceTd">
                <p>N/A</p>
               </td>
               <td class="confluenceTd">
-               <p>&nbsp;</p>
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#USERS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
               </td>
              </tr>
              <tr>
@@ -1084,13 +1073,689 @@
                <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
               </td>
              </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.administrator.password</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.ADMIN_PWD</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>weblogic1</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ADMIN_PWD"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.administrator.user</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.ADMIN_USER</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>weblogic</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ADMIN_USER"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.bea.home</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.BEA_HOME</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#BEA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.deployment.online</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.ONLINE_DEPLOYMENT</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>false</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ONLINE_DEPLOYMENT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.jta.timeout</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.JTA_TRANSACTION_TIMEOUT</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#JTA_TRANSACTION_TIMEOUT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.logging.rotation.type</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.LOG_ROTATION_TYPE</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>none</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#LOG_ROTATION_TYPE"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.script.jython.offline</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.JYTHON_SCRIPT_OFFLINE</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#JYTHON_SCRIPT_OFFLINE"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.script.jython.online</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.JYTHON_SCRIPT_ONLINE</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#JYTHON_SCRIPT_ONLINE"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.script.jython.replaceProperties</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.JYTHON_SCRIPT_REPLACE_PROPERTIES</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>false</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#JYTHON_SCRIPT_REPLACE_PROPERTIES"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.server</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.SERVER</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>server</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SERVER"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.ssl.verification.hostname.class</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.SSL_HOSTNAME_VERIFIER_CLASS</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>None</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SSL_HOSTNAME_VERIFIER_CLASS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.ssl.verification.hostname.ignored</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.SSL_HOSTNAME_VERIFICATION_IGNORED</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>true</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SSL_HOSTNAME_VERIFICATION_IGNORED"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
             </tbody>
            </table>
           </div>
-          <h3 id="jo!1.x-TestedOn">Tested On</h3>
-          <p>This container is automatically tested by the <a href="https://codehaus-cargo.semaphoreci.com/projects/cargo">Continous Integration (CI) system</a> every time there is a code change.
-           <br>
-           The server used for tests is downloaded from: <a href="https://www.tagtraum.com/download/jo1.1beta1.zip">https://www.tagtraum.com/download/jo1.1beta1.zip</a></p>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <p class="title">Datasource and Resource configuration</p>
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>In addition to the forementioned properties, this container configuration can also set up datasources and/or resources.</p>
+            <p>For more details, please read: <a href="DataSource+and+Resource+Support.html">DataSource and Resource Support</a>.</p>
+           </div>
+          </div>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>Some versions of WebLogic require you to have a complex password, i.e. only <code>weblogic</code> is not enough.
+             <br>
+             If you get an error message similar to the below, please include a number in your WebLogic password, for example <code>weblogic1</code>.</p>
+            <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
+             <div class="codeContent panelContent pdl">
+              <pre class="syntaxhighlighter-pre">
+&lt;Critical&gt; &lt;WebLogicServer&gt; &lt;BEA-000386&gt; &lt;Server subsystem failed. Reason: java.lang.AssertionError:java.lang.reflect.InvocationTargetException
+    at weblogic.descriptor.DescriptorManager$SecurityServiceImpl$SecurityProxy._invokeServiceMethod
+    at weblogic.descriptor.DescriptorManager$SecurityServiceImpl$SecurityProxy.decrypt
+    at weblogic.descriptor.DescriptorManager$SecurityServiceImpl.decrypt
+    at weblogic.descriptor.internal.AbstractDescriptorBean._decrypt
+    at weblogic.management.configuration.SecurityConfigurationMBeanImpl.getCredential
+    at weblogic.security.internal.ServerPrincipalValidatorImpl.getSecret
+    at weblogic.security.internal.ServerPrincipalValidatorImpl.sign</pre>
+             </div>
+            </div>
+           </div>
+          </div>
+          <h4 id="WebLogic15.x-ExistingLocalConfigurationProperties">Existing Local Configuration Properties</h4>
+          <h5 id="WebLogic15.x-Forinstalledcontainero.c.c.c.weblogic.WebLogic15xInstalledLocalContainer.1">For installed container o.c.c.c.weblogic.WebLogic15xInstalledLocalContainer</h5>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh">
+               <p>Property name</p>
+              </th>
+              <th class="confluenceTh">
+               <p>Java Property</p>
+              </th>
+              <th class="confluenceTh">
+               <p>Supported?</p>
+              </th>
+              <th class="confluenceTh">
+               <p>Default value</p>
+              </th>
+              <th class="confluenceTh">
+               <p>Javadoc</p>
+              </th>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.hostname</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>localhost</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.java.home</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><em>JAVA_HOME version 17 or newer</em></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.jvmargs</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JVMARGS</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.port.offset</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.PORT_OFFSET</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>0</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PORT_OFFSET"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.process.spawn</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.SPAWN_PROCESS</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>false</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#SPAWN_PROCESS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.protocol</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.PROTOCOL</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>http</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#PROTOCOL"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.runtime.args</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.RUNTIME_ARGS</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#RUNTIME_ARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.servlet.port</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>7001</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.start.jvmargs</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.START_JVMARGS</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#START_JVMARGS"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.administrator.password</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.ADMIN_PWD</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>weblogic1</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ADMIN_PWD"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.administrator.user</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.ADMIN_USER</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>weblogic</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ADMIN_USER"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.bea.home</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.BEA_HOME</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#BEA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.deployment.online</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.ONLINE_DEPLOYMENT</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>false</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#ONLINE_DEPLOYMENT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.script.jython.online</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.JYTHON_SCRIPT_ONLINE</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#JYTHON_SCRIPT_ONLINE"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.script.jython.replaceProperties</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.JYTHON_SCRIPT_REPLACE_PROPERTIES</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>false</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#JYTHON_SCRIPT_REPLACE_PROPERTIES"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.server</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.SERVER</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>server</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SERVER"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <h4 id="WebLogic15.x-RuntimeConfigurationProperties">Runtime Configuration Properties</h4>
+          <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>The WebLogic remote deployer uses tye WebLogic Scripting Tool (WLST), as a result the <code>WebLogicPropertySet.LOCAL_WEBLOGIC_HOME|https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#LOCAL_WEBLOGIC_HOME</code> property must be set to a local WebLogic installation, matching the remote WebLogic server version.</p>
+           </div>
+          </div>
+          <h5 id="WebLogic15.x-Forremotecontainero.c.c.c.weblogic.WebLogic15xRemoteContainer">For remote container o.c.c.c.weblogic.WebLogic15xRemoteContainer</h5>
+          <div class="table-wrap">
+           <table class="confluenceTable">
+            <tbody>
+             <tr>
+              <th class="confluenceTh">
+               <p>Property name</p>
+              </th>
+              <th class="confluenceTh">
+               <p>Java Property</p>
+              </th>
+              <th class="confluenceTh">
+               <p>Supported?</p>
+              </th>
+              <th class="confluenceTh">
+               <p>Default value</p>
+              </th>
+              <th class="confluenceTh">
+               <p>Javadoc</p>
+              </th>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.hostname</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.HOSTNAME</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>localhost</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#HOSTNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.java.home</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">GeneralPropertySet.JAVA_HOME</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><em>JAVA_HOME version 17 or newer</em></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/GeneralPropertySet.html#JAVA_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.remote.password</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">RemotePropertySet.PASSWORD</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>weblogic1</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#PASSWORD"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.remote.username</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">RemotePropertySet.USERNAME</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>weblogic</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/RemotePropertySet.html#USERNAME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.servlet.port</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">ServletPropertySet.PORT</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>7001</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/property/ServletPropertySet.html#PORT"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.installation.home</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.LOCAL_WEBLOGIC_HOME</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>N/A</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#LOCAL_WEBLOGIC_HOME"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">cargo.weblogic.server</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="Configuration+properties.html">WebLogicPropertySet.SERVER</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p><code>server</code></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#SERVER"><img class="emoticon emoticon-green-star" src="attachments/star_green.png" width="16" height="16" alt="(green star)"></a></p>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
          </td>
         </tr>
        </tbody>
