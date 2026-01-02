@@ -1,7 +1,7 @@
 /*
  * ========================================================================
  *
- * Codehaus Cargo, copyright 2004-2011 Vincent Massol, 2012-2025 Ali Tokmen.
+ * Codehaus Cargo, copyright 2004-2011 Vincent Massol, 2012-2026 Ali Tokmen.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -63,9 +63,9 @@ public class WebsiteGenerator implements Runnable
     private static Set<File> pages = Collections.synchronizedSet(new HashSet<File>());
 
     /**
-     * Attachments of pages, including images.
+     * All downloads, including attachments of pages (images, ZIP files, etc.).
      */
-    private static Set<URL> attachments = Collections.synchronizedSet(new HashSet<URL>());
+    private static Set<URL> downloads = Collections.synchronizedSet(new HashSet<URL>());
 
     /**
      * Blog post identifiers.
@@ -192,56 +192,15 @@ public class WebsiteGenerator implements Runnable
         JSONObject response = new JSONObject(sb.toString());
         JSONArray pages = response.getJSONObject("page").getJSONArray("results");
         System.out.println("Found " + pages.length() + " pages to handle");
-        boolean weblogic15x = false;
-        boolean wildfly37x = false;
-        boolean wildfly38x = false;
         for (int i = 0; i < pages.length(); i++)
         {
             JSONObject links = pages.getJSONObject(i).getJSONObject("_links");
             WebsiteGenerator runnable = new WebsiteGenerator();
             runnable.url = new URL(links.getString("self") + "?expand=body.view");
-            Thread thread = new Thread(runnable);
-            CONTENT_DOWNLOADERS.submit(thread);
-            if ("WebLogic 15.x".equals(pages.getJSONObject(i).getString("title")))
+            synchronized (downloads)
             {
-                weblogic15x = true;
+                downloads.add(runnable.url);
             }
-            if ("WildFly 37.x".equals(pages.getJSONObject(i).getString("title")))
-            {
-                wildfly37x = true;
-            }
-            else if ("WildFly 38.x".equals(pages.getJSONObject(i).getString("title")))
-            {
-                wildfly38x = true;
-            }
-        }
-        if (!weblogic15x)
-        {
-            // FIXME: Temporary hack as the REST API v1 doesn't return all pages.
-            //        Moving to v2 is the only option proposed by Atlassian.
-            WebsiteGenerator runnable = new WebsiteGenerator();
-            runnable.url = new URL(
-                "https://codehaus-cargo.atlassian.net/wiki/rest/api/content/3450994689?expand=body.view");
-            Thread thread = new Thread(runnable);
-            CONTENT_DOWNLOADERS.submit(thread);
-        }
-        if (!wildfly37x)
-        {
-            // FIXME: Temporary hack as the REST API v1 doesn't return all pages.
-            //        Moving to v2 is the only option proposed by Atlassian.
-            WebsiteGenerator runnable = new WebsiteGenerator();
-            runnable.url = new URL(
-                "https://codehaus-cargo.atlassian.net/wiki/rest/api/content/3213066241?expand=body.view");
-            Thread thread = new Thread(runnable);
-            CONTENT_DOWNLOADERS.submit(thread);
-        }
-        if (!wildfly38x)
-        {
-            // FIXME: Temporary hack as the REST API v1 doesn't return all pages.
-            //        Moving to v2 is the only option proposed by Atlassian.
-            WebsiteGenerator runnable = new WebsiteGenerator();
-            runnable.url = new URL(
-                "https://codehaus-cargo.atlassian.net/wiki/rest/api/content/3326476289?expand=body.view");
             Thread thread = new Thread(runnable);
             CONTENT_DOWNLOADERS.submit(thread);
         }
@@ -256,6 +215,10 @@ public class WebsiteGenerator implements Runnable
             JSONObject links = blogposts.getJSONObject(i).getJSONObject("_links");
             WebsiteGenerator runnable = new WebsiteGenerator();
             runnable.url = new URL(links.getString("self") + "?expand=body.view");
+            synchronized (downloads)
+            {
+                downloads.add(runnable.url);
+            }
             Thread thread = new Thread(runnable);
             CONTENT_DOWNLOADERS.submit(thread);
         }
@@ -273,11 +236,11 @@ public class WebsiteGenerator implements Runnable
             {
                 URL attachmentUrl =
                     new URL("https://codehaus-cargo.atlassian.net/wiki/download/attachments/491540/" + banner);
-                synchronized (attachments)
+                synchronized (downloads)
                 {
-                    if (!attachments.contains(attachmentUrl))
+                    if (!downloads.contains(attachmentUrl))
                     {
-                        attachments.add(attachmentUrl);
+                        downloads.add(attachmentUrl);
                         WebsiteGenerator runnable = new WebsiteGenerator();
                         runnable.url = attachmentUrl;
                         Thread thread = new Thread(runnable);
@@ -287,21 +250,19 @@ public class WebsiteGenerator implements Runnable
             }
         }
 
-        while (CONTENT_DOWNLOADERS.getCompletedTaskCount()
-            < pages.length() + blogposts.length() + attachments.size())
+        while (CONTENT_DOWNLOADERS.getCompletedTaskCount() < downloads.size())
         {
             Thread.sleep(5000);
             System.out.println("  - Completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount() + "/"
-                + (pages.length() + blogposts.length() + attachments.size()) + " tasks - "
-                +  ((System.currentTimeMillis() - start) / 1000) + " seconds spent so far, approximate "
-                + "download speed since last message has been " + (WebsiteGenerator.speed / 1024 / 5) + " KB/s");
+                + downloads.size() + " tasks, " +  ((System.currentTimeMillis() - start) / 1000)
+                + " seconds spent so far, approximate download speed since last message has been "
+                + (WebsiteGenerator.speed / 1024 / 5) + " KB/s");
             WebsiteGenerator.speed = 0;
         }
-        if (CONTENT_DOWNLOADERS.getCompletedTaskCount()
-            < pages.length() + blogposts.length() + attachments.size())
+        if (CONTENT_DOWNLOADERS.getCompletedTaskCount() < downloads.size())
         {
             throw new Exception("WARNING: Only completed " + CONTENT_DOWNLOADERS.getCompletedTaskCount()
-                + " tasks out of " + (pages.length() + blogposts.length() + attachments.size()));
+                + " tasks out of " + downloads.size());
         }
         System.out.println(
             "All tasks complete, total downloaded: " + (WebsiteGenerator.size / 1024 / 1024) + " MB");
@@ -560,6 +521,33 @@ public class WebsiteGenerator implements Runnable
                     sb.append(value.substring(start, matcher.start()));
                     sb.append("href=\"");
                     String filename = value.substring(matcher.start() + 6, matcher.end() - 1);
+                    if (filename.startsWith("/wiki/spaces/CARGO/pages/"))
+                    {
+                        String identifier = filename.substring(0, filename.lastIndexOf('/'));
+                        identifier = identifier.substring(identifier.lastIndexOf('/') + 1);
+                        if (identifier.matches("-?\\d+"))
+                        {
+                            boolean found = false;
+                            URL pageUrl =
+                                new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/content/" + identifier + "?expand=body.view");
+                            synchronized (downloads)
+                            {
+                                found = downloads.contains(pageUrl);
+                                if (!found)
+                                {
+                                    downloads.add(pageUrl);
+                                }
+                            }
+                            if (!found)
+                            {
+                                System.out.println("    => Found new page to handle: " + pageUrl);
+                                WebsiteGenerator runnable = new WebsiteGenerator();
+                                runnable.url = pageUrl;
+                                Thread thread = new Thread(runnable);
+                                CONTENT_DOWNLOADERS.submit(thread);
+                            }
+                        }
+                    }
                     filename = filename.substring(filename.lastIndexOf('/') + 1);
                     int hash = filename.indexOf('#');
                     String anchor = "";
@@ -602,11 +590,11 @@ public class WebsiteGenerator implements Runnable
                     if (DOWNLOAD_ATTACHMENTS)
                     {
                         URL attachmentUrl = new URL(attachment);
-                        synchronized (attachments)
+                        synchronized (downloads)
                         {
-                            if (!attachments.contains(attachmentUrl))
+                            if (!downloads.contains(attachmentUrl))
                             {
-                                attachments.add(attachmentUrl);
+                                downloads.add(attachmentUrl);
                                 WebsiteGenerator runnable = new WebsiteGenerator();
                                 runnable.url = attachmentUrl;
                                 Thread thread = new Thread(runnable);
@@ -677,11 +665,11 @@ public class WebsiteGenerator implements Runnable
                         if (!attachment.endsWith("blank.gif"))
                         {
                             URL attachmentUrl = new URL(attachment);
-                            synchronized (attachments)
+                            synchronized (downloads)
                             {
-                                if (!attachments.contains(attachmentUrl))
+                                if (!downloads.contains(attachmentUrl))
                                 {
-                                    attachments.add(attachmentUrl);
+                                    downloads.add(attachmentUrl);
                                     WebsiteGenerator runnable = new WebsiteGenerator();
                                     runnable.url = attachmentUrl;
                                     Thread thread = new Thread(runnable);

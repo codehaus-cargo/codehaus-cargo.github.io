@@ -850,6 +850,12 @@
           <h3 id="WebLogic12.1.x-SupportedConfigurationproperties">Supported Configuration properties</h3>
           <p>The tables below list both the <a href="Configuration+properties.html">general configuration properties</a> as well as the container-specific ones.</p>
           <h4 id="WebLogic12.1.x-StandaloneLocalConfigurationProperties">Standalone Local Configuration Properties</h4>
+          <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
+           <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
+           <div class="confluence-information-macro-body">
+            <p>WLST on WebLogic 12.1.x might return an error <code>com.oracle.cie.domain.TemplateLoaderException: Error loading stringsubs.xml from template jar wls.jar</code> on Java 9 and above. The only known workarounds are to downgrade to Java 7 or 8, or to upgrade to WebLogic 12.2.x or above.</p>
+           </div>
+          </div>
           <h5 id="WebLogic12.1.x-Forinstalledcontainero.c.c.c.weblogic.WebLogic121xInstalledLocalContainer">For installed container o.c.c.c.weblogic.WebLogic121xInstalledLocalContainer</h5>
           <div class="table-wrap">
            <table class="confluenceTable">
@@ -1646,7 +1652,7 @@
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
-            <p>The WebLogic remote deployer uses tye WebLogic Scripting Tool (WLST), as a result the <code>WebLogicPropertySet.LOCAL_WEBLOGIC_HOME|https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#LOCAL_WEBLOGIC_HOME</code> property must be set to a local WebLogic installation, matching the remote WebLogic server version.</p>
+            <p>The WebLogic remote deployer uses the WebLogic Scripting Tool (WLST), as a result the <code><a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/weblogic/WebLogicPropertySet.html#LOCAL_WEBLOGIC_HOME">WebLogicPropertySet.LOCAL_WEBLOGIC_HOME</a></code> property must be set to a local WebLogic installation, matching the remote WebLogic server version.</p>
            </div>
           </div>
           <h5 id="WebLogic12.1.x-Forremotecontainero.c.c.c.weblogic.WebLogic121xRemoteContainer">For remote container o.c.c.c.weblogic.WebLogic121xRemoteContainer</h5>
@@ -1804,7 +1810,7 @@
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+          <td align="left">Copyright 2004-2026. All rights reserved unless otherwise noted.
            <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>

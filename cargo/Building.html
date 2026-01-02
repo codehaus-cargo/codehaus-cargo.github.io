@@ -326,7 +326,7 @@
            </div>
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">org.eclipse.aether.transfer.ArtifactTransferException:
-Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.10.26-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/):
+Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.10.27-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/):
 Blocked mirror for repositories: [ow2-snapshot (http://repository.ow2.org/nexus/content/repositories/snapshots, default, snapshots)]</pre>
            </div>
           </div>
@@ -367,43 +367,10 @@ Blocked mirror for repositories: [ow2-snapshot (http://repository.ow2.org/nexus/
            </div>
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.9.0:copy (copy-test-ear) on project cargo-core-container-jonas:
-Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:simple-ear:ear:1.10.26-SNAPSHOT -&gt; [Help 1]</pre>
+Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:simple-ear:ear:1.10.27-SNAPSHOT -&gt; [Help 1]</pre>
            </div>
           </div>
-          <p>To build on these JDKs, you can either have a "pre-build" in JDK 11, or use the <a href="Maven+3+Plugin+Installation.html#Maven3PluginInstallation-snapshots">snapshots repository</a> by adding the below to your Maven <code>settings.xml</code>:</p>
-          <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-            <b>settings.xml sample</b>
-           </div>
-           <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                      http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
-  &lt;profiles&gt;
-    &lt;profile&gt;
-      &lt;id&gt;sonatype-snapshots-repository&lt;/id&gt;
-      &lt;activation&gt;
-        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
-      &lt;/activation&gt;
-      &lt;repositories&gt;
-        &lt;repository&gt;
-          &lt;id&gt;sonatype-snapshots&lt;/id&gt;
-          &lt;name&gt;Sonatype Snapshots&lt;/name&gt;
-          &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots/&lt;/url&gt;
-          &lt;releases&gt;
-            &lt;enabled&gt;false&lt;/enabled&gt;
-          &lt;/releases&gt;
-          &lt;snapshots&gt;
-            &lt;enabled&gt;true&lt;/enabled&gt;
-          &lt;/snapshots&gt;
-        &lt;/repository&gt;
-      &lt;/repositories&gt;
-    &lt;/profile&gt;
-  &lt;/profiles&gt;
-&lt;/settings&gt;</pre>
-           </div>
-          </div>
+          <p>To build on these JDKs, you have to "pre-build" in JDK 11 and copy over the repository to with JDK 8 or JDK 12 or above. As an example, you can look at <a href="https://github.com/codehaus-cargo/cargo/blob/master/.semaphore/semaphore.yml">how multi-JDK build and tests are defined in the Codehaus Cargo Continous Integration YAML file</a>.</p>
          </td>
         </tr>
        </tbody>
@@ -416,7 +383,7 @@ Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:sim
        <table style="width:100%">
         <tbody>
          <tr valign="top">
-          <td align="left">Copyright 2004-2025. All rights reserved unless otherwise noted.
+          <td align="left">Copyright 2004-2026. All rights reserved unless otherwise noted.
            <br></td>
           <td align="right"><a href="Cookies.html">Click here to read our privacy and cookie policy</a></td>
          </tr>
