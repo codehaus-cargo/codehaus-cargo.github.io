@@ -335,7 +335,6 @@ public class WebsiteGenerator implements Runnable
             value = value.replaceAll("(?s)<span class=\"refresh-action-group\".*?</span>", "");
             value = value.replaceAll("(?s)<textarea id=\"refresh-wiki-\\d*\".*?</textarea>", "");
             value = value.replaceAll("<input id=\"refresh-page-id-\\d*\"[^>]+>", "");
-            value = value.replaceAll("(<\\w+)\\s+local-id=\"\\w+\"", "$1");
             StringBuilder breadcrumbsSB = new StringBuilder();
             if (breadcrumbs.containsKey(name))
             {
@@ -352,8 +351,10 @@ public class WebsiteGenerator implements Runnable
                 .replace("$name", name)
                 .replace("$title", URLDecoder.decode(name, "UTF-8"))
                 .replace("$breadcrumbs", breadcrumbsSB.toString())
-                .replace("$value", value).replaceAll("\\s*data-[^=\\s]+=\"[^\"]+\"", "")
+                .replace("$value", value)
+                .replaceAll("\\s*data-[^=\\s]+=\"[^\"]+\"", "")
                 .replaceAll("\\s*id=\"refresh-[^\"]+\"", "").replace(" data-macro-id=\"\"", "")
+                .replaceAll("(<\\w+)\\s+local-id=\"\\w+\"", "$1")
                 .replace(" class=\"external-link\"", "").replace(" rel=\"nofollow\"", "")
                 .replace(" class=\"conf-macro output-inline\"", "")
                 .replace("<a href=\"http://java.sun.com\">java.sun.com</a>", "java.sun.com")
