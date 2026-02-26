@@ -335,6 +335,7 @@ public class WebsiteGenerator implements Runnable
             value = value.replaceAll("(?s)<span class=\"refresh-action-group\".*?</span>", "");
             value = value.replaceAll("(?s)<textarea id=\"refresh-wiki-\\d*\".*?</textarea>", "");
             value = value.replaceAll("<input id=\"refresh-page-id-\\d*\"[^>]+>", "");
+            value = value.replaceAll("(<\\w+)\\s+local-id=\"\\w+\"", "$1");
             StringBuilder breadcrumbsSB = new StringBuilder();
             if (breadcrumbs.containsKey(name))
             {

@@ -575,102 +575,102 @@
         </tr>
         <tr valign="top">
          <td class="rightColumn">
-          <h3 local-id="4d4df1d3c29b" id="Installation-JavaAPI">Java API</h3>
-          <p local-id="b463353a6c77">Cargo offers primarily a Java API. It is meant to be embedded in your application. You'll need Java SE version 8 or greater.</p>
-          <p local-id="dd6620a2f92c">You have two choices to pick from the <a href="Downloads.html">Downloads</a> page:</p>
-          <ul local-id="38295bd9a45e">
-           <li local-id="3287167e57a5">
-            <p local-id="c4ee3c10badf">the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars)</p>
+          <h3 id="Installation-JavaAPI">Java API</h3>
+          <p>Cargo offers primarily a Java API. It is meant to be embedded in your application. You'll need Java SE version 8 or greater.</p>
+          <p>You have two choices to pick from the <a href="Downloads.html">Downloads</a> page:</p>
+          <ul>
+           <li>
+            <p>the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars)</p>
            </li>
-           <li local-id="ae1872da5b82">
-            <p local-id="a37dd3edb93c"><strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars and their core dependencies (such as the various J2EE, Java EE and Jakarta EE specifications, JNI, etc.)</p>
+           <li>
+            <p><strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars and their core dependencies (such as the various J2EE, Java EE and Jakarta EE specifications, JNI, etc.)</p>
            </li>
           </ul>
-          <p local-id="b8e70f861181">Cargo's only base dependency not packed in the uberjar is <a href="https://repo.maven.apache.org/maven2/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar">commons discovery 0.5</a>, which itself depends on <a href="https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar">commons logging 1.1.1</a> (though our builds always use the latest version).</p>
-          <p local-id="d7670b6b7474">In addition, some specific containers and features require the following:</p>
+          <p>Cargo's only base dependency not packed in the uberjar is <a href="https://repo.maven.apache.org/maven2/commons-discovery/commons-discovery/0.5/commons-discovery-0.5.jar">commons discovery 0.5</a>, which itself depends on <a href="https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar">commons logging 1.1.1</a> (though our builds always use the latest version).</p>
+          <p>In addition, some specific containers and features require the following:</p>
           <div class="table-wrap">
            <table class="confluenceTable">
             <tbody>
              <tr>
               <th class="confluenceTh">
-               <p local-id="237fd0e92310"><strong>Container or feature</strong></p>
+               <p><strong>Container or feature</strong></p>
               </th>
               <th class="confluenceTh">
-               <p local-id="3f33c7527c88"><strong>Additional dependencies</strong></p>
+               <p><strong>Additional dependencies</strong></p>
               </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p local-id="9512d9967d29">Avoiding XML parser issues</p>
+               <p>Avoiding XML parser issues</p>
               </td>
               <td class="confluenceTd">
-               <p local-id="c89d0a0fc7fd"><a href="Downloads.html#Downloads-licensedDTDs">Convenience JAR with DTDs that are used by some Cargo components which have licenses incompatible with the rest of Cargo</a></p>
+               <p><a href="Downloads.html#Downloads-licensedDTDs">Convenience JAR with DTDs that are used by some Cargo components which have licenses incompatible with the rest of Cargo</a></p>
               </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p local-id="c27e27b72eff"><a href="Installer.html">Installer</a>s</p>
+               <p><a href="Installer.html">Installer</a>s</p>
               </td>
               <td class="confluenceTd">
-               <ul local-id="3c4092c8ca91">
-                <li local-id="a0bbddf9aa06">
-                 <p local-id="bfd5d9d7ea2c"><a href="https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar">Commons compress 1.28.0</a> or greater, which itself depends on <a href="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar">commons lang 3.18.0</a> (though our builds always use the latest version)</p>
+               <ul>
+                <li>
+                 <p><a href="https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar">Commons compress 1.28.0</a> or greater, which itself depends on <a href="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar">commons lang 3.18.0</a> (though our builds always use the latest version)</p>
                 </li>
-                <li local-id="7ade5a6c6503">
-                 <p local-id="cb7c0603057a"><a href="https://repo.maven.apache.org/maven2/org/tukaani/xz/1.11/xz-1.11.jar">Tukaani XZ 1.11</a> or greater (for 7Z support)</p>
+                <li>
+                 <p><a href="https://repo.maven.apache.org/maven2/org/tukaani/xz/1.11/xz-1.11.jar">Tukaani XZ 1.11</a> or greater (for 7Z support)</p>
                 </li>
                </ul>
               </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p local-id="8b440f70f1bf">JOnAS standalone containers</p>
+               <p>JOnAS standalone containers</p>
               </td>
               <td class="confluenceTd">
-               <p local-id="4d58167abfc3"><a href="https://ant.apache.org/bindownload.cgi">Apache Ant</a> (including the Ant Launcher), the version <em>seems</em> not to matter too much</p>
+               <p><a href="https://ant.apache.org/bindownload.cgi">Apache Ant</a> (including the Ant Launcher), the version <em>seems</em> not to matter too much</p>
               </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <ul local-id="8870c04a5725">
-                <li local-id="655097ad51e3">
-                 <p local-id="bc15bf895bed">Parsing of container-specific deployables (JBoss, Orion, Tomcat, etc.)</p>
+               <ul>
+                <li>
+                 <p>Parsing of container-specific deployables (JBoss, Orion, Tomcat, etc.)</p>
                 </li>
-                <li local-id="55266be3f224">
-                 <p local-id="116054373ff7"><a href="Merging+WAR+files.html">Merging WAR files</a></p>
+                <li>
+                 <p><a href="Merging+WAR+files.html">Merging WAR files</a></p>
                 </li>
                </ul>
               </td>
               <td class="confluenceTd">
-               <ul local-id="c7875159dd28">
-                <li local-id="d4d53128205b">
-                 <p local-id="ec00ccba57f9"><a href="https://repo.maven.apache.org/maven2/jaxen/jaxen/2.0.0/jaxen-2.0.0.jar">jaxen 2.0.0</a> or greater</p>
+               <ul>
+                <li>
+                 <p><a href="https://repo.maven.apache.org/maven2/jaxen/jaxen/2.0.0/jaxen-2.0.0.jar">jaxen 2.0.0</a> or greater</p>
                 </li>
-                <li local-id="4b2cf35186be">
-                 <p local-id="c5e4098c50a0"><a href="https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar">JDOM 2.0.6.1</a> or greater</p>
+                <li>
+                 <p><a href="https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar">JDOM 2.0.6.1</a> or greater</p>
                 </li>
                </ul>
               </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p local-id="1f6557431fb5">WildFly remote deployer, <a href="Cargo+Daemon.html">Cargo Daemon</a> Java client</p>
+               <p>WildFly remote deployer, <a href="Cargo+Daemon.html">Cargo Daemon</a> Java client</p>
               </td>
               <td class="confluenceTd">
-               <p local-id="32736e5526fd"><a href="https://repo.maven.apache.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar">JSON.simple 1.1.1</a>&nbsp;or greater</p>
+               <p><a href="https://repo.maven.apache.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar">JSON.simple 1.1.1</a>&nbsp;or greater</p>
               </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <p local-id="641017c1043e">WildFly Swarm</p>
+               <p>WildFly Swarm</p>
               </td>
               <td class="confluenceTd">
-               <ul local-id="cd8957625a3d">
-                <li local-id="314f380ca27b">
-                 <p local-id="6bf49025649e"><a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.1/jackson-core-2.21.1.jar">Jackson core 2.21.1</a> or greater</p>
+               <ul>
+                <li>
+                 <p><a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.21.1/jackson-core-2.21.1.jar">Jackson core 2.21.1</a> or greater</p>
                 </li>
-                <li local-id="3c35fdebad58">
-                 <p local-id="fc71c892bbbb"><a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.21.1/jackson-dataformat-yaml-2.21.1.jar">Jackson YAML dataformat 2.21.1</a> or greater, which itself depends on <a href="https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.5/snakeyaml-2.5.jar">SnakeYAML 2.5</a> or greater</p>
+                <li>
+                 <p><a href="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.21.1/jackson-dataformat-yaml-2.21.1.jar">Jackson YAML dataformat 2.21.1</a> or greater, which itself depends on <a href="https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.5/snakeyaml-2.5.jar">SnakeYAML 2.5</a> or greater</p>
                 </li>
                </ul>
               </td>
@@ -678,20 +678,20 @@
             </tbody>
            </table>
           </div>
-          <h3 local-id="9cf48fb92ad5" id="Installation-ApacheAnt">Apache Ant</h3>
-          <p local-id="f0eb6f9ac922">If you want use the Cargo Ant tasks, add the following JARs to Ant's classpath:</p>
-          <ul local-id="1e0ebbabf7eb">
-           <li local-id="e6289ff6a896">
-            <p local-id="2399d0a887f1">The same jars as for the Java API (i.e., either the API JARs + the container(s) <strong>or</strong> the uberjar)</p>
+          <h3 id="Installation-ApacheAnt">Apache Ant</h3>
+          <p>If you want use the Cargo Ant tasks, add the following JARs to Ant's classpath:</p>
+          <ul>
+           <li>
+            <p>The same jars as for the Java API (i.e., either the API JARs + the container(s) <strong>or</strong> the uberjar)</p>
            </li>
-           <li local-id="42749dae2346">
-            <p local-id="c5fb78f8933d">The <code>cargo-ant</code> JAR, containing the <code>&lt;taskdef&gt;</code> definition (see the <a href="Ant+support.html">Ant support</a> page)</p>
+           <li>
+            <p>The <code>cargo-ant</code> JAR, containing the <code>&lt;taskdef&gt;</code> definition (see the <a href="Ant+support.html">Ant support</a> page)</p>
            </li>
           </ul>
-          <h3 local-id="0909b627366e" id="Installation-ApacheMaven3">Apache Maven 3</h3>
-          <p local-id="a91e6d46c32c">Maven 3&nbsp;will automatically download all required dependencies: see the <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> page. As a result, no installation is required for Maven 3.</p>
-          <p local-id="090620aac9cf">If you are creating a Java applications which use the Cargo via API, you need to add as dependency either the artifact for your favorite container or the uberjar (which contains all containers). See below examples:</p>
-          <h5 local-id="a813f65567e5" id="Installation-ExampleforaddingtheCodehausCargouberjarasdependency"><strong>Example for adding the Codehaus Cargo uberjar as dependency</strong></h5>
+          <h3 id="Installation-ApacheMaven3">Apache Maven 3</h3>
+          <p>Maven 3&nbsp;will automatically download all required dependencies: see the <a href="Maven+3+Plugin.html">Maven 3 Plugin</a> page. As a result, no installation is required for Maven 3.</p>
+          <p>If you are creating a Java applications which use the Cargo via API, you need to add as dependency either the artifact for your favorite container or the uberjar (which contains all containers). See below examples:</p>
+          <h5 id="Installation-ExampleforaddingtheCodehausCargouberjarasdependency"><strong>Example for adding the Codehaus Cargo uberjar as dependency</strong></h5>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;dependency&gt;
@@ -701,8 +701,8 @@
 &lt;/dependency&gt;</pre>
            </div>
           </div>
-          <p local-id="9c3a53f74d9e">or, with the Tomcat container (as an example):</p>
-          <h5 local-id="f7543793e45e" id="Installation-ExampleforaddingtheCodehausCargoTomcatcontainerasdependency"><strong>Example for adding the Codehaus Cargo Tomcat container as dependency</strong></h5>
+          <p>or, with the Tomcat container (as an example):</p>
+          <h5 id="Installation-ExampleforaddingtheCodehausCargoTomcatcontainerasdependency"><strong>Example for adding the Codehaus Cargo Tomcat container as dependency</strong></h5>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;dependency&gt;
