@@ -147,7 +147,7 @@
           <p><a href="GlassFish+8.x.html">GlassFish 8.x</a></p>
          </li>
          <li>
-          <p><a href="3666378753.html">/wiki/spaces/CARGO/pages/3666378753</a></p>
+          <p><a href="GlassFish+9.x.html">GlassFish 9.x</a></p>
          </li>
         </ul>
        </li>
@@ -579,340 +579,645 @@
         <tr valign="top">
          <td class="rightColumn">
           <p>The downloads you need to pick depends on how you plan to use Cargo:</p>
-          <ul>
-           <li>If you want to <a href="Javadocs.html">integrate Cargo in your Java code</a>, you'll need to add the following jars to your classpath:
-            <br>
-            <ul>
-             <li>the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars)
-              <br>
-              <strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars.</li>
-             <li>the extra JARs required by Cargo, as listed in the&nbsp;<a href="Installation.html">installation</a> page.</li>
-            </ul></li>
-           <li>If you want to <a href="Ant+support.html">use Cargo from Ant</a>, you'll need to pick the same jars as above in addition to the <code>cargo-ant</code> jar.</li>
-           <li>If you want to <a href="Maven+3+Plugin.html">use Cargo from Maven 3</a>, you don't need to install anything at all as Maven will automatically download the required jars when you first use the plugin.</li>
-           <li>If you want to <a href="Cargo+Daemon.html">use the Cargo Daemon</a>, you'll need to download the Web application (WAR file, which you can either deploy as a Web application or use as a Java executable), and, if you wish to use it from your Java code, the client.</li>
+          <ul local-id="7853a3f5-a98f-49e2-898a-4aed649e90d2">
+           <li local-id="85d78144-3aa2-43bb-a409-23e128c4b313">
+            <p>If you want to <a href="Javadocs.html">integrate Cargo in your Java code</a>, you'll need to add the following jars to your classpath:</p>
+            <ul local-id="78daa4c1-9eca-4610-9e42-73567def6c37">
+             <li local-id="af56aa06-c45e-49a0-9da0-7e69fae5d24a">
+              <p>the <code>cargo-core-api-*</code> jars and the container implementations you wish to use (<code>cargo-core-container-*</code> jars)
+               <br>
+               <strong>or</strong> the <code>cargo-core-uberjar</code> jar which aggregates all the required jars.</p>
+             </li>
+             <li local-id="03904b7f-4e1d-4a3f-93b4-09f982beb87d">
+              <p>the extra JARs required by Cargo, as listed in the&nbsp;<a href="Installation.html">installation</a> page.</p>
+             </li>
+            </ul>
+           </li>
+           <li local-id="009c769d-b6bb-40d8-927d-1c680d703679">
+            <p>If you want to <a href="Ant+support.html">use Cargo from Ant</a>, you'll need to pick the same jars as above in addition to the <code>cargo-ant</code> jar.</p>
+           </li>
+           <li local-id="0fa41045-310b-47c6-b531-e17b120083cc">
+            <p>If you want to <a href="Maven+3+Plugin.html">use Cargo from Maven 3</a>, you don't need to install anything at all as Maven will automatically download the required jars when you first use the plugin.</p>
+           </li>
+           <li local-id="e1180cae-8a73-46ce-a93a-d38278d1f9d1">
+            <p>If you want to <a href="Cargo+Daemon.html">use the Cargo Daemon</a>, you'll need to download the Web application (WAR file, which you can either deploy as a Web application or use as a Java executable), and, if you wish to use it from your Java code, the client.</p>
+           </li>
           </ul>
-          <h3 id="Downloads-Lateststablerelease:version1.10.26">Latest stable release: version 1.10.26</h3>
+          <h3 id="Downloads-Lateststablerelease:version1.10.27">Latest stable release: version 1.10.27</h3>
           <div class="table-wrap">
-           <table class="wrapped relative-table confluenceTable" style="width: 100.0%;">
-            <colgroup>
-             <col style="width: 15.5756%;">
-            </colgroup>
-            <colgroup>
-             <col style="width: 5.20328%;">
-            </colgroup>
-            <colgroup>
-             <col style="width: 9.73916%;">
-            </colgroup>
-            <colgroup>
-             <col style="width: 7.32917%;">
-            </colgroup>
-            <colgroup>
-             <col style="width: 56.1046%;">
-            </colgroup>
-            <colgroup>
-             <col style="width: 6.04825%;">
-            </colgroup>
+           <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh">Category</th>
-              <th class="confluenceTh">Version</th>
-              <th class="confluenceTh">Artifacts</th>
-              <th class="confluenceTh">Source</th>
-              <th class="confluenceTh">Description</th>
-              <th class="confluenceTh">Release notes</th>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><strong>Core Uberjar</strong></td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.26/cargo-core-uberjar-1.10.26.jar">cargo-core-uberjar</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.26/cargo-core-uberjar-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Convenience jar containing all the <strong>Core API</strong> and <strong>Core Containers</strong> jars</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><strong>Extensions</strong></td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.26/cargo-ant-1.10.26.jar">cargo-ant</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.26/cargo-ant-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Ant tasks for Cargo</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <th class="confluenceTh">
+               <p><strong>Category</strong></p>
+              </th>
+              <th class="confluenceTh">
+               <p><strong>Version</strong></p>
+              </th>
+              <th class="confluenceTh">
+               <p><strong>Artifacts</strong></p>
+              </th>
+              <th class="confluenceTh">
+               <p><strong>Source</strong></p>
+              </th>
+              <th class="confluenceTh">
+               <p><strong>Description</strong></p>
+              </th>
+              <th class="confluenceTh">
+               <p><strong>Release notes</strong></p>
+              </th>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p><strong>Core Uberjar</strong></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-maven3-plugin/1.10.26/cargo-maven3-plugin-1.10.26.jar">cargo-maven3-plugin</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-maven3-plugin/1.10.26/cargo-maven3-plugin-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Maven 3&nbsp;plugin for Cargo</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd">
-               <br>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
               </td>
-              <td colspan="1" class="confluenceTd">1.10.26</td>
-              <td colspan="1" class="confluenceTd">
-               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.26/cargo-daemon-webapp-1.10.26.war">cargo-daemon-webapp</a></p>
-               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-client/1.10.26/cargo-daemon-client-1.10.26.jar">cargo-daemon-client</a></p>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.27/cargo-core-uberjar-1.10.27.jar">cargo-core-uberjar</a></p>
               </td>
-              <td colspan="1" class="confluenceTd">
-               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.26/cargo-daemon-webapp-1.10.26-sources.jar">Source JAR (webapp)</a></p>
-               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-client/1.10.26/cargo-daemon-client-1.10.26-sources.jar">Source JAR (client)</a></p>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-uberjar/1.10.27/cargo-core-uberjar-1.10.27-sources.jar">Source JAR</a></p>
               </td>
-              <td colspan="1" class="confluenceTd">Cargo Daemon, a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine.</td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><strong>Tools</strong></td>
-              <td colspan="1" class="confluenceTd">1.10.26</td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-11-deployer/1.10.26/cargo-jetty-11-deployer-1.10.26.war">cargo-jetty-11-deployer</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-11-onwards-deployer/1.10.26/cargo-jetty-11-onwards-deployer-1.10.26-sources.jar">Source JAR</a></td>
-              <td colspan="1" class="confluenceTd">The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 11.x (Jetty from Eclipse.org, implementing Jakarta EE).</td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd">
-               <br>
+              <td class="confluenceTd">
+               <p>Convenience jar containing all the <strong>Core API</strong> and <strong>Core Containers</strong> jars</p>
               </td>
-              <td colspan="1" class="confluenceTd">1.10.26</td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-10-deployer/1.10.26/cargo-jetty-10-deployer-1.10.26.war">cargo-jetty-10-deployer</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-10-deployer/1.10.26/cargo-jetty-10-deployer-1.10.26-sources.jar">Source JAR</a></td>
-              <td colspan="1" class="confluenceTd">The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 10.x (Jetty from Eclipse.org).</td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><strong>
-                <br>
-               </strong></td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-7-to-jetty-9-deployer/1.10.26/cargo-jetty-7-to-jetty-9-deployer-1.10.26.war">cargo-jetty-7-to-jetty-9-deployer</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-7-to-jetty-9-deployer/1.10.26/cargo-jetty-7-to-jetty-9-deployer-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 7.x to Jetty 9.x (Jetty from Eclipse.org).</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p><strong>Extensions</strong></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-6-deployer/1.10.26/cargo-jetty-6-deployer-1.10.26.war">cargo-jetty-6-deployer</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-6-and-earlier-deployer/1.10.26/cargo-jetty-6-and-earlier-deployer-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 6.x (Jetty from Mortbay.org), and won't work with any earlier version of Jetty.</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><span class="confluence-anchor-link conf-macro output-inline" id="Downloads-licensedDTDs"><span class="confluence-anchor-link" id="licensedDTDs"> </span></span></td>
-              <td colspan="1" class="confluenceTd">1.10.26</td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-licensed-dtds/1.10.26/cargo-licensed-dtds-1.10.26.jar">cargo-licensed-dtds</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-licensed-dtds/1.10.26/cargo-licensed-dtds-1.10.26-sources.jar">Source JAR</a></td>
-              <td colspan="1" class="confluenceTd">DTDs that are used by some Cargo components which have licenses incompatible with the rest of Cargo.You need to add this to your classpath if you wish to use the Cargo Java API or Ant tasks offline, and are getting strange error messages with XML parsers such as <code>java.<wbr>net.<wbr>UnknownHostException: java.<wbr>sun.<wbr>com</code>.</td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><strong>Core API</strong></td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-util/1.10.26/cargo-core-api-util-1.10.26.jar">cargo-core-api-util</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-util/1.10.26/cargo-core-api-util-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Utility classes used by other core API jars</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.27/cargo-ant-1.10.27.jar">cargo-ant</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-ant/1.10.27/cargo-ant-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Ant tasks for Cargo</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-module/1.10.26/cargo-core-api-module-1.10.26.jar">cargo-core-api-module</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-module/1.10.26/cargo-core-api-module-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">API to parse/create J2EE Modules (WAR, EAR, etc)</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-maven3-plugin/1.10.27/cargo-maven3-plugin-1.10.27.jar">cargo-maven3-plugin</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-maven3-plugin/1.10.27/cargo-maven3-plugin-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Maven 3&nbsp;plugin for Cargo</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-container/1.10.26/cargo-core-api-container-1.10.26.jar">cargo-core-api-container</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-container/1.10.26/cargo-core-api-container-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">The main Cargo Container API and all associated object</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.27/cargo-daemon-webapp-1.10.27.war">cargo-daemon-webapp</a></p>
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-client/1.10.27/cargo-daemon-client-1.10.27.jar">cargo-daemon-client</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-webapp/1.10.27/cargo-daemon-webapp-1.10.27-sources.jar">Source JAR (webapp)</a></p>
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-daemon-client/1.10.27/cargo-daemon-client-1.10.27-sources.jar">Source JAR (client)</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Cargo Daemon, a Web-based application that uses the&nbsp;Cargo API to configure, start and stop containers on a remote machine.</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p><strong>Tools</strong></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-generic/1.10.26/cargo-core-api-generic-1.10.26.jar">cargo-core-api-generic</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-generic/1.10.26/cargo-core-api-generic-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Generic API wrapping the main Cargo Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><strong>Core Containers</strong></td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-geronimo/1.10.26/cargo-core-container-geronimo-1.10.26.jar">cargo-core-container-geronimo</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-geronimo/1.10.26/cargo-core-container-geronimo-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Geronimo implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-11-deployer/1.10.27/cargo-jetty-11-deployer-1.10.27.war">cargo-jetty-11-deployer</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-11-onwards-deployer/1.10.27/cargo-jetty-11-onwards-deployer-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 11.x (Jetty from Eclipse.org, implementing Jakarta EE).</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-glassfish/1.10.26/cargo-core-container-glassfish-1.10.26.jar">cargo-core-container-glassfish</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-glassfish/1.10.26/cargo-core-container-glassfish-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Glassfish implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-10-deployer/1.10.27/cargo-jetty-10-deployer-1.10.27.war">cargo-jetty-10-deployer</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-10-deployer/1.10.27/cargo-jetty-10-deployer-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 10.x (Jetty from Eclipse.org).</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jboss/1.10.26/cargo-core-container-jboss-1.10.26.jar">cargo-core-container-jboss</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jboss/1.10.26/cargo-core-container-jboss-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">JBoss implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-7-to-jetty-9-deployer/1.10.27/cargo-jetty-7-to-jetty-9-deployer-1.10.27.war">cargo-jetty-7-to-jetty-9-deployer</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-7-to-jetty-9-deployer/1.10.27/cargo-jetty-7-to-jetty-9-deployer-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 7.x to Jetty 9.x (Jetty from Eclipse.org).</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jetty/1.10.26/cargo-core-container-jetty-1.10.26.jar">cargo-core-container-jetty</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jetty/1.10.26/cargo-core-container-jetty-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Jetty implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-6-deployer/1.10.27/cargo-jetty-6-deployer-1.10.27.war">cargo-jetty-6-deployer</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-jetty-6-and-earlier-deployer/1.10.27/cargo-jetty-6-and-earlier-deployer-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 6.x (Jetty from Mortbay.org), and won't work with any earlier version of Jetty.</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
+               <p>Anchor</p>
+               <p>​
+                <br></p>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jo/1.10.26/cargo-core-container-jo-1.10.26.jar">cargo-core-container-jo</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jo/1.10.26/cargo-core-container-jo-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">jo! implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-licensed-dtds/1.10.27/cargo-licensed-dtds-1.10.27.jar">cargo-licensed-dtds</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-licensed-dtds/1.10.27/cargo-licensed-dtds-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>DTDs that are used by some Cargo components which have licenses incompatible with the rest of Cargo.You need to add this to your classpath if you wish to use the Cargo Java API or Ant tasks offline, and are getting strange error messages with XML parsers such as <code>java.<wbr>net.<wbr>UnknownHostException: java.<wbr>sun.<wbr>com</code>.</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p><strong>Core API</strong></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jonas/1.10.26/cargo-core-container-jonas-1.10.26.jar">cargo-core-container-jonas</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jonas/1.10.26/cargo-core-container-jonas-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">JOnAS implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-util/1.10.27/cargo-core-api-util-1.10.27.jar">cargo-core-api-util</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-util/1.10.27/cargo-core-api-util-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Utility classes used by other core API jars</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jrun/1.10.26/cargo-core-container-jrun-1.10.26.jar">cargo-core-container-jrun</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jrun/1.10.26/cargo-core-container-jrun-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">JRun implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd">
-               <br>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
               </td>
-              <td colspan="1" class="confluenceTd">1.10.26</td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-liberty/1.10.26/cargo-core-container-liberty-1.10.26.jar">cargo-core-container-liberty</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-liberty/1.10.26/cargo-core-container-liberty-1.10.26-sources.jar">Source JAR</a></td>
-              <td colspan="1" class="confluenceTd">WebSphere Liberty implementation of the Core Container API</td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-module/1.10.27/cargo-core-api-module-1.10.27.jar">cargo-core-api-module</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-module/1.10.27/cargo-core-api-module-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>API to parse/create J2EE Modules (WAR, EAR, etc)</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-orion/1.10.26/cargo-core-container-orion-1.10.26.jar">cargo-core-container-orion</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-orion/1.10.26/cargo-core-container-orion-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Orion implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-container/1.10.27/cargo-core-api-container-1.10.27.jar">cargo-core-api-container</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-container/1.10.27/cargo-core-api-container-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>The main Cargo Container API and all associated object</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-resin/1.10.26/cargo-core-container-resin-1.10.26.jar">cargo-core-container-resin</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-resin/1.10.26/cargo-core-container-resin-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Resin implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-generic/1.10.27/cargo-core-api-generic-1.10.27.jar">cargo-core-api-generic</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-api-generic/1.10.27/cargo-core-api-generic-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Generic API wrapping the main Cargo Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p><strong>Core Containers</strong></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-tomcat/1.10.26/cargo-core-container-tomcat-1.10.26.jar">cargo-core-container-tomcat</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-tomcat/1.10.26/cargo-core-container-tomcat-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">Tomcat implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-geronimo/1.10.27/cargo-core-container-geronimo-1.10.27.jar">cargo-core-container-geronimo</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-geronimo/1.10.27/cargo-core-container-geronimo-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Geronimo implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-tomee/1.10.26/cargo-core-container-tomee-1.10.26.jar">cargo-core-container-tomee</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-tomee/1.10.26/cargo-core-container-tomee-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">TomEE implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-glassfish/1.10.27/cargo-core-container-glassfish-1.10.27.jar">cargo-core-container-glassfish</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-glassfish/1.10.27/cargo-core-container-glassfish-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Glassfish implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
               <td class="confluenceTd">
-               <br>
+               <p></p>
               </td>
-              <td class="confluenceTd">1.10.26</td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-weblogic/1.10.26/cargo-core-container-weblogic-1.10.26.jar">cargo-core-container-weblogic</a></td>
-              <td class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-weblogic/1.10.26/cargo-core-container-weblogic-1.10.26-sources.jar">Source JAR</a></td>
-              <td class="confluenceTd">WebLogic implementation of the Core Container API</td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jboss/1.10.27/cargo-core-container-jboss-1.10.27.jar">cargo-core-container-jboss</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jboss/1.10.27/cargo-core-container-jboss-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>JBoss implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd">
-               <br>
+              <td class="confluenceTd">
+               <p></p>
               </td>
-              <td colspan="1" class="confluenceTd">1.10.26</td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-websphere/1.10.26/cargo-core-container-websphere-1.10.26.jar">cargo-core-container-websphere</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-websphere/1.10.26/cargo-core-container-websphere-1.10.26-sources.jar">Source JAR</a></td>
-              <td colspan="1" class="confluenceTd">WebSphere implementation of the Core Container API</td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jetty/1.10.27/cargo-core-container-jetty-1.10.27.jar">cargo-core-container-jetty</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jetty/1.10.27/cargo-core-container-jetty-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Jetty implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd">
-               <br>
+              <td class="confluenceTd">
+               <p></p>
               </td>
-              <td colspan="1" class="confluenceTd">1.10.26</td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly/1.10.26/cargo-core-container-wildfly-1.10.26.jar">cargo-core-container-wildfly</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly/1.10.26/cargo-core-container-wildfly-1.10.26-sources.jar">Source JAR</a></td>
-              <td colspan="1" class="confluenceTd">WildFly implementation of the Core Container API</td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jo/1.10.27/cargo-core-container-jo-1.10.27.jar">cargo-core-container-jo</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jo/1.10.27/cargo-core-container-jo-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>jo! implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd">
-               <br>
+              <td class="confluenceTd">
+               <p></p>
               </td>
-              <td colspan="1" class="confluenceTd">1.10.26</td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly-swarm/1.10.26/cargo-core-container-wildfly-swarm-1.10.26.jar">cargo-core-container-wildfly-swarm</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly-swarm/1.10.26/cargo-core-container-wildfly-swarm-1.10.26-sources.jar">Source JAR</a></td>
-              <td colspan="1" class="confluenceTd">WildFly Swarm implementation of the Core Container API</td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725">Notes</a></td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jonas/1.10.27/cargo-core-container-jonas-1.10.27.jar">cargo-core-container-jonas</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jonas/1.10.27/cargo-core-container-jonas-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>JOnAS implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jrun/1.10.27/cargo-core-container-jrun-1.10.27.jar">cargo-core-container-jrun</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-jrun/1.10.27/cargo-core-container-jrun-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>JRun implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-liberty/1.10.27/cargo-core-container-liberty-1.10.27.jar">cargo-core-container-liberty</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-liberty/1.10.27/cargo-core-container-liberty-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>WebSphere Liberty implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-orion/1.10.27/cargo-core-container-orion-1.10.27.jar">cargo-core-container-orion</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-orion/1.10.27/cargo-core-container-orion-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Orion implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-resin/1.10.27/cargo-core-container-resin-1.10.27.jar">cargo-core-container-resin</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-resin/1.10.27/cargo-core-container-resin-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Resin implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-tomcat/1.10.27/cargo-core-container-tomcat-1.10.27.jar">cargo-core-container-tomcat</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-tomcat/1.10.27/cargo-core-container-tomcat-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Tomcat implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-tomee/1.10.27/cargo-core-container-tomee-1.10.27.jar">cargo-core-container-tomee</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-tomee/1.10.27/cargo-core-container-tomee-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>TomEE implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-weblogic/1.10.27/cargo-core-container-weblogic-1.10.27.jar">cargo-core-container-weblogic</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-weblogic/1.10.27/cargo-core-container-weblogic-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>WebLogic implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-websphere/1.10.27/cargo-core-container-websphere-1.10.27.jar">cargo-core-container-websphere</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-websphere/1.10.27/cargo-core-container-websphere-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>WebSphere implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly/1.10.27/cargo-core-container-wildfly-1.10.27.jar">cargo-core-container-wildfly</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly/1.10.27/cargo-core-container-wildfly-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>WildFly implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p></p>
+              </td>
+              <td class="confluenceTd">
+               <p>1.10.27</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly-swarm/1.10.27/cargo-core-container-wildfly-swarm-1.10.27.jar">cargo-core-container-wildfly-swarm</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://repo.maven.apache.org/maven2/org/codehaus/cargo/cargo-core-container-wildfly-swarm/1.10.27/cargo-core-container-wildfly-swarm-1.10.27-sources.jar">Source JAR</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p>WildFly Swarm implementation of the Core Container API</p>
+              </td>
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11758">Notes</a></p>
+              </td>
              </tr>
             </tbody>
            </table>
           </div>
-          <p><span class="confluence-anchor-link conf-macro output-inline" id="Downloads-documentation"><span class="confluence-anchor-link" id="documentation"> </span></span></p>
           <h3 id="Downloads-Documentation">Documentation</h3>
-          <p>Documentation for Codehaus Cargo 1.10.26 can be found&nbsp;<a href="attachments/CARGO-1.10.26.zip">here</a>.</p>
-          <p><span class="confluence-anchor-link conf-macro output-inline" id="Downloads-continousBuilds"><span class="confluence-anchor-link" id="continousBuilds"> </span></span></p>
+          <p>Documentation for Codehaus Cargo 1.10.27 can be found&nbsp;<a href="https://codehaus-cargo.atlassian.net/wiki/download/attachments/491654/CARGO-1.10.27.zip">here</a>.</p>
           <h3 id="Downloads-Versioncurrentlybeingdeveloped">Version currently being developed</h3>
           <p>If you want to get access to the version currently being developed, please refer to the instructions in the <a href="Building.html">Building</a> page to build the latest <code>SNAPSHOT</code> version yourself.</p>
           <p>Since the move from Sonatype Nexus to Maven Central, we do not publish any <code>SNAPSHOT</code> versions anymore.</p>
@@ -921,702 +1226,1426 @@
           <h3 id="Downloads-VersionStatus">Version Status</h3>
           <p>Click in the status column to get release notes:</p>
           <div class="table-wrap">
-           <table class="wrapped relative-table confluenceTable" style="width: 28.6765%;">
-            <colgroup>
-             <col style="width: 21.5938%;">
-            </colgroup>
-            <colgroup>
-             <col style="width: 18.5219%;">
-            </colgroup>
-            <colgroup>
-             <col style="width: 59.8843%;">
-            </colgroup>
+           <table class="confluenceTable">
             <tbody>
              <tr>
-              <th class="confluenceTh">Version</th>
-              <th class="confluenceTh">Status</th>
-              <th class="confluenceTh">Comments</th>
+              <th class="confluenceTh">
+               <p><strong>Version</strong></p>
+              </th>
+              <th class="confluenceTh">
+               <p><strong>Status</strong></p>
+              </th>
+              <th class="confluenceTh">
+               <p><strong>Comments</strong></p>
+              </th>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.github.io/cargo/Downloads.html">1.10.26</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11725"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="https://codehaus-cargo.github.io/cargo/Downloads.html">1.10.27</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 3 April 2026</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.26</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 2 January 2026</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.25</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11692"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.25</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 10 November 2025</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.24</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11659"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.24</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 15 October 2025</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.23</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11626"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.23</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 12 October 2025</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.22</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11593"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.22</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 7 September 2025</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.21</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11560"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.21</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 11 August 2025</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.20</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11527"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.20</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 8 June 2025</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.19</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11495"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.19</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 8 April 2025</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.18</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11461"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 3 March 2025</td>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.18</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 3 March 2025</p>
+              </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.17</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11460"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.17</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 1 February 2025</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.16</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11459"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.16</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 14 December 2024</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.15</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11458"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.15</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 25 September 2024</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.14</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11457"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.14</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 2 July 2024</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.13</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11456"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.13</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 27 April 2024</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.12</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11455"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.12</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 4 February 2024</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.11</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11454"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.11</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 28 November 2023</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.10</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11453"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.10</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 7 October 2023</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.9</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11452"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.9</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 7 August 2023</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.8</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11451"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.8</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 1 July 2023</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.7</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11450"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.7</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 19 May 2023</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.6</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11449"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.6</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 12 March 2023</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.5</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11448"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.5</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
                <p>Released on 8 February 2023</p>
               </td>
              </tr>
              <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.4</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11447"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 26 November 2022</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.3</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11446"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 23 October 2022</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.2</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11445"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 17 September 2022</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.1</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11444"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 17 August 2022</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.10.0</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11429"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 16 August 2022</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.13</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11442"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 30 June 2022</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.12</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11441"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 9 June 2022</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.11</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11440"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 23 April 2022</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.10</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11439"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 27 February 2022</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.9</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11438"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 24 December 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.8</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11437"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 18 October 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.7</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11436"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 23 August 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.6</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11435"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 6 August 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.5</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11434"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 29 June 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.4</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11433"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 13 May 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.3</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11432"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 22 March 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.2</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11431"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 27 February 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.1</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11430"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 2 February 2021</td>
-             </tr>
-            </tbody>
-            <tbody>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.9.0</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11423"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 29 January 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.8.5</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11428"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 27 January 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.8.4</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11427"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 2 January 2021</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.8.3</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11426"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 15 December 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.8.2</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11425"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 27 September 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.8.1</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11424"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 17 September 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.8.0</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11406"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 14 August 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.16</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11422"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 8 August 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.15</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11421"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 10 July 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.14</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11420"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 9 July 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.13</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11419"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 2 June 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.12</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11418"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 30 April 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.11</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11417"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 13 March 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.10</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11416"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 30 January 2020</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.9</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11415"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 11 December 2019</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.8</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11414"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 1 December 2019</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.7</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11413"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 17 August 2019</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.6</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11412"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 16 July 2019</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.5</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11411"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 21 June 2019</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.4</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11410"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 13 May 2019</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.3</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11409"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 9 March 2019</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.2</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11408"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 26 January 2019</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.1</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11407"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 9 December 2018</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.7.0</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10800"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 1 November 2018</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.11</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11405"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 16 October 2018</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.10</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11404"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 8 September 2018</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.9</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11403"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 1 August 2018</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.8</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11402"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 1 June 2018</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.7</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11401"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 3 March 2018</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.6</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11400"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 24 December 2017</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.5</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11300"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 17 October 2017</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.4</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11200"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 2 Jule 2017</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.3</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11100"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 20 April 2017</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.2</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=11000"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 6 January 2017</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.1</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10900"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 8 November 2016</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.6.0</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=1.7.6"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 12 September 2016</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.5.1</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10701"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 8 September 2016</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.5.0</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10077"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 1 June 2016</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.19</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10500"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 20 March 2016</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.18</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10400"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 17 January 2016</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.17</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10300"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 13 December 2015</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.16</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10200"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 10 September 2015</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.15</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10117"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 14 July 2015</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.14</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10076"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 25 April 2015</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.13</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10113"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 07 March 2015</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.12</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10112"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 22 January 2015</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.11</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10111"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 21 November 2014</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.10</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10038"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 21 September 2014</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.9</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10075"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 29 August 2014</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.8</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10074"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 01 April 2014</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.7</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10073"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 08 February 2014</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.6</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10072"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 20 December 2013</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.5</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10071"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 18 October 2013</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.4</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10116"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 29 August 2013</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.3</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10115"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 21 Jule 2013</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.2</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10114"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 29 May 2013</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.4.0</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10109"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 16 April 2013</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.3.3</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10097"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 14 February 2013</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.3.2</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10081"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 12 January 2013</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.3.1</span></a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10108"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 11 November 2012</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.3.0</span></a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10107"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 19 October 2012</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.4</span></a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10106"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 24 August 2012</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.3</span></a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10079"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 20 Jule 2012</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.2</span></a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10078"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 21 May 2012</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html"><span class="confluence-link">1.2.1</span></a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10105"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 01 April 2012</td>
-             </tr>
-             <tr>
-              <td colspan="1" class="confluenceTd"><a href="Archived+Downloads.html">1.2.0</a></td>
-              <td colspan="1" class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10080"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td colspan="1" class="confluenceTd">Released on 24 January 2012</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.1.4</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10082"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 03 December 2011</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.1.3</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10103"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 05 October 2011</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.1.2</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10083"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 06 August 2011</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.1.1</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10085"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 14 June 2011</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.1.0</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10084"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 05 May 2011</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.0.6</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10058"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 20 January 2011</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.0.5</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10057"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 20 November 2010</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.0.4</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10056"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 03 November 2010</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.0.3</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10054"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 25 August 2010</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.0.2</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10052"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 08 July 2010</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.0.1</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10046"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 02 June 2010</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">1.0</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10043"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 26 March 2009</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">0.9</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10012"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 10 March 2007</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">0.8</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10009"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 22 March 2006</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">0.7</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10008"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 30 December 2005</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">0.6</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10093"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 21 July 2005</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">0.5</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10092"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 30 April 2005</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">0.4</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10091"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 26 November 2004</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">0.3</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10090"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 30 October 2004</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">0.2</a></td>
-              <td class="confluenceTd"><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10088"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></td>
-              <td class="confluenceTd">Released on 03 October 2004</td>
-             </tr>
-             <tr>
-              <td class="confluenceTd"><a href="Archived+Downloads.html">0.1</a></td>
               <td class="confluenceTd">
-               <p><a href="https://codehaus-cargo.atlassian.net/secure/ReleaseNote.jspa?projectId=10000&amp;styleName=Html&amp;version=10086"><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></a></p>
+               <p><a href="Archived+Downloads.html">1.10.4</a></p>
               </td>
-              <td class="confluenceTd">Released on 11 September 2004</td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 26 November 2022</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 23 October 2022</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 17 September 2022</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 17 August 2022</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.10.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 16 August 2022</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.13</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 30 June 2022</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.12</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 9 June 2022</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.11</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 23 April 2022</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.10</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 27 February 2022</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.9</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 24 December 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.8</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 18 October 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.7</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 23 August 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.6</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 6 August 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.5</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 29 June 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.4</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 13 May 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 22 March 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 27 February 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 2 February 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.9.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 29 January 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.8.5</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 27 January 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.8.4</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 2 January 2021</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.8.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 15 December 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.8.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 27 September 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.8.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 17 September 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.8.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 14 August 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.16</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 8 August 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.15</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 10 July 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.14</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 9 July 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.13</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 2 June 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.12</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 30 April 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.11</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 13 March 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.10</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 30 January 2020</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.9</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 11 December 2019</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.8</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 1 December 2019</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.7</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 17 August 2019</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.6</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 16 July 2019</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.5</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 21 June 2019</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.4</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 13 May 2019</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 9 March 2019</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 26 January 2019</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 9 December 2018</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.7.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 1 November 2018</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.11</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 16 October 2018</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.10</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 8 September 2018</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.9</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 1 August 2018</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.8</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 1 June 2018</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.7</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 3 March 2018</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.6</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 24 December 2017</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.5</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 17 October 2017</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.4</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 2 Jule 2017</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 20 April 2017</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 6 January 2017</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 8 November 2016</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.6.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 12 September 2016</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.5.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 8 September 2016</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.5.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 1 June 2016</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.19</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 20 March 2016</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.18</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 17 January 2016</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.17</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 13 December 2015</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.16</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 10 September 2015</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.15</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 14 July 2015</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.14</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 25 April 2015</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.13</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 07 March 2015</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.12</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 22 January 2015</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.11</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 21 November 2014</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.10</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 21 September 2014</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.9</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 29 August 2014</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.8</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 01 April 2014</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.7</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 08 February 2014</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.6</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 20 December 2013</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.5</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 18 October 2013</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.4</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 29 August 2013</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 21 Jule 2013</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 29 May 2013</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.4.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 16 April 2013</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.3.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 14 February 2013</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.3.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 12 January 2013</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.3.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 11 November 2012</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.3.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 19 October 2012</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.2.4</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 24 August 2012</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.2.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 20 Jule 2012</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.2.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 21 May 2012</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.2.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 01 April 2012</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.2.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 24 January 2012</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.1.4</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 03 December 2011</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.1.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 05 October 2011</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.1.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 06 August 2011</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.1.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 14 June 2011</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.1.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 05 May 2011</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.0.6</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 20 January 2011</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.0.5</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 20 November 2010</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.0.4</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 03 November 2010</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.0.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 25 August 2010</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.0.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 08 July 2010</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.0.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 02 June 2010</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">1.0</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 26 March 2009</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">0.9</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 10 March 2007</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">0.8</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 22 March 2006</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">0.7</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 30 December 2005</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">0.6</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 21 July 2005</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">0.5</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 30 April 2005</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">0.4</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 26 November 2004</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">0.3</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 30 October 2004</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">0.2</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 03 October 2004</p>
+              </td>
+             </tr>
+             <tr>
+              <td class="confluenceTd">
+               <p><a href="Archived+Downloads.html">0.1</a></p>
+              </td>
+              <td class="confluenceTd">
+               <p><img class="emoticon emoticon-tick" src="attachments/check.png" width="16" height="16" alt="(tick)"></p>
+              </td>
+              <td class="confluenceTd">
+               <p>Released on 11 September 2004</p>
+              </td>
              </tr>
             </tbody>
            </table>

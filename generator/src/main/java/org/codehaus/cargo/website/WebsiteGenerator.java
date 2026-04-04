@@ -21,6 +21,7 @@ package org.codehaus.cargo.website;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,14 +33,17 @@ import java.net.URLConnection;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadLocalRandom;
@@ -57,6 +61,11 @@ import org.jsoup.nodes.Element;
  */
 public class WebsiteGenerator implements Runnable
 {
+    /**
+     * Authorization string, Base64, for the API calls.
+     */
+    private static String confluenceAuthentication;
+
     /**
      * Wiki pages (original extracts)
      */
@@ -113,8 +122,20 @@ public class WebsiteGenerator implements Runnable
      */
     public static void main(String[] args) throws Exception
     {
-        if (Boolean.parseBoolean(System.getProperty("cargo.download", "true")))
+        String confluenceCredentialsPath = System.getProperty("cargo.confluenceCredentialsPath");
+        if (confluenceCredentialsPath != null && confluenceCredentialsPath.trim().length() > 0)
         {
+            try (InputStream input = new FileInputStream(confluenceCredentialsPath.trim()))
+            {
+                Properties confluenceCredentials = new Properties();
+                confluenceCredentials.load(input);
+                String userInfo =
+                    confluenceCredentials.getProperty("cargo.confluence.username") + ":"
+                        + confluenceCredentials.getProperty("cargo.confluence.apiKey");
+                WebsiteGenerator.confluenceAuthentication = "Basic "
+                    + Base64.getEncoder().encodeToString(
+                        userInfo.getBytes(StandardCharsets.UTF_8));
+            }
             download();
         }
         parse();
@@ -177,8 +198,9 @@ public class WebsiteGenerator implements Runnable
         }
 
         URL url =
-            new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/space/CARGO/content?limit=2048&expand=ancestors");
+            new URL("https://codehaus-cargo.atlassian.net/wiki/api/v2/spaces/753666/pages?limit=250");
         URLConnection connection = url.openConnection();
+        connection.addRequestProperty("Authorization", WebsiteGenerator.confluenceAuthentication);
         StringBuilder sb = new StringBuilder();
         try (BufferedReader reader =
             new BufferedReader(new InputStreamReader(connection.getInputStream())))
@@ -188,15 +210,16 @@ public class WebsiteGenerator implements Runnable
                 sb.append(line);
             }
         }
-
         JSONObject response = new JSONObject(sb.toString());
-        JSONArray pages = response.getJSONObject("page").getJSONArray("results");
+        JSONArray pages = response.getJSONArray("results");
         System.out.println("Found " + pages.length() + " pages to handle");
         for (int i = 0; i < pages.length(); i++)
         {
-            JSONObject links = pages.getJSONObject(i).getJSONObject("_links");
             WebsiteGenerator runnable = new WebsiteGenerator();
-            runnable.url = new URL(links.getString("self") + "?expand=body.view");
+            String id = pages.getJSONObject(i).getString("id");
+            url = new URL(
+                "https://codehaus-cargo.atlassian.net/wiki/api/v2/pages/" + id + "?body-format=view");
+            runnable.url = url;
             synchronized (downloads)
             {
                 downloads.add(runnable.url);
@@ -205,16 +228,31 @@ public class WebsiteGenerator implements Runnable
             CONTENT_DOWNLOADERS.submit(thread);
         }
 
-        JSONArray blogposts = response.getJSONObject("blogpost").getJSONArray("results");
+        url =
+            new URL("https://codehaus-cargo.atlassian.net/wiki/api/v2/spaces/753666/blogposts?limit=250");
+        connection = url.openConnection();
+        connection.addRequestProperty("Authorization", WebsiteGenerator.confluenceAuthentication);
+        sb = new StringBuilder();
+        try (BufferedReader reader =
+            new BufferedReader(new InputStreamReader(connection.getInputStream())))
+        {
+            for (String line = reader.readLine(); line != null; line = reader.readLine())
+            {
+                sb.append(line);
+            }
+        }
+        response = new JSONObject(sb.toString());
+        JSONArray blogposts = response.getJSONArray("results");
         System.out.println("Found " + blogposts.length() + " blog posts to handle");
         for (int i = 0; i < blogposts.length(); i++)
         {
-            blogpostIdentifiers.put(
-                blogposts.getJSONObject(i).getString("id"),
+            String id = blogposts.getJSONObject(i).getString("id");
+            blogpostIdentifiers.put(id,
                 toFilename(blogposts.getJSONObject(i).getString("title")));
-            JSONObject links = blogposts.getJSONObject(i).getJSONObject("_links");
             WebsiteGenerator runnable = new WebsiteGenerator();
-            runnable.url = new URL(links.getString("self") + "?expand=body.view");
+            url = new URL(
+                "https://codehaus-cargo.atlassian.net/wiki/api/v2/blogposts/" + id + "?body-format=view");
+            runnable.url = url;
             synchronized (downloads)
             {
                 downloads.add(runnable.url);
@@ -293,17 +331,26 @@ public class WebsiteGenerator implements Runnable
         File target = new File("target");
         File attachments = new File(target, "attachments");
         File classes = new File(target, "classes");
-        Map<String, List<String>> breadcrumbs = new HashMap<String, List<String>>();
         JSONArray pages = new JSONArray(readFile(new File(target, "temp/pages.json")));
+        Map<String, JSONObject> pageDetails = new HashMap<String, JSONObject>(pages.length());
         for (int i = 0; i < pages.length(); i++)
         {
             JSONObject page = pages.getJSONObject(i);
-            JSONArray ancestors = page.getJSONArray("ancestors");
-            List<String> breadcrumb = new ArrayList<String>(ancestors.length());
-            for (int j = 0; j < ancestors.length(); j++)
+            pageDetails.put(page.getString("id"), page);
+        }
+        Map<String, List<String>> breadcrumbs = new HashMap<String, List<String>>();
+        for (int i = 0; i < pages.length(); i++)
+        {
+            List<String> breadcrumb = new ArrayList<String>();
+            JSONObject page = pages.getJSONObject(i);
+            Object parent = page.get("parentId");
+            while (parent != null && parent instanceof String)
             {
-                breadcrumb.add(ancestors.getJSONObject(j).getString("title"));
+                JSONObject ancestor = pageDetails.get(parent.toString());
+                breadcrumb.add(ancestor.getString("title"));
+                parent = ancestor.get("parentId");
             }
+            Collections.reverse(breadcrumb);
             breadcrumbs.put(toFilename(page.getString("title")), breadcrumb);
         }
         Files.copy(new File(classes, "blank.gif").toPath(),
@@ -457,13 +504,14 @@ public class WebsiteGenerator implements Runnable
             for (int i = 0; i < WebsiteGenerator.NUMBER_RETRIES; i++)
             {
                 URLConnection connection = url.openConnection();
+                connection.addRequestProperty("Authorization", WebsiteGenerator.confluenceAuthentication);
                 try (InputStream is = connection.getInputStream())
                 {
                     String filePath = url.getPath();
                     filePath = filePath.substring(filePath.lastIndexOf('/'));
                     filePath = URLDecoder.decode(filePath, "UTF-8");
                     File file = new File("target");
-                    if (url.getPath().contains("/wiki/rest/api/content/"))
+                    if ("body-format=view".equals(url.getQuery()))
                     {
                         file = new File(file, "temp");
                     }
@@ -483,7 +531,7 @@ public class WebsiteGenerator implements Runnable
                             WebsiteGenerator.size += bytesRead;
                         }
                     }
-                    if (url.getPath().contains("/wiki/rest/api/content/"))
+                    if ("body-format=view".equals(url.getQuery()))
                     {
                         value = readFile(file);
                     }
@@ -531,7 +579,7 @@ public class WebsiteGenerator implements Runnable
                         {
                             boolean found = false;
                             URL pageUrl =
-                                new URL("https://codehaus-cargo.atlassian.net/wiki/rest/api/content/" + identifier + "?expand=body.view");
+                                new URL("https://codehaus-cargo.atlassian.net/wiki/api/v2/pages/" + identifier + "?body-format=view");
                             synchronized (downloads)
                             {
                                 found = downloads.contains(pageUrl);
@@ -643,7 +691,8 @@ public class WebsiteGenerator implements Runnable
                     sb.append(value.substring(start, matcher.start()));
                     sb.append("src=\"");
                     String attachment = value.substring(matcher.start() + 5, matcher.end() - 1);
-                    if (!attachment.startsWith("https://codehaus-cargo.semaphoreci.com"))
+                    if (!attachment.startsWith("https://codehaus-cargo.semaphoreci.com")
+                        && !attachment.startsWith("https://codehaus-cargo.atlassian.net/wiki/download/thumbnails"))
                     {
                         sb.append("attachments/");
                         attachment = attachment.replace("&amp;", "&");

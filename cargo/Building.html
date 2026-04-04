@@ -147,7 +147,7 @@
           <p><a href="GlassFish+8.x.html">GlassFish 8.x</a></p>
          </li>
          <li>
-          <p><a href="3666378753.html">/wiki/spaces/CARGO/pages/3666378753</a></p>
+          <p><a href="GlassFish+9.x.html">GlassFish 9.x</a></p>
          </li>
         </ul>
        </li>
@@ -580,25 +580,35 @@
          <td class="rightColumn">
           <h1 id="Building-Prequisites">Prequisites</h1>
           <ul>
-           <li>Check out or download as a ZIP file the Codehaus Cargo source code from <a href="Source+code.html">Github</a> into a <code>CARGOHOME</code> directory (wherever you want on your machine).</li>
-           <li>Install the JDK 11. If you really want to build with JDK 8 or with JDK 12 and above, read our chapter on <a href="#Building-nonJdk11">building with older or newer versions of the JDK</a>.</li>
-           <li>Install <a href="http://maven.apache.org">Maven 3.6.3 or later</a>.
-            <br>
-            If you are using Maven 3.8.1 or newer, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="#Building-ow2override"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</a>.</li>
+           <li>
+            <p>Check out or download as a ZIP file the Codehaus Cargo source code from <a href="Source+code.html">Github</a> into a <code>CARGOHOME</code> directory (wherever you want on your machine).</p>
+           </li>
+           <li>
+            <p>Install the JDK 11. If you really want to build with JDK 8 or with JDK 12 and above, read our chapter on <a href="#nonJdk11">building with older or newer versions of the JDK</a>.</p>
+           </li>
+           <li>
+            <p>Install <a href="http://maven.apache.org">Maven 3.6.3 or later</a>.
+             <br>
+             If you are using Maven 3.8.1 or newer, you might have some <code>ArtifactTransferException</code>s with the OW2 snapshot repository (which was defined as HTTP over a decade back). You can work around these using the instructions in the chapter <a href="#ow2override">ArtifactTransferException with Maven 3.8.1 onwards</a>.</p>
+           </li>
           </ul>
           <p>Verify your installation works by running the following command in a command prompt / terminal window: <code>mvn -version</code></p>
           <h1 id="Building-Building">Building</h1>
           <p>To build Codehaus Cargo:</p>
           <ul>
-           <li>Go to <code>CARGOHOME</code> and run <code>mvn install</code>
-            <br>
-            This will build the full Cargo project.</li>
-           <li>If you wish to clean all build-generated files, <code>cd</code> to <code>CARGOHOME</code> and&nbsp;run <code>mvn clean</code></li>
+           <li>
+            <p>Go to <code>CARGOHOME</code> and run <code>mvn install</code>
+             <br>
+             This will build the full Cargo project.</p>
+           </li>
+           <li>
+            <p>If you wish to clean all build-generated files, <code>cd</code> to <code>CARGOHOME</code> and&nbsp;run <code>mvn clean</code></p>
+           </li>
           </ul>
           <div class="confluence-information-macro confluence-information-macro-information conf-macro output-block">
-           <p class="title">First time build</p>
            <span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
+            <p><strong>First time build</strong></p>
             <p>The&nbsp;Codehaus Cargo build contains functional tests. Those tests are run on different containers. The first time you build&nbsp;Codehaus Cargo it will download those container distributions which will take some time (the containers are installed into <code>core/samples/java/installs</code>). If you want to tell&nbsp;Codehaus Cargo to run only on some specific container, see below.</p>
            </div>
           </div>
@@ -608,27 +618,27 @@
           <h3 id="Building-Proxysettings">Proxy settings</h3>
           <p>If you need to build&nbsp;Codehaus Cargo from behind a proxy, proceed as follows:</p>
           <ul>
-           <li>Edit the <code>.m2/settings.xml</code> file from your home directory (<code>C:\Documents and Settings\<em>username</em></code> or <code>C:\Users\<em>username</em></code> on Windows),</li>
-           <li>Comment out the <code>&lt;proxy&gt;</code> element and fill in the proxy server settings accordingly.</li>
+           <li>
+            <p>Edit the <code>.m2/settings.xml</code> file from your home directory (<code>C:\Documents and Settings\username</code> or <code>C:\Users\username</code> on Windows),</p>
+           </li>
+           <li>
+            <p>Comment out the <code>&lt;proxy&gt;</code> element and fill in the proxy server settings accordingly.</p>
+           </li>
           </ul>
           <p><span class="confluence-anchor-link conf-macro output-inline" id="Building-ow2override"><span class="confluence-anchor-link" id="ow2override"> </span></span></p>
           <h3 id="Building-ArtifactTransferExceptionwithMaven3.8.1onwards"><code>ArtifactTransferException</code> with Maven 3.8.1 onwards</h3>
           <p>With Maven 3.8.1 onwards you might get errors such as:</p>
+          <h5 id="Building-ErrorwhenbuildingwithMaven3.8.1onwards"><strong>Error when building with Maven 3.8.1 onwards</strong></h5>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-            <b>Error when building with Maven 3.8.1 onwards</b>
-           </div>
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">org.eclipse.aether.transfer.ArtifactTransferException:
-Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.10.27-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/):
+Could not transfer artifact org.ow2.jonas.tools.configurator:api:pom:1.10.28-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/):
 Blocked mirror for repositories: [ow2-snapshot (http://repository.ow2.org/nexus/content/repositories/snapshots, default, snapshots)]</pre>
            </div>
           </div>
           <p>To work around the issue, create a <code>settings.xml</code> file in your <code>.m2</code> home which overrides the HTTP-based OW2 snapshots repository:</p>
+          <h5 id="Building-settings.xmlsample"><strong>settings.xml sample</strong></h5>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-            <b>settings.xml sample</b>
-           </div>
            <div class="codeContent panelContent pdl">
             <pre class="syntaxhighlighter-pre">&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -645,23 +655,29 @@ Blocked mirror for repositories: [ow2-snapshot (http://repository.ow2.org/nexus/
 &lt;/settings&gt;</pre>
            </div>
           </div>
-          <p class="auto-cursor-target"><span class="confluence-anchor-link conf-macro output-inline" id="Building-nonJdk11"><span class="confluence-anchor-link" id="nonJdk11"> </span></span></p>
-          <h3 class="auto-cursor-target" id="Building-BuildingwitholderornewerversionsoftheJDK">Building with older or newer versions of the JDK</h3>
-          <p class="auto-cursor-target">Codehaus Cargo has support for very old and very new containers, which implies it has quite a broad combination of Java source and target version requirements:</p>
+          <p><span class="confluence-anchor-link conf-macro output-inline" id="Building-nonJdk11"><span class="confluence-anchor-link" id="nonJdk11"> </span></span></p>
+          <h3 id="Building-BuildingwitholderornewerversionsoftheJDK">Building with older or newer versions of the JDK</h3>
+          <p>Codehaus Cargo has support for very old and very new containers, which implies it has quite a broad combination of Java source and target version requirements:</p>
           <ul>
-           <li class="auto-cursor-target"><a href="Resin+3.x.html">Resin 3.x</a> requires Java 6 (it cannot run with newer versions of Java), and since it is executed using a <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/resin/internal/ResinRun.html"><code>ResinRun</code></a> class the whole Resin container must be compiled with Java 6</li>
-           <li class="auto-cursor-target">In addition, as other containers such as <a href="JOnAS+5.x.html">JOnAS 5.x</a> also require Java 6, all test samples need to be built using Java 6</li>
-           <li class="auto-cursor-target">The <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a> for Jetty 6.x as well as for Jetty 7.x to 9.x are built with Java 6, so we can support a broad range of Java versions on these Jetty containers</li>
-           <li class="auto-cursor-target">At the same time, the <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a>s for Jetty 10.x and 11.x require the JDK 11 (because Jetty 10.x and 11.x require JDK 11 or above)</li>
+           <li>
+            <p><a href="Resin+3.x.html">Resin 3.x</a> requires Java 6 (it cannot run with newer versions of Java), and since it is executed using a <a href="https://codehaus-cargo.github.io/apidocs/org/codehaus/cargo/container/resin/internal/ResinRun.html">ResinRun</a> class the whole Resin container must be compiled with Java 6</p>
+           </li>
+           <li>
+            <p>In addition, as other containers such as <a href="JOnAS+5.x.html">JOnAS 5.x</a> also require Java 6, all test samples need to be built using Java 6</p>
+           </li>
+           <li>
+            <p>The <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a> for Jetty 6.x as well as for Jetty 7.x to 9.x are built with Java 6, so we can support a broad range of Java versions on these Jetty containers</p>
+           </li>
+           <li>
+            <p>At the same time, the <a href="Jetty+Remote+Deployer.html">Jetty Remote Deployer</a>s for Jetty 10.x and 11.x require the JDK 11 (because Jetty 10.x and 11.x require JDK 11 or above)</p>
+           </li>
           </ul>
           <p>The only version of the JDK that can build with all these constraints is the JDK 11. We hence have certain modules of the Codehaus Cargo build that do not activate on JDK 8, and some others that don't activate on JDK 12 onwards. On these JDKs, you hence will get exceptions such as:</p>
+          <h5 id="Building-ErrorwhenbuildingwithJDK8orJDK12andabove"><strong>Error when building with JDK 8 or JDK 12 and above</strong></h5>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
-           <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-            <b>Error when building with JDK 8 or JDK 12 and above</b>
-           </div>
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.9.0:copy (copy-test-ear) on project cargo-core-container-jonas:
-Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:simple-ear:ear:1.10.27-SNAPSHOT -&gt; [Help 1]</pre>
+            <pre class="syntaxhighlighter-pre">[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.10.0:copy (copy-test-ear) on project cargo-core-container-jonas:
+Unable to find/resolve artifact.: Could not find artifact org.codehaus.cargo:simple-ear:ear:1.10.28-SNAPSHOT -&gt; [Help 1]</pre>
            </div>
           </div>
           <p>To build on these JDKs, you have to "pre-build" in JDK 11 and copy over the repository to with JDK 8 or JDK 12 or above. As an example, you can look at <a href="https://github.com/codehaus-cargo/cargo/blob/master/.semaphore/semaphore.yml">how multi-JDK build and tests are defined in the Codehaus Cargo Continous Integration YAML file</a>.</p>
