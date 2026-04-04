@@ -562,6 +562,10 @@ public class WebsiteGenerator implements Runnable
                 value = value.replaceAll("<img [^>]+alt=\"\\(thumbs up\\)\"[^>]+>", "\uD83D\uDC4D");
                 value = value.replaceAll("<img [^>]+alt=\"\\(thumbs down\\)\"[^>]+>", "\uD83D\uDC4E");
 
+                // The Home page is special
+                value = value.replace("href='/wiki/spaces/CARGO'", "href='Home.html'");
+                value = value.replace("href=\"/wiki/spaces/CARGO\"", "href=\"Home.html\"");
+
                 pattern = Pattern.compile("href=\"[^\"]*/wiki/[^\"]+/CARGO/[^\"]+\"|href='[^\']*/wiki/[^\']+/CARGO/[^']+'");
                 matcher = pattern.matcher(value);
                 int start = 0;
@@ -624,7 +628,9 @@ public class WebsiteGenerator implements Runnable
                 sb.append(value.substring(start));
                 value = sb.toString();
 
-                pattern = Pattern.compile("href=\"/wiki/download/attachments/[^\"]+\"|href='/wiki/download/attachments/[^']+'");
+                pattern = Pattern.compile(
+                    "href=\"(https://codehaus-cargo.atlassian.net)?/wiki/download/attachments/(\\d+/)?[^\"]+\"|"
+                    + "href='(https://codehaus-cargo.atlassian.net)?/wiki/download/attachments/(\\d+/)?[^']+'");
                 matcher = pattern.matcher(value);
                 start = 0;
                 sb = new StringBuilder();
