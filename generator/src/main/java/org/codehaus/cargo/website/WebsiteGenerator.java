@@ -312,7 +312,8 @@ public class WebsiteGenerator implements Runnable
         {
             for (HashMap.Entry<URL, Throwable> exception : exceptions.entrySet())
             {
-                System.out.println("  - Pending exception for URL " + exception.getKey() + ": " + exception);
+                System.out.println("  - Pending exception for URL " + exception.getKey() + ": " + exception.getValue());
+                exception.getValue().printStackTrace();
             }
             throw new Exception("Some files have failed download");
         }
@@ -498,13 +499,17 @@ public class WebsiteGenerator implements Runnable
     @Override
     public void run()
     {
+        boolean tryWithAuthentication = true;
         try
         {
             String value = "";
             for (int i = 0; i < WebsiteGenerator.NUMBER_RETRIES; i++)
             {
                 URLConnection connection = url.openConnection();
-                connection.addRequestProperty("Authorization", WebsiteGenerator.confluenceAuthentication);
+                if (tryWithAuthentication)
+                {
+                    connection.addRequestProperty("Authorization", WebsiteGenerator.confluenceAuthentication);
+                }
                 try (InputStream is = connection.getInputStream())
                 {
                     String filePath = url.getPath();
@@ -538,6 +543,18 @@ public class WebsiteGenerator implements Runnable
                 }
                 catch (IOException e)
                 {
+                    if (e.getMessage().contains("HTTP response code: 401"))
+                    {
+                        if (tryWithAuthentication)
+                        {
+                            tryWithAuthentication = false;
+                        }
+                        else
+                        {
+                            // 401 won't fix itself by retrying
+                            throw new IllegalStateException("Got error 401 after " + i + " retries", e);
+                        }
+                    }
                     if (i == WebsiteGenerator.NUMBER_RETRIES - 1)
                     {
                         throw new IllegalStateException("Failed after " + i + " retries", e);
