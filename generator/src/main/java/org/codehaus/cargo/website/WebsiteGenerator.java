@@ -113,7 +113,7 @@ public class WebsiteGenerator implements Runnable
     /**
      * Number of retries to Atlassian Confluence APIs.
      */
-    private static final int NUMBER_RETRIES = 20;
+    private static final int NUMBER_RETRIES = 3;
 
     /**
      * Download the content and parse (i.e., generate the "full" HTML content)
