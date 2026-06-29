@@ -568,7 +568,7 @@ public class WebsiteGenerator implements Runnable
                 JSONObject result = new JSONObject(value);
                 value = result.getJSONObject("body").getJSONObject("view").getString("value");
 
-                Pattern pattern = Pattern.compile("<span class=\"logoBlock\"[^>]*>(.*?)<\\/span>", Pattern.DOTALL);
+                Pattern pattern = Pattern.compile("<span [^>]*class=\"logoBlock\"[^>]*>(.*?)<\\/span>", Pattern.DOTALL);
                 Matcher matcher = pattern.matcher(value);
                 value = matcher.replaceAll("");
 
@@ -576,12 +576,15 @@ public class WebsiteGenerator implements Runnable
                 value = value.replace(":cross_mark:", "\u274C");
                 value = value.replace(":check_mark:", "\u2705");
                 value = value.replace(":green_star:", "\u2B50");
-                value = value.replaceAll("<img [^>]+alt=\"\\(thumbs up\\)\"[^>]+>", "\uD83D\uDC4D");
-                value = value.replaceAll("<img [^>]+alt=\"\\(thumbs down\\)\"[^>]+>", "\uD83D\uDC4E");
+                value = value.replaceAll("<img [^>]*alt=\"\\(thumbs up\\)\"[^>]*>", "\uD83D\uDC4D");
+                value = value.replaceAll("<img [^>]*alt=\"\\(thumbs down\\)\"[^>]*>", "\uD83D\uDC4E");
 
                 // The Home page is special
                 value = value.replace("href='/wiki/spaces/CARGO'", "href='Home.html'");
                 value = value.replace("href=\"/wiki/spaces/CARGO\"", "href=\"Home.html\"");
+
+                // Ignore Gravatar images
+                value = value.replaceAll("<img [^>]*src=\"https://secure.gravatar.com/avatar/[^\"]*\"[^>]*>", "");
 
                 pattern = Pattern.compile("href=\"[^\"]*/wiki/[^\"]+/CARGO/[^\"]+\"|href='[^\']*/wiki/[^\']+/CARGO/[^']+'");
                 matcher = pattern.matcher(value);
