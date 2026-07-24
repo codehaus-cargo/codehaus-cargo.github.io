@@ -375,14 +375,11 @@ public class WebsiteGenerator implements Runnable
             value = value.replaceAll(
                 "<script type=\"syntaxhighlighter\"[^>]+><\\!\\[CDATA\\[", "<pre>");
             value = value.replace("]]></script>", "</pre>");
-            value = value.replaceAll("<div id=\"refresh-module-\\d*\"", "<div");
             value = value.replaceAll("<div id=\"jira-issues-\\d*\"", "<div");
-            value = value.replaceAll("<span id=\"total-issues-count-\\d*\"", "<span");
-            value = value.replaceAll("(?s)<div id=\"refresh-\\d*\".*?</div>", "");
-            value = value.replaceAll("(?s)<span id=\"error-message-\\d*\".*?</span>", "");
-            value = value.replaceAll("(?s)<span class=\"refresh-action-group\".*?</span>", "");
-            value = value.replaceAll("(?s)<textarea id=\"refresh-wiki-\\d*\".*?</textarea>", "");
-            value = value.replaceAll("<input id=\"refresh-page-id-\\d*\"[^>]+>", "");
+            value = value.replaceAll("\\s+class=\"legacy-color-text-[^\"]+\"", "");
+            value = value.replace(" style=\"text-decoration: none;\"", "");
+            value = value.replace("<ol start=\"1\"", "<ol");
+            value = value.replace("<span>", "");
             StringBuilder breadcrumbsSB = new StringBuilder();
             if (breadcrumbs.containsKey(name))
             {
@@ -448,7 +445,24 @@ public class WebsiteGenerator implements Runnable
                 }
             }
 
+            for (Element jim : new ArrayList<Element>(
+                document.getElementsByClass("jim-sortable-dark-layout")))
+            {
+                jim.remove();
+            }
+            for (Element refresh : new ArrayList<Element>(
+                document.getElementsByClass("refresh-issues-bottom")))
+            {
+                refresh.remove();
+            }
+            for (Element refresh : new ArrayList<Element>(
+                document.getElementsByClass("refresh-macro")))
+            {
+                refresh.remove();
+            }
+
             writeFile(file, document.html()
+                .replaceAll("(?s)[\\r\\n\\s]*<p>[\\r\\n\\s]*</p>", "")
                 .replace("<p>&nbsp; <a", "<p><a")
                 .replace("&nbsp;<code>", " <code>")
                 .replace("<code><wbr>", "<code>")
