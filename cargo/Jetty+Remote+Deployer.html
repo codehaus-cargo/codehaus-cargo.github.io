@@ -592,25 +592,47 @@
           <h3 id="JettyRemoteDeployer-Downloadingtheremotedeployer">Downloading the remote deployer</h3>
           <p>Two versions of the Jetty remote deployer WAR are available on the <a href="Downloads.html">Cargo downloads</a> page (scroll down to the <strong>Tools</strong> section):</p>
           <ul>
-           <li><code>cargo-jetty-11-onwards-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 11.x onwards (Jetty from Eclipse.org, implementing Jakarta EE)</li>
-           <li><code>cargo-jetty-10-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 10.x (Jetty from Eclipse.org)</li>
-           <li><code>cargo-jetty-7-to-jetty-9-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 7.x to Jetty 9.x (Jetty from Eclipse.org)</li>
-           <li><code>cargo-jetty-6-and-earlier-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the CARGO remote deployer. Designed to work with Jetty 6.x and earlier (Jetty from Mortbay.org)</li>
+           <li>
+            <p><code>cargo-jetty-12-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 12.1.x (Jetty from Eclipse.org, implementing Java EE and various Jakarta EE versions at the same time), it is sadly <u>not compatible with Jetty 12.0.x</u>.</p>
+           </li>
+           <li>
+            <p><code>cargo-jetty-11-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 11.x (Jetty from Eclipse.org, implementing Jakarta EE)</p>
+           </li>
+           <li>
+            <p><code>cargo-jetty-10-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 10.x (Jetty from Eclipse.org)</p>
+           </li>
+           <li>
+            <p><code>cargo-jetty-7-to-jetty-9-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 7.x to Jetty 9.x (Jetty from Eclipse.org)</p>
+           </li>
+           <li>
+            <p><code>cargo-jetty-6-and-earlier-deployer</code>: The Deployer Web application for the Jetty remote containers, which must have been deployed to Jetty before using the Codehaus Cargo remote deployer. Designed to work with Jetty 6.x and earlier (Jetty from Mortbay.org)</p>
+           </li>
           </ul>
           <p>Please make sure to download and install the correct flavour for your Jetty version.</p>
           <h3 id="JettyRemoteDeployer-Security">Security</h3>
           <p>By default, the Cargo Jetty remote deployer comes with no security.</p>
           <p>In order to activate security, follow these steps:</p>
           <ol>
-           <li>Open the <code>WEB-INF/web.xml</code> file of the Cargo Jetty remote deployer WAR</li>
-           <li>Uncomment the part that says <code>Uncomment in order to activate security</code>. By default, that configuration is as follows:
+           <li>
+            <p>Open the <code>WEB-INF/web.xml</code> file of the Cargo Jetty remote deployer WAR</p>
+           </li>
+           <li>
+            <p>Uncomment the part that says <code>Uncomment in order to activate security</code>. By default, that configuration is as follows:</p>
             <ul>
-             <li>Authentication is done using standard HTTP headers: <code>login-config</code> set to <code>BASIC</code>.</li>
-             <li>Authorization is done using Jetty role: <code>security-constraint</code> has a <code>auth-constraint</code> with <code>role-name</code>.</li>
-            </ul></li>
-           <li>Create a user with the Jetty role <code>manager</code>:
+             <li>
+              <p>Authentication is done using standard HTTP headers: <code>login-config</code> set to <code>BASIC</code>.</p>
+             </li>
+             <li>
+              <p>Authorization is done using Jetty role: <code>security-constraint</code> has a <code>auth-constraint</code> with <code>role-name</code>.</p>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <p>Create a user with the Jetty role <code>manager</code>:</p>
             <ol>
-             <li>Open the Jetty <code>realm.properties</code> file</li>
+             <li>
+              <p>Open the Jetty <code>realm.properties</code> file</p>
+             </li>
              <li>
               <p>Add, for example, the following definition</p>
               <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
@@ -620,16 +642,23 @@
                </div>
               </div>
              </li>
-            </ol></li>
+            </ol>
+           </li>
            <li>
             <p>Define a security realm, which can be per-webapp (i.e., by adding a <code>jetty-web.xml</code> file to the WAR) or global (i.e., for all applications deployed on that Jetty server). You can learn more about both methods on the Jetty documentation: <a href="http://www.eclipse.org/jetty/documentation/current/configuring-security-authentication.html#d0e5513">http://www.eclipse.org/jetty/documentation/current/configuring-security-authentication.html#d0e5513</a></p>
            </li>
           </ol>
-          <p>To try the security settings, you can try to visit the <code>/cargo-jetty-deployer</code> context on your server, for example <a href="http://production27:8080/cargo-jetty-deployer">http://production27:8080/cargo-jetty-deployer</a>, using any Web browser. If security is configured well, it should:</p>
+          <p>To try the security settings, you can try to visit the <code>/cargo-jetty-deployer</code> context (on Jetty 12.x, the <code>/cargo-jetty-deployer-eeXX</code> context where XX is the Jetty EE version and multiple EE versions being active at the same time is supported) on your server, for example <a href="http://production27:8080/cargo-jetty-deployer">http://production27:8080/cargo-jetty-deployer</a>, using any Web browser. If security is configured well, it should:</p>
           <ul>
-           <li>Ask for a login and password</li>
-           <li>Ask again if the login is not valid</li>
-           <li>If the login is valid, show a page saying: <code>Command / is unknown</code></li>
+           <li>
+            <p>Ask for a login and password</p>
+           </li>
+           <li>
+            <p>Ask again if the login is not valid</p>
+           </li>
+           <li>
+            <p>If the login is valid, show a page saying: <code>Command / is unknown</code></p>
+           </li>
           </ul>
           <div class="confluence-information-macro confluence-information-macro-tip conf-macro output-block">
            <span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"> </span>
@@ -640,10 +669,18 @@
           <h3 id="JettyRemoteDeployer-Examples">Examples</h3>
           <p>Here is an example <a href="Maven+3+Plugin+Reference+Guide.html">Maven 3 plugin configuration</a> that:</p>
           <ul>
-           <li>Deploys on a remote Jetty 6.x server</li>
-           <li>The server is on <code>production17</code>, port <code>8080</code></li>
-           <li>The Jetty remote deployer WAR is secured using the Jetty role <code>manager</code></li>
-           <li>A user called <code>someusername</code> with password <code>somepassword</code> is defined as <code>manager</code></li>
+           <li>
+            <p>Deploys on a remote Jetty 6.x server</p>
+           </li>
+           <li>
+            <p>The server is on <code>production17</code>, port <code>8080</code></p>
+           </li>
+           <li>
+            <p>The Jetty remote deployer WAR is secured using the Jetty role <code>manager</code></p>
+           </li>
+           <li>
+            <p>A user called <code>someusername</code> with password <code>somepassword</code> is defined as <code>manager</code></p>
+           </li>
           </ul>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
@@ -709,9 +746,9 @@ mvn cargo:deploy
           </div>
           <h3 id="JettyRemoteDeployer-Knownissues">Known issues</h3>
           <div class="confluence-information-macro confluence-information-macro-note conf-macro output-block">
-           <p class="title">Unexpected end of file from server and maxIdleTime parameter</p>
            <span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span>
            <div class="confluence-information-macro-body">
+            <p><strong>Unexpected end of file from server and maxIdleTime parameter</strong></p>
             <p>By default, Jetty sets the <code>maxIdleTime</code> parameter in the <code>etc/jetty.xml</code> file 30 seconds. This means that if the actual deployment takes more than 30 seconds, you might get error messages like:</p>
             <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
              <div class="codeContent panelContent pdl">
