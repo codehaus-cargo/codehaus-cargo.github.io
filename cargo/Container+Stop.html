@@ -603,8 +603,7 @@
           <p>Stopping Orion 1.x:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-InstalledLocalContainer container = new Orion1xInstalledLocalContainer(
+            <pre class="syntaxhighlighter-pre">InstalledLocalContainer container = new Orion1xInstalledLocalContainer(
     new OrionStandaloneConfiguration("target/orion1x"));
 container.setHome("c:/apps/orion-1.6.0b");
 
@@ -616,16 +615,14 @@ container.stop();
           <p>Stopping Orion 1.x:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-&lt;cargo refId="mycontainerid" home="c:/apps/orion-1.6.0b" action="stop"/&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo refId="mycontainerid" home="c:/apps/orion-1.6.0b" action="stop"/&gt;
 </pre>
            </div>
           </div>
           <p>Note that if you use the <code>refid</code> attribute you'll need to have defined it using an <code>id</code> attribute when you started the container. For example:</p>
           <div class="code panel pdl conf-macro output-block" style="border-width: 1px;">
            <div class="codeContent panelContent pdl">
-            <pre class="syntaxhighlighter-pre">
-&lt;cargo id="mycontainerid" [...] action="start"&gt;
+            <pre class="syntaxhighlighter-pre">&lt;cargo id="mycontainerid" [...] action="start"&gt;
   [...]
 &lt;/cargo&gt;
 &lt;cargo refid="mycontainerid" [...] action="stop"/&gt;
